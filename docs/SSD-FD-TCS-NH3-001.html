@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SSD-FD-TCS-NH3-001 アンモニアボイラ（NH3）機能説明書</title><style>
+:root{--ink:#15202B;--sub:#4A5563;--paper:#FFFFFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+ line-height:1.75;font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.bar{height:6px;background:var(--flag)}
+main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+nav.crumb{font-size:.85rem;color:var(--sub);margin:.25rem 0 1.25rem}
+nav.crumb a{color:var(--link)}
+table.tb{border-collapse:collapse;width:100%;max-width:40rem;border:2px solid var(--ink);margin:0 0 2rem;font-size:.9rem}
+table.tb th{background:#E9EDF2;text-align:left;font-weight:600;white-space:nowrap;width:9.5rem}
+table.tb th,table.tb td{border:1px solid var(--ink);padding:.35rem .6rem;vertical-align:top}
+table.tb td.t{font-size:1.15rem;font-weight:700;line-height:1.5}
+h2{font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,li{max-width:46rem}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all}
+table.dt{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
+table.dt th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem;white-space:nowrap}
+table.dt td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--panel)}
+table.dt td.id{white-space:nowrap;font-weight:600}
+table.dt td.nw{white-space:nowrap}
+table.dt td.pt{min-width:9.5em}
+tr:target td{background:#FFF1E8 !important;box-shadow:inset 4px 0 0 var(--flag)}
+.chip{display:inline-block;padding:0 .45rem;border-radius:3px;font-size:.78rem;font-weight:600;color:#fff;white-space:nowrap}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.6rem 0;max-width:52rem}
+.note b{color:var(--flag)}
+ol.refs{padding-left:1.4rem;font-size:.88rem}
+ol.refs li{margin:.3rem 0;max-width:none}
+figure{margin:1rem 0 1.5rem}
+figure img{max-width:100%;border:1px solid var(--rule)}
+figcaption{font-size:.85rem;color:var(--sub)}
+.scroll{overflow-x:auto}
+@media print{.bar{display:none} main{max-width:none;padding:0} a{color:var(--ink)} table.dt th{color:#000;background:#DDD}}
+</style></head>
+<body><div class="bar"></div><main>
+<nav class="crumb"><a href="../index.html">SSD-SYS-IDX-001 図書一覧</a></nav>
+<h1 style='position:absolute;left:-9999px'>アンモニアボイラ（NH3）機能説明書</h1>
+<table class="tb" aria-label="表題欄">
+<tr><th>文書番号</th><td>SSD-FD-TCS-NH3-001</td></tr>
+<tr><th>表題</th><td class="t">アンモニアボイラ（NH3）機能説明書</td></tr>
+<tr><th>版・日付</th><td>Rev. C／2026-10-01</td></tr>
+<tr><th>状態</th><td>検討用（公開資料に基づく）</td></tr>
+<tr><th>上位文書</th><td><a href='SSD-FD-ECL-ATCS-001.html'>SSD-FD-ECL-ATCS-001</a></td></tr>
+<tr><th>関連図</th><td><a href="../SSD-SYS-ARC-001_p8_tcs.svg">SSD-SYS-ARC-001　図8 熱制御 機能構成</a></td></tr>
+</table>
+<h2>1. 目的</h2><p>再突入後半から地上冷却接続までの排熱を担うアンモニアボイラの機能を示す。</p>
+<h2>2. 機能</h2>
+<table class='dt'><tr><th>機能番号</th><th>内容</th></tr><tr id='F-TCS-NH3-01'><td class='id'>F-TCS-NH3-01</td><td>アンモニアボイラは、アンモニアの低い沸点を利用して、高度100,000 ft以下の再突入中にフレオン21ループを冷却する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td></tr><tr id='F-TCS-NH3-02'><td class='id'>F-TCS-NH3-02</td><td>独立した2系統のアンモニア貯蔵・制御系が、1つの共通ボイラへ供給する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td></tr><tr id='F-TCS-NH3-03'><td class='id'>F-TCS-NH3-03</td><td>各タンクは49 lbのアンモニアを持ち、ヘリウムで550〜83 psiaに加圧される。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td></tr><tr id='F-TCS-NH3-04'><td class='id'>F-TCS-NH3-04</td><td>制御器はボイラ出口のフレオン温度を34°Fに保ち、31°Fを10秒超下回ると主制御器から副制御器へ自動で切り替わる。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td></tr><tr id='F-TCS-NH3-05'><td class='id'>F-TCS-NH3-05</td><td>運転は着陸・滑走後も続き、地上冷却カートがGSE熱交換器に接続されるまで排熱する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td></tr><tr id='F-TCS-NH3-06'><td class='id'>F-TCS-NH3-06</td><td>初期の飛行では、アンモニアボイラ系の問題も報告されている。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/citations/19920039157'>https://ntrs.nasa.gov/citations/19920039157</a>）</span></td></tr></table>
+<h2>3. インタフェース</h2>
+<div class='scroll'><table class='dt'><tr><th>IF番号</th><th>相手</th><th>種別</th><th>方向</th><th>内容</th><th>上位／下位</th></tr><tr id='IF-TCS-10'><td class='id'><a href='SSD-FD-TCS-FCL-001.html#IF-TCS-10'>IF-TCS-10</a></td><td class='pt'><a href='SSD-FD-TCS-FCL-001.html'>フレオン21冷却ループ×2</a></td><td class='nw'><span class='chip' style='background:#2E7D4F'>熱</span></td><td class='nw'>受信</td><td>アンモニアボイラは、再突入で高度100,000 ftを下回ってからフレオン21ループを冷却する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td><td>—</td></tr><tr id='IF-TCS-14'><td class='id'>IF-TCS-14</td><td class='pt'>宇宙空間（船外）</td><td class='nw'><span class='chip' style='background:#E4570E'>推進薬・流体</span></td><td class='nw'>送信</td><td>気化したアンモニアは、垂直尾翼の右下付近の上部後部胴体から船外へ排出される。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span></td><td>上位：<a href='SSD-FD-ECL-ATCS-001.html#IF-ECL-21'>IF-ECL-21</a></td></tr><tr id='IF-TCS-19'><td class='id'>IF-TCS-19</td><td class='pt'><a href='SSD-FD-DPS-001.html'>DPS・アビオニクス</a></td><td class='nw'><span class='chip' style='background:#1F5FAD'>データ・指令</span></td><td class='nw'>受信</td><td>選択したアンモニア制御器（通常はB）は、オービタがMM 304で高度120,000 ftを降下通過するときにBFS計算機がオンにする。<span class='src'>（出典：<a href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392</a>）</span></td><td>上位：<a href='SSD-FD-ECL-ATCS-001.html#IF-ECL-28'>IF-ECL-28</a><br>（図示省略）</td></tr></table></div>
+<h2>4. 関連文書</h2><p>アンモニアボイラ（NH3）に関係する公開文書（6件）。全件の対応は <a href='SSD-TCS-REF-001.html#NH3'>SSD-TCS-REF-001 熱制御 機能別関連文書一覧</a> を参照。</p><div class='scroll'><table class='dt'><tr><th>ID</th><th>文書番号</th><th>表題</th><th>内容</th></tr><tr><td class='id'><a href='SSD-TCS-REF-001.html#TC-01'>TC-01</a></td><td>番号なし</td><td>NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS</td><td>フレオンループの流路、放熱器・FES・アンモニアボイラ・GSE熱交換器の構成と運用を解説する。<span class='src'>（出典：<a href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382</a>）</span></td></tr><tr><td class='id'><a href='SSD-TCS-REF-001.html#TC-03'>TC-03</a></td><td>SAE 911366（NTRS 19920039157）</td><td>Shuttle Orbiter ATCS design and flight experience</td><td>最初の39飛行の運用と、フレオン流量低下・FES不具合・アンモニアボイラ系の問題と対策を述べる。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/citations/19920039157'>https://ntrs.nasa.gov/citations/19920039157</a>）</span></td></tr><tr><td class='id'><a href='SSD-TCS-REF-001.html#TC-07'>TC-07</a></td><td>NTRS 19810005632</td><td>Orbiter Integrated Active Thermal Control Subsystem Test</td><td>GSE熱交換器・FES・ラジエータ・アンモニアボイラを含むATCS統合熱真空試験。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/api/citations/19810005632/downloads/19810005632.pdf'>https://ntrs.nasa.gov/api/citations/19810005632/downloads/19810005632.pdf</a>）</span></td></tr><tr><td class='id'><a href='SSD-TCS-REF-001.html#TC-12'>TC-12</a></td><td>JSC-16720</td><td>STS-1 ECLSS Consumables and Thermal Analysis</td><td>STS-1の熱解析で、アンモニアなどの収支表を含む。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf'>https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf</a>）</span></td></tr><tr><td class='id'><a href='SSD-TCS-REF-001.html#TC-26'>TC-26</a></td><td>NSTS-12820 Vol. A（PCN-1）</td><td>Space Shuttle Operational Flight Rules Vol. A – All Flights</td><td>アンモニアボイラの喪失定義（A18-207）と管理（A18-253）、NH3レッドライン（A18-254）、着陸後のNH3終了（A18-257・A16-54）を規定する。<span class='src'>（出典：<a href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2072'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2072</a>）</span></td></tr><tr><td class='id'><a href='SSD-TCS-REF-001.html#TC-27'>TC-27</a></td><td>USA007587 Rev. A（CPN-1）</td><td>Shuttle Crew Operations Manual（SCOM）</td><td>2.9節「Ammonia Boilers」：貯蔵タンク、主制御器・副制御器と制御センサを示す。<span class='src'>（出典：<a href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391</a>）</span></td></tr></table></div>
+<h2>5. 注記（出典間の相違・構成変更）</h2><div class='note'><b>注記</b>　出典の更新（1988年版・転載版 → SCOM OI-33）：1988年版の資料は、アンモニア制御器Aを高度100,000 ft通過時にBFS計算機がオンにするとしていた。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a>）</span><span class='src'>（出典：<a href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392</a>）</span></div>
+<h2>6. 参考文献</h2><ol class='refs'><li>NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載）<br><a class='src' href='https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html</a></li><li>NTRS 19920039157 Shuttle Orbiter ATCS design and flight experience（SAE 911366）<br><a class='src' href='https://ntrs.nasa.gov/citations/19920039157'>https://ntrs.nasa.gov/citations/19920039157</a></li><li>Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p392）<br><a class='src' href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392</a></li><li>Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Active Thermal Control System（Freon Loops）（PDF p382）<br><a class='src' href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382</a></li></ol>
+<h2>7. 変更履歴</h2><table class='dt'><tr><th>版</th><th>日付</th><th>内容</th></tr><tr><td class='nw'>初版（Rev. -）</td><td class='nw'>2026-09-25</td><td>初版作成（公開資料に基づく検討用）</td></tr><tr><td class='nw'>Rev. A</td><td class='nw'>2026-09-25</td><td>関連文書にTC-26（NSTS-12820 Vol. A 運用飛行規則）を追加</td></tr><tr><td class='nw'>Rev. B</td><td class='nw'>2026-09-26</td><td>関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加</td></tr><tr><td class='nw'>Rev. C</td><td class='nw'>2026-10-01</td><td>出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（2文。うち本文を改めた1文に注記）（Rev. Q）</td></tr></table>
+</main></body></html>
