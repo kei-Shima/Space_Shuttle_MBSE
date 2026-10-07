@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CREW-001 |
 | 表題 | 乗員系・脱出系（CREW）機能説明書 |
-| 版・日付 | Rev. E／2026-10-02 |
+| 版・日付 | Rev. G／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -59,6 +59,10 @@
 
 > **注記** CREWの FMEA・CIL（IOA の件数・CIL 課題の評価ワークシート・[CIL] の規則）は [SSD-FMEA-CREW-001](SSD-FMEA-CREW-001.md) に示す。
 
+> **注記** 乗員が曝露する環境（大気・温湿度・騒音・加速度・放射線・水）の基準と余裕は [SSD-EXP-ORB-001](SSD-EXP-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-EXP-ORB-001.sysml）。
+
+> **注記** 居住・医療の機能（食事・衛生・排泄・睡眠・運動・収納・医療）の 3001 との照合と乗員の1日は [SSD-HAB-ORB-001](SSD-HAB-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-HAB-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.5 Crew Systems（USA007587 Rev. A CPN-1、PDF p209） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/209
@@ -80,3 +84,5 @@
 | Rev. C | 2026-10-02 | 下位機能説明書（6件）と図64への展開を追加し、IF-ORB-44 に下位IF（IF-CREW-01・02）を付記、注記（IFの分け方、上位IFを持たない下位IF）を追加（Rev. V） |
 | Rev. D | 2026-10-02 | 要求文書 SSD-REQ-CREW-001 への参照を注記（Rev. W） |
 | Rev. E | 2026-10-02 | 故障解析表 SSD-FMEA-CREW-001 への参照を注記（Rev. X） |
+| Rev. F | 2026-10-07 | 乗員の環境曝露定義書 SSD-EXP-ORB-001 への参照を注記（Rev. AZ） |
+| Rev. G | 2026-10-07 | 居住性・医療定義書 SSD-HAB-ORB-001 への参照を注記（Rev. BD） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-004 |
 | 表題 | 運用・非常時の活動定義書（キャビン減圧・EVA・ペイロードベイドア閉鎖不能） |
-| 版・日付 | Rev. B／2026-10-03 |
+| 版・日付 | Rev. C／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BEH-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図86 キャビン減圧処置 活動図・図87 EVA 準備〜再与圧 活動図・図88 ペイロードベイドア閉鎖不能処置 活動図 |
@@ -170,6 +170,8 @@
 
 > **注記** 活動図の行動から構造モデルの部品への割付は [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-ALC-SYS-001.sysml）。
 
+> **注記** EVA の準備（前呼吸・エアロックの減圧）の EV・IV の作業の段は [SSD-TSK-ORB-001](SSD-TSK-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-TSK-ORB-001.sysml）。
+
 ## 12. 参考文献
 
 1. Shuttle Crew Operations Manual 6.8 Systems Failures（USA007587 Rev. A CPN-1、PDF p890） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/890
@@ -199,3 +201,4 @@
 | 初版（Rev. -） | 2026-10-02 | 初版作成（図86 キャビン減圧処置 活動図の節点 13件・流れ 13件、図87 EVA 準備〜再与圧 活動図の節点 17件・流れ 17件、図88 ペイロードベイドア閉鎖不能処置 活動図の節点 11件・流れ 11件、SysML v2 テキスト） |
 | Rev. A | 2026-10-03 | 割付定義書 SSD-ALC-SYS-001 への参照を注記（Rev. AF） |
 | Rev. B | 2026-10-03 | SysML v2 テキストの検査の記述を改めた（Pilot による名前の解決・型の検査、モデル統合・検査定義書 SSD-MDL-SYS-001）（Rev. AG） |
+| Rev. C | 2026-10-07 | 乗員の作業分析・機能の分担定義書 SSD-TSK-ORB-001 への参照を注記（Rev. BA） |

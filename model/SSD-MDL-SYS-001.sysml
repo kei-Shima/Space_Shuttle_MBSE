@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 24件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 32件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -19,12 +19,20 @@ package SSD_MDL_SYS_001 {
     public import SSD_IND_ORB_001;   // SSD-IND-ORB-001 個体・時間（機体・飛行の個体、時間切片、実績）
     public import SSD_RQF_SYS_001;   // SSD-RQF-SYS-001 要求の形式化（属性・制約・値による判定）
     public import SSD_FLT_ORB_001;   // SSD-FLT-ORB-001 飛行構成・飛行試験（構成の解決・検証の証拠）
+    public import SSD_HSI_SYS_001;   // SSD-HSI-SYS-001 人間系の基準の照合（NASA-STD-3001 による後付け評価）
+    public import SSD_EXP_ORB_001;   // SSD-EXP-ORB-001 乗員の環境曝露（パラメトリック・プロファイル）
+    public import SSD_TSK_ORB_001;   // SSD-TSK-ORB-001 乗員の作業分析・機能の分担
     public import SSD_PRF_ORB_001;   // SSD-PRF-ORB-001 消耗品・電力プロファイル（時間軸の残量・設計と実績）
     public import SSD_VER_SYS_001;   // SSD-VER-SYS-001 検証ケース・検証の結果
     public import SSD_TRC_SYS_001;   // SSD-TRC-SYS-001 トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー）
     public import SSD_FDIR_ORB_001;   // SSD-FDIR-ORB-001 故障検知・処置（C/W の警報・監視・処置・状態遷移）
     public import SSD_HAZ_ORB_001;   // SSD-HAZ-ORB-001 ハザード解析（ハザード・原因・管理策・リスク）
     public import SSD_FMM_ORB_001;   // SSD-FMM-ORB-001 故障モード（故障モード・原因・検知・管理策の連鎖）
+    public import SSD_HEA_ORB_001;   // SSD-HEA-ORB-001 ヒューマンエラー解析
+    public import SSD_CIF_ORB_001;   // SSD-CIF-ORB-001 乗員インタフェース（警報の階層・表示と操作）
+    public import SSD_HAB_ORB_001;   // SSD-HAB-ORB-001 居住性と医療（機能・乗員の1日・ユースケース）
+    public import SSD_EGR_ORB_001;   // SSD-EGR-ORB-001 容積・動線・緊急脱出
+    public import SSD_HVM_SYS_001;   // SSD-HVM-SYS-001 人間系の評価方法とビューポイント
     public import SSD_VPT_SYS_001;   // SSD-VPT-SYS-001 ビューポイント・表記の規約
     private import ModelingMetadata::*;
     // ---- 1. 構造のオービタと振る舞い（状態機械）のオービタを1つにする

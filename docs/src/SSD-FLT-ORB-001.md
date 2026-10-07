@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FLT-ORB-001 |
 | 表題 | 飛行構成・飛行試験定義書（飛行ごとの構成の解決と飛行試験による検証の証拠） |
-| 版・日付 | 初版（Rev. -）／2026-10-04 |
+| 版・日付 | Rev. A／2026-10-06 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-VAR-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図132 飛行ごとの構成（機体・キット・特徴）・図133 飛行試験の結果と要求 |
@@ -276,6 +276,8 @@ STS-1〜4 の飛行試験の目的と結果 98件（達成 61・一部達成 24�
 
 > **注記** 取り込んだ公開資料：STS-3 Orbiter Mission Report（JSC-18348、ibiblio、8,924,489 バイト）と Shuttle OFT Medical Report（NASA-TM-58252、NTRS、14,185,916 バイト）。
 
+> **注記** NASA-STD-3001 との照合：REQ-ECLSS-06（検証の判定 VC-REQ-ECLSS-06 pass）は [V2 6004]（HSI-102）・[V2 6050]（HSI-124） による評価では 不適合。REQ-CREW-03（検証の判定 VC-REQ-CREW-03 pass）は [V2 6078]（HSI-161）・[V2 6115]（HSI-162）・[V2 9056]（HSI-376） による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
 ## 12. 参考文献
 
 1. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p28） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=28
@@ -404,3 +406,4 @@ STS-1〜4 の飛行試験の目的と結果 98件（達成 61・一部達成 24�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-04 | 初版作成（飛行の構成 6件・キットの解決・特徴の値、飛行試験の結果 98件と要求への証拠 52件、図132・133、SysML v2 テキスト） |
+| Rev. A | 2026-10-06 | NASA-STD-3001 による評価との食い違い 2件の要求を注記（判定は据え置き）（Rev. AY） |

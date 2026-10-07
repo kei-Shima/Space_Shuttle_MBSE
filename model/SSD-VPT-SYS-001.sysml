@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（142件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（158件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -15,6 +15,7 @@ package SSD_VPT_SYS_001 {
     part def <'SH-LPS'> LaunchProcessing { doc /* 打上げ処理（KSC）：地上との IF と打上げ前の構成を見る */ }
     part def <'SH-PL'> PayloadCustomer { doc /* ペイロード顧客：ペイロードへの資源と運用を見る */ }
     part def <'SH-MGT'> ProgramManagement { doc /* 計画・構成管理：機体・キットの構成と収支の幅、モデルの管理を見る */ }
+    part def <'SH-HSI'> HumanSystemsEngineer { doc /* 航空医官・人間系の技術者：乗員の健康・能力・居住性と、人と機械の分担を見る */ }
     // ---- 関心事（その関心事を持つ関係者）
     concern def <'CN-01'> SystemComposition {
         doc /* 系の構成と境界：システムは何で構成され、外部と何がつながるか */
@@ -98,6 +99,78 @@ package SSD_VPT_SYS_001 {
         stakeholder verificationEngineer : VerificationEngineer;
         stakeholder programManagement : ProgramManagement;
     }
+    concern def <'CN-13'> HumanSystemIntegration {
+        doc /* 乗員の健康・能力と居住性：乗員はどんな環境にさらされ、何をどう操作し、どこで誤りうり、どう暮らし、どう退避するか */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-14'> HumanSystemConcern01 {
+        doc /* 乗員の健康と安全：乗員の健康と安全（医療・覚醒時間・訓練）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-01） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-15'> HumanSystemConcern02 {
+        doc /* 作業の負荷と時間：作業の負荷と時間（作業分析・作業負荷・時間線）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-02） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-16'> HumanSystemConcern03 {
+        doc /* 人の誤りとその抑え：人の誤りとその抑え（HEA・誤操作の防止・検出と回復）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-03） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-17'> HumanSystemConcern04 {
+        doc /* 乗員インタフェース：乗員インタフェース（表示・操作器・ラベル・警報・操縦性）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-04） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-18'> HumanSystemConcern05 {
+        doc /* 居住性：居住性（容積・配置・照明・睡眠・衛生）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-05） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-19'> HumanSystemConcern06 {
+        doc /* 体格と身体の能力への適合：体格と身体の能力への適合（人体寸法・届く範囲・筋力）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-06） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-20'> HumanSystemConcern07 {
+        doc /* 環境の曝露：環境の曝露（騒音・大気・放射線・加速度・振動）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-07） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
+    concern def <'CN-21'> HumanSystemConcern08 {
+        doc /* 緊急時の退避：緊急時の退避（脱出の経路・時間・支援）について、どの要求と図表で何が分かるか（人間系の評価方法定義書 の HCV-08） */
+        subject sts : SpaceTransportationSystem;
+        stakeholder flightOperations : FlightOperations;
+        stakeholder crewMember : CrewMember;
+        stakeholder safetyMissionAssurance : SafetyMissionAssurance;
+        stakeholder humanSystemsEngineer : HumanSystemsEngineer;
+    }
     // ---- ビューポイント（関心事を枠に入れる）とビュー定義（標準のビュー定義を特化し、ビューポイントを満たす）
     viewpoint def <'VP-01'> CompositionViewpoint {
         doc /* 構成の観点。主な定義書：SSD-FD-*・SSD-BLK-SYS-001 */
@@ -118,7 +191,7 @@ package SSD_VPT_SYS_001 {
         render Views::asInterconnectionDiagram;
     }
     viewpoint def <'VP-03'> RequirementsVerificationViewpoint {
-        doc /* 要求・検証の観点。主な定義書：SSD-REQ-*・SSD-RQM-SYS-001・SSD-VER-SYS-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001 */
+        doc /* 要求・検証の観点。主な定義書：SSD-REQ-*・SSD-RQM-SYS-001・SSD-VER-SYS-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001 */
         subject v : Views::View;
         frame concern cn03 : RequirementSatisfaction;
         frame concern cn04 : VerificationStatus;
@@ -207,6 +280,23 @@ package SSD_VPT_SYS_001 {
     view def TraceImpactView :> GridView {
         satisfy requirement framedViewpoint : TraceImpactViewpoint;
         render Views::asElementTable;
+    }
+    viewpoint def <'VP-13'> HumanSystemsViewpoint {
+        doc /* 人間系の観点。主な定義書：SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001 */
+        subject v : Views::View;
+        frame concern cn13 : HumanSystemIntegration;
+        frame concern cn14 : HumanSystemConcern01;
+        frame concern cn15 : HumanSystemConcern02;
+        frame concern cn16 : HumanSystemConcern03;
+        frame concern cn17 : HumanSystemConcern04;
+        frame concern cn18 : HumanSystemConcern05;
+        frame concern cn19 : HumanSystemConcern06;
+        frame concern cn20 : HumanSystemConcern07;
+        frame concern cn21 : HumanSystemConcern08;
+    }
+    view def HumanSystemsView :> GeneralView {
+        satisfy requirement framedViewpoint : HumanSystemsViewpoint;
+        render Views::asTreeDiagram;
     }
     // ---- ビュー（SSD-SYS-ARC-001 の図。晒す要素は図が描くモデルのパッケージ）
     view <'図1'> fig001 : CompositionView {
@@ -628,6 +718,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VER_SYS_001::*;
         expose SSD_RQF_SYS_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
     }
     view <'図91'> fig091 : PhysicalView {
         doc /* 図91 割付行列（系 × 区画）（頁 p91-alloc-matrix） */
@@ -750,6 +841,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VER_SYS_001::*;
         expose SSD_RQF_SYS_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
     }
     view <'図111'> fig111 : ModelManagementView {
         doc /* 図111 ビューポイントと関係者の行列（頁 p111-viewpoints） */
@@ -832,6 +924,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VER_SYS_001::*;
         expose SSD_RQF_SYS_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
     }
     view <'図125'> fig125 : RequirementsVerificationView {
         doc /* 図125 要求の値による判定（頁 p125-req-evaluation） */
@@ -839,6 +932,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VER_SYS_001::*;
         expose SSD_RQF_SYS_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
     }
     view <'図126'> fig126 : SafetyFailureView {
         doc /* 図126 故障モードから見た安全の連鎖（頁 p126-fmm-chain） */
@@ -888,6 +982,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VER_SYS_001::*;
         expose SSD_RQF_SYS_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
     }
     view <'図134'> fig134 : ResourcesMarginsView {
         doc /* 図134 標準ミッションの消耗品の残量（設計）（頁 p134-profile-design） */
@@ -936,13 +1031,189 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_005::*;
         expose SSD_BEH_ORB_006::*;
     }
+    view <'図143'> fig143 : HumanSystemsView {
+        doc /* 図143 人間系の基準の照合（章 × 判定）（頁 p143-hsi-coverage） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図144'> fig144 : HumanSystemsView {
+        doc /* 図144 人間系の基準の値とシャトルの値（頁 p144-hsi-values） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図145'> fig145 : HumanSystemsView {
+        doc /* 図145 乗員の曝露の量と基準（パラメトリック）（頁 p145-exp-params） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図146'> fig146 : HumanSystemsView {
+        doc /* 図146 乗員の曝露のプロファイル（頁 p146-exp-profiles） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図147'> fig147 : HumanSystemsView {
+        doc /* 図147 機能の分担（人・自動化・地上）（頁 p147-tsk-alloc） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図148'> fig148 : HumanSystemsView {
+        doc /* 図148 作業分析：軌道離脱準備から着陸まで（頁 p148-tsk-deorbit） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図149'> fig149 : HumanSystemsView {
+        doc /* 図149 作業分析：EVA の準備（頁 p149-tsk-eva） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図150'> fig150 : HumanSystemsView {
+        doc /* 図150 作業 × 誤りの種類（頁 p150-hea-matrix） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図151'> fig151 : HumanSystemsView {
+        doc /* 図151 誤りからハザードへの連鎖と管理策（頁 p151-hea-chain） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図152'> fig152 : HumanSystemsView {
+        doc /* 図152 警報の階層の対応（シャトル × 3001）（頁 p152-cif-alerts） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図153'> fig153 : HumanSystemsView {
+        doc /* 図153 表示・操作の盤と作業位置（頁 p153-cif-panels） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図154'> fig154 : HumanSystemsView {
+        doc /* 図154 居住・医療の機能と 3001 の照合、乗員の1日（頁 p154-hab-funcs） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図155'> fig155 : HumanSystemsView {
+        doc /* 図155 居住・医療のユースケース（頁 p155-hab-uc） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図156'> fig156 : HumanSystemsView {
+        doc /* 図156 乗員区画のつながりと移動の経路（頁 p156-egr-paths） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図157'> fig157 : HumanSystemsView {
+        doc /* 図157 非常退避・退出のモード × フェーズ（頁 p157-egr-modes） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
+    view <'図158'> fig158 : HumanSystemsView {
+        doc /* 図158 人間系の評価方法と図表の対応（頁 p158-hvm-methods） */
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_EXP_ORB_001::*;
+        expose SSD_TSK_ORB_001::*;
+        expose SSD_HEA_ORB_001::*;
+        expose SSD_CIF_ORB_001::*;
+        expose SSD_HAB_ORB_001::*;
+        expose SSD_EGR_ORB_001::*;
+        expose SSD_HVM_SYS_001::*;
+    }
     // ---- 表記の規約
     package Conventions {
         doc /* 文書の表の ID の形と、出典・文書番号の書き方 */
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 306; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 314; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 597; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 212; }
@@ -953,7 +1224,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "VC-"; form = "VC-<要求の ID>"; meaning = "検証ケース"; example = "VC-REQ-OMS-01"; count = 212; }
         @IdConvention { prefix = "VF-・MK-"; form = "VF-<2桁>・MK-<2桁>"; meaning = "機体の特徴・ミッションキット"; example = "VF-05"; count = 31; }
         @IdConvention { prefix = "MS-・MC-・DV-・DE-"; form = "MS-・MC-・DV-・DE-<2桁>"; meaning = "質量特性・Δv の値と式"; example = "DV-04"; count = 60; }
-        @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 33; }
+        @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 44; }
         @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 685; }
         @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 47; }
         @IdConvention { prefix = "CW-・EM-・DT-・RS-・BU-"; form = "CW-・EM-・DT-・RS-・BU-<2桁>"; meaning = "C/W の警報・検知する故障・処置・警報の区分"; example = "CW-05"; count = 155; }
@@ -963,5 +1234,13 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "FLC-・FT-"; form = "FLC-<2桁>・FT-<飛行>-<2桁>"; meaning = "飛行の構成・飛行試験の結果"; example = "FT-1-01"; count = 104; }
         @IdConvention { prefix = "PFR-・PFD-・PFP-・PFS-・PFC-"; form = "PFR-・PFD-・PFP-・PFS-・PFC-<2桁>"; meaning = "消耗品の率・設計の枯渇・実績の点・予測・比較"; example = "PFD-01"; count = 115; }
         @IdConvention { prefix = "OMSS-・OMST-・RCSS-・RCST-・MPSS-・MPST-・CTSS-・CTST-・PCSS-・PCST-・ODSS-・ODST-"; form = "<系>S-・<系>T-<2桁>"; meaning = "系の状態・遷移（その2）"; example = "OMST-07"; count = 156; }
+        @IdConvention { prefix = "HSI-"; form = "HSI-<3桁>"; meaning = "人間系の基準の照合"; example = "HSI-001"; count = 545; }
+        @IdConvention { prefix = "EXP-・PRO-"; form = "EXP-<2桁>・PRO-<2桁>"; meaning = "曝露の量・曝露のプロファイル"; example = "EXP-03"; count = 20; }
+        @IdConvention { prefix = "FA-・T1-・T2-"; form = "FA-<2桁>・T<作業>-<2桁>"; meaning = "機能の分担・作業の段"; example = "FA-03"; count = 65; }
+        @IdConvention { prefix = "HT-・HE-"; form = "HT-<2桁>・HE-<2桁>"; meaning = "誤りの起こる作業・ヒューマンエラー"; example = "HE-01"; count = 47; }
+        @IdConvention { prefix = "AL-・LM-・ST-・DC-"; form = "AL-STD-<数>・AL-SH-<数>・LM-<2桁>・ST-<2桁>・DC-<2桁>"; meaning = "警報の区分・区分の対応・作業位置・表示と操作の盤"; example = "DC-01"; count = 58; }
+        @IdConvention { prefix = "HF-・CD-・UC-H・ACT-"; form = "HF-<2桁>・CD-<2桁>・UC-H<2桁>・ACT-<2桁>"; meaning = "居住・医療の機能・乗員の1日・居住のユースケース・アクタ"; example = "HF-04"; count = 44; }
+        @IdConvention { prefix = "SP-・PA-・EG-"; form = "SP-<2桁>・PA-<2桁>・EG-<2桁>"; meaning = "与圧区画・移動の経路・非常退避のモード"; example = "PA-03"; count = 29; }
+        @IdConvention { prefix = "EVM-・HCV-"; form = "EVM-<2桁>・HCV-<2桁>"; meaning = "人間系の評価方法・人間系の関心事"; example = "EVM-03"; count = 22; }
     }
 }

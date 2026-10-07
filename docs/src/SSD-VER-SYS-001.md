@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-VER-SYS-001 |
 | 表題 | 検証定義書（検証ケース・検証マトリクス） |
-| 版・日付 | Rev. C／2026-10-04 |
+| 版・日付 | Rev. E／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図110 検証マトリクス |
@@ -181,15 +181,15 @@
 | VC-REQ-CW-09 | REQ-CW-09 | A（解析） | context.sts.orb.cw.ops | pass | ARPCS（PDF p48）：既知の誤指示に対して警報を抑止する運用の実例を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
 | VC-REQ-CW-10 | REQ-CW-10 | A（解析） | context.sts.orb.cw.ops | pass | A2-1001（PDF p803）：主・バックアップC&Wの両方の喪失を次のPLSとする基準を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=803） |
 | VC-REQ-CREW-01 | REQ-CREW-01 | I（検査） | context.sts.orb.crew.hab | pass | 3.15節 Personal Hygiene Provisions（PDF p359〜）：個人衛生ホース・衛生キット・タオルなどを述べる。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=359） |
-| VC-REQ-CREW-02 | REQ-CREW-02 | D（実証） | context.sts.orb.crew.hab | pass | 2.5節 Sleeping Provisions（PDF p209〜211）：睡眠の時間の割り振り、寝袋と固定式睡眠ステーションを述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/210） |
-| VC-REQ-CREW-03 | REQ-CREW-03 | A（解析） | context.sts.orb.crew.hab | pass | CYCLE ERGOMETER OPS（PDF p87）：エルゴメータを床から外して運動の場所の座席スタッドに取り付ける手順を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=87） |
+| VC-REQ-CREW-02 | REQ-CREW-02 | D（実証） | context.sts.orb.crew.hab | pass | CYCLE ERGOMETER OPS（PDF p87）：エルゴメータを床から外して運動の場所の座席スタッドに取り付ける手順を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=87） |
+| VC-REQ-CREW-03 | REQ-CREW-03 | A（解析） | context.sts.orb.crew.hab | pass | A13-29（PDF p1765）：居住区画の24時間平均の騒音（LEQ）が音響線量計で 74 dBA 以上なら、騒音の大きい機器の電源を切るなどの処置をとると定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1765） |
 | VC-REQ-CREW-04 | REQ-CREW-04 | I（検査） | context.sts.orb.crew.stw | pass | 1-6 VOL E REMOVAL（PDF p50）：床下の Volume E を外して下部機器ベイへ近づく手順と、睡眠ステーションがあると外せない場合を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=50） |
 | VC-REQ-CREW-05 | REQ-CREW-05 | D（実証） | context.sts.orb.crew.med | pass | A13-22（PDF p1758）：医療キットの使用の承認と記録を定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1758） |
-| VC-REQ-CREW-06 | REQ-CREW-06 | A（解析） | context.sts.orb.crew.med | pass | 2.5節 SOMS・OBS（PDF p218〜221）：医療キット、蘇生器、生体計測を述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/218） |
+| VC-REQ-CREW-06 | REQ-CREW-06 | A（解析） | context.sts.orb.crew.med | pass | A14-51（PDF p1830）：乗員の電離放射線の被ばく限度とALARAを定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1830） |
 | VC-REQ-CREW-07 | REQ-CREW-07 | D（実証） | context.sts.orb.crew.ltg | pass | （PDF p22）：6つのペイロードベイ投光照明を点けたときの電流の増え方から、中部左舷の投光照明の不具合を見つけた例を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
 | VC-REQ-CREW-08 | REQ-CREW-08 | A（解析） | context.sts.orb.crew.esc | pass | 3.5節 Emergency Egress Provisions（PDF p123〜）：脱出パネル・降下器・PEAPなどの非常脱出の装備を述べる。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=123） |
-| VC-REQ-CREW-09 | REQ-CREW-09 | A（解析） | context.sts.orb.crew.esc | pass | A17-1001（PDF p2032）：LESの酸素供給系の喪失に対するMDF・次のPLSの基準を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2032） |
-| VC-REQ-CREW-10 | REQ-CREW-10 | A（解析） | context.sts.orb.crew.ops | pass | A14-51（PDF p1830）：乗員の電離放射線の被ばく限度とALARAを定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1830） |
+| VC-REQ-CREW-09 | REQ-CREW-09 | A（解析） | context.sts.orb.crew.esc | pass | 2.10節 Escape Systems（PDF p438）：側面ハッチから出られないときの2次の非常脱出口として、左舷の頭上窓（窓8）の投棄系を述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/438） |
+| VC-REQ-CREW-10 | REQ-CREW-10 | A（解析） | context.sts.orb.crew.ops | pass | A17-1001（PDF p2032）：LESの酸素供給系の喪失に対するMDF・次のPLSの基準を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2032） |
 | VC-REQ-EVA-01 | REQ-EVA-01 | T（試験） | context.sts.orb.eva.chk | pass | PDF p62：EMUの点検でLCVGの流れの停止の後にLCG配管を温めるため高い設定点のCヒータを使ったことを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=62） |
 | VC-REQ-EVA-02 | REQ-EVA-02 | D（実証） | context.sts.orb.eva.chk | pass | PDF p65：1回目のEVAの後に、地上の専門家の評価のためEMUの手袋を撮影したことを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=65） |
 | VC-REQ-EVA-03 | REQ-EVA-03 | D（実証） | context.sts.orb.eva.dpr | pass | PDF p48：減圧弁の蓋の付け忘れによる減圧の遅れと、通常の減圧率（10.2から5 psiaで2.8 psia/min）を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
@@ -318,6 +318,10 @@
 > **注記** 検証の根拠による判定に対する、設計値・飛行の実績の値による判定は [SSD-RQF-SYS-001](SSD-RQF-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-RQF-SYS-001.sysml）。
 
 > **注記** 飛行試験（STS-1〜4 の開発試験）の結果による検証の証拠は [SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-FLT-ORB-001.sysml）。
+
+> **注記** NASA-STD-3001 との照合：REQ-ECLSS-06（検証の判定 VC-REQ-ECLSS-06 pass）は [V2 6004]（HSI-102）・[V2 6050]（HSI-124） による評価では 不適合。REQ-CREW-03（検証の判定 VC-REQ-CREW-03 pass）は [V2 6078]（HSI-161）・[V2 6115]（HSI-162）・[V2 9056]（HSI-376） による評価では 不適合。REQ-ECLSS-13（検証の判定 VC-REQ-ECLSS-13 pass）は [V2 7102]（HSI-220） による評価では 不適合。REQ-ECLSS-11（検証の判定 VC-REQ-ECLSS-11 pass）は [V2 9059]（HSI-379） による評価では 不適合。REQ-CW-06（検証の判定 VC-REQ-CW-06 pass）は [V2 10114]（HSI-401） による評価では 不適合。REQ-CREW-08（検証の判定 VC-REQ-CREW-08 pass）は [V2 11032]（HSI-492） による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
+> **注記** 人間系の評価方法（人を入れた評価・作業負荷・使い勝手・判読性など）と 3001 の要求の対応（既存の検証の判定は変えない）は [SSD-HVM-SYS-001](SSD-HVM-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-HVM-SYS-001.sysml）。
 
 ## 10. 参考文献
 
@@ -493,6 +497,8 @@
 170. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A2-3 LAUNCH HOLD（PDF p491） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=491
 171. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A4-260 RANGE SAFETY LIMIT AVOIDANCE ACTIONS（PDF p1001） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1001
 172. STS-114 Mission Report Flight Summary（PDF p9） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=9
+173. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1765） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1765
+174. Shuttle Crew Operations Manual 2.10 Escape Systems（USA007587 Rev. A CPN-1、PDF p438） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/438
 
 ## 11. 変更履歴
 
@@ -502,3 +508,5 @@
 | Rev. A | 2026-10-03 | トレース網羅・影響分析書 SSD-TRC-SYS-001 への参照を注記（Rev. AO） |
 | Rev. B | 2026-10-03 | 要求の形式化定義書 SSD-RQF-SYS-001 への参照を注記（Rev. AS） |
 | Rev. C | 2026-10-04 | 飛行構成・飛行試験定義書 SSD-FLT-ORB-001 への参照を注記（Rev. AV） |
+| Rev. D | 2026-10-06 | 検証の根拠の文の行ずれを直した（REQ-CREW-02・03・06・09・10）。検証方法・状態・判定は変更なし、NASA-STD-3001 による評価との食い違い 6件の要求を注記（判定は据え置き）（Rev. AY） |
+| Rev. E | 2026-10-07 | 人間系の評価方法定義書 SSD-HVM-SYS-001 への参照を注記（Rev. BF） |

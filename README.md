@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. AX／2026-10-04　状態：検討用（公開資料に基づく）
+版・日付：Rev. BF／2026-10-07　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -146,6 +146,22 @@
 - [図140 与圧系 状態遷移図](SSD-SYS-ARC-001_p140_sm_pcs.svg)
 - [図141 ODS 状態遷移図](SSD-SYS-ARC-001_p141_sm_ods.svg)
 - [図142 系のモード × フェーズ 行列（その2）](SSD-SYS-ARC-001_p142_mode_phase_2.svg)
+- [図143 人間系の基準の照合（章 × 判定）](SSD-SYS-ARC-001_p143_hsi_coverage.svg)
+- [図144 人間系の基準の値とシャトルの値](SSD-SYS-ARC-001_p144_hsi_values.svg)
+- [図145 乗員の曝露の量と基準（パラメトリック）](SSD-SYS-ARC-001_p145_exp_params.svg)
+- [図146 乗員の曝露のプロファイル](SSD-SYS-ARC-001_p146_exp_profiles.svg)
+- [図147 機能の分担（人・自動化・地上）](SSD-SYS-ARC-001_p147_tsk_alloc.svg)
+- [図148 作業分析：軌道離脱準備から着陸まで](SSD-SYS-ARC-001_p148_tsk_deorbit.svg)
+- [図149 作業分析：EVA の準備](SSD-SYS-ARC-001_p149_tsk_eva.svg)
+- [図150 作業 × 誤りの種類](SSD-SYS-ARC-001_p150_hea_matrix.svg)
+- [図151 誤りからハザードへの連鎖と管理策](SSD-SYS-ARC-001_p151_hea_chain.svg)
+- [図152 警報の階層の対応（シャトル × 3001）](SSD-SYS-ARC-001_p152_cif_alerts.svg)
+- [図153 表示・操作の盤と作業位置](SSD-SYS-ARC-001_p153_cif_panels.svg)
+- [図154 居住・医療の機能と 3001 の照合、乗員の1日](SSD-SYS-ARC-001_p154_hab_funcs.svg)
+- [図155 居住・医療のユースケース](SSD-SYS-ARC-001_p155_hab_uc.svg)
+- [図156 乗員区画のつながりと移動の経路](SSD-SYS-ARC-001_p156_egr_paths.svg)
+- [図157 非常退避・退出のモード × フェーズ](SSD-SYS-ARC-001_p157_egr_modes.svg)
+- [図158 人間系の評価方法と図表の対応](SSD-SYS-ARC-001_p158_hvm_methods.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[model/SSD-BEH-ORB-001.sysml](model/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[model/SSD-PAR-ORB-001.sysml](model/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -172,6 +188,14 @@
 - SysML v2 テキスト：[model/SSD-FLT-ORB-001.sysml](model/SSD-FLT-ORB-001.sysml)（飛行構成・飛行試験：構成の解決と検証の証拠。SSD-FLT-ORB-001 から生成）
 - SysML v2 テキスト：[model/SSD-PRF-ORB-001.sysml](model/SSD-PRF-ORB-001.sysml)（消耗品・電力プロファイル：時系列・枯渇の日・設計と実績。SSD-PRF-ORB-001 から生成）
 - SysML v2 テキスト：[model/SSD-BEH-ORB-006.sysml](model/SSD-BEH-ORB-006.sysml)（系の状態遷移その2。SSD-BEH-ORB-006 から生成）
+- SysML v2 テキスト：[model/SSD-HSI-SYS-001.sysml](model/SSD-HSI-SYS-001.sysml)（人間系の基準の照合：NASA-STD-3001 の要求と既存の要求の評価。SSD-HSI-SYS-001 から生成）
+- SysML v2 テキスト：[model/SSD-EXP-ORB-001.sysml](model/SSD-EXP-ORB-001.sysml)（乗員の環境曝露（パラメトリック・プロファイル）。SSD-EXP-ORB-001 から生成）
+- SysML v2 テキスト：[model/SSD-TSK-ORB-001.sysml](model/SSD-TSK-ORB-001.sysml)（乗員の作業分析・機能の分担。SSD-TSK-ORB-001 から生成）
+- SysML v2 テキスト：[model/SSD-HEA-ORB-001.sysml](model/SSD-HEA-ORB-001.sysml)（ヒューマンエラー解析。SSD-HEA-ORB-001 から生成）
+- SysML v2 テキスト：[model/SSD-CIF-ORB-001.sysml](model/SSD-CIF-ORB-001.sysml)（乗員インタフェース（警報の階層・表示と操作）。SSD-CIF-ORB-001 から生成）
+- SysML v2 テキスト：[model/SSD-HAB-ORB-001.sysml](model/SSD-HAB-ORB-001.sysml)（居住性と医療（機能・乗員の1日・ユースケース）。SSD-HAB-ORB-001 から生成）
+- SysML v2 テキスト：[model/SSD-EGR-ORB-001.sysml](model/SSD-EGR-ORB-001.sysml)（容積・動線・緊急脱出。SSD-EGR-ORB-001 から生成）
+- SysML v2 テキスト：[model/SSD-HVM-SYS-001.sysml](model/SSD-HVM-SYS-001.sysml)（人間系の評価方法とビューポイント。SSD-HVM-SYS-001 から生成）
 
 ## 文書一覧
 
@@ -277,19 +301,19 @@
 | [SSD-FD-MECH-DEC-001](docs/SSD-FD-MECH-DEC-001.html) | 制動・操向・減速傘（DEC）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-MECH-OPS-001](docs/SSD-FD-MECH-OPS-001.html) | MECH運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-MECH-REF-001](docs/SSD-MECH-REF-001.html) | MECH 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-CW-001](docs/SSD-FD-CW-001.html) | 警報系（C/W）機能説明書 | Rev. H |
+| [SSD-FD-CW-001](docs/SSD-FD-CW-001.html) | 警報系（C/W）機能説明書 | Rev. I |
 | [SSD-FD-CW-PRI-001](docs/SSD-FD-CW-PRI-001.html) | 主C/W（ハードウェア）（PRI）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-BKP-001](docs/SSD-FD-CW-BKP-001.html) | バックアップC/W（ソフト）（BKP）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-ALT-001](docs/SSD-FD-CW-ALT-001.html) | アラート・限界表示（ALT）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-ANN-001](docs/SSD-FD-CW-ANN-001.html) | 表示・警報音（ANN）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-OPS-001](docs/SSD-FD-CW-OPS-001.html) | C/W運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-CW-REF-001](docs/SSD-CW-REF-001.html) | C/W 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-CREW-001](docs/SSD-FD-CREW-001.html) | 乗員系・脱出系（CREW）機能説明書 | Rev. E |
-| [SSD-FD-CREW-HAB-001](docs/SSD-FD-CREW-HAB-001.html) | 居住・衛生（HAB）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-CREW-001](docs/SSD-FD-CREW-001.html) | 乗員系・脱出系（CREW）機能説明書 | Rev. G |
+| [SSD-FD-CREW-HAB-001](docs/SSD-FD-CREW-HAB-001.html) | 居住・衛生（HAB）機能説明書 | Rev. A |
 | [SSD-FD-CREW-STW-001](docs/SSD-FD-CREW-STW-001.html) | 収納・拘束（STW）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-CREW-MED-001](docs/SSD-FD-CREW-MED-001.html) | 医療・生体・放射線（MED）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-CREW-MED-001](docs/SSD-FD-CREW-MED-001.html) | 医療・生体・放射線（MED）機能説明書 | Rev. A |
 | [SSD-FD-CREW-LTG-001](docs/SSD-FD-CREW-LTG-001.html) | 照明（LTG）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-CREW-ESC-001](docs/SSD-FD-CREW-ESC-001.html) | 脱出系（ESC）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-CREW-ESC-001](docs/SSD-FD-CREW-ESC-001.html) | 脱出系（ESC）機能説明書 | Rev. A |
 | [SSD-FD-CREW-OPS-001](docs/SSD-FD-CREW-OPS-001.html) | 乗員系運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-CREW-REF-001](docs/SSD-CREW-REF-001.html) | CREW 機能別関連文書一覧 | 初版（Rev. -） |
 | [SSD-FD-PLS-001](docs/SSD-FD-PLS-001.html) | ペイロード支援（PDRS・ODS）機能説明書 | Rev. H |
@@ -421,19 +445,19 @@
 | [SSD-OPS-PHASE-001](docs/SSD-OPS-PHASE-001.html) | ミッションフェーズ・運用モード定義書 | Rev. G |
 | [SSD-BEH-ORB-001](docs/SSD-BEH-ORB-001.html) | 状態遷移定義書（ミッションフェーズ・飛行継続判断） | Rev. D |
 | [SSD-BEH-ORB-002](docs/SSD-BEH-ORB-002.html) | 故障処置の活動定義書（MPS ヘリウム漏れ・燃料電池の冷却喪失・火災） | Rev. C |
-| [SSD-BEH-ORB-003](docs/SSD-BEH-ORB-003.html) | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） | Rev. B |
-| [SSD-BEH-ORB-004](docs/SSD-BEH-ORB-004.html) | 運用・非常時の活動定義書（キャビン減圧・EVA・ペイロードベイドア閉鎖不能） | Rev. B |
+| [SSD-BEH-ORB-003](docs/SSD-BEH-ORB-003.html) | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） | Rev. C |
+| [SSD-BEH-ORB-004](docs/SSD-BEH-ORB-004.html) | 運用・非常時の活動定義書（キャビン減圧・EVA・ペイロードベイドア閉鎖不能） | Rev. C |
 | [SSD-BEH-ORB-005](docs/SSD-BEH-ORB-005.html) | 系の状態遷移定義書（GPC・燃料電池・APU・RMS・排熱） | Rev. B |
 | [SSD-BEH-ORB-006](docs/SSD-BEH-ORB-006.html) | 系の状態遷移定義書その2（OMS・RCS・MPS・C&T・与圧系・ODS） | 初版（Rev. -） |
-| [SSD-UC-ORB-001](docs/SSD-UC-ORB-001.html) | 運用シナリオ・ユースケース定義書（ユースケース・ランデブー・秒読み・ペイロード放出・アボート） | 初版（Rev. -） |
+| [SSD-UC-ORB-001](docs/SSD-UC-ORB-001.html) | 運用シナリオ・ユースケース定義書（ユースケース・ランデブー・秒読み・ペイロード放出・アボート） | Rev. A |
 | [SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.html) | 構造定義書（ブロック・ポート・インタフェース） | Rev. B |
 | [SSD-IBD-ORB-001](docs/SSD-IBD-ORB-001.html) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. A |
 | [SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.html) | 割付定義書（機能・機器・区画・振る舞い） | Rev. B |
-| [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.html) | モデル統合・検査定義書（SysML v2） | Rev. M |
-| [SSD-VPT-SYS-001](docs/SSD-VPT-SYS-001.html) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. K |
-| [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.html) | システム要求書（L1） | Rev. G |
+| [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.html) | モデル統合・検査定義書（SysML v2） | Rev. U |
+| [SSD-VPT-SYS-001](docs/SSD-VPT-SYS-001.html) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. S |
+| [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.html) | システム要求書（L1） | Rev. H |
 | [SSD-REQ-EPS-001](docs/SSD-REQ-EPS-001.html) | 電力系（EPS）要求書（L2） | Rev. C |
-| [SSD-REQ-ECLSS-001](docs/SSD-REQ-ECLSS-001.html) | 環境制御・生命維持（ECLSS）要求書（L2） | 初版（Rev. -） |
+| [SSD-REQ-ECLSS-001](docs/SSD-REQ-ECLSS-001.html) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. A |
 | [SSD-REQ-GNC-001](docs/SSD-REQ-GNC-001.html) | 誘導・航法・制御（GN&C）要求書（L2） | 初版（Rev. -） |
 | [SSD-REQ-DPS-001](docs/SSD-REQ-DPS-001.html) | データ処理系（DPS）要求書（L2） | 初版（Rev. -） |
 | [SSD-REQ-MPS-001](docs/SSD-REQ-MPS-001.html) | 主推進系（MPS）要求書（L2） | 初版（Rev. -） |
@@ -443,11 +467,11 @@
 | [SSD-REQ-CT-001](docs/SSD-REQ-CT-001.html) | 通信・追跡（C&T）要求書（L2） | 初版（Rev. -） |
 | [SSD-REQ-TPS-001](docs/SSD-REQ-TPS-001.html) | 熱防護・熱制御（TPS）要求書（L2） | 初版（Rev. -） |
 | [SSD-RQM-SYS-001](docs/SSD-RQM-SYS-001.html) | 要求モデル定義書（導出・充足・検証方法） | Rev. C |
-| [SSD-RQF-SYS-001](docs/SSD-RQF-SYS-001.html) | 要求の形式化定義書（属性・制約・値による判定） | 初版（Rev. -） |
-| [SSD-VER-SYS-001](docs/SSD-VER-SYS-001.html) | 検証定義書（検証ケース・検証マトリクス） | Rev. C |
+| [SSD-RQF-SYS-001](docs/SSD-RQF-SYS-001.html) | 要求の形式化定義書（属性・制約・値による判定） | Rev. A |
+| [SSD-VER-SYS-001](docs/SSD-VER-SYS-001.html) | 検証定義書（検証ケース・検証マトリクス） | Rev. E |
 | [SSD-TRC-SYS-001](docs/SSD-TRC-SYS-001.html) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. B |
-| [SSD-REQ-CW-001](docs/SSD-REQ-CW-001.html) | 警告・警報（C/W）要求書（L2） | 初版（Rev. -） |
-| [SSD-REQ-CREW-001](docs/SSD-REQ-CREW-001.html) | 乗員系（CREW）要求書（L2） | 初版（Rev. -） |
+| [SSD-REQ-CW-001](docs/SSD-REQ-CW-001.html) | 警告・警報（C/W）要求書（L2） | Rev. A |
+| [SSD-REQ-CREW-001](docs/SSD-REQ-CREW-001.html) | 乗員系（CREW）要求書（L2） | Rev. A |
 | [SSD-REQ-EVA-001](docs/SSD-REQ-EVA-001.html) | 船外活動（EVA/EMU）要求書（L2） | 初版（Rev. -） |
 | [SSD-REQ-PLS-001](docs/SSD-REQ-PLS-001.html) | ペイロード系（PLS）要求書（L2） | 初版（Rev. -） |
 | [SSD-REQ-MECH-001](docs/SSD-REQ-MECH-001.html) | 機械系（MECH）要求書（L2） | 初版（Rev. -） |
@@ -458,15 +482,23 @@
 | [SSD-PHY-ORB-001](docs/SSD-PHY-ORB-001.html) | オービタ物理構成・機器配分表 | Rev. C |
 | [SSD-VAR-ORB-001](docs/SSD-VAR-ORB-001.html) | 構成の違い定義書（機体・ミッションキット） | Rev. B |
 | [SSD-IND-ORB-001](docs/SSD-IND-ORB-001.html) | 個体・時間定義書（機体・飛行の個体と実績） | Rev. B |
-| [SSD-FLT-ORB-001](docs/SSD-FLT-ORB-001.html) | 飛行構成・飛行試験定義書（飛行ごとの構成の解決と飛行試験による検証の証拠） | 初版（Rev. -） |
+| [SSD-FLT-ORB-001](docs/SSD-FLT-ORB-001.html) | 飛行構成・飛行試験定義書（飛行ごとの構成の解決と飛行試験による検証の証拠） | Rev. A |
+| [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.html) | 人間系の基準の照合表（NASA-STD-3001 によるシャトルの後付け評価） | Rev. G |
+| [SSD-EXP-ORB-001](docs/SSD-EXP-ORB-001.html) | 乗員の環境曝露定義書（曝露の量のパラメトリック・時間軸のプロファイル） | 初版（Rev. -） |
+| [SSD-TSK-ORB-001](docs/SSD-TSK-ORB-001.html) | 乗員の作業分析・機能の分担定義書（人と自動化と地上の分担、作業の段） | Rev. A |
 | [SSD-BUD-ORB-001](docs/SSD-BUD-ORB-001.html) | オービタ収支・マージン表 | Rev. D |
 | [SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.html) | 解析定義書（CO2 除去のトレード・質量特性・Δv・故障の木） | Rev. A |
 | [SSD-PAR-ORB-001](docs/SSD-PAR-ORB-001.html) | パラメトリック定義書（消耗品・電力・排熱の収支） | Rev. E |
-| [SSD-PRF-ORB-001](docs/SSD-PRF-ORB-001.html) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | 初版（Rev. -） |
+| [SSD-PRF-ORB-001](docs/SSD-PRF-ORB-001.html) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. A |
 | [SSD-FMEA-ORB-001](docs/SSD-FMEA-ORB-001.html) | オービタ冗長・故障解析表 | Rev. G |
-| [SSD-FDIR-ORB-001](docs/SSD-FDIR-ORB-001.html) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. C |
-| [SSD-HAZ-ORB-001](docs/SSD-HAZ-ORB-001.html) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. A |
+| [SSD-FDIR-ORB-001](docs/SSD-FDIR-ORB-001.html) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. D |
+| [SSD-HAZ-ORB-001](docs/SSD-HAZ-ORB-001.html) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. B |
 | [SSD-FMM-ORB-001](docs/SSD-FMM-ORB-001.html) | 故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖） | 初版（Rev. -） |
+| [SSD-HEA-ORB-001](docs/SSD-HEA-ORB-001.html) | ヒューマンエラー解析書（作業ごとの誤り・結果・ハザード・管理策） | 初版（Rev. -） |
+| [SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.html) | 乗員インタフェース対応表（警報の階層・表示と操作の盤・作業位置） | 初版（Rev. -） |
+| [SSD-HAB-ORB-001](docs/SSD-HAB-ORB-001.html) | 居住性・医療定義書（居住・医療の機能、乗員の1日、ユースケース） | 初版（Rev. -） |
+| [SSD-EGR-ORB-001](docs/SSD-EGR-ORB-001.html) | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） | 初版（Rev. -） |
+| [SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.html) | 人間系の評価方法定義書（評価方法・人間系の関心事・人間系の図表の対応） | 初版（Rev. -） |
 | [SSD-FMEA-ECLSS-001](docs/SSD-FMEA-ECLSS-001.html) | 環境制御・生命維持（ECLSS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
 | [SSD-FMEA-GNC-001](docs/SSD-FMEA-GNC-001.html) | 誘導・航法・制御（GN&C）故障解析表（FMEA・CIL） | 初版（Rev. -） |
 | [SSD-FMEA-DPS-001](docs/SSD-FMEA-DPS-001.html) | データ処理系（DPS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
@@ -539,3 +571,11 @@
 | Rev. AV | 2026-10-04 | 飛行ごとの構成と飛行試験の証拠として、飛行構成・飛行試験定義書 SSD-FLT-ORB-001 と図132・133 を追加し、SysML v2 テキスト model/SSD-FLT-ORB-001.sysml（MissionConfiguration を特化して orbiter を variant に束縛・キットを部品に、飛行試験の結果の occurrence と要求への #EvidenceFor）で示した。STS-1〜4・114・125 の構成 6件を解決し、STS-1〜4 の飛行試験の結果 98件を要求 52件の検証の証拠に結び付けた。STS-3 Orbiter Mission Report と OFT Medical Report を取り込んだ。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 23件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（50分類）を確かめた。関係する文書に参照を注記 |
 | Rev. AW | 2026-10-04 | 時間軸の消耗品・電力のプロファイルとして、消耗品・電力プロファイル定義書 SSD-PRF-ORB-001 と図134・135（標準ミッションの残量、反応剤の設計と実績）を追加し、SysML v2 テキスト model/SSD-PRF-ORB-001.sysml（SampledFunctions の時系列、枯渇の日の analysis def、必要日数の requirement def）で示した。標準ミッションの LiOH は 9.1 日で枯渇し必要日数 12 日に足りないことを示し、STS-1・114・125 の反応剤の着陸時の残量を設計の率による計算と比べた（実績は離昇・着陸の点だけで、間は本書の補間）。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 24件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（52分類）を確かめた。関係する文書に参照を注記 |
 | Rev. AX | 2026-10-04 | 残りの系の状態機械として、系の状態遷移定義書その2 SSD-BEH-ORB-006 と図136〜142（OMS・RCS・MPS・C&T・与圧系・ODS の状態遷移図、系のモード × フェーズ）を追加し、SysML v2 テキスト model/SSD-BEH-ORB-006.sysml で示した（状態 70件・遷移 86件）。C/W の警告灯（LEFT/RIGHT OMS・FWD/LEFT/RIGHT RCS・MPS・CABIN ATM）で始まる遷移 16件を警報の事象に結び付け、故障検知・処置対応表 SSD-FDIR-ORB-001 を作り直した。トレースの網羅を数え直した。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 25件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（54分類）を確かめた。関係する文書に参照を注記 |
+| Rev. AY | 2026-10-06 | 人間系の基準との照合として、人間系の基準の照合表 SSD-HSI-SYS-001 と図143・144 を追加し、SysML v2 テキスト model/SSD-HSI-SYS-001.sysml（基準の要求の requirement def と既存の要求への #Evaluates）で示した。NASA-STD-3001 Vol. 1 Rev. C・Vol. 2 Rev. F の要求 545件をシャトルに照らし（適合 121・不適合 35・データ不足 368・対象外 21）、既存の判定と食い違う 9件を関係する文書に注記した（判定は据え置き）。NASA-STD-3001 Vol. 1・Vol. 2、HIDH Rev. 1、HIDP を取り込んだ。SSD-REQ-CREW-001・SSD-VER-SYS-001 の検証の根拠の行ずれ（REQ-CREW-02・03・06・09・10）を直した。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 26件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（56分類）を確かめた。関係する文書に参照を注記 |
+| Rev. AZ | 2026-10-07 | 人間系の図表の追加の1つめとして、乗員の環境曝露定義書 SSD-EXP-ORB-001 と図145・146 を追加し、SysML v2 テキスト model/SSD-EXP-ORB-001.sysml（曝露の量の requirement def と照合表の要求への #CriterionFrom、実績の ExposureEnvelope、時間軸の ExposureProfile）で示した。曝露の量 16件（設計の判定：満たす 9・満たさない 5）と実績 32件、プロファイル 4件。ビューポイントに VP-13（人間系）を加えた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 27件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（58分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BA | 2026-10-07 | 人間系の図表の追加の2つめとして、乗員の作業分析・機能の分担定義書 SSD-TSK-ORB-001 と図147〜149 を追加し、SysML v2 テキスト model/SSD-TSK-ORB-001.sysml（担い手の part def、機能の分担の action def と自動化の段階、作業の action と段の順）で示した。機能の分担 25件（自動 1・自動（人が監視） 5・人が承認 5・手動（自動の支援） 6・手動 8）、作業分析 2件（段 40件）。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 28件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（60分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BB | 2026-10-07 | 人間系の図表の追加の3つめとして、ヒューマンエラー解析書 SSD-HEA-ORB-001 と図150・151 を追加し、SysML v2 テキスト model/SSD-HEA-ORB-001.sysml（誤りの #cause occurrence とハザード解析の原因・ハザードへの #causation、管理策への #MitigatedBy）で示した。作業 12件・誤り 35件（省略 7・誤操作 12・選択の誤り 7・時機の誤り 5・誤認・誤判断 3・伝達の誤り 1）・実例 12件。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 29件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（62分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BC | 2026-10-07 | 人間系の図表の追加の4つめとして、乗員インタフェース対応表 SSD-CIF-ORB-001 と図152・153 を追加し、SysML v2 テキスト model/SSD-CIF-ORB-001.sysml（警報の区分の part def と #MapsTo、盤・作業位置と #LocatedAt、既存の警報の #ClassifiedAs）で示した。シャトルの警報の区分 6件を 3001 の階層 5件に対応づけ（一部 6）、盤 31件・作業位置 10件・既存の警報 42件の区分を示した。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 30件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（64分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BD | 2026-10-07 | 人間系の図表の追加の5つめとして、居住性・医療定義書 SSD-HAB-ORB-001 と図154・155 を追加し、SysML v2 テキスト model/SSD-HAB-ORB-001.sysml（機能の action def と照合表への #EvaluatedBy、乗員の1日の timeslice、ユースケース）で示した。居住・医療の機能 15件（照合表の行 114件）、乗員の1日 9区分、ユースケース 14件・アクタ 6件。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 31件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（66分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BE | 2026-10-07 | 人間系の図表の追加の6つめとして、容積・動線・緊急脱出定義書 SSD-EGR-ORB-001 と図156・157 を追加し、SysML v2 テキスト model/SSD-EGR-ORB-001.sysml（乗員区画の配置と移動の経路の connection、非常退避のモードと既存の要求への #RelatedRequirement）で示した。与圧区画 7件・移動の経路 12件・非常退避のモード 10件。KSC の LC-39 の資料と NTRS の CSCS の抄録を取り込んだ。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 32件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（68分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BF | 2026-10-07 | 人間系の図表の追加の7つめとして、人間系の評価方法定義書 SSD-HVM-SYS-001 と図158 を追加し、SysML v2 テキスト model/SSD-HVM-SYS-001.sysml（評価方法の action def と 3001 の要求への #AppliesTo、人間系の図表への #RealizedBy）で示した。評価方法 14件（解析 4・人を入れた評価 6・試験 2・検査 1・実証 1）、人間系の関心事 8件をビューポイント VP-13 の関心事 CN-14〜21 にした。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 33件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（70分類）を確かめた。関係する文書に参照を注記 |

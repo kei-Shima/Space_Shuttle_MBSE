@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CREW-ESC-001 |
 | 表題 | 脱出系（ESC）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-CREW-001 |
 | 関連図 | SSD-SYS-ARC-001 図64 CREW 機能構成 |
@@ -47,6 +47,8 @@
 
 > **注記** SCOM の付録E は OI-33 の飛行ソフトウェアの主な変更をまとめたもので、その多くは乗員による系の監視・操作の方法を変えていない。本書の記述は SCOM の本文による。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1149）
 
+> **注記** 非常退避・退出のモード（射点・着陸後・滑空中・軌道上）の経路・所要時間と移動の開口は [SSD-EGR-ORB-001](SSD-EGR-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-EGR-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.10 Escape Systems（USA007587 Rev. A CPN-1、PDF p421） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/421
@@ -63,3 +65,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-07 | 容積・動線・緊急脱出定義書 SSD-EGR-ORB-001 への参照を注記（Rev. BE） |

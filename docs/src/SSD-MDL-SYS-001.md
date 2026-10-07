@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. M／2026-10-04 |
+| 版・日付 | Rev. U／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
 
 ## 1. 目的
 
-これまでに作った SysML v2 テキスト 24件（構造・要求・割付・振る舞い・パラメトリック）を1つのモデルとして読み込む入口と、パッケージどうしをつなぐ統合の関係を示し、モデル全体の意味の検査（名前の解決・型）と、文書とモデルの一致の検査の方法と結果を示す。文書（docs）と図（draw.io）とモデル（model）の3つが同じ内容を指していることを、検査で確かめられるようにすることが目的である。
+これまでに作った SysML v2 テキスト 32件（構造・要求・割付・振る舞い・パラメトリック）を1つのモデルとして読み込む入口と、パッケージどうしをつなぐ統合の関係を示し、モデル全体の意味の検査（名前の解決・型）と、文書とモデルの一致の検査の方法と結果を示す。文書（docs）と図（draw.io）とモデル（model）の3つが同じ内容を指していることを、検査で確かめられるようにすることが目的である。
 
 ## 2. モデルの構成
 
@@ -36,14 +36,22 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 15 | model/SSD-IND-ORB-001.sysml | 個体・時間（機体・飛行の個体、時間切片、実績） | SSD-BLK-SYS-001・SSD-VAR-ORB-001 | 179 | 8 | 0 | 0 |
 | 16 | model/SSD-RQF-SYS-001.sysml | 要求の形式化（属性・制約・値による判定） | SSD-PAR-ORB-001・SSD-RQM-SYS-001・SSD-ANA-ORB-001・SSD-IND-ORB-001 | 1649 | 186 | 0 | 0 |
 | 17 | model/SSD-FLT-ORB-001.sysml | 飛行構成・飛行試験（構成の解決・検証の証拠） | SSD-RQM-SYS-001・SSD-VAR-ORB-001・SSD-IND-ORB-001 | 308 | 10 | 0 | 0 |
-| 18 | model/SSD-PRF-ORB-001.sysml | 消耗品・電力プロファイル（時間軸の残量・設計と実績） | SSD-PAR-ORB-001・SSD-IND-ORB-001 | 78 | 4 | 0 | 0 |
-| 19 | model/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
-| 20 | model/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-VER-SYS-001 | 408 | 6 | 0 | 0 |
-| 21 | model/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006 | 345 | 46 | 0 | 0 |
-| 22 | model/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
-| 23 | model/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
-| 24 | model/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-PRF-ORB-001・SSD-VER-SYS-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 967 | 48 | 0 | 0 |
-| 25 | model/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 87 | 1 | 0 | 0 |
+| 18 | model/SSD-HSI-SYS-001.sysml | 人間系の基準の照合（NASA-STD-3001 による後付け評価） | SSD-RQM-SYS-001 | 2485 | 548 | 0 | 0 |
+| 19 | model/SSD-EXP-ORB-001.sysml | 乗員の環境曝露（パラメトリック・プロファイル） | SSD-HSI-SYS-001 | 212 | 19 | 0 | 0 |
+| 20 | model/SSD-TSK-ORB-001.sysml | 乗員の作業分析・機能の分担 | — | 198 | 43 | 0 | 0 |
+| 21 | model/SSD-PRF-ORB-001.sysml | 消耗品・電力プロファイル（時間軸の残量・設計と実績） | SSD-PAR-ORB-001・SSD-IND-ORB-001 | 78 | 4 | 0 | 0 |
+| 22 | model/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
+| 23 | model/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-VER-SYS-001 | 408 | 6 | 0 | 0 |
+| 24 | model/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006 | 345 | 46 | 0 | 0 |
+| 25 | model/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
+| 26 | model/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
+| 27 | model/SSD-HEA-ORB-001.sysml | ヒューマンエラー解析 | SSD-HAZ-ORB-001 | 151 | 15 | 0 | 0 |
+| 28 | model/SSD-CIF-ORB-001.sysml | 乗員インタフェース（警報の階層・表示と操作） | SSD-FDIR-ORB-001 | 157 | 58 | 0 | 0 |
+| 29 | model/SSD-HAB-ORB-001.sysml | 居住性と医療（機能・乗員の1日・ユースケース） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 250 | 37 | 0 | 0 |
+| 30 | model/SSD-EGR-ORB-001.sysml | 容積・動線・緊急脱出 | SSD-RQM-SYS-001 | 58 | 14 | 0 | 0 |
+| 31 | model/SSD-HVM-SYS-001.sysml | 人間系の評価方法とビューポイント | SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-VPT-SYS-001 | 90 | 18 | 0 | 0 |
+| 32 | model/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-VER-SYS-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001 | 1246 | 60 | 0 | 0 |
+| 33 | model/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 95 | 1 | 0 | 0 |
 
 ## 3. 統合の関係
 
@@ -110,7 +118,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 
 ## 6. 文書とモデルの一致
 
-文書の表の ID と、モデルの要素の短い名前（ID）を突き合わせた結果を示す（54分類、すべて一致）。件数だけでなく ID の集合が同じことを確かめた。
+文書の表の ID と、モデルの要素の短い名前（ID）を突き合わせた結果を示す（70分類、すべて一致）。件数だけでなく ID の集合が同じことを確かめた。
 
 | 分類 | 文書の側 | モデルの側 | 文書 | モデル | 結果 |
 |---|---|---|---|---|---|
@@ -136,8 +144,8 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 機体の違い | SSD-VAR-ORB-001 の機体の違いの表 | SSD-VAR-ORB-001 の VehicleFeature（特徴） | 18 | 18 | 一致 |
 | ミッションキット | SSD-VAR-ORB-001 のミッションキットの表 | SSD-VAR-ORB-001 の MissionKit の part def | 13 | 13 | 一致 |
 | 検証ケース | 要求書の要求の表 | SSD-VER-SYS-001 の verification def | 212 | 212 | 一致 |
-| ビューポイント | SSD-VPT-SYS-001 のビューポイントの表 | SSD-VPT-SYS-001 の viewpoint def | 12 | 12 | 一致 |
-| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 142 | 142 | 一致 |
+| ビューポイント | SSD-VPT-SYS-001 のビューポイントの表 | SSD-VPT-SYS-001 の viewpoint def | 13 | 13 | 一致 |
+| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 158 | 158 | 一致 |
 | 流れる物 | SSD-IBD-ORB-001 の流れる物の表 | SSD-IBD-ORB-001 の item def | 58 | 58 | 一致 |
 | 内部ブロック図の部品 | SSD-IBD-ORB-001 の部品の表 | SSD-IBD-ORB-001 の機器の part def | 133 | 133 | 一致 |
 | 内部ブロック図の流れ | SSD-IBD-ORB-001 の流れの表 | SSD-IBD-ORB-001 の flow | 283 | 283 | 一致 |
@@ -168,6 +176,22 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 設計と実績の比較 | SSD-PRF-ORB-001 の設計と実績の比較の表 | SSD-PRF-ORB-001 の実績の時系列 | 6 | 6 | 一致 |
 | 系の状態（その2） | SSD-BEH-ORB-006 の状態の表 | SSD-BEH-ORB-006 の state | 70 | 70 | 一致 |
 | 系の遷移（その2） | SSD-BEH-ORB-006 の遷移の表 | SSD-BEH-ORB-006 の transition | 86 | 86 | 一致 |
+| 人間系の基準の照合 | SSD-HSI-SYS-001 の照合表 | SSD-HSI-SYS-001 の requirement def | 545 | 545 | 一致 |
+| 人間系の基準の評価 | SSD-HSI-SYS-001 の照合表のシャトルの対応（要求） | SSD-HSI-SYS-001 の #Evaluates | 159 | 159 | 一致 |
+| 曝露の量 | SSD-EXP-ORB-001 の曝露の量の表 | SSD-EXP-ORB-001 の requirement def | 16 | 16 | 一致 |
+| 曝露のプロファイル | SSD-EXP-ORB-001 のプロファイルの表 | SSD-EXP-ORB-001 の ExposureProfile | 4 | 4 | 一致 |
+| 機能の分担 | SSD-TSK-ORB-001 の機能の分担の表 | SSD-TSK-ORB-001 の FunctionAllocation の action def | 25 | 25 | 一致 |
+| 作業の段 | SSD-TSK-ORB-001 の作業の段の表 | SSD-TSK-ORB-001 の Tasks の action | 40 | 40 | 一致 |
+| ヒューマンエラー | SSD-HEA-ORB-001 の誤りの表 | SSD-HEA-ORB-001 の HumanError の occurrence | 35 | 35 | 一致 |
+| 誤りの因果 | SSD-HEA-ORB-001 の誤りの表の原因・ハザード | SSD-HEA-ORB-001 の #causation | 31 | 31 | 一致 |
+| 表示・操作の盤 | SSD-CIF-ORB-001 の盤の表 | SSD-CIF-ORB-001 の ControlDisplayUnit の part def | 31 | 31 | 一致 |
+| 警報の区分 | SSD-CIF-ORB-001 の警報の区分の表（SysML に警報のあるもの） | SSD-CIF-ORB-001 の #ClassifiedAs | 40 | 40 | 一致 |
+| 居住・医療の機能 | SSD-HAB-ORB-001 の機能の表 | SSD-HAB-ORB-001 の Functions の action def | 15 | 15 | 一致 |
+| 居住・医療のユースケース | SSD-HAB-ORB-001 のユースケースの表 | SSD-HAB-ORB-001 の use case def | 14 | 14 | 一致 |
+| 移動の経路 | SSD-EGR-ORB-001 の経路の表 | SSD-EGR-ORB-001 の TranslationPath の connection | 12 | 12 | 一致 |
+| 非常退避のモード | SSD-EGR-ORB-001 のモードの表 | SSD-EGR-ORB-001 の EgressModes の action def | 10 | 10 | 一致 |
+| 人間系の評価方法 | SSD-HVM-SYS-001 の評価方法の表 | SSD-HVM-SYS-001 の Methods の action def | 14 | 14 | 一致 |
+| 評価方法と 3001 の要求 | SSD-HVM-SYS-001 の評価方法の表の照合表の行 | SSD-HVM-SYS-001 の #AppliesTo | 51 | 51 | 一致 |
 
 ## 7. 検査の方法
 
@@ -187,7 +211,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 
 ## 9. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [model/SSD-MDL-SYS-001.sysml](../../model/SSD-MDL-SYS-001.sysml) に示す。ほかのパッケージ 24件の public import と、統合の関係（§3〜§5）から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で全部を読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [model/SSD-MDL-SYS-001.sysml](../../model/SSD-MDL-SYS-001.sysml) に示す。ほかのパッケージ 32件の public import と、統合の関係（§3〜§5）から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で全部を読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -222,3 +246,11 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. K | 2026-10-04 | 読み込むパッケージに Rev. AV の SSD-FLT-ORB-001 を加えた、文書とモデルの一致を 50分類にした（Rev. AV） |
 | Rev. L | 2026-10-04 | 読み込むパッケージに Rev. AW の SSD-PRF-ORB-001 を加えた、文書とモデルの一致を 52分類にした（Rev. AW） |
 | Rev. M | 2026-10-04 | 読み込むパッケージに Rev. AX の SSD-BEH-ORB-006 を加えた、文書とモデルの一致を 54分類にした（Rev. AX） |
+| Rev. N | 2026-10-06 | 読み込むパッケージに Rev. AY の SSD-HSI-SYS-001 を加えた、文書とモデルの一致を 56分類にした（Rev. AY） |
+| Rev. O | 2026-10-07 | 読み込むパッケージに Rev. AZ の SSD-EXP-ORB-001 を加えた、文書とモデルの一致を 58分類にした（Rev. AZ） |
+| Rev. P | 2026-10-07 | 読み込むパッケージに Rev. BA の SSD-TSK-ORB-001 を加えた、文書とモデルの一致を 60分類にした（Rev. BA） |
+| Rev. Q | 2026-10-07 | 読み込むパッケージに Rev. BB の SSD-HEA-ORB-001 を加えた、文書とモデルの一致を 62分類にした（Rev. BB） |
+| Rev. R | 2026-10-07 | 読み込むパッケージに Rev. BC の SSD-CIF-ORB-001 を加えた、文書とモデルの一致を 64分類にした（Rev. BC） |
+| Rev. S | 2026-10-07 | 読み込むパッケージに Rev. BD の SSD-HAB-ORB-001 を加えた、文書とモデルの一致を 66分類にした（Rev. BD） |
+| Rev. T | 2026-10-07 | 読み込むパッケージに Rev. BE の SSD-EGR-ORB-001 を加えた、文書とモデルの一致を 68分類にした（Rev. BE） |
+| Rev. U | 2026-10-07 | 読み込むパッケージに Rev. BF の SSD-HVM-SYS-001 を加えた、文書とモデルの一致を 70分類にした（Rev. BF） |

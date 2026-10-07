@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-CREW-001 |
 | 表題 | 乗員系（CREW）要求書（L2） |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-06 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図64 乗員系 機能構成 |
@@ -125,19 +125,23 @@ CREWの機能説明書 7 件の機能行 52 件と、要求の割付先の IF �
 | ID | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|
 | REQ-CREW-01 | I（検査） | 根拠あり | 3.15節 Personal Hygiene Provisions（PDF p359〜）：個人衛生ホース・衛生キット・タオルなどを述べる。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=359） |
-| REQ-CREW-02 | D（実証） | 根拠あり | 2.5節 Sleeping Provisions（PDF p209〜211）：睡眠の時間の割り振り、寝袋と固定式睡眠ステーションを述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/210） |
-| REQ-CREW-03 | A（解析） | 根拠あり | CYCLE ERGOMETER OPS（PDF p87）：エルゴメータを床から外して運動の場所の座席スタッドに取り付ける手順を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=87） |
+| REQ-CREW-02 | D（実証） | 根拠あり | CYCLE ERGOMETER OPS（PDF p87）：エルゴメータを床から外して運動の場所の座席スタッドに取り付ける手順を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=87） |
+| REQ-CREW-03 | A（解析） | 根拠あり | A13-29（PDF p1765）：居住区画の24時間平均の騒音（LEQ）が音響線量計で 74 dBA 以上なら、騒音の大きい機器の電源を切るなどの処置をとると定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1765） |
 | REQ-CREW-04 | I（検査） | 根拠あり | 1-6 VOL E REMOVAL（PDF p50）：床下の Volume E を外して下部機器ベイへ近づく手順と、睡眠ステーションがあると外せない場合を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=50） |
 | REQ-CREW-05 | D（実証） | 根拠あり | A13-22（PDF p1758）：医療キットの使用の承認と記録を定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1758） |
-| REQ-CREW-06 | A（解析） | 根拠あり | 2.5節 SOMS・OBS（PDF p218〜221）：医療キット、蘇生器、生体計測を述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/218） |
+| REQ-CREW-06 | A（解析） | 根拠あり | A14-51（PDF p1830）：乗員の電離放射線の被ばく限度とALARAを定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1830） |
 | REQ-CREW-07 | D（実証） | 根拠あり | （PDF p22）：6つのペイロードベイ投光照明を点けたときの電流の増え方から、中部左舷の投光照明の不具合を見つけた例を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
 | REQ-CREW-08 | A（解析） | 根拠あり | 3.5節 Emergency Egress Provisions（PDF p123〜）：脱出パネル・降下器・PEAPなどの非常脱出の装備を述べる。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=123） |
-| REQ-CREW-09 | A（解析） | 根拠あり | A17-1001（PDF p2032）：LESの酸素供給系の喪失に対するMDF・次のPLSの基準を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2032） |
-| REQ-CREW-10 | A（解析） | 根拠あり | A14-51（PDF p1830）：乗員の電離放射線の被ばく限度とALARAを定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1830） |
+| REQ-CREW-09 | A（解析） | 根拠あり | 2.10節 Escape Systems（PDF p438）：側面ハッチから出られないときの2次の非常脱出口として、左舷の頭上窓（窓8）の投棄系を述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/438） |
+| REQ-CREW-10 | A（解析） | 根拠あり | A17-1001（PDF p2032）：LESの酸素供給系の喪失に対するMDF・次のPLSの基準を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2032） |
 
 ## 8. 注記（出典間の相違・構成変更）
 
 > **注記** トレース表の「要求なしで妥当」は、親の説明書の全般の記述か、同じ下位機能（文書）に割り付けた要求が受け持つ構成・運用の記述であることを根拠に、文書ごとにまとめて判断したもので、機能行1件ずつに要求の要否を検討したものではない。
+
+> **注記** NASA-STD-3001 との照合：REQ-CREW-03（検証の判定 VC-REQ-CREW-03 pass）は [V2 6078]（HSI-161）・[V2 6115]（HSI-162）・[V2 9056]（HSI-376） による評価では 不適合。REQ-CREW-08（検証の判定 VC-REQ-CREW-08 pass）は [V2 11032]（HSI-492） による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
+> **注記** 乗員系の要求と人間系の基準（NASA-STD-3001）との照合は [SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-HSI-SYS-001.sysml）。
 
 ## 9. 参考文献
 
@@ -173,3 +177,4 @@ CREWの機能説明書 7 件の機能行 52 件と、要求の割付先の IF �
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 10件、機能行 52件とのトレース、検証の根拠） |
+| Rev. A | 2026-10-06 | 検証の根拠の文の行ずれを直した（REQ-CREW-02・03・06・09・10）。検証方法・状態・判定は変更なし、NASA-STD-3001 による評価との食い違い 2件の要求を注記（判定は据え置き）、人間系の基準の照合表 SSD-HSI-SYS-001 への参照を注記（Rev. AY） |

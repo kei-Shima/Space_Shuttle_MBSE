@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-ECLSS-001 |
 | 表題 | 環境制御・生命維持（ECLSS）要求書（L2） |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-06 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -183,6 +183,8 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 
 > **注記** ECLSS の説明書は下位が深く（87件）、本書のトレースの対象は親（SSD-FD-ECLSS-001）と第1段の下位8件（ALS・ARS・ATCS・CAB・FDS・H2O・PCS・WCS）の機能行とした。第2段より下の機能行は、第1段の説明書の要求が受け持つものとし、行ごとのトレースは今後の課題とする。
 
+> **注記** NASA-STD-3001 との照合：REQ-ECLSS-06（検証の判定 VC-REQ-ECLSS-06 pass）は [V2 6004]（HSI-102）・[V2 6050]（HSI-124） による評価では 不適合。REQ-ECLSS-13（検証の判定 VC-REQ-ECLSS-13 pass）は [V2 7102]（HSI-220） による評価では 不適合。REQ-ECLSS-11（検証の判定 VC-REQ-ECLSS-11 pass）は [V2 9059]（HSI-379） による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Pressure Control System（PDF p360） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360
@@ -210,3 +212,4 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 13件、機能行 79件とのトレース、検証の根拠） |
+| Rev. A | 2026-10-06 | NASA-STD-3001 による評価との食い違い 3件の要求を注記（判定は据え置き）（Rev. AY） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CW-001 |
 | 表題 | 警報系（C/W）機能説明書 |
-| 版・日付 | Rev. H／2026-10-03 |
+| 版・日付 | Rev. I／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -64,6 +64,8 @@
 
 > **注記** C/W の警告灯ごとの監視する機能ブロック・検知する故障・処置は [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-FDIR-ORB-001.sysml）。
 
+> **注記** 警報の報知（灯・音）と 3001 の警報の階層の対応、表示・操作の盤の作業位置は [SSD-CIF-ORB-001](SSD-CIF-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-CIF-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p113） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/113
@@ -86,3 +88,4 @@
 | Rev. F | 2026-10-02 | 要求文書 SSD-REQ-CW-001 への参照を注記（Rev. W） |
 | Rev. G | 2026-10-02 | 故障解析表 SSD-FMEA-CW-001 への参照を注記（Rev. X） |
 | Rev. H | 2026-10-03 | 故障検知・処置対応表 SSD-FDIR-ORB-001 への参照を注記（Rev. AP） |
+| Rev. I | 2026-10-07 | 乗員インタフェース対応表 SSD-CIF-ORB-001 への参照を注記（Rev. BC） |

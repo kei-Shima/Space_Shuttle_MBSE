@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-SYS-001 |
 | 表題 | システム要求書（L1） |
-| 版・日付 | Rev. G／2026-10-03 |
+| 版・日付 | Rev. H／2026-10-06 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -126,6 +126,8 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 
 > **注記** REQ-SYS-06・13・17 などの、設計値・飛行の実績の値による判定は [SSD-RQF-SYS-001](SSD-RQF-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-RQF-SYS-001.sysml）。
 
+> **注記** 人間系の基準（NASA-STD-3001 Vol. 1 Rev. C・Vol. 2 Rev. F）とシャトルの照合は [SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-HSI-SYS-001.sysml）。
+
 ## 8. 参考文献
 
 1. Shuttle Crew Operations Manual 1.1 Overview（USA007587 Rev. A CPN-1、PDF p31） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31
@@ -179,3 +181,4 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | Rev. E | 2026-10-03 | 検証定義書 SSD-VER-SYS-001 への参照を注記（Rev. AL） |
 | Rev. F | 2026-10-03 | ハザード解析書 SSD-HAZ-ORB-001 への参照を注記（Rev. AQ） |
 | Rev. G | 2026-10-03 | 要求の形式化定義書 SSD-RQF-SYS-001 への参照を注記（Rev. AS） |
+| Rev. H | 2026-10-06 | 人間系の基準の照合表 SSD-HSI-SYS-001 への参照を注記（Rev. AY） |
