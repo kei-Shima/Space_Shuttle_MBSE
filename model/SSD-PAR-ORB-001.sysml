@@ -101,7 +101,7 @@ package SSD_PAR_ORB_001 {
         attribute crew : Real = 7 { doc /* PAR-01 乗員数（人） */ }
         attribute days : Real = 10 { doc /* PAR-02 軌道滞在日数（日） */ }
         attribute reserveDays : Real = 2 { doc /* PAR-03 LiOH の予備日数（PLS を見送るため）（日） */ }
-        attribute liohCanisters : Real = 32 { doc /* PAR-04 LiOH キャニスタの数（装着2個と予備30個）（個） */ }
+        attribute liohCanisters : Real = 42 { doc /* PAR-04 LiOH キャニスタの必要搭載数（乗員 ×（日数＋予備2日）× 24 ÷ 定格）（個） */ }
         attribute liohRating : DurationValue = 48 [h] { doc /* PAR-05 LiOH キャニスタ1個の定格（人・時） */ }
         attribute waterTanks : Real = 4 { doc /* PAR-06 給水タンクの数（基） */ }
         attribute waterPerTank : MassValue = 165 [lb] { doc /* PAR-07 給水タンク1基の容量（lb） */ }
@@ -124,12 +124,12 @@ package SSD_PAR_ORB_001 {
         attribute heatPerKw : ScalarQuantityValue = 4420 ['Btu_IT/h'/kW] { doc /* PAR-24 1 kW あたりの排熱（Btu/hr） */ }
         attribute radiatorMax : PowerValue = 61100 ['Btu_IT/h'] { doc /* PAR-25 放熱器の最大排熱能力（Btu/hr） */ }
         attribute fesTopping : PowerValue = 39000 ['Btu_IT/h'] { doc /* PAR-26 FES トッピングの最大排熱能力（Btu/hr） */ }
-        attribute liohCapacity : DurationValue { doc /* CON-01 の出力（人・時）。計算値 1,536 */ }
+        attribute liohCapacity : DurationValue { doc /* CON-01 の出力（人・時）。計算値 2,016 */ }
         attribute liohLoad : DurationValue { doc /* CON-01 の出力（人・時）。計算値 1,680 */ }
-        attribute liohMargin : DurationValue { doc /* CON-01 の出力（人・時）。計算値 −144 */ }
-        attribute liohDays : Real { doc /* CON-01 の出力（日）。計算値 9.14 */ }
+        attribute liohMargin : DurationValue { doc /* CON-01 の出力（人・時）。計算値 336 */ }
+        attribute liohDays : Real { doc /* CON-01 の出力（日）。計算値 12.00 */ }
         attribute liohLoadReserve : DurationValue { doc /* CON-02 の出力（人・時）。計算値 2,016 */ }
-        attribute liohMarginReserve : DurationValue { doc /* CON-02 の出力（人・時）。計算値 −480 */ }
+        attribute liohMarginReserve : DurationValue { doc /* CON-02 の出力（人・時）。計算値 0 */ }
         attribute waterCapacity : MassValue { doc /* CON-03 の出力（lb）。計算値 660 */ }
         attribute waterLoad : MassValue { doc /* CON-03 の出力（lb）。計算値 420 */ }
         attribute waterMargin : MassValue { doc /* CON-03 の出力（lb）。計算値 240 */ }

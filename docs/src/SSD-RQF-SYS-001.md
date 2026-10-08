@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-RQF-SYS-001 |
 | 表題 | 要求の形式化定義書（属性・制約・値による判定） |
-| 版・日付 | Rev. A／2026-10-06 |
+| 版・日付 | Rev. B／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-RQM-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図124 要求の形式化の区分・図125 要求の値による判定 |
@@ -61,12 +61,12 @@
 | RF-009 | REQ-SYS-07 | cabinPressure | 乗員室の圧力 | PressureValue | psia | 14.5〜14.9 psia | 14.7 ± 0.2 psia |
 | RF-010 | REQ-SYS-08 | crewAcceleration | 乗員と機体の加速度 | Real | g | ≦ 3 g | — |
 | RF-011 | REQ-SYS-08 | ascentNx | 上昇時の Nx | Real | g | ≦ 3.11 g | 上昇時 |
-| RF-012 | REQ-SYS-09 | crossrange | 帰還時の横方向移動（クロスレンジ）の能力 | LengthValue | n.mi. | ≧ 1100 n.mi. | 約 |
+| RF-012 | REQ-SYS-09 | crossrange | 帰還時の横方向移動（クロスレンジ）の能力（分散を含む限界） | LengthValue | n.mi. | ≧ 750 n.mi. | 約（SCOM 9.3：分散を含む 753〜828 n.mi.） |
 | RF-013 | REQ-SYS-10 | faultsToContinueMission | ミッションを継続できる故障の数 | Integer | — | ≧ 1 | — |
 | RF-014 | REQ-SYS-10 | faultsToSafeReturn | 安全に帰還できる故障の数 | Integer | — | ≧ 2 | — |
 | RF-015 | REQ-SYS-11 | redundancyLevels | 冗長の判定段階の数（2故障許容・1故障許容・0故障許容・飛行不能） | Integer | — | ＝ 4 | — |
 | RF-016 | REQ-SYS-12 | eomLandingTime | 通常の EOM 着陸までの飛行時間 | DurationValue | h | ≧ 96 h | 約、第5飛行日以降 |
-| RF-017 | REQ-SYS-13 | extensionDays | 確保する延長日（天候1日・ウェーブオフ1日） | DurationValue | d | ≧ 2 d | — |
+| RF-017 | REQ-SYS-13 | extensionDays | 打上げ前・延長の決定時に確保する延長日（天候1日・ウェーブオフ1日） | DurationValue | d | ≧ 2 d | — |
 | RF-018 | REQ-SYS-14 | goNoGoCategories | Go/No-Go の判定区分の数（上昇継続・MDF・次の PLS） | Integer | — | ＝ 3 | — |
 | RF-019 | REQ-SYS-15 | intactAbortModes | intact アボートの種類の数（RTLS・TAL・AOA・ATO） | Integer | — | ＝ 4 | — |
 | RF-020 | REQ-SYS-17 | eomLandingWeight | EOM の着陸重量 | MassValue | lb | ≦ 233000 lb | — |
@@ -217,7 +217,7 @@
 | RF-165 | REQ-EPS-12 | stay5Sets | 5セット搭載時の軌道滞在日数 | DurationValue | d | ＝ 12 d | 5セット |
 | RF-166 | REQ-EPS-12 | stay8Sets | 8セット搭載時の軌道滞在日数 | DurationValue | d | ＝ 18 d | 8セット |
 | RF-167 | REQ-EPS-14 | purgeDuration | 燃料電池1基のパージ時間 | DurationValue | min | ≧ 2 min | — |
-| RF-168 | REQ-EPS-14 | purgeInterval | パージの間隔 | DurationValue | h | ≦ 12 h | — |
+| RF-168 | REQ-EPS-14 | purgeInterval | パージの間隔 | DurationValue | h | ≦ 96 h | 頻度は電圧の低下 0.2 V で決める |
 | RF-169 | REQ-EPS-15 | stackTemperature | 燃料電池スタックの温度 | ThermodynamicTemperatureValue | °F | ＝ 200 °F | 約、負荷に応じる |
 | RF-170 | REQ-EPS-15 | coolingLossResponseTime | 冷却喪失時に処置するまでの時間 | DurationValue | min | ≦ 9 min | 負荷 7 kW |
 | RF-171 | REQ-EPS-17 | rpcCurrentLimit | RPC の電流制限（定格比） | Real | % | ＝ 150 % | — |
@@ -471,7 +471,7 @@
 
 ## 6. 値による判定
 
-制約に設計値・飛行の実績を入れた判定 22件を示す（満たさない 5件）。
+制約に設計値・飛行の実績を入れた判定 22件を示す（満たさない 1件）。
 
 | ID | 要求 | 属性 | 制約 | 評価の対象 | 値 | 判定 | 値の出どころ | 補足 |
 |---|---|---|---|---|---|---|---|---|
@@ -480,17 +480,17 @@
 | EV-03 | REQ-ECLSS-10 | potableTanks | ＝ 4 | 標準ミッション（設計） | 4 | 満たす | SSD-PAR-ORB-001 PAR-06 waterTanks | — |
 | EV-04 | REQ-ECLSS-10 | tankCapacity | ＝ 165 lb | 標準ミッション（設計） | 165 lb | 満たす | SSD-PAR-ORB-001 PAR-07 waterPerTank | — |
 | EV-05 | REQ-SYS-06 | orbitStayDuration | 4〜16 d | 標準ミッション（設計） | 10 d | 満たす | SSD-PAR-ORB-001 PAR-02 days | — |
-| EV-06 | REQ-SYS-13 | extensionDays | ≧ 2 d | 標準ミッション（設計） | 2 d | 満たす | SSD-PAR-ORB-001 PAR-03 reserveDays | 前提の値（LiOH は予備日数を含めると不足：CON-02） |
+| EV-06 | REQ-SYS-13 | extensionDays | ≧ 2 d | 標準ミッション（設計） | 2 d | 満たす | SSD-PAR-ORB-001 PAR-03 reserveDays | 前提の値（LiOH は予備2日を含めて必要搭載数 42個：CON-02、マージン 0） |
 | EV-07 | REQ-SYS-17 | eomLandingWeight | ≦ 233000 lb | 解析（設計） | 233,000 lb | 満たす | SSD-ANA-ORB-001 eomForwardCg.landingWeight | 上限ちょうどの重量で解析 |
 | EV-08 | REQ-SYS-06 | orbitStayDuration | 4〜16 d | STS-1（実績） | 2.26 d | 満たさない | SSD-IND-ORB-001 STS-1 の離昇〜着陸（約54.35時間） | STS-1 は2日間の試験飛行 |
 | EV-09 | REQ-SYS-06 | orbitStayDuration | 4〜16 d | STS-114（実績） | 13.9 d | 満たす | SSD-IND-ORB-001 AV-23 | — |
 | EV-10 | REQ-SYS-06 | orbitStayDuration | 4〜16 d | STS-125（実績） | 12.9 d | 満たす | SSD-IND-ORB-001 AV-35 | — |
 | EV-11 | REQ-SYS-17 | eomLandingWeight | ≦ 233000 lb | STS-114（実績） | 226,199.0 lb | 満たす | SSD-IND-ORB-001 AV-22 | — |
 | EV-12 | REQ-SYS-17 | eomLandingWeight | ≦ 233000 lb | STS-125（実績） | 232,591.4 lb | 満たす | SSD-IND-ORB-001 AV-33 | 余裕は約 409 lb（本書の計算） |
-| EV-13 | REQ-EPS-14 | purgeInterval | ≦ 12 h | STS-114（実績） | 23〜93 h | 満たさない | SSD-IND-ORB-001 AV-19 | 間隔は本書の計算（約80・88・93・23時間） |
-| EV-14 | REQ-EPS-14 | purgeInterval | ≦ 12 h | STS-125（実績） | 24〜49 h | 満たさない | SSD-IND-ORB-001 AV-31 | 間隔は本書の計算（約24〜49時間） |
-| EV-15 | REQ-SYS-13 | extensionDays | ≧ 2 d | STS-114（実績） | 1.5 d | 満たさない | SSD-IND-ORB-001 AV-16 | 着陸時の反応剤で 36時間。予備の2日のうち1日を天候で使った後 |
-| EV-16 | REQ-SYS-13 | extensionDays | ≧ 2 d | STS-125（実績） | 1.17 d | 満たさない | SSD-IND-ORB-001 AV-28 | 着陸時の反応剤で 28時間 |
+| EV-13 | REQ-EPS-14 | purgeInterval | ≦ 96 h | STS-114（実績） | 23〜93 h | 満たす | SSD-IND-ORB-001 AV-19 | 間隔は本書の計算（約80・88・93・23時間） |
+| EV-14 | REQ-EPS-14 | purgeInterval | ≦ 96 h | STS-125（実績） | 24〜49 h | 満たす | SSD-IND-ORB-001 AV-31 | 間隔は本書の計算（約24〜49時間） |
+| EV-15 | REQ-SYS-13 | extensionDays | ≧ 2 d | STS-114（実績） | 2 d（計画で確保、1日を天候で使用） | 満たす | SSD-IND-ORB-001 AV-16・STS-114 の報告 p8 | 計画は12日＋予備2日。予備のうち1日を天候で使い、着陸時の反応剤でさらに 36時間の延長が可能だった |
+| EV-16 | REQ-SYS-13 | extensionDays | ≧ 2 d | STS-125（実績） | 2 d（計画で確保、2日とも天候で使用） | 満たす | SSD-IND-ORB-001 AV-28・STS-125 の報告 p24〜26 | FD12・13 の KSC の着陸を天候で見送り FD14 に EAFB へ着陸。着陸時の反応剤でさらに 28時間の延長が可能だった |
 | EV-17 | REQ-OMS-11 | landingPropellantPerPod | ≦ 22 % | STS-125（実績） | 6.2〜8.7 % | 満たす | SSD-IND-ORB-001 AV-34 | 4つのタンクの残量の割合（本書の計算） |
 | EV-18 | REQ-EPS-04 | fcContinuousPower | 2〜10 kW | STS-1（実績） | 5.25 kW | 満たす | SSD-IND-ORB-001 AV-02 | 飛行の平均電力 15.75 kW を3基で割った値（本書の計算） |
 | EV-19 | REQ-EPS-04 | fcContinuousPower | 2〜10 kW | STS-114（実績） | 4.53 kW | 満たす | SSD-IND-ORB-001 AV-15 | 平均電力 13.6 kW を3基で割った値（本書の計算） |
@@ -506,12 +506,12 @@
 |---|---|---|---|
 | REQ-ECLSS-10 | 2 | — | — |
 | REQ-EPS-04 | 4 | — | — |
-| REQ-EPS-14 | 2 | EV-13・EV-14 | 見直し候補（要求の値か運用の前提） |
+| REQ-EPS-14 | 2 | — | 満たす（Rev. BG で要求の値・評価を見直した） |
 | REQ-EPS-19 | 1 | — | — |
 | REQ-OMS-11 | 1 | — | — |
 | REQ-SYS-05 | 2 | — | — |
 | REQ-SYS-06 | 4 | EV-08 | 見直し候補（要求の値か運用の前提） |
-| REQ-SYS-13 | 3 | EV-15・EV-16 | 見直し候補（要求の値か運用の前提） |
+| REQ-SYS-13 | 3 | — | 満たす（Rev. BG で要求の値・評価を見直した） |
 | REQ-SYS-17 | 3 | — | — |
 
 ## 8. 図
@@ -538,6 +538,8 @@
 
 > **注記** 値による判定と、人間系の基準（NASA-STD-3001）による評価との食い違いは [SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-HSI-SYS-001.sysml）。
 
+> **注記** 要求の値の見直し（Rev. BG）：RF-012（クロスレンジ ≧ 750 n.mi.、運用の限界）・RF-017（延長日を打上げ前・延長の決定時に確保）・RF-168（パージの間隔 ≦ 96 h）を改め、EV-13〜16 を満たすとした（EV-15・16 は計画で確保した延長日で評価）。上の REQ-EPS-14・REQ-SYS-13 の注記は見直し前の判定である。
+
 ## 11. 参考文献
 
 1. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
@@ -549,3 +551,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-10-03 | 初版作成（要求 212件の区分：数値 122・数 62・定性 28、制約 383件、値による判定 22件（満たさない 5件）、図124・125、SysML v2 テキスト） |
 | Rev. A | 2026-10-06 | NASA-STD-3001 による評価との食い違い 1件の要求を注記（判定は据え置き）、人間系の基準の照合表 SSD-HSI-SYS-001 への参照を注記（Rev. AY） |
+| Rev. B | 2026-10-07 | REQ-SYS-09・13・EPS-14 の制約と EV-13〜16 の判定を見直した（要求の値の見直し）（Rev. BG） |

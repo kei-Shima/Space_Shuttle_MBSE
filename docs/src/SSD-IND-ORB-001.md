@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-IND-ORB-001 |
 | 表題 | 個体・時間定義書（機体・飛行の個体と実績） |
-| 版・日付 | Rev. B／2026-10-04 |
+| 版・日付 | Rev. C／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-VAR-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図122 機体と飛行の個体・時間切片・図123 飛行の実績と設計値 |
@@ -92,7 +92,7 @@
 | AV-03 | STS-1 | 軌道上の平均負荷（実績） | 14〜17 kW | PAR-15 | 14 kW（軌道上の平均消費電力） | 平均負荷は実績／予測で上昇 25／24 kW、軌道 14〜17／15〜20 kW、降下 20／22 kW で、差はヒータの作動率と照明の負荷の低さによる。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=35） 補足：予測は 15〜20 kW（S1-16）。乗員報告は軌道約 15 kW（S1-30）。 |
 | AV-04 | STS-1 | 降下の平均負荷（実績） | 20 kW | PAR-16 | 19 kW（再突入時の電力（検討の仮定）） | 平均負荷は実績／予測で上昇 25／24 kW、軌道 14〜17／15〜20 kW、降下 20／22 kW で、差はヒータの作動率と照明の負荷の低さによる。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=35） 補足：予測は 22 kW（S1-16）、乗員報告は再突入約 19 kW（S1-30）。PAR-16（検討の仮定 19 kW）と近い。 |
 | AV-05 | STS-1 | 燃料電池の運転時間（地上＋飛行） | 145 h | REQ-EPS-20 | 2,000 時間 | 燃料電池は飛行中に 857 kWh を供給し、飛行の平均電力は 15.75 kW であった。運転時間は地上91時間と飛行54時間22分で合計145時間である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=34） 補足：REQ-EPS-20（累積 2,000 時間まで使用）に対し1飛行で145時間。 |
-| AV-06 | STS-1 | 燃料電池のパージ（自動） | — | REQ-EPS-14 | 各 2 分以上・間隔 12 時間以内 | 燃料電池の負荷は上昇約 25 kW、軌道約 15 kW、再突入約 19 kW であった。自動パージは 102:15:04:10 G.m.t. に試みて失敗し、以後のパージはすべて手動で行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=136） 補足：自動パージは流量計の校正誤りで失敗し、以後すべて手動（S1-12・S1-30）。回数・間隔は資料に無い。 |
+| AV-06 | STS-1 | 燃料電池のパージ（自動） | — | REQ-EPS-14 | 各 2 分以上・間隔 96 時間以内 | 燃料電池の負荷は上昇約 25 kW、軌道約 15 kW、再突入約 19 kW であった。自動パージは 102:15:04:10 G.m.t. に試みて失敗し、以後のパージはすべて手動で行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=136） 補足：自動パージは流量計の校正誤りで失敗し、以後すべて手動（S1-12・S1-30）。回数・間隔は資料に無い。 |
 | AV-07 | STS-1 | 窒素の使用量（飛行全体） | 2 lb | PAR-12 | 6 lb/日（窒素の使用量（7人）） | 飛行中に使った窒素は約2ポンドで、水のダンプ時の水タンクのベローズの加圧によるものである。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58） 補足：PAR-12（7人で 6 lb/日）に対し、2人・約2.3日で約2ポンド。水タンクの加圧分で、のちに客室へ出た（S1-22）。 |
 | AV-08 | STS-1 | LiOH キャニスタの使用数 | 4 個 | REQ-ECLSS-06 | LiOH キャニスタ 2（各 約 120 lb/h） | LiOH はカートリッジ A を 103:05:00、B を 103:22:50 G.m.t. に交換し、両方を 104:13:15 G.m.t. に軌道離脱・再突入の準備で取り外した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=56） 補足：本書の数え方：装着2個（S1-20）＋交換2回（A・B、S1-21）＝4個。予測の飛行所要4個（J1-05、搭載6個・余裕1個）と一致。PAR-05（定格48人・時）との比は計算していない。 |
 | AV-09 | STS-1 | 燃料電池の生成水 | 613.7 lb | — | — | 給水・飲料水の収支は離昇時 864.4 lb、燃料電池の生成 613.7 lb、FES の使用 554.7 lb、船外ダンプ 237.8 lb、乗員の使用 22.8 lb、着陸時 662.8 lb であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59） 補足：船外ダンプ 237.8 lb、FES 554.7 lb（S1-25）。予測は給水を軌道上 975〜675 lb に保ち（J1-06）、最大 940 lb でダンプ不要とした（J1-10）が、実績は2回ダンプした（S1-25）。 |
@@ -105,7 +105,7 @@
 | AV-16 | STS-114 | 着陸時の反応剤で可能な延長 | 36 h | REQ-SYS-13 | 延長日 2 | PRSD は燃料電池に酸素 3076 lbm・水素 387 lbm を供給して 4526 kWh を発電し、333.55 時間の平均電力は 13.6 kW、着陸時の残量で36時間の延長が可能であった。ECLSS へは酸素 250 lbm を供給した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=43） 補足：5組（PAR-22・REQ-EPS-12 の12日）で13日21時間飛び、なお36時間延長できた。予備2日（48時間、REQ-SYS-13）のうち1日を天候で使った後の値（S114-02）。 |
 | AV-17 | STS-114 | ECLSS へ供給した酸素 | 250 lbm | PAR-23 | 14 lb/日（乗員の酸素使用量（7人・漏洩込み）） | PRSD は燃料電池に酸素 3076 lbm・水素 387 lbm を供給して 4526 kWh を発電し、333.55 時間の平均電力は 13.6 kW、着陸時の残量で36時間の延長が可能であった。ECLSS へは酸素 250 lbm を供給した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=43） 補足：本書の計算：250/13.9日＝約18 lb/日で PAR-23（7人 14 lb/日）より多い。ISS への O2 移送（S114-19）や EVA・再与圧を含むためと考えられる（推定）。 |
 | AV-18 | STS-114 | 燃料電池の生成水 | 3,463 lbm | — | — | 燃料電池の平均電力と負荷は 13.6 kW・438 A で、飲料水 3463 lbm を生成した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
-| AV-19 | STS-114 | 燃料電池のパージの回数・間隔 | 5 回 | REQ-EPS-14 | 各 2 分以上・間隔 12 時間以内 | 燃料電池のパージは5回で、MET 約38・118・206・299・322 時間に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=44） 補足：本書の計算：間隔は約80・88・93・23 時間で、REQ-EPS-14 の『12時間以内』を大きく超える。要求の値の根拠の確認が要る。 |
+| AV-19 | STS-114 | 燃料電池のパージの回数・間隔 | 5 回 | REQ-EPS-14 | 各 2 分以上・間隔 96 時間以内 | 燃料電池のパージは5回で、MET 約38・118・206・299・322 時間に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=44） 補足：本書の計算：間隔は約80・88・93・23 時間で、REQ-EPS-14 の『12時間以内』を大きく超える。要求の値の根拠の確認が要る。 |
 | AV-20 | STS-114 | 燃料電池1の累積運転時間（終了時） | 1,078 h | REQ-EPS-20 | 2,000 時間 | 燃料電池の飛行の累積運転時間は終了時に FC1 が 1078 時間、FC2 が 422 時間、FC3 が 418 時間であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=44） 補足：REQ-EPS-20 の 2,000 時間の約54%。 |
 | AV-21 | STS-114 | APU 2 の運転時間（合計） | 1:49:05 h:m:s | REQ-APU-01 | 約 332 lb／APU（公称 90分・連続約 110分） | APU の運転時間の合計は APU 1 が 1:22:59、APU 2 が 1:49:05、APU 3 が 1:33:54 で、燃料の合計は 169・214・229 lb であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=45） 補足：REQ-APU-01 の公称90分を超える（再突入 1:28:10 は着陸後の運転を含む）。燃料 214 lb は搭載約 332 lb 以内。 |
 | AV-22 | STS-114 | 着陸時のオービタ重量 | 226,199.0 lb | REQ-SYS-17 | EOM 233k lb、アボート 239k〜248k lb | 着陸時のオービタ重量は 226,199.0 lb であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=54） 補足：REQ-SYS-17（EOM 233,000 lb）以下。 |
@@ -117,7 +117,7 @@
 | AV-28 | STS-125 | 着陸時の反応剤で可能な延長 | 28 h | REQ-SYS-13 | 延長日 2 | ECLSS へ供給した酸素は 174 lbm で、着陸時の残量で平均 15.0 kW なら28時間、延長日の 12.88 kW なら32時間の延長が可能であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46） 補足：平均 15.0 kW で28時間、延長日の 12.88 kW で32時間（S125-18）。REQ-SYS-13（2日＝48時間）に届かない。O2 が制約の反応剤。 |
 | AV-29 | STS-125 | ECLSS へ供給した酸素 | 174 lbm | PAR-23 | 14 lb/日（乗員の酸素使用量（7人・漏洩込み）） | ECLSS へ供給した酸素は 174 lbm で、着陸時の残量で平均 15.0 kW なら28時間、延長日の 12.88 kW なら32時間の延長が可能であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46） 補足：本書の計算：174/12.9日＝約13.5 lb/日で PAR-23（7人 14 lb/日）とほぼ一致。 |
 | AV-30 | STS-125 | 燃料電池の生成水 | 3,601 lbm | — | — | 平均電力と負荷は 15.0 kW・490 A で、309.65 時間に 4630 kWh を発電し飲料水 3601 lbm を生成した。パージは8回、MET 約27・76・125・170・217・253・277・303 時間に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46） |
-| AV-31 | STS-125 | 燃料電池のパージの回数・間隔 | 8 回 | REQ-EPS-14 | 各 2 分以上・間隔 12 時間以内 | 平均電力と負荷は 15.0 kW・490 A で、309.65 時間に 4630 kWh を発電し飲料水 3601 lbm を生成した。パージは8回、MET 約27・76・125・170・217・253・277・303 時間に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46） 補足：本書の計算：間隔は約24〜49時間（本文は46・47・25時間の間隔を記す、sts125 p23〜25）。REQ-EPS-14 の『12時間以内』を超える。 |
+| AV-31 | STS-125 | 燃料電池のパージの回数・間隔 | 8 回 | REQ-EPS-14 | 各 2 分以上・間隔 96 時間以内 | 平均電力と負荷は 15.0 kW・490 A で、309.65 時間に 4630 kWh を発電し飲料水 3601 lbm を生成した。パージは8回、MET 約27・76・125・170・217・253・277・303 時間に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46） 補足：本書の計算：間隔は約24〜49時間（本文は46・47・25時間の間隔を記す、sts125 p23〜25）。REQ-EPS-14 の『12時間以内』を超える。 |
 | AV-32 | STS-125 | APU 2 の運転時間（合計） | 1:59:25 h:m:s | REQ-APU-01 | 約 332 lb／APU（公称 90分・連続約 110分） | APU の運転時間の合計は APU 1 が 01:23:20、APU 2 が 01:59:25、APU 3 が 01:28:57 で、燃料の合計は 162・223・195 lb であった。飛行中の異常は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=44） 補足：REQ-APU-01 の公称90分を超える。燃料 223 lb は搭載約 332 lb 以内。FCS 点検は表では APU 3（00:04:24）だが、事象の表は APU 1 の起動・停止（141/10:17:56〜10:22:20）とし食い違う。 |
 | AV-33 | STS-125 | 着陸時のオービタ重量 | 232,591.4 lb | REQ-SYS-17 | EOM 233k lb、アボート 239k〜248k lb | 着陸時のオービタ重量は 232591.4 lb であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=57） 補足：REQ-SYS-17（EOM 233,000 lb）以下だが余裕は約 400 lb（本書の計算）。ODS を外して軽量化した（S125-21）。 |
 | AV-34 | STS-125 | OMS 着陸時の残量（左酸化剤） | 478 lbm | REQ-OMS-11 | 着陸時 各ポッド ≦ 22% | OMS の搭載量は左ポッドが酸化剤 7756・燃料 4686 lbm、右ポッドが 7704・4685 lbm で、残量（後部計）は左 478・364、右 575・406 lbm であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=44） 補足：本書の計算：搭載に対する残量は左酸化剤 6.2%・左燃料 7.8%・右酸化剤 7.5%・右燃料 8.7%で、REQ-OMS-11（各ポッド 22% 以下）を満たす。 |
@@ -170,6 +170,8 @@
 > **注記** STS-1・STS-114・STS-125 の構成と、STS-1 の飛行試験の結果は [SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-FLT-ORB-001.sysml）。
 
 > **注記** STS-1・STS-114・STS-125 の反応剤の残量の設計と実績の比較は [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-PRF-ORB-001.sysml）。
+
+> **注記** 要求の値の見直し（Rev. BG）：REQ-EPS-14 をパージの間隔 96時間以内に、REQ-SYS-13 を打上げ前・延長の決定時に2日を確保する要求に改めた。上のパージの間隔と着陸時の延長の能力の注記は見直し前のもので、STS-114・125 の実績はどちらも見直し後の要求を満たす。
 
 ## 12. 参考文献
 
@@ -270,3 +272,4 @@
 | 初版（Rev. -） | 2026-10-03 | 初版作成（機体の個体 4件、飛行の個体 3件、時間切片 22件、スナップショット 7件、実績 35件、異常 17件、図122・123、SysML v2 テキスト。STS-1 Orbiter Final Mission Report を取り込んだ） |
 | Rev. A | 2026-10-04 | 飛行構成・飛行試験定義書 SSD-FLT-ORB-001 への参照を注記（Rev. AV） |
 | Rev. B | 2026-10-04 | 消耗品・電力プロファイル定義書 SSD-PRF-ORB-001 への参照を注記（Rev. AW） |
+| Rev. C | 2026-10-07 | AV-06・19・31 の設計の値を REQ-EPS-14 の見直しに合わせた（Rev. BG） |

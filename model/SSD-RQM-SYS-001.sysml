@@ -69,9 +69,9 @@ package SSD_RQM_SYS_001 {
         }
         requirement <'REQ-SYS-09'> REQ_SYS_09 {
             subject s : Parts::Part;
-            doc /* 帰還時に約 1,100 n.mi. の横方向移動（クロスレンジ）ができること。 */
-            @RequirementInfo { document = "SSD-REQ-SYS-001"; valueText = "約 1,100 n.mi."; phases = "PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            doc /* 帰還時に、分散を含む限界で約 750 n.mi. 以上の横方向移動（クロスレンジ）ができ、その範囲の着陸地を選べること。 */
+            @RequirementInfo { document = "SSD-REQ-SYS-001"; valueText = "分散を含む 753〜828 n.mi.（分散なし 815〜904 n.mi.、28.5°・57°の軌道）"; phases = "PH-6（再突入）"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-SYS-10'> REQ_SYS_10 {
             subject s : Parts::Part;
@@ -93,8 +93,8 @@ package SSD_RQM_SYS_001 {
         }
         requirement <'REQ-SYS-13'> REQ_SYS_13 {
             subject s : Parts::Part;
-            doc /* すべての飛行で2日の延長日（着陸地の天候に1日、系統のウェーブオフに1日）を確保できること。 */
-            @RequirementInfo { document = "SSD-REQ-SYS-001"; valueText = "延長日 2"; phases = "PH-3（軌道）"; }
+            doc /* 打上げ前の計画と飛行中の延長の決定のときに、2日の延長日（着陸地の天候に1日、系統のウェーブオフに1日）の消耗品を確保すること。 */
+            @RequirementInfo { document = "SSD-REQ-SYS-001"; valueText = "延長日 2（打上げ前・延長の決定時に確保）"; phases = "PH-3（軌道）"; }
             @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-SYS-14'> REQ_SYS_14 {
@@ -210,9 +210,9 @@ package SSD_RQM_SYS_001 {
         }
         requirement <'REQ-EPS-14'> REQ_EPS_14 {
             subject s : Parts::Part;
-            doc /* 燃料電池のパージは各燃料電池を2分以上とし、パージの間隔を12時間以内とすること。パージは1基ずつ行うこと。 */
-            @RequirementInfo { document = "SSD-REQ-EPS-001"; valueText = "各 2 分以上・間隔 12 時間以内"; phases = "PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            doc /* 燃料電池のパージは各燃料電池を2分以上とし、定期のパージの間隔を96時間以内とし、頻度は燃料電池の電圧の低下（0.2 V）で決めること。パージは1基ずつ行うこと。 */
+            @RequirementInfo { document = "SSD-REQ-EPS-001"; valueText = "各 2 分以上・間隔 96 時間以内（電圧の低下 0.2 V で頻度を決める）"; phases = "PH-3（軌道）"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'REQ-EPS-15'> REQ_EPS_15 {
             subject s : Parts::Part;

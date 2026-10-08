@@ -149,8 +149,8 @@ package SSD_VAR_ORB_001 {
     }
     part def <'MK-04'> RegenerableCo2Removal :> MissionKit {
         doc /* 再生式 CO2 除去装置（RCRS）（SSD-FD-ARS-RCRS-001）：LiOH は打上げと再突入の各1個に減り、木炭キャニスタ（10日超で中間交換）を使う。7人・10〜16日を可能にした */
-        @BudgetBinding { budgetRow = "BUD-CON-04"; effect = "RCRS を積むと LiOH は打上げと再突入の各1個で足り、LiOH の不足（−9%）は解消する"; }
-        @BudgetBinding { budgetRow = "BUD-CON-05"; effect = "RCRS の機体では予備2日分の LiOH の不足も RCRS の連続運転で賄える。ただし OI-33 時点で RCRS に対応する機体は無い"; }
+        @BudgetBinding { budgetRow = "BUD-CON-04"; effect = "RCRS を積むと LiOH は打上げと再突入の各1個で足り、標準ミッションで必要な LiOH の搭載（42個）を減らせる"; }
+        @BudgetBinding { budgetRow = "BUD-CON-05"; effect = "RCRS の機体では予備2日分の LiOH も RCRS の連続運転で賄える。ただし OI-33 時点で RCRS に対応する機体は無い"; }
     }
     part def <'MK-05'> EdoWasteCollection :> MissionKit {
         doc /* EDO 廃棄物収集系（EDO WCS）（SSD-FD-ECL-WCS-001）：長期飛行向けの WCS。STS-54（OV-105）で初飛行、STS-65（OV-102）でも使用 */

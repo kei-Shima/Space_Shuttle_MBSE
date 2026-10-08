@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-RQM-SYS-001 |
 | 表題 | 要求モデル定義書（導出・充足・検証方法） |
-| 版・日付 | Rev. C／2026-10-03 |
+| 版・日付 | Rev. D／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図90 要求の導出・充足 行列 |
@@ -41,7 +41,7 @@
 | REQ-SYS-06 | SSD-REQ-SYS-001 | L1 | （L2 10件へ導出） | 2 | A（解析） | 根拠あり |
 | REQ-SYS-07 | SSD-REQ-SYS-001 | L1 | （L2 14件へ導出） | 3 | T（試験） | 根拠あり |
 | REQ-SYS-08 | SSD-REQ-SYS-001 | L1 | （L2 5件へ導出） | 3 | A（解析） | 根拠あり |
-| REQ-SYS-09 | SSD-REQ-SYS-001 | L1 | （L2 2件へ導出） | 3 | A（解析） | 根拠なし |
+| REQ-SYS-09 | SSD-REQ-SYS-001 | L1 | （L2 2件へ導出） | 3 | A（解析） | 根拠あり |
 | REQ-SYS-10 | SSD-REQ-SYS-001 | L1 | （L2 86件へ導出） | 5 | A（解析） | 根拠あり |
 | REQ-SYS-11 | SSD-REQ-SYS-001 | L1 | （L2 0件へ導出） | 2 | A（解析） | 根拠あり |
 | REQ-SYS-12 | SSD-REQ-SYS-001 | L1 | （L2 0件へ導出） | 1 | D（実証） | 根拠あり |
@@ -64,7 +64,7 @@
 | REQ-EPS-11 | SSD-REQ-EPS-001 | L2 | REQ-SYS-07 | 3 | D（実証） | 根拠あり |
 | REQ-EPS-12 | SSD-REQ-EPS-001 | L2 | REQ-SYS-06・REQ-SYS-13 | 1 | A（解析） | 根拠あり |
 | REQ-EPS-13 | SSD-REQ-EPS-001 | L2 | REQ-SYS-10 | 1 | A（解析） | 根拠あり |
-| REQ-EPS-14 | SSD-REQ-EPS-001 | L2 | REQ-SYS-16 | 2 | D（実証） | 根拠なし |
+| REQ-EPS-14 | SSD-REQ-EPS-001 | L2 | REQ-SYS-16 | 2 | D（実証） | 根拠あり |
 | REQ-EPS-15 | SSD-REQ-EPS-001 | L2 | REQ-SYS-16 | 3 | T（試験） | 根拠あり |
 | REQ-EPS-16 | SSD-REQ-EPS-001 | L2 | REQ-SYS-07 | 3 | T（試験） | 根拠あり |
 | REQ-EPS-17 | SSD-REQ-EPS-001 | L2 | REQ-SYS-10 | 1 | D（実証） | 根拠あり |
@@ -614,7 +614,7 @@ L1 の要求ごとに、導出した L2 の要求の数を系ごとに示す（�
 
 ## 6. 検証方法
 
-検証方法は SysML v2 の標準ライブラリの VerificationMethodKind に写した。検証の根拠の状態は、根拠あり 206件・根拠なし 6件である（要求書の検証（V&V）の表）。
+検証方法は SysML v2 の標準ライブラリの VerificationMethodKind に写した。検証の根拠の状態は、根拠あり 208件・根拠なし 4件である（要求書の検証（V&V）の表）。
 
 | 要求書の検証 | VerificationMethodKind | 件数 |
 |---|---|---|
@@ -660,3 +660,4 @@ L1 の要求ごとに、導出した L2 の要求の数を系ごとに示す（�
 | Rev. A | 2026-10-03 | 検証定義書 SSD-VER-SYS-001 への参照を注記（Rev. AL） |
 | Rev. B | 2026-10-03 | トレース網羅・影響分析書 SSD-TRC-SYS-001 への参照を注記（Rev. AO） |
 | Rev. C | 2026-10-03 | 要求の形式化定義書 SSD-RQF-SYS-001 への参照を注記（Rev. AS） |
+| Rev. D | 2026-10-07 | REQ-SYS-09・13・EPS-14 の文・値と検証の状態を要求書の見直しに合わせた（Rev. BG） |

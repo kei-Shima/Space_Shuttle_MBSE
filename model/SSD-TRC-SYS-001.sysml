@@ -85,7 +85,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-ECLSS-C9'> cov_ECLSS_C9 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C9"; covered = 19; total = 87; }
     metadata <'COV-EPS-C1'> cov_EPS_C1 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C1"; covered = 22; total = 22; }
     metadata <'COV-EPS-C2'> cov_EPS_C2 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C2"; covered = 22; total = 22; }
-    metadata <'COV-EPS-C3'> cov_EPS_C3 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C3"; covered = 21; total = 22; }
+    metadata <'COV-EPS-C3'> cov_EPS_C3 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C3"; covered = 22; total = 22; }
     metadata <'COV-EPS-C4'> cov_EPS_C4 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C4"; covered = 33; total = 33; }
     metadata <'COV-EPS-C5'> cov_EPS_C5 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C5"; covered = 8; total = 23; }
     metadata <'COV-EPS-C6'> cov_EPS_C6 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C6"; covered = 17; total = 23; }
@@ -192,7 +192,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-SRB-C8'> cov_SRB_C8 : CoverageMetric about SSD_BLK_SYS_001::SRB { metric = "C8"; covered = 0; total = 7; }
     metadata <'COV-SRB-C9'> cov_SRB_C9 : CoverageMetric about SSD_BLK_SYS_001::SRB { metric = "C9"; covered = 3; total = 7; }
     // ---- 切れ目の分類と、一覧の要素
-    metadata <'GAP-01'> gap_01 : TraceGapCategory { title = "検証の判定が pass でない要求"; judgment = "判断済み"; count = 6; }
+    metadata <'GAP-01'> gap_01 : TraceGapCategory { title = "検証の判定が pass でない要求"; judgment = "判断済み"; count = 4; }
     metadata <'GAP-02'> gap_02 : TraceGapCategory { title = "要求なしで妥当と判断した機能行"; judgment = "判断済み"; count = 266; }
     metadata <'GAP-03'> gap_03 : TraceGapCategory { title = "トレースの対象外の機能行"; judgment = "範囲外"; count = 876; }
     metadata <'GAP-04'> gap_04 : TraceGapCategory { title = "要求の割付先でない IF"; judgment = "方針"; count = 546; }
@@ -204,11 +204,9 @@ package SSD_TRC_SYS_001 {
     metadata <'GAP-10'> gap_10 : TraceGapCategory { title = "機器配分表に行が無い内部ブロック図の機器"; judgment = "未処理"; count = 0; }
     metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 64; }
     metadata <'GAP-01-01'> gap_01_01 : TraceGap about SSD_VER_SYS_001::Results::vc_req_eclss_12 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_VER_SYS_001::Results::vc_req_eps_14 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-03'> gap_01_03 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_03 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-04'> gap_01_04 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_05 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-05'> gap_01_05 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_09 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-06'> gap_01_06 : TraceGap about SSD_VER_SYS_001::Results::vc_req_tps_03 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_03 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-03'> gap_01_03 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_05 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-04'> gap_01_04 : TraceGap about SSD_VER_SYS_001::Results::vc_req_tps_03 { category = "GAP-01"; judgment = "判断済み"; }
     // ---- 影響分析のビュー（起点の機器から辿った要素を晒す）
     view <'IMP-01'> imp_01 : ImpactView {
         doc /* 燃料電池発電装置の変更（例：出力・冷却の仕様変更）。起点 PHY-EPS-01 */

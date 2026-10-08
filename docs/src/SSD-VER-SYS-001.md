@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-VER-SYS-001 |
 | 表題 | 検証定義書（検証ケース・検証マトリクス） |
-| 版・日付 | Rev. E／2026-10-07 |
+| 版・日付 | Rev. F／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図110 検証マトリクス |
@@ -27,7 +27,7 @@
 
 ## 3. 検証ケースの一覧
 
-検証ケース 212件を示す（判定 pass 206件・inconclusive 6件）。主体は構造モデルの最上位の部品 context からの道筋、検証の根拠は要求書の検証（V&V）の表と同じである。
+検証ケース 212件を示す（判定 pass 208件・inconclusive 4件）。主体は構造モデルの最上位の部品 context からの道筋、検証の根拠は要求書の検証（V&V）の表と同じである。
 
 | 検証ケース | 要求 | 方法 | 主体 | 判定 | 検証の根拠 |
 |---|---|---|---|---|---|
@@ -39,7 +39,7 @@
 | VC-REQ-SYS-06 | REQ-SYS-06 | A（解析） | context.sts.orb.eps.prsd | pass | STS-65 の飛行報告は、EDO パレットを積んだ飛行で、着陸時に残った酸素・水素で平均 18.8 kW のまま47時間の延長が可能だったと評価しており、14日17時間の飛行に約2日を加えた約16.7日の滞在能力を消耗品の解析で示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=30）同じ報告は、STS-65 の飛行時間が14日17時間55分で、当時のシャトル計画で最長だったことを示し、16日に近い滞在の実績が解析の前提と合うことを裏づける。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | VC-REQ-SYS-07 | REQ-SYS-07 | T（試験） | context.sts.orb.eclss | pass | STS-2（軌道飛行試験）の飛行報告は、打上げ前に乗員室の与圧の健全性チェックを行い、飛行中の与圧殻の漏れ量が 0.7 lb/日（STS-1 は 2.7 lb/日）だったことを示し、乗員室の圧力を保つ能力を試験で確かめた記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=51）STS-125 の飛行報告は、ARPCS が飛行中チェックアウトの要求をすべて満たし、約 14.7 psia からの減圧と 14.7 psia への再加圧の後に圧力制御系2のチェックアウトを行ったことを示し、14.7 psia の圧力制御を飛行中に試験した記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
 | VC-REQ-SYS-08 | REQ-SYS-08 | A（解析） | context.sts.orb.mps | pass | SODB 3.4.1.1 は、上昇軌道の軸方向荷重倍数を 3 g 以下とし、この荷重倍数をすべての intact アボートにも適用すること、SSME 1基の推力が 104% で固着すると 3 g を超えるため詳細な荷重解析が要ることを示し、3 g の限界が構造荷重の解析で管理されていることの根拠である。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=46）STS-135 の飛行報告の事象表は、上昇中に 3 g のための SSME の絞り込み指令が3基とも受け付けられ、全荷重倍数が 3 g に達した時刻を記録しており、解析どおりに加速度が 3 g に抑えられたことを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
-| VC-REQ-SYS-09 | REQ-SYS-09 | A（解析） | context.sts.orb.tps | inconclusive | 根拠なし：約 1,100 n.mi. のクロスレンジを解析で示した資料は無い。SCOM 9.3（p1011）の解析表は、160 n.mi. 軌道での分散を含むクロスレンジ限界を 753〜828 n.mi.、分散なしで 815〜904 n.mi. としており、要求の値に届かない。 |
+| VC-REQ-SYS-09 | REQ-SYS-09 | A（解析） | context.sts.orb.tps | pass | 9.3節 Entry（PDF p1011）：28.5°・57°の飛行の、指定した突入重量でのクロスレンジの限界を、分散を含めて 753〜828 n.mi.、分散なしで 815〜904 n.mi. と解析の表に示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1011）Joosten（NASA CP-2283、p9）はオービタの揚抗比によるクロスレンジの能力を約 750 n.mi. とする。（出典: https://ntrs.nasa.gov/api/citations/19850008593/downloads/19850008593.pdf#page=9） |
 | VC-REQ-SYS-10 | REQ-SYS-10 | A（解析） | context.sts.orb | pass | IOA（独立オービタ評価）の報告は、NSTS 22206 の規則に従い、トップダウンでハードウェアの故障モードと冗長を含む重要度（1R・2R など）を独立に解析し、NASA の FMEA/CIL と比べたことを示し、冗長構成の故障許容を解析で評価した根拠である。（出典: https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=11）同じ報告は、冗長が無く乗員・機体の喪失につながる単一故障点を重要度1とし、オートランドの押しボタンの固着をそのような故障として新たに見つけてソフトウェア変更につなげたことを示し、解析で冗長の欠けを洗い出したことの例である。（出典: https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=18） |
 | VC-REQ-SYS-11 | REQ-SYS-11 | A（解析） | context.sts.orb | pass | 飛行規則 A9-1001 の注記は、電力系の各機器の喪失を「1故障許容」「0故障許容」と分類して A2-102B・C（ミッション期間の要求）に結びつけており、系の冗長を故障許容の段階で評価して判定基準を作っていることを示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1517） |
 | VC-REQ-SYS-12 | REQ-SYS-12 | D（実証） | context.sts.orb | pass | STS-135 の飛行報告は、飛行7日目（MET 6日6時間）に GPC 4 が故障してマスターアラームが鳴り、GPC 2 を SM GPC に割り当て直して DPS を安定な構成に戻したことを示し、再突入に必須の系（DPS）の1故障目で飛行を続けた実例である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=13）同じ報告は、KSC の最初の着陸機会で軌道離脱噴射を行い、飛行時間が12日18時間27分だったことを示し、第5飛行日より後の計画どおりの EOM 着陸の実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=18） |
@@ -62,7 +62,7 @@
 | VC-REQ-EPS-11 | REQ-EPS-11 | D（実証） | context.sts.orb.eps | pass | STS-122 の飛行報告は、PRSD から Shuttle/ISS の ECLSS へ供給した酸素が 272 lb で、そのうちシャトルの ECLSS が 178 lb を使ったことを示し、PRSD が乗員室用の酸素を ECLSS へ供給したことの実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=48）STS-135 の飛行報告も、PRSD から ECLSS へ 106 lb の酸素（スタックの再加圧用の 65 lb を含む）を供給したことを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=43） |
 | VC-REQ-EPS-12 | REQ-EPS-12 | A（解析） | context.sts.orb.eps.prsd | pass | STS-54 の飛行報告は、4セットのタンク構成（前頁）で約6日の飛行を終えた時点の延長能力を平均 14.4 kW で 111.5 時間と評価しており、4セットで約10日の滞在をまかなえることを消耗品の解析で示す。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=14）STS-122 の飛行報告は、5基ずつのタンク（次頁の表）で 306.38 時間の飛行を平均 13.5 kW で行い、着陸時の残量でさらに57時間延長できたと評価しており、5セットで12日を超える滞在をまかなえることを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=47） |
 | VC-REQ-EPS-13 | REQ-EPS-13 | A（解析） | context.sts.orb.eps.prsd | pass | IOA の PRSD の評価票（PRSD-313）は、酸素タンクの逆止弁が開いたまま故障し、さらに大きな外部漏れが重なると7秒で極低温の圧力が安全な値を下回るとして重要度 2/1R とし、この故障は飛行中に検出できない（スクリーン B 不合格）と評価しており、逆止弁が他のタンクの反応剤を守る機能を故障解析で確かめた根拠である。（出典: https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=209）同じ評価は水素の逆止弁（PRSD-237、CV031・CV041）についても同じ故障の組合せで重要度 2/1R とし、NASA の FMEA と一致したことを示す。（出典: https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=191） |
-| VC-REQ-EPS-14 | REQ-EPS-14 | D（実証） | context.sts.orb.eps.fcp | inconclusive | 根拠なし：パージの実施と自動・手動の両モードの正常な作動は飛行報告（STS-108 p28）にあるが、間隔の値は合わない。STS-135 の飛行報告（p44）はパージ間隔を42〜60時間、STS-65（p30）は約19〜62時間としており、飛行規則 A9-52A（p1439）も間隔を96時間以内としている。12時間以内という値（SODB Rev. E の制約）は飛行で実証されておらず、要求の値を見直す必要がある。 |
+| VC-REQ-EPS-14 | REQ-EPS-14 | D（実証） | context.sts.orb.eps.fcp | pass | A9-52A（PDF p1439）：定期のパージの間隔を96時間以内とし、96時間は燃料電池の電圧が 0.2 V 低下するまでの時間の平均の最大を飛行の経験から取ったものとする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439）STS-135 の飛行報告（p44）はパージの間隔を 42〜60時間とする。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=44）STS-65 の飛行報告（p30）は8回のパージを MET 約19〜347時間に行ったとする（間隔は約19〜62時間、本書の計算）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=30） |
 | VC-REQ-EPS-15 | REQ-EPS-15 | T（試験） | context.sts.orb.eps.fcp | pass | SODB 3.4.4.1 は、重要な飛行段階ではポンプなしでの燃料電池の非常運転を 7 kW で最大9分まで認め、スタック冷却材の入口温度を 176〜191°F と定めており、冷却を失ったときの9分（7 kW）の値が開発データと解析で示された能力であることを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=158）SODB の図 3.4.4.1-1 は、燃料電池のスタック出口温度の許容範囲を負荷電流に対して 180〜230°F の目盛りの上で示しており、スタックを負荷に応じた約 200°F に保つ要求と合う。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=160） |
 | VC-REQ-EPS-16 | REQ-EPS-16 | T（試験） | context.sts.orb.eps.fcp | pass | STS-2（軌道飛行試験）の飛行報告は、燃料電池1の高 pH の生成水を飲料水タンク A から切り離して補給タンク B へ流し、乗員が燃料電池からの供給管の水を直接飲んだことを示し、生成水が ECLSS の水タンクへ送られる経路を飛行試験で確かめた記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=51）STS-108 の飛行報告は、燃料電池が 3,912 kWh を発電する間に 3,025 lb の飲料水を作ったことを示し、生成水が発電の間取り除かれ続けたことの記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=28） |
 | VC-REQ-EPS-17 | REQ-EPS-17 | D（実証） | context.sts.orb.eps.dc | pass | STS-125 の飛行報告は、主母線 A・B の電流が RPC-10（APCA-4）で 12.5 A、RPC-12（APCA-5）で 7.5 A に上がり、2.5秒続いた後に遮断したことを示し、短絡のときに RPC が電流を保ったまま3秒以内に遮断したことの実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=47） |
@@ -250,8 +250,8 @@
 
 | 要求書 | 検証ケース | A 解析 | T 試験 | I 検査 | D 実証 | pass | inconclusive |
 |---|---|---|---|---|---|---|---|
-| SSD-REQ-SYS-001 | 18 | 9 | 2 | 2 | 5 | 15 | 3 |
-| SSD-REQ-EPS-001 | 22 | 5 | 7 | 4 | 6 | 21 | 1 |
+| SSD-REQ-SYS-001 | 18 | 9 | 2 | 2 | 5 | 16 | 2 |
+| SSD-REQ-EPS-001 | 22 | 5 | 7 | 4 | 6 | 22 | 0 |
 | SSD-REQ-ECLSS-001 | 13 | 2 | 3 | 0 | 8 | 12 | 1 |
 | SSD-REQ-GNC-001 | 14 | 2 | 2 | 0 | 10 | 14 | 0 |
 | SSD-REQ-DPS-001 | 13 | 4 | 0 | 0 | 9 | 13 | 0 |
@@ -286,14 +286,12 @@
 
 ## 6. 判定が inconclusive の検証ケース
 
-検証の根拠が見つからない要求の検証ケースと、その理由を示す。要求の値の見直し（REQ-SYS-09・REQ-EPS-14）か、検証の記録の調査が残っている。
+検証の根拠が見つからない要求の検証ケースと、その理由を示す。検証の記録の調査が残っている（REQ-SYS-09・REQ-EPS-14 は Rev. BG の要求の値の見直しで pass にした）。
 
 | 検証ケース | 要求 | 方法 | 理由 |
 |---|---|---|---|
 | VC-REQ-SYS-03 | REQ-SYS-03 | I（検査） | 根拠なし：ペイロードベイの寸法（直径 15 ft・長さ 60 ft）を検査・計測した記録は手元の資料に無い。SODB 3.4.5.2（p187）が「標準の直径 15 ft のペイロード包絡域」に触れるだけで、長さを含む寸法の検査の根拠にはならない。 |
 | VC-REQ-SYS-05 | REQ-SYS-05 | D（実証） | 根拠なし：手元の飛行報告で同時に搭乗した乗員は最大7人である（STS-114・STS-125 は7人、STS-122 の「8人」は ISS 要員の交代を含む延べ人数で上り下りとも7人）。8人が搭乗した飛行（STS-61A・STS-71）の報告は資料に無い。 |
-| VC-REQ-SYS-09 | REQ-SYS-09 | A（解析） | 根拠なし：約 1,100 n.mi. のクロスレンジを解析で示した資料は無い。SCOM 9.3（p1011）の解析表は、160 n.mi. 軌道での分散を含むクロスレンジ限界を 753〜828 n.mi.、分散なしで 815〜904 n.mi. としており、要求の値に届かない。 |
-| VC-REQ-EPS-14 | REQ-EPS-14 | D（実証） | 根拠なし：パージの実施と自動・手動の両モードの正常な作動は飛行報告（STS-108 p28）にあるが、間隔の値は合わない。STS-135 の飛行報告（p44）はパージ間隔を42〜60時間、STS-65（p30）は約19〜62時間としており、飛行規則 A9-52A（p1439）も間隔を96時間以内としている。12時間以内という値（SODB Rev. E の制約）は飛行で実証されておらず、要求の値を見直す必要がある。 |
 | VC-REQ-ECLSS-12 | REQ-ECLSS-12 | A（解析） | 根拠なし：基準を適用した飛行の判断の実例を示す公開資料を確かめていない。 |
 | VC-REQ-TPS-03 | REQ-TPS-03 | A（解析） | 根拠なし：接着層の温度の飛行の実績値を示す公開資料が無い。STEP の予測と飛行データの比較（A18-401）で検証する想定とする。 |
 
@@ -499,6 +497,9 @@
 172. STS-114 Mission Report Flight Summary（PDF p9） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=9
 173. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1765） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1765
 174. Shuttle Crew Operations Manual 2.10 Escape Systems（USA007587 Rev. A CPN-1、PDF p438） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/438
+175. Shuttle Crew Operations Manual 9.3 Entry（USA007587 Rev. A CPN-1、PDF p1011） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1011
+176. NASA CP-2283 所収 Joosten, B. K.「Descent Guidance and Mission Planning for Space Shuttle」（1983年、NTRS 19850008593、12頁、4,795,385 バイト） Entry guidance（PDF p9） — https://ntrs.nasa.gov/api/citations/19850008593/downloads/19850008593.pdf#page=9
+177. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A9-52 FC PURGE（PDF p1439） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439
 
 ## 11. 変更履歴
 
@@ -510,3 +511,4 @@
 | Rev. C | 2026-10-04 | 飛行構成・飛行試験定義書 SSD-FLT-ORB-001 への参照を注記（Rev. AV） |
 | Rev. D | 2026-10-06 | 検証の根拠の文の行ずれを直した（REQ-CREW-02・03・06・09・10）。検証方法・状態・判定は変更なし、NASA-STD-3001 による評価との食い違い 6件の要求を注記（判定は据え置き）（Rev. AY） |
 | Rev. E | 2026-10-07 | 人間系の評価方法定義書 SSD-HVM-SYS-001 への参照を注記（Rev. BF） |
+| Rev. F | 2026-10-07 | VC-REQ-SYS-09・VC-REQ-EPS-14 を要求の値の見直しにより pass にした（pass 208件・inconclusive 4件）（Rev. BG） |

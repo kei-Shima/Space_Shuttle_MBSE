@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-VAR-ORB-001 |
 | 表題 | 構成の違い定義書（機体・ミッションキット） |
-| 版・日付 | Rev. B／2026-10-04 |
+| 版・日付 | Rev. C／2026-10-07 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-PHY-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図109 機体・ミッションキットの構成行列 |
@@ -85,8 +85,8 @@
 | MK-02 | BUD-PWR-05 | EDO パレットを積むと8組（最大18日）となり、余裕が大きく増える | 酸素・水素タンク3組で軌道上最大8日、5組で最大12日、8組で最大18日の運用に足り、正確な期間は乗員数と電力負荷で変わる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/356）オービタは当初8日（予備2日）のミッション用に設計され、EDO 改修で最大16＋2日に延ばした。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=213）STS-65 は EDO パレットの4回目の飛行で、PRSD は異常なく動作した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=30） |
 | MK-08 | BUD-PWR-05 | SSPTS はドッキング中の燃料電池の負荷を下げ、浮いた反応剤をミッションの延長日に充てる（OV-103・105 のみ、ISS 飛行のみ） | 経験則として、SSPTS は燃料電池の負荷を下げて軌道上の滞在期間を延ばす。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1140）OV-103・OV-105 は単独型の APCU から SSPTS に改修され、SSPTS は使われなくなった EDO クライオパレット系のパネル A15 のスイッチで操作し、ISS の電力で燃料電池の負荷を下げて浮いた反応剤をミッションの延長日に充てる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/345） |
 | VF-01 | BUD-PWR-05 | OV-104 の STS-135 では残量で平均 13.6 kW・71時間の延長が可能で、実績から余裕日数を照合できる | STS-135 の OV-104 では PRSD が酸素 2856 lbm・水素 360 lbm を供給し、着陸時の残量で平均 13.6 kW で71時間の延長が可能だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=43） |
-| MK-04 | BUD-CON-04 | RCRS を積むと LiOH は打上げと再突入の各1個で足り、LiOH の不足（−9%）は解消する | EDO オービタで RCRS を使えたことで、7人までの乗員で10〜16日のミッションを行う際の LiOH の重量と収納の問題が解決し、RCRS 構成の機体は打上げと再突入に各1個の LiOH キャニスタを使い、RCRS の操作スイッチはパネル MO51F にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371）OV-105 は長期単独飛行向けの RCRS の機器能力を持つが、ISS 係留中は不要で今後も使う予定がなく、SCOM は歴史的情報として記す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371） |
-| MK-04 | BUD-CON-05 | RCRS の機体では予備2日分の LiOH の不足も RCRS の連続運転で賄える。ただし OI-33 時点で RCRS に対応する機体は無い | EDO オービタで RCRS を使えたことで、7人までの乗員で10〜16日のミッションを行う際の LiOH の重量と収納の問題が解決し、RCRS 構成の機体は打上げと再突入に各1個の LiOH キャニスタを使い、RCRS の操作スイッチはパネル MO51F にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371）重量と ISS 飛行の短さのため RCRS の機器は OV-105 から撤去され、RCRS に対応する機体は無くなった（訓練マニュアル Rev. B）。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=213） |
+| MK-04 | BUD-CON-04 | RCRS を積むと LiOH は打上げと再突入の各1個で足り、標準ミッションで必要な LiOH の搭載（42個）を減らせる | EDO オービタで RCRS を使えたことで、7人までの乗員で10〜16日のミッションを行う際の LiOH の重量と収納の問題が解決し、RCRS 構成の機体は打上げと再突入に各1個の LiOH キャニスタを使い、RCRS の操作スイッチはパネル MO51F にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371）OV-105 は長期単独飛行向けの RCRS の機器能力を持つが、ISS 係留中は不要で今後も使う予定がなく、SCOM は歴史的情報として記す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371） |
+| MK-04 | BUD-CON-05 | RCRS の機体では予備2日分の LiOH も RCRS の連続運転で賄える。ただし OI-33 時点で RCRS に対応する機体は無い | EDO オービタで RCRS を使えたことで、7人までの乗員で10〜16日のミッションを行う際の LiOH の重量と収納の問題が解決し、RCRS 構成の機体は打上げと再突入に各1個の LiOH キャニスタを使い、RCRS の操作スイッチはパネル MO51F にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371）重量と ISS 飛行の短さのため RCRS の機器は OV-105 から撤去され、RCRS に対応する機体は無くなった（訓練マニュアル Rev. B）。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=213） |
 | MK-06 | BUD-CON-04 | ISS に係留する飛行では ISS の CO2 除去で LiOH を節約でき（STS-108 で12個不要）、ドッキングの有無を変数にできる | STS-108 では ISS の機器が働いたため LiOH 12個を使わずに済み、以後のオービタの搭載から LiOH を減らすこととした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=31） |
 | VF-05 | BUD-CON-02 | 窒素の容量は常設タンク数で決まり、OV-104 の5基では（143−83）lb×5＝300 lb に減る | 窒素はペイロードベイの2系統のタンクから供給し、OV-103・OV-105 は標準の6基、OV-104 は5基（系統1に2基、系統2に3基）で、どの機体もミッションキットとして追加タンクを積める。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/364） |
 | MK-03 | BUD-CON-02 | 追加の窒素タンクで最大8基（480 lb）まで増やせる | 窒素は公称4基で供給し、全オービタが追加タンクを積め、近年の改良で8基まで増やせる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=23）窒素はペイロードベイの2系統のタンクから供給し、OV-103・OV-105 は標準の6基、OV-104 は5基（系統1に2基、系統2に3基）で、どの機体もミッションキットとして追加タンクを積める。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/364） |
@@ -202,3 +202,4 @@
 | 初版（Rev. -） | 2026-10-03 | 初版作成（機体 5機、特徴 18件、ミッションキット 13件、収支への効き方 13件、図109 機体・ミッションキットの構成行列、SysML v2 テキスト） |
 | Rev. A | 2026-10-03 | 個体・時間定義書 SSD-IND-ORB-001 への参照を注記（Rev. AR） |
 | Rev. B | 2026-10-04 | 飛行構成・飛行試験定義書 SSD-FLT-ORB-001 への参照を注記（Rev. AV） |
+| Rev. C | 2026-10-07 | MK-04 の収支への効き方を LiOH の前提の見直しに合わせた（Rev. BG） |

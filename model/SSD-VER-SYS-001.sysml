@@ -1525,7 +1525,7 @@ package SSD_VER_SYS_001 {
         }
         verification vc_req_sys_09 : VC_REQ_SYS_09 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.tps;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_sys_10 : VC_REQ_SYS_10 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb;
@@ -1617,7 +1617,7 @@ package SSD_VER_SYS_001 {
         }
         verification vc_req_eps_14 : VC_REQ_EPS_14 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eps.fcp;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_eps_15 : VC_REQ_EPS_15 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eps.fcp;

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. U／2026-10-07 |
+| 版・日付 | Rev. W／2026-10-08 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -41,7 +41,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 20 | model/SSD-TSK-ORB-001.sysml | 乗員の作業分析・機能の分担 | — | 198 | 43 | 0 | 0 |
 | 21 | model/SSD-PRF-ORB-001.sysml | 消耗品・電力プロファイル（時間軸の残量・設計と実績） | SSD-PAR-ORB-001・SSD-IND-ORB-001 | 78 | 4 | 0 | 0 |
 | 22 | model/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
-| 23 | model/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-VER-SYS-001 | 408 | 6 | 0 | 0 |
+| 23 | model/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-VER-SYS-001 | 406 | 6 | 0 | 0 |
 | 24 | model/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006 | 345 | 46 | 0 | 0 |
 | 25 | model/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
 | 26 | model/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
@@ -152,7 +152,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 流れ → IF の詳細化 | SSD-IBD-ORB-001 の IF との対応の表 | SSD-IBD-ORB-001 の #refinement | 219 | 219 | 一致 |
 | トレースの関係 | SSD-TRC-SYS-001 の関係の表 | SSD-TRC-SYS-001 の TraceRelation | 18 | 18 | 一致 |
 | 切れ目の分類 | SSD-TRC-SYS-001 の切れ目の分類の表 | SSD-TRC-SYS-001 の TraceGapCategory | 11 | 11 | 一致 |
-| 切れ目の要素 | SSD-TRC-SYS-001 の切れ目の一覧 | SSD-TRC-SYS-001 の TraceGap | 6 | 6 | 一致 |
+| 切れ目の要素 | SSD-TRC-SYS-001 の切れ目の一覧 | SSD-TRC-SYS-001 の TraceGap | 4 | 4 | 一致 |
 | 影響分析 | SSD-TRC-SYS-001 の影響分析の結果の表 | SSD-TRC-SYS-001 の view（ImpactView） | 5 | 5 | 一致 |
 | 警報 | SSD-FDIR-ORB-001 の警報の表（予備の灯を除く） | SSD-FDIR-ORB-001 の警報の item def | 40 | 40 | 一致 |
 | 警報の監視 | SSD-FDIR-ORB-001 の警報の表の監視する機能ブロック | SSD-FDIR-ORB-001 の #Monitors | 56 | 56 | 一致 |
@@ -254,3 +254,5 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. S | 2026-10-07 | 読み込むパッケージに Rev. BD の SSD-HAB-ORB-001 を加えた、文書とモデルの一致を 66分類にした（Rev. BD） |
 | Rev. T | 2026-10-07 | 読み込むパッケージに Rev. BE の SSD-EGR-ORB-001 を加えた、文書とモデルの一致を 68分類にした（Rev. BE） |
 | Rev. U | 2026-10-07 | 読み込むパッケージに Rev. BF の SSD-HVM-SYS-001 を加えた、文書とモデルの一致を 70分類にした（Rev. BF） |
+| Rev. V | 2026-10-07 | 要求の値の見直し（Rev. BG）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 70分類にした（Rev. BG） |
+| Rev. W | 2026-10-08 | Rev. BH（調査結果の注記）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 70分類にした（Rev. BH） |

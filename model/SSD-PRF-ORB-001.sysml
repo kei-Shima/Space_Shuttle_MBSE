@@ -21,14 +21,14 @@ package SSD_PRF_ORB_001 {
     }
     package DesignProfiles {
         doc /* 標準ミッション（7人・10日）の日ごとの残量（0〜16 日） */
-        attribute <'PFD-01'> liohRemaining : ConsumableProfile = new ConsumableProfile(samples = (new SamplePair(0.0, 32.0), new SamplePair(1.0, 28.5), new SamplePair(2.0, 25.0), new SamplePair(3.0, 21.5), new SamplePair(4.0, 18.0), new SamplePair(5.0, 14.5), new SamplePair(6.0, 11.0), new SamplePair(7.0, 7.5), new SamplePair(8.0, 4.0), new SamplePair(9.0, 0.5), new SamplePair(10.0, 0.0), new SamplePair(11.0, 0.0), new SamplePair(12.0, 0.0), new SamplePair(13.0, 0.0), new SamplePair(14.0, 0.0), new SamplePair(15.0, 0.0), new SamplePair(16.0, 0.0))) { doc /* LiOH キャニスタの残量（日 → 個） */ }
+        attribute <'PFD-01'> liohRemaining : ConsumableProfile = new ConsumableProfile(samples = (new SamplePair(0.0, 42.0), new SamplePair(1.0, 38.5), new SamplePair(2.0, 35.0), new SamplePair(3.0, 31.5), new SamplePair(4.0, 28.0), new SamplePair(5.0, 24.5), new SamplePair(6.0, 21.0), new SamplePair(7.0, 17.5), new SamplePair(8.0, 14.0), new SamplePair(9.0, 10.5), new SamplePair(10.0, 7.0), new SamplePair(11.0, 3.5), new SamplePair(12.0, 0.0), new SamplePair(13.0, 0.0), new SamplePair(14.0, 0.0), new SamplePair(15.0, 0.0), new SamplePair(16.0, 0.0))) { doc /* LiOH キャニスタの残量（日 → 個） */ }
         analysis liohDepletion : ConsumableDepletion {
-            doc /* LiOH キャニスタ：乗員数 × 24 時間 ÷ キャニスタ1個の定格（PAR-01・PAR-05）。枯渇の日 9.14 日 */
+            doc /* LiOH キャニスタ：乗員数 × 24 時間 ÷ キャニスタ1個の定格（PAR-01・PAR-05）。枯渇の日 12.00 日 */
             subject :>> mission;
-            in attribute :>> capacity = 32.0;
+            in attribute :>> capacity = 42.0;
             in attribute :>> dailyUse = 3.5;
         }
-        requirement liohEndurance : EnduranceRequirement { doc /* 満たさない（負のマージン） */ attribute :>> requiredDays = 12.0; attribute :>> depletionDay = 9.14; }
+        requirement liohEndurance : EnduranceRequirement { doc /* 満たす（マージン 0） */ attribute :>> requiredDays = 12.0; attribute :>> depletionDay = 12.00; }
         attribute <'PFD-02'> o2Remaining : ConsumableProfile = new ConsumableProfile(samples = (new SamplePair(0.0, 3905.0), new SamplePair(1.0, 3655.8), new SamplePair(2.0, 3406.6), new SamplePair(3.0, 3157.4), new SamplePair(4.0, 2908.2), new SamplePair(5.0, 2659.0), new SamplePair(6.0, 2409.8), new SamplePair(7.0, 2160.6), new SamplePair(8.0, 1911.4), new SamplePair(9.0, 1662.2), new SamplePair(10.0, 1413.0), new SamplePair(11.0, 1163.8), new SamplePair(12.0, 914.6), new SamplePair(13.0, 665.4), new SamplePair(14.0, 416.2), new SamplePair(15.0, 167.0), new SamplePair(16.0, 0.0))) { doc /* 酸素（PRSD 反応剤）の残量（日 → lb） */ }
         analysis o2Depletion : ConsumableDepletion {
             doc /* 酸素（PRSD 反応剤）：平均電力 × 24 時間 × 1 kWh あたりの酸素 ＋ 乗員の酸素（PAR-15・PAR-18・PAR-23）。枯渇の日 15.67 日 */

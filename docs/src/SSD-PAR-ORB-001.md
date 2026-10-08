@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-PAR-ORB-001 |
 | 表題 | パラメトリック定義書（消耗品・電力・排熱の収支） |
-| 版・日付 | Rev. E／2026-10-04 |
+| 版・日付 | Rev. G／2026-10-08 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BUD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図78 消耗品 パラメトリック図・図79 電力・反応剤・排熱 パラメトリック図 |
@@ -26,7 +26,7 @@
 | PAR-01 | 乗員数 | 7 | 人 | crew | 前提 | REQ-SYS-05 | 典型的な7人クルーでは、キャビンガスの宇宙への通常損失と代謝消費により、1日当たり約6ポンドの窒素と14ポンドの酸素が使われる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360）オービタは最大8人の搭乗クルーを運んだ実績がある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31） |
 | PAR-02 | 軌道滞在日数 | 10 | 日 | days | 前提 | REQ-SYS-06 | スペースシャトルの公称ミッションは宇宙滞在4〜16日である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31） |
 | PAR-03 | LiOH の予備日数（PLS を見送るため） | 2 | 日 | reserveDays | 資料 | REQ-SYS-13 | LiOH キャニスタの数とクルー数がミッション終了（EOM）を決める。PLS 機会を見送るには、未使用の LiOH を最低2日分予備として保持しなければならない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=804） |
-| PAR-04 | LiOH キャニスタの数（装着2個と予備30個） | 32 | 個 | liohCanisters | 資料 | — | 予備キャニスタは最大30個を、ミッドデッキ床下のキャビン熱交換器と水タンクの間のロッカーに収納する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370） |
+| PAR-04 | LiOH キャニスタの必要搭載数（乗員 ×（日数＋予備2日）× 24 ÷ 定格） | 42 | 個 | liohCanisters | 規則から計算 | REQ-ECLSS-06・REQ-SYS-13 | 運用飛行規則は LiOH キャニスタの数と乗員数が EOM を決め、PLS を見送るため最低2日分の未使用の LiOH を残すとする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=804）LiOH は床下の LiOH ボックスのほかに中甲板のロッカーにも積む。（出典: https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=4）7人 ×（10日 ＋ 予備2日）× 24 時間 ÷ 48 人・時 ＝ 42個（本書の計算）。 |
 | PAR-05 | LiOH キャニスタ1個の定格 | 48 | 人・時 | liohRating | 資料 | — | キャビン空気は約120 lb/時ずつ2個の LiOH キャニスタに流れて CO2 が除去される。キャニスタは所定の計画で通常1日1〜2回交換し（大人数クルーではより頻繁に）、各キャニスタの定格は48人・時である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370） |
 | PAR-06 | 給水タンクの数 | 4 | 基 | waterTanks | 資料 | REQ-ECLSS-10 | 給水系は窒素で与圧する4基のタンクからなり、各タンクの使用可能容量は水165ポンド（ほかに残留3.3ポンド）である。3基の燃料電池は最大25ポンド/時の給水を生成する（発電1 kW 当たり約0.77ポンド/時）。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） |
 | PAR-07 | 給水タンク1基の容量 | 165 | lb | waterPerTank | 資料 | REQ-ECLSS-10 | 給水系は窒素で与圧する4基のタンクからなり、各タンクの使用可能容量は水165ポンド（ほかに残留3.3ポンド）である。3基の燃料電池は最大25ポンド/時の給水を生成する（発電1 kW 当たり約0.77ポンド/時）。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） |
@@ -56,12 +56,12 @@
 
 | ID | 制約 | 出力 | 式 | 結果 | 単位 | 収支の行（欄） | 要求 |
 |---|---|---|---|---|---|---|---|
-| CON-01 | LiOH の CO2 除去能力（LiohBudget、図78） | liohCapacity | liohCapacity = liohCanisters × liohRating | 1,536 | 人・時 | BUD-CON-04（容量） | REQ-ECLSS-06・REQ-SYS-05・REQ-SYS-06 |
+| CON-01 | LiOH の CO2 除去能力（LiohBudget、図78） | liohCapacity | liohCapacity = liohCanisters × liohRating | 2,016 | 人・時 | BUD-CON-04（容量） | REQ-ECLSS-06・REQ-SYS-05・REQ-SYS-06 |
 |  |  | liohLoad | liohLoad = crew × days × 24 | 1,680 | 人・時 | BUD-CON-04（負荷） |  |
-|  |  | liohMargin | liohMargin = liohCapacity − liohLoad | −144 | 人・時 | BUD-CON-04（マージン） |  |
-|  |  | liohDays | liohDays = liohCapacity ÷ (crew × 24) | 9.14 | 日 | — |  |
+|  |  | liohMargin | liohMargin = liohCapacity − liohLoad | 336 | 人・時 | BUD-CON-04（マージン） |  |
+|  |  | liohDays | liohDays = liohCapacity ÷ (crew × 24) | 12.00 | 日 | — |  |
 | CON-02 | LiOH の能力（予備日数を含む）（LiohReserve、図78） | liohLoadReserve | liohLoadReserve = crew × (days + reserveDays) × 24 | 2,016 | 人・時 | BUD-CON-05（負荷） | REQ-ECLSS-06・REQ-SYS-13 |
-|  |  | liohMarginReserve | liohMarginReserve = liohCapacity − liohLoadReserve | −480 | 人・時 | BUD-CON-05（マージン） |  |
+|  |  | liohMarginReserve | liohMarginReserve = liohCapacity − liohLoadReserve | 0 | 人・時 | BUD-CON-05（マージン） |  |
 | CON-03 | 飲料水（貯蔵分）（WaterBudget、図78） | waterCapacity | waterCapacity = waterTanks × waterPerTank | 660 | lb | BUD-CON-03（容量） | REQ-ECLSS-10 |
 |  |  | waterLoad | waterLoad = waterPerPersonDay × crew × days | 420 | lb | BUD-CON-03（負荷） |  |
 |  |  | waterMargin | waterMargin = waterCapacity − waterLoad | 240 | lb | BUD-CON-03（マージン） |  |
@@ -89,11 +89,11 @@
 
 | 制約 | 出力 | 結果 | 収支の行（欄） | 収支の値 | 照合 |
 |---|---|---|---|---|---|
-| CON-01 | liohCapacity | 1,536 | BUD-CON-04（容量） | 1,536 人・時 | 一致 |
+| CON-01 | liohCapacity | 2,016 | BUD-CON-04（容量） | 2,016 人・時 | 一致 |
 | CON-01 | liohLoad | 1,680 | BUD-CON-04（負荷） | 1,680 人・時 | 一致 |
-| CON-01 | liohMargin | −144 | BUD-CON-04（マージン） | −144 人・時 | 一致 |
+| CON-01 | liohMargin | 336 | BUD-CON-04（マージン） | 336 人・時 | 一致 |
 | CON-02 | liohLoadReserve | 2,016 | BUD-CON-05（負荷） | 2,016 人・時 | 一致 |
-| CON-02 | liohMarginReserve | −480 | BUD-CON-05（マージン） | −480 人・時 | 一致 |
+| CON-02 | liohMarginReserve | 0 | BUD-CON-05（マージン） | 0 人・時 | 一致 |
 | CON-03 | waterCapacity | 660 | BUD-CON-03（容量） | 660 lb | 一致 |
 | CON-03 | waterLoad | 420 | BUD-CON-03（負荷） | 420 lb | 一致 |
 | CON-03 | waterMargin | 240 | BUD-CON-03（マージン） | 240 lb | 一致 |
@@ -116,14 +116,14 @@
 
 ## 6. 要求との関係
 
-要求ごとに、関係する制約とマージンを示す。SysML v2 テキストでは、各要求を「マージンが0以上」の制約として書いた。LiOH（REQ-ECLSS-06）と、放熱器だけの排熱（REQ-ECLSS-08）は標準ミッションでマージンが負で、前者は SSD-BUD-ORB-001 の負のマージン（据え置きの決定）、後者はトッピング FES で補う運用（BUD-THM-02）に当たる。
+要求ごとに、関係する制約とマージンを示す。SysML v2 テキストでは、各要求を「マージンが0以上」の制約として書いた。放熱器だけの排熱（REQ-ECLSS-08）は標準ミッションでマージンが負で（LiOH（REQ-ECLSS-06）は Rev. BG の前提の見直しでマージン 0 以上になった）、これはトッピング FES で補う運用（BUD-THM-02）に当たる。
 
 | 要求 | 制約 | マージン | 標準ミッションでの状態 |
 |---|---|---|---|
-| REQ-ECLSS-06 | CON-01・CON-02 | liohMargin・liohMarginReserve | マージンが負：liohMargin = −144・liohMarginReserve = −480 |
-| REQ-SYS-05 | CON-01 | liohMargin | マージンが負：liohMargin = −144 |
-| REQ-SYS-06 | CON-01 | liohMargin | マージンが負：liohMargin = −144 |
-| REQ-SYS-13 | CON-02 | liohMarginReserve | マージンが負：liohMarginReserve = −480 |
+| REQ-ECLSS-06 | CON-01・CON-02 | liohMargin・liohMarginReserve | マージン 0 以上：liohMargin = 336・liohMarginReserve = 0 |
+| REQ-SYS-05 | CON-01 | liohMargin | マージン 0 以上：liohMargin = 336 |
+| REQ-SYS-06 | CON-01 | liohMargin | マージン 0 以上：liohMargin = 336 |
+| REQ-SYS-13 | CON-02 | liohMarginReserve | マージン 0 以上：liohMarginReserve = 0 |
 | REQ-ECLSS-10 | CON-03 | waterMargin | マージンはすべて0以上 |
 | REQ-ECLSS-01 | CON-04 | n2Margin | マージンはすべて0以上 |
 | REQ-EPS-19 | CON-05 | powerMargin・powerMarginEntry・powerMarginFail | マージンはすべて0以上 |
@@ -148,6 +148,10 @@
 
 > **注記** 標準ミッションのパラメータからの日ごとの残量と枯渇の日（LiOH 約9.1日）、飛行の実績との比較は [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) に示す（SysML v2 テキスト：model/SSD-PRF-ORB-001.sysml）。
 
+> **注記** LiOH の前提の見直し（Rev. BG）：以前は SCOM の床下の LiOH ボックスの最大（予備30個）と装着2個の計32個を搭載数とし、標準ミッション（7人・10日）で負のマージンとしていた。運用飛行規則は LiOH キャニスタの数と乗員数が EOM を決め、PLS を見送るため2日分の未使用の LiOH を残すとする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=804）LiOH は床下の LiOH ボックスのほかに、中甲板のロッカーにも積む。（出典: https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=4）床下には LiOH ボックスが別の区画としてある。（出典: https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=5）実際に STS-115 は6個を足し、（出典: https://ibiblio.org/apollo/Shuttle/FRR/MOD/STS-115%20FRR%20MOD.pdf#page=40）STS-125 は救難の待機に備えて計78個を積んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=33）そこで搭載数を規則から求めた必要搭載数 42個（7人 ×（10日＋予備2日）× 24 時間 ÷ 48 人・時）に改めた（ユーザーの決定）。床下のボックスと中甲板への内訳は Rev. BH の注記に示す。MIT OpenCourseWare 16.885 の講義資料（2005年、二次資料）も7人・10日で35個＋予備7個とするが、根拠には使わない。
+
+> **注記** LiOH の内訳（Rev. BH の調査）：床下の ECLSS ベイの LiOH ボックスには最大30個の予備を置く（ECLSS 訓練マニュアル、2006年）。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=59）STS-119 は、LiOH ボックスに29個、装着2個、中甲板のロッカー相当の区画（MLE）に8個を積んだ。（出典: https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-119%20FRR%20STVD.pdf#page=4）STS-125 は7人・11日＋予備2日のため46個を積み、救難の待機（25日）のため32個を足した。46個は規則による計算（7人 × 13日 × 24 ÷ 48 ＝ 45.5 → 46個、本書の計算）と一致する。（出典: https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-125%20_%20STS-400%20FRR%20STVD.pdf#page=4）STS-115 の Delta FRR は、標準の搭載を31個（ボックス29個＋装着2個）とし、備蓄から3個を足す案を示しており、STS-115 の MOD FRR の「6個を追加」と食い違う。（出典: https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-115%20FRR%20STVD%20Delta.pdf#page=17）標準ミッション（7人・10日＋予備2日）の42個は、STS-119 の積み方にならうと、LiOH ボックスに29個・装着2個・中甲板の MLE に11個となる（本書の推定）。MLE 1つに入る個数と、ロッカーの番号は資料に無い。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Pressure Control System（PDF p360） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360
@@ -166,6 +170,14 @@
 14. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-1001 Thermal Go/No-Go Criteria（PDF p2153） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2153
 15. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p384） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384
 16. USA006020 Rev. B ECLSS 21002 訓練マニュアル 4.17.6 ATCS Systems Performance, Limitations, and Capabilities（PDF p142） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=142
+17. NTRS 20100042260 Morgan, G.「Orbiter Crew Compartment Integration-Stowage」（2007年、22頁、843,801 バイト） Middeck stowage（PDF p4） — https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=4
+18. NTRS 20100042260 Morgan, G.「Orbiter Crew Compartment Integration-Stowage」（2007年、22頁、843,801 バイト） Orbiter stowage（PDF p5） — https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=5
+19. STS-115 MOD Flight Readiness Review（2006-08-02、47頁、300,359 バイト） ECLSS（PDF p40） — https://ibiblio.org/apollo/Shuttle/FRR/MOD/STS-115%20FRR%20MOD.pdf#page=40
+20. NSTS-37452 STS-125 Mission Report（2010） Mission unique（PDF p33） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=33
+21. USA006020 Rev. B ECLSS Training Manual（2006-10-23、232頁、7,067,870 バイト） LiOH（PDF p59） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=59
+22. STS-119 Flight Readiness Review STVD（2009-01-16、14頁、1,565,189 バイト） Consumables（PDF p4） — https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-119%20FRR%20STVD.pdf#page=4
+23. STS-125 / STS-400 Flight Readiness Review STVD（2008-09-02、22頁、725,565 バイト） Consumables（PDF p4） — https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-125%20_%20STS-400%20FRR%20STVD.pdf#page=4
+24. STS-115 Delta Flight Readiness Review STVD（2006-08-21、26頁、411,350 バイト） ECLSS（PDF p17） — https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-115%20FRR%20STVD%20Delta.pdf#page=17
 
 ## 10. 変更履歴
 
@@ -177,3 +189,5 @@
 | Rev. C | 2026-10-03 | SysML v2 テキストの属性を量（ISQ）と単位で型付けし直した（内部ブロック・流れ定義書 SSD-IBD-ORB-001）（Rev. AN） |
 | Rev. D | 2026-10-03 | 個体・時間定義書 SSD-IND-ORB-001 への参照を注記（Rev. AR） |
 | Rev. E | 2026-10-04 | 消耗品・電力プロファイル定義書 SSD-PRF-ORB-001 への参照を注記（Rev. AW） |
+| Rev. F | 2026-10-07 | PAR-04 を規則から求めた LiOH の必要搭載数 42個に改め、CON-01・02 の値とマージンを計算し直した（LiOH の前提の見直し）（Rev. BG） |
+| Rev. G | 2026-10-08 | LiOH の床下のボックスと中甲板への分け方（STS-119・125 の例と 42個の推定の内訳）を注記（Rev. BH） |

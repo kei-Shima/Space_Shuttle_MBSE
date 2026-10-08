@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-SYS-001 |
 | 表題 | システム要求書（L1） |
-| 版・日付 | Rev. H／2026-10-06 |
+| 版・日付 | Rev. J／2026-10-08 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -29,11 +29,11 @@
 | REQ-SYS-06 | 通常のミッションで 4〜16 日の軌道滞在ができること。 | 4〜16 日 | 通常のミッションは宇宙で 4〜16 日である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31） | F-EPS-PRSD-04・F-ECLSS-04 | PH-3（軌道） | A（解析） |
 | REQ-SYS-07 | 乗員室を普段着で過ごせる環境（14.7 ± 0.2 psia）に保つこと。 | 14.7 ± 0.2 psia | 乗員室は普段着で過ごせる環境である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31）圧力制御系は通常、乗員室を 14.7 ± 0.2 psia に与圧する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360） | F-ECLSS-02・F-ECLSS-03・F-STR-04・IF-ORB-09 | PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | T（試験） |
 | REQ-SYS-08 | 乗員と機体の加速度を 3g 以下に保ち、上昇時の Nx を +3.11 g 以下とすること。 | 3 g（上昇 Nx ≦ +3.11 g） | 加速度は 3g を超えない。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31）上昇中の並進加速度の限界は Nx = +3.11 g である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/813） | F-MPS-01・F-GNC-05・F-STR-01 | PH-2（上昇）・PH-6（再突入） | A（解析） |
-| REQ-SYS-09 | 帰還時に約 1,100 n.mi. の横方向移動（クロスレンジ）ができること。 | 約 1,100 n.mi. | 地球へ帰るとき、オービタは約 1,100 n.mi. のクロスレンジの運動能力を持つ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31） | F-TPS-01・F-STR-01・F-APU-02 | PH-6（再突入） | A（解析） |
+| REQ-SYS-09 | 帰還時に、分散を含む限界で約 750 n.mi. 以上の横方向移動（クロスレンジ）ができ、その範囲の着陸地を選べること。 | 分散を含む 753〜828 n.mi.（分散なし 815〜904 n.mi.、28.5°・57°の軌道） | 再突入ではバンク角で旋回し続けるため、約 750 n.mi. のクロスレンジを得られる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/939）緊急の軌道離脱ではクロスレンジの能力が重要で、28.5°・57°の飛行の、指定した突入重量での分散を含む限界と分散なしの限界を表に示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1011） | F-TPS-01・F-STR-01・F-APU-02 | PH-6（再突入） | A（解析） |
 | REQ-SYS-10 | 各機能を2重・3重に冗長化し、1故障でミッションを継続でき、2故障で安全に帰還できること。 | 1故障で継続・2故障で帰還 | 各機能は2重または3重に冗長化された機器で構成され、1故障後もミッションを継続でき、2故障後も着陸地点へ安全に帰還できることを目標としている。（出典: https://www.spaceshuttleguide.com/system/navigation.htm）2故障許容（フェイルオペレーショナル／フェイルセーフ）は、系の中の任意の2故障に耐えて安全に離脱・着陸できる状態である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=580） | F-ORB-03・F-DPS-03・F-APU-01・F-EPS-04・F-GNC-01 | PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | A（解析） |
 | REQ-SYS-11 | 系の冗長を、2故障許容・1故障許容・0故障許容・飛行不能の4段階で判定できるよう構成すること。 | 4段階 | A2-101 は冗長度を、2故障許容、1故障許容、0故障許容、飛行不能の4段階で定義する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=580） | F-ORB-03・F-CW-02 | PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | A（解析） |
 | REQ-SYS-12 | 通常の EOM 着陸は第5飛行日（約96時間）以降とし、再突入に必須の系の1故障目では通常 NEOM まで飛行を続けられること。 | EOM ≧ 約96時間 | 通常の EOM 着陸は第5飛行日の初め（約96時間）より前には行わない。再突入に必須の系の1故障目では、通常は NEOM まで飛行を続ける。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=581） | F-ORB-03 | PH-3（軌道） | D（実証） |
-| REQ-SYS-13 | すべての飛行で2日の延長日（着陸地の天候に1日、系統のウェーブオフに1日）を確保できること。 | 延長日 2 | すべての STS の飛行は2日の延長日を持たねばならず、1日は着陸地の天候、もう1日は系統の非常時のウェーブオフに使う。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=586） | F-EPS-PRSD-04・F-ECLSS-04 | PH-3（軌道） | A（解析） |
+| REQ-SYS-13 | 打上げ前の計画と飛行中の延長の決定のときに、2日の延長日（着陸地の天候に1日、系統のウェーブオフに1日）の消耗品を確保すること。 | 延長日 2（打上げ前・延長の決定時に確保） | すべての STS の飛行は2日の延長日を持たねばならず、1日は着陸地の天候、もう1日は系統の非常時のウェーブオフに使う。飛行中にペイロードの運用のため延長するときも2日の延長の能力を含めねばならない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=586） | F-EPS-PRSD-04・F-ECLSS-04 | PH-3（軌道） | A（解析） |
 | REQ-SYS-14 | 系統の故障に対し、Go/No-Go の判定基準（A2-1001 ほか各章の1001番）で上昇の継続・MDF・次の PLS への着陸を判断できること。 | 判定区分 3（上昇継続・MDF・次の PLS） | A2-1001 は、推進・DPS・GNC・通信などの主要な故障を集約したオービタ系の Go/No-Go 基準である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=800） | F-ORB-03・F-CW-01・F-DPS-03 | PH-2（上昇）・PH-3（軌道） | A（解析） |
 | REQ-SYS-15 | 上昇中のエンジン停止に対し、intact アボート（RTLS・TAL・AOA・ATO）で計画した着陸地点に安全に戻れること。 | intact アボート 4 | intact アボートは、オービタを計画した着陸地点へ安全に戻すためのものである。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/855） | F-GNC-05・F-OMS-01・F-MPS-01・F-DPS-03 | AB-RTLS（RTLS（射点帰還））・AB-TAL（TAL（大洋横断着陸））・AB-AOA（AOA（1周帰還））・AB-ATO（ATO（軌道へのアボート）） | A（解析） |
 | REQ-SYS-16 | 地上支援設備に接続していない間、オービタ・外部タンク・SRB・ペイロードの電力をすべて機上で供給すること。 | 全電力を機上で供給 | EPS は、地上支援設備に接続していないときに、オービタ、外部タンク、SRB、ペイロードが必要とする電力をすべてまかなう。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/311） | F-EPS-01・F-EPS-03・IF-ORB-14・IF-ORB-27・IF-ORB-28 | PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | D（実証） |
@@ -89,7 +89,7 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 
 ## 6. 検証（V&V）
 
-各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（18件のうち根拠あり 15件・根拠なし 3件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
+各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（18件のうち根拠あり 16件・根拠なし 2件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
 
 | ID | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|
@@ -101,7 +101,7 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | REQ-SYS-06 | A（解析） | 根拠あり | STS-65 の飛行報告は、EDO パレットを積んだ飛行で、着陸時に残った酸素・水素で平均 18.8 kW のまま47時間の延長が可能だったと評価しており、14日17時間の飛行に約2日を加えた約16.7日の滞在能力を消耗品の解析で示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=30）同じ報告は、STS-65 の飛行時間が14日17時間55分で、当時のシャトル計画で最長だったことを示し、16日に近い滞在の実績が解析の前提と合うことを裏づける。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | REQ-SYS-07 | T（試験） | 根拠あり | STS-2（軌道飛行試験）の飛行報告は、打上げ前に乗員室の与圧の健全性チェックを行い、飛行中の与圧殻の漏れ量が 0.7 lb/日（STS-1 は 2.7 lb/日）だったことを示し、乗員室の圧力を保つ能力を試験で確かめた記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=51）STS-125 の飛行報告は、ARPCS が飛行中チェックアウトの要求をすべて満たし、約 14.7 psia からの減圧と 14.7 psia への再加圧の後に圧力制御系2のチェックアウトを行ったことを示し、14.7 psia の圧力制御を飛行中に試験した記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
 | REQ-SYS-08 | A（解析） | 根拠あり | SODB 3.4.1.1 は、上昇軌道の軸方向荷重倍数を 3 g 以下とし、この荷重倍数をすべての intact アボートにも適用すること、SSME 1基の推力が 104% で固着すると 3 g を超えるため詳細な荷重解析が要ることを示し、3 g の限界が構造荷重の解析で管理されていることの根拠である。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=46）STS-135 の飛行報告の事象表は、上昇中に 3 g のための SSME の絞り込み指令が3基とも受け付けられ、全荷重倍数が 3 g に達した時刻を記録しており、解析どおりに加速度が 3 g に抑えられたことを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
-| REQ-SYS-09 | A（解析） | 根拠なし | 根拠なし：約 1,100 n.mi. のクロスレンジを解析で示した資料は無い。SCOM 9.3（p1011）の解析表は、160 n.mi. 軌道での分散を含むクロスレンジ限界を 753〜828 n.mi.、分散なしで 815〜904 n.mi. としており、要求の値に届かない。 |
+| REQ-SYS-09 | A（解析） | 根拠あり | 9.3節 Entry（PDF p1011）：28.5°・57°の飛行の、指定した突入重量でのクロスレンジの限界を、分散を含めて 753〜828 n.mi.、分散なしで 815〜904 n.mi. と解析の表に示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1011）Joosten（NASA CP-2283、p9）はオービタの揚抗比によるクロスレンジの能力を約 750 n.mi. とする。（出典: https://ntrs.nasa.gov/api/citations/19850008593/downloads/19850008593.pdf#page=9） |
 | REQ-SYS-10 | A（解析） | 根拠あり | IOA（独立オービタ評価）の報告は、NSTS 22206 の規則に従い、トップダウンでハードウェアの故障モードと冗長を含む重要度（1R・2R など）を独立に解析し、NASA の FMEA/CIL と比べたことを示し、冗長構成の故障許容を解析で評価した根拠である。（出典: https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=11）同じ報告は、冗長が無く乗員・機体の喪失につながる単一故障点を重要度1とし、オートランドの押しボタンの固着をそのような故障として新たに見つけてソフトウェア変更につなげたことを示し、解析で冗長の欠けを洗い出したことの例である。（出典: https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=18） |
 | REQ-SYS-11 | A（解析） | 根拠あり | 飛行規則 A9-1001 の注記は、電力系の各機器の喪失を「1故障許容」「0故障許容」と分類して A2-102B・C（ミッション期間の要求）に結びつけており、系の冗長を故障許容の段階で評価して判定基準を作っていることを示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1517） |
 | REQ-SYS-12 | D（実証） | 根拠あり | STS-135 の飛行報告は、飛行7日目（MET 6日6時間）に GPC 4 が故障してマスターアラームが鳴り、GPC 2 を SM GPC に割り当て直して DPS を安定な構成に戻したことを示し、再突入に必須の系（DPS）の1故障目で飛行を続けた実例である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=13）同じ報告は、KSC の最初の着陸機会で軌道離脱噴射を行い、飛行時間が12日18時間27分だったことを示し、第5飛行日より後の計画どおりの EOM 着陸の実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=18） |
@@ -127,6 +127,12 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 > **注記** REQ-SYS-06・13・17 などの、設計値・飛行の実績の値による判定は [SSD-RQF-SYS-001](SSD-RQF-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-RQF-SYS-001.sysml）。
 
 > **注記** 人間系の基準（NASA-STD-3001 Vol. 1 Rev. C・Vol. 2 Rev. F）とシャトルの照合は [SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) に示す（SysML v2 テキスト：model/SSD-HSI-SYS-001.sysml）。
+
+> **注記** 要求の値の見直し（Rev. BG）・クロスレンジ：1,100 n.mi. は、バンデンバーグから1周回で帰るとき地球の自転で基地が東へ 1,100 n.mi. 動くことによる空軍の要求で、（出典: https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf#page=233）1971年1月に、デルタ翼と 1,100 n.mi. のクロスレンジが機体の要求として決まった。（出典: https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf#page=251）この要求は迎え角 30°以下で必要な極超音速の揚抗比を求め、機体の空力の設計を決めた。（出典: https://ntrs.nasa.gov/api/citations/19850008600/downloads/19850008600.pdf#page=4）運用の能力は約 750〜800 n.mi.（Joosten、Wings in Orbit）で、SCOM の諸元の頁（p31）の 1,100 n.mi. はこの当初の設計要求の値である。（出典: https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf#page=4）そこで、当初の設計要求（1,100 n.mi.、本注記）と運用の要求（REQ-SYS-09：SCOM 9.3 の分散を含む限界）に分け、REQ-SYS-09 の検証の状態を根拠ありとした。実際に飛んだクロスレンジは Rev. BH の注記に示す。
+
+> **注記** 要求の値の見直し（Rev. BG）・延長日：REQ-SYS-13 は値（2日）を据え置き、要求の文を「打上げ前の計画と延長の決定のときに確保する」とした（運用飛行規則 A2-103 の A・B）。以前は着陸のときの残量と比べて満たさないとしたが、（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=586）STS-114 は12日＋予備2日で計画し、予備のうち1日を天候で使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=8）STS-125 は FD12・13 の KSC の着陸を天候で見送り、FD14 に EAFB へ着陸した（予備を2日とも使った）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=26）
+
+> **注記** 実際に飛んだクロスレンジ（Rev. BH の調査）：STS-7（1983年）は、KSC への着陸を天候で見送るときの代わりを Edwards への約732 n.mi. のクロスレンジとしていた（飛行前の会議録）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_001M.pdf#page=1）実際にこのクロスレンジで Edwards へ降り、クロスレンジが大きかったため、通信途絶の前の再突入の試験（PTI）を取りやめた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_005M.pdf#page=5）JSC の GNC 飛行後報告（STS-7、1983-06-28、https://www.ibiblio.org/apollo/Shuttle/Reports/GNC%20Post%20Flight%20Reports/STS-7%20GNC%20Post%20Flight%20Report.pdf の p9.1.4）はクロスレンジを 740 n.mi. とするが、画像の PDF でテキスト層が無く、照合語で確かめられない。1984年以降の飛行の実績のクロスレンジは資料に見つからず、これが計画全体の最大とは言えない。STS-7 の値は運用の限界（REQ-SYS-09 の 753〜828 n.mi.）の内で、限界に近い。
 
 ## 8. 参考文献
 
@@ -168,6 +174,17 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 36. STS-2 Orbiter Mission Report 2.9.2 Mass Properties Comparison Based on Deorbit Maneuver Data（PDF p99） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=99
 37. STS-59 Mission Report Landing and Braking Parameters（PDF p28） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=28
 38. STS-59 Mission Report Landing (derotation)（PDF p26） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=26
+39. Shuttle Crew Operations Manual 7.3 Entry（USA007587 Rev. A CPN-1、PDF p939） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/939
+40. Shuttle Crew Operations Manual 9.3 Entry（USA007587 Rev. A CPN-1、PDF p1011） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1011
+41. NASA CP-2283 所収 Joosten, B. K.「Descent Guidance and Mission Planning for Space Shuttle」（1983年、NTRS 19850008593、12頁、4,795,385 バイト） Entry guidance（PDF p9） — https://ntrs.nasa.gov/api/citations/19850008593/downloads/19850008593.pdf#page=9
+42. NASA SP-4221 Heppenheimer, T. A.「The Space Shuttle Decision: NASA's Search for a Reusable Space Vehicle」（1999年、489頁、59,663,742 バイト） Chapter 6（PDF p233） — https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf#page=233
+43. NASA SP-4221 Heppenheimer, T. A.「The Space Shuttle Decision: NASA's Search for a Reusable Space Vehicle」（1999年、489頁、59,663,742 バイト） Chapter 6（PDF p251） — https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf#page=251
+44. NASA CP-2283 所収 Young, J. C. ほか「The Aerodynamic Challenges of the Design and Development of the Space Shuttle Orbiter」（1983年、NTRS 19850008600、55頁、20,207,086 バイト） Introduction（PDF p4） — https://ntrs.nasa.gov/api/citations/19850008600/downloads/19850008600.pdf#page=4
+45. NASA SP-2010-3409「Wings in Orbit」3章（53〜73頁、23頁、8,439,919 バイト） Landing（PDF p4） — https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf#page=4
+46. STS-114 Mission Report Mission summary（PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=8
+47. NSTS-37452 STS-125 Mission Report（2010） Flight day 14（PDF p26） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=26
+48. DA3-83-22 Ascent/Entry Flight Techniques Panel 会議録 No. 1（1983-05-27、5頁、283,863 バイト） STS-7（PDF p1） — https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_001M.pdf#page=1
+49. DA8-83-60 Ascent/Entry Flight Techniques Panel 会議録 No. 5（1983-09-09、7頁、302,696 バイト） DTO Crossrange/Energy Criteria（PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_005M.pdf#page=5
 
 ## 9. 変更履歴
 
@@ -182,3 +199,5 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | Rev. F | 2026-10-03 | ハザード解析書 SSD-HAZ-ORB-001 への参照を注記（Rev. AQ） |
 | Rev. G | 2026-10-03 | 要求の形式化定義書 SSD-RQF-SYS-001 への参照を注記（Rev. AS） |
 | Rev. H | 2026-10-06 | 人間系の基準の照合表 SSD-HSI-SYS-001 への参照を注記（Rev. AY） |
+| Rev. I | 2026-10-07 | REQ-SYS-09 を運用のクロスレンジ（SCOM 9.3 の限界）に改めて当初の設計要求 1,100 n.mi. を注記に分け、REQ-SYS-13 を打上げ前・延長の決定時に確保する要求と書き直した（要求の値の見直し）（Rev. BG） |
+| Rev. J | 2026-10-08 | 実際に飛んだクロスレンジ（STS-7 の約732〜740 n.mi.）を注記（Rev. BH） |

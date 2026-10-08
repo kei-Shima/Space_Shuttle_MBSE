@@ -1226,7 +1226,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "MS-・MC-・DV-・DE-"; form = "MS-・MC-・DV-・DE-<2桁>"; meaning = "質量特性・Δv の値と式"; example = "DV-04"; count = 60; }
         @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 44; }
         @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 685; }
-        @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 47; }
+        @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 45; }
         @IdConvention { prefix = "CW-・EM-・DT-・RS-・BU-"; form = "CW-・EM-・DT-・RS-・BU-<2桁>"; meaning = "C/W の警報・検知する故障・処置・警報の区分"; example = "CW-05"; count = 155; }
         @IdConvention { prefix = "HZ-・HC-・HM-"; form = "HZ-・HC-・HM-<2桁>"; meaning = "ハザード・原因・管理策"; example = "HZ-01"; count = 134; }
         @IdConvention { prefix = "AV-・SN-・AN-"; form = "AV-・SN-・AN-<2桁>"; meaning = "飛行の実績・スナップショット・異常"; example = "AV-05"; count = 59; }

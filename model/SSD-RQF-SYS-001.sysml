@@ -61,8 +61,8 @@ package SSD_RQF_SYS_001 {
     #refinement dependency <'REQ-SYS-08>RQM'> from ReqSys08 to SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_08;
     requirement def <'REQ-SYS-09'> ReqSys09 {
         doc /* REQ-SYS-09 の値の形式化（数値） */
-        attribute crossrange : LengthValue { doc /* RF-012 帰還時の横方向移動（クロスレンジ）の能力（n.mi.） */ }
-        require constraint { doc /* ≧ 1100 n.mi.、約 */ crossrange >= 1100 [nmi] }
+        attribute crossrange : LengthValue { doc /* RF-012 帰還時の横方向移動（クロスレンジ）の能力（分散を含む限界、n.mi.） */ }
+        require constraint { doc /* ≧ 750 n.mi.、約（SCOM 9.3） */ crossrange >= 750 [nmi] }
     }
     #refinement dependency <'REQ-SYS-09>RQM'> from ReqSys09 to SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_09;
     requirement def <'REQ-SYS-10'> ReqSys10 {
@@ -666,7 +666,7 @@ package SSD_RQF_SYS_001 {
         attribute purgeDuration : DurationValue { doc /* RF-167 燃料電池1基のパージ時間（min） */ }
         attribute purgeInterval : DurationValue { doc /* RF-168 パージの間隔（h） */ }
         require constraint { doc /* ≧ 2 min */ purgeDuration >= 2 [min] }
-        require constraint { doc /* ≦ 12 h */ purgeInterval <= 12 [h] }
+        require constraint { doc /* ≦ 96 h（頻度は電圧の低下 0.2 V） */ purgeInterval <= 96 [h] }
     }
     #refinement dependency <'REQ-EPS-14>RQM'> from ReqEps14 to SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_14;
     requirement def <'REQ-EPS-15'> ReqEps15 {
@@ -1587,26 +1587,26 @@ package SSD_RQF_SYS_001 {
         #EvaluatedWith dependency <'EV-12>src'> from ev12 to SSD_IND_ORB_001::Sts125;
         requirement <'EV-13'> ev13 : ReqEps14 {
             doc /* STS-114（実績）：purgeInterval = 23〜93 h（最も不利な端で判定）。SSD-IND-ORB-001 AV-19 */
-            @Judgement { verdict = "満たさない"; subjectName = "STS-114（実績）"; source = "SSD-IND-ORB-001 AV-19"; }
+            @Judgement { verdict = "満たす"; subjectName = "STS-114（実績）"; source = "SSD-IND-ORB-001 AV-19"; }
             attribute :>> purgeInterval = 93 [h];
         }
         #EvaluatedWith dependency <'EV-13>src'> from ev13 to SSD_IND_ORB_001::Sts114;
         requirement <'EV-14'> ev14 : ReqEps14 {
             doc /* STS-125（実績）：purgeInterval = 24〜49 h（最も不利な端で判定）。SSD-IND-ORB-001 AV-31 */
-            @Judgement { verdict = "満たさない"; subjectName = "STS-125（実績）"; source = "SSD-IND-ORB-001 AV-31"; }
+            @Judgement { verdict = "満たす"; subjectName = "STS-125（実績）"; source = "SSD-IND-ORB-001 AV-31"; }
             attribute :>> purgeInterval = 49 [h];
         }
         #EvaluatedWith dependency <'EV-14>src'> from ev14 to SSD_IND_ORB_001::Sts125;
         requirement <'EV-15'> ev15 : ReqSys13 {
-            doc /* STS-114（実績）：extensionDays = 1.5 d（値）。SSD-IND-ORB-001 AV-16 */
-            @Judgement { verdict = "満たさない"; subjectName = "STS-114（実績）"; source = "SSD-IND-ORB-001 AV-16"; }
-            attribute :>> extensionDays = 1.5 [d];
+            doc /* STS-114（実績）：extensionDays = 2 d（計画で確保、1日を天候で使用）。SSD-IND-ORB-001 AV-16・STS-114 の報告 p8 */
+            @Judgement { verdict = "満たす"; subjectName = "STS-114（実績）"; source = "SSD-IND-ORB-001 AV-16"; }
+            attribute :>> extensionDays = 2 [d];
         }
         #EvaluatedWith dependency <'EV-15>src'> from ev15 to SSD_IND_ORB_001::Sts114;
         requirement <'EV-16'> ev16 : ReqSys13 {
-            doc /* STS-125（実績）：extensionDays = 1.17 d（値）。SSD-IND-ORB-001 AV-28 */
-            @Judgement { verdict = "満たさない"; subjectName = "STS-125（実績）"; source = "SSD-IND-ORB-001 AV-28"; }
-            attribute :>> extensionDays = 1.17 [d];
+            doc /* STS-125（実績）：extensionDays = 2 d（計画で確保、2日とも天候で使用）。SSD-IND-ORB-001 AV-28・STS-125 の報告 p24〜26 */
+            @Judgement { verdict = "満たす"; subjectName = "STS-125（実績）"; source = "SSD-IND-ORB-001 AV-28"; }
+            attribute :>> extensionDays = 2 [d];
         }
         #EvaluatedWith dependency <'EV-16>src'> from ev16 to SSD_IND_ORB_001::Sts125;
         requirement <'EV-17'> ev17 : ReqOms11 {
