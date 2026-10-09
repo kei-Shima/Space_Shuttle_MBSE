@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SSD-FD-EPS-AC-001 交流発電・配電（EPDC-AC）機能説明書</title><style>
+:root{--ink:#15202B;--sub:#4A5563;--paper:#FFFFFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+ line-height:1.75;font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.bar{height:6px;background:var(--flag)}
+main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+nav.crumb{font-size:.85rem;color:var(--sub);margin:.25rem 0 1.25rem}
+nav.crumb a{color:var(--link)}
+table.tb{border-collapse:collapse;width:100%;max-width:40rem;border:2px solid var(--ink);margin:0 0 2rem;font-size:.9rem}
+table.tb th{background:#E9EDF2;text-align:left;font-weight:600;white-space:nowrap;width:9.5rem}
+table.tb th,table.tb td{border:1px solid var(--ink);padding:.35rem .6rem;vertical-align:top}
+table.tb td.t{font-size:1.15rem;font-weight:700;line-height:1.5}
+h2{font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,li{max-width:46rem}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all}
+table.dt{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
+table.dt th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem;white-space:nowrap}
+table.dt td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--panel)}
+table.dt td.id{white-space:nowrap;font-weight:600}
+table.dt td.nw{white-space:nowrap}
+table.dt td.pt{min-width:9.5em}
+tr:target td{background:#FFF1E8 !important;box-shadow:inset 4px 0 0 var(--flag)}
+.chip{display:inline-block;padding:0 .45rem;border-radius:3px;font-size:.78rem;font-weight:600;color:#fff;white-space:nowrap}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.6rem 0;max-width:52rem}
+.note b{color:var(--flag)}
+ol.refs{padding-left:1.4rem;font-size:.88rem}
+ol.refs li{margin:.3rem 0;max-width:none}
+figure{margin:1rem 0 1.5rem}
+figure img{max-width:100%;border:1px solid var(--rule)}
+figcaption{font-size:.85rem;color:var(--sub)}
+.scroll{overflow-x:auto}
+@media print{.bar{display:none} main{max-width:none;padding:0} a{color:var(--ink)} table.dt th{color:#000;background:#DDD}}
+</style></head>
+<body><div class="bar"></div><main>
+<nav class="crumb"><a href="../index.html">SSD-SYS-IDX-001 図書一覧</a></nav>
+<h1 style='position:absolute;left:-9999px'>交流発電・配電（EPDC-AC）機能説明書</h1>
+<table class="tb" aria-label="表題欄">
+<tr><th>文書番号</th><td>SSD-FD-EPS-AC-001</td></tr>
+<tr><th>表題</th><td class="t">交流発電・配電（EPDC-AC）機能説明書</td></tr>
+<tr><th>版・日付</th><td>Rev. B／2026-09-26</td></tr>
+<tr><th>状態</th><td>検討用（公開資料に基づく）</td></tr>
+<tr><th>上位文書</th><td><a href='SSD-FD-EPS-001.html'>SSD-FD-EPS-001</a></td></tr>
+<tr><th>関連図</th><td><a href="../SSD-SYS-ARC-001_p6_eps.svg">SSD-SYS-ARC-001　図6 EPS 機能構成</a></td></tr>
+</table>
+<h2>1. 目的</h2><p>インバータによる交流の生成と交流負荷への配電機能を示す。</p>
+<h2>2. 機能</h2>
+<table class='dt'><tr><th>機能番号</th><th>内容</th></tr><tr id='F-EPS-AC-01'><td class='id'>F-EPS-AC-01</td><td>各主直流母線は3台の単相静止形インバータに給電し、これが1本の3相交流母線を構成する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td></tr><tr id='F-EPS-AC-02'><td class='id'>F-EPS-AC-02</td><td>9台のインバータで115 V・400 Hzの交流を作り、交流母線AC1・AC2・AC3へ配電する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td></tr><tr id='F-EPS-AC-03'><td class='id'>F-EPS-AC-03</td><td>インバータは前部アビオニクスベイにあり、出力は116〜120 V（実効値）・400±7 Hzである。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td></tr><tr id='F-EPS-AC-04'><td class='id'>F-EPS-AC-04</td><td>交流母線センサは過電圧・不足電圧・過負荷を監視し、自動トリップ位置では異常のあるインバータを母線から切り離す。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td></tr><tr id='F-EPS-AC-05'><td class='id'>F-EPS-AC-05</td><td>10台のモータ制御組立が、ベントドア、ペイロードベイドア、RCS/OMSの電動弁などの交流モータへ電力を供給する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td></tr></table>
+<h2>3. インタフェース</h2>
+<div class='scroll'><table class='dt'><tr><th>IF番号</th><th>相手</th><th>種別</th><th>方向</th><th>内容</th><th>上位／下位</th></tr><tr id='IF-EPS-10'><td class='id'><a href='SSD-FD-EPS-DC-001.html#IF-EPS-10'>IF-EPS-10</a></td><td class='pt'><a href='SSD-FD-EPS-DC-001.html'>直流配電（EPDC-DC）</a></td><td class='nw'><span class='chip' style='background:#C62828'>電力（28 VDC）</span></td><td class='nw'>受信</td><td>インバータ1は主母線Aのみ、2は主母線B、3は主母線Cから給電される。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td><td>—</td></tr><tr id='IF-EPS-12'><td class='id'>IF-EPS-12</td><td class='pt'>電力負荷（オービタ各系・SRB・ET・ペイロード）</td><td class='nw'><span class='chip' style='background:#C62828'>電力（28 VDC）</span></td><td class='nw'>送信</td><td>交流電力はインバータ分配制御組立から計器盤へ、モータ制御組立から3相モータ負荷へ分配される。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td><td>上位：<a href='SSD-FD-EPS-001.html#IF-ORB-14'>IF-ORB-14</a></td></tr><tr id='IF-EPS-13'><td class='id'>IF-EPS-13</td><td class='pt'><a href='SSD-FD-EPS-FCP-001.html'>燃料電池発電装置（FCP×3）</a></td><td class='nw'><span class='chip' style='background:#C62828'>電力（28 VDC）</span></td><td class='nw'>送信</td><td>燃料電池の冷却材ポンプは3相交流で駆動され、電子制御ユニットが冷却材ポンプと水素ポンプ／水分離器への交流電力を制御する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td><td>—</td></tr></table></div>
+<h2>4. 関連文書</h2><p>交流発電・配電（AC）に関係する公開文書（4件）。全件の対応は <a href='SSD-EPS-REF-001.html#AC'>SSD-EPS-REF-001 EPS 機能別関連文書一覧</a> を参照。</p><div class='scroll'><table class='dt'><tr><th>ID</th><th>文書番号</th><th>表題</th><th>内容</th></tr><tr><td class='id'><a href='SSD-EPS-REF-001.html#EP-01'>EP-01</a></td><td>番号なし</td><td>NSTS 1988 News Reference Manual – Electrical Power System</td><td>PRSD・燃料電池・EPDCの構成、定格、運用手順を1ページで解説する。<span class='src'>（出典：<a href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a>）</span></td></tr><tr><td class='id'><a href='SSD-EPS-REF-001.html#EP-03'>EP-03</a></td><td>USA007587 Rev. A（CPN-1）</td><td>Shuttle Crew Operations Manual（SCOM）</td><td>2.8節「Electrical Power Distribution and Control」のうち「AC Power Generation」：インバータによる3相交流の発生と交流母線の構成・監視を示す。<span class='src'>（出典：<a href='https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/336'>https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/336</a>）</span></td></tr><tr><td class='id'><a href='SSD-EPS-REF-001.html#EP-08'>EP-08</a></td><td>NTRS 19900001617</td><td>IOA: Analysis of the EPD&amp;C/EPG subsystem</td><td>電力分配・制御（EPD&amp;C）と発電（EPG）ハードウェアの独立FMEA/CIL解析。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/citations/19900001617'>https://ntrs.nasa.gov/citations/19900001617</a>）</span></td></tr><tr><td class='id'><a href='SSD-EPS-REF-001.html#EP-20'>EP-20</a></td><td>NSTS-12820 Vol. A（PCN-1）</td><td>Space Shuttle Operational Flight Rules Vol. A – All Flights</td><td>交流配電の管理（A9-151〜161：インバータ管理、母線センサ、単相・2相喪失、インバータ熱寿命、MCA、油圧循環ポンプ運転）を規定する。<span class='src'>（出典：<a href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1465'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1465</a>）</span></td></tr></table></div>
+<h2>5. 参考文献</h2><ol class='refs'><li>NSTS 1988 News Reference Manual – Electrical Power System（GlobalSecurity.org 転載）<br><a class='src' href='https://www.globalsecurity.org/space/library/report/1988/sts-eps.html'>https://www.globalsecurity.org/space/library/report/1988/sts-eps.html</a></li></ol>
+<h2>6. 変更履歴</h2><table class='dt'><tr><th>版</th><th>日付</th><th>内容</th></tr><tr><td class='nw'>初版（Rev. -）</td><td class='nw'>2026-09-25</td><td>初版作成（公開資料に基づく検討用）</td></tr><tr><td class='nw'>Rev. A</td><td class='nw'>2026-09-25</td><td>関連文書にEP-20（NSTS-12820 Vol. A 運用飛行規則）を追加</td></tr><tr><td class='nw'>Rev. B</td><td class='nw'>2026-09-26</td><td>関連文書にEP-03（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加</td></tr></table>
+</main></body></html>

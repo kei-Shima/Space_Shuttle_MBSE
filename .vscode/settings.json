@@ -1,0 +1,4 @@
+{
+  "sysml.workspace.preloadOnOpen": "always",
+  "sysml.validation.disabledCodes": ["naming-convention", "missing-doc"]
+}

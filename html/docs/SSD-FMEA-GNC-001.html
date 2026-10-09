@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SSD-FMEA-GNC-001 誘導・航法・制御（GN&amp;C）故障解析表（FMEA・CIL）</title><style>
+:root{--ink:#15202B;--sub:#4A5563;--paper:#FFFFFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+ line-height:1.75;font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.bar{height:6px;background:var(--flag)}
+main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+nav.crumb{font-size:.85rem;color:var(--sub);margin:.25rem 0 1.25rem}
+nav.crumb a{color:var(--link)}
+table.tb{border-collapse:collapse;width:100%;max-width:40rem;border:2px solid var(--ink);margin:0 0 2rem;font-size:.9rem}
+table.tb th{background:#E9EDF2;text-align:left;font-weight:600;white-space:nowrap;width:9.5rem}
+table.tb th,table.tb td{border:1px solid var(--ink);padding:.35rem .6rem;vertical-align:top}
+table.tb td.t{font-size:1.15rem;font-weight:700;line-height:1.5}
+h2{font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,li{max-width:46rem}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all}
+table.dt{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
+table.dt th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem;white-space:nowrap}
+table.dt td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--panel)}
+table.dt td.id{white-space:nowrap;font-weight:600}
+table.dt td.nw{white-space:nowrap}
+table.dt td.pt{min-width:9.5em}
+tr:target td{background:#FFF1E8 !important;box-shadow:inset 4px 0 0 var(--flag)}
+.chip{display:inline-block;padding:0 .45rem;border-radius:3px;font-size:.78rem;font-weight:600;color:#fff;white-space:nowrap}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.6rem 0;max-width:52rem}
+.note b{color:var(--flag)}
+ol.refs{padding-left:1.4rem;font-size:.88rem}
+ol.refs li{margin:.3rem 0;max-width:none}
+figure{margin:1rem 0 1.5rem}
+figure img{max-width:100%;border:1px solid var(--rule)}
+figcaption{font-size:.85rem;color:var(--sub)}
+.scroll{overflow-x:auto}
+@media print{.bar{display:none} main{max-width:none;padding:0} a{color:var(--ink)} table.dt th{color:#000;background:#DDD}}
+</style></head>
+<body><div class="bar"></div><main>
+<nav class="crumb"><a href="../index.html">SSD-SYS-IDX-001 図書一覧</a></nav>
+<h1 style='position:absolute;left:-9999px'>誘導・航法・制御（GN&amp;C）故障解析表（FMEA・CIL）</h1>
+<table class="tb" aria-label="表題欄">
+<tr><th>文書番号</th><td>SSD-FMEA-GNC-001</td></tr>
+<tr><th>表題</th><td class="t">誘導・航法・制御（GN&amp;C）故障解析表（FMEA・CIL）</td></tr>
+<tr><th>版・日付</th><td>初版（Rev. -）／2026-10-02</td></tr>
+<tr><th>状態</th><td>検討用（公開資料に基づく）</td></tr>
+<tr><th>上位文書</th><td><a href='SSD-FMEA-ORB-001.html'>SSD-FMEA-ORB-001</a></td></tr>
+<tr><th>関連図</th><td><a href="../SSD-SYS-ARC-001_p46_gnc.svg">SSD-SYS-ARC-001　図46 GN&amp;C 機能構成</a></td></tr>
+</table>
+<h2>1. 目的</h2><p>GN&amp;Cの故障モード・影響解析（FMEA）と重要品目リスト（CIL）について、IOA（Independent Orbiter Assessment）の件数、IOA が NASA の評価と食い違いを指摘した CIL 課題の評価ワークシートと機能・IF の対応、運用飛行規則の [CIL] の規則を、根拠の頁とともに示す。系全体の冗長度の段階と重要度の定義は <a href='SSD-FMEA-ORB-001.html'>SSD-FMEA-ORB-001</a>（総括・索引）に示す。</p>
+<h2>2. 対象と書き方</h2><ul><li>重要度は「ハードウェア／機能」の形（1/1、2/1R など）で、定義は SSD-FMEA-ORB-001 の「冗長度の段階と重要度」による。</li><li>運用飛行規則では、CIL に関係する規則の表題に [CIL] を付け、規則の変更が CIL の存続理由に影響するときは、存続理由の変更が承認されるまで取り込まない。<span class='src'>（出典：<a href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2195'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2195</a>）</span></li></ul>
+<h2 id='COUNT'>3. IOA の FMEA・CIL の件数</h2><ul><li>表1-1（1988年1月1日時点）では、誘導・航法・制御（GN&amp;C）の FMEA は IOA 175件・NASA 148件で課題56件、CIL は IOA 36件・NASA 36件で課題0件である。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=13'>https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=13</a>）</span></li><li>表1-1（1988年1月1日時点）では、油圧アクチュエータ（HA）の FMEA は IOA 112件・NASA 112件で課題0件、CIL は IOA 59件・NASA 59件で課題0件である。<span class='src'>（出典：<a href='https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=13'>https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=13</a>）</span></li></ul><p>以上の2サブシステムの計は、FMEA が IOA 287件・NASA 260件・課題56件、CIL が IOA 95件・NASA 95件・課題0件である。</p>
+<h2 id='RULE'>4. 運用飛行規則の [CIL] の規則</h2><p>運用飛行規則（NSTS-12820 Vol. A）の [CIL] の規則のうち、SSD-OPS-REF-001 §5 でGN&amp;Cの下位機能に対応づけたもの 3件を示す。「下位機能」は対応する機能説明書である。</p><div class='scroll'><table class='dt'><tr><th>規則</th><th>表題</th><th>PDF頁</th><th>下位機能</th><th>根拠</th></tr><tr id='R-A8-102'><td class='id'>A8-102</td><td>RGA SYSTEM MANAGEMENT</td><td>1386</td><td><a href='SSD-FD-GNC-FCS-001.html'>SSD-FD-GNC-FCS-001</a></td><td>運用飛行規則 A8-102 の表題は「RGA SYSTEM MANAGEMENT [CIL]」である。<span class='src'>（出典：<a href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1386'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1386</a>）</span></td></tr><tr id='R-A8-109'><td class='id'>A8-109</td><td>STAR TRACKER SYSTEM MANAGEMENT</td><td>1397</td><td><a href='SSD-FD-GNC-INS-001.html'>SSD-FD-GNC-INS-001</a></td><td>運用飛行規則 A8-109 の表題は「STAR TRACKER SYSTEM MANAGEMENT [CIL]」である。<span class='src'>（出典：<a href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1397'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1397</a>）</span></td></tr><tr id='R-A8-111'><td class='id'>A8-111</td><td>GNC AIR DATA SYSTEM MANAGEMENT</td><td>1402</td><td><a href='SSD-FD-GNC-NAS-001.html'>SSD-FD-GNC-NAS-001</a>・<a href='SSD-FD-GNC-OPS-001.html'>SSD-FD-GNC-OPS-001</a></td><td>運用飛行規則 A8-111 の表題は「GNC AIR DATA SYSTEM MANAGEMENT [CIL]」である。<span class='src'>（出典：<a href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1402'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1402</a>）</span></td></tr></table></div>
+<h2 id='SUM'>5. 要約</h2><p>IOA の表1-1 の2サブシステムで、CIL は IOA 95件・NASA 95件、課題は 0件である。</p><p>[CIL] の規則は 3件（A8-102・A8-109・A8-111）である。</p>
+<h2>6. 注記（出典間の相違・構成変更）</h2><div class='note'><b>注記</b>　IOA の件数は1988年1月1日時点の中間報告の値で、その後の改修（AP-101S・MEDS・GPS など）を含まない。</div><div class='note'><b>注記</b>　油圧アクチュエータ（HA）は、空力舵面などのアクチュエータとして飛行制御（FCS）の側に置いた。</div>
+<h2>7. 参考文献</h2><ol class='refs'><li>Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録B Change Control（PDF p2195）<br><a class='src' href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2195'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2195</a></li><li>NASA-CR-185550 IOA: FMEA/CIL Assessment Interim Report Table 1-1 FMEA/CIL Assessment Overview (Interim)（PDF p13）<br><a class='src' href='https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=13'>https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=13</a></li><li>Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A8-102 RGA SYSTEM MANAGEMENT（PDF p1386）<br><a class='src' href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1386'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1386</a></li><li>Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A8-109 STAR TRACKER SYSTEM MANAGEMENT（PDF p1397）<br><a class='src' href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1397'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1397</a></li><li>Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A8-111 GNC Air Data System Management（PDF p1402）<br><a class='src' href='https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1402'>https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1402</a></li></ol>
+<h2>8. 変更履歴</h2><table class='dt'><tr><th>版</th><th>日付</th><th>内容</th></tr><tr><td class='nw'>初版（Rev. -）</td><td class='nw'>2026-10-02</td><td>初版作成（IOA の件数 2サブシステム、[CIL] の規則 3件）</td></tr></table>
+</main></body></html>
