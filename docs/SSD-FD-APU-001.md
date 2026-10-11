@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-APU-001 |
 | 表題 | 補助動力装置・油圧系（APU/HYD）機能説明書 |
-| 版・日付 | Rev. L／2026-10-04 |
+| 版・日付 | Rev. M／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -77,6 +77,8 @@ APU/油圧系の機能と、MPS・GN&C（空力舵面）・ECLSSとのインタ�
 
 > **注記** 補助動力装置（APU/HYD）の状態と遷移（図100）は [SSD-BEH-ORB-005](SSD-BEH-ORB-005.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-005.sysml）。
 
+> **注記** 補助動力装置・油圧系（APU/HYD）の機能の故障モード（FMX-APU-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle — https://www.american-spacecraft.org/documents/sp-407/chapter-3.html
@@ -115,3 +117,4 @@ APU/油圧系の機能と、MPS・GN&C（空力舵面）・ECLSSとのインタ�
 | Rev. J | 2026-10-02 | 故障解析表 SSD-FMEA-APU-001 への参照を注記（Rev. X） |
 | Rev. K | 2026-10-03 | 系の状態遷移定義書 SSD-BEH-ORB-005 への参照を注記（Rev. AI） |
 | Rev. L | 2026-10-04 | IF-ORB-23 に下位 IF-APU-25 を付記した（Rev. AU） |
+| Rev. M | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

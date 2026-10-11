@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-DPS-001 |
 | 表題 | データ処理系（DPS）機能説明書 |
-| 版・日付 | Rev. L／2026-10-04 |
+| 版・日付 | Rev. M／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -116,6 +116,8 @@
 
 > **注記** 最終秒読みの RSLS（冗長セット打上げシーケンサ）による射場アボートのシナリオ（図95）は [SSD-UC-ORB-001](SSD-UC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-UC-ORB-001.sysml）。
 
+> **注記** データ処理系（DPS）の機能の故障モード（FMX-DPS-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Avionics Systems（NASA KSC） — https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-av.html
@@ -183,3 +185,4 @@
 | Rev. J | 2026-10-02 | 故障解析表 SSD-FMEA-DPS-001 への参照を注記（Rev. X） |
 | Rev. K | 2026-10-03 | 運用シナリオ・ユースケース定義書 SSD-UC-ORB-001 への参照を注記（Rev. AH） |
 | Rev. L | 2026-10-04 | IF-ORB-23 に下位 IF-APU-25 を付記した、IF-ORB-02 に下位 IF-DPS-22 を付記した、IF-ORB-01 に下位 IF-CT-21・IF-CT-22・IF-CT-23・IF-CT-24・IF-CT-25 を付記した（Rev. AU） |
+| Rev. M | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

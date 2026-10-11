@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-SYS-001 |
 | 表題 | システム要求書（L1） |
-| 版・日付 | Rev. K／2026-10-11 |
+| 版・日付 | Rev. N／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -136,6 +136,12 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 
 > **注記** 検証の根拠の調査（Rev. BR）：REQ-SYS-03・REQ-SYS-05 は検証の根拠が無かったが、公開資料（Mission Report・運用飛行規則の根拠の欄・NASA の文書）を調べ直して根拠を見つけ、検証の状態を根拠ありに改めた。調べた範囲と残る制約は検証定義書 [SSD-VER-SYS-001](SSD-VER-SYS-001.md) の注記に示す。
 
+> **注記** 上位の IF（IF-SYS・IF-ORB）を割付先にするインタフェース要求（L1・L2 の要求から導出）は [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-IRQ-SYS-001.sysml）。
+
+> **注記** ECLSS 以外の17系の L3 の要求（下位の機能ブロックの要求）は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
+> **注記** 上昇の加速度・最大動圧、再突入の Nz・動圧・接地の速度・着陸重量の限界と、モデル・実績の照合は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
+
 ## 8. 参考文献
 
 1. Shuttle Crew Operations Manual 1.1 Overview（USA007587 Rev. A CPN-1、PDF p31） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31
@@ -211,3 +217,6 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | Rev. I | 2026-10-07 | REQ-SYS-09 を運用のクロスレンジ（SCOM 9.3 の限界）に改めて当初の設計要求 1,100 n.mi. を注記に分け、REQ-SYS-13 を打上げ前・延長の決定時に確保する要求と書き直した（要求の値の見直し）（Rev. BG） |
 | Rev. J | 2026-10-08 | 実際に飛んだクロスレンジ（STS-7 の約732〜740 n.mi.）を注記（Rev. BH） |
 | Rev. K | 2026-10-11 | REQ-SYS-03・REQ-SYS-05 の検証の根拠を見つけ、検証の状態を根拠ありに改めた（Rev. BR） |
+| Rev. L | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |
+| Rev. M | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |
+| Rev. N | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |

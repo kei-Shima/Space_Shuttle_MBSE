@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-EVA-001 |
 | 表題 | 船外活動（EVA/EMU）機能説明書 |
-| 版・日付 | Rev. H／2026-10-09 |
+| 版・日付 | Rev. I／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -75,6 +75,8 @@
 
 > **注記** EMU の構造（PLSS・SOP・DCM・宇宙服）・内部の流れ（換気・冷却水）・状態（図179〜181）は [SSD-EMU-EVA-001](SSD-EMU-EVA-001.md) に示す（SysML v2 テキスト：SysML/SSD-EMU-EVA-001.sysml）。
 
+> **注記** 船外活動（EVA）の機能の故障モード（FMX-EVA-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p443） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443
@@ -104,3 +106,4 @@
 | Rev. F | 2026-10-02 | 故障解析表 SSD-FMEA-EVA-001 への参照を注記（Rev. X） |
 | Rev. G | 2026-10-02 | 活動定義書 SSD-BEH-ORB-004 への参照を注記（Rev. AC） |
 | Rev. H | 2026-10-09 | EMU の構造・内部ブロック・状態定義書 SSD-EMU-EVA-001 への参照を注記（Rev. BM） |
+| Rev. I | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

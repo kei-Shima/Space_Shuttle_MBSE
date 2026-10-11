@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-OPS-PHASE-001 |
 | 表題 | ミッションフェーズ・運用モード定義書 |
-| 版・日付 | Rev. H／2026-10-09 |
+| 版・日付 | Rev. I／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図39 フェーズ別 サブシステム稼働表・図40 上昇シーケンス |
@@ -322,6 +322,8 @@ T-9 分から OMS-2 燃焼までの主な事象と、その時点で有効にな
 
 > **注記** ECLSS（ARS・FDS・給水廃水・WCS）のモードとミッションフェーズの対応（図172）は [SSD-BEH-ORB-007](SSD-BEH-ORB-007.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-007.sysml）。
 
+> **注記** 上昇（PH-2）・再突入（PH-6）の時間変化のモデルは [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
+
 ## 9. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A1-104 Flight Phase（PDF p468） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=468
@@ -414,3 +416,4 @@ T-9 分から OMS-2 燃焼までの主な事象と、その時点で有効にな
 | Rev. F | 2026-10-03 | 個体・時間定義書 SSD-IND-ORB-001 への参照を注記（Rev. AR） |
 | Rev. G | 2026-10-04 | 系の状態遷移定義書その2 SSD-BEH-ORB-006 への参照を注記（Rev. AX） |
 | Rev. H | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記（Rev. BL） |
+| Rev. I | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |

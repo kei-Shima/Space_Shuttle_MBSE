@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ANA-ORB-001 |
 | 表題 | 解析定義書（CO2 除去のトレード・質量特性・Δv・故障の木） |
-| 版・日付 | Rev. C／2026-10-09 |
+| 版・日付 | Rev. E／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BUD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図104 CO2 除去のトレードスタディ・図105 質量特性・Δv の解析・図106 故障の木 A（28 VDC 主電力の喪失）・図107 故障の木 B（空力舵面の油圧の喪失）・図108 故障の木 C（CO2 制御の喪失） |
@@ -308,6 +308,10 @@ OMS・RCS の推進薬・比推力・推力と、噴射ごとの Δv の値を�
 
 > **注記** 故障の木 C（CO2 制御の喪失）を空気の経路まで広げた故障の木 X2は [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ECL-001.sysml）。
 
+> **注記** 事故の故障の木（A1：SRB の継手、A2：翼前縁の熱防護）は [SSD-ACC-SYS-001](SSD-ACC-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ACC-SYS-001.sysml）。
+
+> **注記** 上昇の質量・推力加速度の時間変化と、理想の速度増分（質量と ΔV の解析は本書）は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
+
 ## 13. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p370） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370
@@ -382,3 +386,5 @@ OMS・RCS の推進薬・比推力・推力と、噴射ごとの Δv の値を�
 | Rev. A | 2026-10-03 | SysML v2 テキストの属性を量（ISQ）と単位で型付けし直した（内部ブロック・流れ定義書 SSD-IBD-ORB-001）（Rev. AN） |
 | Rev. B | 2026-10-07 | LiOH の前提の見直しを注記（Rev. BG） |
 | Rev. C | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
+| Rev. D | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
+| Rev. E | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |

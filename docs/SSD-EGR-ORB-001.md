@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-EGR-ORB-001 |
 | 表題 | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） |
-| 版・日付 | 初版（Rev. -）／2026-10-07 |
+| 版・日付 | Rev. A／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-CREW-ESC-001 |
 | 関連図 | SSD-SYS-ARC-001 図156 乗員区画のつながりと移動の経路・図157 非常退避・退出のモード × フェーズ |
@@ -99,6 +99,8 @@
 
 > **注記** 取り込んだ公開資料：KSC NASA Facts「Launch Complex 39, Pads A and B」（FS-2007-05-017-KSC、9,204,105 バイト）、NTRS 20100035174 の CSCS の抄録（41,898 バイト）。
 
+> **注記** 飛行中の TPS の点検と、修理できない損傷のときの ISS での待避・救援の判断の流れ（図205）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
 ## 10. 参考文献
 
 1. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p54） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/54
@@ -162,3 +164,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-07 | 初版作成（与圧区画 7件・容積の評価・移動の経路 12件・非常退避のモード 10件、図156・157、SysML v2 テキスト） |
+| Rev. A | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |

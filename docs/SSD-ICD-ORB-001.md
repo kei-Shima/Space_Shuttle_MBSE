@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ICD-ORB-001 |
 | 表題 | オービタ上位インタフェース管理表 |
-| 版・日付 | Rev. B／2026-10-03 |
+| 版・日付 | Rev. C／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図38 オービタ N2 インタフェース行列 |
@@ -97,6 +97,8 @@
 > **注記** 上位 IF がどの場面のメッセージで使われるかのシーケンス図（図83〜85）は [SSD-BEH-ORB-003](SSD-BEH-ORB-003.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-003.sysml）。
 
 > **注記** 上位 IF を含む全 IF のポートと接続の SysML v2 モデルは [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-BLK-SYS-001.sysml）。
+
+> **注記** IF 特性表の行ごとのインタフェース要求（IRQ-SYS-nn・IRQ-ORB-nn）と、上位の要求・検証の根拠は [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-IRQ-SYS-001.sysml）。
 
 ## 7. 参考文献
 
@@ -224,3 +226,4 @@
 | 初版（Rev. -） | 2026-10-01 | 初版作成（上位 IF 59件の媒体・量・冗長・フェーズと根拠） |
 | Rev. A | 2026-10-02 | シーケンス定義書 SSD-BEH-ORB-003 への参照を注記（Rev. AB） |
 | Rev. B | 2026-10-03 | 構造定義書 SSD-BLK-SYS-001 への参照を注記（Rev. AD） |
+| Rev. C | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |

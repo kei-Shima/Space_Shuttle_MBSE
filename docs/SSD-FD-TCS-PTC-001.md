@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-PTC-001 |
 | 表題 | 受動熱制御（PTC：断熱・ヒータ・パージ）機能説明書 |
-| 版・日付 | Rev. E／2026-10-11 |
+| 版・日付 | Rev. F／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-TCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -46,7 +46,11 @@
 | TC-26 | NSTS-12820 Vol. A（PCN-1） | Space Shuttle Operational Flight Rules Vol. A – All Flights | TCSヒータの構成・冗長・検証と計測喪失時の運用（A18-301〜305）、TPS接着層温度（A18-401）、熱姿勢制約（A18-451）を規定する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2092） |
 | TC-27 | USA007587 Rev. A（CPN-1） | Shuttle Crew Operations Manual（SCOM） | 1.2節「Orbiter Passive Thermal Control」：断熱ブランケット（バルク・多層）、熱コーティング、熱絶縁と、受動熱制御を補うヒータを示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/64） |
 
-## 5. 参考文献
+## 5. 注記（出典間の相違・構成変更）
+
+> **注記** 断熱・ヒータ・パージの機器の接続と流れ（図202）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
+## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Orbiter Systems / TPS（16streets 転載） — https://m.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts_sys.html
 2. Smithsonian NASM – Blanket, Payload Bay, Space Shuttle Orbiter — https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000
@@ -58,7 +62,7 @@
 8. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p65） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/65
 9. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water（Galley Supply Valve）（PDF p400） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400
 
-## 6. 変更履歴
+## 7. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
@@ -68,3 +72,4 @@
 | Rev. C | 2026-09-30 | IF-TCS-17 に上位 IF-ORB-33 を付記（Rev. I） |
 | Rev. D | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（2文）（Rev. Q） |
 | Rev. E | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（4文）（Rev. BR） |
+| Rev. F | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |

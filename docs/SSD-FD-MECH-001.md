@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-MECH-001 |
 | 表題 | 機械系（MECH）機能説明書 |
-| 版・日付 | Rev. H／2026-10-02 |
+| 版・日付 | Rev. J／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -68,6 +68,10 @@
 
 > **注記** ペイロードベイドアを閉じられないときの処置（非常時 EVA を含む）の活動図（図88）は [SSD-BEH-ORB-004](SSD-BEH-ORB-004.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-004.sysml）。
 
+> **注記** 機械系の機器の接続と流れ（図214）と、降着装置・制動、ベントドア・ET アンビリカルドアの状態（図219・220）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
+> **注記** 機械系（MECH）の機能の故障モード（FMX-MECH-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.17 Mechanical Systems（USA007587 Rev. A CPN-1、PDF p619） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/619
@@ -97,3 +101,5 @@
 | Rev. F | 2026-10-02 | 要求文書 SSD-REQ-MECH-001 への参照を注記（Rev. W） |
 | Rev. G | 2026-10-02 | 故障解析表 SSD-FMEA-MECH-001 への参照を注記（Rev. X） |
 | Rev. H | 2026-10-02 | 活動定義書 SSD-BEH-ORB-004 への参照を注記（Rev. AC） |
+| Rev. I | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |
+| Rev. J | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-GNC-INS-001 |
 | 表題 | 慣性計測・アライメント（INS）機能説明書 |
-| 版・日付 | Rev. A／2026-10-08 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-GNC-001 |
 | 関連図 | SSD-SYS-ARC-001 図46 GN&C 機能構成 |
@@ -63,6 +63,8 @@
 
 > **注記** SCOM の付録E は OI-33 の飛行ソフトウェアの主な変更をまとめたもので、その多くは乗員による系の監視・操作の方法を変えていない。本書の記述は SCOM の本文による。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1149）
 
+> **注記** IMU・スタートラッカの接続と流れ（図191）、IMU の状態（図195）、IMU の冗長管理は [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GNC-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.13 Guidance, Navigation, and Control（USA007587 Rev. A CPN-1、PDF p474） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/474
@@ -86,3 +88,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-10-01 | 初版作成（公開資料に基づく検討用） |
 | Rev. A | 2026-10-08 | IF-ECL-32 に下位 IF-ARS-42 を付記した（Rev. BI） |
+| Rev. B | 2026-10-11 | GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 への参照を注記（Rev. BS） |

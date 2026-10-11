@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-PHY-ORB-001 |
 | 表題 | オービタ物理構成・機器配分表 |
-| 版・日付 | Rev. E／2026-10-09 |
+| 版・日付 | Rev. H／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図43 オービタ区画・機器配置図 |
@@ -177,6 +177,12 @@
 > **注記** 機体（OV-099〜105）ごとの機器・構成の違いとミッションキットは [SSD-VAR-ORB-001](SSD-VAR-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-VAR-ORB-001.sysml）。
 
 > **注記** PHY-EVA-01（EMU）の中の機器（PLSS・SOP・DCM など）と流れは [SSD-EMU-EVA-001](SSD-EMU-EVA-001.md) に示す（SysML v2 テキスト：SysML/SSD-EMU-EVA-001.sysml）。
+
+> **注記** PHY-GNC-01〜06 の機器の接続と流れ（図191・192）は [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GNC-ORB-001.sysml）。
+
+> **注記** PHY-TPS-01〜05 の機器の熱の流れ（図202）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
+> **注記** MECH・C/W・PLS・STR・CREW の機器の接続と流れ（図214〜218）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
 
 ## 6. 参考文献
 
@@ -386,3 +392,6 @@
 | Rev. C | 2026-10-04 | 内部ブロック図の機器の行を 18件足し（PHY-ECLSS-07 など、GAP-10 の解消）、要求につながらない機器 41件の割付を系の機能行から下位の機能説明書の機能行へ移した（GAP-06 の解消）（Rev. AU） |
 | Rev. D | 2026-10-08 | ECLSS の内部ブロック図の機器の行を 18件足した（PHY-ECLSS-11〜PHY-ECLSS-28、GAP-10 の解消）（Rev. BI） |
 | Rev. E | 2026-10-09 | EMU の構造・内部ブロック・状態定義書 SSD-EMU-EVA-001 への参照を注記（Rev. BM） |
+| Rev. F | 2026-10-11 | GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 への参照を注記（Rev. BS） |
+| Rev. G | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |
+| Rev. H | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |

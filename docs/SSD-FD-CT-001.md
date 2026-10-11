@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CT-001 |
 | 表題 | 通信・追跡系（C&T）機能説明書 |
-| 版・日付 | Rev. K／2026-10-04 |
+| 版・日付 | Rev. L／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -76,6 +76,8 @@
 
 > **注記** 通信・追跡系（C&T）の状態と遷移（図139）は [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-006.sysml）。
 
+> **注記** 通信・追跡系（C&T）の機能の故障モード（FMX-CT-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Orbiter Communications（NASA KSC） — https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-ovcomm.html
@@ -114,3 +116,4 @@
 | Rev. I | 2026-10-02 | シーケンス定義書 SSD-BEH-ORB-003 への参照を注記（Rev. AB） |
 | Rev. J | 2026-10-04 | IF-ORB-01 に下位 IF-CT-21・IF-CT-22・IF-CT-23・IF-CT-24・IF-CT-25 を付記した（Rev. AU） |
 | Rev. K | 2026-10-04 | 系の状態遷移定義書その2 SSD-BEH-ORB-006 への参照を注記（Rev. AX） |
+| Rev. L | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

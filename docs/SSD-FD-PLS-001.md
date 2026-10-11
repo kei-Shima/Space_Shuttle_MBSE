@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-PLS-001 |
 | 表題 | ペイロード支援（PDRS・ODS）機能説明書 |
-| 版・日付 | Rev. H／2026-10-03 |
+| 版・日付 | Rev. J／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -65,6 +65,10 @@
 
 > **注記** RMS によるペイロード放出とランデブー・ODS によるドッキングのシナリオ（図94・図96）は [SSD-UC-ORB-001](SSD-UC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-UC-ORB-001.sysml）。
 
+> **注記** ペイロード支援の機器の接続と流れ（図216）と、保持ラッチ・ドッキング機構の状態（図222）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
+> **注記** ペイロード支援（PLS）の機能の故障モード（FMX-PLS-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.21 Payload Deployment and Retrieval System（USA007587 Rev. A CPN-1、PDF p687） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/687
@@ -91,3 +95,5 @@
 | Rev. F | 2026-10-02 | 要求文書 SSD-REQ-PLS-001 への参照を注記（Rev. W） |
 | Rev. G | 2026-10-02 | 故障解析表 SSD-FMEA-PLS-001 への参照を注記（Rev. X） |
 | Rev. H | 2026-10-03 | 運用シナリオ・ユースケース定義書 SSD-UC-ORB-001 への参照を注記（Rev. AH） |
+| Rev. I | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |
+| Rev. J | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

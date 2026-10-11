@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-GNC-001 |
 | 表題 | 誘導・航法・制御（GN&C）機能説明書 |
-| 版・日付 | Rev. J／2026-10-08 |
+| 版・日付 | Rev. L／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -80,6 +80,10 @@ GN&Cの機能と、DPS・RCS・OMS・APU/HYDとのインタフェースを示す
 
 > **注記** GN&Cの FMEA・CIL（IOA の件数・CIL 課題の評価ワークシート・[CIL] の規則）は [SSD-FMEA-GNC-001](SSD-FMEA-GNC-001.md) に示す。
 
+> **注記** GN&C の機器の接続と流れ（図191・192）、OPS・メジャーモードと DAP・IMU・航法センサの状態（図193〜196）、冗長管理（図197〜199）は [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GNC-ORB-001.sysml）。
+
+> **注記** 誘導・航法・制御（GN&C）の機能の故障モード（FMX-GNC-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Guidance, Navigation and Control（16streets 転載） — http://w.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts-gnnc.html
@@ -123,3 +127,5 @@ GN&Cの機能と、DPS・RCS・OMS・APU/HYDとのインタフェースを示す
 | Rev. H | 2026-10-02 | 故障解析表 SSD-FMEA-GNC-001 への参照を注記（Rev. X） |
 | Rev. I | 2026-10-04 | IF-ORB-02 に下位 IF-DPS-22 を付記した（Rev. AU） |
 | Rev. J | 2026-10-08 | 内部ブロック図の機能ブロックをまたぐ流れの IF IF-ARS-42 を足した（GAP-09 の解消）、IF-ECL-32 に下位 IF-ARS-42 を付記した（Rev. BI） |
+| Rev. K | 2026-10-11 | GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 への参照を注記（Rev. BS） |
+| Rev. L | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

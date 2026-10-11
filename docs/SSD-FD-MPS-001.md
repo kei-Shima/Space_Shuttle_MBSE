@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-MPS-001 |
 | 表題 | 主推進系（MPS）機能説明書 |
-| 版・日付 | Rev. J／2026-10-04 |
+| 版・日付 | Rev. K／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -76,6 +76,8 @@
 
 > **注記** 主推進系（MPS）の状態と遷移（図138）は [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-006.sysml）。
 
+> **注記** 主推進系（MPS）の機能の故障モード（FMX-MPS-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle — https://www.american-spacecraft.org/documents/sp-407/chapter-3.html
@@ -111,3 +113,4 @@
 | Rev. H | 2026-10-02 | 故障解析表 SSD-FMEA-MPS-001 への参照を注記（Rev. X） |
 | Rev. I | 2026-10-03 | 内部ブロック・流れ定義書 SSD-IBD-ORB-001 への参照を注記（Rev. AN） |
 | Rev. J | 2026-10-04 | 系の状態遷移定義書その2 SSD-BEH-ORB-006 への参照を注記（Rev. AX） |
+| Rev. K | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

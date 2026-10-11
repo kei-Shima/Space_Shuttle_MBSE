@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-APU-001 |
 | 表題 | 補助動力・油圧（APU/HYD）要求書（L2） |
-| 版・日付 | Rev. B／2026-10-11 |
+| 版・日付 | Rev. C／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図56 APU/HYD 機能構成 |
@@ -180,6 +180,8 @@ APU/HYDの機能説明書 8 件の機能行 92 件と、要求の割付先の IF
 
 > **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-APU-07 は、STS-2・STS-3 で水噴霧ボイラ 3 が凍結して満たせなかった（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-2-12・FT-3-06）。凍結は初期の試験飛行だけの不具合ではなく、STS-54（1993年）でも WSB 3 が凍結して APU 3 を止めた。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=16）給水管にヒータを足した後の STS-73（1995年）でも WSB 3 が凍結した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-73%20Space%20Shuttle%20Mission%20Report.pdf#page=33）STS-92 でも PGME を使わなかった WSB 2 が噴霧せず APU 2 を止めた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=30）2011年の教訓集は、水を事前に入れた WSB の凍結を 36 件超と数え、数多くの設計・運用の対処は成功せず、PGME と水の混合液の導入で問題が解決したと記す。（出典: https://ntrs.nasa.gov/api/citations/20110015485/downloads/20110015485.pdf#page=14）そこで要求の文を最終の構成（PGME 47%・水 53% の混合液を噴霧する）に改め、検証の根拠を、凍結の再発の記録（STS-54）から PGME の構成の飛行の記録（STS-125・STS-114）に差し替えた。値（潤滑油 約 250°F・作動油 210〜220°F）と判定（pass）は変えない。
 
+> **注記** 下位の機能ブロックの L3 の要求（LRQ-APU-nn）と、L2 の要求からの導出・検証の根拠は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p84） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/84
@@ -219,3 +221,4 @@ APU/HYDの機能説明書 8 件の機能行 92 件と、要求の割付先の IF
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 9件、機能行 92件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-07 | 上位の要求 REQ-SYS-13 の文を改めた（Rev. BG の要求の値の見直し）（Rev. BG） |
 | Rev. B | 2026-10-11 | REQ-APU-07 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え、REQ-APU-07 の文を PGME の混合液の構成に改めた）（Rev. BQ） |
+| Rev. C | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

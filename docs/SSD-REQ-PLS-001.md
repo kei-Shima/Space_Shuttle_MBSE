@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-PLS-001 |
 | 表題 | ペイロード系（PLS）要求書（L2） |
-| 版・日付 | Rev. A／2026-10-11 |
+| 版・日付 | Rev. B／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図66 ペイロード系 機能構成 |
@@ -136,6 +136,8 @@ PLSの機能説明書 7 件の機能行 50 件と、要求の割付先の IF 行
 
 > **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-PLS-02 は STS-2 で予備駆動の肩ヨー関節が動かなかった（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-2-15）が、原因は地上の取扱いによるケーブルの断線で、STS-3 で同じ試験が全手順成功した。判定（pass）と要求の文・値は変えない。以前の検証の根拠（STS-122 の肘カメラの収納の記述）は関節の駆動の証拠ではなかったので、 STS-3 の記録に差し替えた。STS-5 以降に予備モードで関節を動かした飛行の記録は見つからない。
 
+> **注記** 下位の機能ブロックの L3 の要求（LRQ-PLS-nn）と、L2 の要求からの導出・検証の根拠は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.21 Payload Deployment and Retrieval System（USA007587 Rev. A CPN-1、PDF p687） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/687
@@ -169,3 +171,4 @@ PLSの機能説明書 7 件の機能行 50 件と、要求の割付先の IF 行
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 9件、機能行 50件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-11 | REQ-PLS-02 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |
+| Rev. B | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

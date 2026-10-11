@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. BR／2026-10-11　状態：検討用（公開資料に基づく）
+版・日付：Rev. BZ／2026-10-12　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -194,6 +194,48 @@
 - [図188 乗員の傷病の処置 活動図](../html/SSD-SYS-ARC-001_p188_act_medical.svg)
 - [図189 減圧症の疑いの処置 活動図](../html/SSD-SYS-ARC-001_p189_act_dcs.svg)
 - [図190 飛行中の医療の事象の実績](../html/SSD-SYS-ARC-001_p190_med_events.svg)
+- [図191 GN&C 航法・センサ 内部ブロック図](../html/SSD-SYS-ARC-001_p191_ibd_gnc_nav.svg)
+- [図192 GN&C 飛行制御・駆動 内部ブロック図](../html/SSD-SYS-ARC-001_p192_ibd_gnc_fcs.svg)
+- [図193 GN&C の OPS・メジャーモード 状態遷移図](../html/SSD-SYS-ARC-001_p193_sm_gnc_modes.svg)
+- [図194 DAP のモード 状態遷移図](../html/SSD-SYS-ARC-001_p194_sm_dap.svg)
+- [図195 IMU 状態遷移図](../html/SSD-SYS-ARC-001_p195_sm_imu.svg)
+- [図196 再突入の航法センサの取り込み 状態遷移図](../html/SSD-SYS-ARC-001_p196_sm_nav_sensors.svg)
+- [図197 GN&C の冗長管理（選択・検出・故障許容）](../html/SSD-SYS-ARC-001_p197_gnc_rm.svg)
+- [図198 センサの冗長管理による故障処置 活動図](../html/SSD-SYS-ARC-001_p198_act_rm_fdir.svg)
+- [図199 FCS チャネルの故障処置 活動図](../html/SSD-SYS-ARC-001_p199_act_fcs_channel.svg)
+- [図200 ET 内部ブロック図](../html/SSD-SYS-ARC-001_p200_ibd_et.svg)
+- [図201 SRB 内部ブロック図](../html/SSD-SYS-ARC-001_p201_ibd_srb.svg)
+- [図202 TPS・受動熱制御 内部ブロック図](../html/SSD-SYS-ARC-001_p202_ibd_tps.svg)
+- [図203 SRB 状態遷移図](../html/SSD-SYS-ARC-001_p203_sm_srb.svg)
+- [図204 ET 状態遷移図](../html/SSD-SYS-ARC-001_p204_sm_et.svg)
+- [図205 飛行中の TPS の点検と損傷の判断 活動図](../html/SSD-SYS-ARC-001_p205_act_tps_inspection.svg)
+- [図206 51-L の事象の連鎖](../html/SSD-SYS-ARC-001_p206_acc_51l.svg)
+- [図207 STS-107 の事象の連鎖](../html/SSD-SYS-ARC-001_p207_acc_107.svg)
+- [図208 SRB・ET・TPS の機能の故障モード](../html/SSD-SYS-ARC-001_p208_acc_failure_modes.svg)
+- [図209 故障の木 A1（上昇中の機体の喪失：SRB の継手）](../html/SSD-SYS-ARC-001_p209_fta_a1.svg)
+- [図210 故障の木 A2（再突入中の機体の喪失：翼前縁の熱防護）](../html/SSD-SYS-ARC-001_p210_fta_a2.svg)
+- [図211 事故調査の勧告と改修（教訓）](../html/SSD-SYS-ARC-001_p211_acc_lessons.svg)
+- [図212 インタフェース要求の一覧（上位の IF）](../html/SSD-SYS-ARC-001_p212_irq_list.svg)
+- [図213 上位の要求からインタフェース要求への導出](../html/SSD-SYS-ARC-001_p213_irq_derivation.svg)
+- [図214 MECH 内部ブロック図](../html/SSD-SYS-ARC-001_p214_ibd_mech.svg)
+- [図215 C/W 内部ブロック図](../html/SSD-SYS-ARC-001_p215_ibd_cw.svg)
+- [図216 PLS 内部ブロック図](../html/SSD-SYS-ARC-001_p216_ibd_pls.svg)
+- [図217 STR 内部ブロック図](../html/SSD-SYS-ARC-001_p217_ibd_str.svg)
+- [図218 CREW 内部ブロック図](../html/SSD-SYS-ARC-001_p218_ibd_crew.svg)
+- [図219 降着装置・制動 状態遷移図](../html/SSD-SYS-ARC-001_p219_sm_landing_gear.svg)
+- [図220 ベントドア・ET アンビリカルドア 状態遷移図](../html/SSD-SYS-ARC-001_p220_sm_vent_doors.svg)
+- [図221 警報系（C/W）状態遷移図](../html/SSD-SYS-ARC-001_p221_sm_caution_warning.svg)
+- [図222 ペイロード保持ラッチ・ドッキング機構 状態遷移図](../html/SSD-SYS-ARC-001_p222_sm_payload_latches.svg)
+- [図223 脱出のモード 状態遷移図](../html/SSD-SYS-ARC-001_p223_sm_crew_escape.svg)
+- [図224 構造の運用の限界の判断 活動図](../html/SSD-SYS-ARC-001_p224_act_structural_limits.svg)
+- [図225 L2 の要求から L3 の要求への導出（系ごとの数）](../html/SSD-SYS-ARC-001_p225_rql_sys_derivation.svg)
+- [図226 機能ブロックごとの L3 の要求と機能行の対応](../html/SSD-SYS-ARC-001_p226_rql_sys_coverage.svg)
+- [図227 機能の故障モード（GN&C・RCS・DPS・C/W）](../html/SSD-SYS-ARC-001_p227_fmx_orb_a.svg)
+- [図228 機能の故障モード（C&T・EVA・CREW・PLS）](../html/SSD-SYS-ARC-001_p228_fmx_orb_b.svg)
+- [図229 機能の故障モード（APU・MECH・STR・EPS・MPS）](../html/SSD-SYS-ARC-001_p229_fmx_orb_c.svg)
+- [図230 上昇の質量と推力加速度の時間変化](../html/SSD-SYS-ARC-001_p230_trj_ascent.svg)
+- [図231 再突入の高度・速度と動圧・減速度の時間変化](../html/SSD-SYS-ARC-001_p231_trj_entry.svg)
+- [図232 上昇・再突入のモデルと実績・限界の比較](../html/SSD-SYS-ARC-001_p232_trj_compare.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -216,6 +258,14 @@
 - SysML v2 テキスト：[SysML/SSD-EPB-EVA-001.sysml](../SysML/SSD-EPB-EVA-001.sysml)（EMU の消耗品と前呼吸（持続時間・R 値）。SSD-EPB-EVA-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-HRS-ORB-001.sysml](../SysML/SSD-HRS-ORB-001.sysml)（居住の資源と収支（食料・衛生・就寝・廃棄物・収納）。SSD-HRS-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-MED-ORB-001.sysml](../SysML/SSD-MED-ORB-001.sysml)（医療の構造と処置（SOMS・処置の流れ・事象）。SSD-MED-ORB-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-GNC-ORB-001.sysml](../SysML/SSD-GNC-ORB-001.sysml)（GN&C の内部ブロック・モード・冗長管理。SSD-GNC-ORB-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-ETS-SYS-001.sysml](../SysML/SSD-ETS-SYS-001.sysml)（ET・SRB・TPS の内部ブロック・状態。SSD-ETS-SYS-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-ACC-SYS-001.sysml](../SysML/SSD-ACC-SYS-001.sysml)（事故の教訓（事象の連鎖・故障モード・故障の木・勧告と改修）。SSD-ACC-SYS-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-IRQ-SYS-001.sysml](../SysML/SSD-IRQ-SYS-001.sysml)（インタフェース要求（上位の IF）と導出・充足・検証。SSD-IRQ-SYS-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-BEH-ORB-008.sysml](../SysML/SSD-BEH-ORB-008.sysml)（残りの系の内部ブロックと振る舞い（MECH・C/W・PLS・STR・CREW）。SSD-BEH-ORB-008 から生成）
+- SysML v2 テキスト：[SysML/SSD-RQL-SYS-001.sysml](../SysML/SSD-RQL-SYS-001.sysml)（下位要求（L3：ECLSS 以外の17系）と導出・充足・検証。SSD-RQL-SYS-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-FMX-ORB-001.sysml](../SysML/SSD-FMX-ORB-001.sysml)（オービタの系の機能の故障モード（ECLSS 以外）。SSD-FMX-ORB-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-TRJ-ORB-001.sysml](../SysML/SSD-TRJ-ORB-001.sysml)（上昇・再突入の時間変化モデル。SSD-TRJ-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml)（ビューポイント・ビュー・表記の規約。SSD-VPT-SYS-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-IBD-ORB-001.sysml](../SysML/SSD-IBD-ORB-001.sysml)（内部ブロック図：機器の接続・流れる物・量と単位。SSD-IBD-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-TRC-SYS-001.sysml](../SysML/SSD-TRC-SYS-001.sysml)（トレース網羅・影響分析：関係・網羅・切れ目・影響のビュー。SSD-TRC-SYS-001 から生成）
@@ -241,8 +291,8 @@
 
 | 文書番号 | 表題 | 版 |
 |---|---|---|
-| [SSD-FD-ORB-001](SSD-FD-ORB-001.md) | オービタ（OV）機能説明書 | Rev. J |
-| [SSD-FD-ET-001](SSD-FD-ET-001.md) | 外部タンク（ET）機能説明書 | Rev. G |
+| [SSD-FD-ORB-001](SSD-FD-ORB-001.md) | オービタ（OV）機能説明書 | Rev. K |
+| [SSD-FD-ET-001](SSD-FD-ET-001.md) | 外部タンク（ET）機能説明書 | Rev. I |
 | [SSD-FD-ET-LOX-001](SSD-FD-ET-LOX-001.md) | LO2タンク（LOX）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-ET-ITK-001](SSD-FD-ET-ITK-001.md) | インタタンク（ITK）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-ET-LH2-001](SSD-FD-ET-LH2-001.md) | LH2タンク（LH2）機能説明書 | 初版（Rev. -） |
@@ -250,7 +300,7 @@
 | [SSD-FD-ET-TPS-001](SSD-FD-ET-TPS-001.md) | ET熱防護（TPS）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-ET-SEP-001](SSD-FD-ET-SEP-001.md) | 分離・投棄・飛行安全（SEP）機能説明書 | 初版（Rev. -） |
 | [SSD-ET-REF-001](SSD-ET-REF-001.md) | ET 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-SRB-001](SSD-FD-SRB-001.md) | 固体ロケットブースタ（SRB）機能説明書 | Rev. F |
+| [SSD-FD-SRB-001](SSD-FD-SRB-001.md) | 固体ロケットブースタ（SRB）機能説明書 | Rev. H |
 | [SSD-FD-SRB-MTR-001](SSD-FD-SRB-MTR-001.md) | 固体ロケットモータ（MTR）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-SRB-HDP-001](SSD-FD-SRB-HDP-001.md) | 保持・点火（HDP）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-SRB-TVC-001](SSD-FD-SRB-TVC-001.md) | 推力方向制御（HPU）（TVC）機能説明書 | 初版（Rev. -） |
@@ -259,7 +309,7 @@
 | [SSD-FD-SRB-REC-001](SSD-FD-SRB-REC-001.md) | 降下・回収（REC）機能説明書 | 初版（Rev. -） |
 | [SSD-SRB-REF-001](SSD-SRB-REF-001.md) | SRB 機能別関連文書一覧 | 初版（Rev. -） |
 | [SSD-FD-EXT-001](SSD-FD-EXT-001.md) | 外部系（追跡・通信網／ミッション管制／打上げ処理）機能説明書 | Rev. F |
-| [SSD-FD-MPS-001](SSD-FD-MPS-001.md) | 主推進系（MPS）機能説明書 | Rev. J |
+| [SSD-FD-MPS-001](SSD-FD-MPS-001.md) | 主推進系（MPS）機能説明書 | Rev. K |
 | [SSD-FD-MPS-SSME-001](SSD-FD-MPS-SSME-001.md) | 主エンジン本体（SSME）機能説明書 | Rev. A |
 | [SSD-FD-MPS-CTL-001](SSD-FD-MPS-CTL-001.md) | 主エンジン制御器（CTL）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-MPS-PMS-001](SSD-FD-MPS-PMS-001.md) | 推進薬供給（PMS）機能説明書 | 初版（Rev. -） |
@@ -277,7 +327,7 @@
 | [SSD-FD-OMS-THM-001](SSD-FD-OMS-THM-001.md) | 推進薬熱管理（THM）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-OMS-OPS-001](SSD-FD-OMS-OPS-001.md) | 運用管理（規則・処置）（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-OMS-REF-001](SSD-OMS-REF-001.md) | OMS 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-RCS-001](SSD-FD-RCS-001.md) | 姿勢制御系（RCS）機能説明書 | Rev. I |
+| [SSD-FD-RCS-001](SSD-FD-RCS-001.md) | 姿勢制御系（RCS）機能説明書 | Rev. J |
 | [SSD-FD-RCS-HEP-001](SSD-FD-RCS-HEP-001.md) | ヘリウム加圧（HEP）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-RCS-PRP-001](SSD-FD-RCS-PRP-001.md) | 推進薬貯蔵・分配（PRP）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-RCS-JET-001](SSD-FD-RCS-JET-001.md) | 主・バーニア噴射器（JET）機能説明書 | Rev. A |
@@ -286,16 +336,16 @@
 | [SSD-FD-RCS-RM-001](SSD-FD-RCS-RM-001.md) | 噴射器冗長管理（RM）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-RCS-OPS-001](SSD-FD-RCS-OPS-001.md) | RCS運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-RCS-REF-001](SSD-RCS-REF-001.md) | RCS 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-GNC-001](SSD-FD-GNC-001.md) | 誘導・航法・制御（GN&C）機能説明書 | Rev. J |
-| [SSD-FD-GNC-INS-001](SSD-FD-GNC-INS-001.md) | 慣性計測・アライメント（INS）機能説明書 | Rev. A |
-| [SSD-FD-GNC-NAS-001](SSD-FD-GNC-NAS-001.md) | 航法援助・エアデータ（NAS）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-GNC-GNS-001](SSD-FD-GNC-GNS-001.md) | 誘導・航法演算（GNS）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-GNC-FCS-001](SSD-FD-GNC-FCS-001.md) | DAP・飛行制御センサ（FCS）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-GNC-ACT-001](SSD-FD-GNC-ACT-001.md) | 舵面・推力方向制御駆動（ACT）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-GNC-CCD-001](SSD-FD-GNC-CCD-001.md) | 乗員操縦・表示（CCD）機能説明書 | Rev. A |
-| [SSD-FD-GNC-OPS-001](SSD-FD-GNC-OPS-001.md) | GNC運用管理（OPS）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-GNC-001](SSD-FD-GNC-001.md) | 誘導・航法・制御（GN&C）機能説明書 | Rev. L |
+| [SSD-FD-GNC-INS-001](SSD-FD-GNC-INS-001.md) | 慣性計測・アライメント（INS）機能説明書 | Rev. B |
+| [SSD-FD-GNC-NAS-001](SSD-FD-GNC-NAS-001.md) | 航法援助・エアデータ（NAS）機能説明書 | Rev. A |
+| [SSD-FD-GNC-GNS-001](SSD-FD-GNC-GNS-001.md) | 誘導・航法演算（GNS）機能説明書 | Rev. A |
+| [SSD-FD-GNC-FCS-001](SSD-FD-GNC-FCS-001.md) | DAP・飛行制御センサ（FCS）機能説明書 | Rev. A |
+| [SSD-FD-GNC-ACT-001](SSD-FD-GNC-ACT-001.md) | 舵面・推力方向制御駆動（ACT）機能説明書 | Rev. A |
+| [SSD-FD-GNC-CCD-001](SSD-FD-GNC-CCD-001.md) | 乗員操縦・表示（CCD）機能説明書 | Rev. B |
+| [SSD-FD-GNC-OPS-001](SSD-FD-GNC-OPS-001.md) | GNC運用管理（OPS）機能説明書 | Rev. A |
 | [SSD-GNC-REF-001](SSD-GNC-REF-001.md) | GN&C 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-DPS-001](SSD-FD-DPS-001.md) | データ処理系（DPS）機能説明書 | Rev. L |
+| [SSD-FD-DPS-001](SSD-FD-DPS-001.md) | データ処理系（DPS）機能説明書 | Rev. M |
 | [SSD-FD-DPS-GPC-001](SSD-FD-DPS-GPC-001.md) | 汎用計算機・冗長セット（GPC）機能説明書 | Rev. A |
 | [SSD-FD-DPS-FSW-001](SSD-FD-DPS-FSW-001.md) | 飛行ソフトウェア・MMU（FSW）機能説明書 | Rev. A |
 | [SSD-FD-DPS-BUS-001](SSD-FD-DPS-BUS-001.md) | データバス網・MDM（BUS）機能説明書 | Rev. A |
@@ -304,9 +354,9 @@
 | [SSD-FD-DPS-MTU-001](SSD-FD-DPS-MTU-001.md) | マスタタイミングユニット（MTU）機能説明書 | Rev. A |
 | [SSD-FD-DPS-OPS-001](SSD-FD-DPS-OPS-001.md) | DPS運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-DPS-REF-001](SSD-DPS-REF-001.md) | DPS 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-EPS-001](SSD-FD-EPS-001.md) | 電力系（EPS）機能説明書 | Rev. L |
+| [SSD-FD-EPS-001](SSD-FD-EPS-001.md) | 電力系（EPS）機能説明書 | Rev. M |
 | [SSD-FD-ECLSS-001](SSD-FD-ECLSS-001.md) | 環境制御・生命維持系（ECLSS）機能説明書 | Rev. J |
-| [SSD-FD-APU-001](SSD-FD-APU-001.md) | 補助動力装置・油圧系（APU/HYD）機能説明書 | Rev. L |
+| [SSD-FD-APU-001](SSD-FD-APU-001.md) | 補助動力装置・油圧系（APU/HYD）機能説明書 | Rev. M |
 | [SSD-FD-APU-FUL-001](SSD-FD-APU-FUL-001.md) | ヒドラジン燃料供給（FUL）機能説明書 | Rev. A |
 | [SSD-FD-APU-TRB-001](SSD-FD-APU-TRB-001.md) | タービン・ギアボックス（TRB）機能説明書 | Rev. A |
 | [SSD-FD-APU-CTL-001](SSD-FD-APU-CTL-001.md) | APU制御器（CTL）機能説明書 | 初版（Rev. -） |
@@ -315,7 +365,7 @@
 | [SSD-FD-APU-WSB-001](SSD-FD-APU-WSB-001.md) | 水噴霧ボイラ（WSB）機能説明書 | Rev. A |
 | [SSD-FD-APU-OPS-001](SSD-FD-APU-OPS-001.md) | APU/HYD運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-APU-REF-001](SSD-APU-REF-001.md) | APU/HYD 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-CT-001](SSD-FD-CT-001.md) | 通信・追跡系（C&T）機能説明書 | Rev. K |
+| [SSD-FD-CT-001](SSD-FD-CT-001.md) | 通信・追跡系（C&T）機能説明書 | Rev. L |
 | [SSD-FD-CT-SBD-001](SSD-FD-CT-SBD-001.md) | S帯PM・FM通信（SBD）機能説明書 | Rev. A |
 | [SSD-FD-CT-KU-001](SSD-FD-CT-KU-001.md) | Ku帯通信・レーダ（KU）機能説明書 | Rev. A |
 | [SSD-FD-CT-UHF-001](SSD-FD-CT-UHF-001.md) | UHF（SPLX・SSOR）（UHF）機能説明書 | 初版（Rev. -） |
@@ -324,47 +374,47 @@
 | [SSD-FD-CT-INST-001](SSD-FD-CT-INST-001.md) | 計装・ペイロード通信（INST）機能説明書 | Rev. A |
 | [SSD-FD-CT-OPS-001](SSD-FD-CT-OPS-001.md) | C&T運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-CT-REF-001](SSD-CT-REF-001.md) | C&T 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-TPS-001](SSD-FD-TPS-001.md) | 熱防護系（TPS）機能説明書 | Rev. G |
-| [SSD-FD-STR-001](SSD-FD-STR-001.md) | 構造（STR）機能説明書 | Rev. E |
+| [SSD-FD-TPS-001](SSD-FD-TPS-001.md) | 熱防護系（TPS）機能説明書 | Rev. I |
+| [SSD-FD-STR-001](SSD-FD-STR-001.md) | 構造（STR）機能説明書 | Rev. G |
 | [SSD-FD-STR-FWD-001](SSD-FD-STR-FWD-001.md) | 前胴・前部RCSモジュール（FWD）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-STR-CRM-001](SSD-FD-STR-CRM-001.md) | 乗員室（与圧）・窓（CRM）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-STR-MID-001](SSD-FD-STR-MID-001.md) | 中胴・ペイロードベイ（MID）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-STR-AFT-001](SSD-FD-STR-AFT-001.md) | 後胴・推力構造・ポッド（AFT）機能説明書 | Rev. A |
 | [SSD-FD-STR-WNG-001](SSD-FD-STR-WNG-001.md) | 翼・ボディフラップ・尾翼（WNG）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-STR-OPS-001](SSD-FD-STR-OPS-001.md) | 構造運用管理（OPS）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-STR-OPS-001](SSD-FD-STR-OPS-001.md) | 構造運用管理（OPS）機能説明書 | Rev. A |
 | [SSD-STR-REF-001](SSD-STR-REF-001.md) | STR 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-MECH-001](SSD-FD-MECH-001.md) | 機械系（MECH）機能説明書 | Rev. H |
+| [SSD-FD-MECH-001](SSD-FD-MECH-001.md) | 機械系（MECH）機能説明書 | Rev. J |
 | [SSD-FD-MECH-ACT-001](SSD-FD-MECH-ACT-001.md) | 電動駆動（PDU・MCA）（ACT）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-MECH-PLB-001](SSD-FD-MECH-PLB-001.md) | ペイロードベイドア（PLB）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-MECH-VNT-001](SSD-FD-MECH-VNT-001.md) | ベント・ETアンビリカル扉（VNT）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-MECH-LDG-001](SSD-FD-MECH-LDG-001.md) | 降着装置（LDG）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-MECH-VNT-001](SSD-FD-MECH-VNT-001.md) | ベント・ETアンビリカル扉（VNT）機能説明書 | Rev. A |
+| [SSD-FD-MECH-LDG-001](SSD-FD-MECH-LDG-001.md) | 降着装置（LDG）機能説明書 | Rev. A |
 | [SSD-FD-MECH-DEC-001](SSD-FD-MECH-DEC-001.md) | 制動・操向・減速傘（DEC）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-MECH-OPS-001](SSD-FD-MECH-OPS-001.md) | MECH運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-MECH-REF-001](SSD-MECH-REF-001.md) | MECH 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-CW-001](SSD-FD-CW-001.md) | 警報系（C/W）機能説明書 | Rev. I |
-| [SSD-FD-CW-PRI-001](SSD-FD-CW-PRI-001.md) | 主C/W（ハードウェア）（PRI）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-CW-001](SSD-FD-CW-001.md) | 警報系（C/W）機能説明書 | Rev. K |
+| [SSD-FD-CW-PRI-001](SSD-FD-CW-PRI-001.md) | 主C/W（ハードウェア）（PRI）機能説明書 | Rev. A |
 | [SSD-FD-CW-BKP-001](SSD-FD-CW-BKP-001.md) | バックアップC/W（ソフト）（BKP）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-ALT-001](SSD-FD-CW-ALT-001.md) | アラート・限界表示（ALT）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-ANN-001](SSD-FD-CW-ANN-001.md) | 表示・警報音（ANN）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-CW-OPS-001](SSD-FD-CW-OPS-001.md) | C/W運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-CW-REF-001](SSD-CW-REF-001.md) | C/W 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-CREW-001](SSD-FD-CREW-001.md) | 乗員系・脱出系（CREW）機能説明書 | Rev. G |
+| [SSD-FD-CREW-001](SSD-FD-CREW-001.md) | 乗員系・脱出系（CREW）機能説明書 | Rev. I |
 | [SSD-FD-CREW-HAB-001](SSD-FD-CREW-HAB-001.md) | 居住・衛生（HAB）機能説明書 | Rev. B |
 | [SSD-FD-CREW-STW-001](SSD-FD-CREW-STW-001.md) | 収納・拘束（STW）機能説明書 | Rev. A |
 | [SSD-FD-CREW-MED-001](SSD-FD-CREW-MED-001.md) | 医療・生体・放射線（MED）機能説明書 | Rev. B |
 | [SSD-FD-CREW-LTG-001](SSD-FD-CREW-LTG-001.md) | 照明（LTG）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-CREW-ESC-001](SSD-FD-CREW-ESC-001.md) | 脱出系（ESC）機能説明書 | Rev. A |
+| [SSD-FD-CREW-ESC-001](SSD-FD-CREW-ESC-001.md) | 脱出系（ESC）機能説明書 | Rev. B |
 | [SSD-FD-CREW-OPS-001](SSD-FD-CREW-OPS-001.md) | 乗員系運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-CREW-REF-001](SSD-CREW-REF-001.md) | CREW 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-PLS-001](SSD-FD-PLS-001.md) | ペイロード支援（PDRS・ODS）機能説明書 | Rev. H |
+| [SSD-FD-PLS-001](SSD-FD-PLS-001.md) | ペイロード支援（PDRS・ODS）機能説明書 | Rev. J |
 | [SSD-FD-PLS-ARM-001](SSD-FD-PLS-ARM-001.md) | RMSアーム（ARM）機能説明書 | Rev. A |
 | [SSD-FD-PLS-CTL-001](SSD-FD-PLS-CTL-001.md) | RMS制御（MCIU・D&C）（CTL）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-PLS-MPM-001](SSD-FD-PLS-MPM-001.md) | MPM・保持ラッチ・投棄（MPM）機能説明書 | 初版（Rev. -） |
-| [SSD-FD-PLS-PRL-001](SSD-FD-PLS-PRL-001.md) | ペイロード保持ラッチ（PRL）機能説明書 | 初版（Rev. -） |
+| [SSD-FD-PLS-PRL-001](SSD-FD-PLS-PRL-001.md) | ペイロード保持ラッチ（PRL）機能説明書 | Rev. A |
 | [SSD-FD-PLS-ODS-001](SSD-FD-PLS-ODS-001.md) | オービタ・ドッキング系（ODS）機能説明書 | Rev. A |
 | [SSD-FD-PLS-OPS-001](SSD-FD-PLS-OPS-001.md) | PLS運用管理（OPS）機能説明書 | 初版（Rev. -） |
 | [SSD-PLS-REF-001](SSD-PLS-REF-001.md) | PLS 機能別関連文書一覧 | 初版（Rev. -） |
-| [SSD-FD-EVA-001](SSD-FD-EVA-001.md) | 船外活動（EVA/EMU）機能説明書 | Rev. H |
+| [SSD-FD-EVA-001](SSD-FD-EVA-001.md) | 船外活動（EVA/EMU）機能説明書 | Rev. I |
 | [SSD-FD-EVA-CHK-001](SSD-FD-EVA-CHK-001.md) | EMU点検・準備（CHK）機能説明書 | 初版（Rev. -） |
 | [SSD-FD-EVA-DPR-001](SSD-FD-EVA-DPR-001.md) | 減圧・再与圧（DPR）機能説明書 | Rev. A |
 | [SSD-FD-EVA-TLS-001](SSD-FD-EVA-TLS-001.md) | 工具・収納（TLS）機能説明書 | 初版（Rev. -） |
@@ -384,14 +434,14 @@
 | [SSD-FD-EPS-FCP-001](SSD-FD-EPS-FCP-001.md) | 燃料電池発電装置（FCP）機能説明書 | Rev. F |
 | [SSD-FD-EPS-DC-001](SSD-FD-EPS-DC-001.md) | 直流配電（EPDC-DC）機能説明書 | Rev. F |
 | [SSD-FD-EPS-AC-001](SSD-FD-EPS-AC-001.md) | 交流発電・配電（EPDC-AC）機能説明書 | Rev. C |
-| [SSD-FD-TCS-001](SSD-FD-TCS-001.md) | 熱制御（能動・受動）機能説明書 | Rev. D |
+| [SSD-FD-TCS-001](SSD-FD-TCS-001.md) | 熱制御（能動・受動）機能説明書 | Rev. E |
 | [SSD-FD-TCS-FCL-001](SSD-FD-TCS-FCL-001.md) | フレオン21冷却ループ（FCL）機能説明書 | Rev. D |
 | [SSD-FD-TCS-HX-001](SSD-FD-TCS-HX-001.md) | 熱取得：熱交換器・コールドプレート網（HX）機能説明書 | Rev. F |
 | [SSD-FD-TCS-RAD-001](SSD-FD-TCS-RAD-001.md) | 放熱器（RAD）機能説明書 | Rev. D |
 | [SSD-FD-TCS-FES-001](SSD-FD-TCS-FES-001.md) | フラッシュエバポレータ（FES）機能説明書 | Rev. D |
 | [SSD-FD-TCS-NH3-001](SSD-FD-TCS-NH3-001.md) | アンモニアボイラ（NH3）機能説明書 | Rev. D |
 | [SSD-FD-TCS-GSE-001](SSD-FD-TCS-GSE-001.md) | GSE熱交換器・地上冷却（GSE）機能説明書 | Rev. D |
-| [SSD-FD-TCS-PTC-001](SSD-FD-TCS-PTC-001.md) | 受動熱制御（PTC：断熱・ヒータ・パージ）機能説明書 | Rev. E |
+| [SSD-FD-TCS-PTC-001](SSD-FD-TCS-PTC-001.md) | 受動熱制御（PTC：断熱・ヒータ・パージ）機能説明書 | Rev. F |
 | [SSD-FD-ARS-CAC-001](SSD-FD-ARS-CAC-001.md) | キャビン空気循環（CAC）機能説明書 | Rev. C |
 | [SSD-FD-ARS-CO2-001](SSD-FD-ARS-CO2-001.md) | CO2・CO除去（LiOH・ATCO）機能説明書 | Rev. C |
 | [SSD-FD-ARS-RCRS-001](SSD-FD-ARS-RCRS-001.md) | 再生式CO2除去装置（RCRS）機能説明書 | Rev. B |
@@ -482,49 +532,54 @@
 | [SSD-WCL-REF-001](SSD-WCL-REF-001.md) | 水冷却ループ 機能別関連文書一覧 | 初版（Rev. -） |
 | [SSD-OPS-REF-001](SSD-OPS-REF-001.md) | 運用飛行規則（NSTS-12820 Vol. A）章別対応一覧 | Rev. D |
 | [SSD-OPS-REF-002](SSD-OPS-REF-002.md) | 乗員運用マニュアル（SCOM）節別対応一覧 | Rev. A |
-| [SSD-OPS-PHASE-001](SSD-OPS-PHASE-001.md) | ミッションフェーズ・運用モード定義書 | Rev. H |
+| [SSD-OPS-PHASE-001](SSD-OPS-PHASE-001.md) | ミッションフェーズ・運用モード定義書 | Rev. I |
 | [SSD-BEH-ORB-001](SSD-BEH-ORB-001.md) | 状態遷移定義書（ミッションフェーズ・飛行継続判断） | Rev. D |
 | [SSD-BEH-ORB-002](SSD-BEH-ORB-002.md) | 故障処置の活動定義書（MPS ヘリウム漏れ・燃料電池の冷却喪失・火災） | Rev. C |
-| [SSD-BEH-ORB-003](SSD-BEH-ORB-003.md) | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） | Rev. C |
+| [SSD-BEH-ORB-003](SSD-BEH-ORB-003.md) | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） | Rev. D |
 | [SSD-BEH-ORB-004](SSD-BEH-ORB-004.md) | 運用・非常時の活動定義書（キャビン減圧・EVA・ペイロードベイドア閉鎖不能） | Rev. C |
-| [SSD-BEH-ORB-005](SSD-BEH-ORB-005.md) | 系の状態遷移定義書（GPC・燃料電池・APU・RMS・排熱） | Rev. B |
-| [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) | 系の状態遷移定義書その2（OMS・RCS・MPS・C&T・与圧系・ODS） | Rev. A |
+| [SSD-BEH-ORB-005](SSD-BEH-ORB-005.md) | 系の状態遷移定義書（GPC・燃料電池・APU・RMS・排熱） | Rev. D |
+| [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) | 系の状態遷移定義書その2（OMS・RCS・MPS・C&T・与圧系・ODS） | Rev. B |
 | [SSD-BEH-ORB-007](SSD-BEH-ORB-007.md) | ECLSS の状態遷移と活動定義書（ARS・FDS・給水廃水・WCS、LiOH の交換・ダンプ・水冷却ループの喪失） | Rev. A |
+| [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) | 残りの系の内部ブロックと振る舞い定義書（MECH・C/W・PLS・STR・CREW の機器の流れ、降着装置・ベントドア・警報・保持ラッチ・脱出の状態、構造の限界の判断） | 初版（Rev. -） |
 | [SSD-EMU-EVA-001](SSD-EMU-EVA-001.md) | EMU の構造・内部ブロック・状態定義書（PLSS・SOP・DCM・宇宙服、換気と冷却水の流れ、EMU とエアロックの状態） | Rev. B |
+| [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) | GN&C の内部ブロック・モード・冗長管理定義書（航法センサと飛行制御の流れ、OPS・DAP・IMU・航法センサの状態、冗長管理） | 初版（Rev. -） |
+| [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) | ET・SRB・TPS の内部ブロック・状態定義書（推進薬の供給と分離、SRB の燃焼と回収、熱防護の熱の流れ、飛行中の TPS の点検） | Rev. A |
 | [SSD-UC-ORB-001](SSD-UC-ORB-001.md) | 運用シナリオ・ユースケース定義書（ユースケース・ランデブー・秒読み・ペイロード放出・アボート） | Rev. A |
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. C |
-| [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. E |
+| [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. H |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. C |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AG |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AE |
-| [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. K |
-| [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. G |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AO |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AM |
+| [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. N |
+| [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
-| [SSD-REQ-GNC-001](SSD-REQ-GNC-001.md) | 誘導・航法・制御（GN&C）要求書（L2） | Rev. A |
-| [SSD-REQ-DPS-001](SSD-REQ-DPS-001.md) | データ処理系（DPS）要求書（L2） | 初版（Rev. -） |
-| [SSD-REQ-MPS-001](SSD-REQ-MPS-001.md) | 主推進系（MPS）要求書（L2） | 初版（Rev. -） |
-| [SSD-REQ-OMS-001](SSD-REQ-OMS-001.md) | 軌道制御系（OMS）要求書（L2） | Rev. A |
-| [SSD-REQ-RCS-001](SSD-REQ-RCS-001.md) | 姿勢制御系（RCS）要求書（L2） | Rev. A |
-| [SSD-REQ-APU-001](SSD-REQ-APU-001.md) | 補助動力・油圧（APU/HYD）要求書（L2） | Rev. B |
-| [SSD-REQ-CT-001](SSD-REQ-CT-001.md) | 通信・追跡（C&T）要求書（L2） | 初版（Rev. -） |
-| [SSD-REQ-TPS-001](SSD-REQ-TPS-001.md) | 熱防護・熱制御（TPS）要求書（L2） | Rev. B |
-| [SSD-RQM-SYS-001](SSD-RQM-SYS-001.md) | 要求モデル定義書（導出・充足・検証方法） | Rev. G |
+| [SSD-REQ-GNC-001](SSD-REQ-GNC-001.md) | 誘導・航法・制御（GN&C）要求書（L2） | Rev. B |
+| [SSD-REQ-DPS-001](SSD-REQ-DPS-001.md) | データ処理系（DPS）要求書（L2） | Rev. A |
+| [SSD-REQ-MPS-001](SSD-REQ-MPS-001.md) | 主推進系（MPS）要求書（L2） | Rev. A |
+| [SSD-REQ-OMS-001](SSD-REQ-OMS-001.md) | 軌道制御系（OMS）要求書（L2） | Rev. B |
+| [SSD-REQ-RCS-001](SSD-REQ-RCS-001.md) | 姿勢制御系（RCS）要求書（L2） | Rev. B |
+| [SSD-REQ-APU-001](SSD-REQ-APU-001.md) | 補助動力・油圧（APU/HYD）要求書（L2） | Rev. C |
+| [SSD-REQ-CT-001](SSD-REQ-CT-001.md) | 通信・追跡（C&T）要求書（L2） | Rev. A |
+| [SSD-REQ-TPS-001](SSD-REQ-TPS-001.md) | 熱防護・熱制御（TPS）要求書（L2） | Rev. C |
+| [SSD-RQM-SYS-001](SSD-RQM-SYS-001.md) | 要求モデル定義書（導出・充足・検証方法） | Rev. I |
 | [SSD-RQF-SYS-001](SSD-RQF-SYS-001.md) | 要求の形式化定義書（属性・制約・値による判定） | Rev. B |
-| [SSD-VER-SYS-001](SSD-VER-SYS-001.md) | 検証定義書（検証ケース・検証マトリクス） | Rev. I |
-| [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. B |
-| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. I |
-| [SSD-REQ-CW-001](SSD-REQ-CW-001.md) | 警告・警報（C/W）要求書（L2） | Rev. A |
-| [SSD-REQ-CREW-001](SSD-REQ-CREW-001.md) | 乗員系（CREW）要求書（L2） | Rev. C |
-| [SSD-REQ-EVA-001](SSD-REQ-EVA-001.md) | 船外活動（EVA/EMU）要求書（L2） | Rev. B |
-| [SSD-REQ-PLS-001](SSD-REQ-PLS-001.md) | ペイロード系（PLS）要求書（L2） | Rev. A |
-| [SSD-REQ-MECH-001](SSD-REQ-MECH-001.md) | 機械系（MECH）要求書（L2） | 初版（Rev. -） |
-| [SSD-REQ-STR-001](SSD-REQ-STR-001.md) | 構造（STR）要求書（L2） | Rev. A |
-| [SSD-REQ-ET-001](SSD-REQ-ET-001.md) | 外部タンク（ET）要求書（L2） | 初版（Rev. -） |
-| [SSD-REQ-SRB-001](SSD-REQ-SRB-001.md) | 固体ロケットブースタ（SRB）要求書（L2） | 初版（Rev. -） |
-| [SSD-ICD-ORB-001](SSD-ICD-ORB-001.md) | オービタ上位インタフェース管理表 | Rev. B |
-| [SSD-PHY-ORB-001](SSD-PHY-ORB-001.md) | オービタ物理構成・機器配分表 | Rev. E |
+| [SSD-VER-SYS-001](SSD-VER-SYS-001.md) | 検証定義書（検証ケース・検証マトリクス） | Rev. K |
+| [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. C |
+| [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | 初版（Rev. -） |
+| [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | 初版（Rev. -） |
+| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. P |
+| [SSD-REQ-CW-001](SSD-REQ-CW-001.md) | 警告・警報（C/W）要求書（L2） | Rev. B |
+| [SSD-REQ-CREW-001](SSD-REQ-CREW-001.md) | 乗員系（CREW）要求書（L2） | Rev. D |
+| [SSD-REQ-EVA-001](SSD-REQ-EVA-001.md) | 船外活動（EVA/EMU）要求書（L2） | Rev. C |
+| [SSD-REQ-PLS-001](SSD-REQ-PLS-001.md) | ペイロード系（PLS）要求書（L2） | Rev. B |
+| [SSD-REQ-MECH-001](SSD-REQ-MECH-001.md) | 機械系（MECH）要求書（L2） | Rev. A |
+| [SSD-REQ-STR-001](SSD-REQ-STR-001.md) | 構造（STR）要求書（L2） | Rev. B |
+| [SSD-REQ-ET-001](SSD-REQ-ET-001.md) | 外部タンク（ET）要求書（L2） | Rev. A |
+| [SSD-REQ-SRB-001](SSD-REQ-SRB-001.md) | 固体ロケットブースタ（SRB）要求書（L2） | Rev. A |
+| [SSD-ICD-ORB-001](SSD-ICD-ORB-001.md) | オービタ上位インタフェース管理表 | Rev. C |
+| [SSD-PHY-ORB-001](SSD-PHY-ORB-001.md) | オービタ物理構成・機器配分表 | Rev. H |
 | [SSD-VAR-ORB-001](SSD-VAR-ORB-001.md) | 構成の違い定義書（機体・ミッションキット） | Rev. C |
-| [SSD-IND-ORB-001](SSD-IND-ORB-001.md) | 個体・時間定義書（機体・飛行の個体と実績） | Rev. D |
+| [SSD-IND-ORB-001](SSD-IND-ORB-001.md) | 個体・時間定義書（機体・飛行の個体と実績） | Rev. E |
 | [SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) | 飛行構成・飛行試験定義書（飛行ごとの構成の解決と飛行試験による検証の証拠） | Rev. D |
 | [SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) | 人間系の基準の照合表（NASA-STD-3001 によるシャトルの後付け評価） | Rev. M |
 | [SSD-EXP-ORB-001](SSD-EXP-ORB-001.md) | 乗員の環境曝露定義書（曝露の量のパラメトリック・時間軸のプロファイル） | Rev. B |
@@ -534,34 +589,37 @@
 | [SSD-MED-ORB-001](SSD-MED-ORB-001.md) | 医療の構造と処置定義書（SOMS・傷病と減圧症の処置・医療の事象の実績） | Rev. A |
 | [SSD-TSK-ORB-001](SSD-TSK-ORB-001.md) | 乗員の作業分析・機能の分担定義書（人と自動化と地上の分担、作業の段） | Rev. A |
 | [SSD-BUD-ORB-001](SSD-BUD-ORB-001.md) | オービタ収支・マージン表 | Rev. G |
-| [SSD-ANA-ORB-001](SSD-ANA-ORB-001.md) | 解析定義書（CO2 除去のトレード・質量特性・Δv・故障の木） | Rev. C |
+| [SSD-ANA-ORB-001](SSD-ANA-ORB-001.md) | 解析定義書（CO2 除去のトレード・質量特性・Δv・故障の木） | Rev. E |
 | [SSD-PAR-ORB-001](SSD-PAR-ORB-001.md) | パラメトリック定義書（消耗品・電力・排熱の収支） | Rev. H |
-| [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. B |
-| [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. G |
-| [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. E |
-| [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. C |
-| [SSD-FMM-ORB-001](SSD-FMM-ORB-001.md) | 故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖） | Rev. A |
-| [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) | ECLSS の故障モード定義書（ワークシートの対応づけ・機能の故障モード・故障の木） | 初版（Rev. -） |
+| [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. C |
+| [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) | 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） | 初版（Rev. -） |
+| [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. H |
+| [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
+| [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. E |
+| [SSD-FMM-ORB-001](SSD-FMM-ORB-001.md) | 故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖） | Rev. C |
+| [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) | ECLSS の故障モード定義書（ワークシートの対応づけ・機能の故障モード・故障の木） | Rev. A |
+| [SSD-ACC-SYS-001](SSD-ACC-SYS-001.md) | 事故の教訓定義書（51-L・STS-107 の事象の連鎖、SRB・ET・TPS の機能の故障モード、故障の木、勧告と改修） | 初版（Rev. -） |
+| [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) | オービタの系の機能の故障モード定義書（ECLSS 以外の系：GN&C・RCS・DPS・C/W・C&T・EVA・CREW・PLS・APU・MECH・STR・EPS・MPS） | 初版（Rev. -） |
 | [SSD-HEA-ORB-001](SSD-HEA-ORB-001.md) | ヒューマンエラー解析書（作業ごとの誤り・結果・ハザード・管理策） | 初版（Rev. -） |
 | [SSD-CIF-ORB-001](SSD-CIF-ORB-001.md) | 乗員インタフェース対応表（警報の階層・表示と操作の盤・作業位置） | 初版（Rev. -） |
 | [SSD-HAB-ORB-001](SSD-HAB-ORB-001.md) | 居住性・医療定義書（居住・医療の機能、乗員の1日、ユースケース） | Rev. C |
-| [SSD-EGR-ORB-001](SSD-EGR-ORB-001.md) | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） | 初版（Rev. -） |
+| [SSD-EGR-ORB-001](SSD-EGR-ORB-001.md) | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） | Rev. A |
 | [SSD-HVM-SYS-001](SSD-HVM-SYS-001.md) | 人間系の評価方法定義書（評価方法・人間系の関心事・人間系の図表の対応） | 初版（Rev. -） |
 | [SSD-FMEA-ECLSS-001](SSD-FMEA-ECLSS-001.md) | 環境制御・生命維持（ECLSS）故障解析表（FMEA・CIL） | Rev. A |
-| [SSD-FMEA-GNC-001](SSD-FMEA-GNC-001.md) | 誘導・航法・制御（GN&C）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-DPS-001](SSD-FMEA-DPS-001.md) | データ処理系（DPS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-MPS-001](SSD-FMEA-MPS-001.md) | 主推進系（MPS）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-GNC-001](SSD-FMEA-GNC-001.md) | 誘導・航法・制御（GN&C）故障解析表（FMEA・CIL） | Rev. B |
+| [SSD-FMEA-DPS-001](SSD-FMEA-DPS-001.md) | データ処理系（DPS）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-MPS-001](SSD-FMEA-MPS-001.md) | 主推進系（MPS）故障解析表（FMEA・CIL） | Rev. B |
 | [SSD-FMEA-OMS-001](SSD-FMEA-OMS-001.md) | 軌道制御系（OMS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-RCS-001](SSD-FMEA-RCS-001.md) | 姿勢制御系（RCS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-APU-001](SSD-FMEA-APU-001.md) | 補助動力・油圧（APU/HYD）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-CT-001](SSD-FMEA-CT-001.md) | 通信・追跡（C&T）故障解析表（FMEA・CIL） | 初版（Rev. -） |
+| [SSD-FMEA-RCS-001](SSD-FMEA-RCS-001.md) | 姿勢制御系（RCS）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-APU-001](SSD-FMEA-APU-001.md) | 補助動力・油圧（APU/HYD）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-CT-001](SSD-FMEA-CT-001.md) | 通信・追跡（C&T）故障解析表（FMEA・CIL） | Rev. A |
 | [SSD-FMEA-TPS-001](SSD-FMEA-TPS-001.md) | 熱防護・熱制御（TPS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-CW-001](SSD-FMEA-CW-001.md) | 警告・警報（C/W）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-CREW-001](SSD-FMEA-CREW-001.md) | 乗員系（CREW）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-EVA-001](SSD-FMEA-EVA-001.md) | 船外活動（EVA/EMU）故障解析表（FMEA・CIL） | Rev. A |
-| [SSD-FMEA-PLS-001](SSD-FMEA-PLS-001.md) | ペイロード系（PLS）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-MECH-001](SSD-FMEA-MECH-001.md) | 機械系（MECH）故障解析表（FMEA・CIL） | 初版（Rev. -） |
-| [SSD-FMEA-STR-001](SSD-FMEA-STR-001.md) | 構造（STR）故障解析表（FMEA・CIL） | 初版（Rev. -） |
+| [SSD-FMEA-CW-001](SSD-FMEA-CW-001.md) | 警告・警報（C/W）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-CREW-001](SSD-FMEA-CREW-001.md) | 乗員系（CREW）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-EVA-001](SSD-FMEA-EVA-001.md) | 船外活動（EVA/EMU）故障解析表（FMEA・CIL） | Rev. B |
+| [SSD-FMEA-PLS-001](SSD-FMEA-PLS-001.md) | ペイロード系（PLS）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-MECH-001](SSD-FMEA-MECH-001.md) | 機械系（MECH）故障解析表（FMEA・CIL） | Rev. A |
+| [SSD-FMEA-STR-001](SSD-FMEA-STR-001.md) | 構造（STR）故障解析表（FMEA・CIL） | Rev. A |
 | [SSD-FMEA-ET-001](SSD-FMEA-ET-001.md) | 外部タンク（ET）故障解析表（FMEA・CIL） | 初版（Rev. -） |
 
 ## 変更履歴
@@ -639,3 +697,11 @@
 | Rev. BP | 2026-10-09 | 居住・医療の図表の2つめとして、医療の構造と処置定義書 SSD-MED-ORB-001 と図187〜190 を追加し、SysML v2 テキスト SysML/SSD-MED-ORB-001.sysml（SOMS のキットの part def、役割、傷病・減圧症の処置の action def、事象の属性と照合表の 3001 の要求への #CriterionFrom）で示した。SOMS の構成 23件、活動図2件、医療の事象 30件。NTRS の医療の資料10件を取り込んだ。トレースを数え直した。（GAP-08 は 51件）。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 41件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（95分類）を確かめた。関係する文書に参照を注記 |
 | Rev. BQ | 2026-10-11 | 決定を待っていた3点を、公開資料の調査で確かめて決めた。(1) 照合表（SSD-HSI-SYS-001）の判定：Rev. BJ・BN・BO・BP の値と追加の調査で 60行を見直し、データ不足から適合 5行（HSI-075・099・111・115・232）・不適合 4行（HSI-104・105・108・180）に改めた（適合 126・不適合 39・データ不足 359・対象外 21、食い違い 14件）。(2) 飛行試験の反証のある要求 6件：原因・改修・改修後の実績・再発を調べ、6件とも判定は pass のままとした。REQ-APU-07 は水だけの構成の凍結が STS-92 まで再発していたので、要求の文を最終の構成（PGME と水の混合液）に改めた。検証の根拠は 6件とも差し替えた。(3) 本書の判断：モデルの係数 12件を文献で確かめ、6件を確定、5件を直した（混合の係数 0.63 は完全混合の式に既に含まれるので除去の式から外し、LiOH の破過の形を η = 1 − L/C、RCRS の有効な効率を 0.66、穴の流量係数を Cd = 0.6、EMU の CO2 の係数を LiOH の設計の値に改めた）。キャビン大気の動的モデル（SSD-ATM-ORB-001）とEMU の消耗品（SSD-EPB-EVA-001）を計算し直し、乗員7人・LiOH の CO2 の1時間平均（ATM-E01）は「満たさない」になった。減圧症の処置の活動図（図189）は枝が1つ失われていたので直し、ダンプの活動図・EMU を機能説明書に増やさない扱い・機能ブロックの中の流れを IF にしない扱い（GAP-11）は確定とした。飛行報告（STS-5・6・7・69・102）・教訓集・TPS の論文・NTRS の医学・居住の資料・NASA システムズエンジニアリングハンドブックなどを取り込んだ。SysML v2 テキスト 41件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（95分類）を確かめた |
 | Rev. BR | 2026-10-11 | 片付け：(1) 下位の段の説明書に残っていた 1988年版（NSTS News Reference Manual）の出典 141文のうち 111文を、SCOM（OI-33）・ECLSS 訓練マニュアルなどの頁に改めた（同じ内容 79文は出典の差替え、内容が変わった 32文は本文を改めて注記、30文は新しい資料に該当が無く据え置き。改版 23文書）。(2) ECLSS の要求が抜けていた機能行 6行に L3 の要求（REQ-ARS-40・REQ-ARS-41・REQ-ARS-42・REQ-WTR-13・REQ-WCS-10・REQ-ATCS-08）を足した（L3 は 105件）。(3) 検証の根拠が無かった 24件を公開資料で調べ直し、16件を根拠ありにした（L1・L2 は pass 212件・inconclusive 0件、L3 は根拠あり 95件・根拠なし 10件）。(4) SysML v2 テキスト 2件（SSD-EXP-ORB-001・SSD-IND-ORB-001）の書き方を、VS Code の拡張機能の検査で誤りが出ない形に改めた（意味は同じ）。トレースを数え直し（GAP-01 は 10件）、SysML v2 テキスト 41件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（95分類）を確かめた。Mission Report（STS-26・28・33・49・60・61-A・69・71・74・77・87・90・91・92・102・104・130 ほか）・STS User Handbook・NASA SP-443・ヨウ素と甲状腺の報告などを取り込んだ |
+| Rev. BS | 2026-10-11 | GN&C の図表として、GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 と図191〜199 を追加し、SysML v2 テキスト SysML/SSD-GNC-ORB-001.sysml で示した（内部ブロック図2枚：機器 39件・流れ 87件、状態機械 4件：OPS・メジャーモード、DAP、IMU、再突入の航法センサ、冗長管理 20行、故障の処置の活動図 2件）。NASA SP-504（Space Shuttle Avionics System）を取り込んだ。トレースを数え直し（GN&C の IF の振る舞い・流れは 24/24、機能ブロックの振る舞いは 8/8、GAP-05 は 336件・GAP-08 は 47件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 42件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（101分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BT | 2026-10-11 | ET・SRB・TPS の図表として、ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 と図200〜205 を追加し、SysML v2 テキスト SysML/SSD-ETS-SYS-001.sysml で示した（内部ブロック図3枚：機器 62件・流れ 94件、SRB・ET の状態機械、飛行中の TPS の点検と損傷の判断の活動図）。51-L と STS-107 の事故調査報告（Rogers Commission Vol. 1・CAIB Vol. I）を取り込んだ。トレースを数え直し（IF の振る舞い・流れは ET 8/8、SRB 10/10、TPS 3/3、機能ブロックの振る舞いは ET 7/7、SRB 7/7、TPS 3/3、GAP-05 は 310件・GAP-08 は 36件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 43件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（106分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BU | 2026-10-11 | 事故の教訓として、事故の教訓定義書 SSD-ACC-SYS-001 と図206〜211 を追加し、SysML v2 テキスト SysML/SSD-ACC-SYS-001.sysml で示した（51-L・STS-107 の事象の連鎖 34件、SRB・ET・TPS の機能の故障モード 41件、故障の木 2本、事故調査の勧告と改修 30件）。51-L の勧告の実施報告（NASA TM-108646）と Return to Flight Task Group の最終報告を取り込んだ。トレースを数え直し（機能ブロックの故障解析は SRB 7/7、ET 7/7、TPS 3/3、GAP-07 は 95件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 44件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（109分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BV | 2026-10-11 | インタフェース要求として、インタフェース要求書 SSD-IRQ-SYS-001 と図212・213 を追加し、SysML v2 テキスト SysML/SSD-IRQ-SYS-001.sysml で示した（上位の IF 59件：IF-SYS 10件・IF-ORB 49件のそれぞれに要求1件。IF 特性表の特性値から起こし、上位の L1・L2 の要求から導出し、IF を割付先にした。検証の根拠あり 55件・根拠なし 4件）。トレースを数え直し（IF の要求は 70/589、GAP-04 は 519件・GAP-01 は 14件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 45件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（112分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BW | 2026-10-12 | 残りの系の振る舞いとして、残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 と図214〜224 を追加し、SysML v2 テキスト SysML/SSD-BEH-ORB-008.sysml で示した（MECH・C/W・PLS・STR・CREW の内部ブロック図5枚：機器 114件・流れ 190件、降着装置・ベントドア・警報・保持ラッチ・脱出の状態機械 5件、構造の運用の限界の判断の活動図）。トレースを数え直し（IF の振る舞い・流れは MECH 11/11、CW 12/12、PLS 12/12、STR 11/11、CREW 12/12、機能ブロックの振る舞いは MECH 7/7、CW 6/6、PLS 7/7、STR 7/7、CREW 7/7、GAP-05 は 239件・GAP-08 は 21件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 46件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（117分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BX | 2026-10-12 | ECLSS 以外の系の下位要求として、下位要求書（L3）SSD-RQL-SYS-001 と図225・226 を追加し、SysML v2 テキスト SysML/SSD-RQL-SYS-001.sysml で示した（17系の下位の機能ブロックの L3 の要求 457件。系の L2 の要求から導出し、機能行に割り付けた。検証の根拠あり 240件・根拠なし 217件）。トレースを数え直し（GAP-01 は 231件・GAP-02 は 138件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 47件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（120分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BY | 2026-10-12 | ECLSS 以外の系の故障モードとして、オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 と図227〜229 を追加し、SysML v2 テキスト SysML/SSD-FMX-ORB-001.sysml で示した（13系・52ブロックの機能の故障モード 173件。原因・影響・検知・処置と、ハザード解析の原因への対応）。トレースを数え直し（機能ブロックの故障解析は 163/206、GAP-07 は 43件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 48件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（121分類）を確かめた。関係する文書に参照を注記 |
+| Rev. BZ | 2026-10-12 | 上昇・再突入の時間変化のモデルとして、上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 と図230〜232 を追加し、SysML v2 テキスト SysML/SSD-TRJ-ORB-001.sysml で示した（パラメータ 17件、式 8件、シナリオ 4件。上昇の質量と推力加速度：3 g の絞りの開始 453.5 s・MECO の上限 524.7 s、再突入の時刻表の点ごとの動圧・減速度・加熱率の相対値。実績との比較 11件、要求・飛行規則の限界との照合 9件）。STS-1 の運用飛行プロファイル（JSC-14483 Vol. III）を取り込んだ。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた。関係する文書に参照を注記 |

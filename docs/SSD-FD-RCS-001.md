@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-RCS-001 |
 | 表題 | 姿勢制御系（RCS）機能説明書 |
-| 版・日付 | Rev. I／2026-10-04 |
+| 版・日付 | Rev. J／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -76,6 +76,8 @@
 
 > **注記** 姿勢制御系（RCS）の状態と遷移（図137）は [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-006.sysml）。
 
+> **注記** 姿勢制御系（RCS）の機能の故障モード（FMX-RCS-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Reaction Control System Training Manual RCS 2102A（NASA、ibiblio 転載） — https://www.ibiblio.org/apollo/Shuttle/TD0340%20-%20RCS%202102A%20-%20Reaction%20Control%20System%20Training%20Manual.pdf
@@ -112,3 +114,4 @@
 | Rev. G | 2026-10-02 | 要求文書 SSD-REQ-RCS-001 への参照を注記（Rev. W） |
 | Rev. H | 2026-10-02 | 故障解析表 SSD-FMEA-RCS-001 への参照を注記（Rev. X） |
 | Rev. I | 2026-10-04 | 系の状態遷移定義書その2 SSD-BEH-ORB-006 への参照を注記（Rev. AX） |
+| Rev. J | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

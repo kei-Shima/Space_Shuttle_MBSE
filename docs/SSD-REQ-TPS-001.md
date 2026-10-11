@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-TPS-001 |
 | 表題 | 熱防護・熱制御（TPS）要求書（L2） |
-| 版・日付 | Rev. B／2026-10-11 |
+| 版・日付 | Rev. C／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -101,6 +101,8 @@ TPSの機能説明書 3 件の機能行 16 件と、要求の割付先の IF 行
 
 > **注記** 検証の根拠の調査（Rev. BR）：REQ-TPS-03 は検証の根拠が無かったが、公開資料（Mission Report・運用飛行規則の根拠の欄・NASA の文書）を調べ直して根拠を見つけ、検証の状態を根拠ありに改めた。調べた範囲と残る制約は検証定義書 [SSD-VER-SYS-001](SSD-VER-SYS-001.md) の注記に示す。
 
+> **注記** 下位の機能ブロックの L3 の要求（LRQ-TPS-nn）と、L2 の要求からの導出・検証の根拠は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p65） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/65
@@ -134,3 +136,4 @@ TPSの機能説明書 3 件の機能行 16 件と、要求の割付先の IF 行
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 7件、機能行 16件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-11 | REQ-TPS-01・REQ-TPS-02 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |
 | Rev. B | 2026-10-11 | REQ-TPS-03 の検証の根拠を見つけ、検証の状態を根拠ありに改めた（Rev. BR） |
+| Rev. C | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

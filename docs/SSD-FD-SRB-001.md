@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-SRB-001 |
 | 表題 | 固体ロケットブースタ（SRB）機能説明書 |
-| 版・日付 | Rev. F／2026-10-02 |
+| 版・日付 | Rev. H／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-SYS-IDX-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -63,6 +63,10 @@ SRBの機能と、外部タンク・オービタとのインタフェースを�
 
 > **注記** SRBの要求（L2）と、本書と下位の説明書の機能行とのトレースは [SSD-REQ-SRB-001](SSD-REQ-SRB-001.md) に示す。
 
+> **注記** SRB の機器の接続と流れ（図201）と、点火から分離・回収までの状態（図203）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
+> **注記** SRB の機能の故障モード（FMA-SRB-nn）と、51-L の事象の連鎖・故障の木・勧告と改修は [SSD-ACC-SYS-001](SSD-ACC-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ACC-SYS-001.sysml）。
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Solid Rocket Boosters（16streets 転載） — https://16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/srb.html
@@ -90,3 +94,5 @@ SRBの機能と、外部タンク・オービタとのインタフェースを�
 | Rev. D | 2026-10-01 | IF-ORB-18 に下位 IF（IF-DPS-07）を付記、IF-ORB-22 に下位 IF（IF-GNC-18・IF-GNC-19）を付記、IF-ORB-26 に下位 IF（IF-DPS-08）を付記（Rev. R） |
 | Rev. E | 2026-10-02 | 下位機能説明書（6件）と図74への展開を追加し、IF-SYS-02・10 に下位IF（IF-SRB）を付記、注記（IFの分け方、規則の扱い）を追加（Rev. V） |
 | Rev. F | 2026-10-02 | 要求文書 SSD-REQ-SRB-001 への参照を注記（Rev. W） |
+| Rev. G | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |
+| Rev. H | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |

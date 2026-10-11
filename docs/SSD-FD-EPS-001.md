@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-EPS-001 |
 | 表題 | 電力系（EPS）機能説明書 |
-| 版・日付 | Rev. L／2026-10-03 |
+| 版・日付 | Rev. M／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -78,6 +78,8 @@
 
 > **注記** EPS の機器（燃料電池・反応剤タンク・母線・インバータ）の接続と、流れる反応剤・電力・水・熱の量は [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IBD-ORB-001.sysml）。
 
+> **注記** 電力系（EPS）の機能の故障モード（FMX-EPS-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Space Shuttle Guide – Electrical System — https://www.spaceshuttleguide.com/system/electrical.htm
@@ -129,3 +131,4 @@
 | Rev. J | 2026-10-02 | IF-ORB-14 に下位 IF（IF-CW-01 ほか4件）を付記、IF-ORB-41 に下位 IF（IF-CW-02・IF-CW-03）を付記（Rev. V） |
 | Rev. K | 2026-10-02 | 活動定義書 SSD-BEH-ORB-002 への参照を注記（Rev. AA） |
 | Rev. L | 2026-10-03 | 内部ブロック・流れ定義書 SSD-IBD-ORB-001 への参照を注記（Rev. AN） |
+| Rev. M | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-003 |
 | 表題 | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） |
-| 版・日付 | Rev. C／2026-10-07 |
+| 版・日付 | Rev. D／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BEH-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図 |
@@ -183,6 +183,8 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 
 > **注記** 軌道離脱準備から着陸までの乗員の役割（CDR・PLT・MS2）と地上の作業の段は [SSD-TSK-ORB-001](SSD-TSK-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TSK-ORB-001.sysml）。
 
+> **注記** 上昇・軌道離脱〜着陸の時間変化のモデル（シーケンスは本書の図83・84）は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
+
 ## 12. 参考文献
 
 1. Shuttle Crew Operations Manual 5.4 Entry（USA007587 Rev. A CPN-1、PDF p841） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/841
@@ -224,3 +226,4 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | Rev. A | 2026-10-03 | 割付定義書 SSD-ALC-SYS-001 への参照を注記（Rev. AF） |
 | Rev. B | 2026-10-03 | SysML v2 テキストの検査の記述を改めた（Pilot による名前の解決・型の検査、モデル統合・検査定義書 SSD-MDL-SYS-001）（Rev. AG） |
 | Rev. C | 2026-10-07 | 乗員の作業分析・機能の分担定義書 SSD-TSK-ORB-001 への参照を注記（Rev. BA） |
+| Rev. D | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |

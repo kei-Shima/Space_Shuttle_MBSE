@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-PRF-ORB-001 |
 | 表題 | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） |
-| 版・日付 | Rev. B／2026-10-07 |
+| 版・日付 | Rev. C／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-PAR-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図134 標準ミッションの消耗品の残量（設計）・図135 反応剤の残量の設計と実績（STS-1・114・125） |
@@ -221,6 +221,8 @@ STS-1 の飛行前の予測（JSC-16720・Mission Report の予測の表）の�
 
 > **注記** LiOH の前提の見直し（Rev. BG）：PAR-04 を規則から求めた必要搭載数 42個に改めたので、標準ミッションの LiOH は 12.00日で尽き、必要日数（12日）にちょうど足りる（マージン 0）。上の LiOH の負のマージンの注記と図134 の以前の線は見直し前のものである。
 
+> **注記** 上昇・再突入の時間変化のモデル（軌道上の消耗品のプロファイルは本書）は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
+
 ## 13. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p360） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360
@@ -272,3 +274,4 @@ STS-1 の飛行前の予測（JSC-16720・Mission Report の予測の表）の�
 | 初版（Rev. -） | 2026-10-04 | 初版作成（設計の率 26件、標準ミッションの枯渇の日 4件と日ごとの残量、実績の点 66件・予測 13件、設計と実績の比較 6件、図134・135、SysML v2 テキスト） |
 | Rev. A | 2026-10-07 | 乗員の環境曝露定義書 SSD-EXP-ORB-001 への参照を注記（Rev. AZ） |
 | Rev. B | 2026-10-07 | PFD-01 と図134 の LiOH を必要搭載数 42個で計算し直した（LiOH の前提の見直し）（Rev. BG） |
+| Rev. C | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |

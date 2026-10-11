@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMEA-EVA-001 |
 | 表題 | 船外活動（EVA/EMU）故障解析表（FMEA・CIL） |
-| 版・日付 | Rev. A／2026-10-09 |
+| 版・日付 | Rev. B／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図60 EVA 機能構成 |
@@ -102,6 +102,8 @@ CIL 課題の評価ワークシートは 42件で、多い区分は 表示・制
 
 > **注記** EMU の機器の構造と流れ（ワークシートの品目の位置づけ）は [SSD-EMU-EVA-001](SSD-EMU-EVA-001.md) に示す（SysML v2 テキスト：SysML/SSD-EMU-EVA-001.sysml）。
 
+> **注記** 故障解析表の対応が無かった機能ブロックの機能の故障モード（FMX-EVA-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 7. 参考文献
 
 1. NASA-CR-185524 Vol. 2 IOA: CIL issues resolution report（1988） 付録C 評価ワークシート NWS-204（PDF p4） — https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=4
@@ -156,3 +158,4 @@ CIL 課題の評価ワークシートは 42件で、多い区分は 表示・制
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（IOA の件数 2サブシステム、CIL 課題の評価ワークシート 42件と機能・IF の対応） |
 | Rev. A | 2026-10-09 | EMU の構造・内部ブロック・状態定義書 SSD-EMU-EVA-001 への参照を注記（Rev. BM） |
+| Rev. B | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

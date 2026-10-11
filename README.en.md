@@ -3,8 +3,8 @@
 A model-based systems engineering (MBSE) package that reconstructs the system design of the Space Shuttle from publicly available documents: diagrams, design documents, and SysML v2 models that are linked to each other.
 
 - **Browse online:** <https://kei-shima.github.io/Space_Shuttle_MBSE/>
-- Revision: Rev. BR (2026-10-11)
-- Contents: 190 diagrams (draw.io, exported as SVG and PNG), 322 design documents (HTML and Markdown), 41 SysML v2 text files
+- Revision: Rev. BZ (2026-10-12)
+- Contents: 232 diagrams (draw.io, exported as SVG and PNG), 330 design documents (HTML and Markdown), 49 SysML v2 text files
 - Japanese README (the primary one): [README.md](README.md)
 
 This is a study built from public sources. It is not a NASA product and is not an official description of the vehicle.
@@ -20,15 +20,15 @@ Identifiers are language-neutral and are the same everywhere: document numbers (
 | Area | Contents |
 |---|---|
 | Structure | Block diagrams from the whole vehicle (Orbiter, External Tank, Solid Rocket Boosters, external systems) down to the 18 Orbiter systems and their lower levels, with a functional description for each block |
-| Interfaces | An interface list, N2 charts, internal block diagrams with flows and units |
-| Requirements and verification | System, subsystem, and (for ECLSS) third-level requirements, verification cases, and trace coverage with the remaining gaps listed |
-| Behavior | Mission phases, use cases, state machines, activity diagrams for failure responses, sequence diagrams |
-| Analysis | Budgets, parametric models, consumables profiles, a dynamic model of the cabin atmosphere, EMU consumables and prebreathe |
-| Safety | Failure analysis per system (based on NASA's Independent Orbiter Assessment), failure modes, fault trees, fault detection and response, hazards |
+| Interfaces | An interface list, N2 charts, internal block diagrams with flows and units, interface requirements for the top-level interfaces |
+| Requirements and verification | System, subsystem, and third-level requirements, verification cases, and trace coverage with the remaining gaps listed |
+| Behavior | Mission phases, use cases, state machines (including GN&C modes and redundancy management), activity diagrams for failure responses, sequence diagrams |
+| Analysis | Budgets, parametric models, consumables profiles, a dynamic model of the cabin atmosphere, EMU consumables and prebreathe, a simple time-history model of ascent and entry |
+| Safety | Failure analysis per system (based on NASA's Independent Orbiter Assessment), failure modes, fault trees, fault detection and response, hazards, the event sequences and lessons of the 51-L and STS-107 accidents |
 | Variants | Differences between Orbiter vehicles and flights, flight test results (STS-1, STS-3) |
 | Human systems | A row-by-row comparison with NASA-STD-3001 (crew health and human factors), task analysis, crew interfaces, habitability, and medical |
 
-The documents cite their public sources by URL, and mark the places where the package made its own judgment. [REFERENCES.md](REFERENCES.md) lists the 235 sources.
+The documents cite their public sources by URL, and mark the places where the package made its own judgment. [REFERENCES.md](REFERENCES.md) lists the 243 sources.
 
 ## Browse online
 
@@ -51,12 +51,12 @@ On github.com, HTML files are shown as source. To read on github.com instead, st
 | Path | Contents | Open with |
 |---|---|---|
 | `html/index.html`, `html/index_*.html` | Document index | Browser |
-| `html/*.svg` | The 190 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
+| `html/*.svg` | The 232 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
 | `html/preview/*.png` | PNG versions of the diagrams | Image viewer |
-| `html/docs/*.html` | The 322 documents | Browser |
+| `html/docs/*.html` | The 330 documents | Browser |
 | `docs/*.md` | Markdown version of the same documents | github.com, VS Code |
-| `SysML/*.sysml` | 41 SysML v2 text files | VS Code (see below) |
-| `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (190 pages) | draw.io |
+| `SysML/*.sysml` | 49 SysML v2 text files | VS Code (see below) |
+| `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (232 pages) | draw.io |
 | `REFERENCES.md` | List of the public sources cited | github.com, VS Code |
 | `LICENSE.md` | License text (CC BY 4.0) | github.com, VS Code |
 | `index.html`, `.nojekyll` | Redirect to `html/index.html` and a marker file, both for GitHub Pages | — |
@@ -71,7 +71,7 @@ cd Space_Shuttle_MBSE
 
 Open `html/index.html` in a browser. All links are relative, so no web server is needed.
 
-The working tree is about 700 MB. `--depth 1` skips the history and makes the download faster. The largest file is `html/SSD-SYS-ARC-001_p5_register.svg` (about 61 MB).
+The working tree is about 940 MB. `--depth 1` skips the history and makes the download faster. The largest file is `html/SSD-SYS-ARC-001_p5_register.svg` (about 62 MB).
 
 ## Open the SysML v2 models in VS Code
 
@@ -90,20 +90,20 @@ The files in `SysML/` open with the VS Code extension **SysML v2.0 Language Supp
 
 ### Validation results
 
-The 41 files load in dependency order in the OMG reference implementation, SysML v2 Pilot Implementation 0.62.0, with 0 errors and 0 warnings.
+The 49 files load in dependency order in the OMG reference implementation, SysML v2 Pilot Implementation 0.62.0, with 0 errors and 0 warnings.
 
 The VS Code extension applies its own rules. With v0.55.0 it reports 0 errors and the warnings below. They come from limits of the extension, and the model does not need to change. `.vscode/settings.json` already turns off two style checks (`naming-convention` and `missing-doc`), because element names follow the document identifiers.
 
 | Warning | Count | Cause |
 |---|---|---|
-| `unresolved-type` | 3,733 | References to usages in other packages and to some standard-library units (`°F_abs`, `Btu_IT/h`) are not resolved |
+| `unresolved-type` | 3,880 | References to usages in other packages and to some standard-library units (`°F_abs`, `Btu_IT/h`) are not resolved |
 | `unsatisfied-requirement`, `unverified-requirement` | 95 each | Requirements that are shown to be met by other means than `satisfy` and `verify` |
-| `unused-definition` | 119 | Definitions kept as lists (roles, failure modes) |
+| `unused-definition` | 125 | Definitions kept as lists (roles, failure modes) |
 | `unresolved-constraint-reference` | 76 | Unit symbols inside constraint expressions are read as names |
 
 ## Diagram source (draw.io)
 
-`Draw_io/SSD-SYS-ARC-001.drawio` opens in draw.io Desktop or in the VS Code extension Draw.io Integration (`hediet.vscode-drawio`). It has 190 pages and is about 14 MB, so it takes a while to open. Links inside the diagrams are relative to the exported SVG files in `html/`, so they do not work inside draw.io.
+`Draw_io/SSD-SYS-ARC-001.drawio` opens in draw.io Desktop or in the VS Code extension Draw.io Integration (`hediet.vscode-drawio`). It has 232 pages and is about 18 MB, so it takes a while to open. Links inside the diagrams are relative to the exported SVG files in `html/`, so they do not work inside draw.io.
 
 ## Revisions and tags
 

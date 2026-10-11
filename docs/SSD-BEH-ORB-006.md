@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-006 |
 | 表題 | 系の状態遷移定義書その2（OMS・RCS・MPS・C&T・与圧系・ODS） |
-| 版・日付 | Rev. A／2026-10-09 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BEH-ORB-005 |
 | 関連図 | SSD-SYS-ARC-001 図136 OMS 状態遷移図・図137 RCS 状態遷移図・図138 MPS 状態遷移図・図139 C&T 通信構成 状態遷移図・図140 与圧系 状態遷移図・図141 ODS 状態遷移図・図142 系のモード × フェーズ 行列（その2） |
@@ -399,6 +399,8 @@ C/W の警告灯で始まる遷移 16件を示す。SysML v2 では、警報の 
 
 > **注記** ECLSS のほかの系（ARS・FDS・給水廃水・WCS）の状態遷移は [SSD-BEH-ORB-007](SSD-BEH-ORB-007.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-007.sysml）。
 
+> **注記** SRB・ET の状態遷移（MPS の状態は本書の図138）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
 ## 20. 参考文献
 
 1. Shuttle Crew Operations Manual 5.1 Prelaunch（USA007587 Rev. A CPN-1、PDF p822） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/822
@@ -497,3 +499,4 @@ C/W の警告灯で始まる遷移 16件を示す。SysML v2 では、警報の 
 |---|---|---|
 | 初版（Rev. -） | 2026-10-04 | 初版作成（図136 の状態 12件・遷移 16件、図137 の状態 12件・遷移 15件、図138 の状態 12件・遷移 15件、図139 の状態 11件・遷移 13件、図140 の状態 11件・遷移 14件、図141 の状態 12件・遷移 13件、警報との対応 16件、図142、SysML v2 テキスト） |
 | Rev. A | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記（Rev. BL） |
+| Rev. B | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |

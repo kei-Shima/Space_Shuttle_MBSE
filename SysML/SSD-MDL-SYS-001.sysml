@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 40件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 48件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -15,7 +15,10 @@ package SSD_MDL_SYS_001 {
     public import SSD_BEH_ORB_005;   // SSD-BEH-ORB-005 系の状態遷移
     public import SSD_BEH_ORB_006;   // SSD-BEH-ORB-006 系の状態遷移その2（OMS・RCS・MPS・C&T・与圧系・ODS）
     public import SSD_BEH_ORB_007;   // SSD-BEH-ORB-007 ECLSS の状態遷移と活動（ARS・FDS・給水廃水・WCS）
+    public import SSD_BEH_ORB_008;   // SSD-BEH-ORB-008 残りの系の内部ブロックと振る舞い（MECH・C/W・PLS・STR・CREW）
     public import SSD_EMU_EVA_001;   // SSD-EMU-EVA-001 EMU の構造・内部ブロック・状態
+    public import SSD_GNC_ORB_001;   // SSD-GNC-ORB-001 GN&C の内部ブロック・モード・冗長管理
+    public import SSD_ETS_SYS_001;   // SSD-ETS-SYS-001 ET・SRB・TPS の内部ブロック・状態
     public import SSD_ANA_ORB_001;   // SSD-ANA-ORB-001 解析（トレード・質量・Δv・故障の木）
     public import SSD_VAR_ORB_001;   // SSD-VAR-ORB-001 構成の違い（機体・ミッションキット）
     public import SSD_IND_ORB_001;   // SSD-IND-ORB-001 個体・時間（機体・飛行の個体、時間切片、実績）
@@ -29,13 +32,18 @@ package SSD_MDL_SYS_001 {
     public import SSD_MED_ORB_001;   // SSD-MED-ORB-001 医療の構造と処置（SOMS・処置の流れ・事象）
     public import SSD_TSK_ORB_001;   // SSD-TSK-ORB-001 乗員の作業分析・機能の分担
     public import SSD_PRF_ORB_001;   // SSD-PRF-ORB-001 消耗品・電力プロファイル（時間軸の残量・設計と実績）
+    public import SSD_TRJ_ORB_001;   // SSD-TRJ-ORB-001 上昇・再突入の時間変化モデル
     public import SSD_VER_SYS_001;   // SSD-VER-SYS-001 検証ケース・検証の結果
     public import SSD_RQL_ECL_001;   // SSD-RQL-ECL-001 ECLSS 下位要求（L3）
+    public import SSD_IRQ_SYS_001;   // SSD-IRQ-SYS-001 インタフェース要求（上位の IF）と導出・充足・検証
+    public import SSD_RQL_SYS_001;   // SSD-RQL-SYS-001 下位要求（L3：ECLSS 以外の17系）と導出・充足・検証
     public import SSD_TRC_SYS_001;   // SSD-TRC-SYS-001 トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー）
     public import SSD_FDIR_ORB_001;   // SSD-FDIR-ORB-001 故障検知・処置（C/W の警報・監視・処置・状態遷移）
     public import SSD_HAZ_ORB_001;   // SSD-HAZ-ORB-001 ハザード解析（ハザード・原因・管理策・リスク）
     public import SSD_FMM_ORB_001;   // SSD-FMM-ORB-001 故障モード（故障モード・原因・検知・管理策の連鎖）
     public import SSD_FMX_ECL_001;   // SSD-FMX-ECL-001 ECLSS の故障モード（対応づけ・機能の故障モード・故障の木）
+    public import SSD_ACC_SYS_001;   // SSD-ACC-SYS-001 事故の教訓（51-L・STS-107）
+    public import SSD_FMX_ORB_001;   // SSD-FMX-ORB-001 オービタの系の機能の故障モード（ECLSS 以外）
     public import SSD_HEA_ORB_001;   // SSD-HEA-ORB-001 ヒューマンエラー解析
     public import SSD_CIF_ORB_001;   // SSD-CIF-ORB-001 乗員インタフェース（警報の階層・表示と操作）
     public import SSD_HAB_ORB_001;   // SSD-HAB-ORB-001 居住性と医療（機能・乗員の1日・ユースケース）

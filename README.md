@@ -4,8 +4,8 @@
 
 - ブラウザで見る：<https://kei-shima.github.io/Space_Shuttle_MBSE/>（GitHub Pages。図書一覧から図と説明書へ進めます）
 - English: [README.en.md](README.en.md)
-- 版：Rev. BR（2026-10-11）
-- 中身：図 190枚（draw.io、SVG・PNG）、説明書 322件（HTML と Markdown）、SysML v2 テキスト 41件
+- 版：Rev. BZ（2026-10-12）
+- 中身：図 232枚（draw.io、SVG・PNG）、説明書 330件（HTML と Markdown）、SysML v2 テキスト 49件
 - 図書一覧：[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md)
 - 参照した公開資料の一覧：[REFERENCES.md](REFERENCES.md)
 
@@ -15,13 +15,13 @@
 |---|---|---|
 | `html/index.html` | 図書一覧（入口のページ） | ブラウザ |
 | `html/index_*.html` | 図書一覧の内容ごとのページ（使い方・出典、図面、文書一覧、インタフェース一覧、注記、変更履歴） | ブラウザ（index.html から） |
-| `html/*.svg` | 図 190枚（SSD-SYS-ARC-001_p<番号>_<名前>.svg） | ブラウザ（index.html から） |
+| `html/*.svg` | 図 232枚（SSD-SYS-ARC-001_p<番号>_<名前>.svg） | ブラウザ（index.html から） |
 | `html/preview/*.png` | 図の PNG（index_figures.html の縮小表示に使う） | 画像ビューア |
-| `html/docs/*.html` | 説明書 322件 | ブラウザ（index.html から） |
+| `html/docs/*.html` | 説明書 330件 | ブラウザ（index.html から） |
 | `docs/*.md` | 説明書の Markdown 原稿（html/docs と同じ内容） | GitHub の画面、VS Code |
 | `docs/SSD-SYS-IDX-001.md` | 図書一覧（図・文書・変更履歴の一覧） | GitHub の画面、VS Code |
-| `SysML/*.sysml` | SysML v2 テキスト 41件 | VS Code（下記の拡張機能） |
-| `Draw_io/SSD-SYS-ARC-001.drawio` | 図の原本（190ページ） | draw.io |
+| `SysML/*.sysml` | SysML v2 テキスト 49件 | VS Code（下記の拡張機能） |
+| `Draw_io/SSD-SYS-ARC-001.drawio` | 図の原本（232ページ） | draw.io |
 | `REFERENCES.md` | 説明書が出典として引用している公開資料（インターネット上の文献）の一覧。公開元ごとに、文献・URL・引用箇所の数・引用している文書を並べたもの | GitHub の画面、VS Code |
 | `LICENSE.md` | ライセンス（CC BY 4.0）の全文 | GitHub の画面、VS Code |
 | `README.en.md` | 英語の README（図・説明書・SysML の中身は日本語のまま） | GitHub の画面、VS Code |
@@ -55,7 +55,7 @@ cd <クローンしたフォルダ>
 
 GitHub の画面では HTML はソースで表示されます。GitHub の画面のまま読むときは、[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md) から説明書の Markdown と図の SVG をたどってください。
 
-全体で約 700MB あります。いちばん大きいファイルは `html/SSD-SYS-ARC-001_p5_register.svg`（約 61MB）で、GitHub の 50MB の警告に当たります（100MB の上限には収まっています）。履歴が要らなければ `git clone --depth 1` で早く取得できます。
+全体で約 940MB あります。いちばん大きいファイルは `html/SSD-SYS-ARC-001_p5_register.svg`（約 62MB）で、GitHub の 50MB の警告に当たります（100MB の上限には収まっています）。履歴が要らなければ `git clone --depth 1` で早く取得できます。
 
 ## SysML v2 モデルを VS Code で開く
 
@@ -79,15 +79,15 @@ GitHub の画面では HTML はソースで表示されます。GitHub の画面
 
 ### 検査の結果について
 
-このモデルは、OMG の参照実装 SysML v2 Pilot Implementation 0.62.0 で、41件を依存の順に読み込み、誤り 0・警告 0 を確かめています。
+このモデルは、OMG の参照実装 SysML v2 Pilot Implementation 0.62.0 で、49件を依存の順に読み込み、誤り 0・警告 0 を確かめています。
 
-この拡張機能は独自の規則で検査するので、Pilot では出ない指摘が出ます。41件を拡張機能（v0.55.0）の言語サーバーで検査した結果は、誤り 0 件で、警告は次のとおりです。
+この拡張機能は独自の規則で検査するので、Pilot では出ない指摘が出ます。49件を拡張機能（v0.55.0）の言語サーバーで検査した結果は、誤り 0 件で、警告は次のとおりです。
 
 | 指摘 | 件数 | 主な中身 |
 |---|---|---|
-| 警告 `unresolved-type` | 3,733 | 他パッケージの使用（例 `HazardModel::hc21`）と、標準ライブラリの単位（`°F_abs`・`Btu_IT/h` など）を解決できない |
+| 警告 `unresolved-type` | 3,880 | 他パッケージの使用（例 `HazardModel::hc21`）と、標準ライブラリの単位（`°F_abs`・`Btu_IT/h` など）を解決できない |
 | 警告 `unsatisfied-requirement`・`unverified-requirement` | 各 95 | `satisfy`・`verify` を持たない要求。ハザードの制御（SSD-HAZ）は `#ImplementedBy` の依存で、消耗品の日数（SSD-PRF）は値の比較で示している |
-| 警告 `unused-definition` | 119 | 他から使われない定義（一覧として置いている役割・故障モードなど） |
+| 警告 `unused-definition` | 125 | 他から使われない定義（一覧として置いている役割・故障モードなど） |
 | 警告 `unresolved-constraint-reference` | 76 | 制約式の中の単位（`in`・`F_abs` など）を名前として読んでいる |
 
 これらの警告は拡張機能の制約によるものです。モデルを直す必要はありません。気になる場合は、`sysml.validation.disabledCodes` に上の指摘の名前を足すと表示を消せます。
@@ -96,7 +96,7 @@ Rev. BP までは、同じ名前の属性を別のスコープで再定義して
 
 ## 図の原本（draw.io）
 
-`Draw_io/SSD-SYS-ARC-001.drawio` は、draw.io Desktop か、VS Code の拡張機能 Draw.io Integration（`hediet.vscode-drawio`）で開けます。190ページ・約 14MB あるので、開くのに少し時間がかかります。
+`Draw_io/SSD-SYS-ARC-001.drawio` は、draw.io Desktop か、VS Code の拡張機能 Draw.io Integration（`hediet.vscode-drawio`）で開けます。232ページ・約 18MB あるので、開くのに少し時間がかかります。
 
 - 図の中のリンクは、`html/` に書き出した SVG から見た相対パス（`docs/<文書番号>.html`）です。draw.io の中でリンクをたどっても開きません。
 - 図を直したら、そのページを `html/SSD-SYS-ARC-001_p<番号>_<名前>.svg` と `html/preview/` の PNG に書き出し直してください。名前は draw.io のページ ID の `-` を `_` にしたものです（例 ページ `p5-register` → `SSD-SYS-ARC-001_p5_register.svg`）。ページどうしのリンク（`data:page/id,…`）は、書き出す前に対応する SVG のファイル名に置き換える必要があります。

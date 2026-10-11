@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-RQL-ECL-001 |
 | 表題 | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） |
-| 版・日付 | Rev. B／2026-10-11 |
+| 版・日付 | Rev. C／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図166 ECLSS 要求の導出（L2 → L3）・図167 ECLSS 下位の機能行の網羅（要求の割付・判断） |
@@ -1247,6 +1247,8 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 > **注記** NASA-STD-3001 との照合（Rev. BQ の判定の見直し）：REQ-PCS-11（検証の状態 根拠あり）は [V2 6003]（HSI-101）による評価では 不適合。REQ-ALS-01（検証の状態 根拠あり）は [V2 6007]（HSI-104）による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
 
+> **注記** ECLSS 以外の17系の L3 の要求（ECLSS の L3 は本書）は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 23. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p370） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370
@@ -1477,3 +1479,4 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | 初版（Rev. -） | 2026-10-08 | 初版作成（L3 の要求 99件、機能行 866行のトレース、検証 99件、図166・167、SysML v2 テキスト） |
 | Rev. A | 2026-10-11 | NASA-STD-3001 による評価との食い違い 2件の要求を注記（判定は据え置き。Rev. BQ の照合表の判定の見直し）（Rev. BQ） |
 | Rev. B | 2026-10-11 | 引いている機能・IF の文を、出典の更新で改めた文に合わせた（7か所）、要求が抜けていた機能行 6行に L3 の要求（REQ-ARS-40・REQ-ARS-41・REQ-ARS-42・REQ-WTR-13・REQ-WCS-10・REQ-ATCS-08）を足し、検証の根拠が無かった 20件のうち 12件を根拠ありに、8件の理由を改めた（Rev. BR） |
+| Rev. C | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

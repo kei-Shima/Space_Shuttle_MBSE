@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-MECH-VNT-001 |
 | 表題 | ベント・ETアンビリカル扉（VNT）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-MECH-001 |
 | 関連図 | SSD-SYS-ARC-001 図68 MECH 機能構成 |
@@ -46,6 +46,8 @@
 
 > **注記** SCOM の付録E は OI-33 の飛行ソフトウェアの主な変更をまとめたもので、その多くは乗員による系の監視・操作の方法を変えていない。本書の記述は SCOM の本文による。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1149）
 
+> **注記** ベントドア・ET アンビリカルドアの状態（図220）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 2.17 Mechanical Systems（USA007587 Rev. A CPN-1、PDF p621） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/621
@@ -57,3 +59,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |

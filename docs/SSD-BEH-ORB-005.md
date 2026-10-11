@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-005 |
 | 表題 | 系の状態遷移定義書（GPC・燃料電池・APU・RMS・排熱） |
-| 版・日付 | Rev. B／2026-10-04 |
+| 版・日付 | Rev. D／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BEH-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図98 GPC 状態遷移図・図99 燃料電池 状態遷移図・図100 APU 状態遷移図・図101 RMS 状態遷移図・図102 ATCS 排熱 状態遷移図・図103 系のモード × フェーズ 行列 |
@@ -280,6 +280,10 @@
 
 > **注記** ほかの系（OMS・RCS・MPS・C&T・与圧系・ODS）の状態遷移は [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-006.sysml）。
 
+> **注記** GN&C の OPS・メジャーモードと DAP・IMU・航法センサの状態遷移（GPC のモードは本書の図98）は [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GNC-ORB-001.sysml）。
+
+> **注記** MECH・C/W・PLS・CREW の状態遷移（RMS のモードは本書の図101）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
 ## 17. 参考文献
 
 1. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p227） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/227
@@ -335,3 +339,5 @@
 | 初版（Rev. -） | 2026-10-03 | 初版作成（図98 GPC 状態遷移図の状態 10件・遷移 14件、図99 燃料電池 状態遷移図の状態 9件・遷移 13件、図100 APU 状態遷移図の状態 10件・遷移 13件、図101 RMS 状態遷移図の状態 9件・遷移 13件、図102 ATCS 排熱 状態遷移図の状態 9件・遷移 11件、図103 系のモード × フェーズ 行列、SysML v2 テキスト） |
 | Rev. A | 2026-10-03 | 故障検知・処置対応表 SSD-FDIR-ORB-001 への参照を注記（Rev. AP） |
 | Rev. B | 2026-10-04 | 系の状態遷移定義書その2 SSD-BEH-ORB-006 への参照を注記（Rev. AX） |
+| Rev. C | 2026-10-11 | GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 への参照を注記（Rev. BS） |
+| Rev. D | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |

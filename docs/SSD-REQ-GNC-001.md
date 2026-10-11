@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-GNC-001 |
 | 表題 | 誘導・航法・制御（GN&C）要求書（L2） |
-| 版・日付 | Rev. A／2026-10-07 |
+| 版・日付 | Rev. B／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図46 GN&C 機能構成 |
@@ -187,6 +187,8 @@ GN&Cの機能説明書 8 件の機能行 90 件と、要求の割付先の IF �
 
 > **注記** トレース表の「要求なしで妥当」は、親の説明書の全般の記述か、同じ下位機能（文書）に割り付けた要求が受け持つ構成・運用の記述であることを根拠に、文書ごとにまとめて判断したもので、機能行1件ずつに要求の要否を検討したものではない。
 
+> **注記** 下位の機能ブロックの L3 の要求（LRQ-GNC-nn）と、L2 の要求からの導出・検証の根拠は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.13 Guidance, Navigation, and Control（USA007587 Rev. A CPN-1、PDF p475） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/475
@@ -236,3 +238,4 @@ GN&Cの機能説明書 8 件の機能行 90 件と、要求の割付先の IF �
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 14件、機能行 90件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-07 | 上位の要求 REQ-SYS-09 の文を改めた（Rev. BG の要求の値の見直し）（Rev. BG） |
+| Rev. B | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

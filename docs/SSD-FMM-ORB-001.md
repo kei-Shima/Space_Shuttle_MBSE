@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMM-ORB-001 |
 | 表題 | 故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖） |
-| 版・日付 | Rev. A／2026-10-09 |
+| 版・日付 | Rev. C／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図126 故障モードから見た安全の連鎖・図127 故障モードの網羅（系・原因ごと） |
@@ -1048,6 +1048,10 @@
 
 > **注記** ECLSS の故障モード 38件の第3段・第4段への対応と、PCS・給水廃水・WCS・FDS・ALS の機能の故障モードは [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ECL-001.sysml）。
 
+> **注記** SRB・ET・TPS の機能の故障モード（故障解析表の無い SRB を含む）は [SSD-ACC-SYS-001](SSD-ACC-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ACC-SYS-001.sysml）。
+
+> **注記** ECLSS 以外の系の機能の故障モード（故障解析表の対応が無かった機能ブロック）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 11. 参考文献
 
 1. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
@@ -1059,3 +1063,5 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-10-04 | 初版作成（故障モード 909件、対応づけの規則 5件、原因への対応 1203件・警報への対応 1122件、網羅、図126・127、SysML v2 テキスト） |
 | Rev. A | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
+| Rev. B | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
+| Rev. C | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-CW-001 |
 | 表題 | 警告・警報（C/W）要求書（L2） |
-| 版・日付 | Rev. A／2026-10-06 |
+| 版・日付 | Rev. B／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図62 C/W 機能構成 |
@@ -132,6 +132,8 @@ C/Wの機能説明書 6 件の機能行 46 件と、要求の割付先の IF 行
 
 > **注記** NASA-STD-3001 との照合：REQ-CW-06（検証の判定 VC-REQ-CW-06 pass）は [V2 10114]（HSI-401） による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
 
+> **注記** 下位の機能ブロックの L3 の要求（LRQ-CW-nn）と、L2 の要求からの導出・検証の根拠は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.2節 Caution and Warning Power Supply（PDF p115） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/115
@@ -158,3 +160,4 @@ C/Wの機能説明書 6 件の機能行 46 件と、要求の割付先の IF 行
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 10件、機能行 46件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-06 | NASA-STD-3001 による評価との食い違い 1件の要求を注記（判定は据え置き）（Rev. AY） |
+| Rev. B | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

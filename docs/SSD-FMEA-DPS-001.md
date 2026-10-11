@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMEA-DPS-001 |
 | 表題 | データ処理系（DPS）故障解析表（FMEA・CIL） |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図48 DPS 機能構成 |
@@ -46,6 +46,8 @@ IOA の表1-1 の3サブシステムで、CIL は IOA 69件・NASA 68件、課�
 
 > **注記** 表示・操作部（D&C）とバックアップ飛行系（BFS）は、計算機・表示の系として DPS の側に置いた。
 
+> **注記** 故障解析表の対応が無かった機能ブロックの機能の故障モード（FMX-DPS-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 7. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録B Change Control（PDF p2195） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2195
@@ -57,3 +59,4 @@ IOA の表1-1 の3サブシステムで、CIL は IOA 69件・NASA 68件、課�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（IOA の件数 3サブシステム、[CIL] の規則 1件） |
+| Rev. A | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

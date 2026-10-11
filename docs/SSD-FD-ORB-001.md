@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ORB-001 |
 | 表題 | オービタ（OV）機能説明書 |
-| 版・日付 | Rev. J／2026-10-03 |
+| 版・日付 | Rev. K／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-SYS-IDX-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -73,6 +73,8 @@
 
 > **注記** オービタを含む機体と外部系の構造（ブロック・ポート・インタフェース）の SysML v2 モデルは [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-BLK-SYS-001.sysml）。
 
+> **注記** オービタの系どうしの IF（IF-ORB）のインタフェース要求は [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-IRQ-SYS-001.sysml）。
+
 ## 6. 参考文献
 
 1. NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle — https://www.american-spacecraft.org/documents/sp-407/chapter-3.html
@@ -106,3 +108,4 @@
 | Rev. H | 2026-10-01 | 冗長・故障解析表 SSD-FMEA-ORB-001 と図45 への参照を注記（Rev. P） |
 | Rev. I | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（5文）（Rev. Q） |
 | Rev. J | 2026-10-03 | 構造定義書 SSD-BLK-SYS-001 への参照を注記（Rev. AD） |
+| Rev. K | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |

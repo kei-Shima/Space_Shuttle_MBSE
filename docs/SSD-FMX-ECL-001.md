@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMX-ECL-001 |
 | 表題 | ECLSS の故障モード定義書（ワークシートの対応づけ・機能の故障モード・故障の木） |
-| 版・日付 | 初版（Rev. -）／2026-10-09 |
+| 版・日付 | Rev. A／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMM-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図176 ECLSS 機能の故障モード（ブロック × 検知・原因）・図177 故障の木 X1（乗員室の圧力の喪失）・図178 故障の木 X2（CO2 除去の喪失） |
@@ -171,6 +171,8 @@ FTX-2（CO2 除去の喪失（PPCO2 が 15 mmHg を超える））のゲート�
 
 > **注記** 調査で根拠が不足した点・本書の判断：{'item': 'FMODES の detect', 'facts': [], 'note': 'WCS・ALS の多くの故障は C/W の警報ではなく乗員の観察・SM アラートで知る。MAL に手順がないもの（FMX-FDS-05 の処置、FMX-ALS-04 の処置）は本書の判断。'}
 
+> **注記** ECLSS 以外の系の機能の故障モード（ECLSS の機能の故障モードは本書）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. NASA-CR-185524 Vol. 2 Independent Orbiter Assessment (IOA): CIL issues resolution report, volume 2（1988年） C.13-2 ARS-108 Accumulator（PDF p104） — https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=104
@@ -245,3 +247,4 @@ FTX-2（CO2 除去の喪失（PPCO2 が 15 mmHg を超える））のゲート�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-09 | 初版作成（ワークシートの対応づけ直し 38行、機能の故障モード 32件、故障の木 2件、図176〜178、SysML v2 テキスト） |
+| Rev. A | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |

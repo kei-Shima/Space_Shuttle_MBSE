@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-001 |
 | 表題 | 熱制御（能動・受動）機能説明書 |
-| 版・日付 | Rev. D／2026-10-02 |
+| 版・日付 | Rev. E／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -55,6 +55,8 @@
 
 > **注記** TPSの要求（L2）と、本書の機能行とのトレースは [SSD-REQ-TPS-001](SSD-REQ-TPS-001.md) に示す。
 
+> **注記** 受動熱制御（断熱・ヒータ・パージ）の接続と流れ（図202）と、飛行中の TPS の点検の活動（図205）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
 ## 7. 参考文献
 
 1. NASA Human Space Flight – Shuttle Reference: Active Thermal Control System — https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/atcs.html
@@ -72,3 +74,4 @@
 | Rev. B | 2026-09-26 | 関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加 |
 | Rev. C | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（3文）（Rev. Q） |
 | Rev. D | 2026-10-02 | 要求文書 SSD-REQ-TPS-001 への参照を注記（Rev. W） |
+| Rev. E | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-RQM-SYS-001 |
 | 表題 | 要求モデル定義書（導出・充足・検証方法） |
-| 版・日付 | Rev. G／2026-10-11 |
+| 版・日付 | Rev. I／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図90 要求の導出・充足 行列 |
@@ -649,6 +649,10 @@ L1 の要求ごとに、導出した L2 の要求の数を系ごとに示す（�
 
 > **注記** ECLSS の L3 要求の導出（REQ-ECLSS → L3）・充足・検証（別のパッケージ SSD_RQL_ECL_001）は [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-ECL-001.sysml）。
 
+> **注記** インタフェース要求の導出（L1・L2 → IRQ）・充足（IF）・検証（別のパッケージ SSD_IRQ_SYS_001）は [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-IRQ-SYS-001.sysml）。
+
+> **注記** ECLSS 以外の17系の L3 の要求の導出（L2 → L3）・充足・検証（別のパッケージ SSD_RQL_SYS_001）は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 10. 参考文献
 
 1. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
@@ -666,3 +670,5 @@ L1 の要求ごとに、導出した L2 の要求の数を系ごとに示す（�
 | Rev. E | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. F | 2026-10-11 | REQ-APU-07 の文を要求書の見直し（PGME と水の混合液）に合わせた（Rev. BQ） |
 | Rev. G | 2026-10-11 | REQ-SYS-03・SYS-05・ECLSS-12・TPS-03 の検証の状態を根拠ありに改めた（Rev. BR） |
+| Rev. H | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |
+| Rev. I | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

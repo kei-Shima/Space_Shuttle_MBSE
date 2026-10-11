@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FDIR-ORB-001 |
 | 表題 | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） |
-| 版・日付 | Rev. E／2026-10-09 |
+| 版・日付 | Rev. G／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図118 C/W 警告灯と検知・処置の対応・図119 故障検知・処置の連鎖と網羅 |
@@ -359,6 +359,10 @@
 
 > **注記** 警報の区分（クラス0〜3）と 3001 の警報の階層（表 10.3-1・10.4-3）の対応は [SSD-CIF-ORB-001](SSD-CIF-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-CIF-ORB-001.sysml）。
 
+> **注記** C/W の警告灯で始まる GN&C の状態機械の遷移（警報との対応の表。対応表 MAP には足していない）は [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GNC-ORB-001.sysml）。
+
+> **注記** C/W の警告灯で始まる遷移（警報との対応の表。対応表 MAP には足していない）と、警報系の状態機械は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
 ## 13. 参考文献
 
 1. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p115） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/115
@@ -455,3 +459,5 @@
 | Rev. C | 2026-10-04 | C/W の警報で始まる遷移を、系の状態遷移定義書その2（SSD-BEH-ORB-006）の 16件に広げた（警報の事象の特化と受け手の部品）（Rev. AX） |
 | Rev. D | 2026-10-07 | 乗員インタフェース対応表 SSD-CIF-ORB-001 への参照を注記（Rev. BC） |
 | Rev. E | 2026-10-09 | C/W の警報で始まる遷移を、ECLSS の状態遷移と活動定義書（SSD-BEH-ORB-007）の 8件に広げた（警報の事象の特化と受け手の部品）（Rev. BL） |
+| Rev. F | 2026-10-11 | GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 への参照を注記（Rev. BS） |
+| Rev. G | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |

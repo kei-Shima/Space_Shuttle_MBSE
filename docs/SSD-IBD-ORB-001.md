@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-IBD-ORB-001 |
 | 表題 | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） |
-| 版・日付 | Rev. E／2026-10-11 |
+| 版・日付 | Rev. H／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図112 EPS 発電・配電 内部ブロック図・図113 ATCS 冷却ループ 内部ブロック図・図114 MPS 推進薬供給 内部ブロック図・図128 DPS データバス網 内部ブロック図・図129 APU・油圧 内部ブロック図・図130 OMS・RCS 推進薬 内部ブロック図・図131 C&T RF リンク 内部ブロック図・図159 ARS キャビン空気ループ 内部ブロック図・図160 ARS 水冷却ループ 内部ブロック図・図161 PCS 酸素・窒素供給 内部ブロック図・図162 給水・廃水・WCS 内部ブロック図 |
@@ -1456,6 +1456,12 @@ PCS（酸素・窒素の供給と乗員室の与圧）の内部ブロック図�
 
 > **注記** 本書の判断の確認（Rev. BQ）：同じ機能ブロックの中の機器どうしの流れを IF にしない扱い（[SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) の GAP-11）は、確定とする。NASA のシステムズエンジニアリングハンドブックは、インタフェースの管理で外部と内部のインタフェースを洗い出し、その出どころ・行き先・刺激・特性を文書にして保つとする。（出典: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf#page=147）同じハンドブックは、指定した構成品目の内部のインタフェースを、その品目より上の段の試験の範囲の外に置く。（出典: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf#page=106）本パッケージは機能ブロックを IF を定める最小の単位とし、その境界をまたぐ流れに IF（IF-<系>-nn）を定義した（Rev. AU・BI で 20件を新設）。機能ブロックの中の流れは、内部ブロック図の流れ（FL-…）と値として文書にしてあり、IF の番号を付けなくても出どころ・行き先・特性は保たれる。機能ブロックをさらに下位に展開するときは、その境界の流れに IF を定義する。
 
+> **注記** GN&C の内部ブロック図（図191・192。機器は構造モデルの GNC の下位の機能ブロックの中に置く）は [SSD-GNC-ORB-001](SSD-GNC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GNC-ORB-001.sysml）。
+
+> **注記** ET・SRB・TPS の内部ブロック図（図200〜202）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
+> **注記** MECH・C/W・PLS・STR・CREW の内部ブロック図（図214〜218）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
 ## 43. 参考文献
 
 1. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p311） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/311
@@ -1772,3 +1778,6 @@ PCS（酸素・窒素の供給と乗員室の与圧）の内部ブロック図�
 | Rev. C | 2026-10-08 | キャビン大気の動的モデル定義書 SSD-ATM-ORB-001 への参照を注記（Rev. BJ） |
 | Rev. D | 2026-10-09 | EMU の構造・内部ブロック・状態定義書 SSD-EMU-EVA-001 への参照を注記（Rev. BM） |
 | Rev. E | 2026-10-11 | 機能ブロックの中の流れを IF にしない扱い（GAP-11）を確認して確定とした（Rev. BQ） |
+| Rev. F | 2026-10-11 | GN&C の内部ブロック・モード・冗長管理定義書 SSD-GNC-ORB-001 への参照を注記（Rev. BS） |
+| Rev. G | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |
+| Rev. H | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |

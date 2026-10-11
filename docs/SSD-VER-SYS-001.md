@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-VER-SYS-001 |
 | 表題 | 検証定義書（検証ケース・検証マトリクス） |
-| 版・日付 | Rev. I／2026-10-11 |
+| 版・日付 | Rev. K／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図110 検証マトリクス |
@@ -324,6 +324,10 @@
 
 > **注記** 検証の根拠の調査（Rev. BR）：検証の根拠が無かった 24件（L1・L2 の 4件と ECLSS の L3 の 20件）を、ibiblio の Mission Report 134件・NTRS・運用飛行規則の根拠の欄などで調べ直した。根拠ありにしたのは、検証方法に合う一次資料の記録（飛行・地上の試験の記録、値や判断を導いた解析の記録、公式の設計の記述）があるものである。REQ-SYS-03 の 15 × 60 ft は資料ではペイロードの動的包絡域の値で、実機を計測した記録ではない。REQ-SYS-05 は STS 61-A の報告の乗員の名前を数えて8人とした。REQ-ECLSS-12 は、飛行報告が規則の番号を挙げないので、STS-69・STS-90 の処置を A17-1001 に対応づけたのは本書の判断である。L3 は 12件を根拠ありにし、8件は根拠なしのまま理由を改めた（[SSD-RQL-ECL-001](SSD-RQL-ECL-001.md)。Rev. BR で足した 6件のうち 2件も根拠なし）。
 
+> **注記** インタフェース要求 59件の検証ケースと判定（SSD_IRQ_SYS_001::Verification・Results）は [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-IRQ-SYS-001.sysml）。
+
+> **注記** ECLSS 以外の17系の L3 の要求 457件の検証ケースと判定（SSD_RQL_SYS_001::Verification・Results）は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 10. 参考文献
 
 1. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
@@ -555,3 +559,5 @@
 | Rev. G | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. H | 2026-10-11 | NASA-STD-3001 による評価との食い違い 3件の要求を注記（判定は据え置き。Rev. BQ の照合表の判定の見直し）、飛行試験の反証のある 6件（VC-REQ-APU-07・ECLSS-13・EPS-16・PLS-02・TPS-01・TPS-02）の根拠を差し替えた（判定は pass のまま）（Rev. BQ） |
 | Rev. I | 2026-10-11 | 検証の根拠の調査で VC-REQ-SYS-03・SYS-05・ECLSS-12・TPS-03 を pass にした（pass 212件・inconclusive 0件）（Rev. BR） |
+| Rev. J | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |
+| Rev. K | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

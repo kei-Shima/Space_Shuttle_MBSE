@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-EPS-001 |
 | 表題 | 電力系（EPS）要求書（L2） |
-| 版・日付 | Rev. G／2026-10-11 |
+| 版・日付 | Rev. H／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図6 EPS 機能構成 |
@@ -175,6 +175,8 @@
 
 > **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-EPS-16 は STS-2 で燃料電池 1 が浸水して停止した（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-2-10）が、原因（アスピレータの閉塞）と是正処置が飛行報告にあり、STS-3 以降の飛行に正常な記録があるので、判定（pass）と要求の文・値は変えず、検証の根拠を故障した当の飛行（STS-2）の記録から STS-3・STS-125 の記録に差し替えた。
 
+> **注記** 下位の機能ブロックの L3 の要求（LRQ-EPS-nn）と、L2 の要求からの導出・検証の根拠は [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p311） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/311
@@ -242,3 +244,4 @@
 | Rev. E | 2026-10-08 | パージの間隔が12時間から96時間へ変わった経緯（1992〜1996年）を注記（Rev. BH） |
 | Rev. F | 2026-10-11 | REQ-EPS-16 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |
 | Rev. G | 2026-10-11 | 引いている機能・IF の文を、出典の更新で改めた文に合わせた（6か所）（Rev. BR） |
+| Rev. H | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |

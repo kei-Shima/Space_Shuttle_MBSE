@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TPS-001 |
 | 表題 | 熱防護系（TPS）機能説明書 |
-| 版・日付 | Rev. G／2026-10-02 |
+| 版・日付 | Rev. I／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -40,6 +40,10 @@
 
 > **注記** TPSの FMEA・CIL（IOA の件数・CIL 課題の評価ワークシート・[CIL] の規則）は [SSD-FMEA-TPS-001](SSD-FMEA-TPS-001.md) に示す。
 
+> **注記** 熱防護系の熱の流れ（図202）と、飛行中の TPS の点検と損傷の判断の活動（図205）は [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ETS-SYS-001.sysml）。
+
+> **注記** 熱防護系の機能の故障モード（FMA-TPS-nn）と、STS-107 の事象の連鎖・故障の木・勧告と改修は [SSD-ACC-SYS-001](SSD-ACC-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-ACC-SYS-001.sysml）。
+
 ## 5. 参考文献
 
 1. NASA Facts – Orbiter Thermal Protection System（Scribd 転載） — https://www.scribd.com/doc/46376343/NASA-Facts-Orbiter-Thermal-Protection-System
@@ -58,3 +62,5 @@
 | Rev. E | 2026-10-02 | IF-ORB-37 に下位 IF（IF-STR-03）を付記（Rev. V） |
 | Rev. F | 2026-10-02 | 要求文書 SSD-REQ-TPS-001 への参照を注記（Rev. W） |
 | Rev. G | 2026-10-02 | 故障解析表 SSD-FMEA-TPS-001 への参照を注記（Rev. X） |
+| Rev. H | 2026-10-11 | ET・SRB・TPS の内部ブロック・状態定義書 SSD-ETS-SYS-001 への参照を注記（Rev. BT） |
+| Rev. I | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |

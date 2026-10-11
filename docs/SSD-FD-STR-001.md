@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-STR-001 |
 | 表題 | 構造（STR）機能説明書 |
-| 版・日付 | Rev. E／2026-10-02 |
+| 版・日付 | Rev. G／2026-10-12 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図2 オービタ サブシステム構成 |
@@ -65,6 +65,10 @@
 
 > **注記** STRの FMEA・CIL（IOA の件数・CIL 課題の評価ワークシート・[CIL] の規則）は [SSD-FMEA-STR-001](SSD-FMEA-STR-001.md) に示す。
 
+> **注記** 構造の荷重の流れ（図217）と、構造の運用の限界の判断の活動（図224）は [SSD-BEH-ORB-008](SSD-BEH-ORB-008.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-008.sysml）。
+
+> **注記** 構造（STR）の機能の故障モード（FMX-STR-nn）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p51） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/51
@@ -92,3 +96,5 @@
 | Rev. C | 2026-10-02 | 下位機能説明書（6件）と図70への展開を追加し、IF-ORB-36・37 に下位IF（IF-STR）を付記、注記（IFの分け方、代表させたIF）を追加（Rev. V） |
 | Rev. D | 2026-10-02 | 要求文書 SSD-REQ-STR-001 への参照を注記（Rev. W） |
 | Rev. E | 2026-10-02 | 故障解析表 SSD-FMEA-STR-001 への参照を注記（Rev. X） |
+| Rev. F | 2026-10-12 | 残りの系の内部ブロックと振る舞い定義書 SSD-BEH-ORB-008 への参照を注記（Rev. BW） |
+| Rev. G | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |
