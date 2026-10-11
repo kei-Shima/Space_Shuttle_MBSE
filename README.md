@@ -103,4 +103,8 @@ Rev. BP までは、同じ名前の属性を別のスコープで再定義して
 
 ## ライセンス
 
-特に断りのない限り、このリポジトリの内容は [Creative Commons Attribution 4.0 International（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/) で公開しています。全文は [LICENSE.md](LICENSE.md) にあります。引用している公開資料（[REFERENCES.md](REFERENCES.md)）の権利は、それぞれの公開元にあります。
+特に断りのない限り、このリポジトリの内容は [Creative Commons Attribution 4.0 International（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/) で公開しています。全文は [LICENSE.md](LICENSE.md) にあります（Creative Commons の正文のままです）。
+
+- 複製・再配布・改変は、営利・非営利を問わず自由です。そのときは、出どころの表示、ライセンスへのリンク、変更したかどうかの表示をしてください。
+- 表示の例：「Space Shuttle MBSE（https://github.com/kei-Shima/Space_Shuttle_MBSE）、CC BY 4.0」
+- 引用している公開資料（[REFERENCES.md](REFERENCES.md)）の権利は、それぞれの公開元にあります。このライセンスが及ぶのは、このリポジトリで作った図・説明書・SysML v2 テキストです。
