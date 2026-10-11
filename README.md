@@ -2,6 +2,8 @@
 
 スペースシャトルのシステム設計を、公開資料をもとに図・説明書・SysML v2 モデルにまとめた検討用のパッケージです。
 
+- ブラウザで見る：<https://kei-shima.github.io/Space_Shuttle_MBSE/>（GitHub Pages。図書一覧から図と説明書へ進めます）
+- English: [README.en.md](README.en.md)
 - 版：Rev. BR（2026-10-11）
 - 中身：図 190枚（draw.io、SVG・PNG）、説明書 322件（HTML と Markdown）、SysML v2 テキスト 41件
 - 図書一覧：[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md)
@@ -22,7 +24,13 @@
 | `Draw_io/SSD-SYS-ARC-001.drawio` | 図の原本（190ページ） | draw.io |
 | `REFERENCES.md` | 説明書が出典として引用している公開資料（インターネット上の文献）の一覧。公開元ごとに、文献・URL・引用箇所の数・引用している文書を並べたもの | GitHub の画面、VS Code |
 | `LICENSE.md` | ライセンス（CC BY 4.0）の全文 | GitHub の画面、VS Code |
+| `README.en.md` | 英語の README（図・説明書・SysML の中身は日本語のまま） | GitHub の画面、VS Code |
+| `index.html`・`.nojekyll` | GitHub Pages 用。`index.html` は `html/index.html` へ移すだけのページ、`.nojekyll` はファイルをそのまま公開させる空のファイル | ― |
 | `.vscode/` | VS Code の推奨拡張機能と設定 | ― |
+
+## ブラウザで見る（GitHub Pages）
+
+<https://kei-shima.github.io/Space_Shuttle_MBSE/> を開くと、クローンしなくても図書一覧（`html/index.html`）から図と説明書を見られます。main ブランチの内容がそのまま公開されます。
 
 ## クローンして見る
 
@@ -45,7 +53,7 @@ cd <クローンしたフォルダ>
 | `index_notes.html`・`index_notes_*.html` | 注記の目次と、文書の区分ごとの注記 |
 | `index_history.html` | 変更履歴 |
 
-GitHub の画面では HTML はソースで表示されます。ブラウザに入れずに読むときは、[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md) から説明書の Markdown と図の SVG をたどってください。
+GitHub の画面では HTML はソースで表示されます。GitHub の画面のまま読むときは、[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md) から説明書の Markdown と図の SVG をたどってください。
 
 全体で約 700MB あります。いちばん大きいファイルは `html/SSD-SYS-ARC-001_p5_register.svg`（約 61MB）で、GitHub の 50MB の警告に当たります（100MB の上限には収まっています）。履歴が要らなければ `git clone --depth 1` で早く取得できます。
 
@@ -96,6 +104,10 @@ Rev. BP までは、同じ名前の属性を別のスコープで再定義して
 ## 説明書の原稿
 
 `docs/*.md` は `html/docs/*.html` と同じ内容の Markdown です。GitHub の画面やエディタで読むときに使います。説明書から SysML へのリンクは `../SysML/` を指しています。
+
+## 版とタグ
+
+パッケージの版は Rev. A、…、Rev. Z、Rev. AA、… と進みます。GitHub へプッシュした版には `rev-<版>` のタグを付けています（例 `rev-BR`）。一覧は `git tag -l` で見られます。作業の途中の版はプッシュしていないので、すべての版にタグがあるわけではありません。`rev-BP` より前のタグは、フォルダを分ける前の構成（すべてルートに置いた構成）です。
 
 ## 改行について
 
