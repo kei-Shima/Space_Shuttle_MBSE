@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-PTC-001 |
 | 表題 | 受動熱制御（PTC：断熱・ヒータ・パージ）機能説明書 |
-| 版・日付 | Rev. D／2026-10-01 |
+| 版・日付 | Rev. E／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-TCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -17,10 +17,10 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-TCS-PTC-01 | オービタ内部の温度は、内部断熱材、ヒータ、パージによって飛行の各段階で管理される。（出典: https://m.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts_sys.html） |
+| F-TCS-PTC-01 | オービタ内部の温度は、内部断熱材、ヒータ、パージによって飛行の各段階で管理される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/65） |
 | F-TCS-PTC-02 | Kaptonの反射膜とDacronのメッシュを交互に重ね、シリカ布で覆ったキルト状の断熱ブランケットが、受動熱制御として機体の各部を覆った。（出典: https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000） |
-| F-TCS-PTC-03 | OMS/RCSポッドは内面の断熱材とストリップヒータで熱制御され、A・B2系統のヒータがサーモスタットで55〜75°Fに保たれる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-oms.html） |
-| F-TCS-PTC-04 | 燃料電池の生成水配管や給水・廃水のダンプ配管にも、凍結防止用のサーモスタット制御ヒータがある。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-TCS-PTC-03 | OMS/RCSポッドは内面の断熱材とストリップヒータで熱制御され、A・B2系統のヒータがサーモスタットで55〜75°Fに保たれる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/659） |
+| F-TCS-PTC-04 | 燃料電池の生成水配管や給水・廃水のダンプ配管にも、凍結防止用のサーモスタット制御ヒータがある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/324）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400） |
 | F-TCS-PTC-05 | パージ・ベント・ドレン系は、非与圧区画にパージガスを流して熱調整と有害ガスの滞留防止を行い、湿度と温度を一定に保つ。（出典: https://spaceflight.nasa.gov/shuttle/reference/shutref/purge/） |
 | F-TCS-PTC-06 | 着陸後は、ベントドア1・2・6・8・9をパージ位置にして地上冷却を行う。（出典: https://spaceflight.nasa.gov/shuttle/reference/shutref/purge/） |
 
@@ -52,10 +52,11 @@
 2. Smithsonian NASM – Blanket, Payload Bay, Space Shuttle Orbiter — https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000
 3. NSTS 1988 News Reference Manual – Orbital Maneuvering System（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-oms.html
 4. NSTS 1988 News Reference Manual – Electrical Power System（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eps.html
-5. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
-6. NASA Human Space Flight – Shuttle Reference: Orbiter Purge, Vent and Drain System — https://spaceflight.nasa.gov/shuttle/reference/shutref/purge/
-7. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p659） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/659
-8. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p324） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/324
+5. NASA Human Space Flight – Shuttle Reference: Orbiter Purge, Vent and Drain System — https://spaceflight.nasa.gov/shuttle/reference/shutref/purge/
+6. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p659） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/659
+7. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p324） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/324
+8. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p65） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/65
+9. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water（Galley Supply Valve）（PDF p400） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400
 
 ## 6. 変更履歴
 
@@ -66,3 +67,4 @@
 | Rev. B | 2026-09-26 | 関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加 |
 | Rev. C | 2026-09-30 | IF-TCS-17 に上位 IF-ORB-33 を付記（Rev. I） |
 | Rev. D | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（2文）（Rev. Q） |
+| Rev. E | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（4文）（Rev. BR） |

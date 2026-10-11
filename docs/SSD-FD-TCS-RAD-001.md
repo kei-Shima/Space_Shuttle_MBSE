@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-RAD-001 |
 | 表題 | 放熱器（RAD）機能説明書 |
-| 版・日付 | Rev. C／2026-10-01 |
+| 版・日付 | Rev. D／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ATCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -17,18 +17,18 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-TCS-RAD-01 | 放熱器はペイロードベイドアの内面に取り付けられ、ドアを閉じている上昇・再突入時はバイパスされる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-RAD-02 | 基本構成は左右各3枚のパネル（前方ドアの展開式2枚と後方ドアの固定式1枚）で、21,500 Btu/hの排熱を想定し、4枚目の固定パネルを加えると29,000 Btu/hになる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-TCS-RAD-01 | 放熱器はペイロードベイドアの内面に取り付けられ、ドアを閉じているときは通常バイパスされるが、軌道離脱の準備でコールドソークした放熱器内のフレオンは再突入の後半にヒートシンクとして使われる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384） |
+| F-TCS-RAD-02 | 放熱器は左右のペイロードベイドアの内面に各4枚のパネルがあり、前方の2枚は展開式、後方の3枚目と4枚目は固定式で、最大の排熱能力は61,100 Btu/hである。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384） |
 | F-TCS-RAD-03 | 展開式パネルはドアから35.5°開いて両面から放熱し、表面には放射特性を得るための銀蒸着テフロンテープが貼られる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-RAD-04 | 各パネルは幅10 ft・長さ15 ftで、展開式2枚と固定式2枚を装備すると有効放熱面積は1,195 ft²となる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-RAD-05 | 流量制御弁が高温のバイパス流と放熱器からの低温流を混合し、放熱器出口温度を通常38°F（高設定57°F）に制御する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-TCS-RAD-04 | 各パネルは幅10 ft・長さ15 ftで、展開式2枚と固定式2枚を装備すると有効放熱面積は1,195 ft²となる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384） |
+| F-TCS-RAD-05 | 流量制御弁が高温のバイパス流と放熱器からの低温流を混合し、放熱器出口温度を通常38°F（高設定57°F）に制御する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=105） |
 
 ## 3. インタフェース
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-TCS-08 | フレオン21冷却ループ×2 | 熱 | 受信 | フレオンは油圧熱交換器から放熱器へ流れ、ペイロードベイドアが閉じている上昇・再突入時はバイパス弁で放熱器を迂回する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | — |
-| IF-TCS-12 | 宇宙空間（船外） | 熱 | 送信 | ペイロードベイドアを軌道上で開くと、放熱器が熱を宇宙空間へ放射する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 上位: IF-ECL-21 |
+| IF-TCS-08 | フレオン21冷却ループ×2 | 熱 | 受信 | フレオンは油圧熱交換器から放熱器へ流れ、上昇・再突入時は、放熱器のコールドソークによる冷却を使う場合を除き、バイパス弁で放熱器を迂回する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） | — |
+| IF-TCS-12 | 宇宙空間（船外） | 熱 | 送信 | ペイロードベイドアを軌道上で開くと、放熱器が熱を宇宙空間へ放射する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） | 上位: IF-ECL-21 |
 
 ## 4. 関連文書
 
@@ -50,11 +50,19 @@
 
 > **注記** 一方、放熱器の開発論文は、8枚の放熱器（合計175 m²）で最大30 kWを排熱するとしており、値が大きく異なる。構成や条件の定義を一次資料で確認すること。（出典: https://ntrs.nasa.gov/api/citations/19850008616/downloads/19850008616.pdf）
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はペイロードベイドアが閉じている上昇・再突入時に放熱器を迂回するとしていたが、SCOM（OI-33）は上昇・再突入時でも放熱器のコールドソークによる冷却を使う場合は迂回しないとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はドアを閉じている上昇・再突入時に放熱器をバイパスするとしていたが、SCOM（OI-33）はドアを閉じているときは通常バイパスし、コールドソークした放熱器内のフレオンを再突入の後半にヒートシンクとして使うとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は基本構成を左右各3枚のパネル（排熱21,500 Btu/h）とし4枚目の固定パネルを加えると29,000 Btu/hになるとしていたが、SCOM（OI-33）は左右各4枚のパネルで最大の排熱能力を61,100 Btu/hとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384）
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
 2. NTRS 19850008616 Challenges in the Development of the Orbiter Radiator System — https://ntrs.nasa.gov/api/citations/19850008616/downloads/19850008616.pdf
 3. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Active Thermal Control System（Freon Loops）（PDF p382） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382
+4. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p384） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384
+5. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 4.13節 Radiators（PDF p105） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=105
 
 ## 7. 変更履歴
 
@@ -64,3 +72,4 @@
 | Rev. A | 2026-09-25 | 関連文書にTC-26（NSTS-12820 Vol. A 運用飛行規則）を追加 |
 | Rev. B | 2026-09-26 | 関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加 |
 | Rev. C | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（1文）（Rev. Q） |
+| Rev. D | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（6文。うち本文を改めた3文に注記）（Rev. BR） |

@@ -35,7 +35,7 @@ package SSD_RQM_SYS_001 {
             subject s : Parts::Part;
             doc /* 直径 15 ft・長さ 60 ft のペイロードベイにペイロードを収めること。 */
             @RequirementInfo { document = "SSD-REQ-SYS-001"; valueText = "直径 15 ft × 長さ 60 ft"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::inspect; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::inspect; status = "根拠あり"; }
         }
         requirement <'REQ-SYS-04'> REQ_SYS_04 {
             subject s : Parts::Part;
@@ -47,7 +47,7 @@ package SSD_RQM_SYS_001 {
             subject s : Parts::Part;
             doc /* 最大8人の乗員を運べること。 */
             @RequirementInfo { document = "SSD-REQ-SYS-001"; valueText = "8人（実績）"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'REQ-SYS-06'> REQ_SYS_06 {
             subject s : Parts::Part;
@@ -335,7 +335,7 @@ package SSD_RQM_SYS_001 {
             subject s : Parts::Part;
             doc /* 火災・消火や生命維持の機器の喪失に対し、生命維持の Go/No-Go 基準（A17-1001）でアボート・MDF・次の PLS を判断すること。 */
             @RequirementInfo { document = "SSD-REQ-ECLSS-001"; valueText = "A17-1001"; phases = "PH-2（上昇）・PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ECLSS-13'> REQ_ECLSS_13 {
             subject s : Parts::Part;
@@ -765,7 +765,7 @@ package SSD_RQM_SYS_001 {
         }
         requirement <'REQ-APU-07'> REQ_APU_07 {
             subject s : Parts::Part;
-            doc /* 各 APU・油圧系に独立した水噴霧ボイラを持ち、冗長な制御器で潤滑油を約 250°F、作動油を 210〜220°F に自動で保つこと。 */
+            doc /* 各 APU・油圧系に独立した水噴霧ボイラを持ち、上昇中の凍結を防ぐ PGME と水の混合液（PGME 47%・水 53%）を噴霧して、冗長な制御器で潤滑油を約 250°F、作動油を 210〜220°F に自動で保つこと。 */
             @RequirementInfo { document = "SSD-REQ-APU-001"; valueText = "潤滑油 約 250°F・作動油 210〜220°F"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-6（再突入）・PH-7（着陸後）"; }
             @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
@@ -857,7 +857,7 @@ package SSD_RQM_SYS_001 {
             subject s : Parts::Part;
             doc /* 軌道上の姿勢を管理して、TPS の接着層の温度を −170°F より高く、再突入開始（EI）の最大許容温度未満に保つこと。 */
             @RequirementInfo { document = "SSD-REQ-TPS-001"; valueText = "接着層 > −170°F、EI の最大許容温度未満"; phases = "PH-3（軌道）・PH-4（離脱準備）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-TPS-04'> REQ_TPS_04 {
             subject s : Parts::Part;

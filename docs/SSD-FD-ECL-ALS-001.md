@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-ALS-001 |
 | 表題 | エアロック支援系（ALS）機能説明書 |
-| 版・日付 | Rev. J／2026-10-09 |
+| 版・日付 | Rev. K／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -17,11 +17,11 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-ECL-ALS-01 | エアロックはミッドデッキにあり、EMUを着用した乗員が乗員室を減圧せずにペイロードベイへ出られるようにする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） |
-| F-ECL-ALS-02 | エアロック支援は、減圧・再与圧、EVA機器の補給、液冷服の水冷却、EVA機器の点検、着用、通信を提供する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） |
-| F-ECL-ALS-03 | オービタは、サービス・冷却アンビリカル（SCU）を介して、EVA準備時と終了後のEMUへ電力、酸素、液冷服の冷却、水を供給する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） |
-| F-ECL-ALS-04 | EVA前は乗員室を14.7 psiaから12.5 psiaへ下げ、プレブリーズの後に10.2 psiaへ減圧する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） |
-| F-ECL-ALS-05 | エアロックは2段階（5 psia、0 psia）で減圧し、エアロック減圧弁から船外へ排気する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） |
+| F-ECL-ALS-01 | 外部エアロックは、EMUを着用した乗員がミッドデッキの乗員室から短いトンネルを通り、乗員室を減圧せずにペイロードベイへ出られるようにする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/451） |
+| F-ECL-ALS-02 | エアロック支援は、減圧・再与圧、EVA機器の補給、液冷服の水冷却、EVA機器の点検、着用、通信を提供する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/452） |
+| F-ECL-ALS-03 | オービタは、サービス・冷却アンビリカル（SCU）を介して、EVA準備時と終了後のEMUへ電力、酸素、液冷服の冷却、水を供給する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/456） |
+| F-ECL-ALS-04 | EVA前は、クイックドンマスクを着けてプレブリーズを始め、乗員室を14.7 psiから10.2 psiへ減圧する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460） |
+| F-ECL-ALS-05 | エアロックは2段階（5 psia、0 psia）で減圧し、エアロック減圧弁から船外へ排気する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=175） |
 | F-ECL-ALS-06 | EMUの携帯生命維持装置は、酸素、電力用バッテリ、冷却用の水、CO2除去用の水酸化リチウムを7時間分持つ。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） |
 | F-ECL-ALS-07 | シャトルの段階減圧プロトコルでは、乗員室を14.7から10.2 psiaへ下げて空気を酸素26.5%に富化し、最初の適用はSTS-41B（1984年2月）である。（出典: https://www.nasa.gov/wp-content/uploads/2023/03/conkin-prebreathe-overview-tp216147-2011.pdf） |
 | F-ECL-ALS-08 | 外部エアロックには内側・EV・ドッキングの3枚のハッチがあり、各ハッチは2個の均圧弁と両側の差圧計を持ち、乗員室側へ開いて閉じたときに圧力で密着する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/452） |
@@ -33,15 +33,15 @@
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-ECL-04 | 圧力制御系（PCS／ARPCS） | 推進薬・流体 | 受信 | SCU接続時は、オービタの酸素系から900±500 psiaの酸素がエアロック盤AW82Bを通じて供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-PCS-05 |
-| IF-ECL-13 | 給水・廃水系（H2O） | 推進薬・流体 | 受信 | タンクA・Bの水は、エアロックでのEMU補給に使われる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）飲料水は16±0.5 psiでEMUの給水リザーバへ送られる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ALS-03 下位: IF-H2O-15 |
-| IF-ECL-15 | 大気再生系（ARS） | 熱 | 送信 | 水冷却ループの経路には液冷服（LCG）熱交換器が含まれる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-ARS-22 |
+| IF-ECL-04 | 圧力制御系（PCS／ARPCS） | 推進薬・流体 | 受信 | SCU接続時は、オービタの酸素系から900±500 psiaの酸素がエアロック盤AW82Bを通じて供給される。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=176） | 下位: IF-PCS-05 |
+| IF-ECL-13 | 給水・廃水系（H2O） | 推進薬・流体 | 受信 | タンクA・Bの水は、エアロックでのEMU補給に使われる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398）飲料水は16±0.5 psiでEMUの給水リザーバへ送られる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ALS-03 下位: IF-H2O-15 |
+| IF-ECL-15 | 大気再生系（ARS） | 熱 | 送信 | 水冷却ループの経路には液冷服（LCG）熱交換器が含まれる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/379） | 下位: IF-ARS-22 |
 | IF-ECL-16 | 電力系（EPS） | 電力（28 VDC） | 受信 | エアロック盤AW18Hは、主母線AまたはBの28 VDCから17±0.5 VDC・5 AをEMUへ供給し、EVA後はPLSSのバッテリを充電する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 上位: IF-ORB-14 下位: IF-ALS-05 下位: IF-ALS-08 下位: IF-ALS-09 |
-| IF-ECL-17 | 乗員室（制御対象） | 推進薬・流体 | 双方向 | エアロックの再与圧は、内側ハッチの均圧弁でエアロックと乗員室の圧力を等しくして行う。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html）EVA前は乗員室を14.7 psiaから12.5 psiaを経て10.2 psiaへ減圧する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ALS-01 |
-| IF-ECL-20 | EMU（船外活動ユニット） | 推進薬・流体 | 双方向 | オービタは、サービス・冷却アンビリカル（SCU）を介して、EVA準備時と終了後のEMUへ電力、酸素、液冷服の冷却、水を供給する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 上位: IF-ORB-45 下位: IF-ALS-06 下位: IF-ALS-07 |
-| IF-ECL-26 | 廃棄物収集系（WCS） | 推進薬・流体 | 送信 | WCSは、エアロックからのEMU凝縮水を処理して廃水タンクへ移す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-ALS-04 |
-| IF-ECL-27 | 大気再生系（ARS） | 推進薬・流体 | 受信 | EVA以外の期間は、空気循環系がダクトを通じてエアロックへ調整空気を送る。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ARS-13 |
-| IF-ECL-30 | 宇宙空間（船外） | 推進薬・流体 | 送信 | エアロックの減圧は2段階（5 psia、0 psia）で行い、エアロック減圧弁から船外へ排気する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ALS-02 |
+| IF-ECL-17 | 乗員室（制御対象） | 推進薬・流体 | 双方向 | エアロックの再与圧は、内側ハッチの均圧弁でエアロックと乗員室の圧力を等しくして行う。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/452）EVA前は乗員室を14.7 psiから10.2 psiへ減圧する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460） | 下位: IF-ALS-01 |
+| IF-ECL-20 | EMU（船外活動ユニット） | 推進薬・流体 | 双方向 | オービタは、サービス・冷却アンビリカル（SCU）を介して、EVA準備時と終了後のEMUへ電力、酸素、液冷服の冷却、水を供給する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/456） | 上位: IF-ORB-45 下位: IF-ALS-06 下位: IF-ALS-07 |
+| IF-ECL-26 | 廃棄物収集系（WCS） | 推進薬・流体 | 送信 | WCSは、エアロックからのEMU凝縮水を処理して廃水タンクへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） | 下位: IF-ALS-04 |
+| IF-ECL-27 | 大気再生系（ARS） | 推進薬・流体 | 受信 | EVA以外の期間は、空気循環系がダクトを通じてエアロックへ調整空気を送る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/456） | 下位: IF-ARS-13 |
+| IF-ECL-30 | 宇宙空間（船外） | 推進薬・流体 | 送信 | エアロックの減圧は2段階（5 psia、0 psia）で行い、エアロック減圧弁から船外へ排気する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=175） | 下位: IF-ALS-02 |
 | IF-ECL-38 | データ処理系（DPS） | データ・指令 | 送信 | エアロックの雰囲気、ベスティビュール減圧弁、水配管、構造ヒータの計測値を、SM OPS 2のSPEC 177 EXTERNAL AIRLOCKに表示する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=189） | 上位: IF-ORB-19 下位: IF-ALS-10 |
 
 ## 4. 下位文書
@@ -94,6 +94,12 @@
 
 > **注記** エアロックの減圧・再与圧の状態（図182）と SCU を通る EMU への流れ（図180）は [SSD-EMU-EVA-001](SSD-EMU-EVA-001.md) に示す（SysML v2 テキスト：SysML/SSD-EMU-EVA-001.sysml）。
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はエアロックがミッドデッキにあるとしていたが、SCOM（OI-33）は外部エアロックとし、乗員がミッドデッキの乗員室から短いトンネルを通ってペイロードベイへ出るとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/451）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は乗員室を14.7 psiaから12.5 psiaへ下げ、プレブリーズの後に10.2 psiaへ減圧するとしていたが、SCOM（OI-33）は12.5 psiaで止める段階を挙げず、クイックドンマスクでプレブリーズをしながら乗員室を14.7 psiから10.2 psiへ減圧するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は乗員室を14.7 psiaから12.5 psiaを経て10.2 psiaへ減圧するとしていたが、SCOM（OI-33）は12.5 psiaを経る段階を挙げず、乗員室を14.7 psiから10.2 psiへ減圧するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460）
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Airlock Support（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html
@@ -108,6 +114,11 @@
 10. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.11節 External Airlock・External Airlock Hatches（PDF p452） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/452
 11. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 6.4節 Airlock Booster Fans and Ductwork（PDF p178） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=178
 12. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 図6-7 Airlock ductwork configuration・6.5節 Heaters（PDF p179） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=179
+13. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p451） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/451
+14. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p460） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460
+15. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 6.2節 Equalization, Depress, and Isolation Valves（続き）（PDF p175） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=175
+16. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water Tank Outlet Valves（PDF p398） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398
+17. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Waste Management System（PDF p755） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755
 
 ## 8. 変更履歴
 
@@ -124,3 +135,4 @@
 | Rev. H | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. I | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
 | Rev. J | 2026-10-09 | EMU の構造・内部ブロック・状態定義書 SSD-EMU-EVA-001 への参照を注記（Rev. BM） |
+| Rev. K | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（14文。うち本文を改めた3文に注記）（Rev. BR） |

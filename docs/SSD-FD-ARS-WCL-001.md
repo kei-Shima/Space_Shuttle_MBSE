@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-WCL-001 |
 | 表題 | 水冷却ループ（WCL）機能説明書 |
-| 版・日付 | Rev. E／2026-10-09 |
+| 版・日付 | Rev. F／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -36,7 +36,7 @@
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-TCS-01 | 熱交換器・コールドプレート網 | 熱 | 送信 | ATCSは、水冷却ループとフレオン21冷却ループの熱交換器（インターチェンジャ）でARSの熱を受け取る。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 上位: IF-ECL-06 下位: IF-WCL-20 |
+| IF-TCS-01 | 熱交換器・コールドプレート網 | 熱 | 送信 | ATCSは、水冷却ループとフレオン21冷却ループの熱交換器（インターチェンジャ）でARSの熱を受け取る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369） | 上位: IF-ECL-06 下位: IF-WCL-20 |
 | IF-ARS-06 | キャビン温湿度制御 | 熱 | 受信 | キャビン熱交換器で空気の熱を水冷却ループへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/375） | 下位: IF-THC-03 |
 | IF-ARS-07 | アビオニクスベイ空冷×3 | 熱 | 受信 | 各アビオニクスベイの熱交換器で、水冷却ループがベイファン出口空気を冷却する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376） | 下位: IF-AVB-10 |
 | IF-ARS-08 | IMU空冷 | 熱 | 受信 | IMUファン出口空気はフライトデッキのIMU熱交換器を通り、水冷却ループで冷却される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376） | 下位: IF-IMU-08 |
@@ -120,6 +120,7 @@
 18. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-1001B Thermal Go/No-Go Criteria（ARS H2O）（PDF p2149） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2149
 19. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.5.1節 図3-20 SPEC 88 APU/ENVIRON THERMAL（PDF p82） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=82
 20. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p89） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=89
+21. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p369） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369
 
 ## 8. 変更履歴
 
@@ -131,3 +132,4 @@
 | Rev. C | 2026-10-01 | IF-ARS-36 の上位を IF-ECL-39 に付け替え（Rev. M） |
 | Rev. D | 2026-10-08 | 内部ブロック図の機能ブロックをまたぐ流れの IF IF-ARS-42 を足した（GAP-09 の解消）（Rev. BI） |
 | Rev. E | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記（Rev. BL） |
+| Rev. F | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（1文）（Rev. BR） |

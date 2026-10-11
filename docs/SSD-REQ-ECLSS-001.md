@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-ECLSS-001 |
 | 表題 | 環境制御・生命維持（ECLSS）要求書（L2） |
-| 版・日付 | Rev. B／2026-10-08 |
+| 版・日付 | Rev. D／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -60,10 +60,10 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | SSD-FD-ECLSS-001 | F-ECLSS-04 | 乗員室の空気は水酸化リチウム／活性炭キャニスタを通され、二酸化炭素が除去される。 | REQ-ECLSS-06 | — |
 | SSD-FD-ECLSS-001 | F-ECLSS-05 | フラッシュエバポレータ（FES）は上昇・再突入時の主冷却源で、軌道上では放熱器の補助として使われる。 | REQ-ECLSS-08 | — |
 | SSD-FD-ECLSS-001 | F-ECLSS-06 | 再突入で高度約100,000 ft以下になるとFESでは十分に冷却できなくなり、以降は地上冷却が接続されるまでアンモニアボイラがフレオンループの熱を排出する。 | REQ-ECLSS-08 | — |
-| SSD-FD-ECL-ALS-001 | F-ECL-ALS-01 | エアロックはミッドデッキにあり、EMUを着用した乗員が乗員室を減圧せずにペイロードベイへ出られるようにする。 | REQ-ECLSS-04 | — |
+| SSD-FD-ECL-ALS-001 | F-ECL-ALS-01 | 外部エアロックは、EMUを着用した乗員がミッドデッキの乗員室から短いトンネルを通り、乗員室を減圧せずにペイロードベイへ出られるようにする。 | REQ-ECLSS-04 | — |
 | SSD-FD-ECL-ALS-001 | F-ECL-ALS-02 | エアロック支援は、減圧・再与圧、EVA機器の補給、液冷服の水冷却、EVA機器の点検、着用、通信を提供する。 | REQ-ECLSS-04 | — |
 | SSD-FD-ECL-ALS-001 | F-ECL-ALS-03 | オービタは、サービス・冷却アンビリカル（SCU）を介して、EVA準備時と終了後のEMUへ電力、酸素、液冷服の冷却、水を供給する。 | REQ-ECLSS-04 | — |
-| SSD-FD-ECL-ALS-001 | F-ECL-ALS-04 | EVA前は乗員室を14.7 psiaから12.5 psiaへ下げ、プレブリーズの後に10.2 psiaへ減圧する。 | REQ-ECLSS-04 | — |
+| SSD-FD-ECL-ALS-001 | F-ECL-ALS-04 | EVA前は、クイックドンマスクを着けてプレブリーズを始め、乗員室を14.7 psiから10.2 psiへ減圧する。 | REQ-ECLSS-04 | — |
 | SSD-FD-ECL-ALS-001 | F-ECL-ALS-05 | エアロックは2段階（5 psia、0 psia）で減圧し、エアロック減圧弁から船外へ排気する。 | REQ-ECLSS-04 | — |
 | SSD-FD-ECL-ALS-001 | F-ECL-ALS-06 | EMUの携帯生命維持装置は、酸素、電力用バッテリ、冷却用の水、CO2除去用の水酸化リチウムを7時間分持つ。 | （なし） | 要求なしで妥当：同じ下位機能の要求（REQ-ECLSS-04・REQ-ECLSS-05・REQ-ECLSS-10）が受け持つ構成・運用の記述。 |
 | SSD-FD-ECL-ALS-001 | F-ECL-ALS-07 | シャトルの段階減圧プロトコルでは、乗員室を14.7から10.2 psiaへ下げて空気を酸素26.5%に富化し、最初の適用はSTS-41B（1984年2月）である。 | REQ-ECLSS-04 | — |
@@ -84,13 +84,13 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-02 | 同一構成の2系統のフレオン21冷却ループ、アビオニクス用コールドプレート網、液液熱交換器、放熱器・フラッシュエバポレータ（FES）・アンモニアボイラの3種のヒートシンクから成る。 | REQ-ECLSS-08・REQ-ECLSS-09 | — |
 | SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-03 | 地上ではGSE熱交換器で排熱し、打上げ後約125秒でFESを起動し、軌道上でペイロードベイドアを開くまでFESで排熱する。 | REQ-ECLSS-08 | — |
 | SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-04 | 軌道上は放熱器で排熱し、熱負荷と姿勢の組合せで放熱器の能力を超えるとFESが自動的に補助する。 | REQ-ECLSS-08 | — |
-| SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-05 | 再突入では高度約100,000 ftまでFES、それ以下は地上冷却が接続されるまでアンモニアボイラで排熱する。 | REQ-ECLSS-08 | — |
-| SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-06 | 基本構成の放熱器は21,500 Btu/hの排熱を想定し、4枚目のパネルを追加すると29,000 Btu/hとなる。 | REQ-ECLSS-08 | — |
+| SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-05 | 再突入ではV = 12k（高度約175,000 ft）までFESで排熱し、その後は放熱器のコールドソークを滑走の終わりまで主な冷却に使い、コールドソークが尽きた後は地上冷却が接続されるまでアンモニアボイラで排熱する。 | REQ-ECLSS-08 | — |
+| SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-06 | 放熱器は左右のペイロードベイドアの内側に4枚ずつのパネルを持ち、最大の排熱能力は61,100 Btu/hである。 | REQ-ECLSS-08 | — |
 | SSD-FD-ECL-ATCS-001 | F-ECL-ATCS-07 | フレオンは中胴のコールドプレート網と後部アビオニクスベイ4・5・6を通り、電子機器を冷却する。 | REQ-ECLSS-08 | — |
 | SSD-FD-ECL-CAB-001 | F-ECL-CAB-01 | 乗員室は14.7±0.2 psiaに与圧され、平均で窒素80%・酸素20%の混合気に維持される。 | REQ-ECLSS-01 | — |
 | SSD-FD-ECL-CAB-001 | F-ECL-CAB-02 | 相対湿度、二酸化炭素・一酸化炭素濃度、温度、換気はARSが制御する。 | REQ-ECLSS-05 | — |
 | SSD-FD-ECL-CAB-001 | F-ECL-CAB-03 | EVA前には乗員室圧を10.2 psiaまで下げ、EVA終了後に14.7 psiaへ戻す。 | REQ-ECLSS-04 | — |
-| SSD-FD-ECL-CAB-001 | F-ECL-CAB-04 | 乗員室の容積は2,300 ft³である。 | REQ-ECLSS-01 | — |
+| SSD-FD-ECL-CAB-001 | F-ECL-CAB-04 | 乗員室の容積は2,475 ft³であり、外部エアロックを合わせると約2,703 ft³となる。 | REQ-ECLSS-01 | — |
 | SSD-FD-ECL-CAB-001 | F-ECL-CAB-05 | 乗員室構造の熱容量により、再突入から乗員の退出まで室温は95°Fを超えない。 | REQ-ECLSS-05 | — |
 | SSD-FD-ECL-FDS-001 | F-ECL-FDS-01 | 煙検知・消火機能は、乗員室のアビオニクスベイ、乗員室、Spacelab与圧モジュールに設けられる。 | REQ-ECLSS-11 | — |
 | SSD-FD-ECL-FDS-001 | F-ECL-FDS-02 | イオン化式の検知素子が煙濃度または濃度の変化率を検知して警報を発し、煙濃度の情報をCRTと計器盤L1に表示する。 | REQ-ECLSS-11 | — |
@@ -106,7 +106,7 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | SSD-FD-ECL-FDS-001 | F-ECL-FDS-12 | キャビンまたはベイの両ファンが故障して空気が循環しない場合は、その区画の煙検知を喪失とみなす。空気の循環がないと、火元が感知器から離れていれば煙の粒子が間に合って届かないためである（A17-2）。 | REQ-ECLSS-11 | — |
 | SSD-FD-ECL-H2O-001 | F-ECL-H2O-01 | 給水・廃水系は、FES、乗員の飲用、衛生のための水を供給し、給水系は燃料電池の生成水を、廃水系はキャビン湿度分離器と乗員からの廃水を貯蔵する。 | REQ-ECLSS-10 | — |
 | SSD-FD-ECL-H2O-001 | F-ECL-H2O-02 | ミッドデッキ床下に給水タンク4基と廃水タンク1基があり、各タンクの使用可能容量は165 lbである。 | REQ-ECLSS-10 | — |
-| SSD-FD-ECL-H2O-001 | F-ECL-H2O-03 | 3基の燃料電池は、最大で毎時25 lbの飲料水を生成する。 | REQ-ECLSS-10 | — |
+| SSD-FD-ECL-H2O-001 | F-ECL-H2O-03 | 3基の燃料電池は、最大で毎時25 lbの供給水を生成する。 | REQ-ECLSS-10 | — |
 | SSD-FD-ECL-H2O-001 | F-ECL-H2O-04 | 燃料電池からの水素を含む水は2台の水素分離器を通り、余剰水素の85%が除去される。 | REQ-ECLSS-10 | — |
 | SSD-FD-ECL-H2O-001 | F-ECL-H2O-05 | タンクAに入る水は微生物フィルタを通って約0.5 ppmのヨウ素が添加され、通常は乗員の飲用に使われる。 | REQ-ECLSS-10 | — |
 | SSD-FD-ECL-H2O-001 | F-ECL-H2O-06 | タンクA・Bの水は、エアロックのEMU補給、FES給水系A、船外ダンプに使われる。 | REQ-ECLSS-10 | — |
@@ -125,7 +125,7 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | SSD-FD-ECL-PCS-001 | F-ECL-PCS-10 | 乗員室圧・PPO2・O2/N2流量はO1の計器とSM SYS SUMM 1・DISP 66に表示され、dP/dTが0.08 psi/min以上で低下するとクラクソンが鳴りMASTER ALARM灯が点灯する（SCOM 2.9節）。 | REQ-ECLSS-02 | — |
 | SSD-FD-ECL-PCS-001 | F-ECL-PCS-11 | EVA前の10.2 psia運用では、10.2 psiaのキャビンレギュレータがないため、乗員室圧とPPO2を手動で管理する（訓練マニュアル2.7.3節）。 | REQ-ECLSS-04 | — |
 | SSD-FD-ECL-WCS-001 | F-ECL-WCS-01 | WCSは、無重量環境で乗員の生物系廃棄物を収集・処理する統合システムで、ミッドデッキの乗員出入口ハッチのすぐ後方に置かれる。 | REQ-ECLSS-13 | — |
-| SSD-FD-ECL-WCS-001 | F-ECL-WCS-02 | 糞便と紙類を収集・貯蔵・乾燥し、尿を処理して廃水タンクへ送り、エアロックからのEMU凝縮水も廃水タンクへ移す。 | REQ-ECLSS-13 | — |
+| SSD-FD-ECL-WCS-001 | F-ECL-WCS-02 | 糞便を収集・貯蔵・乾燥し、尿を処理して廃水タンクへ送り、EVAを行うミッションではエアロックからのEMU凝縮水も処理して廃水タンクへ移す。 | REQ-ECLSS-13 | — |
 | SSD-FD-ECL-WCS-001 | F-ECL-WCS-03 | 便器、小便器、ファンセパレータ、臭気・細菌フィルタ、真空ベントのクイックディスコネクト、制御器で構成される。 | REQ-ECLSS-13 | — |
 | SSD-FD-ECL-WCS-001 | F-ECL-WCS-04 | ファンセパレータは搬送空気から液体を分離し、液体は廃水タンクへ、空気は臭気・細菌フィルタを通って乗員室へ戻る。 | REQ-ECLSS-13 | — |
 | SSD-FD-ECL-WCS-001 | F-ECL-WCS-05 | ファンセパレータの制御にはDC電力、運転にはAC電力を使う。 | REQ-ECLSS-13 | — |
@@ -159,7 +159,7 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 
 ## 7. 検証（V&V）
 
-各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（13件のうち根拠あり 12件・根拠なし 1件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
+各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（13件のうち根拠あり 13件・根拠なし 0件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
 
 | ID | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|
@@ -174,8 +174,8 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | REQ-ECLSS-09 | A（解析） | 根拠あり | STS-114 では ATCS のすべてのパラメータが正常な性能を示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
 | REQ-ECLSS-10 | D（実証） | 根拠あり | STS-114 では給水・廃水系が全期間正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
 | REQ-ECLSS-11 | T（試験） | 根拠あり | STS-114 では煙検知系に煙の発生の兆候は無く、消火系は使われなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
-| REQ-ECLSS-12 | A（解析） | 根拠なし | 根拠なし：基準を適用した飛行の判断の実例を示す公開資料を確かめていない。 |
-| REQ-ECLSS-13 | D（実証） | 根拠あり | STS-114 では WCS が満足に働き、乗員から飛行中の異常の報告は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
+| REQ-ECLSS-12 | A（解析） | 根拠あり | STS-69 の Mission Report は、廃水の船外ダンプの能力を失ったときに廃水タンクの空き容量が飛行10日目の早い時刻までもつと見積もり、CWC への移送で飛行を終えるのに足りる空き容量を得たと記す。A17-1001 は、ダンプ能力では空き容量が、RCRS では LiOH キャニスタの数と乗員の人数が EOM を決めると定め、STS-90 の Mission Report は、RCRS の停止で LiOH キャニスタに切り替えたと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2033）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2034）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-69%20Space%20Shuttle%20Mission%20Report.pdf#page=29）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-90%20Space%20Shuttle%20Mission%20Report.pdf#page=8） |
+| REQ-ECLSS-13 | D（実証） | 根拠あり | STS-1 の液の収集不能は、尿のホースのスクリーンの糸くずによる閉塞と臭気・細菌フィルタへの液の持ち越しが原因で、STS-2 の前にスクリーンの変更とインラインの尿フィルタの追加で是正した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=209）改修を重ねた STS-5 では廃棄物収集系が満足に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-5%20Space%20Shuttle%20Program%20Mission%20Report.pdf#page=16）STS-108 でも飛行を通じて満足に働き、乗員は異常な働きを認めなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=34）STS-114 でも満足に働き、乗員から飛行中の異常の報告は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
 
 ## 8. 注記（出典間の相違・構成変更）
 
@@ -184,6 +184,12 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 > **注記** ECLSS の説明書は下位が深く（87件）、本書のトレースの対象は親（SSD-FD-ECLSS-001）と第1段の下位8件（ALS・ARS・ATCS・CAB・FDS・H2O・PCS・WCS）の機能行とした。第2段より下の機能行は、Rev. BK で ECLSS 下位要求書（SSD-RQL-ECL-001）の L3 の要求にトレースした。
 
 > **注記** NASA-STD-3001 との照合：REQ-ECLSS-06（検証の判定 VC-REQ-ECLSS-06 pass）は [V2 6004]（HSI-102）・[V2 6050]（HSI-124） による評価では 不適合。REQ-ECLSS-13（検証の判定 VC-REQ-ECLSS-13 pass）は [V2 7102]（HSI-220） による評価では 不適合。REQ-ECLSS-11（検証の判定 VC-REQ-ECLSS-11 pass）は [V2 9059]（HSI-379） による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
+> **注記** NASA-STD-3001 との照合（Rev. BQ の判定の見直し）：REQ-ECLSS-05（検証の判定 VC-REQ-ECLSS-05 pass）は [V2 6012]（HSI-108）による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
+> **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-ECLSS-13 は STS-1 で廃棄物収集系が液を収集できなくなった（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-1-29）が、原因（スクリーンの閉塞と液の持ち越し）と是正処置が飛行報告にあり、改修後の飛行に満足に働いた記録があるので、判定（pass）と要求の文は変えず、検証の根拠に原因・改修と改修後の記録を足した。後の飛行でも WCS の機器の故障は起きたが、冗長のファンセパレータと手順で収集を続けている。
+
+> **注記** 検証の根拠の調査（Rev. BR）：REQ-ECLSS-12 は検証の根拠が無かったが、公開資料（Mission Report・運用飛行規則の根拠の欄・NASA の文書）を調べ直して根拠を見つけ、検証の状態を根拠ありに改めた。調べた範囲と残る制約は検証定義書 [SSD-VER-SYS-001](SSD-VER-SYS-001.md) の注記に示す。
 
 ## 9. 参考文献
 
@@ -206,6 +212,12 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 17. STS-114 Mission Report Active Thermal Control System（PDF p49） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49
 18. JSC-63290 STS-114 Space Shuttle Mission Report（2006年） Airlock System（PDF p50） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50
 19. JSC-63290 STS-114 Space Shuttle Mission Report（2006年） Supply and Waste Water System（続き）（PDF p51） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51
+20. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p209） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=209
+21. STS-5 Space Shuttle Program Mission Report（NASA JSC、1982年12月、25頁、OCR のテキスト層、1,498,456 バイト） （PDF p16） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-5%20Space%20Shuttle%20Program%20Mission%20Report.pdf#page=16
+22. STS-108 Mission Report （PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=34
+23. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-1001 LIFE SUPPORT GO/NO-GO CRITERIA（PDF p2034） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2034
+24. NSTS-37402 STS-69 Space Shuttle Mission Report（NASA JSC、1995年12月、59頁、13,289,517 バイト。OCR のテキスト層） （PDF p29） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-69%20Space%20Shuttle%20Mission%20Report.pdf#page=29
+25. NSTS-37420 STS-90 Space Shuttle Mission Report（NASA JSC、1998年6月、49頁、3,438,012 バイト。OCR のテキスト層） （PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-90%20Space%20Shuttle%20Mission%20Report.pdf#page=8
 
 ## 10. 変更履歴
 
@@ -214,3 +226,5 @@ ECLSSの機能説明書 9 件の機能行 79 件と、要求の割付先の IF �
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 13件、機能行 79件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-06 | NASA-STD-3001 による評価との食い違い 3件の要求を注記（判定は据え置き）（Rev. AY） |
 | Rev. B | 2026-10-08 | 第2段より下の機能行のトレースを ECLSS 下位要求書 SSD-RQL-ECL-001 に移したことを書いた（Rev. BK） |
+| Rev. C | 2026-10-11 | NASA-STD-3001 による評価との食い違い 1件の要求を注記（判定は据え置き。Rev. BQ の照合表の判定の見直し）、REQ-ECLSS-13 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |
+| Rev. D | 2026-10-11 | 引いている機能・IF の文を、出典の更新で改めた文に合わせた（7か所）、REQ-ECLSS-12 の検証の根拠を見つけ、検証の状態を根拠ありに改めた（Rev. BR） |

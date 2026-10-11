@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-NH3-001 |
 | 表題 | アンモニアボイラ（NH3）機能説明書 |
-| 版・日付 | Rev. C／2026-10-01 |
+| 版・日付 | Rev. D／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ATCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -17,19 +17,19 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-TCS-NH3-01 | アンモニアボイラは、アンモニアの低い沸点を利用して、高度100,000 ft以下の再突入中にフレオン21ループを冷却する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-NH3-02 | 独立した2系統のアンモニア貯蔵・制御系が、1つの共通ボイラへ供給する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-NH3-03 | 各タンクは49 lbのアンモニアを持ち、ヘリウムで550〜83 psiaに加圧される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-NH3-04 | 制御器はボイラ出口のフレオン温度を34°Fに保ち、31°Fを10秒超下回ると主制御器から副制御器へ自動で切り替わる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-TCS-NH3-05 | 運転は着陸・滑走後も続き、地上冷却カートがGSE熱交換器に接続されるまで排熱する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-TCS-NH3-01 | アンモニアボイラは、アンモニアの低い沸点を利用して、再突入中の高度400,000 ft未満または着陸後の地上でフレオン21ループを冷却する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391） |
+| F-TCS-NH3-02 | 独立した2系統のアンモニア貯蔵・制御系が、1つの共通ボイラへ供給する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391） |
+| F-TCS-NH3-03 | 各タンクは49 lbのアンモニアを持ち、ヘリウムで最大運用圧力550 psiaに加圧される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392） |
+| F-TCS-NH3-04 | 主制御器はボイラ出口のフレオン温度を35±3°F、副制御器は34±3°Fに制御し、PRI/GPCの構成で31.25°Fを10秒超下回ると主制御器から副制御器へ自動で切り替わる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392） |
+| F-TCS-NH3-05 | アンモニアボイラは着陸後、地上冷却カートがGSE熱交換器に接続されるまで使われ、再突入で放熱器のコールドソークを使う場合は、放熱器出口温度が55°Fに達した着陸後に起動する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392） |
 | F-TCS-NH3-06 | 初期の飛行では、アンモニアボイラ系の問題も報告されている。（出典: https://ntrs.nasa.gov/citations/19920039157） |
 
 ## 3. インタフェース
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-TCS-10 | フレオン21冷却ループ×2 | 熱 | 受信 | アンモニアボイラは、再突入で高度100,000 ftを下回ってからフレオン21ループを冷却する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | — |
-| IF-TCS-14 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 気化したアンモニアは、垂直尾翼の右下付近の上部後部胴体から船外へ排出される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 上位: IF-ECL-21 |
+| IF-TCS-10 | フレオン21冷却ループ×2 | 熱 | 受信 | アンモニアボイラは、再突入でオービタが高度400,000 ftを下回ってから、または着陸後の地上で、フレオン21ループを冷却する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391） | — |
+| IF-TCS-14 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 気化したアンモニアは、垂直尾翼の右下付近の上部後部胴体から船外へ排出される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392） | 上位: IF-ECL-21 |
 | IF-TCS-19 | DPS・アビオニクス | データ・指令 | 受信 | 選択したアンモニア制御器（通常はB）は、オービタがMM 304で高度120,000 ftを降下通過するときにBFS計算機がオンにする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392） | 上位: IF-ECL-28 |
 
 ## 4. 関連文書
@@ -47,12 +47,23 @@
 
 > **注記** 出典の更新（1988年版・転載版 → SCOM OI-33）：1988年版の資料は、アンモニア制御器Aを高度100,000 ft通過時にBFS計算機がオンにするとしていた。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392）
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は再突入で高度100,000 ftを下回ってから冷却するとしていたが、SCOM（OI-33）は再突入中の高度400,000 ft未満または着陸後の地上で冷却するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は高度100,000 ft以下の再突入中に冷却するとしていたが、SCOM（OI-33）は再突入中の高度400,000 ft未満または着陸後の地上で冷却するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はヘリウムによる加圧を550〜83 psiaとしていたが、SCOM（OI-33）は最大運用圧力550 psiaとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は制御温度を34°F、切替えのしきい値を31°Fとしていたが、SCOM（OI-33）は主制御器の制御温度を35±3°F、副制御器を34±3°F、切替えのしきい値を31.25°Fとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は運転が着陸・滑走後も続くとしていたが、SCOM（OI-33）は放熱器のコールドソークを使う再突入ではアンモニア系を着陸後（放熱器出口温度55°F）に起動し、地上冷却カートの接続まで使うとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392）
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
 2. NTRS 19920039157 Shuttle Orbiter ATCS design and flight experience（SAE 911366） — https://ntrs.nasa.gov/citations/19920039157
 3. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p392） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392
 4. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Active Thermal Control System（Freon Loops）（PDF p382） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382
+5. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p391） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391
 
 ## 7. 変更履歴
 
@@ -62,3 +73,4 @@
 | Rev. A | 2026-09-25 | 関連文書にTC-26（NSTS-12820 Vol. A 運用飛行規則）を追加 |
 | Rev. B | 2026-09-26 | 関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加 |
 | Rev. C | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（2文。うち本文を改めた1文に注記）（Rev. Q） |
+| Rev. D | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（7文。うち本文を改めた5文に注記）（Rev. BR） |

@@ -15,7 +15,7 @@ package SSD_EPB_EVA_001 {
         attribute <'EPB-P05'> p05 : Real = 1000.0 { doc /* EMU の設計の代謝率（Btu/hr） */ }
         attribute <'EPB-P06'> p06 : Real = 800.0 { doc /* EV 乗員の平均の代謝率（Btu/hr） */ }
         attribute <'EPB-P07'> p07 : Real = 0.0739 { doc /* 乗員1人の O2 の消費（代謝 450 Btu/hr）（lb/man-hour） */ }
-        attribute <'EPB-P08'> p08 : Real = 0.0882 { doc /* 乗員1人の CO2 の生成（代謝 450 Btu/hr）（lb/man-hour） */ }
+        attribute <'EPB-P08'> p08 : Real = 7000.0 { doc /* LiOH の大きさを決めた代謝の量（Btu） */ }
         attribute <'EPB-P09'> p09 : Real = 7.0 { doc /* EVA の設計の時間（h） */ }
         attribute <'EPB-P10'> p10 : Real = 4.3 { doc /* 服の圧力（EVA）（psid） */ }
         attribute <'EPB-P11'> p11 : Real = 1.65 { doc /* R 値の許容の上限（—） */ }
@@ -26,9 +26,9 @@ package SSD_EPB_EVA_001 {
         hours == capacity / (useRate * metabolicRate / 450.0)
     }
     constraint def <'EPB-M02'> LiohDuration {
-        doc /* LiOH の持続時間：t = C ÷ (q × M ÷ 450) */
-        in attribute capacity : Real; in attribute co2Rate : Real; in attribute metabolicRate : Real; in attribute hours : Real;
-        hours == capacity / (co2Rate * metabolicRate / 450.0)
+        doc /* LiOH の持続時間：t = E ÷ M（E：LiOH の大きさを決めた代謝の量） */
+        in attribute designEnergy : Real; in attribute metabolicRate : Real; in attribute hours : Real;
+        hours == designEnergy / metabolicRate
     }
     constraint def <'EPB-M03'> BatteryDuration {
         doc /* 電池の持続時間：t = C ÷ I */
@@ -48,7 +48,7 @@ package SSD_EPB_EVA_001 {
     part def DesignEva :> EmuConsumables {
         doc /* 設計の代謝率（1,000 Btu/hr）・電池 3.5 A の持続時間（本書の計算） */
         attribute o2Hours : Real = 7.4107;
-        attribute liohHours : Real = 7.5510;
+        attribute liohHours : Real = 7.0000;
         attribute batteryHours : Real = 9.1429;
         assert constraint battery : BatteryDuration { in attribute :>> capacity = p03; in attribute :>> current = p04; in attribute :>> hours = batteryHours; }
     }
@@ -98,20 +98,20 @@ package SSD_EPB_EVA_001 {
     }
     package Evaluations {
         requirement def <'EPB-E01'> Eval01 {
-            doc /* 一次 O2 の持続時間（設計の代謝 1,000 Btu/hr）：基準 EVA の設計の 7 時間＋予備 30 分（A15-154）。モデル 7.41 h。判定：ほぼ満たす（予備の 30 分に 0.1 h 足りない） */
-            attribute limit : Real = 7.5;
+            doc /* 一次 O2 の持続時間（設計の代謝 1,000 Btu/hr）：基準 EVA の設計の合計 7 時間（予備 30 分を含む）（A15-154）。モデル 7.41 h。判定：満たす */
+            attribute limit : Real = 7.0;
             attribute modelValue : Real = 7.4107;
             require constraint { modelValue >= limit }
         }
         requirement def <'EPB-E02'> Eval02 {
-            doc /* LiOH の持続時間（設計の代謝 1,000 Btu/hr）：基準 EVA の設計の 7 時間＋予備 30 分（A15-154）。モデル 7.55 h。判定：満たす */
-            attribute limit : Real = 7.5;
-            attribute modelValue : Real = 7.551;
+            doc /* LiOH の持続時間（設計の代謝 1,000 Btu/hr）：基準 EVA の設計の合計 7 時間（予備 30 分を含む）（A15-154）。モデル 7.00 h。判定：満たす（設計の 7 時間ちょうど） */
+            attribute limit : Real = 7.0;
+            attribute modelValue : Real = 7.0;
             require constraint { modelValue >= limit }
         }
         requirement def <'EPB-E03'> Eval03 {
-            doc /* 電池の持続時間（3.5 A）：基準 EVA の設計の 7 時間＋予備 30 分（A15-154）。モデル 9.14 h。判定：満たす */
-            attribute limit : Real = 7.5;
+            doc /* 電池の持続時間（3.5 A）：基準 EVA の設計の合計 7 時間（予備 30 分を含む）（A15-154）。モデル 9.14 h。判定：満たす */
+            attribute limit : Real = 7.0;
             attribute modelValue : Real = 9.1429;
             require constraint { modelValue >= limit }
         }
@@ -128,7 +128,7 @@ package SSD_EPB_EVA_001 {
             require constraint { modelValue <= limit }
         }
         requirement def <'EPB-E06'> Eval06 {
-            doc /* R 値（服内の4時間の前呼吸（選択肢3））：基準 R ≤ 1.65（A13-103）。モデル 1.70。判定：満たさない */
+            doc /* R 値（服内の4時間の前呼吸（選択肢3））：基準 R ≤ 1.65（A13-103）。モデル 1.70。判定：240 分ちょうどでは上回る（服の圧力に達するまでの O2 の 7〜16 分を含めると 1.65〜1.68） */
             attribute limit : Real = 1.65;
             attribute modelValue : Real = 1.7;
             require constraint { modelValue <= limit }
@@ -146,7 +146,7 @@ package SSD_EPB_EVA_001 {
             require constraint { modelValue <= limit }
         }
         requirement def <'EPB-E09'> Eval09 {
-            doc /* 減圧症の確率（地上の室の試験）：基準 4% 未満（95% の信頼度）（HSI-105）。モデル 地上の試験の症状 21〜32%（手順により）。判定：比べられない（症状の率で、基準の確率と量が違う） */
+            doc /* 減圧症の確率（地上の室の試験）：基準 4% 未満（95% の信頼度）（HSI-105）。モデル 地上の試験の症状 21〜32%（手順により）。判定：満たさない（症状の発生 21〜32% は 4% を超える。照合表の HSI-105 は Rev. BQ で不適合にした） */
         }
         #CriterionFrom dependency <'EPB-E09>HSI-105'> from Eval09 to SSD_HSI_SYS_001::V2Criteria::V2_6008;
     }

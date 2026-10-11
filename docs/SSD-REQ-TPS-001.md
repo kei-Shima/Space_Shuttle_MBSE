@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-TPS-001 |
 | 表題 | 熱防護・熱制御（TPS）要求書（L2） |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -77,13 +77,13 @@ TPSの機能説明書 3 件の機能行 16 件と、要求の割付先の IF 行
 
 ## 7. 検証（V&V）
 
-各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（7件のうち根拠あり 6件・根拠なし 1件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
+各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（7件のうち根拠あり 7件・根拠なし 0件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
 
 | ID | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|
-| REQ-TPS-01 | A（解析） | 根拠あり | STS-125 では、TPS の点検で再突入の加熱が正常であったことが示された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=58） |
-| REQ-TPS-02 | I（検査） | 根拠あり | STS-125 では、下部の構造の温度データが正常な再突入の加熱を示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=58） |
-| REQ-TPS-03 | A（解析） | 根拠なし | 根拠なし：接着層の温度の飛行の実績値を示す公開資料が無い。STEP の予測と飛行データの比較（A18-401）で検証する想定とする。 |
+| REQ-TPS-01 | A（解析） | 根拠あり | STS-125 では TPS の全体の点検が正常な加熱を示し、再突入時の構造の最高温度は下部胴体前方左の 190.4°F であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=58）同じ表で、OMS ポッド側面前方は左 70.1°F・右 54.6°F であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=59）STS-1 の OMS ポッドのタイルの喪失は機体上で切り分けた未高密度化のタイルが原因で、切り分けをやめてタイルを高密度化した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=182）グラファイトエポキシの剥離は FRSI の部位の短時間の高温によるもので、後部パネルを交換して HRSI タイルで覆った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=208）STS-2 ではこの改修が満足に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=92） |
+| REQ-TPS-02 | I（検査） | 根拠あり | STS-1 でひどく劣化した OMS ポッド側面の FRSI は STS-2 の前に HRSI タイルに替え、この改修は満足だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=92）1985年の JSC の論文は、OMS ポッドなど局所の部位の温度が予想より高く、後の機体には TPS の変更が要ったと記す。（出典: https://ntrs.nasa.gov/api/citations/19850008670/downloads/19850008670.pdf#page=12）STS-114 の飛行後の点検は、オービタの TPS の全体が正常に見え、過大な局所加熱のしるしが無いことを示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=55） |
+| REQ-TPS-03 | A（解析） | 根拠あり | STS-1 の Mission Report は、再突入前の冷却の姿勢で底面の接着層が再突入開始で 3〜37°F（要求 60°F）に収まったと記し、STS-3 の Mission Report は、テールを太陽に向けた低温の姿勢の接着層の温度（+4〜−62°F）を予測と比べている。飛行規則 A18-401 の根拠の欄は、STEP の予測の精度を過去の飛行データとの比較で定めたと記し、STS-122 の Mission Report は、EI の接着層の限界まで 2°F 以内という予測で熱調整の姿勢を変えた例を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2102）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2101）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=76）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=54）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=16）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-87%20Space%20Shuttle%20Mission%20Report.pdf#page=46） |
 | REQ-TPS-04 | A（解析） | 根拠あり | PDF p42：左上部Yウェブの構造温度の不規則な指示（IFA STS-114-V-03）と冗長な計測による監視を記す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=42） |
 | REQ-TPS-05 | D（実証） | 根拠あり | Reaction Control Subsystem（PDF p11）：左RCSのドレンパネルのA系ヒータが設定点で入らず、B系に切り替えたと記す（Flight Problem STS-35-04）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | REQ-TPS-06 | D（実証） | 根拠あり | Vent Door Operations（PDF p67）：ベント扉の運用の制約を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=67） |
@@ -94,6 +94,12 @@ TPSの機能説明書 3 件の機能行 16 件と、要求の割付先の IF 行
 > **注記** トレースの対象は、熱防護（SSD-FD-TPS-001）と熱制御（SSD-FD-TCS-001・SSD-FD-TCS-PTC-001）の機能行とする。図2 の TPS の▼が図8（熱制御）を開くため、熱制御を本書にまとめた。ATCS（SSD-FD-ECL-ATCS-001 と下位）は ECLSS の系に属し、SSD-REQ-ECLSS-001 で扱う。
 
 > **注記** トレース表の「要求なしで妥当」は、親の説明書の全般の記述か、同じ下位機能（文書）に割り付けた要求が受け持つ構成・運用の記述であることを根拠に、文書ごとにまとめて判断したもので、機能行1件ずつに要求の要否を検討したものではない。
+
+> **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-TPS-01 は STS-1・STS-3・STS-4 で OMS ポッドのタイルの喪失・グラファイトエポキシの過熱があった（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-1-26・FT-3-15・FT-4-27）が、原因と是正処置が飛行報告にあり、後期の飛行の構造の最高温度は 350°F を十分下回るので、判定（pass）と要求の文・値は変えず、検証の根拠に温度の値と原因・改修を足した。「100 回の再使用」は飛行の記録では確かめられない（検証方法は解析）。STS-107 の事故は取り込み済みの資料に無く、この見直しの対象にしていない。
+
+> **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-TPS-02 は STS-3 で FRSI が 900°F を超えた（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-3-15）が、これは部位の最高温度の予測が低かったための配置の不具合で、是正も規則どおり（700°F を超える部位は FRSI をやめる）に行われた。判定（pass）と要求の文・値は変えない。以前の検証の根拠（STS-125 の下部の構造の温度）は材料の配置の証拠ではなかったので、改修の記録と飛行後の点検（過大な局所加熱のしるしが無い）に差し替えた。後期の飛行の FRSI の表面温度の公開値と、ペイロードベイドア後部・コロンビアの OMS ポッド前部の FRSI の是正の記録は見つからず、根拠は間接である。FRSI の使用の上限は、SCOM と STS-3 の報告が 700°F、KSC の NASA Facts（2008年）が 600°F と書き、食い違う。本書は SCOM の値をとった。（出典: https://www3.nasa.gov/centers/kennedy/pdf/167473main_TPS-08.pdf#page=2）
+
+> **注記** 検証の根拠の調査（Rev. BR）：REQ-TPS-03 は検証の根拠が無かったが、公開資料（Mission Report・運用飛行規則の根拠の欄・NASA の文書）を調べ直して根拠を見つけ、検証の状態を根拠ありに改めた。調べた範囲と残る制約は検証定義書 [SSD-VER-SYS-001](SSD-VER-SYS-001.md) の注記に示す。
 
 ## 9. 参考文献
 
@@ -109,9 +115,22 @@ TPSの機能説明書 3 件の機能行 16 件と、要求の割付先の IF 行
 10. STS-35 Mission Report Reaction Control Subsystem（PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=11
 11. JSC-08934 Vol.1 Rev. E Shuttle Operational Data Book（Systems Performance and Constraints Data） PDF（PDF p67） — https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=67
 12. JSC-48027 Rev. F Malfunction Procedures（MAL） 9.1 PLB Doors（PDF p22） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=22
+13. NSTS-37452 STS-125 Mission Report（2010） （PDF p59） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=59
+14. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p182） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=182
+15. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p208） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=208
+16. STS-2 Orbiter Mission Report （PDF p92） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=92
+17. N85-16979 Orbiter Thermal Protection System（Dotts・Curry・Tillian、NASA JSC、NASA CP-2342 Space Shuttle Technical Conference 所収、1985年、NTRS 19850008670、20頁、OCR のテキスト層、1,567,489 バイト） （PDF p12） — https://ntrs.nasa.gov/api/citations/19850008670/downloads/19850008670.pdf#page=12
+18. STS-114 Mission Report （PDF p55） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=55
+19. FS-2008-02-042-KSC NASA Facts「Orbiter Thermal Protection System」（Kennedy Space Center、2008年、8頁、5,191,471 バイト） （PDF p2） — https://www3.nasa.gov/centers/kennedy/pdf/167473main_TPS-08.pdf#page=2
+20. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p76） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=76
+21. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p54） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=54
+22. STS-122 Mission Report （PDF p16） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=16
+23. NSTS-37418 STS-87 Space Shuttle Mission Report（NASA JSC、1998年2月、69頁、4,506,095 バイト。OCR のテキスト層） （PDF p46） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-87%20Space%20Shuttle%20Mission%20Report.pdf#page=46
 
 ## 10. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 7件、機能行 16件とのトレース、検証の根拠） |
+| Rev. A | 2026-10-11 | REQ-TPS-01・REQ-TPS-02 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |
+| Rev. B | 2026-10-11 | REQ-TPS-03 の検証の根拠を見つけ、検証の状態を根拠ありに改めた（Rev. BR） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-H2O-SPL-001 |
 | 表題 | 給水貯蔵・分配（SPL）機能説明書 |
-| 版・日付 | Rev. A／2026-10-01 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-H2O-001 |
 | 関連図 | SSD-SYS-ARC-001 図20 給水・廃水系 機能構成 |
@@ -34,7 +34,7 @@
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-TCS-16 | フラッシュエバポレータ（FES） | 推進薬・流体 | 送信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 上位: IF-ECL-12 |
+| IF-TCS-16 | フラッシュエバポレータ（FES） | 推進薬・流体 | 送信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389） | 上位: IF-ECL-12 |
 | IF-H2O-01 | 生成水受入れ・処理 | 推進薬・流体 | 受信 | 水素分離器と微生物フィルタを通った生成水をタンクAへ送り、タンクAが満杯か入口弁が閉じているときは1.5 psidの逆止弁を経てタンクB、さらにタンクC・Dへ送る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395）閉塞に備えて、水素分離器を通らずにタンクBの入口マニホールドへ向かう冗長経路もある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） | — |
 | IF-H2O-03 | 飲料水供給 | 推進薬・流体 | 送信 | タンクAの飲料水を、ギャレー給水弁を通してギャレーへ送る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=143）ギャレー給水弁へは、微生物フィルタの下流の給水が導かれる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395） | — |
 | IF-H2O-04 | 船外ダンプ・クロスタイ | 推進薬・流体 | 送信 | 給水ダンプ配管はA-B側の出口マニホールドにつながり、タンクC・Dの水はクロスオーバ弁を経てダンプ配管へ送られる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398）非常時は、廃水タンクに入れた給水をクロスタイ経由で給水系へ戻し、FESの冷却に使う。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2044） | — |
@@ -93,6 +93,7 @@
 18. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 6.3節 Air and Water Transfer（PDF p176） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=176
 19. JSC-12770 Vol. 3 Shuttle Flight Operations Manual – Environmental Control and Life Support Systems（1979年） 2.4節 Supply and Waste H2O Management System（PDF p77） — https://www.ibiblio.org/apollo/Shuttle/JSC-12770,%20Vol.3%20-%20Shuttle%20Flight%20Operations%20Manual,%20Environmental%20Control%20and%20Life%20Support%20Systems%20(ECLSS)%20(1979-03-03).pdf#page=77
 20. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-1 Supply Water Tank（PDF p2040） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2040
+21. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p389） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389
 
 ## 7. 変更履歴
 
@@ -100,3 +101,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
 | Rev. A | 2026-10-01 | IF-H2O-05 の上位を IF-ECL-35 に付け替え、IF-H2O-06 の上位を IF-ECL-41 に付け替え（Rev. M） |
+| Rev. B | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（1文）（Rev. BR） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-EVA-001 |
 | 表題 | 船外活動（EVA/EMU）要求書（L2） |
-| 版・日付 | Rev. A／2026-10-09 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図60 EVA 機能構成 |
@@ -172,6 +172,8 @@ EVAの機能説明書 7 件の機能行 85 件と、要求の割付先の IF 行
 
 > **注記** 前呼吸（REQ-EVA-02）の手順ごとの組織の窒素と R 値、消耗品の持続時間（本書の計算）は [SSD-EPB-EVA-001](SSD-EPB-EVA-001.md) に示す（SysML v2 テキスト：SysML/SSD-EPB-EVA-001.sysml）。
 
+> **注記** NASA-STD-3001 との照合（Rev. BQ の判定の見直し）：REQ-EVA-02（検証の判定 VC-REQ-EVA-02 pass）は [V2 6008]（HSI-105）による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p460） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460
@@ -206,3 +208,4 @@ EVAの機能説明書 7 件の機能行 85 件と、要求の割付先の IF 行
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 8件、機能行 85件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-09 | EMU の消耗品と前呼吸の定義書 SSD-EPB-EVA-001 への参照を注記（Rev. BN） |
+| Rev. B | 2026-10-11 | NASA-STD-3001 による評価との食い違い 1件の要求を注記（判定は据え置き。Rev. BQ の照合表の判定の見直し）（Rev. BQ） |

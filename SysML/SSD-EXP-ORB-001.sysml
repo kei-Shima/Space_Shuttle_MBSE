@@ -149,7 +149,8 @@ package SSD_EXP_ORB_001 {
         attribute <'EXP-03-A1'> exp03Actual1 : Real = 4.3 { doc /* STS-4：上昇の最大（mmHg）。満たさない */ }
         constraint exp03Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 3.0; in attribute :>> exposure = exp03Actual1; }
         attribute <'EXP-03-A2'> exp03Actual2 : Real = 0.8 { doc /* STS-4：軌道上の最大（mmHg）。満たす */ }
-        assert constraint exp03Actual2Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 3.0; in attribute :>> exposure = exp03Actual2; }
+        constraint exp03Actual2Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 3.0; in attribute :>> exposure = exp03Actual2; }
+        assert exp03Actual2Envelope;
         attribute <'EXP-03-A3'> exp03Actual3 : Real = 5.8 { doc /* STS-1：LiOH を入れる前の最大（mmHg）。満たさない */ }
         constraint exp03Actual3Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 3.0; in attribute :>> exposure = exp03Actual3; }
         attribute <'EXP-03-A4'> exp03Actual4 : Real = 5.9 { doc /* STS-1：着陸後、ハッチを開けるとき（mmHg）。満たさない */ }
@@ -159,19 +160,24 @@ package SSD_EXP_ORB_001 {
         attribute <'EXP-04-A1'> exp04Actual1 : Real = 28.3 { doc /* STS-1：打上げのとき 83°F（°C）。満たさない */ }
         constraint exp04Actual1Envelope : ExposureEnvelope { in attribute :>> lower = 18.0; in attribute :>> upper = 27.0; in attribute :>> exposure = exp04Actual1; }
         attribute <'EXP-04-A2'> exp04Actual2 : Real = 23.9 { doc /* STS-1：飛行中の表示の最低 75°F（°C）。満たす */ }
-        assert constraint exp04Actual2Envelope : ExposureEnvelope { in attribute :>> lower = 18.0; in attribute :>> upper = 27.0; in attribute :>> exposure = exp04Actual2; }
+        constraint exp04Actual2Envelope : ExposureEnvelope { in attribute :>> lower = 18.0; in attribute :>> upper = 27.0; in attribute :>> exposure = exp04Actual2; }
+        assert exp04Actual2Envelope;
         attribute <'EXP-04-A3'> exp04Actual3 : Real = 28.3 { doc /* STS-1：飛行中の表示の最高 83°F（°C）。満たさない */ }
         constraint exp04Actual3Envelope : ExposureEnvelope { in attribute :>> lower = 18.0; in attribute :>> upper = 27.0; in attribute :>> exposure = exp04Actual3; }
         attribute <'EXP-04-A4'> exp04Actual4 : Real = 26.7 { doc /* STS-1：接地からハッチを開けるまで 80°F（°C）。満たす */ }
-        assert constraint exp04Actual4Envelope : ExposureEnvelope { in attribute :>> lower = 18.0; in attribute :>> upper = 27.0; in attribute :>> exposure = exp04Actual4; }
+        constraint exp04Actual4Envelope : ExposureEnvelope { in attribute :>> lower = 18.0; in attribute :>> upper = 27.0; in attribute :>> exposure = exp04Actual4; }
+        assert exp04Actual4Envelope;
         attribute <'EXP-05-A1'> exp05Actual1 : Real = 16.0 { doc /* STS-1：飛行中の表示の最低（%）。満たさない */ }
         constraint exp05Actual1Envelope : ExposureEnvelope { in attribute :>> lower = 25.0; in attribute :>> upper = 75.0; in attribute :>> exposure = exp05Actual1; }
         attribute <'EXP-05-A2'> exp05Actual2 : Real = 40.0 { doc /* STS-1：飛行中の表示の最高（%）。満たす */ }
-        assert constraint exp05Actual2Envelope : ExposureEnvelope { in attribute :>> lower = 25.0; in attribute :>> upper = 75.0; in attribute :>> exposure = exp05Actual2; }
+        constraint exp05Actual2Envelope : ExposureEnvelope { in attribute :>> lower = 25.0; in attribute :>> upper = 75.0; in attribute :>> exposure = exp05Actual2; }
+        assert exp05Actual2Envelope;
         attribute <'EXP-05-A3'> exp05Actual3 : Real = 36.0 { doc /* STS-1：着陸後、ハッチを開けるとき（%）。満たす */ }
-        assert constraint exp05Actual3Envelope : ExposureEnvelope { in attribute :>> lower = 25.0; in attribute :>> upper = 75.0; in attribute :>> exposure = exp05Actual3; }
+        constraint exp05Actual3Envelope : ExposureEnvelope { in attribute :>> lower = 25.0; in attribute :>> upper = 75.0; in attribute :>> exposure = exp05Actual3; }
+        assert exp05Actual3Envelope;
         attribute <'EXP-07-A1'> exp07Actual1 : Real = 67.0 { doc /* STS-1：中甲板の睡眠区画（瞬時、24時間平均ではない）（dBA）。満たす */ }
-        assert constraint exp07Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 70.0; in attribute :>> exposure = exp07Actual1; }
+        constraint exp07Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 70.0; in attribute :>> exposure = exp07Actual1; }
+        assert exp07Actual1Envelope;
         attribute <'EXP-08-A1'> exp08Actual1 : Real = 67.0 { doc /* STS-1：中甲板の睡眠区画（dBA）。比べられない */ }
         attribute <'EXP-08-A2'> exp08Actual2 : Real = 65.0 { doc /* 運用の飛行：中甲板の上限（ペイロードなし、62〜65 dBA）（dBA）。比べられない */ }
         attribute <'EXP-09-A1'> exp09Actual1 : Real = 62.0 { doc /* STS-1：中甲板の睡眠区画（dB）。満たさない */ }
@@ -179,28 +185,38 @@ package SSD_EXP_ORB_001 {
         attribute <'EXP-10-A1'> exp10Actual1 : Real = 87.0 { doc /* STS-2：WCS の運転中（音源の近く）（dBA）。満たさない */ }
         constraint exp10Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 76.0; in attribute :>> exposure = exp10Actual1; }
         attribute <'EXP-11-A1'> exp11Actual1 : Real = 3.0 { doc /* OFT（STS-1〜4）：最大の g は 3.0 G を超えない（g）。満たす */ }
-        assert constraint exp11Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 7.49; in attribute :>> exposure = exp11Actual1; }
+        constraint exp11Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 7.49; in attribute :>> exposure = exp11Actual1; }
+        assert exp11Actual1Envelope;
         attribute <'EXP-12-A1'> exp12Actual1 : Real = 1.65 { doc /* STS-1：再突入の最大 Nz（g）。満たす */ }
-        assert constraint exp12Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual1; }
+        constraint exp12Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual1; }
+        assert exp12Actual1Envelope;
         attribute <'EXP-12-A2'> exp12Actual2 : Real = 1.9 { doc /* STS-2：再突入の最大 Nz（g）。満たす */ }
-        assert constraint exp12Actual2Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual2; }
+        constraint exp12Actual2Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual2; }
+        assert exp12Actual2Envelope;
         attribute <'EXP-12-A3'> exp12Actual3 : Real = 1.6 { doc /* STS-3：再突入の最大 Nz（制限 2.0 g）（g）。満たす */ }
-        assert constraint exp12Actual3Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual3; }
+        constraint exp12Actual3Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual3; }
+        assert exp12Actual3Envelope;
         attribute <'EXP-12-A4'> exp12Actual4 : Real = 1.8 { doc /* STS-4：再突入の最大 Nz（制限 2.0 g）（g）。満たす */ }
-        assert constraint exp12Actual4Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual4; }
+        constraint exp12Actual4Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual4; }
+        assert exp12Actual4Envelope;
         attribute <'EXP-12-A5'> exp12Actual5 : Real = 1.5 { doc /* シャトル一般：最大 17 分続く（HIDH）（g）。満たす */ }
-        assert constraint exp12Actual5Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual5; }
+        constraint exp12Actual5Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual5; }
+        assert exp12Actual5Envelope;
         attribute <'EXP-12-A6'> exp12Actual6 : Real = 1.3 { doc /* シャトル一般：Mach 2.5 まで約 1.3 g（SCOM）（g）。満たす */ }
-        assert constraint exp12Actual6Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual6; }
+        constraint exp12Actual6Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 4.0; in attribute :>> exposure = exp12Actual6; }
+        assert exp12Actual6Envelope;
         attribute <'EXP-13-A1'> exp13Actual1 : Real = 1.85 { doc /* STS-1：前脚の接地（Xo 511 Z）（g）。比べられない */ }
         attribute <'EXP-13-A2'> exp13Actual2 : Real = 1.48 { doc /* STS-2：前脚の接地（Xo 511 Z）（g）。比べられない */ }
         attribute <'EXP-13-A3'> exp13Actual3 : Real = 1.52 { doc /* STS-4：前脚の接地（Xo 513）（g）。比べられない */ }
         attribute <'EXP-14-A1'> exp14Actual1 : Real = 0.19 { doc /* STS-1：線量当量 19 mrem 未満（mSv）。満たす */ }
-        assert constraint exp14Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 600.0; in attribute :>> exposure = exp14Actual1; }
+        constraint exp14Actual1Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 600.0; in attribute :>> exposure = exp14Actual1; }
+        assert exp14Actual1Envelope;
         attribute <'EXP-14-A2'> exp14Actual2 : Real = 0.625 { doc /* STS-3：線量当量 62.5 mrem（mSv）。満たす */ }
-        assert constraint exp14Actual2Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 600.0; in attribute :>> exposure = exp14Actual2; }
+        constraint exp14Actual2Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 600.0; in attribute :>> exposure = exp14Actual2; }
+        assert exp14Actual2Envelope;
         attribute <'EXP-14-A3'> exp14Actual3 : Real = 0.623 { doc /* STS-4：線量当量 62.3 mrem（mSv）。満たす */ }
-        assert constraint exp14Actual3Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 600.0; in attribute :>> exposure = exp14Actual3; }
+        constraint exp14Actual3Envelope : ExposureEnvelope { in attribute :>> lower = -1000000000.0; in attribute :>> upper = 600.0; in attribute :>> exposure = exp14Actual3; }
+        assert exp14Actual3Envelope;
     }
     package Profiles {
         doc /* 時間軸の曝露（点は資料の値。間の補間は本書の判断） */

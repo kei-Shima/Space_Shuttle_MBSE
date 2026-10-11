@@ -19,7 +19,7 @@ package SSD_IND_ORB_001 {
         attribute landingSite : String;
         ref part vehicle : SSD_BLK_SYS_001::ORB;
     }
-    individual def <'STS-1'> Sts1 :> ShuttleFlight {
+    individual occurrence def <'STS-1'> Sts1 :> ShuttleFlight {
         doc /* STS-1（OV-102 Columbia）。飛行時間 —、軌道 150 n.mi. 円軌道・傾斜角 40.3°（予測） */
         attribute :>> crew = 2;
         attribute :>> launchUtc = "1981-04-12 12:00:03.9";
@@ -39,7 +39,7 @@ package SSD_IND_ORB_001 {
         first ts_ph_4 then ts_ph_6;
         first ts_ph_6 then ts_ph_6c;
         first ts_ph_6c then ts_ph_7;
-        snapshot <'SN-01'> sn_01 {
+        snapshot occurrence <'SN-01'> sn_01 {
             doc /* liftoff */
             attribute v1 : Real = 97.9 { doc /* O2 タンク1の量 */ }
             attribute v2 : Real = 97.0 { doc /* O2 タンク2の量 */ }
@@ -48,13 +48,13 @@ package SSD_IND_ORB_001 {
             attribute v5 : MassValue = 864.4 [lb] { doc /* 給水・飲料水 */ }
             attribute v6 : MassValue = 208.9 [lb] { doc /* MPS ヘリウムの充填量 */ }
         }
-        snapshot <'SN-02'> sn_02 {
+        snapshot occurrence <'SN-02'> sn_02 {
             doc /* APU start at entry */
             attribute v1 : Real = 60 { doc /* 油圧系1の作動油量 */ }
             attribute v2 : Real = 53.2 { doc /* 油圧系2の作動油量 */ }
             attribute v3 : Real = 63.2 { doc /* 油圧系3の作動油量 */ }
         }
-        snapshot <'SN-03'> sn_03 {
+        snapshot occurrence <'SN-03'> sn_03 {
             doc /* landing */
             attribute v1 : Real = 61.5 { doc /* O2 タンク1の量 */ }
             attribute v2 : Real = 56.7 { doc /* O2 タンク2の量 */ }
@@ -75,7 +75,7 @@ package SSD_IND_ORB_001 {
         attribute <'AV-11'> av_11 : MassValue[2] = (122 [lb], 166 [lb]) { doc /* APU の燃料使用量（APU 1／2／3）。設計 REQ-APU-01（下限・上限） */ }
         attribute <'AV-12'> av_12 : MassValue = 208.9 [lb] { doc /* MPS ヘリウムの充填量。設計 — */ }
     }
-    individual def <'STS-114'> Sts114 :> ShuttleFlight {
+    individual occurrence def <'STS-114'> Sts114 :> ShuttleFlight {
         doc /* STS-114（OV-103 Discovery）。飛行時間 13:21:33:30、軌道 OMS-2 後 85.2×123.6 nmi（傾斜角は資料に無い） */
         attribute :>> crew = 7;
         attribute :>> launchUtc = "2005-07-26 14:39:00.013";
@@ -97,12 +97,12 @@ package SSD_IND_ORB_001 {
         first ts_ph_3 then ts_ph_5;
         first ts_ph_5 then ts_ph_6a;
         first ts_ph_6a then ts_ph_6;
-        snapshot <'SN-04'> sn_04 {
+        snapshot occurrence <'SN-04'> sn_04 {
             doc /* liftoff */
             attribute v1 : MassValue = 3931 [lb] { doc /* PRSD O2 総量 */ }
             attribute v2 : MassValue = 462 [lb] { doc /* PRSD H2 総量 */ }
         }
-        snapshot <'SN-05'> sn_05 {
+        snapshot occurrence <'SN-05'> sn_05 {
             doc /* landing */
             attribute v1 : MassValue = 604 [lb] { doc /* PRSD O2 総量 */ }
             attribute v2 : MassValue = 75 [lb] { doc /* PRSD H2 総量 */ }
@@ -121,7 +121,7 @@ package SSD_IND_ORB_001 {
         attribute <'AV-23'> av_23 : DurationValue = 333.5583 [h] { doc /* 飛行時間（車輪停止まで）。設計 REQ-SYS-06 */ }
         attribute <'AV-24'> av_24 : MassValue = 22 [lb] { doc /* ISS への窒素の移送。設計 — */ }
     }
-    individual def <'STS-125'> Sts125 :> ShuttleFlight {
+    individual occurrence def <'STS-125'> Sts125 :> ShuttleFlight {
         doc /* STS-125（OV-104 Atlantis）。飛行時間 12:21:38:45、軌道 OMS-2 後 298×187 nmi、HST 放出後 305.3×160.4 nmi（傾斜角は資料に無い） */
         attribute :>> crew = 7;
         attribute :>> launchUtc = "2009-05-11 18:01:55.992";
@@ -141,7 +141,7 @@ package SSD_IND_ORB_001 {
         first ts_ph_3 then ts_ph_5;
         first ts_ph_5 then ts_ph_6a;
         first ts_ph_6a then ts_ph_6;
-        snapshot <'SN-06'> sn_06 {
+        snapshot occurrence <'SN-06'> sn_06 {
             doc /* liftoff */
             attribute v1 : MassValue = 3914 [lb] { doc /* PRSD O2 総量 */ }
             attribute v2 : MassValue = 456.7 [lb] { doc /* PRSD H2 総量 */ }
@@ -150,7 +150,7 @@ package SSD_IND_ORB_001 {
             attribute v5 : MassValue = 7704 [lb] { doc /* OMS 右ポッド 酸化剤（搭載） */ }
             attribute v6 : MassValue = 4685 [lb] { doc /* OMS 右ポッド 燃料（搭載） */ }
         }
-        snapshot <'SN-07'> sn_07 {
+        snapshot occurrence <'SN-07'> sn_07 {
             doc /* landing */
             attribute v1 : MassValue = 542 [lb] { doc /* PRSD O2 総量 */ }
             attribute v2 : MassValue = 53.9 [lb] { doc /* PRSD H2 総量 */ }

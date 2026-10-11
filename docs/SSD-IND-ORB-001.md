@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-IND-ORB-001 |
 | 表題 | 個体・時間定義書（機体・飛行の個体と実績） |
-| 版・日付 | Rev. C／2026-10-07 |
+| 版・日付 | Rev. D／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-VAR-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図122 機体と飛行の個体・時間切片・図123 飛行の実績と設計値 |
@@ -173,6 +173,8 @@
 
 > **注記** 要求の値の見直し（Rev. BG）：REQ-EPS-14 をパージの間隔 96時間以内に、REQ-SYS-13 を打上げ前・延長の決定時に2日を確保する要求に改めた。上のパージの間隔と着陸時の延長の能力の注記は見直し前のもので、STS-114・125 の実績はどちらも見直し後の要求を満たす。
 
+> **注記** SysML v2 テキストの書き方の変更（Rev. BR）：VS Code の拡張機能 SysML v2.0 Language Support の検査が、同じ名前を別のスコープで再定義している所を誤り（ambiguous-namespace-name）とするので、意味を変えずに書き方を改めた。飛行の個体 3件は individual def を individual occurrence def に、スナップショット 7件は snapshot を snapshot occurrence に改めた（どちらも同じ要素を表す長い書き方）。Pilot で読み込んで誤り 0件・警告 0件を確かめた。
+
 ## 12. 参考文献
 
 1. STS-2 Orbiter Mission Report （PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=5
@@ -273,3 +275,4 @@
 | Rev. A | 2026-10-04 | 飛行構成・飛行試験定義書 SSD-FLT-ORB-001 への参照を注記（Rev. AV） |
 | Rev. B | 2026-10-04 | 消耗品・電力プロファイル定義書 SSD-PRF-ORB-001 への参照を注記（Rev. AW） |
 | Rev. C | 2026-10-07 | AV-06・19・31 の設計の値を REQ-EPS-14 の見直しに合わせた（Rev. BG） |
+| Rev. D | 2026-10-11 | SysML v2 テキストの individual def・snapshot の書き方を改めた（意味は同じ）（Rev. BR） |

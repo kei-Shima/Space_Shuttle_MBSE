@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MED-ORB-001 |
 | 表題 | 医療の構造と処置定義書（SOMS・傷病と減圧症の処置・医療の事象の実績） |
-| 版・日付 | 初版（Rev. -）／2026-10-09 |
+| 版・日付 | Rev. A／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-CREW-MED-001 |
 | 関連図 | SSD-SYS-ARC-001 図187 医療システム（SOMS）の構成と役割・図188 乗員の傷病の処置 活動図・図189 減圧症の疑いの処置 活動図・図190 飛行中の医療の事象の実績 |
@@ -142,19 +142,22 @@ PMC の決まり 6件を示す。
 
 ## 9. 図189 の節点
 
-図189 減圧症の疑いの処置 活動図（減圧症の疑いの処置（カフ区分・TERMINATE／ABORT EVA・服の加圧と BTA・乗員室の加圧・打ち切りと帰還））の節点 29件を示す。
+図189 減圧症の疑いの処置 活動図（減圧症の疑いの処置（カフ区分・TERMINATE／ABORT EVA・服の加圧と BTA・乗員室の加圧・打ち切りと帰還））の節点 31件を示す。
 
 | ID | 種別 | 内容 | 機能 | SysML | 根拠 |
 |---|---|---|---|---|---|
 | ST-MD | 開始 | — | — | start | — |
 | AC-MD-01 | 行動 | EVA 中・後に減圧症の症状を報告し、カフチェックリストの定義でカフ区分を決める | F-EVA-OPS-08 | AC_MD_01 | カフチェックリストの減圧症の頁は、区分1〜4の症状と処置（1：EVA 後の PMC で報告、2：作業場所を片付け患者の活動を減らして TERM EVA・再与圧、3：患者をエアロックへ補助し PLB を安全化して TERM EVA、4：ABORT EVA で患者を補助して戻し単独で再与圧）を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=195）DCS TREATMENT（19.1）の流れは、カフ区分を決め、カフ1は EVA を続け（再与圧で消えればカフ2の処置へ）、カフ2・3は TERMINATE EVA してエアロックに入り、カフ4は ABORT EVA で補助して戻し、もう1人が PLB を安全化し、SOMS から蘇生器を出す。カフ4は II 型の減圧症（医学的緊急）によることがあり、患者1人の再与圧になりうる。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226） |
 | DC-MD-01 | 判断 | カフ1か（カフチェックリストの定義） | F-EVA-OPS-08 | DC_MD_01 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787）カフ区分3は重い区分1の症状、移動する・体幹の・多部位の感覚異常、重い・異常な頭痛で、2人とも EVA を打ち切り、もう1人が患者をエアロックへ補助してからペイロードベイを安全化し、済み次第再与圧して PMC を行う。症状が消えれば飛行期間に影響しない（A13-104 C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1788）カフ区分4は中枢神経・心肺の症状で、EVA をアボートし、もう1人が患者をエアロックへ補助し、患者を直ちに再与圧する（もう1人はペイロードベイを安全化し要れば別に再与圧する）。患者の再与圧の後に PMC を行い、以後の EVA の制約は飛行医が JPG 1800.3 に沿って決める（A13-104 D）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1789） |
-| AC-MD-02 | 行動 | カフ1：EVA を続け、再与圧で症状が消えるかを見る | F-EVA-OPS-08・F-EVA-DPR-06 | AC_MD_02 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787）カフチェックリストの減圧症の頁は、区分1〜4の症状と処置（1：EVA 後の PMC で報告、2：作業場所を片付け患者の活動を減らして TERM EVA・再与圧、3：患者をエアロックへ補助し PLB を安全化して TERM EVA、4：ABORT EVA で患者を補助して戻し単独で再与圧）を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=195）再与圧の手順では、カフ1の症状が再与圧で消えればカフ2として報告し、減圧症があれば O2 ACT を PRESS のままにする。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=98） |
-| AC-MD-03 | 行動 | EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない）（再与圧で消えればカフ2 として扱い、消えなければ服の圧迫点と区別しにくい症状として報告する） | F-EVA-OPS-08 | AC_MD_03 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787） |
+| AC-MD-02 | 行動 | カフ1：EVA を続け、再与圧で症状が消えるかを見る | F-EVA-OPS-08 | AC_MD_02 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787）カフチェックリストの減圧症の頁は、区分1〜4の症状と処置（1：EVA 後の PMC で報告、2：作業場所を片付け患者の活動を減らして TERM EVA・再与圧、3：患者をエアロックへ補助し PLB を安全化して TERM EVA、4：ABORT EVA で患者を補助して戻し単独で再与圧）を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=195） |
+| DC-MD-02 | 判断 | 再与圧で症状が消えたか | F-EVA-DPR-06 | DC_MD_02 | 再与圧の手順では、カフ1の症状が再与圧で消えればカフ2として報告し、減圧症があれば O2 ACT を PRESS のままにする。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=98） |
+| AC-MD-03 | 行動 | 症状が残る：服の圧迫点と区別しにくい症状として、EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない） | F-EVA-OPS-08 | AC_MD_03 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787） |
+| DC-MD-07 | 判断 | カフ4か（カフ2・3 でなければ） | F-EVA-OPS-08 | DC_MD_07 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787）カフ区分3は重い区分1の症状、移動する・体幹の・多部位の感覚異常、重い・異常な頭痛で、2人とも EVA を打ち切り、もう1人が患者をエアロックへ補助してからペイロードベイを安全化し、済み次第再与圧して PMC を行う。症状が消えれば飛行期間に影響しない（A13-104 C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1788）カフ区分4は中枢神経・心肺の症状で、EVA をアボートし、もう1人が患者をエアロックへ補助し、患者を直ちに再与圧する（もう1人はペイロードベイを安全化し要れば別に再与圧する）。患者の再与圧の後に PMC を行い、以後の EVA の制約は飛行医が JPG 1800.3 に沿って決める（A13-104 D）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1789） |
 | AC-MD-04 | 行動 | カフ2・3：TERMINATE EVA（作業場所の片付け・PLB の安全化、カフ3は患者をエアロックへ補助）し、MCC に報告する | F-EVA-OPS-08・F-EVA-OPS-09 | AC_MD_04 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787）カフ区分3は重い区分1の症状、移動する・体幹の・多部位の感覚異常、重い・異常な頭痛で、2人とも EVA を打ち切り、もう1人が患者をエアロックへ補助してからペイロードベイを安全化し、済み次第再与圧して PMC を行う。症状が消えれば飛行期間に影響しない（A13-104 C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1788）TERMINATE EVA は EVA の作業をやめ、ペイロードベイを片付け、エアロックへ移って入り、再与圧することをいう（A15-2）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1843）DCS TREATMENT（19.1）の流れは、カフ区分を決め、カフ1は EVA を続け（再与圧で消えればカフ2の処置へ）、カフ2・3は TERMINATE EVA してエアロックに入り、カフ4は ABORT EVA で補助して戻し、もう1人が PLB を安全化し、SOMS から蘇生器を出す。カフ4は II 型の減圧症（医学的緊急）によることがあり、患者1人の再与圧になりうる。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226） |
 | AC-MD-05 | 行動 | カフ4：ABORT EVA（患者を補助してエアロックへ、患者を単独で直ちに再与圧、もう1人は PLB を安全化）し、SOMS から蘇生器を出す | F-EVA-EMG-11・F-CREW-MED-03 | AC_MD_05 | カフ区分4は中枢神経・心肺の症状で、EVA をアボートし、もう1人が患者をエアロックへ補助し、患者を直ちに再与圧する（もう1人はペイロードベイを安全化し要れば別に再与圧する）。患者の再与圧の後に PMC を行い、以後の EVA の制約は飛行医が JPG 1800.3 に沿って決める（A13-104 D）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1789）ABORT EVA は直ちにエアロックへ移って入り、再与圧することをいう（A15-3）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1844）DCS TREATMENT（19.1）の流れは、カフ区分を決め、カフ1は EVA を続け（再与圧で消えればカフ2の処置へ）、カフ2・3は TERMINATE EVA してエアロックに入り、カフ4は ABORT EVA で補助して戻し、もう1人が PLB を安全化し、SOMS から蘇生器を出す。カフ4は II 型の減圧症（医学的緊急）によることがあり、患者1人の再与圧になりうる。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226） |
 | AC-MD-06 | 行動 | カフ4：乗員室をエアロックの再与圧の前か間に 14.7 psi へ再与圧する | F-ECL-CAB-03・F-ECL-PCS-OPS-08 | AC_MD_06 | カフ4の症状では乗員室をエアロックの再与圧の前か間に 14.7 psi にし、その後最大 15.56 psi まで上げる。カフ2〜4の処置の後、患者を少なくとも72時間は下げた乗員室圧にさらさない。15.56 psi は最も低い OV-105 の正圧逃し弁の開き圧 15.8 psi に対しセンサ誤差 0.24 psi の余裕をとった値である（A13-105 D2・D3）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1792） |
 | MG-MD-01 | 合流 | — | — | MG_MD_01 | — |
+| MG-MD-06 | 合流 | — | — | MG_MD_06 | — |
 | AC-MD-07 | 行動 | エアロックを再与圧し SCU につないだまま O2 ACT を PRESS にする（服内の純酸素・加圧）。CMO が Medical Checklist の DCS の診察をして飛行医に報告する | F-EVA-DPR-05・F-EVA-DPR-06・F-EVA-MNT-02 | AC_MD_07 | 再与圧の手順では、カフ1の症状が再与圧で消えればカフ2として報告し、減圧症があれば O2 ACT を PRESS のままにする。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=98）再与圧の後は SCU につないだまま、乗員室が 10.2 psi 以下なら 10.2 psi の維持を行い、Medical Checklist の DCS の診察をして飛行医に報告する。処置の時間が LiOH を超えるなら交換し、乗員室圧が 11.0 以下なら O2 ACT を PRESS のまま20分（10.2 psi から数える）置いて BTA を準備する。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226）EVA 後の手順では、減圧症の症状が消えていても EMU を脱がない。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=114）EVA 中に減圧症にかかった乗員は EVA をやめてエアロックに戻り SCU につなぎ、エアロックを 10.2 psia、乗員室を 14.7 psia に再与圧し、ヘルメットを外して最低 32 オンスの水分を取り、EMU を構成し直して BTA を付ける。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460） |
 | AC-MD-08 | 行動 | O2 ACT を PRESS のまま20分置き（10.2 psi から数える）、BTA を準備する。処置が LiOH を超えるなら交換する | F-EVA-DPR-06・F-EVA-EMG-09 | AC_MD_08 | 再与圧の後は SCU につないだまま、乗員室が 10.2 psi 以下なら 10.2 psi の維持を行い、Medical Checklist の DCS の診察をして飛行医に報告する。処置の時間が LiOH を超えるなら交換し、乗員室圧が 11.0 以下なら O2 ACT を PRESS のまま20分（10.2 psi から数える）置いて BTA を準備する。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226）消えないカフ4の症状では、次の主着陸場、または通常の NPLS の軌道離脱の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱し、発症から早ければ10時間後に考える。服は消耗品の許す限り PRESS モードか BTA の処置圧に保ち、BTA は服を減圧せずに付けられる（A13-105 A5・C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1791） |
 | DC-MD-03 | 判断 | 症状が消えたか（再与圧から20分） | — | DC_MD_03 | エアロックの再与圧から20分以内に消えないカフ2・3の症状では乗員室を 14.7 psi に再与圧し、それでも消えなければ消耗品と酸素の制約の許す最高の圧力（最大 15.56 psi）まで上げる（A13-105 D1）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1791）再与圧の後は SCU につないだまま、乗員室が 10.2 psi 以下なら 10.2 psi の維持を行い、Medical Checklist の DCS の診察をして飛行医に報告する。処置の時間が LiOH を超えるなら交換し、乗員室圧が 11.0 以下なら O2 ACT を PRESS のまま20分（10.2 psi から数える）置いて BTA を準備する。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226） |
@@ -166,19 +169,18 @@ PMC の決まり 6件を示す。
 | DC-MD-06 | 判断 | 消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか） | F-CREW-OPS-02 | DC_MD_06 | 減圧症のための早期終了と軌道離脱は一次の高圧治療施設に指定した着陸場に限って考え、処置で消える減圧症には緊急の軌道離脱を要しない。カフ1と、処置で消えるカフ2・3には早期終了を要さず、消えないカフ4以外の症状でも進行・危険と判断されなければ早期の軌道離脱は通常考えない（A13-105 A1〜4）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1790）消えないカフ4の症状では、次の主着陸場、または通常の NPLS の軌道離脱の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱し、発症から早ければ10時間後に考える。服は消耗品の許す限り PRESS モードか BTA の処置圧に保ち、BTA は服を減圧せずに付けられる（A13-105 A5・C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1791） |
 | AC-MD-12 | 行動 | 早期に終了し、次の主着陸場か NPLS の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱する（発症から最短10時間） | F-CREW-OPS-02 | AC_MD_12 | 減圧症のための早期終了と軌道離脱は一次の高圧治療施設に指定した着陸場に限って考え、処置で消える減圧症には緊急の軌道離脱を要しない。カフ1と、処置で消えるカフ2・3には早期終了を要さず、消えないカフ4以外の症状でも進行・危険と判断されなければ早期の軌道離脱は通常考えない（A13-105 A1〜4）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1790）消えないカフ4の症状では、次の主着陸場、または通常の NPLS の軌道離脱の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱し、発症から早ければ10時間後に考える。服は消耗品の許す限り PRESS モードか BTA の処置圧に保ち、BTA は服を減圧せずに付けられる（A13-105 A5・C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1791） |
 | AC-MD-13 | 行動 | 着陸後、患者を高圧治療の施設へ運ぶ | — | AC_MD_13 | 減圧症のための早期終了と軌道離脱は一次の高圧治療施設に指定した着陸場に限って考え、処置で消える減圧症には緊急の軌道離脱を要しない。カフ1と、処置で消えるカフ2・3には早期終了を要さず、消えないカフ4以外の症状でも進行・危険と判断されなければ早期の軌道離脱は通常考えない（A13-105 A1〜4）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1790）各場所の救急医療（EMSS）には、JSC の飛行医とパラジャンパー2名を乗せた医療ヘリ2機、救急救命士の乗る救急車、中間と最終の医療施設があり、医師の EMSS 調整官がほかの場所の調整官と JSC の MOCR の飛行医と連絡する。（出典: https://ntrs.nasa.gov/api/citations/19830025244/downloads/19830025244.pdf#page=103） |
+| MG-MD-03 | 合流 | — | — | MG_MD_03 | — |
+| MG-MD-05 | 合流 | — | — | MG_MD_05 | — |
+| MG-MD-04 | 合流 | — | — | MG_MD_04 | — |
 | MG-MD-02 | 合流 | — | — | MG_MD_02 | — |
 | AC-MD-14 | 行動 | EVA 後の手順を行い QDM で2時間酸素を吸う。CMO は12時間ごとに飛行医へ報告し、72時間は下げた乗員室圧にさらさない。任務・EVA への復帰は飛行医が決め、DCS AFTERCARE へ進む | F-EVA-MNT-02・F-CREW-OPS-07 | AC_MD_14 | 症状が消えたら EVA 後の手順を行い、QDM で2時間酸素を吸い、CMO は12時間ごとに DCS の診察の基準で症状の変化を飛行医に報告する。24時間の活動制限の後に船内の任務への復帰を、また EVA の任務への復帰を飛行医に確かめ、Medical Checklist の DCS AFTERCARE へ進む。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=227）カフ4の症状では乗員室をエアロックの再与圧の前か間に 14.7 psi にし、その後最大 15.56 psi まで上げる。カフ2〜4の処置の後、患者を少なくとも72時間は下げた乗員室圧にさらさない。15.56 psi は最も低い OV-105 の正圧逃し弁の開き圧 15.8 psi に対しセンサ誤差 0.24 psi の余裕をとった値である（A13-105 D2・D3）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1792）カフ区分4は中枢神経・心肺の症状で、EVA をアボートし、もう1人が患者をエアロックへ補助し、患者を直ちに再与圧する（もう1人はペイロードベイを安全化し要れば別に再与圧する）。患者の再与圧の後に PMC を行い、以後の EVA の制約は飛行医が JPG 1800.3 に沿って決める（A13-104 D）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1789） |
 | EN-MD | 終了 | — | — | done | — |
 | EN-MD-2 | 終了 | — | — | done | — |
 | EN-MD-3 | 終了 | — | — | done | — |
-| DC-MD-07 | 判断 | カフ4か（カフ2・3 でなければ） | F-EVA-OPS-08 | DC_MD_07 | カフ区分1は軽い痛み・片側の手足の感覚異常で服の圧迫点と区別しにくく作業を妨げない症状で、EVA を続けて EVA 後の PMC で報告し、その乗員の以後の EVA と飛行期間に影響しない。カフ区分2は作業を妨げる中程度の症状で、患者の EVA を打ち切り、もう1人は作業場所の片付けとペイロードベイの安全化の後に打ち切り、安全化が済み次第エアロックを再与圧して PMC を行う（A13-104 A・B）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1787）カフ区分3は重い区分1の症状、移動する・体幹の・多部位の感覚異常、重い・異常な頭痛で、2人とも EVA を打ち切り、もう1人が患者をエアロックへ補助してからペイロードベイを安全化し、済み次第再与圧して PMC を行う。症状が消えれば飛行期間に影響しない（A13-104 C）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1788）カフ区分4は中枢神経・心肺の症状で、EVA をアボートし、もう1人が患者をエアロックへ補助し、患者を直ちに再与圧する（もう1人はペイロードベイを安全化し要れば別に再与圧する）。患者の再与圧の後に PMC を行い、以後の EVA の制約は飛行医が JPG 1800.3 に沿って決める（A13-104 D）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1789） |
-| MG-MD-03 | 合流 | — | — | MG_MD_03 | — |
-| MG-MD-04 | 合流 | — | — | MG_MD_04 | — |
-| MG-MD-05 | 合流 | — | — | MG_MD_05 | — |
 
 ## 10. 図189 の流れ
 
-図189 減圧症の疑いの処置 活動図の流れ 32件を示す。
+図189 減圧症の疑いの処置 活動図の流れ 35件を示す。
 
 | ID | 元 | 先 | ガード | SysML のガード |
 |---|---|---|---|---|
@@ -186,34 +188,37 @@ PMC の決まり 6件を示す。
 | FL-MD-02 | AC-MD-01（EVA 中・後に減圧症の症状を報告し、カフチェックリストの定義でカフ区分を決める） | DC-MD-01（カフ1か（カフチェックリストの定義）） | — | — |
 | FL-MD-03 | DC-MD-01（カフ1か（カフチェックリストの定義）） | AC-MD-02（カフ1：EVA を続け、再与圧で症状が消えるかを見る） | カフ1 | cuff1 |
 | FL-MD-04 | DC-MD-01（カフ1か（カフチェックリストの定義）） | DC-MD-07（カフ4か（カフ2・3 でなければ）） | カフ1でない | not cuff1 |
-| FL-MD-05 | AC-MD-02（カフ1：EVA を続け、再与圧で症状が消えるかを見る） | AC-MD-03（EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない）（再与圧で消えればカフ2 として扱い、消えなければ服の圧迫点と区別しにくい症状として報告する）） | — | — |
-| FL-MD-06 | AC-MD-03（EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない）（再与圧で消えればカフ2 として扱い、消えなければ服の圧迫点と区別しにくい症状として報告する）） | EN-MD-2（終了） | — | — |
-| FL-MD-07 | DC-MD-07（カフ4か（カフ2・3 でなければ）） | AC-MD-05（カフ4：ABORT EVA（患者を補助してエアロックへ、患者を単独で直ちに再与圧、もう1人は PLB を安全化）し、SOMS から蘇生器を出す） | カフ4 | cuff4 |
-| FL-MD-08 | DC-MD-07（カフ4か（カフ2・3 でなければ）） | AC-MD-04（カフ2・3：TERMINATE EVA（作業場所の片付け・PLB の安全化、カフ3は患者をエアロックへ補助）し、MCC に報告する） | カフ2・3 | not cuff4 |
-| FL-MD-09 | AC-MD-05（カフ4：ABORT EVA（患者を補助してエアロックへ、患者を単独で直ちに再与圧、もう1人は PLB を安全化）し、SOMS から蘇生器を出す） | AC-MD-06（カフ4：乗員室をエアロックの再与圧の前か間に 14.7 psi へ再与圧する） | — | — |
-| FL-MD-10 | AC-MD-06（カフ4：乗員室をエアロックの再与圧の前か間に 14.7 psi へ再与圧する） | MG-MD-01（合流） | — | — |
-| FL-MD-11 | AC-MD-04（カフ2・3：TERMINATE EVA（作業場所の片付け・PLB の安全化、カフ3は患者をエアロックへ補助）し、MCC に報告する） | MG-MD-01（合流） | — | — |
-| FL-MD-12 | MG-MD-01（合流） | AC-MD-07（エアロックを再与圧し SCU につないだまま O2 ACT を PRESS にする（服内の純酸素・加圧）。CMO が Medical Checklist の DCS の診察をして飛行医に報告する） | — | — |
-| FL-MD-13 | AC-MD-07（エアロックを再与圧し SCU につないだまま O2 ACT を PRESS にする（服内の純酸素・加圧）。CMO が Medical Checklist の DCS の診察をして飛行医に報告する） | AC-MD-08（O2 ACT を PRESS のまま20分置き（10.2 psi から数える）、BTA を準備する。処置が LiOH を超えるなら交換する） | — | — |
-| FL-MD-14 | AC-MD-08（O2 ACT を PRESS のまま20分置き（10.2 psi から数える）、BTA を準備する。処置が LiOH を超えるなら交換する） | DC-MD-03（症状が消えたか（再与圧から20分）） | — | — |
-| FL-MD-15 | DC-MD-03（症状が消えたか（再与圧から20分）） | MG-MD-03（合流） | 消えた | resolved20min |
-| FL-MD-16 | DC-MD-03（症状が消えたか（再与圧から20分）） | AC-MD-09（乗員室を 14.7 psi に再与圧し、BTA を付けて服内 6 psid で20分処置する（カフ4は 8 psid から）） | 消えない | not resolved20min |
-| FL-MD-17 | AC-MD-09（乗員室を 14.7 psi に再与圧し、BTA を付けて服内 6 psid で20分処置する（カフ4は 8 psid から）） | DC-MD-04（症状が消えたか（BTA 6 psid）） | — | — |
-| FL-MD-18 | DC-MD-04（症状が消えたか（BTA 6 psid）） | MG-MD-05（合流） | 消えた | resolvedBta6 |
-| FL-MD-19 | DC-MD-04（症状が消えたか（BTA 6 psid）） | AC-MD-10（乗員室を最大 15.56 psia に上げ、BTA 8 psid で2時間処置する。CMO が症状の変化を飛行医に報告する） | 消えない | not resolvedBta6 |
-| FL-MD-20 | AC-MD-10（乗員室を最大 15.56 psia に上げ、BTA 8 psid で2時間処置する。CMO が症状の変化を飛行医に報告する） | DC-MD-05（症状が消えたか（BTA 8 psid）） | — | — |
-| FL-MD-21 | DC-MD-05（症状が消えたか（BTA 8 psid）） | MG-MD-04（合流） | 消えた | resolvedBta8 |
-| FL-MD-22 | DC-MD-05（症状が消えたか（BTA 8 psid）） | AC-MD-11（MCC に薬物の処置を確かめ（QDM に替えて飛行医の指示で服薬）、服の加圧を続ける） | 消えない | not resolvedBta8 |
-| FL-MD-23 | AC-MD-11（MCC に薬物の処置を確かめ（QDM に替えて飛行医の指示で服薬）、服の加圧を続ける） | DC-MD-06（消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか）） | — | — |
-| FL-MD-24 | DC-MD-06（消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか）） | AC-MD-12（早期に終了し、次の主着陸場か NPLS の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱する（発症から最短10時間）） | 消えないカフ4・進行 | persistentCuff4 |
-| FL-MD-25 | DC-MD-06（消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか）） | MG-MD-02（合流） | そうでない（飛行を続け経過を見る） | not persistentCuff4 |
-| FL-MD-26 | AC-MD-12（早期に終了し、次の主着陸場か NPLS の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱する（発症から最短10時間）） | AC-MD-13（着陸後、患者を高圧治療の施設へ運ぶ） | — | — |
-| FL-MD-27 | AC-MD-13（着陸後、患者を高圧治療の施設へ運ぶ） | EN-MD-3（終了） | — | — |
-| FL-MD-28 | MG-MD-03（合流） | MG-MD-05（合流） | — | — |
-| FL-MD-29 | MG-MD-05（合流） | MG-MD-04（合流） | — | — |
-| FL-MD-30 | MG-MD-04（合流） | MG-MD-02（合流） | — | — |
-| FL-MD-31 | MG-MD-02（合流） | AC-MD-14（EVA 後の手順を行い QDM で2時間酸素を吸う。CMO は12時間ごとに飛行医へ報告し、72時間は下げた乗員室圧にさらさない。任務・EVA への復帰は飛行医が決め、DCS AFTERCARE へ進む） | — | — |
-| FL-MD-32 | AC-MD-14（EVA 後の手順を行い QDM で2時間酸素を吸う。CMO は12時間ごとに飛行医へ報告し、72時間は下げた乗員室圧にさらさない。任務・EVA への復帰は飛行医が決め、DCS AFTERCARE へ進む） | EN-MD（終了） | — | — |
+| FL-MD-05 | AC-MD-02（カフ1：EVA を続け、再与圧で症状が消えるかを見る） | DC-MD-02（再与圧で症状が消えたか） | — | — |
+| FL-MD-06 | DC-MD-02（再与圧で症状が消えたか） | AC-MD-03（症状が残る：服の圧迫点と区別しにくい症状として、EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない）） | 消えない | not resolvedOnRepress |
+| FL-MD-07 | DC-MD-02（再与圧で症状が消えたか） | MG-MD-06（合流） | 消えた（カフ2として報告） | resolvedOnRepress |
+| FL-MD-08 | AC-MD-03（症状が残る：服の圧迫点と区別しにくい症状として、EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない）） | EN-MD-2（終了） | — | — |
+| FL-MD-09 | DC-MD-07（カフ4か（カフ2・3 でなければ）） | AC-MD-05（カフ4：ABORT EVA（患者を補助してエアロックへ、患者を単独で直ちに再与圧、もう1人は PLB を安全化）し、SOMS から蘇生器を出す） | カフ4 | cuff4 |
+| FL-MD-10 | DC-MD-07（カフ4か（カフ2・3 でなければ）） | AC-MD-04（カフ2・3：TERMINATE EVA（作業場所の片付け・PLB の安全化、カフ3は患者をエアロックへ補助）し、MCC に報告する） | カフ2・3 | not cuff4 |
+| FL-MD-11 | AC-MD-05（カフ4：ABORT EVA（患者を補助してエアロックへ、患者を単独で直ちに再与圧、もう1人は PLB を安全化）し、SOMS から蘇生器を出す） | AC-MD-06（カフ4：乗員室をエアロックの再与圧の前か間に 14.7 psi へ再与圧する） | — | — |
+| FL-MD-12 | AC-MD-06（カフ4：乗員室をエアロックの再与圧の前か間に 14.7 psi へ再与圧する） | MG-MD-01（合流） | — | — |
+| FL-MD-13 | AC-MD-04（カフ2・3：TERMINATE EVA（作業場所の片付け・PLB の安全化、カフ3は患者をエアロックへ補助）し、MCC に報告する） | MG-MD-01（合流） | — | — |
+| FL-MD-14 | MG-MD-01（合流） | MG-MD-06（合流） | — | — |
+| FL-MD-15 | MG-MD-06（合流） | AC-MD-07（エアロックを再与圧し SCU につないだまま O2 ACT を PRESS にする（服内の純酸素・加圧）。CMO が Medical Checklist の DCS の診察をして飛行医に報告する） | — | — |
+| FL-MD-16 | AC-MD-07（エアロックを再与圧し SCU につないだまま O2 ACT を PRESS にする（服内の純酸素・加圧）。CMO が Medical Checklist の DCS の診察をして飛行医に報告する） | AC-MD-08（O2 ACT を PRESS のまま20分置き（10.2 psi から数える）、BTA を準備する。処置が LiOH を超えるなら交換する） | — | — |
+| FL-MD-17 | AC-MD-08（O2 ACT を PRESS のまま20分置き（10.2 psi から数える）、BTA を準備する。処置が LiOH を超えるなら交換する） | DC-MD-03（症状が消えたか（再与圧から20分）） | — | — |
+| FL-MD-18 | DC-MD-03（症状が消えたか（再与圧から20分）） | MG-MD-03（合流） | 消えた | resolved20min |
+| FL-MD-19 | DC-MD-03（症状が消えたか（再与圧から20分）） | AC-MD-09（乗員室を 14.7 psi に再与圧し、BTA を付けて服内 6 psid で20分処置する（カフ4は 8 psid から）） | 消えない | not resolved20min |
+| FL-MD-20 | AC-MD-09（乗員室を 14.7 psi に再与圧し、BTA を付けて服内 6 psid で20分処置する（カフ4は 8 psid から）） | DC-MD-04（症状が消えたか（BTA 6 psid）） | — | — |
+| FL-MD-21 | DC-MD-04（症状が消えたか（BTA 6 psid）） | MG-MD-05（合流） | 消えた | resolvedBta6 |
+| FL-MD-22 | DC-MD-04（症状が消えたか（BTA 6 psid）） | AC-MD-10（乗員室を最大 15.56 psia に上げ、BTA 8 psid で2時間処置する。CMO が症状の変化を飛行医に報告する） | 消えない | not resolvedBta6 |
+| FL-MD-23 | AC-MD-10（乗員室を最大 15.56 psia に上げ、BTA 8 psid で2時間処置する。CMO が症状の変化を飛行医に報告する） | DC-MD-05（症状が消えたか（BTA 8 psid）） | — | — |
+| FL-MD-24 | DC-MD-05（症状が消えたか（BTA 8 psid）） | MG-MD-04（合流） | 消えた | resolvedBta8 |
+| FL-MD-25 | DC-MD-05（症状が消えたか（BTA 8 psid）） | AC-MD-11（MCC に薬物の処置を確かめ（QDM に替えて飛行医の指示で服薬）、服の加圧を続ける） | 消えない | not resolvedBta8 |
+| FL-MD-26 | AC-MD-11（MCC に薬物の処置を確かめ（QDM に替えて飛行医の指示で服薬）、服の加圧を続ける） | DC-MD-06（消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか）） | — | — |
+| FL-MD-27 | DC-MD-06（消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか）） | AC-MD-12（早期に終了し、次の主着陸場か NPLS の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱する（発症から最短10時間）） | 消えないカフ4・進行 | persistentCuff4 |
+| FL-MD-28 | DC-MD-06（消えないカフ4か（またはカフ4以外でも進行・危険と判断されたか）） | MG-MD-02（合流） | そうでない（飛行を続け経過を見る） | not persistentCuff4 |
+| FL-MD-29 | AC-MD-12（早期に終了し、次の主着陸場か NPLS の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱する（発症から最短10時間）） | AC-MD-13（着陸後、患者を高圧治療の施設へ運ぶ） | — | — |
+| FL-MD-30 | AC-MD-13（着陸後、患者を高圧治療の施設へ運ぶ） | EN-MD-3（終了） | — | — |
+| FL-MD-31 | MG-MD-03（合流） | MG-MD-05（合流） | — | — |
+| FL-MD-32 | MG-MD-05（合流） | MG-MD-04（合流） | — | — |
+| FL-MD-33 | MG-MD-04（合流） | MG-MD-02（合流） | — | — |
+| FL-MD-34 | MG-MD-02（合流） | AC-MD-14（EVA 後の手順を行い QDM で2時間酸素を吸う。CMO は12時間ごとに飛行医へ報告し、72時間は下げた乗員室圧にさらさない。任務・EVA への復帰は飛行医が決め、DCS AFTERCARE へ進む） | — | — |
+| FL-MD-35 | AC-MD-14（EVA 後の手順を行い QDM で2時間酸素を吸う。CMO は12時間ごとに飛行医へ報告し、72時間は下げた乗員室圧にさらさない。任務・EVA への復帰は飛行医が決め、DCS AFTERCARE へ進む） | EN-MD（終了） | — | — |
 
 ## 11. 医療の事象の実績
 
@@ -271,7 +276,7 @@ PMC の決まり 6件を示す。
 
 ## 13. 照合表の行と医療の実績
 
-照合表の医療の行 12件について、本書の実績から出せる値を示す。照合表の判定は変えない。
+照合表の医療の行 12件について、本書の実績から出せる値を示す。照合表の判定の欄は Rev. BQ の見直しの後のものである（見直しは SSD-HSI-SYS-001 の注記）。
 
 | 照合表の行 | 要求の要旨 | 基準 | 照合表の判定 | 本書の実績から出せる値 |
 |---|---|---|---|---|
@@ -282,9 +287,9 @@ PMC の決まり 6件を示す。
 | HSI-033 | 飛行後の感覚運動の再調整（§4.2.6） | —（値なし） | データ不足 | 飛行後の神経学的な不調を飛行医が標準化した主観の評価で記録し、任務への復帰の評価に動的な姿勢の検査を使った（値は無い）。 |
 | HSI-052 | 生涯の宇宙放射線の限度（§4.8.2） | <600 mSv | 適合 | STS の乗員の1飛行の実効線量の平均は区分ごとに 1.6〜17.0 mSv（2004年まで、549 人・飛行）。 |
 | HSI-066 | 概日リズムと疲労の管理（§6.1） | —（値なし） | データ不足 | 1988年の調査で宇宙の睡眠は平均 6 時間/日（地上 7.9 時間）、最初と最後の日は 5.6・5.7 時間。後の測定で飛行前より約 20 分短い。睡眠薬は夜の 52% で使い、2交代の飛行で多い（50% 対 19%）。 |
-| HSI-075 | 乗員の健康の結果（§7.1） | —（値なし） | データ不足 | 飛行後の医学の聞き取り・飛行医の記録・PMC の記録などの医学記録が残り、STS-1〜STS-94（宇宙酔いなど）や 772 飛行（背中の痛み）の後ろ向きの集計に使えた。 |
-| HSI-105 | 減圧症の危険の識別（Vol. 2 §6.2.2.4） | <4%（95% の信頼度） | データ不足 | 10.2 psi の手順を決めた地上の試験は 173 回で症状 26%・静脈の気泡 55%（症状の大半はごく軽い）。シャトルの段階の手順の R 値 1.51±0.07 は、減圧症 18% の地上の被験者 245 人と同じ程度。飛行では 153 人・EVA で減圧症の報告は 0。 |
-| HSI-180 | 電離放射線の防護の限度（Vol. 2 §6.8.1.2） | —（値なし） | データ不足 | 当時の限度は BFO 30日 25 rem・年 50 rem（A14-10）、管理上の限度は皮膚 0.5 rad（A14-11）。STS の1飛行の実効線量の平均は 1.6〜17.0 mSv。 |
+| HSI-075 | 乗員の健康の結果（§7.1） | —（値なし） | 適合 | 飛行後の医学の聞き取り・飛行医の記録・PMC の記録などの医学記録が残り、STS-1〜STS-94（宇宙酔いなど）や 772 飛行（背中の痛み）の後ろ向きの集計に使えた。 |
+| HSI-105 | 減圧症の危険の識別（Vol. 2 §6.2.2.4） | <4%（95% の信頼度） | 不適合 | 10.2 psi の手順を決めた地上の試験は 173 回で症状 26%・静脈の気泡 55%（症状の大半はごく軽い）。シャトルの段階の手順の R 値 1.51±0.07 は、減圧症 18% の地上の被験者 245 人と同じ程度。飛行では 153 人・EVA で減圧症の報告は 0。 |
+| HSI-180 | 電離放射線の防護の限度（Vol. 2 §6.8.1.2） | —（値なし） | 不適合 | 当時の限度は BFO 30日 25 rem・年 50 rem（A14-10）、管理上の限度は皮膚 0.5 rad（A14-11）。STS の1飛行の実効線量の平均は 1.6〜17.0 mSv。 |
 | HSI-225 | 起立耐性の低下の対抗措置（Vol. 2 §7.4.3） | —（値なし） | 適合 | 耐G服・液冷服を着ないとき、飛行中の運動と水分負荷は約 30% を守れなかった。短い飛行の 20〜30%、シャトルの着陸日の傾斜の試験で 13/66 人（20%）が終えられなかった。液冷で発生が減った（A13-31 の根拠）。 |
 | HSI-226 | 医療の能力（Vol. 2 §7.5.1） | —（値なし） | データ不足 | 21 飛行（STS-107・STS-115〜135）で LOCL・EVAC は 0 件。使った消耗品の順位は睡眠薬・制吐薬・鎮痛薬・鼻づまりの薬・下剤・抗生物質。 |
 
@@ -338,7 +343,9 @@ PMC の決まり 6件を示す。
 
 > **注記** 調査で根拠が不足した点・本書の判断：{'item': 'EVA の健康の評価の時刻', 'note': 'FR A13-101 は計画外 EVA の PMC の評価を約48時間とし、既存の F-EVA-OPS-12 は72時間と書く（出典が異なる）。本書は FR の値を MDS-055 に写しただけで、既存の行は変えない。'}
 
-> **注記** 調査で根拠が不足した点・本書の判断：減圧症の疑いの処置の活動図（MD）は、描ける流れの形に合わせて、カフ区分の三分岐を2つの判断（カフ1か・カフ4か）に分け、「症状が消えた」の行き先を右の列の合流で受けた（本書の判断）。カフ1で再与圧の後も症状が残るときの扱い（DC-MD-02）は、PMC での報告の行動（AC-MD-03）の文に含めた。
+> **注記** 調査で根拠が不足した点・本書の判断：減圧症の疑いの処置の活動図（MD）は、描ける流れの形に合わせて、カフ区分の三分岐を2つの判断（カフ1か・カフ4か）に分け、「症状が消えた」の行き先を右の列の合流で受けた（本書の判断）。Rev. BP の図は、カフ1で再与圧の後に症状が消えたかの判断（DC-MD-02）を PMC での報告の行動（AC-MD-03）の文に含めていたが、消えたときにカフ2として DCS の処置へ進む流れ（EVA チェックリスト）が図から読めなかった。Rev. BQ で DC-MD-02 を戻し、消えたときは合流 MG-MD-06（新設）から処置（AC-MD-07）へ進むように描き直した。
+
+> **注記** 照合表の判定の見直し（Rev. BQ）：本書が集めた値と追加の調査で、照合表（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md)）の判定を見直した。本書の「照合表の行」の表では 3行の判定が変わった。判定に使ったのは一次資料の設計値・運用の限界・実績と、その単純な換算だけで、本書のモデルの計算（係数を仮定した時系列）は使っていない。上の「照合表の判定は変えない」と書いた文は Rev. BP までの扱いである。
 
 ## 17. 参考文献
 
@@ -440,3 +447,4 @@ PMC の決まり 6件を示す。
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-09 | 初版作成（SOMS の構成 23件・役割 9件・訓練 6件・活動図2件・事象 30件、図187〜190、SysML v2 テキスト） |
+| Rev. A | 2026-10-11 | 図189（減圧症の疑いの処置）の組み替えを直した：カフ1で再与圧の後に症状が消えたかの判断（DC-MD-02）を戻し、消えたときに合流 MG-MD-06 から処置へ進む流れを描いた（Rev. BQ の本書の判断の確認）、照合表の判定の見直し（Rev. BQ）に合わせて、照合表の行の表の判定を改めた（3行）（Rev. BQ） |

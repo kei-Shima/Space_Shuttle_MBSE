@@ -318,7 +318,7 @@ package SSD_HSI_SYS_001 {
         }
         requirement def <'HSI-075'> V1_7001 {
             doc /* [V1 7001] 乗員の健康の監視の結果を傾向の解析ができる恒久的な取り出せる形で保つ。 */
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-075"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::compliant; row = "HSI-075"; conflict = false; }
         }
         requirement def <'HSI-076'> V1_7002 {
             doc /* [V1 7002] 乗員の医学的な健康のデータの送信の方法は計画の医療運用の必要を満たす。 */
@@ -424,7 +424,7 @@ package SSD_HSI_SYS_001 {
         }
         requirement def <'HSI-099'> V2_6001 {
             doc /* [V2 6001] 環境・スーツの監視データを時間の傾向の解析に使える形式で提供する。 */
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-099"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::compliant; row = "HSI-099"; conflict = false; }
         }
         requirement def <'HSI-100'> V2_6002 {
             doc /* [V2 6002] 乗員室の大気は希釈ガスを30%以上含む（残りは酸素）。 */
@@ -434,7 +434,7 @@ package SSD_HSI_SYS_001 {
         requirement def <'HSI-101'> V2_6003 {
             doc /* [V2 6003] 吸気の酸素分圧（PIO2）を表 6.2-1 の範囲に保つ。 */
             attribute criterion : String = "PIO2 目標 145〜155 mmHg、上限 356 mmHg（無期限）、下限 127 mmHg（1時間平均、絶対 122 mmHg）";
-            @HsiEvaluation { verdict = HsiVerdict::nonCompliant; row = "HSI-101"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::nonCompliant; row = "HSI-101"; conflict = true; }
         }
         requirement def <'HSI-102'> V2_6004 {
             doc /* [V2 6004] 居住区画の CO2 分圧の1時間平均を 3 mmHg 以下に保つ。 */
@@ -449,12 +449,12 @@ package SSD_HSI_SYS_001 {
         requirement def <'HSI-104'> V2_6007 {
             doc /* [V2 6007] 1.0 psi を超える圧力の変化では、機内の全圧の変化率を 13.5 psi/min 以下にする。 */
             attribute criterion : String = "≤13.5 psi/min（>1.0 psi の変化）";
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-104"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::nonCompliant; row = "HSI-104"; conflict = true; }
         }
         requirement def <'HSI-105'> V2_6008 {
             doc /* [V2 6008] 計画ごとに DCS の対策を定め、地上の試験で DCS の確率 4% 未満（95% の信頼度）を示す（重い DCS なし、VGE を評価）。 */
             attribute criterion : String = "DCS の確率 <4%（95% の信頼度）";
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-105"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::nonCompliant; row = "HSI-105"; conflict = true; }
         }
         requirement def <'HSI-106'> V2_6150 {
             doc /* [V2 6150] 指令による圧力の変化中、乗員の停止の指示から 1 psi 以内で止め、その後に加圧・減圧を選べる。 */
@@ -468,7 +468,7 @@ package SSD_HSI_SYS_001 {
         requirement def <'HSI-108'> V2_6012 {
             doc /* [V2 6012] 乗員室の湿度・温度を図 6.2-2 の運用の限界の内に保つ（スーツ・上昇・再突入・着陸・着陸後を除く）。 */
             attribute criterion : String = "図 6.2-2 の範囲（左上の隅 18°C・75%、右下の隅 27°C・25%）";
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-108"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::nonCompliant; row = "HSI-108"; conflict = true; }
         }
         requirement def <'HSI-109'> V2_6013 {
             doc /* [V2 6013] 通常の運用で居住区画の湿度・温度を図 6.2-3 の性能の範囲に到達できる。 */
@@ -483,7 +483,7 @@ package SSD_HSI_SYS_001 {
         requirement def <'HSI-111'> V2_6011 {
             doc /* [V2 6011] 着陸後の通常の運用で相対湿度を表 6.2-2 の範囲に抑える。 */
             attribute criterion : String = "RH 25〜75% は無期限、75〜85% は24時間、85〜95% は12時間、95% 超は8時間";
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-111"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::compliant; row = "HSI-111"; conflict = false; }
         }
         requirement def <'HSI-112'> V2_6151 {
             doc /* [V2 6151] 居住区画の温度の設定点を 0.5°C 以下の刻みで選べ、設定の誤差を ±1.5°C とする。 */
@@ -501,7 +501,7 @@ package SSD_HSI_SYS_001 {
         }
         requirement def <'HSI-115'> V2_6020 {
             doc /* [V2 6020] 隔離できる居住区画ごとに、全圧・湿度・温度・ppO2・ppCO2 を自動で記録する。 */
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-115"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::compliant; row = "HSI-115"; conflict = false; }
         }
         requirement def <'HSI-116'> V2_7041 {
             doc /* [V2 7041] 運動の区域で増える O2 の消費と熱・CO2・汗・臭気・粒子に環境制御が対応する。 */
@@ -799,7 +799,7 @@ package SSD_HSI_SYS_001 {
         }
         requirement def <'HSI-180'> V2_6095 {
             doc /* [V2 6095] 計画として、乗員が Vol. 1 4.8 節の生涯の許容暴露限度（PEL）を超えないよう設計の要求と運用の制約を定める。 */
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-180"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::nonCompliant; row = "HSI-180"; conflict = true; }
         }
         requirement def <'HSI-181'> V2_6098 {
             doc /* [V2 6098] 計画として、設計の要求と検証に使う放射線の環境を定める。 */
@@ -1015,7 +1015,7 @@ package SSD_HSI_SYS_001 {
         }
         requirement def <'HSI-232'> V2_7052 {
             doc /* [V2 7052] 動かせるすべての物（食料・EVA 服・予備品など）に専用の収納場所を与える。 */
-            @HsiEvaluation { verdict = HsiVerdict::insufficientData; row = "HSI-232"; conflict = false; }
+            @HsiEvaluation { verdict = HsiVerdict::compliant; row = "HSI-232"; conflict = false; }
         }
         requirement def <'HSI-233'> V2_7053 {
             doc /* [V2 7053] 乗員の作業を妨げない収納場所を定める。 */

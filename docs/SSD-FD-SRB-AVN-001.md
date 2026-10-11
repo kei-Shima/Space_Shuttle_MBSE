@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-SRB-AVN-001 |
 | 表題 | 電子・電力・射場安全（AVN）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-SRB-001 |
 | 関連図 | SSD-SYS-ARC-001 図74 SRB 機能構成 |
@@ -30,7 +30,7 @@ SRBの統合電子組立（IEA）、オービタからの電力の分配、レ�
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-EPS-11 | 電力系：直流配電（EPS） | 電力（28 VDC） | 受信 | EPDCは、28 V直流電力をオービタ各系、SRB、外部タンク、ペイロードへ制御・分配する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | 上位: IF-ORB-14 上位: IF-ORB-27 上位: IF-ORB-28 |
+| IF-EPS-11 | 電力系：直流配電（EPS） | 電力（28 VDC） | 受信 | EPDCは、28 V直流電力をオービタ各系、SRB、外部タンク、ペイロードへ制御・分配する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/330） | 上位: IF-ORB-14 上位: IF-ORB-27 上位: IF-ORB-28 |
 | IF-GNC-19 | DAP・飛行制御センサ | データ・指令 | 送信 | 各SRBの前部スカートにある2台のSRB RGAは、角速度に比例する電圧をフライトアフトMDMを経てGPCのSRB RGA SOPへ送る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/499）SRB RGAは1回の飛行より多く使ってはならない。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=178） | 上位: IF-ORB-22 |
 | IF-DPS-07 | 上昇系インタフェース | データ・指令 | 受信 | 打上げデータバスで5台のGPCを左右のSRBにある4台のMDM（LL1・LL2・LR1・LR2）に結ぶ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/233）SRB MDMはSRB内で受動のコールドプレートで冷やされ、オービタの主母線につながるSRBバスA・Bから給電される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/236） | 上位: IF-ORB-18 |
 | IF-SRB-05 | 推力方向制御（HPU） | データ・指令 | 送信 | APUの制御器の電子装置は、ETの後部結合リングにあるSRBの後部IEAに置かれる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/75） | — |
@@ -55,15 +55,16 @@ SRBの統合電子組立（IEA）、オービタからの電力の分配、レ�
 2. Shuttle Crew Operations Manual 1.4 Solid Rocket Boosters（USA007587 Rev. A CPN-1、PDF p75） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/75
 3. Shuttle Crew Operations Manual 1.4 Solid Rocket Boosters（USA007587 Rev. A CPN-1、PDF p77） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/77
 4. Shuttle Crew Operations Manual 1.4 Solid Rocket Boosters（USA007587 Rev. A CPN-1、PDF p78） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/78
-5. NSTS 1988 News Reference Manual – Electrical Power System（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eps.html
-6. Shuttle Crew Operations Manual 2.13 Guidance, Navigation, and Control（USA007587 Rev. A CPN-1、PDF p499） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/499
-7. JSC-08934 Vol.1 Rev. E Shuttle Operational Data Book（Systems Performance and Constraints Data） 3.4.5.1 GN&C Subsystems（SRB RGA Usage Limit）（PDF p178） — https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=178
-8. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p233） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/233
-9. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p236） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/236
-10. Shuttle Crew Operations Manual 付録E OI Updates（USA007587 Rev. A CPN-1、PDF p1149） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1149
+5. Shuttle Crew Operations Manual 2.13 Guidance, Navigation, and Control（USA007587 Rev. A CPN-1、PDF p499） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/499
+6. JSC-08934 Vol.1 Rev. E Shuttle Operational Data Book（Systems Performance and Constraints Data） 3.4.5.1 GN&C Subsystems（SRB RGA Usage Limit）（PDF p178） — https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=178
+7. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p233） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/233
+8. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p236） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/236
+9. Shuttle Crew Operations Manual 付録E OI Updates（USA007587 Rev. A CPN-1、PDF p1149） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/1149
+10. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p330） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/330
 
 ## 7. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（1文）（Rev. BR） |

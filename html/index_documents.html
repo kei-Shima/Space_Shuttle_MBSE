@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文書一覧｜スペースシャトル システム設計 図書一覧</title><style>
+:root{--ink:#15202B;--sub:#4A5563;--paper:#FFFFFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+ line-height:1.75;font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.bar{height:6px;background:var(--flag)}
+main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+nav.crumb{font-size:.85rem;color:var(--sub);margin:.25rem 0 1.25rem}
+nav.crumb a{color:var(--link)}
+table.tb{border-collapse:collapse;width:100%;max-width:40rem;border:2px solid var(--ink);margin:0 0 2rem;font-size:.9rem}
+table.tb th{background:#E9EDF2;text-align:left;font-weight:600;white-space:nowrap;width:9.5rem}
+table.tb th,table.tb td{border:1px solid var(--ink);padding:.35rem .6rem;vertical-align:top}
+table.tb td.t{font-size:1.15rem;font-weight:700;line-height:1.5}
+h2{font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,li{max-width:46rem}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all}
+table.dt{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
+table.dt th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem;white-space:nowrap}
+table.dt td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--panel)}
+table.dt td.id{white-space:nowrap;font-weight:600}
+table.dt td.nw{white-space:nowrap}
+table.dt td.pt{min-width:9.5em}
+tr:target td{background:#FFF1E8 !important;box-shadow:inset 4px 0 0 var(--flag)}
+.chip{display:inline-block;padding:0 .45rem;border-radius:3px;font-size:.78rem;font-weight:600;color:#fff;white-space:nowrap}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.6rem 0;max-width:52rem}
+.note b{color:var(--flag)}
+ol.refs{padding-left:1.4rem;font-size:.88rem}
+ol.refs li{margin:.3rem 0;max-width:none}
+figure{margin:1rem 0 1.5rem}
+figure img{max-width:100%;border:1px solid var(--rule)}
+figcaption{font-size:.85rem;color:var(--sub)}
+.scroll{overflow-x:auto}
+@media print{.bar{display:none} main{max-width:none;padding:0} a{color:var(--ink)} table.dt th{color:#000;background:#DDD}}
+/*index-pages*/
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 1.25rem;font-size:.88rem}
+nav.pages a{padding:.1rem .65rem;border:1px solid var(--rule);border-radius:3px;text-decoration:none;white-space:nowrap}
+nav.pages a[aria-current]{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+nav.pages.sub{margin:.75rem 0 1rem}
+ul.cards{list-style:none;margin:1rem 0 2rem;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(18rem,1fr));gap:.75rem}
+ul.cards li{max-width:none;margin:0;padding:.6rem .85rem .7rem;background:var(--panel);border-left:4px solid var(--ink)}
+ul.cards li>a{font-weight:700;font-size:1.05rem}
+ul.cards p{margin:.2rem 0 0;font-size:.86rem;line-height:1.6}
+.n{margin-left:.5rem;font-size:.8rem;font-weight:400;color:var(--sub);white-space:nowrap}
+p.tochead{margin:1rem 0 0;font-size:.85rem;font-weight:600;color:var(--sub)}
+ul.toc{list-style:none;margin:.3rem 0 1rem;padding:0;display:flex;flex-wrap:wrap;gap:.1rem 1.2rem;font-size:.9rem}
+ul.toc li{max-width:none}
+ul.toc .n{margin-left:.25rem}
+h3 a.more{margin-left:.6rem;font-size:.82rem;font-weight:400}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:.9rem;margin:.6rem 0 .8rem}
+.gal figure{margin:0}
+.gal img{display:block;width:100%;height:9rem;object-fit:contain}
+details{margin:0 0 1.5rem}
+@media (min-width:60rem){
+.p-doc table.dt th:nth-child(1){width:13.5rem}
+.p-doc table.dt th:nth-child(3){width:6.5rem}
+.p-doc table.dt th:nth-child(4){width:8rem}
+.p-doc table.dt th:nth-child(5){width:13rem}
+.p-if table.dt th:nth-child(1){width:7rem}
+.p-if table.dt th:nth-child(2),.p-if table.dt th:nth-child(3){width:6.5rem}
+.p-if table.dt th:nth-child(4){width:11.5rem}
+.p-if table.dt th:nth-child(6){width:7.5rem}
+}
+summary{cursor:pointer;font-size:.9rem;color:var(--link)}
+@media print{nav.pages,ul.toc,p.tochead{display:none}}
+/*/index-pages*/
+</style></head>
+<body><div class="bar"></div><main>
+
+<nav class="pages" aria-label="図書一覧のページ"><a href="index.html">図書一覧</a><a href="index_guide.html">使い方・出典</a><a href="index_figures.html">図面</a><a href="index_documents.html" aria-current="page">文書一覧</a><a href="index_interfaces.html">インタフェース一覧</a><a href="index_notes.html">注記</a><a href="index_history.html">変更履歴</a></nav>
+<div class="p-doc">
+<h2>3. 文書一覧</h2>
+<p>説明書 322件を、系ごと（機能説明書・関連文書一覧）と主題ごと（横断の定義書）に並べています。</p>
+<p class="tochead">系ごとの説明書</p>
+<ul class="toc"><li><a href="#g-stack">システム全体・外部要素（オービタ・ET・SRB・外部系）</a><span class="n">18件</span></li><li><a href="#g-mps">主推進系（MPS）</a><span class="n">9件</span></li><li><a href="#g-oms">軌道制御系（OMS）</a><span class="n">9件</span></li><li><a href="#g-rcs">姿勢制御系（RCS）</a><span class="n">9件</span></li><li><a href="#g-gnc">誘導・航法・制御（GN&amp;C）</a><span class="n">9件</span></li><li><a href="#g-dps">データ処理系（DPS）</a><span class="n">9件</span></li><li><a href="#g-ct">通信・追跡系（C&amp;T）</a><span class="n">9件</span></li><li><a href="#g-cw">警報系（C/W）</a><span class="n">7件</span></li><li><a href="#g-eps">電力系（EPS）</a><span class="n">6件</span></li><li><a href="#g-apu">補助動力装置・油圧系（APU/HYD）</a><span class="n">9件</span></li><li><a href="#g-tcs">熱制御・熱防護（TCS・TPS）</a><span class="n">10件</span></li><li><a href="#g-str">構造（STR）</a><span class="n">8件</span></li><li><a href="#g-mech">機械系（MECH）</a><span class="n">8件</span></li><li><a href="#g-pls">ペイロード支援（PLS）</a><span class="n">8件</span></li><li><a href="#g-crew">乗員系・脱出系（CREW）</a><span class="n">8件</span></li><li><a href="#g-eva">船外活動（EVA/EMU）</a><span class="n">8件</span></li><li><a href="#g-ecl">環境制御・生命維持系（ECLSS）</a><span class="n">42件</span></li><li><a href="#g-ars">大気再生系（ARS）とその下位（ECLSS）</a><span class="n">53件</span></li></ul>
+<p class="tochead">横断の定義書</p>
+<ul class="toc"><li><a href="#g-ops">運用・振る舞い</a><span class="n">11件</span></li><li><a href="#g-req">要求・検証・トレース</a><span class="n">24件</span></li><li><a href="#g-arch">構成・インタフェース・物理配置・モデル管理</a><span class="n">8件</span></li><li><a href="#g-cfg">構成の違い（機体・飛行）</a><span class="n">3件</span></li><li><a href="#g-res">資源・マージン</a><span class="n">4件</span></li><li><a href="#g-saf">安全・故障</a><span class="n">21件</span></li><li><a href="#g-hsi">人間系</a><span class="n">12件</span></li></ul>
+<h3 id="g-stack">システム全体・外部要素（オービタ・ET・SRB・外部系）<span class="n">18件</span><a class="more" href="index_notes_vehicle.html#g-stack">注記 37件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:stack]-->
+<tr><td class='id'><a href='docs/SSD-FD-ORB-001.html'>SSD-FD-ORB-001</a></td><td>オービタ（OV）機能説明書</td><td class='nw'>Rev. J</td><td>ORB</td><td>図1 システム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-001.html'>SSD-FD-ET-001</a></td><td>外部タンク（ET）機能説明書</td><td class='nw'>Rev. G</td><td>ET</td><td>図1 システム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-LOX-001.html'>SSD-FD-ET-LOX-001</a></td><td>LO2タンク（LOX）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-ITK-001.html'>SSD-FD-ET-ITK-001</a></td><td>インタタンク（ITK）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-LH2-001.html'>SSD-FD-ET-LH2-001</a></td><td>LH2タンク（LH2）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-UMB-001.html'>SSD-FD-ET-UMB-001</a></td><td>アンビリカル・弁・センサ（UMB）機能説明書</td><td class='nw'>Rev. A</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-TPS-001.html'>SSD-FD-ET-TPS-001</a></td><td>ET熱防護（TPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ET-SEP-001.html'>SSD-FD-ET-SEP-001</a></td><td>分離・投棄・飛行安全（SEP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-ET-REF-001.html'>SSD-ET-REF-001</a></td><td>ET 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図73 ET 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-001.html'>SSD-FD-SRB-001</a></td><td>固体ロケットブースタ（SRB）機能説明書</td><td class='nw'>Rev. F</td><td>SRB</td><td>図1 システム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-MTR-001.html'>SSD-FD-SRB-MTR-001</a></td><td>固体ロケットモータ（MTR）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-HDP-001.html'>SSD-FD-SRB-HDP-001</a></td><td>保持・点火（HDP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-TVC-001.html'>SSD-FD-SRB-TVC-001</a></td><td>推力方向制御（HPU）（TVC）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-AVN-001.html'>SSD-FD-SRB-AVN-001</a></td><td>電子・電力・射場安全（AVN）機能説明書</td><td class='nw'>Rev. A</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-ATT-001.html'>SSD-FD-SRB-ATT-001</a></td><td>ET結合・分離（ATT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-SRB-REC-001.html'>SSD-FD-SRB-REC-001</a></td><td>降下・回収（REC）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-SRB-REF-001.html'>SSD-SRB-REF-001</a></td><td>SRB 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図75 SRB 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EXT-001.html'>SSD-FD-EXT-001</a></td><td>外部系（追跡・通信網／ミッション管制／打上げ処理）機能説明書</td><td class='nw'>Rev. F</td><td>LPS・MCC・NET</td><td>図1 システム構成</td></tr>
+<!--[/docrows:stack]--></table>
+<h3 id="g-mps">主推進系（MPS）<span class="n">9件</span><a class="more" href="index_notes_vehicle.html#g-mps">注記 44件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:mps]-->
+<tr><td class='id'><a href='docs/SSD-FD-MPS-001.html'>SSD-FD-MPS-001</a></td><td>主推進系（MPS）機能説明書</td><td class='nw'>Rev. J</td><td>MPS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-SSME-001.html'>SSD-FD-MPS-SSME-001</a></td><td>主エンジン本体（SSME）機能説明書</td><td class='nw'>Rev. A</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-CTL-001.html'>SSD-FD-MPS-CTL-001</a></td><td>主エンジン制御器（CTL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-PMS-001.html'>SSD-FD-MPS-PMS-001</a></td><td>推進薬供給（PMS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-DMP-001.html'>SSD-FD-MPS-DMP-001</a></td><td>充填・ダンプ・不活性化（DMP）機能説明書</td><td class='nw'>Rev. A</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-HE-001.html'>SSD-FD-MPS-HE-001</a></td><td>ヘリウム・空圧（HE）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-TVC-001.html'>SSD-FD-MPS-TVC-001</a></td><td>油圧・推力方向制御（TVC）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MPS-OPS-001.html'>SSD-FD-MPS-OPS-001</a></td><td>MPS運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-MPS-REF-001.html'>SSD-MPS-REF-001</a></td><td>MPS 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図51 MPS 関連文書マトリクス</td></tr>
+<!--[/docrows:mps]--></table>
+<h3 id="g-oms">軌道制御系（OMS）<span class="n">9件</span><a class="more" href="index_notes_vehicle.html#g-oms">注記 35件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:oms]-->
+<tr><td class='id'><a href='docs/SSD-FD-OMS-001.html'>SSD-FD-OMS-001</a></td><td>軌道制御系（OMS）機能説明書</td><td class='nw'>Rev. I</td><td>OMS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-ENG-001.html'>SSD-FD-OMS-ENG-001</a></td><td>OMSエンジン・GN2系（ENG）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-HE-001.html'>SSD-FD-OMS-HE-001</a></td><td>ヘリウム加圧（HE）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-PSD-001.html'>SSD-FD-OMS-PSD-001</a></td><td>推進薬貯蔵・分配（PSD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-XFD-001.html'>SSD-FD-OMS-XFD-001</a></td><td>クロスフィード・RCS連結（XFD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-TVC-001.html'>SSD-FD-OMS-TVC-001</a></td><td>推力方向制御（ジンバル）（TVC）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-THM-001.html'>SSD-FD-OMS-THM-001</a></td><td>推進薬熱管理（THM）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-OMS-OPS-001.html'>SSD-FD-OMS-OPS-001</a></td><td>運用管理（規則・処置）（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-OMS-REF-001.html'>SSD-OMS-REF-001</a></td><td>OMS 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図53 OMS 関連文書マトリクス</td></tr>
+<!--[/docrows:oms]--></table>
+<h3 id="g-rcs">姿勢制御系（RCS）<span class="n">9件</span><a class="more" href="index_notes_vehicle.html#g-rcs">注記 41件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:rcs]-->
+<tr><td class='id'><a href='docs/SSD-FD-RCS-001.html'>SSD-FD-RCS-001</a></td><td>姿勢制御系（RCS）機能説明書</td><td class='nw'>Rev. I</td><td>RCS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-HEP-001.html'>SSD-FD-RCS-HEP-001</a></td><td>ヘリウム加圧（HEP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-PRP-001.html'>SSD-FD-RCS-PRP-001</a></td><td>推進薬貯蔵・分配（PRP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-JET-001.html'>SSD-FD-RCS-JET-001</a></td><td>主・バーニア噴射器（JET）機能説明書</td><td class='nw'>Rev. A</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-RJD-001.html'>SSD-FD-RCS-RJD-001</a></td><td>噴射器駆動回路（RJD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-HTR-001.html'>SSD-FD-RCS-HTR-001</a></td><td>熱制御（ヒータ）（HTR）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-RM-001.html'>SSD-FD-RCS-RM-001</a></td><td>噴射器冗長管理（RM）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-RCS-OPS-001.html'>SSD-FD-RCS-OPS-001</a></td><td>RCS運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-RCS-REF-001.html'>SSD-RCS-REF-001</a></td><td>RCS 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図55 RCS 関連文書マトリクス</td></tr>
+<!--[/docrows:rcs]--></table>
+<h3 id="g-gnc">誘導・航法・制御（GN&amp;C）<span class="n">9件</span><a class="more" href="index_notes_avionics.html#g-gnc">注記 38件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:gnc]-->
+<tr><td class='id'><a href='docs/SSD-FD-GNC-001.html'>SSD-FD-GNC-001</a></td><td>誘導・航法・制御（GN&amp;C）機能説明書</td><td class='nw'>Rev. J</td><td>GNC</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-INS-001.html'>SSD-FD-GNC-INS-001</a></td><td>慣性計測・アライメント（INS）機能説明書</td><td class='nw'>Rev. A</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-NAS-001.html'>SSD-FD-GNC-NAS-001</a></td><td>航法援助・エアデータ（NAS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-GNS-001.html'>SSD-FD-GNC-GNS-001</a></td><td>誘導・航法演算（GNS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-FCS-001.html'>SSD-FD-GNC-FCS-001</a></td><td>DAP・飛行制御センサ（FCS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-ACT-001.html'>SSD-FD-GNC-ACT-001</a></td><td>舵面・推力方向制御駆動（ACT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-CCD-001.html'>SSD-FD-GNC-CCD-001</a></td><td>乗員操縦・表示（CCD）機能説明書</td><td class='nw'>Rev. A</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-GNC-OPS-001.html'>SSD-FD-GNC-OPS-001</a></td><td>GNC運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>GNC</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-GNC-REF-001.html'>SSD-GNC-REF-001</a></td><td>GN&amp;C 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>GNC</td><td>図47 GN&amp;C 関連文書マトリクス</td></tr>
+<!--[/docrows:gnc]--></table>
+<h3 id="g-dps">データ処理系（DPS）<span class="n">9件</span><a class="more" href="index_notes_avionics.html#g-dps">注記 46件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:dps]-->
+<tr><td class='id'><a href='docs/SSD-FD-DPS-001.html'>SSD-FD-DPS-001</a></td><td>データ処理系（DPS）機能説明書</td><td class='nw'>Rev. L</td><td>DPS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-GPC-001.html'>SSD-FD-DPS-GPC-001</a></td><td>汎用計算機・冗長セット（GPC）機能説明書</td><td class='nw'>Rev. A</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-FSW-001.html'>SSD-FD-DPS-FSW-001</a></td><td>飛行ソフトウェア・MMU（FSW）機能説明書</td><td class='nw'>Rev. A</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-BUS-001.html'>SSD-FD-DPS-BUS-001</a></td><td>データバス網・MDM（BUS）機能説明書</td><td class='nw'>Rev. A</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-ASC-001.html'>SSD-FD-DPS-ASC-001</a></td><td>上昇系インタフェース（ASC）機能説明書</td><td class='nw'>Rev. A</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-MEDS-001.html'>SSD-FD-DPS-MEDS-001</a></td><td>表示・キーボード（MEDS）機能説明書</td><td class='nw'>Rev. A</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-MTU-001.html'>SSD-FD-DPS-MTU-001</a></td><td>マスタタイミングユニット（MTU）機能説明書</td><td class='nw'>Rev. A</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-DPS-OPS-001.html'>SSD-FD-DPS-OPS-001</a></td><td>DPS運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-DPS-REF-001.html'>SSD-DPS-REF-001</a></td><td>DPS 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>DPS</td><td>図49 DPS 関連文書マトリクス</td></tr>
+<!--[/docrows:dps]--></table>
+<h3 id="g-ct">通信・追跡系（C&amp;T）<span class="n">9件</span><a class="more" href="index_notes_avionics.html#g-ct">注記 45件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:ct]-->
+<tr><td class='id'><a href='docs/SSD-FD-CT-001.html'>SSD-FD-CT-001</a></td><td>通信・追跡系（C&amp;T）機能説明書</td><td class='nw'>Rev. K</td><td>CT</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-SBD-001.html'>SSD-FD-CT-SBD-001</a></td><td>S帯PM・FM通信（SBD）機能説明書</td><td class='nw'>Rev. A</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-KU-001.html'>SSD-FD-CT-KU-001</a></td><td>Ku帯通信・レーダ（KU）機能説明書</td><td class='nw'>Rev. A</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-UHF-001.html'>SSD-FD-CT-UHF-001</a></td><td>UHF（SPLX・SSOR）（UHF）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-AUD-001.html'>SSD-FD-CT-AUD-001</a></td><td>音声分配（ACCU・ATU）（AUD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-CCTV-001.html'>SSD-FD-CT-CCTV-001</a></td><td>閉回路テレビ（CCTV）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-INST-001.html'>SSD-FD-CT-INST-001</a></td><td>計装・ペイロード通信（INST）機能説明書</td><td class='nw'>Rev. A</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CT-OPS-001.html'>SSD-FD-CT-OPS-001</a></td><td>C&amp;T運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CT</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-CT-REF-001.html'>SSD-CT-REF-001</a></td><td>C&amp;T 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>CT</td><td>図59 C&amp;T 関連文書マトリクス</td></tr>
+<!--[/docrows:ct]--></table>
+<h3 id="g-cw">警報系（C/W）<span class="n">7件</span><a class="more" href="index_notes_avionics.html#g-cw">注記 16件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:cw]-->
+<tr><td class='id'><a href='docs/SSD-FD-CW-001.html'>SSD-FD-CW-001</a></td><td>警報系（C/W）機能説明書</td><td class='nw'>Rev. I</td><td>CW</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CW-PRI-001.html'>SSD-FD-CW-PRI-001</a></td><td>主C/W（ハードウェア）（PRI）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CW</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CW-BKP-001.html'>SSD-FD-CW-BKP-001</a></td><td>バックアップC/W（ソフト）（BKP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CW</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CW-ALT-001.html'>SSD-FD-CW-ALT-001</a></td><td>アラート・限界表示（ALT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CW</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CW-ANN-001.html'>SSD-FD-CW-ANN-001</a></td><td>表示・警報音（ANN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CW</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CW-OPS-001.html'>SSD-FD-CW-OPS-001</a></td><td>C/W運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CW</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-CW-REF-001.html'>SSD-CW-REF-001</a></td><td>C/W 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>CW</td><td>図63 C/W 関連文書マトリクス</td></tr>
+<!--[/docrows:cw]--></table>
+<h3 id="g-eps">電力系（EPS）<span class="n">6件</span><a class="more" href="index_notes_power.html#g-eps">注記 31件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:eps]-->
+<tr><td class='id'><a href='docs/SSD-FD-EPS-001.html'>SSD-FD-EPS-001</a></td><td>電力系（EPS）機能説明書</td><td class='nw'>Rev. L</td><td>EPS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EPS-PRSD-001.html'>SSD-FD-EPS-PRSD-001</a></td><td>反応剤貯蔵・分配（PRSD）機能説明書</td><td class='nw'>Rev. E</td><td>PRSD</td><td>図6 EPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EPS-FCP-001.html'>SSD-FD-EPS-FCP-001</a></td><td>燃料電池発電装置（FCP）機能説明書</td><td class='nw'>Rev. F</td><td>FCP</td><td>図6 EPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EPS-DC-001.html'>SSD-FD-EPS-DC-001</a></td><td>直流配電（EPDC-DC）機能説明書</td><td class='nw'>Rev. F</td><td>DC</td><td>図6 EPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EPS-AC-001.html'>SSD-FD-EPS-AC-001</a></td><td>交流発電・配電（EPDC-AC）機能説明書</td><td class='nw'>Rev. C</td><td>AC</td><td>図6 EPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-EPS-REF-001.html'>SSD-EPS-REF-001</a></td><td>EPS 機能別関連文書一覧</td><td class='nw'>Rev. B</td><td>EPS</td><td>図7 EPS 関連文書マトリクス</td></tr>
+<!--[/docrows:eps]--></table>
+<h3 id="g-apu">補助動力装置・油圧系（APU/HYD）<span class="n">9件</span><a class="more" href="index_notes_power.html#g-apu">注記 46件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:apu]-->
+<tr><td class='id'><a href='docs/SSD-FD-APU-001.html'>SSD-FD-APU-001</a></td><td>補助動力装置・油圧系（APU/HYD）機能説明書</td><td class='nw'>Rev. L</td><td>APU</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-FUL-001.html'>SSD-FD-APU-FUL-001</a></td><td>ヒドラジン燃料供給（FUL）機能説明書</td><td class='nw'>Rev. A</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-TRB-001.html'>SSD-FD-APU-TRB-001</a></td><td>タービン・ギアボックス（TRB）機能説明書</td><td class='nw'>Rev. A</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-CTL-001.html'>SSD-FD-APU-CTL-001</a></td><td>APU制御器（CTL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-HYD-001.html'>SSD-FD-APU-HYD-001</a></td><td>主油圧ポンプ・供給（HYD）機能説明書</td><td class='nw'>Rev. A</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-CIR-001.html'>SSD-FD-APU-CIR-001</a></td><td>循環ポンプ・熱調整（CIR）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-WSB-001.html'>SSD-FD-APU-WSB-001</a></td><td>水噴霧ボイラ（WSB）機能説明書</td><td class='nw'>Rev. A</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-APU-OPS-001.html'>SSD-FD-APU-OPS-001</a></td><td>APU/HYD運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>APU</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-APU-REF-001.html'>SSD-APU-REF-001</a></td><td>APU/HYD 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>APU</td><td>図57 APU/HYD 関連文書マトリクス</td></tr>
+<!--[/docrows:apu]--></table>
+<h3 id="g-tcs">熱制御・熱防護（TCS・TPS）<span class="n">10件</span><a class="more" href="index_notes_power.html#g-tcs">注記 32件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:tcs]-->
+<tr><td class='id'><a href='docs/SSD-FD-TPS-001.html'>SSD-FD-TPS-001</a></td><td>熱防護系（TPS）機能説明書</td><td class='nw'>Rev. G</td><td>TPS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-001.html'>SSD-FD-TCS-001</a></td><td>熱制御（能動・受動）機能説明書</td><td class='nw'>Rev. D</td><td>（横断）</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-FCL-001.html'>SSD-FD-TCS-FCL-001</a></td><td>フレオン21冷却ループ（FCL）機能説明書</td><td class='nw'>Rev. D</td><td>FCL</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-HX-001.html'>SSD-FD-TCS-HX-001</a></td><td>熱取得：熱交換器・コールドプレート網（HX）機能説明書</td><td class='nw'>Rev. F</td><td>HX</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-RAD-001.html'>SSD-FD-TCS-RAD-001</a></td><td>放熱器（RAD）機能説明書</td><td class='nw'>Rev. D</td><td>RAD</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-FES-001.html'>SSD-FD-TCS-FES-001</a></td><td>フラッシュエバポレータ（FES）機能説明書</td><td class='nw'>Rev. D</td><td>FES</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-NH3-001.html'>SSD-FD-TCS-NH3-001</a></td><td>アンモニアボイラ（NH3）機能説明書</td><td class='nw'>Rev. D</td><td>NH3</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-GSE-001.html'>SSD-FD-TCS-GSE-001</a></td><td>GSE熱交換器・地上冷却（GSE）機能説明書</td><td class='nw'>Rev. D</td><td>GSE</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-TCS-PTC-001.html'>SSD-FD-TCS-PTC-001</a></td><td>受動熱制御（PTC：断熱・ヒータ・パージ）機能説明書</td><td class='nw'>Rev. E</td><td>PTC</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-TCS-REF-001.html'>SSD-TCS-REF-001</a></td><td>熱制御 機能別関連文書一覧</td><td class='nw'>Rev. C</td><td>熱制御</td><td>図9 熱制御 関連文書マトリクス</td></tr>
+<!--[/docrows:tcs]--></table>
+<h3 id="g-str">構造（STR）<span class="n">8件</span><a class="more" href="index_notes_crew.html#g-str">注記 14件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:str]-->
+<tr><td class='id'><a href='docs/SSD-FD-STR-001.html'>SSD-FD-STR-001</a></td><td>構造（STR）機能説明書</td><td class='nw'>Rev. E</td><td>STR</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-STR-FWD-001.html'>SSD-FD-STR-FWD-001</a></td><td>前胴・前部RCSモジュール（FWD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図70 STR 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-STR-CRM-001.html'>SSD-FD-STR-CRM-001</a></td><td>乗員室（与圧）・窓（CRM）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図70 STR 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-STR-MID-001.html'>SSD-FD-STR-MID-001</a></td><td>中胴・ペイロードベイ（MID）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図70 STR 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-STR-AFT-001.html'>SSD-FD-STR-AFT-001</a></td><td>後胴・推力構造・ポッド（AFT）機能説明書</td><td class='nw'>Rev. A</td><td>STR</td><td>図70 STR 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-STR-WNG-001.html'>SSD-FD-STR-WNG-001</a></td><td>翼・ボディフラップ・尾翼（WNG）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図70 STR 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-STR-OPS-001.html'>SSD-FD-STR-OPS-001</a></td><td>構造運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図70 STR 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-STR-REF-001.html'>SSD-STR-REF-001</a></td><td>STR 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図71 STR 関連文書マトリクス</td></tr>
+<!--[/docrows:str]--></table>
+<h3 id="g-mech">機械系（MECH）<span class="n">8件</span><a class="more" href="index_notes_crew.html#g-mech">注記 15件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:mech]-->
+<tr><td class='id'><a href='docs/SSD-FD-MECH-001.html'>SSD-FD-MECH-001</a></td><td>機械系（MECH）機能説明書</td><td class='nw'>Rev. H</td><td>MECH</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MECH-ACT-001.html'>SSD-FD-MECH-ACT-001</a></td><td>電動駆動（PDU・MCA）（ACT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 MECH 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MECH-PLB-001.html'>SSD-FD-MECH-PLB-001</a></td><td>ペイロードベイドア（PLB）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 MECH 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MECH-VNT-001.html'>SSD-FD-MECH-VNT-001</a></td><td>ベント・ETアンビリカル扉（VNT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 MECH 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MECH-LDG-001.html'>SSD-FD-MECH-LDG-001</a></td><td>降着装置（LDG）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 MECH 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MECH-DEC-001.html'>SSD-FD-MECH-DEC-001</a></td><td>制動・操向・減速傘（DEC）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 MECH 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-MECH-OPS-001.html'>SSD-FD-MECH-OPS-001</a></td><td>MECH運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 MECH 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-MECH-REF-001.html'>SSD-MECH-REF-001</a></td><td>MECH 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図69 MECH 関連文書マトリクス</td></tr>
+<!--[/docrows:mech]--></table>
+<h3 id="g-pls">ペイロード支援（PLS）<span class="n">8件</span><a class="more" href="index_notes_crew.html#g-pls">注記 17件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:pls]-->
+<tr><td class='id'><a href='docs/SSD-FD-PLS-001.html'>SSD-FD-PLS-001</a></td><td>ペイロード支援（PDRS・ODS）機能説明書</td><td class='nw'>Rev. H</td><td>PLS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-PLS-ARM-001.html'>SSD-FD-PLS-ARM-001</a></td><td>RMSアーム（ARM）機能説明書</td><td class='nw'>Rev. A</td><td>PLS</td><td>図66 PLS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-PLS-CTL-001.html'>SSD-FD-PLS-CTL-001</a></td><td>RMS制御（MCIU・D&amp;C）（CTL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>PLS</td><td>図66 PLS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-PLS-MPM-001.html'>SSD-FD-PLS-MPM-001</a></td><td>MPM・保持ラッチ・投棄（MPM）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>PLS</td><td>図66 PLS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-PLS-PRL-001.html'>SSD-FD-PLS-PRL-001</a></td><td>ペイロード保持ラッチ（PRL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>PLS</td><td>図66 PLS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-PLS-ODS-001.html'>SSD-FD-PLS-ODS-001</a></td><td>オービタ・ドッキング系（ODS）機能説明書</td><td class='nw'>Rev. A</td><td>PLS</td><td>図66 PLS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-PLS-OPS-001.html'>SSD-FD-PLS-OPS-001</a></td><td>PLS運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>PLS</td><td>図66 PLS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-PLS-REF-001.html'>SSD-PLS-REF-001</a></td><td>PLS 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>PLS</td><td>図67 PLS 関連文書マトリクス</td></tr>
+<!--[/docrows:pls]--></table>
+<h3 id="g-crew">乗員系・脱出系（CREW）<span class="n">8件</span><a class="more" href="index_notes_crew.html#g-crew">注記 22件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:crew]-->
+<tr><td class='id'><a href='docs/SSD-FD-CREW-001.html'>SSD-FD-CREW-001</a></td><td>乗員系・脱出系（CREW）機能説明書</td><td class='nw'>Rev. G</td><td>CREW</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CREW-HAB-001.html'>SSD-FD-CREW-HAB-001</a></td><td>居住・衛生（HAB）機能説明書</td><td class='nw'>Rev. B</td><td>CREW</td><td>図64 CREW 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CREW-STW-001.html'>SSD-FD-CREW-STW-001</a></td><td>収納・拘束（STW）機能説明書</td><td class='nw'>Rev. A</td><td>CREW</td><td>図64 CREW 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CREW-MED-001.html'>SSD-FD-CREW-MED-001</a></td><td>医療・生体・放射線（MED）機能説明書</td><td class='nw'>Rev. B</td><td>CREW</td><td>図64 CREW 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CREW-LTG-001.html'>SSD-FD-CREW-LTG-001</a></td><td>照明（LTG）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CREW</td><td>図64 CREW 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CREW-ESC-001.html'>SSD-FD-CREW-ESC-001</a></td><td>脱出系（ESC）機能説明書</td><td class='nw'>Rev. A</td><td>CREW</td><td>図64 CREW 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CREW-OPS-001.html'>SSD-FD-CREW-OPS-001</a></td><td>乗員系運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CREW</td><td>図64 CREW 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-CREW-REF-001.html'>SSD-CREW-REF-001</a></td><td>CREW 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>CREW</td><td>図65 CREW 関連文書マトリクス</td></tr>
+<!--[/docrows:crew]--></table>
+<h3 id="g-eva">船外活動（EVA/EMU）<span class="n">8件</span><a class="more" href="index_notes_crew.html#g-eva">注記 43件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:eva]-->
+<tr><td class='id'><a href='docs/SSD-FD-EVA-001.html'>SSD-FD-EVA-001</a></td><td>船外活動（EVA/EMU）機能説明書</td><td class='nw'>Rev. H</td><td>EVA</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EVA-CHK-001.html'>SSD-FD-EVA-CHK-001</a></td><td>EMU点検・準備（CHK）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EVA-DPR-001.html'>SSD-FD-EVA-DPR-001</a></td><td>減圧・再与圧（DPR）機能説明書</td><td class='nw'>Rev. A</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EVA-TLS-001.html'>SSD-FD-EVA-TLS-001</a></td><td>工具・収納（TLS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EVA-MNT-001.html'>SSD-FD-EVA-MNT-001</a></td><td>EVA後の手入れ・再充填（MNT）機能説明書</td><td class='nw'>Rev. A</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EVA-EMG-001.html'>SSD-FD-EVA-EMG-001</a></td><td>非常時の手順（EMG）機能説明書</td><td class='nw'>Rev. A</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-EVA-OPS-001.html'>SSD-FD-EVA-OPS-001</a></td><td>合図と運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-EVA-REF-001.html'>SSD-EVA-REF-001</a></td><td>EVA 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>EVA</td><td>図61 EVA 関連文書マトリクス</td></tr>
+<!--[/docrows:eva]--></table>
+<h3 id="g-ecl">環境制御・生命維持系（ECLSS）<span class="n">42件</span><a class="more" href="index_notes_eclss.html#g-ecl">注記 223件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:ecl]-->
+<tr><td class='id'><a href='docs/SSD-FD-ECLSS-001.html'>SSD-FD-ECLSS-001</a></td><td>環境制御・生命維持系（ECLSS）機能説明書</td><td class='nw'>Rev. J</td><td>ECLSS</td><td>図2 オービタ サブシステム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-001.html'>SSD-FD-ECL-PCS-001</a></td><td>圧力制御系（PCS／ARPCS）機能説明書</td><td class='nw'>Rev. K</td><td>PCS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ATCS-001.html'>SSD-FD-ECL-ATCS-001</a></td><td>能動熱制御系（ATCS）機能説明書</td><td class='nw'>Rev. I</td><td>ATCS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-001.html'>SSD-FD-ECL-H2O-001</a></td><td>給水・廃水系（H2O）機能説明書</td><td class='nw'>Rev. J</td><td>H2O</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-WCS-001.html'>SSD-FD-ECL-WCS-001</a></td><td>廃棄物収集系（WCS）機能説明書</td><td class='nw'>Rev. G</td><td>WCS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-001.html'>SSD-FD-ECL-ALS-001</a></td><td>エアロック支援系（ALS）機能説明書</td><td class='nw'>Rev. K</td><td>ALS・EMU</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-FDS-001.html'>SSD-FD-ECL-FDS-001</a></td><td>煙検知・消火系（FDS）機能説明書</td><td class='nw'>Rev. G</td><td>FDS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-CAB-001.html'>SSD-FD-ECL-CAB-001</a></td><td>乗員室環境（制御対象）機能説明書</td><td class='nw'>Rev. D</td><td>CAB</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-O2S-001.html'>SSD-FD-ECL-PCS-O2S-001</a></td><td>酸素供給・分配（O2S）機能説明書</td><td class='nw'>Rev. B</td><td>O2S</td><td>図18 圧力制御系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-N2S-001.html'>SSD-FD-ECL-PCS-N2S-001</a></td><td>窒素供給（N2S）機能説明書</td><td class='nw'>Rev. B</td><td>N2S</td><td>図18 圧力制御系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-MNF-001.html'>SSD-FD-ECL-PCS-MNF-001</a></td><td>O2/N2マニホールド・PPO2制御（MNF）機能説明書</td><td class='nw'>Rev. A</td><td>MNF</td><td>図18 圧力制御系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-RLF-001.html'>SSD-FD-ECL-PCS-RLF-001</a></td><td>正負圧逃し・ベント（RLF）機能説明書</td><td class='nw'>Rev. A</td><td>RLF</td><td>図18 圧力制御系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-MON-001.html'>SSD-FD-ECL-PCS-MON-001</a></td><td>計測・表示・警報（MON）機能説明書</td><td class='nw'>Rev. A</td><td>MON</td><td>図18 圧力制御系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-PCS-OPS-001.html'>SSD-FD-ECL-PCS-OPS-001</a></td><td>与圧運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図18 圧力制御系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-FCW-001.html'>SSD-FD-ECL-H2O-FCW-001</a></td><td>生成水受入れ・処理（FCW）機能説明書</td><td class='nw'>Rev. A</td><td>FCW</td><td>図20 給水・廃水系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-SPL-001.html'>SSD-FD-ECL-H2O-SPL-001</a></td><td>給水貯蔵・分配（SPL）機能説明書</td><td class='nw'>Rev. B</td><td>SPL</td><td>図20 給水・廃水系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-GAL-001.html'>SSD-FD-ECL-H2O-GAL-001</a></td><td>飲料水供給（GAL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>GAL</td><td>図20 給水・廃水系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-WST-001.html'>SSD-FD-ECL-H2O-WST-001</a></td><td>廃水貯蔵（WST）機能説明書</td><td class='nw'>Rev. B</td><td>WST</td><td>図20 給水・廃水系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-DMP-001.html'>SSD-FD-ECL-H2O-DMP-001</a></td><td>船外ダンプ・クロスタイ（DMP）機能説明書</td><td class='nw'>Rev. B</td><td>DMP</td><td>図20 給水・廃水系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-H2O-PRS-001.html'>SSD-FD-ECL-H2O-PRS-001</a></td><td>タンク加圧（PRS）機能説明書</td><td class='nw'>Rev. A</td><td>PRS</td><td>図20 給水・廃水系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-WCS-URN-001.html'>SSD-FD-ECL-WCS-URN-001</a></td><td>尿・EMU凝縮水収集（URN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>URN</td><td>図22 廃棄物収集系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-WCS-CMD-001.html'>SSD-FD-ECL-WCS-CMD-001</a></td><td>便器・固形廃棄物（CMD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CMD</td><td>図22 廃棄物収集系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-WCS-FSP-001.html'>SSD-FD-ECL-WCS-FSP-001</a></td><td>ファンセパレータ・フィルタ（FSP）機能説明書</td><td class='nw'>Rev. A</td><td>FSP</td><td>図22 廃棄物収集系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-WCS-VAC-001.html'>SSD-FD-ECL-WCS-VAC-001</a></td><td>真空ベント（VAC）機能説明書</td><td class='nw'>Rev. A</td><td>VAC</td><td>図22 廃棄物収集系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-WCS-OPS-001.html'>SSD-FD-ECL-WCS-OPS-001</a></td><td>制御・運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図22 廃棄物収集系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-DEP-001.html'>SSD-FD-ECL-ALS-DEP-001</a></td><td>区画・減圧・再与圧（DEP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>DEP</td><td>図24 エアロック支援系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-SCU-001.html'>SSD-FD-ECL-ALS-SCU-001</a></td><td>EMU補給・支援（SCU）機能説明書</td><td class='nw'>Rev. B</td><td>SCU</td><td>図24 エアロック支援系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-LCG-001.html'>SSD-FD-ECL-ALS-LCG-001</a></td><td>液冷服冷却ループ（LCG）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>LCG</td><td>図24 エアロック支援系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-VNT-001.html'>SSD-FD-ECL-ALS-VNT-001</a></td><td>換気・ブースタファン（VNT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>VNT</td><td>図24 エアロック支援系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-HTR-001.html'>SSD-FD-ECL-ALS-HTR-001</a></td><td>配管・構造ヒータ（HTR）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>HTR</td><td>図24 エアロック支援系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ALS-MON-001.html'>SSD-FD-ECL-ALS-MON-001</a></td><td>計測・表示（MON）機能説明書</td><td class='nw'>Rev. A</td><td>MON</td><td>図24 エアロック支援系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-FDS-DET-001.html'>SSD-FD-ECL-FDS-DET-001</a></td><td>煙感知器（DET）機能説明書</td><td class='nw'>Rev. A</td><td>DET</td><td>図26 煙検知・消火系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-FDS-ALM-001.html'>SSD-FD-ECL-FDS-ALM-001</a></td><td>煙警報・回路試験（ALM）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ALM</td><td>図26 煙検知・消火系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-FDS-FIX-001.html'>SSD-FD-ECL-FDS-FIX-001</a></td><td>ベイ固定消火ボトル（FIX）機能説明書</td><td class='nw'>Rev. A</td><td>FIX</td><td>図26 煙検知・消火系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-FDS-PFE-001.html'>SSD-FD-ECL-FDS-PFE-001</a></td><td>携帯消火器・消火ポート（PFE）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>PFE</td><td>図26 煙検知・消火系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ECL-FDS-OPS-001.html'>SSD-FD-ECL-FDS-OPS-001</a></td><td>火災対応・運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図26 煙検知・消火系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-ECLSS-REF-002.html'>SSD-ECLSS-REF-002</a></td><td>ECLSS 機能別関連文書一覧</td><td class='nw'>Rev. B</td><td>ECLSS</td><td>図4 ECLSS 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-PCS-REF-001.html'>SSD-PCS-REF-001</a></td><td>圧力制御系 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>PCS</td><td>図19 圧力制御系 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-H2O-REF-001.html'>SSD-H2O-REF-001</a></td><td>給水・廃水系 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>H2O</td><td>図21 給水・廃水系 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-WCS-REF-001.html'>SSD-WCS-REF-001</a></td><td>廃棄物収集系 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>WCS</td><td>図23 廃棄物収集系 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-ALS-REF-001.html'>SSD-ALS-REF-001</a></td><td>エアロック支援系 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>ALS</td><td>図25 エアロック支援系 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-FDS-REF-001.html'>SSD-FDS-REF-001</a></td><td>煙検知・消火系 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>FDS</td><td>図27 煙検知・消火系 関連文書マトリクス</td></tr>
+<!--[/docrows:ecl]--></table>
+<h3 id="g-ars">大気再生系（ARS）とその下位（ECLSS）<span class="n">53件</span><a class="more" href="index_notes_ars.html#g-ars">注記 188件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:ars]-->
+<tr><td class='id'><a href='docs/SSD-FD-ECL-ARS-001.html'>SSD-FD-ECL-ARS-001</a></td><td>大気再生系（ARS）機能説明書</td><td class='nw'>Rev. M</td><td>ARS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-CAC-001.html'>SSD-FD-ARS-CAC-001</a></td><td>キャビン空気循環（CAC）機能説明書</td><td class='nw'>Rev. C</td><td>CAC</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-CO2-001.html'>SSD-FD-ARS-CO2-001</a></td><td>CO2・CO除去（LiOH・ATCO）機能説明書</td><td class='nw'>Rev. C</td><td>CO2</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-001.html'>SSD-FD-ARS-RCRS-001</a></td><td>再生式CO2除去装置（RCRS）機能説明書</td><td class='nw'>Rev. B</td><td>RCRS</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-THC-001.html'>SSD-FD-ARS-THC-001</a></td><td>キャビン温湿度制御（THC）機能説明書</td><td class='nw'>Rev. C</td><td>THC</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-AVB-001.html'>SSD-FD-ARS-AVB-001</a></td><td>アビオニクスベイ空冷（AVB）機能説明書</td><td class='nw'>Rev. C</td><td>AVB</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-IMU-001.html'>SSD-FD-ARS-IMU-001</a></td><td>IMU空冷（IMU）機能説明書</td><td class='nw'>Rev. C</td><td>IMU</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-001.html'>SSD-FD-ARS-WCL-001</a></td><td>水冷却ループ（WCL）機能説明書</td><td class='nw'>Rev. F</td><td>WCL</td><td>図12 ARS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CO2-ABS-001.html'>SSD-FD-CO2-ABS-001</a></td><td>吸収器装着部（ABS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ABS</td><td>図14 CO2・CO除去 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CO2-CAN-001.html'>SSD-FD-CO2-CAN-001</a></td><td>交換式キャニスタ（CAN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CAN</td><td>図14 CO2・CO除去 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CO2-ATCO-001.html'>SSD-FD-CO2-ATCO-001</a></td><td>常温触媒酸化器（ATCO）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ATCO</td><td>図14 CO2・CO除去 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CO2-MON-001.html'>SSD-FD-CO2-MON-001</a></td><td>CO2・CO監視（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図14 CO2・CO除去 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CO2-STW-001.html'>SSD-FD-CO2-STW-001</a></td><td>予備キャニスタ収納・交換管理（STW）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>STW</td><td>図14 CO2・CO除去 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CAC-RTN-001.html'>SSD-FD-CAC-RTN-001</a></td><td>還流・ろ過（RTN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>RTN</td><td>図16 キャビン空気循環 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CAC-FAN-001.html'>SSD-FD-CAC-FAN-001</a></td><td>キャビンファン・逆止弁（FAN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>FAN</td><td>図16 キャビン空気循環 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CAC-DCT-001.html'>SSD-FD-CAC-DCT-001</a></td><td>送風ダクト・分配（DCT）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>DCT</td><td>図16 キャビン空気循環 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CAC-MON-001.html'>SSD-FD-CAC-MON-001</a></td><td>ファン差圧監視（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図16 キャビン空気循環 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-CAC-OPS-001.html'>SSD-FD-CAC-OPS-001</a></td><td>ファン運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図16 キャビン空気循環 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-FAN-001.html'>SSD-FD-ARS-RCRS-FAN-001</a></td><td>吸気・送風・流量設定（FAN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>FAN</td><td>図28 再生式CO2除去装置 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-BED-001.html'>SSD-FD-ARS-RCRS-BED-001</a></td><td>吸着・再生ベッド（BED）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>BED</td><td>図28 再生式CO2除去装置 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-USC-001.html'>SSD-FD-ARS-RCRS-USC-001</a></td><td>空気回収・均圧（USC）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>USC</td><td>図28 再生式CO2除去装置 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-CTL-001.html'>SSD-FD-ARS-RCRS-CTL-001</a></td><td>制御器・運転シーケンス（CTL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CTL</td><td>図28 再生式CO2除去装置 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-MON-001.html'>SSD-FD-ARS-RCRS-MON-001</a></td><td>計装・表示（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図28 再生式CO2除去装置 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-RCRS-OPS-001.html'>SSD-FD-ARS-RCRS-OPS-001</a></td><td>RCRS運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図28 再生式CO2除去装置 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-THC-HX-001.html'>SSD-FD-ARS-THC-HX-001</a></td><td>キャビン熱交換器・凝縮（HX）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>HX</td><td>図30 キャビン温湿度制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-THC-TCV-001.html'>SSD-FD-ARS-THC-TCV-001</a></td><td>温度制御弁・給気混合（TCV）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>TCV</td><td>図30 キャビン温湿度制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-THC-SEP-001.html'>SSD-FD-ARS-THC-SEP-001</a></td><td>湿度分離器・凝縮水排出（SEP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>SEP</td><td>図30 キャビン温湿度制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-THC-MON-001.html'>SSD-FD-ARS-THC-MON-001</a></td><td>温度・分離器監視（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図30 キャビン温湿度制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-THC-OPS-001.html'>SSD-FD-ARS-THC-OPS-001</a></td><td>温湿度運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図30 キャビン温湿度制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-AVB-CIR-001.html'>SSD-FD-ARS-AVB-CIR-001</a></td><td>ベイ内循環・機器空冷（CIR）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CIR</td><td>図32 アビオニクスベイ空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-AVB-FAN-001.html'>SSD-FD-ARS-AVB-FAN-001</a></td><td>ベイファン・逆止弁（FAN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>FAN</td><td>図32 アビオニクスベイ空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-AVB-HX-001.html'>SSD-FD-ARS-AVB-HX-001</a></td><td>ベイ熱交換器（HX）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>HX</td><td>図32 アビオニクスベイ空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-AVB-MON-001.html'>SSD-FD-ARS-AVB-MON-001</a></td><td>温度・差圧監視（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図32 アビオニクスベイ空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-AVB-OPS-001.html'>SSD-FD-ARS-AVB-OPS-001</a></td><td>ベイ冷却運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図32 アビオニクスベイ空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-IMU-INL-001.html'>SSD-FD-ARS-IMU-INL-001</a></td><td>吸込み・IMU通風（INL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>INL</td><td>図34 IMU空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-IMU-FAN-001.html'>SSD-FD-ARS-IMU-FAN-001</a></td><td>IMUファン・逆止弁（FAN）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>FAN</td><td>図34 IMU空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-IMU-HEX-001.html'>SSD-FD-ARS-IMU-HEX-001</a></td><td>IMU熱交換器・ダクト（HEX）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>HEX</td><td>図34 IMU空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-IMU-MON-001.html'>SSD-FD-ARS-IMU-MON-001</a></td><td>ファン監視・表示（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図34 IMU空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-IMU-OPS-001.html'>SSD-FD-ARS-IMU-OPS-001</a></td><td>ファン運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図34 IMU空冷 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-PMP-001.html'>SSD-FD-ARS-WCL-PMP-001</a></td><td>ポンプパッケージ（PMP）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>PMP</td><td>図36 水冷却ループ 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-AVL-001.html'>SSD-FD-ARS-WCL-AVL-001</a></td><td>アビオニクス冷却経路（AVL）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>AVL</td><td>図36 水冷却ループ 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-ICH-001.html'>SSD-FD-ARS-WCL-ICH-001</a></td><td>インターチェンジャ・バイパス制御（ICH）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>ICH</td><td>図36 水冷却ループ 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-CLD-001.html'>SSD-FD-ARS-WCL-CLD-001</a></td><td>冷側熱交換器（CLD）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>CLD</td><td>図36 水冷却ループ 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-MON-001.html'>SSD-FD-ARS-WCL-MON-001</a></td><td>ループ計測・警報（MON）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>MON</td><td>図36 水冷却ループ 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FD-ARS-WCL-OPS-001.html'>SSD-FD-ARS-WCL-OPS-001</a></td><td>ループ運用管理（OPS）機能説明書</td><td class='nw'>初版（Rev. -）</td><td>OPS</td><td>図36 水冷却ループ 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-ARS-REF-001.html'>SSD-ARS-REF-001</a></td><td>ARS 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>ARS</td><td>図13 ARS 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-CO2-REF-001.html'>SSD-CO2-REF-001</a></td><td>CO2・CO除去 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>CO2</td><td>図15 CO2・CO除去 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-CAC-REF-001.html'>SSD-CAC-REF-001</a></td><td>キャビン空気循環 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>CAC</td><td>図17 キャビン空気循環 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-RCRS-REF-001.html'>SSD-RCRS-REF-001</a></td><td>再生式CO2除去装置 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>RCRS</td><td>図29 再生式CO2除去装置 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-THC-REF-001.html'>SSD-THC-REF-001</a></td><td>キャビン温湿度制御 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>THC</td><td>図31 キャビン温湿度制御 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-AVB-REF-001.html'>SSD-AVB-REF-001</a></td><td>アビオニクスベイ空冷 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>AVB</td><td>図33 アビオニクスベイ空冷 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-IMU-REF-001.html'>SSD-IMU-REF-001</a></td><td>IMU空冷 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>IMU</td><td>図35 IMU空冷 関連文書マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-WCL-REF-001.html'>SSD-WCL-REF-001</a></td><td>水冷却ループ 機能別関連文書一覧</td><td class='nw'>初版（Rev. -）</td><td>WCL</td><td>図37 水冷却ループ 関連文書マトリクス</td></tr>
+<!--[/docrows:ars]--></table>
+<h3 id="g-ops">運用・振る舞い<span class="n">11件</span><a class="more" href="index_notes_ops.html#g-ops">注記 119件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:ops]-->
+<tr><td class='id'><a href='docs/SSD-OPS-REF-001.html'>SSD-OPS-REF-001</a></td><td>運用飛行規則（NSTS-12820 Vol. A）章別対応一覧</td><td class='nw'>Rev. D</td><td>全系</td><td>図10 運用飛行規則 章構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-OPS-REF-002.html'>SSD-OPS-REF-002</a></td><td>乗員運用マニュアル（SCOM）節別対応一覧</td><td class='nw'>Rev. A</td><td>全系</td><td>図11 乗員運用マニュアル 節構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-OPS-PHASE-001.html'>SSD-OPS-PHASE-001</a></td><td>ミッションフェーズ・運用モード定義書</td><td class='nw'>Rev. H</td><td>全系</td><td>図39 フェーズ別 サブシステム稼働表・図40 上昇シーケンス</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-001.html'>SSD-BEH-ORB-001</a></td><td>状態遷移定義書（ミッションフェーズ・飛行継続判断）</td><td class='nw'>Rev. D</td><td>全系</td><td>図76 ミッションフェーズ・アボート 状態遷移図・図77 飛行継続判断（Go/No-Go）状態遷移図</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-002.html'>SSD-BEH-ORB-002</a></td><td>故障処置の活動定義書（MPS ヘリウム漏れ・燃料電池の冷却喪失・火災）</td><td class='nw'>Rev. C</td><td>MPS・EPS・ECLSS</td><td>図80 MPS ヘリウム漏れ処置 活動図・図81 燃料電池の冷却喪失処置 活動図・図82 火災処置 活動図</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-003.html'>SSD-BEH-ORB-003</a></td><td>シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路）</td><td class='nw'>Rev. C</td><td>全系</td><td>図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-004.html'>SSD-BEH-ORB-004</a></td><td>運用・非常時の活動定義書（キャビン減圧・EVA・ペイロードベイドア閉鎖不能）</td><td class='nw'>Rev. C</td><td>ECLSS・EVA・MECH</td><td>図86 キャビン減圧処置 活動図・図87 EVA 準備〜再与圧 活動図・図88 ペイロードベイドア閉鎖不能処置 活動図</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-005.html'>SSD-BEH-ORB-005</a></td><td>系の状態遷移定義書（GPC・燃料電池・APU・RMS・排熱）</td><td class='nw'>Rev. B</td><td>DPS・EPS・APU・PLS・ECLSS</td><td>図98 GPC 状態遷移図・図99 燃料電池 状態遷移図・図100 APU 状態遷移図・図101 RMS 状態遷移図・図102 ATCS 排熱 状態遷移図・図103 系のモード × フェーズ 行列</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-006.html'>SSD-BEH-ORB-006</a></td><td>系の状態遷移定義書その2（OMS・RCS・MPS・C&amp;T・与圧系・ODS）</td><td class='nw'>Rev. A</td><td>OMS・RCS・MPS・C&amp;T・ECLSS・PLS</td><td>図136〜142</td></tr>
+<tr><td class='id'><a href='docs/SSD-BEH-ORB-007.html'>SSD-BEH-ORB-007</a></td><td>ECLSS の状態遷移と活動定義書（ARS・FDS・給水廃水・WCS、LiOH の交換・ダンプ・水冷却ループの喪失）</td><td class='nw'>Rev. A</td><td>ECLSS（ARS・FDS・給水廃水・WCS）</td><td>図168〜175</td></tr>
+<tr><td class='id'><a href='docs/SSD-UC-ORB-001.html'>SSD-UC-ORB-001</a></td><td>運用シナリオ・ユースケース定義書（ユースケース・ランデブー・秒読み・ペイロード放出・アボート）</td><td class='nw'>Rev. A</td><td>運用全体</td><td>図93 運用のユースケース図・図94 ランデブー・ドッキング シーケンス図・図95 最終秒読み〜RSLS アボート シーケンス図・図96 RMS によるペイロード放出 活動図・図97 上昇アボートの選択 活動図</td></tr>
+<!--[/docrows:ops]--></table>
+<h3 id="g-req">要求・検証・トレース<span class="n">24件</span><a class="more" href="index_notes_ops.html#g-req">注記 95件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:req]-->
+<tr><td class='id'><a href='docs/SSD-REQ-SYS-001.html'>SSD-REQ-SYS-001</a></td><td>システム要求書（L1）</td><td class='nw'>Rev. K</td><td>全系</td><td>図1 システム構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-EPS-001.html'>SSD-REQ-EPS-001</a></td><td>電力系（EPS）要求書（L2）</td><td class='nw'>Rev. G</td><td>EPS</td><td>図6 EPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-ECLSS-001.html'>SSD-REQ-ECLSS-001</a></td><td>環境制御・生命維持（ECLSS）要求書（L2）</td><td class='nw'>Rev. D</td><td>ECLSS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-GNC-001.html'>SSD-REQ-GNC-001</a></td><td>誘導・航法・制御（GN&amp;C）要求書（L2）</td><td class='nw'>Rev. A</td><td>GN&amp;C</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-DPS-001.html'>SSD-REQ-DPS-001</a></td><td>データ処理系（DPS）要求書（L2）</td><td class='nw'>初版（Rev. -）</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-MPS-001.html'>SSD-REQ-MPS-001</a></td><td>主推進系（MPS）要求書（L2）</td><td class='nw'>初版（Rev. -）</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-OMS-001.html'>SSD-REQ-OMS-001</a></td><td>軌道制御系（OMS）要求書（L2）</td><td class='nw'>Rev. A</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-RCS-001.html'>SSD-REQ-RCS-001</a></td><td>姿勢制御系（RCS）要求書（L2）</td><td class='nw'>Rev. A</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-APU-001.html'>SSD-REQ-APU-001</a></td><td>補助動力・油圧（APU/HYD）要求書（L2）</td><td class='nw'>Rev. B</td><td>APU/HYD</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-CT-001.html'>SSD-REQ-CT-001</a></td><td>通信・追跡（C&amp;T）要求書（L2）</td><td class='nw'>初版（Rev. -）</td><td>C&amp;T</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-TPS-001.html'>SSD-REQ-TPS-001</a></td><td>熱防護・熱制御（TPS）要求書（L2）</td><td class='nw'>Rev. B</td><td>TPS</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-RQM-SYS-001.html'>SSD-RQM-SYS-001</a></td><td>要求モデル定義書（導出・充足・検証方法）</td><td class='nw'>Rev. G</td><td>要求（L1・L2）</td><td>図90 要求の導出・充足 行列</td></tr>
+<tr><td class='id'><a href='docs/SSD-RQF-SYS-001.html'>SSD-RQF-SYS-001</a></td><td>要求の形式化定義書（属性・制約・値による判定）</td><td class='nw'>Rev. B</td><td>要求（全系）</td><td>図124・125</td></tr>
+<tr><td class='id'><a href='docs/SSD-VER-SYS-001.html'>SSD-VER-SYS-001</a></td><td>検証定義書（検証ケース・検証マトリクス）</td><td class='nw'>Rev. I</td><td>要求（L1・L2）の検証</td><td>図110 検証マトリクス</td></tr>
+<tr><td class='id'><a href='docs/SSD-RQL-ECL-001.html'>SSD-RQL-ECL-001</a></td><td>ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS）</td><td class='nw'>Rev. B</td><td>ECLSS（第3段・第4段の機能説明書）</td><td>図166・167</td></tr>
+<tr><td class='id'><a href='docs/SSD-TRC-SYS-001.html'>SSD-TRC-SYS-001</a></td><td>トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響）</td><td class='nw'>Rev. I</td><td>パッケージ全体（トレース）</td><td>図115〜117</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-CW-001.html'>SSD-REQ-CW-001</a></td><td>警告・警報（C/W）要求書（L2）</td><td class='nw'>Rev. A</td><td>C/W</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-CREW-001.html'>SSD-REQ-CREW-001</a></td><td>乗員系（CREW）要求書（L2）</td><td class='nw'>Rev. C</td><td>CREW</td><td>図64 乗員系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-EVA-001.html'>SSD-REQ-EVA-001</a></td><td>船外活動（EVA/EMU）要求書（L2）</td><td class='nw'>Rev. B</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-PLS-001.html'>SSD-REQ-PLS-001</a></td><td>ペイロード系（PLS）要求書（L2）</td><td class='nw'>Rev. A</td><td>PLS</td><td>図66 ペイロード系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-MECH-001.html'>SSD-REQ-MECH-001</a></td><td>機械系（MECH）要求書（L2）</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 機械系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-STR-001.html'>SSD-REQ-STR-001</a></td><td>構造（STR）要求書（L2）</td><td class='nw'>Rev. A</td><td>STR</td><td>図70 構造 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-ET-001.html'>SSD-REQ-ET-001</a></td><td>外部タンク（ET）要求書（L2）</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-REQ-SRB-001.html'>SSD-REQ-SRB-001</a></td><td>固体ロケットブースタ（SRB）要求書（L2）</td><td class='nw'>初版（Rev. -）</td><td>SRB</td><td>図74 SRB 機能構成</td></tr>
+<!--[/docrows:req]--></table>
+<h3 id="g-arch">構成・インタフェース・物理配置・モデル管理<span class="n">8件</span><a class="more" href="index_notes_model.html#g-arch">注記 59件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:arch]-->
+<tr><td class='id'><a href='docs/SSD-EMU-EVA-001.html'>SSD-EMU-EVA-001</a></td><td>EMU の構造・内部ブロック・状態定義書（PLSS・SOP・DCM・宇宙服、換気と冷却水の流れ、EMU とエアロックの状態）</td><td class='nw'>Rev. B</td><td>EVA・ECLSS（ALS）</td><td>図179〜182</td></tr>
+<tr><td class='id'><a href='docs/SSD-BLK-SYS-001.html'>SSD-BLK-SYS-001</a></td><td>構造定義書（ブロック・ポート・インタフェース）</td><td class='nw'>Rev. C</td><td>機体・外部系</td><td>図89 システム構成 ブロック定義図</td></tr>
+<tr><td class='id'><a href='docs/SSD-IBD-ORB-001.html'>SSD-IBD-ORB-001</a></td><td>内部ブロック・流れ定義書（機器の接続・流れる物・量と単位）</td><td class='nw'>Rev. E</td><td>EPS・ATCS・MPS</td><td>図112〜114</td></tr>
+<tr><td class='id'><a href='docs/SSD-ALC-SYS-001.html'>SSD-ALC-SYS-001</a></td><td>割付定義書（機能・機器・区画・振る舞い）</td><td class='nw'>Rev. C</td><td>機能・機器・振る舞い</td><td>図91 割付行列（系 × 区画）</td></tr>
+<tr><td class='id'><a href='docs/SSD-MDL-SYS-001.html'>SSD-MDL-SYS-001</a></td><td>モデル統合・検査定義書（SysML v2）</td><td class='nw'>Rev. AG</td><td>SysML v2 モデル全体</td><td>図92 モデルの構成 パッケージ図</td></tr>
+<tr><td class='id'><a href='docs/SSD-VPT-SYS-001.html'>SSD-VPT-SYS-001</a></td><td>ビューポイント定義書（関係者・関心事・ビュー・表記の規約）</td><td class='nw'>Rev. AE</td><td>パッケージ全体</td><td>図111 ビューポイントと関係者の行列</td></tr>
+<tr><td class='id'><a href='docs/SSD-ICD-ORB-001.html'>SSD-ICD-ORB-001</a></td><td>オービタ上位インタフェース管理表</td><td class='nw'>Rev. B</td><td>全系</td><td>図38 オービタ N2 インタフェース行列</td></tr>
+<tr><td class='id'><a href='docs/SSD-PHY-ORB-001.html'>SSD-PHY-ORB-001</a></td><td>オービタ物理構成・機器配分表</td><td class='nw'>Rev. E</td><td>全系</td><td>図43 オービタ区画・機器配置図</td></tr>
+<!--[/docrows:arch]--></table>
+<h3 id="g-cfg">構成の違い（機体・飛行）<span class="n">3件</span><a class="more" href="index_notes_model.html#g-cfg">注記 23件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:cfg]-->
+<tr><td class='id'><a href='docs/SSD-VAR-ORB-001.html'>SSD-VAR-ORB-001</a></td><td>構成の違い定義書（機体・ミッションキット）</td><td class='nw'>Rev. C</td><td>オービタ（機体・キット）</td><td>図109 機体・ミッションキットの構成行列</td></tr>
+<tr><td class='id'><a href='docs/SSD-IND-ORB-001.html'>SSD-IND-ORB-001</a></td><td>個体・時間定義書（機体・飛行の個体と実績）</td><td class='nw'>Rev. D</td><td>機体（OV-102〜105）・飛行（STS-1・114・125）</td><td>図122・123</td></tr>
+<tr><td class='id'><a href='docs/SSD-FLT-ORB-001.html'>SSD-FLT-ORB-001</a></td><td>飛行構成・飛行試験定義書（飛行ごとの構成の解決と飛行試験による検証の証拠）</td><td class='nw'>Rev. D</td><td>機体・飛行（構成・検証）</td><td>図132・133</td></tr>
+<!--[/docrows:cfg]--></table>
+<h3 id="g-res">資源・マージン<span class="n">4件</span><a class="more" href="index_notes_model.html#g-res">注記 50件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:res]-->
+<tr><td class='id'><a href='docs/SSD-BUD-ORB-001.html'>SSD-BUD-ORB-001</a></td><td>オービタ収支・マージン表</td><td class='nw'>Rev. G</td><td>全系</td><td>図44 収支マージン要約</td></tr>
+<tr><td class='id'><a href='docs/SSD-ANA-ORB-001.html'>SSD-ANA-ORB-001</a></td><td>解析定義書（CO2 除去のトレード・質量特性・Δv・故障の木）</td><td class='nw'>Rev. C</td><td>ECLSS・質量・OMS・EPS・APU</td><td>図104 CO2 除去のトレードスタディ・図105 質量特性・Δv の解析・図106 故障の木 A（28 VDC 主電力の喪失）・図107 故障の木 B（空力舵面の油圧の喪失）・図108 故障の木 C（CO2 制御の喪失）</td></tr>
+<tr><td class='id'><a href='docs/SSD-PAR-ORB-001.html'>SSD-PAR-ORB-001</a></td><td>パラメトリック定義書（消耗品・電力・排熱の収支）</td><td class='nw'>Rev. H</td><td>全系</td><td>図78 消耗品 パラメトリック図・図79 電力・反応剤・排熱 パラメトリック図</td></tr>
+<tr><td class='id'><a href='docs/SSD-PRF-ORB-001.html'>SSD-PRF-ORB-001</a></td><td>消耗品・電力プロファイル定義書（時間軸の残量・設計と実績）</td><td class='nw'>Rev. B</td><td>標準ミッション・飛行（消耗品）</td><td>図134・135</td></tr>
+<!--[/docrows:res]--></table>
+<h3 id="g-saf">安全・故障<span class="n">21件</span><a class="more" href="index_notes_model.html#g-saf">注記 72件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:saf]-->
+<tr><td class='id'><a href='docs/SSD-FMEA-ORB-001.html'>SSD-FMEA-ORB-001</a></td><td>オービタ冗長・故障解析表</td><td class='nw'>Rev. G</td><td>全系</td><td>図45 冗長度の重ね図</td></tr>
+<tr><td class='id'><a href='docs/SSD-FDIR-ORB-001.html'>SSD-FDIR-ORB-001</a></td><td>故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応）</td><td class='nw'>Rev. E</td><td>C/W・各系の故障検知</td><td>図118・119</td></tr>
+<tr><td class='id'><a href='docs/SSD-HAZ-ORB-001.html'>SSD-HAZ-ORB-001</a></td><td>ハザード解析書（ハザード・原因・管理策・検証）</td><td class='nw'>Rev. C</td><td>スタック・オービタ（安全）</td><td>図120・121</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMM-ORB-001.html'>SSD-FMM-ORB-001</a></td><td>故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖）</td><td class='nw'>Rev. A</td><td>スタック・オービタ（安全）</td><td>図126・127</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMX-ECL-001.html'>SSD-FMX-ECL-001</a></td><td>ECLSS の故障モード定義書（ワークシートの対応づけ・機能の故障モード・故障の木）</td><td class='nw'>初版（Rev. -）</td><td>ECLSS（PCS・給水廃水・WCS・FDS・ALS・ARS）</td><td>図168〜178</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-ECLSS-001.html'>SSD-FMEA-ECLSS-001</a></td><td>環境制御・生命維持（ECLSS）故障解析表（FMEA・CIL）</td><td class='nw'>Rev. A</td><td>ECLSS</td><td>図3 ECLSS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-GNC-001.html'>SSD-FMEA-GNC-001</a></td><td>誘導・航法・制御（GN&amp;C）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>GN&amp;C</td><td>図46 GN&amp;C 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-DPS-001.html'>SSD-FMEA-DPS-001</a></td><td>データ処理系（DPS）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>DPS</td><td>図48 DPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-MPS-001.html'>SSD-FMEA-MPS-001</a></td><td>主推進系（MPS）故障解析表（FMEA・CIL）</td><td class='nw'>Rev. A</td><td>MPS</td><td>図50 MPS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-OMS-001.html'>SSD-FMEA-OMS-001</a></td><td>軌道制御系（OMS）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>OMS</td><td>図52 OMS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-RCS-001.html'>SSD-FMEA-RCS-001</a></td><td>姿勢制御系（RCS）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>RCS</td><td>図54 RCS 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-APU-001.html'>SSD-FMEA-APU-001</a></td><td>補助動力・油圧（APU/HYD）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>APU/HYD</td><td>図56 APU/HYD 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-CT-001.html'>SSD-FMEA-CT-001</a></td><td>通信・追跡（C&amp;T）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>C&amp;T</td><td>図58 C&amp;T 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-TPS-001.html'>SSD-FMEA-TPS-001</a></td><td>熱防護・熱制御（TPS）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>TPS</td><td>図8 熱制御 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-CW-001.html'>SSD-FMEA-CW-001</a></td><td>警告・警報（C/W）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>C/W</td><td>図62 C/W 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-CREW-001.html'>SSD-FMEA-CREW-001</a></td><td>乗員系（CREW）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>CREW</td><td>図64 乗員系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-EVA-001.html'>SSD-FMEA-EVA-001</a></td><td>船外活動（EVA/EMU）故障解析表（FMEA・CIL）</td><td class='nw'>Rev. A</td><td>EVA</td><td>図60 EVA 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-PLS-001.html'>SSD-FMEA-PLS-001</a></td><td>ペイロード系（PLS）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>PLS</td><td>図66 ペイロード系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-MECH-001.html'>SSD-FMEA-MECH-001</a></td><td>機械系（MECH）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>MECH</td><td>図68 機械系 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-STR-001.html'>SSD-FMEA-STR-001</a></td><td>構造（STR）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>STR</td><td>図70 構造 機能構成</td></tr>
+<tr><td class='id'><a href='docs/SSD-FMEA-ET-001.html'>SSD-FMEA-ET-001</a></td><td>外部タンク（ET）故障解析表（FMEA・CIL）</td><td class='nw'>初版（Rev. -）</td><td>ET</td><td>図72 ET 機能構成</td></tr>
+<!--[/docrows:saf]--></table>
+<h3 id="g-hsi">人間系<span class="n">12件</span><a class="more" href="index_notes_hsi.html#g-hsi">注記 109件</a></h3>
+<table class='dt'><tr><th>文書番号</th><th>表題</th><th>版</th><th>対象ブロック</th><th>関連図</th></tr><!--[docrows:hsi]-->
+<tr><td class='id'><a href='docs/SSD-HSI-SYS-001.html'>SSD-HSI-SYS-001</a></td><td>人間系の基準の照合表（NASA-STD-3001 によるシャトルの後付け評価）</td><td class='nw'>Rev. M</td><td>乗員系・ECLSS ほか（人間系の基準）</td><td>図143・144</td></tr>
+<tr><td class='id'><a href='docs/SSD-EXP-ORB-001.html'>SSD-EXP-ORB-001</a></td><td>乗員の環境曝露定義書（曝露の量のパラメトリック・時間軸のプロファイル）</td><td class='nw'>Rev. B</td><td>ECLSS・乗員系ほか（環境曝露）</td><td>図145・146</td></tr>
+<tr><td class='id'><a href='docs/SSD-ATM-ORB-001.html'>SSD-ATM-ORB-001</a></td><td>キャビン大気の動的モデル定義書（CO2・圧力と漏れ・熱と湿度）</td><td class='nw'>Rev. A</td><td>ECLSS（ARS・PCS）</td><td>図163〜165</td></tr>
+<tr><td class='id'><a href='docs/SSD-EPB-EVA-001.html'>SSD-EPB-EVA-001</a></td><td>EMU の消耗品と前呼吸の定義書（持続時間・組織の窒素と R 値）</td><td class='nw'>Rev. A</td><td>EVA（EMU）</td><td>図183・184</td></tr>
+<tr><td class='id'><a href='docs/SSD-HRS-ORB-001.html'>SSD-HRS-ORB-001</a></td><td>居住の資源と収支定義書（食料・衛生・就寝・廃棄物・収納の量、標準ミッションの収支）</td><td class='nw'>Rev. A</td><td>乗員系（居住）・ECLSS（WCS）</td><td>図185・186</td></tr>
+<tr><td class='id'><a href='docs/SSD-MED-ORB-001.html'>SSD-MED-ORB-001</a></td><td>医療の構造と処置定義書（SOMS・傷病と減圧症の処置・医療の事象の実績）</td><td class='nw'>Rev. A</td><td>乗員系（医療）・EVA</td><td>図187〜190</td></tr>
+<tr><td class='id'><a href='docs/SSD-TSK-ORB-001.html'>SSD-TSK-ORB-001</a></td><td>乗員の作業分析・機能の分担定義書（人と自動化と地上の分担、作業の段）</td><td class='nw'>Rev. A</td><td>乗員系・DPS・GN&amp;C ほか（作業分析）</td><td>図147〜149</td></tr>
+<tr><td class='id'><a href='docs/SSD-HEA-ORB-001.html'>SSD-HEA-ORB-001</a></td><td>ヒューマンエラー解析書（作業ごとの誤り・結果・ハザード・管理策）</td><td class='nw'>初版（Rev. -）</td><td>乗員系・DPS・MPS ほか（ヒューマンエラー）</td><td>図150・151</td></tr>
+<tr><td class='id'><a href='docs/SSD-CIF-ORB-001.html'>SSD-CIF-ORB-001</a></td><td>乗員インタフェース対応表（警報の階層・表示と操作の盤・作業位置）</td><td class='nw'>初版（Rev. -）</td><td>C&amp;W・DPS・GN&amp;C ほか（乗員インタフェース）</td><td>図152・153</td></tr>
+<tr><td class='id'><a href='docs/SSD-HAB-ORB-001.html'>SSD-HAB-ORB-001</a></td><td>居住性・医療定義書（居住・医療の機能、乗員の1日、ユースケース）</td><td class='nw'>Rev. C</td><td>乗員系・ECLSS ほか（居住性・医療）</td><td>図154・155</td></tr>
+<tr><td class='id'><a href='docs/SSD-EGR-ORB-001.html'>SSD-EGR-ORB-001</a></td><td>容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード）</td><td class='nw'>初版（Rev. -）</td><td>乗員系・構造ほか（容積・動線・脱出）</td><td>図156・157</td></tr>
+<tr><td class='id'><a href='docs/SSD-HVM-SYS-001.html'>SSD-HVM-SYS-001</a></td><td>人間系の評価方法定義書（評価方法・人間系の関心事・人間系の図表の対応）</td><td class='nw'>初版（Rev. -）</td><td>人間系（評価方法・ビューポイント）</td><td>図158</td></tr>
+<!--[/docrows:hsi]--></table>
+</div>
+</main></body></html>

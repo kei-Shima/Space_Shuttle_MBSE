@@ -4,18 +4,18 @@
 |---|---|
 | 文書番号 | SSD-EPB-EVA-001 |
 | 表題 | EMU の消耗品と前呼吸の定義書（持続時間・組織の窒素と R 値） |
-| 版・日付 | 初版（Rev. -）／2026-10-09 |
+| 版・日付 | Rev. A／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-EMU-EVA-001 |
 | 関連図 | SSD-SYS-ARC-001 図183 EMU の消耗品の持続時間（代謝率との関係）・図184 前呼吸の手順と組織の窒素（R 値） |
 
 ## 1. 目的
 
-船外活動ユニット（EMU）の消耗品（一次 O2・LiOH・電池）が、乗員の代謝率によって何時間もつかと、前呼吸の手順ごとの 360分の組織の窒素分圧と R 値（組織の窒素分圧 ÷ 服の圧力）を、式で示す。EVA の設計の時間（7時間＋予備30分）・R 値の許容の上限（1.65）・NASA-STD-3001 の照合表の行に照らす。EMU の構造と流れは SSD-EMU-EVA-001（図179〜182）にある。
+船外活動ユニット（EMU）の消耗品（一次 O2・LiOH・電池）が、乗員の代謝率によって何時間もつかと、前呼吸の手順ごとの 360分の組織の窒素分圧と R 値（組織の窒素分圧 ÷ 服の圧力）を、式で示す。EVA の設計の時間（予備30分を含む合計 7時間）・R 値の許容の上限（1.65）・NASA-STD-3001 の照合表の行に照らす。EMU の構造と流れは SSD-EMU-EVA-001（図179〜182）にある。
 
 ## 2. 書き方
 
-パラメータ（EPB-P）は一次資料の値で、頁と照合語で示す。式（EPB-M）と計算は本書のもので、O2 の消費と CO2 の生成は STS-1 の解析の値（代謝 450 Btu/hr）を代謝率に比例させ、組織の窒素は 360分の半減期で吸気の窒素分圧に近づくとした（初めは 14.7 psia の空気で平衡、水蒸気の補正はしない）。手順の段（圧力・時間・気体）は飛行規則・資料の値。照合表（SSD-HSI-SYS-001）の判定は変えない。
+パラメータ（EPB-P）は一次資料の値で、頁と照合語で示す。式（EPB-M）と計算は本書のもので、O2 の消費は STS-1 の解析の値（代謝 450 Btu/hr）を、CO2 の生成は EMU の LiOH の設計の値（7000 Btu で 1.48 lb）を代謝率に比例させ、組織の窒素は 360分の半減期で吸気の窒素分圧に近づくとした（初めは 14.7 psia の空気で平衡、水蒸気の補正はしない）。手順の段（圧力・時間・気体）は飛行規則・資料の値。照合表（SSD-HSI-SYS-001）の判定は変えない。
 
 ## 3. パラメータ
 
@@ -30,8 +30,8 @@
 | EPB-P05 | EMU の設計の代謝率 | 1000 | Btu/hr | 1,000（400〜2,000） | EMU の代謝率の前提は、どの1時間の平均も 1600 Btu/hr、全体の平均は 1000 Btu/hr を超えず、ピークは15分間で 2000 Btu/hr を超えず、最小は30分間で 400 Btu/hr を下回らないことである。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444） |
 | EPB-P06 | EV 乗員の平均の代謝率 | 800 | Btu/hr | 800 | A13-102 は、EVA の PET 6.5時間を超える延長に航空医官の承認を要するとし、EV 乗員の平均の代謝率は約 800 BTU/hr（200 kcal/hr）、重作業のピークは 1600〜2000 BTU/hr、EVA 中に体は1時間に 6〜8 オンスの水を失い、32 オンスの飲み水袋では8時間の EVA の終わりに 1% の脱水になりうるとする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1782） |
 | EPB-P07 | 乗員1人の O2 の消費（代謝 450 Btu/hr） | 0.0739 | lb/man-hour | 0.0739（STS-1 の解析） | STS-1 の ECLSS・熱解析は乗員2人の1交代制を仮定し、全乗員が公称の代謝率 450 Btu/hr で連続して活動するとした。（出典: https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=9） 補足：本書は O2 の消費を代謝率に比例させた（0.0739 ÷ 450 lb/Btu）。 |
-| EPB-P08 | 乗員1人の CO2 の生成（代謝 450 Btu/hr） | 0.0882 | lb/man-hour | 0.0882（STS-1 の解析） | STS-1 の ECLSS 解析は、乗員全員が 450 Btu/hr の代謝率で働き続けるとし、CO2 の生成を 0.0882 lb/人・時、O2 の必要量を 0.0739 lb/人・時とした。（出典: https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=11）STS-1 の解析は、2人の乗員が1交代で働き、全員が 450 Btu/hr の代謝率で働き続けると仮定した。（出典: https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=9） 補足：本書は CO2 の生成を代謝率に比例させた。 |
-| EPB-P09 | EVA の設計の時間 | 7 | h | 7（予備30分は別） | 現在の宇宙服は合計で最長7時間の使用に設計され、各ミッションで宇宙服を2着搭載し、消耗品は2人・6時間の EVA 3回分を用意する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443）EMU の設計では、外の圧力が 4.0 psia 未満の間を EVA と定義し、EVA は脱出15分・有効作業6時間・進入15分・予備30分の合計最長7時間とする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444）A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868） |
+| EPB-P08 | LiOH の大きさを決めた代謝の量 | 7000 | Btu | 7,000（7時間の EVA） | LiOH の汚染物質除去カートリッジ（CCC）は、7時間の EVA の 7000 Btu の代謝に伴う 1.48 ポンドの CO2 を吸収する大きさで、PLSS の背面に付け軌道上で交換できる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/448） 補足：本書は CO2 の生成を代謝率に比例させ、係数を EMU の LiOH の設計の値（1.48 lb ÷ 7000 Btu ＝ 2.114×10^-4 lb/Btu）とした（Rev. BQ。Rev. BP までは乗員室の解析の値 0.0882 lb/man-hour ÷ 450 Btu/hr）。 |
+| EPB-P09 | EVA の設計の時間 | 7 | h | 7（予備30分を含む合計） | 現在の宇宙服は合計で最長7時間の使用に設計され、各ミッションで宇宙服を2着搭載し、消耗品は2人・6時間の EVA 3回分を用意する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443）EMU の設計では、外の圧力が 4.0 psia 未満の間を EVA と定義し、EVA は脱出15分・有効作業6時間・進入15分・予備30分の合計最長7時間とする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444）A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868） 補足：脱出15分・有効作業6時間・進入15分・予備30分の合計（Rev. BQ で「予備30分は別」を改めた）。 |
 | EPB-P10 | 服の圧力（EVA） | 4.3 | psid | 4.3（4.2〜4.4） | 一次酸素系は 850 psia・90°F で 1.217 ポンドの酸素を蓄え、EVA 中は 4.3 ± 0.1 psid で酸素を送り、代謝の使用率 0.02〜0.33 lb/hr に対応する。充填は SCU を通してオービタの ECLSS から行い、充填圧は 850 ± 50 psig、最小の使用可能圧は 60 psi である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/447）一次 O2 タンクは 850 psi を超えて与圧されれば満充填とし、満充填から 110 psi/24時間を超える低下は大きなタンクの漏れを示す。主調圧器の運用の仕様は O2 アクチュエータが PRESS・EVA のとき 4.2〜4.4 psid で、4.05〜4.55 psid で安定していれば SOP の流れと PPRV の開きを心配しなくてよい。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1856）EMU STATUS の正常値は、SUBLM P 2.0〜4.2 psia、服圧 4.2〜4.4 psid（減圧後は 4.2〜5.5）、O2 P 150〜950 psia、O2 RATE 0〜4.0 psi/min、SOP P 5410〜6800 psia、BAT AMP 3.0〜4.0、ファン 18.0〜20.0 K rpm、CO2 0.2〜4.0 mmHg、H2O TEMP 32〜75°F、H2O GP・WP 14.0〜16.0 psid、BATT 32.0 AH で、TIME LF は現在の使用率での残り時間、%O2・%PWR LF は限定の消耗品を示す。EMU のデータが無い場合は最初の6.5時間は1時間ごと、その後は10分ごとに状態を報告する。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=94） 補足：真空の中では服の絶対圧 4.3 psia として R 値の分母にした。 |
 | EPB-P11 | R 値の許容の上限 | 1.65 | — | 1.65（A13-103） | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
 
@@ -42,24 +42,24 @@
 | ID | 名前 | 式 | 補足 |
 |---|---|---|---|
 | EPB-M01 | 一次 O2 の持続時間 | t_O2 = C_O2 ÷ (q_O2 × M ÷ 450)　（C_O2：EPB-P01、q_O2：EPB-P07、M：代謝率 Btu/hr） | O2 の消費が代謝率に比例するとした（本書の判断）。 |
-| EPB-M02 | LiOH の持続時間 | t_CO2 = C_CO2 ÷ (q_CO2 × M ÷ 450)　（C_CO2：EPB-P02、q_CO2：EPB-P08） | CO2 の生成が代謝率に比例するとした（本書の判断）。 |
+| EPB-M02 | LiOH の持続時間 | t_CO2 = C_CO2 ÷ (C_CO2 ÷ E × M) = E ÷ M　（C_CO2：EPB-P02、E：EPB-P08 の 7,000 Btu） | CO2 の生成が代謝率に比例するとし、係数は LiOH の大きさを決めた値（7000 Btu で 1.48 lb）とした（本書の判断）。 |
 | EPB-M03 | 電池の持続時間 | t_bat = C_bat ÷ I　（C_bat：EPB-P03、I：EPB-P04） | — |
 | EPB-M04 | 組織の窒素分圧 | P_N2(t+Δt) = P_i + (P_N2(t) − P_i)·exp(−ln2·Δt ÷ 360 分)　（P_i：吸気の窒素分圧＝全圧 × 窒素の割合） | 360分の組織。初めは 14.7 psia の空気（窒素 79%）で平衡、11.61 psia。水蒸気の補正はしない（本書の判断。手順の資料の R 値と合う）。 |
 | EPB-M05 | R 値 | R = P_N2 ÷ P_suit　（P_suit：EPB-P10） | — |
 
 ## 5. 消耗品の持続時間
 
-代謝率ごとの一次 O2・LiOH・電池（3.5 A）の持続時間と、最も短いものを示す（本書の計算、式 EPB-M01〜M03）。予備の30分（A15-152）は含まない。
+代謝率ごとの一次 O2・LiOH・電池（3.5 A）の持続時間と、最も短いものを示す（本書の計算、式 EPB-M01〜M03）。EVA の設計の合計 7 時間は予備の30分（A15-152）を含む。
 
 | 代謝率 | 一次 O2 | LiOH | 電池 | 最も短いもの |
 |---|---|---|---|---|
-| 400 Btu/hr | 18.53 h | 18.88 h | 9.14 h | 9.14 h（電池） |
-| 600 Btu/hr | 12.35 h | 12.59 h | 9.14 h | 9.14 h（電池） |
-| 800 Btu/hr | 9.26 h | 9.44 h | 9.14 h | 9.14 h（電池） |
-| 1,000 Btu/hr | 7.41 h | 7.55 h | 9.14 h | 7.41 h（O2） |
-| 1,200 Btu/hr | 6.18 h | 6.29 h | 9.14 h | 6.18 h（O2） |
-| 1,600 Btu/hr | 4.63 h | 4.72 h | 9.14 h | 4.63 h（O2） |
-| 2,000 Btu/hr | 3.71 h | 3.78 h | 9.14 h | 3.71 h（O2） |
+| 400 Btu/hr | 18.53 h | 17.50 h | 9.14 h | 9.14 h（電池） |
+| 600 Btu/hr | 12.35 h | 11.67 h | 9.14 h | 9.14 h（電池） |
+| 800 Btu/hr | 9.26 h | 8.75 h | 9.14 h | 8.75 h（LiOH） |
+| 1,000 Btu/hr | 7.41 h | 7.00 h | 9.14 h | 7.00 h（LiOH） |
+| 1,200 Btu/hr | 6.18 h | 5.83 h | 9.14 h | 5.83 h（LiOH） |
+| 1,600 Btu/hr | 4.63 h | 4.38 h | 9.14 h | 4.38 h（LiOH） |
+| 2,000 Btu/hr | 3.71 h | 3.50 h | 9.14 h | 3.50 h（LiOH） |
 
 ## 6. 前呼吸の手順と R 値
 
@@ -81,15 +81,15 @@
 
 | ID | 量 | 基準の出どころ | 基準 | モデル | 判定 | 根拠 |
 |---|---|---|---|---|---|---|
-| EPB-E01 | 一次 O2 の持続時間（設計の代謝 1,000 Btu/hr） | A15-154 | EVA の設計の 7 時間＋予備 30 分 | 7.41 h | ほぼ満たす（予備の 30 分に 0.1 h 足りない） | A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868）現在の宇宙服は合計で最長7時間の使用に設計され、各ミッションで宇宙服を2着搭載し、消耗品は2人・6時間の EVA 3回分を用意する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443）EMU の設計では、外の圧力が 4.0 psia 未満の間を EVA と定義し、EVA は脱出15分・有効作業6時間・進入15分・予備30分の合計最長7時間とする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444） |
-| EPB-E02 | LiOH の持続時間（設計の代謝 1,000 Btu/hr） | A15-154 | EVA の設計の 7 時間＋予備 30 分 | 7.55 h | 満たす | A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868）現在の宇宙服は合計で最長7時間の使用に設計され、各ミッションで宇宙服を2着搭載し、消耗品は2人・6時間の EVA 3回分を用意する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443）EMU の設計では、外の圧力が 4.0 psia 未満の間を EVA と定義し、EVA は脱出15分・有効作業6時間・進入15分・予備30分の合計最長7時間とする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444） |
-| EPB-E03 | 電池の持続時間（3.5 A） | A15-154 | EVA の設計の 7 時間＋予備 30 分 | 9.14 h | 満たす | A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868） |
+| EPB-E01 | 一次 O2 の持続時間（設計の代謝 1,000 Btu/hr） | A15-154 | EVA の設計の合計 7 時間（予備 30 分を含む） | 7.41 h | 満たす | A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868）現在の宇宙服は合計で最長7時間の使用に設計され、各ミッションで宇宙服を2着搭載し、消耗品は2人・6時間の EVA 3回分を用意する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443）EMU の設計では、外の圧力が 4.0 psia 未満の間を EVA と定義し、EVA は脱出15分・有効作業6時間・進入15分・予備30分の合計最長7時間とする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444） |
+| EPB-E02 | LiOH の持続時間（設計の代謝 1,000 Btu/hr） | A15-154 | EVA の設計の合計 7 時間（予備 30 分を含む） | 7.00 h | 満たす（設計の 7 時間ちょうど） | A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868）現在の宇宙服は合計で最長7時間の使用に設計され、各ミッションで宇宙服を2着搭載し、消耗品は2人・6時間の EVA 3回分を用意する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443）EMU の設計では、外の圧力が 4.0 psia 未満の間を EVA と定義し、EVA は脱出15分・有効作業6時間・進入15分・予備30分の合計最長7時間とする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444） |
+| EPB-E03 | 電池の持続時間（3.5 A） | A15-154 | EVA の設計の合計 7 時間（予備 30 分を含む） | 9.14 h | 満たす | A15-154 は、EVA の時間割の全体に脱出15分・進入15分・予備30分を足した消耗品を要するとし、EMU の認定では6時間の EVA に減圧後5分・脱出10分・進入10分・再与圧前5分・予備30分を足して合計7時間とし、別に30分の非常用酸素を持つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868） |
 | EPB-E04 | R 値（10.2 psi キャビン・12時間（選択肢1）） | A13-103 | R ≤ 1.65 | 1.65 | 満たす | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
 | EPB-E05 | R 値（10.2 psi キャビン・24時間（選択肢2）） | A13-103 | R ≤ 1.65 | 1.65 | 満たす | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
-| EPB-E06 | R 値（服内の4時間の前呼吸（選択肢3）） | A13-103 | R ≤ 1.65 | 1.70 | 満たさない | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
+| EPB-E06 | R 値（服内の4時間の前呼吸（選択肢3）） | A13-103 | R ≤ 1.65 | 1.70 | 240 分ちょうどでは上回る（服の圧力に達するまでの O2 の 7〜16 分を含めると 1.65〜1.68） | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
 | EPB-E07 | R 値（非常時 EVA の最短の前呼吸（推奨）） | A13-103 | R ≤ 1.65 | 2.02 | 満たさない | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
 | EPB-E08 | R 値（服内の3.5時間の前呼吸（STS-6、シャトルの） | A13-103 | R ≤ 1.65 | 1.80 | 満たさない | 初期前呼吸を省いて36時間より前に EVA を行う場合は前呼吸に60分を足す。服内の選択肢は、12.5 psi を超えるキャビン圧で O2 95% 超の途切れのない前呼吸を最低4時間行ってから 8 psi 未満に減圧する。すべての選択肢は同じ脱窒素（R=1.65〜1.68）を与え、R 値は減圧前の組織の N2 と減圧後の圧力の比である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）組織から出た窒素で服の酸素は少し薄まる（92% まで）が、95% を超える供給の酸素で脱窒素は十分である。規定外の前呼吸では R 値 1.65 に基づいて計算した時間が強く望まれ、12〜24時間の中間の 10.2 psi の時間は地上の試験のデータが無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）TR は理論の組織の N2 分圧（P1N2）と減圧後の圧力の比で、P1N2 は 360分の半減期の区画で計算する。NASA の用語の R 値は超えてはならない数で、シャトルの 4.3 psia の EMU では 1.65 以下を EVA の運用で許容するが、減圧症の確率が0という意味ではない。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20） |
-| EPB-E09 | 減圧症の確率（地上の室の試験） | HSI-105 | 4% 未満（95% の信頼度） | 地上の試験の症状 21〜32%（手順により） | 比べられない（症状の率で、基準の確率と量が違う） | 3001 の [V2 6008] は、計画ごとに減圧症の対策を定め、地上の室の試験で減圧症の確率 4% 未満（95% の信頼度、重い減圧症なし、VGE を評価）を示すとし、ベイズの方法では減圧症なしの暴露47回が要る。（出典: https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=55）3001 の [V2 6008] の理由の欄は、頻度論の方法では試験の数が74回とする。[V2 6009] は減圧症の治療の能力を求め、初期の飽和の圧力を EVA の前36時間で乗員がさらされた最高の圧力と定義する。（出典: https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=56） |
+| EPB-E09 | 減圧症の確率（地上の室の試験） | HSI-105 | 4% 未満（95% の信頼度） | 地上の試験の症状 21〜32%（手順により） | 満たさない（症状の発生 21〜32% は 4% を超える。照合表の HSI-105 は Rev. BQ で不適合にした） | 3001 の [V2 6008] は、計画ごとに減圧症の対策を定め、地上の室の試験で減圧症の確率 4% 未満（95% の信頼度、重い減圧症なし、VGE を評価）を示すとし、ベイズの方法では減圧症なしの暴露47回が要る。（出典: https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=55）3001 の [V2 6008] の理由の欄は、頻度論の方法では試験の数が74回とする。[V2 6009] は減圧症の治療の能力を求め、初期の飽和の圧力を EVA の前36時間で乗員がさらされた最高の圧力と定義する。（出典: https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=56） |
 
 ## 8. 飛行の実績
 
@@ -113,13 +113,13 @@ EVA の飛行の実績 13件を示す（前呼吸の時間・EVA の時間・R �
 
 ## 9. 照合表の行とモデル
 
-照合表（Vol. 2 11章・6章）の行 10件について、本書のモデル・資料から出せる値を示す。照合表の判定は変えない。
+照合表（Vol. 2 11章・6章）の行 10件について、本書のモデル・資料から出せる値を示す。照合表の判定の欄は Rev. BQ の見直しの後のものである（見直しは SSD-HSI-SYS-001 の注記）。
 
 | 照合表の行 | 要求の要旨 | 基準 | 照合表の判定 | 本書のモデル・資料から出せる値 |
 |---|---|---|---|---|
 | HSI-101 | 吸気の酸素分圧（PIO2）を表 6.2-1 の範囲に保つ。 | PIO2 目標 145〜155 mmHg、下限 127 mmHg（1時間平均） | 不適合 | シャトルの段階減圧の 10.2 psia・O2 26.5% は PIO2 127 mmHg（EMP-065）で、軽い低酸素の下限 127 mmHg にちょうど等しい。前呼吸の高濃度 O2 の時間は JPR 1830.6 の9時間（48時間に1回）以内：段階減圧の最終前呼吸 40〜75分、服内4時間（EMP-074、本書の計算）。モデルで前呼吸と EVA の O2 の暴露の時間を出せる。 |
-| HSI-104 | 1.0 psi を超える圧力の変化では全圧の変化率を 13.5 psi/min 以下にする。 | ≤13.5 psi/min | データ不足 | エアロックの EVA の減圧の予想 2.8 psia/min（STS-125、EMP-049）、14.7→10.2 psia の減圧は15〜20分（本書の計算：平均 0.23〜0.30 psi/min、EMP-066）。どちらも基準内。モデルで減圧の時系列を出せる。 |
-| HSI-105 | 計画ごとに DCS の対策を定め、地上の試験で DCS の確率 4% 未満（95% の信頼度）を示す。 | DCS の確率 <4%（95% の信頼度） | データ不足 | 地上の検証（NASA-TM-58259）の症状の発生は、改めた 10.2 psi の手順 23%（8/35）、4.0時間 21%（6/28）、3.5時間 32%（7/22）、全173人の試験で 26%（EMP-057・EMP-059）。作業に支障のある症状は 5% 未満（EMP-062）、EVA の中止を要する症状の可能性 2〜3%（EMP-060）。本書の判断：「重い DCS なし」の条件は改めた手順で満たすが、DCS の確率 4% 未満は試験の値（約 20%）で満たさない。飛行では報告なし（EMP-069）、R 値 1.51（EMP-062）。モデルで手順ごとの R 値（360分の半減期、EMP-067）を計算できる。 |
+| HSI-104 | 1.0 psi を超える圧力の変化では全圧の変化率を 13.5 psi/min 以下にする。 | ≤13.5 psi/min | 不適合 | エアロックの EVA の減圧の予想 2.8 psia/min（STS-125、EMP-049）、14.7→10.2 psia の減圧は15〜20分（本書の計算：平均 0.23〜0.30 psi/min、EMP-066）。どちらも基準内。モデルで減圧の時系列を出せる。 |
+| HSI-105 | 計画ごとに DCS の対策を定め、地上の試験で DCS の確率 4% 未満（95% の信頼度）を示す。 | DCS の確率 <4%（95% の信頼度） | 不適合 | 地上の検証（NASA-TM-58259）の症状の発生は、改めた 10.2 psi の手順 23%（8/35）、4.0時間 21%（6/28）、3.5時間 32%（7/22）、全173人の試験で 26%（EMP-057・EMP-059）。作業に支障のある症状は 5% 未満（EMP-062）、EVA の中止を要する症状の可能性 2〜3%（EMP-060）。本書の判断：「重い DCS なし」の条件は改めた手順で満たすが、DCS の確率 4% 未満は試験の値（約 20%）で満たさない。飛行では報告なし（EMP-069）、R 値 1.51（EMP-062）。モデルで手順ごとの R 値（360分の半減期、EMP-067）を計算できる。 |
 | HSI-107 | DCS を治療する能力を持つ。 | —（値なし） | 適合 | 減圧症の処置はエアロックを 10.2、乗員室を 14.7 psia に戻し、32 オンス以上の水分と BTA（EMP-016）。3001 は初期の飽和の圧力を EVA の前36時間の最高の圧力とする（EMP-073）。段階減圧では 14.7 psia（本書の判断）。 |
 | HSI-469 | 設定圧で平衡に達した後、服の圧力を 0.25 psi の幅の中に保つ。 | 1.72 kPa（0.25 psi）以内 | データ不足 | EMU は 4.3 ± 0.1 psid（EMP-007）、運用の仕様 4.2〜4.4 psid、4.05〜4.55 psid で安定なら可（EMP-026）。本書の判断：仕様の幅 0.2 psi は基準内だが、許容する 4.05〜4.55（幅 0.5）は基準を超える。 |
 | HSI-472 | 着用中の乗員の蓄熱を 3.0〜-1.9 kJ/kg に収める。 | 3.0 kJ/kg > ΔQ > -1.9 kJ/kg | データ不足 | 代謝率の設計の前提（平均 1000、1時間 1600、ピーク 2000、最小 400 Btu/hr、EMP-004）と実際の平均 800 Btu/hr（EMP-018）、LCVG 240 lb/hr（EMP-011）。蓄熱のモデル（41ノード・Wissler）の結果は資料に無い。モデルで代謝と冷却の熱の収支を出せるが、蓄熱の判定には人体の熱のモデルが要る（本書の判断）。 |
@@ -130,7 +130,7 @@ EVA の飛行の実績 13件を示す（前呼吸の時間・EVA の時間・R �
 
 ## 10. 図
 
-図183 は代謝率（横軸）ごとの一次 O2・LiOH・電池の持続時間と、EVA の設計の時間（7時間）・予備を含む 7.5時間の線を示す。図184 は前呼吸の手順ごとの 360分の組織の窒素分圧の時間変化と、R 値 1.65 に当たる窒素分圧（7.10 psia）の線を示す。
+図183 は代謝率（横軸）ごとの一次 O2・LiOH・電池の持続時間と、EVA の設計の合計の時間（予備 30 分を含む 7時間）の線を示す。図184 は前呼吸の手順ごとの 360分の組織の窒素分圧の時間変化と、R 値 1.65 に当たる窒素分圧（7.10 psia）の線を示す。
 
 ## 11. SysML v2 テキスト
 
@@ -138,9 +138,9 @@ EVA の飛行の実績 13件を示す（前呼吸の時間・EVA の時間・R �
 
 ## 12. 注記（出典間の相違・構成変更）
 
-> **注記** O2 の消費と CO2 の生成を代謝率に比例させる式は本書の判断で、資料に代謝率から O2 の使用率への換算の係数は無い。設計の代謝（1,000 Btu/hr）で一次 O2 は 7.41時間となり、EVA の設計の時間（7時間）とほぼ合う。
+> **注記** O2 の消費と CO2 の生成を代謝率に比例させる式は本書の判断である。設計の代謝（1,000 Btu/hr）で一次 O2 は 7.41時間、LiOH は 7.00時間となり、EVA の設計の合計の時間（7時間）と合う。
 
-> **注記** 組織の窒素のモデル（360分の半減期、14.7 psia の空気で平衡、水蒸気の補正なし）で、10.2 psia の段階減圧の4つの手順は R 1.64〜1.65 となり、飛行規則 A13-103 が手順の R を 1.65〜1.68 と書くのと合う。服内4時間の前呼吸は本書の計算で 1.70 で、資料の 1.65〜1.68 より高い（初めの平衡・服の圧力の取り方で変わる）。
+> **注記** 組織の窒素のモデル（360分の半減期、14.7 psia の空気で平衡、水蒸気の補正なし）で、10.2 psia の段階減圧の4つの手順は R 1.64〜1.65 となり、飛行規則 A13-103 が手順の R を 1.65〜1.68 と書くのと合う。服内4時間の前呼吸は本書の計算で 1.70 で、資料の 1.65〜1.68 より高い（服の圧力に達するまでの O2 の時間の取り方で変わる。Rev. BQ の注記）。
 
 > **注記** 飛行の段階減圧の前呼吸の R 値の実績（最初の142回の平均 1.51）は、手順の時間を超えて 10.2 psia にいたことなどによる。
 
@@ -158,6 +158,14 @@ EVA の飛行の実績 13件を示す（前呼吸の時間・EVA の時間・R �
 
 > **注記** 調査で根拠が不足した点・本書の判断：代謝率から O2 の使用率への換算の係数：資料に無い（EMP-P04）。
 
+> **注記** 照合表の判定の見直し（Rev. BQ）：本書が集めた値と追加の調査で、照合表（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md)）の判定を見直した。本書の「照合表の行」の表では 2行の判定が変わった。判定に使ったのは一次資料の設計値・運用の限界・実績と、その単純な換算だけで、本書のモデルの計算（係数を仮定した時系列）は使っていない。上の「照合表の判定は変えない」と書いた文は Rev. BP までの扱いである。
+
+> **注記** モデルの係数の確認（Rev. BQ）・代謝率からの換算（直した）：代謝率から O2 の消費への換算 1.642×10^-4 lb/Btu は、HIDH の表（474 BTU/h で 12.55×10^-4 lbm/min、本書の値の −3.3 %）、Conkin ほかの値（1500 BTU/hr で約 1.3 L/分、−0.2 %）、EMU の使用率の上限 0.33 lb/hr と代謝率のピーク 2000 Btu/hr の比（+0.5 %）と合うので、そのまま使う。CO2 の生成は、EMU の LiOH の大きさを決めた値（7000 Btu で 1.48 lb）に改めた。設計の代謝 1,000 Btu/hr で LiOH は 7.00 時間になる。（出典: https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=11）（出典: https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=366）（出典: https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=365）（出典: https://ntrs.nasa.gov/api/citations/20140012830/downloads/20140012830.pdf#page=1）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/447）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/448）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444）
+
+> **注記** モデルの係数の確認（Rev. BQ）・組織の窒素のモデル（確定）：組織の窒素のモデル（360分の半減期、初めの値 11.61 psia = 14.7 psia × 0.79、水蒸気の補正なし）は、NASA の TR の計算の定義と同じである（Conkin 2020 は初めの値を「周囲の PN2、11.61 psia」とし、アルゴンを N2 に数える）。同報告の計算の例（75 分の O2 で 10.049 psia、6.0 psia で TR 1.675）を本書の式で再現できた。（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20）（出典: https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=12）（出典: https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=36）（出典: https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=11）（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=11）
+
+> **注記** モデルの係数の確認（Rev. BQ）・服内4時間の R 値（確定）：服内4時間の前呼吸の R 値 1.70 は、O2 を 240 分ちょうど吸った時点の値である。飛行規則 A13-103 の 1.65〜1.68 は、服の圧力 4.3 psia に達するまでの O2 の時間をさらに 7〜16 分含めた値に当たる（本書の計算）。地上の試験では前呼吸の後に 30 分の減圧があり、Conkin（2020年）の表は4時間の前呼吸の試験の TR を 1.60、3.5時間の試験を 1.69 とする（本書の式で 270 分・240 分として 1.61・1.70）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784）（出典: https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=17）（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=26）（出典: https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=9）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=15）（出典: https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=28）（出典: https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20）
+
 ## 13. 参考文献
 
 1. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p447） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/447
@@ -169,44 +177,55 @@ EVA の飛行の実績 13件を示す（前呼吸の時間・EVA の時間・R �
 7. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p444） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444
 8. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1782） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1782
 9. JSC-16720（80-FM-33）STS-1 ECLSS Consumables and Thermal Analysis（1980） （PDF p9） — https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=9
-10. JSC-16720（80-FM-33）STS-1 ECLSS Consumables and Thermal Analysis（1980） （PDF p11） — https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=11
-11. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p443） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443
-12. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1868） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868
-13. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1856） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1856
-14. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1784） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784
-15. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p20） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20
-16. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p403） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/403
-17. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p460） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460
-18. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A13-103 EVA PREBREATHE PROTOCOL（PDF p1783） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1783
-19. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） （PDF p52） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=52
-20. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 4-7 EMU PURGE（PDF p87） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=87
-21. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） （PDF p88） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=88
-22. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p12） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=12
-23. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p50） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=50
-24. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p24） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=24
-25. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1785） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1785
-26. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p11） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=11
-27. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p16） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=16
-28. NASA-STD-3001 Volume 2 Revision F NASA Spaceflight Human-System Standard Volume 2: Human Factors, Habitability, and Environmental Health（2026-07-14 承認、398頁、6,880,753 バイト） （PDF p55） — https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=55
-29. NASA-STD-3001 Volume 2 Revision F NASA Spaceflight Human-System Standard Volume 2: Human Factors, Habitability, and Environmental Health（2026-07-14 承認、398頁、6,880,753 バイト） （PDF p56） — https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=56
-30. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p18） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=18
-31. NASA-CR-194116 STS-54 Mission Report（1993） （PDF p23） — https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=23
-32. STS-108 Mission Report （PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11
-33. NSTS-37452 STS-125 Mission Report（2010） （PDF p15） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=15
-34. NSTS-37452 STS-125 Mission Report（2010） （PDF p17） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=17
-35. NSTS-37452 STS-125 Mission Report（2010） （PDF p18） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=18
-36. NSTS-37452 STS-125 Mission Report（2010） （PDF p20） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=20
-37. NSTS-37452 STS-125 Mission Report（2010） （PDF p21） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=21
-38. NSTS-37452 STS-125 Mission Report（2010） （PDF p48） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48
-39. STS-122 Mission Report （PDF p15） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=15
-40. STS-135 Mission Report （PDF p13） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=13
-41. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p11） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=11
-42. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p10） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=10
-43. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
-44. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
+10. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p443） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/443
+11. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1868） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1868
+12. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1856） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1856
+13. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1784） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1784
+14. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p20） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=20
+15. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p403） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/403
+16. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p460） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460
+17. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A13-103 EVA PREBREATHE PROTOCOL（PDF p1783） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1783
+18. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） （PDF p52） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=52
+19. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 4-7 EMU PURGE（PDF p87） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=87
+20. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） （PDF p88） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=88
+21. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p12） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=12
+22. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p50） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=50
+23. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p24） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=24
+24. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1785） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1785
+25. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p11） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=11
+26. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p16） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=16
+27. NASA-STD-3001 Volume 2 Revision F NASA Spaceflight Human-System Standard Volume 2: Human Factors, Habitability, and Environmental Health（2026-07-14 承認、398頁、6,880,753 バイト） （PDF p55） — https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=55
+28. NASA-STD-3001 Volume 2 Revision F NASA Spaceflight Human-System Standard Volume 2: Human Factors, Habitability, and Environmental Health（2026-07-14 承認、398頁、6,880,753 バイト） （PDF p56） — https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf#page=56
+29. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p18） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=18
+30. NASA-CR-194116 STS-54 Mission Report（1993） （PDF p23） — https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=23
+31. STS-108 Mission Report （PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11
+32. NSTS-37452 STS-125 Mission Report（2010） （PDF p15） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=15
+33. NSTS-37452 STS-125 Mission Report（2010） （PDF p17） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=17
+34. NSTS-37452 STS-125 Mission Report（2010） （PDF p18） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=18
+35. NSTS-37452 STS-125 Mission Report（2010） （PDF p20） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=20
+36. NSTS-37452 STS-125 Mission Report（2010） （PDF p21） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=21
+37. NSTS-37452 STS-125 Mission Report（2010） （PDF p48） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48
+38. STS-122 Mission Report （PDF p15） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=15
+39. STS-135 Mission Report （PDF p13） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=13
+40. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p11） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=11
+41. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p10） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=10
+42. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
+43. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
+44. JSC-16720（80-FM-33）STS-1 ECLSS Consumables and Thermal Analysis（1980） （PDF p11） — https://ntrs.nasa.gov/api/citations/19800020909/downloads/19800020909.pdf#page=11
+45. NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） （PDF p366） — https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=366
+46. NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） （PDF p365） — https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=365
+47. JSC-CN-32084 Conkin, J.・Feiveson, A. H.・Gernhardt, M. L.・Norcross, J. R.・Wessel, J. H.「Designing an Exploration Atmosphere Prebreathe Protocol」（抄録、2015年、NTRS 20140012830、2頁、20,147 バイト） （PDF p1） — https://ntrs.nasa.gov/api/citations/20140012830/downloads/20140012830.pdf#page=1
+48. NASA/TP-2020-220529 Conkin, J.「Probability of Decompression Sickness and Venous Gas Emboli from 49 NASA Hypobaric Chamber Tests with Reference to Exploration Atmosphere」（JSC、2020年4月、NTRS 20200004317、48頁、695,527 バイト） （PDF p12） — https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=12
+49. NASA/TP-2020-220529 Conkin, J.「Probability of Decompression Sickness and Venous Gas Emboli from 49 NASA Hypobaric Chamber Tests with Reference to Exploration Atmosphere」（JSC、2020年4月、NTRS 20200004317、48頁、695,527 バイト） （PDF p36） — https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=36
+50. NASA/TP-2020-220529 Conkin, J.「Probability of Decompression Sickness and Venous Gas Emboli from 49 NASA Hypobaric Chamber Tests with Reference to Exploration Atmosphere」（JSC、2020年4月、NTRS 20200004317、48頁、695,527 バイト） （PDF p11） — https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=11
+51. NASA/TP-2020-220529 Conkin, J.「Probability of Decompression Sickness and Venous Gas Emboli from 49 NASA Hypobaric Chamber Tests with Reference to Exploration Atmosphere」（JSC、2020年4月、NTRS 20200004317、48頁、695,527 バイト） （PDF p17） — https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=17
+52. JSC-CN-29896 Evidence Report: Risk of Decompression Sickness (DCS)（Conkin・Norcross・Wessel・Abercromby・Klein・Dervay・Gernhardt、NASA HRP、2013-11-04、80頁、1,646,413 バイト） （PDF p26） — https://ntrs.nasa.gov/api/citations/20140003729/downloads/20140003729.pdf#page=26
+53. NASA-TM-58259 Verification of an Altitude Decompression Sickness Prevention Protocol for Shuttle Operations Utilizing a 10.2-psi Pressure Stage（Waligora・Horrigan・Conkin・Hadley、JSC、1984-06、54頁、4,979,612 バイト。OCR のテキスト層） （PDF p9） — https://ntrs.nasa.gov/api/citations/19840020323/downloads/19840020323.pdf#page=9
+54. NASA/TP-2020-220529 Conkin, J.「Probability of Decompression Sickness and Venous Gas Emboli from 49 NASA Hypobaric Chamber Tests with Reference to Exploration Atmosphere」（JSC、2020年4月、NTRS 20200004317、48頁、695,527 バイト） （PDF p28） — https://ntrs.nasa.gov/api/citations/20200004317/downloads/20200004317.pdf#page=28
 
 ## 14. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-09 | 初版作成（パラメータ 11件・式 5件・前呼吸の手順 7件・照合 9件、図183・184、SysML v2 テキスト） |
+| Rev. A | 2026-10-11 | モデルの係数を確認して直した：EMU の CO2 の生成の係数を LiOH の設計の値（7000 Btu で 1.48 lb）に、消耗品の基準を「合計 7 時間（予備 30 分を含む）」に改めた（Rev. BQ の本書の判断の確認）、照合表の判定の見直し（Rev. BQ）に合わせて、照合表の行の表の判定を改めた（2行）（Rev. BQ） |

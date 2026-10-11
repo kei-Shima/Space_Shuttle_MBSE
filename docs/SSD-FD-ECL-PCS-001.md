@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-PCS-001 |
 | 表題 | 圧力制御系（PCS／ARPCS）機能説明書 |
-| 版・日付 | Rev. J／2026-10-09 |
+| 版・日付 | Rev. K／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -23,7 +23,7 @@
 | F-ECL-PCS-04 | 正・負の圧力逃し弁が、乗員室構造を過大圧・過小圧から保護する。（出典: http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf） |
 | F-ECL-PCS-05 | 打上げ・帰還用スーツのヘルメットと非常用呼吸マスクへ、呼吸用酸素を直接供給する。（出典: http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf） |
 | F-ECL-PCS-06 | 窒素は給水・廃水タンクの加圧にも使われる。（出典: http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf） |
-| F-ECL-PCS-07 | 与圧系は2系統の酸素系と2系統の気体窒素系から成り、酸素系は燃料電池と同じPRSDから供給される。（出典: https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_eclss.html）（出典: https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html） |
+| F-ECL-PCS-07 | 与圧系は2系統の酸素系と2系統の気体窒素系から成り、酸素系は燃料電池と同じPRSDから供給される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360）（出典: https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html） |
 | F-ECL-PCS-08 | PRSDの極低温超臨界酸素は、気体として835〜852 psiaで与圧制御系へ供給される。（出典: https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html） |
 | F-ECL-PCS-09 | ARPCSは、1気圧の環境と非常時の8 psiaモードの両方で、酸素分圧と全圧を制御する。（出典: https://www.science.gov/topicpages/p/pressure+control+valves.html） |
 | F-ECL-PCS-10 | 乗員室圧・PPO2・O2/N2流量はO1の計器とSM SYS SUMM 1・DISP 66に表示され、dP/dTが0.08 psi/min以上で低下するとクラクソンが鳴りMASTER ALARM灯が点灯する（SCOM 2.9節）。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/367） |
@@ -35,13 +35,13 @@
 |---|---|---|---|---|---|
 | IF-ECL-01 | 電力系（EPS） | 推進薬・流体 | 受信 | ARPCSは酸素・窒素の2ガス方式で、酸素は反応剤貯蔵・分配（PRSD）サブシステムから得る。（出典: https://ntrs.nasa.gov/citations/19750056784）PRSDは、燃料電池とARPCSへ極低温の水素・酸素を貯蔵・分配する。（出典: https://ntrs.nasa.gov/citations/19900001602） | 上位: IF-ORB-09 下位: IF-EPS-04 |
 | IF-ECL-02 | 乗員室（制御対象） | 推進薬・流体 | 送信 | 乗員室は14.7±0.2 psiaに与圧され、平均で窒素80%・酸素20%の混合気に維持される。（出典: https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/overview.html）窒素は窒素貯蔵タンクから得る。（出典: https://ntrs.nasa.gov/citations/19750056784） | 下位: IF-PCS-03 下位: IF-PCS-04 下位: IF-PCS-07 下位: IF-PCS-10 |
-| IF-ECL-03 | 給水・廃水系（H2O） | 推進薬・流体 | 送信 | 各飲料水タンクと廃水タンクは、乗員室の窒素供給系から16 psigの窒素で加圧される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-PCS-06 |
-| IF-ECL-04 | エアロック支援系（ALS） | 推進薬・流体 | 送信 | SCU接続時は、オービタの酸素系から900±500 psiaの酸素がエアロック盤AW82Bを通じて供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-PCS-05 |
-| IF-ECL-24 | 能動熱制御系（ATCS） | 熱 | 受信 | フレオンの一方の流路はECLSS酸素リストリクタを通り、ECLSS用のPRSD酸素を40°Fに加温する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-TCS-04 |
+| IF-ECL-03 | 給水・廃水系（H2O） | 推進薬・流体 | 送信 | 各給水タンクと廃水タンクは、乗員室の窒素供給系から15.5〜17.0 psigの窒素で加圧される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395） | 下位: IF-PCS-06 |
+| IF-ECL-04 | エアロック支援系（ALS） | 推進薬・流体 | 送信 | SCU接続時は、オービタの酸素系から900±500 psiaの酸素がエアロック盤AW82Bを通じて供給される。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=176） | 下位: IF-PCS-05 |
+| IF-ECL-24 | 能動熱制御系（ATCS） | 熱 | 受信 | フレオンの一方の流路はECLSS酸素リストリクタを通り、ECLSS用のPRSD酸素を40°Fに加温する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） | 下位: IF-TCS-04 |
 | IF-ECL-36 | データ処理系（DPS） | データ・指令 | 送信 | 乗員室圧、PPO2 A・B、系統1・2のO2・N2流量を主C&Wのハードウェアチャネル4・14・24・34・44・54・64へ送り、限界外でCABIN ATM灯を点灯させる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/132） | 上位: IF-ORB-19 下位: IF-PCS-14 |
 | IF-ECL-42 | 電力系（EPS） | 電力（28 VDC） | 受信 | O14のMNAとO15のMNBにあるO2/N2 CNTLRの遮断器が、O2/N2コントローラ1・2に給電する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=39）O15のMNBのPPO2 C CAB dP/dT遮断器が、dP/dTセンサとPPO2センサCの電源に主母線Bの電力を供給する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=52） | 上位: IF-ORB-14 下位: IF-PCS-18 下位: IF-PCS-19 下位: IF-PCS-20 下位: IF-PCS-21 下位: IF-PCS-22 |
-| IF-EPS-04 | 反応剤貯蔵・分配（PRSD） | 推進薬・流体 | 受信 | 酸素弁モジュールは、ECLSSの大気圧力制御系1・2への酸素供給を含む。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | 上位: IF-ECL-01 |
-| IF-TCS-04 | 熱交換器・コールドプレート網 | 熱 | 受信 | フレオンの一方の流路はECLSS酸素リストリクタを通り、ECLSS用のPRSD酸素を40°Fに加温する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 上位: IF-ECL-24 |
+| IF-EPS-04 | 反応剤貯蔵・分配（PRSD） | 推進薬・流体 | 受信 | 酸素弁モジュールは、ECLSSの大気圧力制御系1・2への酸素供給を含む。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/318） | 上位: IF-ECL-01 |
+| IF-TCS-04 | 熱交換器・コールドプレート網 | 熱 | 受信 | フレオンの一方の流路はECLSS酸素リストリクタを通り、ECLSS用のPRSD酸素を40°Fに加温する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） | 上位: IF-ECL-24 |
 
 ## 4. 下位文書
 
@@ -97,26 +97,31 @@
 
 > **注記** 与圧系（PCS）の機能の故障モード（FMX-PCS-nn）は [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ECL-001.sysml）。
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は各飲料水タンクと廃水タンクを16 psigの窒素で加圧するとしていたが、SCOM（OI-33）は各給水タンクと廃水タンクを15.5〜17.0 psigの窒素で加圧するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395）
+
 ## 7. 参考文献
 
 1. NTRS 19750056784 The shuttle orbiter cabin atmospheric revitalization systems — https://ntrs.nasa.gov/citations/19750056784
 2. NASA Human Space Flight – Shuttle Reference: ECLSS Overview — https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/overview.html
 3. SCOM 2.9 ECLSS 抜粋（NASA-KLASS 教材） — http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf
-4. NSTS 1988 News Reference Manual – Environmental Control and Life Support System（NASA KSC） — https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_eclss.html
-5. NASA Human Space Flight – Shuttle Reference: Crew Compartment Cabin Pressurization — https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html
-6. Science.gov（NTRS抄録：Shuttle Orbiter Atmospheric Revitalization Pressure Control Subsystem、Walleshauser他、1982年） — https://www.science.gov/topicpages/p/pressure+control+valves.html
-7. NTRS 19900001602 IOA: Analysis of the EPG/PRSD subsystem — https://ntrs.nasa.gov/citations/19900001602
-8. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
-9. NSTS 1988 News Reference Manual – Airlock Support（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html
-10. NSTS 1988 News Reference Manual – Electrical Power System（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eps.html
-11. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 1.1節 Pressure Control System Interfaces（PDF p16） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=16
-12. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.0節 Pressure Control System・2.1節 Oxygen System（PDF p21） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=21
-13. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Vent Isolation and Vent Valves・Negative Pressure Relief Valves・Water Tank Regulator Inlet Valve（PDF p369） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369
-14. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 PPO2 Control（続き）（PDF p367） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/367
-15. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.7.3〜2.7.4節 10.2 psia Cabin・Entry（PDF p48） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=48
-16. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.2節 Caution and Warning Lights（CABIN ATM）（PDF p132） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/132
-17. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.6.1節 Instrumentation（PDF p39） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=39
-18. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 表2-1 ECLSS pressurization controls（続き、O14・O15の遮断器）（PDF p52） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=52
+4. NASA Human Space Flight – Shuttle Reference: Crew Compartment Cabin Pressurization — https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html
+5. Science.gov（NTRS抄録：Shuttle Orbiter Atmospheric Revitalization Pressure Control Subsystem、Walleshauser他、1982年） — https://www.science.gov/topicpages/p/pressure+control+valves.html
+6. NTRS 19900001602 IOA: Analysis of the EPG/PRSD subsystem — https://ntrs.nasa.gov/citations/19900001602
+7. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
+8. NSTS 1988 News Reference Manual – Airlock Support（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html
+9. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 1.1節 Pressure Control System Interfaces（PDF p16） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=16
+10. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.0節 Pressure Control System・2.1節 Oxygen System（PDF p21） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=21
+11. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Vent Isolation and Vent Valves・Negative Pressure Relief Valves・Water Tank Regulator Inlet Valve（PDF p369） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369
+12. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 PPO2 Control（続き）（PDF p367） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/367
+13. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.7.3〜2.7.4節 10.2 psia Cabin・Entry（PDF p48） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=48
+14. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.2節 Caution and Warning Lights（CABIN ATM）（PDF p132） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/132
+15. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.6.1節 Instrumentation（PDF p39） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=39
+16. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 表2-1 ECLSS pressurization controls（続き、O14・O15の遮断器）（PDF p52） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=52
+17. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p360） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360
+18. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water System（続き）（PDF p395） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395
+19. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 6.3節 Air and Water Transfer（PDF p176） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=176
+20. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Active Thermal Control System（Freon Loops）（PDF p382） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382
+21. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p318） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/318
 
 ## 8. 変更履歴
 
@@ -133,3 +138,4 @@
 | Rev. H | 2026-10-08 | キャビン大気の動的モデル定義書 SSD-ATM-ORB-001 への参照を注記（Rev. BJ） |
 | Rev. I | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. J | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
+| Rev. K | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（6文。うち本文を改めた1文に注記）（Rev. BR） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-WCS-001 |
 | 表題 | 廃棄物収集系（WCS）機能説明書 |
-| 版・日付 | Rev. F／2026-10-09 |
+| 版・日付 | Rev. G／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -18,10 +18,10 @@
 | 機能番号 | 内容 |
 |---|---|
 | F-ECL-WCS-01 | WCSは、無重量環境で乗員の生物系廃棄物を収集・処理する統合システムで、ミッドデッキの乗員出入口ハッチのすぐ後方に置かれる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-WCS-02 | 糞便と紙類を収集・貯蔵・乾燥し、尿を処理して廃水タンクへ送り、エアロックからのEMU凝縮水も廃水タンクへ移す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-WCS-03 | 便器、小便器、ファンセパレータ、臭気・細菌フィルタ、真空ベントのクイックディスコネクト、制御器で構成される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-WCS-04 | ファンセパレータは搬送空気から液体を分離し、液体は廃水タンクへ、空気は臭気・細菌フィルタを通って乗員室へ戻る。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-WCS-05 | ファンセパレータの制御にはDC電力、運転にはAC電力を使う。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-ECL-WCS-02 | 糞便を収集・貯蔵・乾燥し、尿を処理して廃水タンクへ送り、EVAを行うミッションではエアロックからのEMU凝縮水も処理して廃水タンクへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） |
+| F-ECL-WCS-03 | 便器、小便器、ファンセパレータ、臭気・細菌フィルタ、真空ベントのクイックディスコネクト、制御器で構成される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） |
+| F-ECL-WCS-04 | ファンセパレータは搬送空気から液体を分離し、液体は廃水タンクへ、空気は臭気・細菌フィルタを通って乗員室へ戻る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） |
+| F-ECL-WCS-05 | ファンセパレータの制御にはDC電力、運転にはAC電力を使う。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758） |
 | F-ECL-WCS-06 | 真空ベント系は、使っていない便器の固形廃棄物の乾燥のほか、ウェットトラッシュ区画の排気と、燃料電池の生成水から水素分離器が除いたH2の船外排出に使われる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=152） |
 | F-ECL-WCS-07 | 臭気・細菌フィルタはアンモニアを除くよう設計され、EVA後の大気除染では便器を運転して乗員室の空気をフィルタに通す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1874） |
 | F-ECL-WCS-08 | 廃棄物収集器の圧力を計測し、真空ベント隔離弁が閉で故障した場合は、この圧力で真空ベントのオリフィスからの排気を監視する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1989） |
@@ -31,9 +31,9 @@
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-ECL-14 | 給水・廃水系（H2O） | 推進薬・流体 | 送信 | WCSは尿を処理して廃水タンクへ送り、ARSの廃水も廃水タンクへ移す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-H2O-07 下位: IF-WCS-08 |
-| IF-ECL-23 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 軌道上の不使用時は便器を真空ベント系に開放し、固形物を乾燥させる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-WCS-09 |
-| IF-ECL-26 | エアロック支援系（ALS） | 推進薬・流体 | 受信 | WCSは、エアロックからのEMU凝縮水を処理して廃水タンクへ移す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-ALS-04 |
+| IF-ECL-14 | 給水・廃水系（H2O） | 推進薬・流体 | 送信 | WCSは尿を処理して廃水タンクへ送り、ARSの廃水も廃水タンクへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） | 下位: IF-H2O-07 下位: IF-WCS-08 |
+| IF-ECL-23 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 軌道上の不使用時は便器を真空ベント系に開放し、固形物を乾燥させる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758） | 下位: IF-WCS-09 |
+| IF-ECL-26 | エアロック支援系（ALS） | 推進薬・流体 | 受信 | WCSは、エアロックからのEMU凝縮水を処理して廃水タンクへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） | 下位: IF-ALS-04 |
 | IF-ECL-31 | 乗員室（制御対象） | 推進薬・流体 | 双方向 | WCSは乗員の生物系廃棄物をキャビン空気の気流で集め、ファンセパレータで分離した空気を臭気・細菌フィルタで浄化して乗員室へ戻す。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=433）ウェットトラッシュ区画の空気は真空ベント管から約3 lb/dayで船外へ排気される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/749） | 下位: IF-WCS-01 下位: IF-WCS-02 下位: IF-WCS-06 下位: IF-WCS-07 |
 | IF-ECL-37 | データ処理系（DPS） | データ・指令 | 送信 | 真空ベントノズル温度（VAC VT NOZ T）をSMのDISP 66 ENVIRONMENTに表示する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359） | 上位: IF-ORB-19 下位: IF-WCS-12 |
 | IF-ECL-43 | 電力系（EPS） | 電力（28 VDC） | 受信 | ファンセパレータ1・2に、パネルMA73CのAC1・AC2 WCS FAN SEP遮断器（計6個）から三相交流を、パネルML86BのMNA・MNB WCS CNTLR遮断器から制御用の直流を供給する。（出典: https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=487）真空ベント隔離弁にはMNAまたはMNBの直流を、真空ベント管のA・BヒータにはパネルML86BのH2O LINE HTR A・B遮断器から電力を供給する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760） | 上位: IF-ORB-14 下位: IF-WCS-10 下位: IF-WCS-11 |
@@ -83,6 +83,8 @@
 
 > **注記** 廃棄物収集系（WCS）の機能の故障モード（FMX-WCS-nn）は [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ECL-001.sysml）。
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は糞便と紙類を収集・貯蔵・乾燥するとしていたが、SCOM（OI-33）は収集・貯蔵・乾燥の対象を糞便とする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755）
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -99,6 +101,7 @@
 12. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-403・404 Alternate Fecal/Urine Collection（PDF p1988） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1988
 13. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p359） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359
 14. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Vacuum Vent System・Alternative Waste Collection（PDF p760） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760
+15. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Operations（PDF p758） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758
 
 ## 8. 変更履歴
 
@@ -111,3 +114,4 @@
 | Rev. D | 2026-10-01 | IF-ECL-37 を追加、IF-ECL-43 を追加（Rev. M） |
 | Rev. E | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. F | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記、ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
+| Rev. G | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（7文。うち本文を改めた1文に注記）（Rev. BR） |

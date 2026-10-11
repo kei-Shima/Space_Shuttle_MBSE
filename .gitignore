@@ -1,0 +1,42 @@
+# 作業用・一時ファイルと、個人の環境のファイルをリポジトリに入れない
+
+# OS
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+._*
+$RECYCLE.BIN/
+
+# エディタ・ツールの一時ファイルとバックアップ
+*.tmp
+*.temp
+*.bak
+*.bkp
+*.dtmp
+*.swp
+*.swo
+*.orig
+*.rej
+*.log
+*~
+~$*
+.$*
+
+# draw.io の書き出しの作業用
+.drawio-export/
+
+# Python・Node
+__pycache__/
+*.pyc
+node_modules/
+
+# 個人の設定・作業の記録
+.claude/
+*.code-workspace
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.env
+.env.*

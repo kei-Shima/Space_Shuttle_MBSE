@@ -151,6 +151,7 @@ package SSD_MED_ORB_001 {
     action def DcsTreatment {
         doc /* 図189 減圧症の疑いの処置 活動図：減圧症の疑いの処置（カフ区分・TERMINATE／ABORT EVA・服の加圧と BTA・乗員室の加圧・打ち切りと帰還） */
         attribute cuff1 : ScalarValues::Boolean { doc /* ガード：カフ1 */ }
+        attribute resolvedOnRepress : ScalarValues::Boolean { doc /* ガード：消えた（カフ2として報告） */ }
         attribute cuff4 : ScalarValues::Boolean { doc /* ガード：カフ4 */ }
         attribute resolved20min : ScalarValues::Boolean { doc /* ガード：消えた */ }
         attribute resolvedBta6 : ScalarValues::Boolean { doc /* ガード：消えた */ }
@@ -161,11 +162,18 @@ package SSD_MED_ORB_001 {
             if cuff1 then AC_MD_02;
             if not cuff1 then DC_MD_07;
         action AC_MD_02 { doc /* AC-MD-02 カフ1：EVA を続け、再与圧で症状が消えるかを見る */ }
-        action AC_MD_03 { doc /* AC-MD-03 EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない）（再与圧で消えればカフ2 として扱い、消えなければ服の圧迫点と区別しにくい症状として報告する） */ }
+        decide DC_MD_02;
+            if not resolvedOnRepress then AC_MD_03;
+            if resolvedOnRepress then MG_MD_06;
+        action AC_MD_03 { doc /* AC-MD-03 症状が残る：服の圧迫点と区別しにくい症状として、EVA 後の PMC で報告する（以後の EVA と飛行期間に影響しない） */ }
+        decide DC_MD_07;
+            if cuff4 then AC_MD_05;
+            if not cuff4 then AC_MD_04;
         action AC_MD_04 { doc /* AC-MD-04 カフ2・3：TERMINATE EVA（作業場所の片付け・PLB の安全化、カフ3は患者をエアロックへ補助）し、MCC に報告する */ }
         action AC_MD_05 { doc /* AC-MD-05 カフ4：ABORT EVA（患者を補助してエアロックへ、患者を単独で直ちに再与圧、もう1人は PLB を安全化）し、SOMS から蘇生器を出す */ }
         action AC_MD_06 { doc /* AC-MD-06 カフ4：乗員室をエアロックの再与圧の前か間に 14.7 psi へ再与圧する */ }
         merge MG_MD_01;
+        merge MG_MD_06;
         action AC_MD_07 { doc /* AC-MD-07 エアロックを再与圧し SCU につないだまま O2 ACT を PRESS にする（服内の純酸素・加圧）。CMO が Medical Checklist の DCS の診察をして飛行医に報告する */ }
         action AC_MD_08 { doc /* AC-MD-08 O2 ACT を PRESS のまま20分置き（10.2 psi から数える）、BTA を準備する。処置が LiOH を超えるなら交換する */ }
         decide DC_MD_03;
@@ -185,22 +193,20 @@ package SSD_MED_ORB_001 {
             if not persistentCuff4 then MG_MD_02;
         action AC_MD_12 { doc /* AC-MD-12 早期に終了し、次の主着陸場か NPLS の時期の範囲で一次の高圧治療施設の着陸場へ軌道離脱する（発症から最短10時間） */ }
         action AC_MD_13 { doc /* AC-MD-13 着陸後、患者を高圧治療の施設へ運ぶ */ }
+        merge MG_MD_03;
+        merge MG_MD_05;
+        merge MG_MD_04;
         merge MG_MD_02;
         action AC_MD_14 { doc /* AC-MD-14 EVA 後の手順を行い QDM で2時間酸素を吸う。CMO は12時間ごとに飛行医へ報告し、72時間は下げた乗員室圧にさらさない。任務・EVA への復帰は飛行医が決め、DCS AFTERCARE へ進む */ }
-        decide DC_MD_07;
-            if cuff4 then AC_MD_05;
-            if not cuff4 then AC_MD_04;
-        merge MG_MD_03;
-        merge MG_MD_04;
-        merge MG_MD_05;
         first start then AC_MD_01;
         first AC_MD_01 then DC_MD_01;
-        first AC_MD_02 then AC_MD_03;
+        first AC_MD_02 then DC_MD_02;
         first AC_MD_03 then done;
         first AC_MD_05 then AC_MD_06;
         first AC_MD_06 then MG_MD_01;
         first AC_MD_04 then MG_MD_01;
-        first MG_MD_01 then AC_MD_07;
+        first MG_MD_01 then MG_MD_06;
+        first MG_MD_06 then AC_MD_07;
         first AC_MD_07 then AC_MD_08;
         first AC_MD_08 then DC_MD_03;
         first AC_MD_09 then DC_MD_04;

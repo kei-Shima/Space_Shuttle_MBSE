@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-ATCS-001 |
 | 表題 | 能動熱制御系（ATCS）機能説明書 |
-| 版・日付 | Rev. H／2026-10-08 |
+| 版・日付 | Rev. I／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -17,24 +17,24 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-ECL-ATCS-01 | ATCSは、ARSの熱を水／フレオン熱交換器で、燃料電池の熱を各燃料電池熱交換器で受け取り、ECLSS酸素供給ラインのPRSD酸素と油圧作動油を加温する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-ATCS-02 | 同一構成の2系統のフレオン21冷却ループ、アビオニクス用コールドプレート網、液液熱交換器、放熱器・フラッシュエバポレータ（FES）・アンモニアボイラの3種のヒートシンクから成る。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-ATCS-03 | 地上ではGSE熱交換器で排熱し、打上げ後約125秒でFESを起動し、軌道上でペイロードベイドアを開くまでFESで排熱する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-ATCS-04 | 軌道上は放熱器で排熱し、熱負荷と姿勢の組合せで放熱器の能力を超えるとFESが自動的に補助する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-ATCS-05 | 再突入では高度約100,000 ftまでFES、それ以下は地上冷却が接続されるまでアンモニアボイラで排熱する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-ATCS-06 | 基本構成の放熱器は21,500 Btu/hの排熱を想定し、4枚目のパネルを追加すると29,000 Btu/hとなる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-ECL-ATCS-01 | ATCSは、ARSの熱を水／フレオン熱交換器で、燃料電池の熱を各燃料電池熱交換器で受け取り、ECLSS酸素供給ラインのPRSD酸素と油圧作動油を加温する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=18） |
+| F-ECL-ATCS-02 | 同一構成の2系統のフレオン21冷却ループ、アビオニクス用コールドプレート網、液液熱交換器、放熱器・フラッシュエバポレータ（FES）・アンモニアボイラの3種のヒートシンクから成る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/380） |
+| F-ECL-ATCS-03 | 地上ではGSE熱交換器で排熱し、打上げ後約125秒でFESを起動し、軌道上でペイロードベイドアを開くまでFESで排熱する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405） |
+| F-ECL-ATCS-04 | 軌道上は放熱器で排熱し、熱負荷と姿勢の組合せで放熱器の能力を超えるとFESが自動的に補助する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405） |
+| F-ECL-ATCS-05 | 再突入ではV = 12k（高度約175,000 ft）までFESで排熱し、その後は放熱器のコールドソークを滑走の終わりまで主な冷却に使い、コールドソークが尽きた後は地上冷却が接続されるまでアンモニアボイラで排熱する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405） |
+| F-ECL-ATCS-06 | 放熱器は左右のペイロードベイドアの内側に4枚ずつのパネルを持ち、最大の排熱能力は61,100 Btu/hである。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384） |
 | F-ECL-ATCS-07 | フレオンは中胴のコールドプレート網と後部アビオニクスベイ4・5・6を通り、電子機器を冷却する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） |
 
 ## 3. インタフェース
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-ECL-06 | 大気再生系（ARS） | 熱 | 受信 | 水冷却ループは、水とフレオン21冷却ループの熱交換器（インターチェンジャ）で熱をATCSへ渡す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-TCS-01 |
+| IF-ECL-06 | 大気再生系（ARS） | 熱 | 受信 | 水冷却ループは、水とフレオン21冷却ループの熱交換器（インターチェンジャ）で熱をATCSへ渡す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369） | 下位: IF-TCS-01 |
 | IF-ECL-09 | 電力系（EPS） | 熱 | 受信 | ATCSは、各燃料電池の熱交換器から熱を受け取る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/319） | 上位: IF-ORB-11 下位: IF-EPS-07 下位: IF-TCS-02 |
 | IF-ECL-11 | 油圧系（APU/HYD） | 熱 | 双方向 | 軌道上の循環時はフレオン21ループがフレオン／油圧作動油熱交換器で油圧作動油を加温する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/102） | 上位: IF-ORB-12 下位: IF-TCS-03 |
-| IF-ECL-12 | 給水・廃水系（H2O） | 推進薬・流体 | 受信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-TCS-16 |
-| IF-ECL-21 | 宇宙空間（船外） | 熱 | 送信 | 軌道上は放熱器で排熱し、上昇・再突入はFES、高度約100,000 ft以下はアンモニアボイラで排熱する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-TCS-12 下位: IF-TCS-13 下位: IF-TCS-14 |
-| IF-ECL-24 | 圧力制御系（PCS／ARPCS） | 熱 | 送信 | フレオンの一方の流路はECLSS酸素リストリクタを通り、ECLSS用のPRSD酸素を40°Fに加温する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-TCS-04 |
+| IF-ECL-12 | 給水・廃水系（H2O） | 推進薬・流体 | 受信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389） | 下位: IF-TCS-16 |
+| IF-ECL-21 | 宇宙空間（船外） | 熱 | 送信 | 軌道上は放熱器で排熱し、上昇と再突入のV = 12k（高度約175,000 ft）まではFES、その後は放熱器のコールドソーク、コールドソークが尽きた後はアンモニアボイラで排熱する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405） | 下位: IF-TCS-12 下位: IF-TCS-13 下位: IF-TCS-14 |
+| IF-ECL-24 | 圧力制御系（PCS／ARPCS） | 熱 | 送信 | フレオンの一方の流路はECLSS酸素リストリクタを通り、ECLSS用のPRSD酸素を40°Fに加温する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） | 下位: IF-TCS-04 |
 | IF-ECL-25 | DPS・アビオニクス | 熱 | 送信 | フレオンは中胴のコールドプレート網と後部アビオニクスベイ4・5・6を通り、電子機器を冷却する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） | 上位: IF-ORB-13 下位: IF-TCS-05 |
 | IF-ECL-28 | DPS・アビオニクス | データ・指令 | 受信 | FES制御器は上昇時の高度140,000 ft超でBFS計算機が自動でオンにし、再突入時の100,000 ftでオフにする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389）アンモニア制御器は、オービタがMM 304で高度120,000 ftを降下通過するとき（RTLSアボートではMM 602への移行時）にBFS計算機がオンにする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392） | 上位: IF-ORB-19 下位: IF-TCS-18 下位: IF-TCS-19 下位: IF-TCS-21 |
 | IF-ECL-34 | 打上げ処理システム（KSC） | 熱 | 受信 | 着陸後に地上冷却が始まるとアンモニアボイラを止め、GSE熱交換器で排熱する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392）射点ではパッド地上冷却系がGSE熱交換器を通じて機上ループを十分に冷やし、軌道到達までの熱容量を確保する。（出典: https://llis.nasa.gov/llis_lib/pdf/1045995main_ECLSSGroundCoolantSystemLL.pdf） | 上位: IF-ORB-32 下位: IF-TCS-15 |
@@ -83,6 +83,12 @@
 
 > **注記** 下位（第3段・第4段）の機能行の L3 要求（REQ-ATCS-nn）とトレースは [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-RQL-ECL-001.sysml）。
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は再突入で高度約100,000 ftまでFES、それ以下は地上冷却が接続されるまでアンモニアボイラで排熱するとしていたが、SCOM（OI-33）はV = 12k（高度約175,000 ft）までFES、その後は放熱器のコールドソークを使い、アンモニアボイラはコールドソークが尽きた後に使うとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は基本構成の放熱器の排熱を21,500 Btu/hとし、4枚目のパネルを追加すると29,000 Btu/hになるとしていたが、SCOM（OI-33）は各ドアに4枚のパネルを持つ構成で最大の排熱能力を61,100 Btu/hとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は上昇・再突入はFES、高度約100,000 ft以下はアンモニアボイラで排熱するとしていたが、SCOM（OI-33）は再突入のV = 12k（高度約175,000 ft）から放熱器のコールドソークを使い、アンモニアボイラはコールドソークが尽きた後に使うとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405）
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -92,6 +98,11 @@
 5. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p102） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/102
 6. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p389） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389
 7. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p392） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392
+8. USA006020 Rev. B ECLSS 21002 訓練マニュアル 1.3 Active Thermal Control System Interfaces（PDF p18） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=18
+9. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p380） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/380
+10. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p405） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405
+11. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p384） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384
+12. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p369） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369
 
 ## 8. 変更履歴
 
@@ -106,3 +117,4 @@
 | Rev. F | 2026-10-03 | 系の状態遷移定義書 SSD-BEH-ORB-005 への参照を注記（Rev. AI） |
 | Rev. G | 2026-10-03 | 内部ブロック・流れ定義書 SSD-IBD-ORB-001 への参照を注記（Rev. AN） |
 | Rev. H | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
+| Rev. I | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（10文。うち本文を改めた3文に注記）（Rev. BR） |

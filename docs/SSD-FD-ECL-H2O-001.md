@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-H2O-001 |
 | 表題 | 給水・廃水系（H2O）機能説明書 |
-| 版・日付 | Rev. I／2026-10-09 |
+| 版・日付 | Rev. J／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -17,12 +17,12 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-ECL-H2O-01 | 給水・廃水系は、FES、乗員の飲用、衛生のための水を供給し、給水系は燃料電池の生成水を、廃水系はキャビン湿度分離器と乗員からの廃水を貯蔵する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-ECL-H2O-01 | 給水・廃水系は、FES、乗員の飲用、衛生のための水を供給し、給水系は燃料電池の生成水を、廃水系はキャビン湿度分離器と乗員からの廃水を貯蔵する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/393） |
 | F-ECL-H2O-02 | ミッドデッキ床下に給水タンク4基と廃水タンク1基があり、各タンクの使用可能容量は165 lbである。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-H2O-03 | 3基の燃料電池は、最大で毎時25 lbの飲料水を生成する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-H2O-04 | 燃料電池からの水素を含む水は2台の水素分離器を通り、余剰水素の85%が除去される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-ECL-H2O-03 | 3基の燃料電池は、最大で毎時25 lbの供給水を生成する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） |
+| F-ECL-H2O-04 | 燃料電池からの水素を含む水は2台の水素分離器を通り、余剰水素の85%が除去される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） |
 | F-ECL-H2O-05 | タンクAに入る水は微生物フィルタを通って約0.5 ppmのヨウ素が添加され、通常は乗員の飲用に使われる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
-| F-ECL-H2O-06 | タンクA・Bの水は、エアロックのEMU補給、FES給水系A、船外ダンプに使われる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） |
+| F-ECL-H2O-06 | タンクA・Bの水は、エアロックのEMU補給、FES給水系A、船外ダンプに使われる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398） |
 | F-ECL-H2O-07 | ギャレー給水弁を開くと、給水は水冷却ループの飲料水チラーで冷やす経路と常温の経路に分かれてギャレーへ送られ、ギャレーを搭載しない飛行ではApollo給水器につながれる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400） |
 | F-ECL-H2O-08 | 給水・廃水のダンプ配管は非常用クロスタイでつなぐことができ、一方のノズルから他方の水をダンプし、CWCに給水や廃水を貯めることもできる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400） |
 | F-ECL-H2O-09 | 給水・廃水タンクは窒素系統1・2のいずれかから15.5〜17.0 psigの窒素で加圧され、打上げ時はタンクAを乗員室へベントして燃料電池の浸水を防ぐ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395） |
@@ -31,17 +31,17 @@
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-ECL-03 | 圧力制御系（PCS／ARPCS） | 推進薬・流体 | 受信 | 各飲料水タンクと廃水タンクは、乗員室の窒素供給系から16 psigの窒素で加圧される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-PCS-06 |
-| IF-ECL-07 | 大気再生系（ARS） | 推進薬・流体 | 受信 | 廃水タンクは、ARSの湿度分離器と廃棄物収集系から廃水を受け入れる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-ARS-12 |
+| IF-ECL-03 | 圧力制御系（PCS／ARPCS） | 推進薬・流体 | 受信 | 各給水タンクと廃水タンクは、乗員室の窒素供給系から15.5〜17.0 psigの窒素で加圧される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395） | 下位: IF-PCS-06 |
+| IF-ECL-07 | 大気再生系（ARS） | 推進薬・流体 | 受信 | 廃水タンクは、ARSの湿度分離器と廃棄物収集系から廃水を受け入れる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/401） | 下位: IF-ARS-12 |
 | IF-ECL-10 | 電力系（EPS） | 推進薬・流体 | 受信 | 給水系は燃料電池の生成水を貯蔵し、生成水は水素分離器を通って余剰水素の85%が除去される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） | 上位: IF-ORB-10 下位: IF-EPS-06 |
-| IF-ECL-12 | 能動熱制御系（ATCS） | 推進薬・流体 | 送信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-TCS-16 |
-| IF-ECL-13 | エアロック支援系（ALS） | 推進薬・流体 | 送信 | タンクA・Bの水は、エアロックでのEMU補給に使われる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）飲料水は16±0.5 psiでEMUの給水リザーバへ送られる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ALS-03 下位: IF-H2O-15 |
-| IF-ECL-14 | 廃棄物収集系（WCS） | 推進薬・流体 | 受信 | WCSは尿を処理して廃水タンクへ送り、ARSの廃水も廃水タンクへ移す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-H2O-07 下位: IF-WCS-08 |
-| IF-ECL-22 | 宇宙空間（船外） | 推進薬・流体 | 送信 | タンクの水は船外へダンプでき、ダンプノズルはヒータで凍結を防ぐ。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 下位: IF-H2O-02 下位: IF-H2O-10 |
+| IF-ECL-12 | 能動熱制御系（ATCS） | 推進薬・流体 | 送信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389） | 下位: IF-TCS-16 |
+| IF-ECL-13 | エアロック支援系（ALS） | 推進薬・流体 | 送信 | タンクA・Bの水は、エアロックでのEMU補給に使われる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398）飲料水は16±0.5 psiでEMUの給水リザーバへ送られる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html） | 下位: IF-ALS-03 下位: IF-H2O-15 |
+| IF-ECL-14 | 廃棄物収集系（WCS） | 推進薬・流体 | 受信 | WCSは尿を処理して廃水タンクへ送り、ARSの廃水も廃水タンクへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755） | 下位: IF-H2O-07 下位: IF-WCS-08 |
+| IF-ECL-22 | 宇宙空間（船外） | 推進薬・流体 | 送信 | タンクの水は船外へダンプでき、ダンプノズルはヒータで凍結を防ぐ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/399） | 下位: IF-H2O-02 下位: IF-H2O-10 |
 | IF-ECL-35 | データ処理系（DPS） | データ・指令 | 送信 | 給水タンク量A〜Dと給水圧を、軌道上はPASS SMのSPEC 66に、上昇・再突入時はBFSのTHERMAL表示に送る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=158）廃水タンク量と廃水圧をSPEC 66 ENVIRONMENTに送る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=160） | 上位: IF-ORB-19 下位: IF-H2O-05 下位: IF-H2O-09 下位: IF-H2O-12 |
 | IF-ECL-41 | 電力系（EPS） | 電力（28 VDC） | 受信 | パネルML86BのA・B列の遮断器は、パネルR11L・ML31Cで操作する給水・廃水系の電動弁を駆動する電力を供給する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=153）パネルML86BのMNA H2O LINE HTR A・MNB H2O LINE HTR B遮断器から、給水・廃水ダンプ配管のヒータへ給電する（同じ遮断器が給電する真空ベント配管のヒータは廃棄物収集系のIF-WCS-11で扱う）。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=153） | 上位: IF-ORB-14 下位: IF-H2O-06 下位: IF-H2O-11 |
-| IF-EPS-06 | 燃料電池発電装置（FCP×3） | 推進薬・流体 | 受信 | 3基の燃料電池の生成水は単一の水リリーフ制御盤へ集まり、通常は飲料水タンクAへ送られ、凍結時に備えてタンクBへの冗長経路もある。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | 上位: IF-ECL-10 |
-| IF-TCS-16 | フラッシュエバポレータ（FES） | 推進薬・流体 | 送信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html） | 上位: IF-ECL-12 |
+| IF-EPS-06 | 燃料電池発電装置（FCP×3） | 推進薬・流体 | 受信 | 3基の燃料電池の生成水は単一の水リリーフ制御盤へ集まり、通常は飲料水タンクAへ送られ、タンクへの主経路の閉塞時に備えてタンクBへの冗長経路もある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） | 上位: IF-ECL-10 |
+| IF-TCS-16 | フラッシュエバポレータ（FES） | 推進薬・流体 | 送信 | FES用の水は、飲料水タンクから給水系統A・Bを通じて供給される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389） | 上位: IF-ECL-12 |
 
 ## 4. 下位文書
 
@@ -88,6 +88,12 @@
 
 > **注記** 給水・廃水系（H2O）の機能の故障モード（FMX-H2O-nn）は [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ECL-001.sysml）。
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は燃料電池が生成する水を飲料水としていたが、SCOM（OI-33）は供給水（supply water）とする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は各飲料水タンクと廃水タンクを16 psigの窒素で加圧するとしていたが、SCOM（OI-33）は各給水タンクと廃水タンクを15.5〜17.0 psigの窒素で加圧するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はタンクBへの冗長経路を主経路の凍結に備えるものとしていたが、SCOM（OI-33）は主経路の閉塞に備えるものとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394）
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -103,6 +109,12 @@
 11. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 図5-13 SPEC 66 ENVIRONMENT（PDF p160） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=160
 12. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 5.5節 Supply and Wastewater System Controls（続き）（PDF p153） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=153
 13. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water System（PDF p394） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394
+14. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p393） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/393
+15. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water Tank Outlet Valves（PDF p398） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398
+16. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Waste Water System（PDF p401） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/401
+17. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p389） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389
+18. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Waste Management System（PDF p755） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755
+19. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water Dumps（続き）（PDF p399） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/399
 
 ## 8. 変更履歴
 
@@ -118,3 +130,4 @@
 | Rev. G | 2026-10-08 | IF-ECL-13 に下位 IF-H2O-15 を付記した（Rev. BI） |
 | Rev. H | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. I | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記、ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
+| Rev. J | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（12文。うち本文を改めた3文に注記）（Rev. BR） |

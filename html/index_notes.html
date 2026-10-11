@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>注記｜スペースシャトル システム設計 図書一覧</title><style>
+:root{--ink:#15202B;--sub:#4A5563;--paper:#FFFFFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+ line-height:1.75;font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.bar{height:6px;background:var(--flag)}
+main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+nav.crumb{font-size:.85rem;color:var(--sub);margin:.25rem 0 1.25rem}
+nav.crumb a{color:var(--link)}
+table.tb{border-collapse:collapse;width:100%;max-width:40rem;border:2px solid var(--ink);margin:0 0 2rem;font-size:.9rem}
+table.tb th{background:#E9EDF2;text-align:left;font-weight:600;white-space:nowrap;width:9.5rem}
+table.tb th,table.tb td{border:1px solid var(--ink);padding:.35rem .6rem;vertical-align:top}
+table.tb td.t{font-size:1.15rem;font-weight:700;line-height:1.5}
+h2{font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,li{max-width:46rem}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all}
+table.dt{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
+table.dt th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem;white-space:nowrap}
+table.dt td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--panel)}
+table.dt td.id{white-space:nowrap;font-weight:600}
+table.dt td.nw{white-space:nowrap}
+table.dt td.pt{min-width:9.5em}
+tr:target td{background:#FFF1E8 !important;box-shadow:inset 4px 0 0 var(--flag)}
+.chip{display:inline-block;padding:0 .45rem;border-radius:3px;font-size:.78rem;font-weight:600;color:#fff;white-space:nowrap}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.6rem 0;max-width:52rem}
+.note b{color:var(--flag)}
+ol.refs{padding-left:1.4rem;font-size:.88rem}
+ol.refs li{margin:.3rem 0;max-width:none}
+figure{margin:1rem 0 1.5rem}
+figure img{max-width:100%;border:1px solid var(--rule)}
+figcaption{font-size:.85rem;color:var(--sub)}
+.scroll{overflow-x:auto}
+@media print{.bar{display:none} main{max-width:none;padding:0} a{color:var(--ink)} table.dt th{color:#000;background:#DDD}}
+/*index-pages*/
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 1.25rem;font-size:.88rem}
+nav.pages a{padding:.1rem .65rem;border:1px solid var(--rule);border-radius:3px;text-decoration:none;white-space:nowrap}
+nav.pages a[aria-current]{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+nav.pages.sub{margin:.75rem 0 1rem}
+ul.cards{list-style:none;margin:1rem 0 2rem;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(18rem,1fr));gap:.75rem}
+ul.cards li{max-width:none;margin:0;padding:.6rem .85rem .7rem;background:var(--panel);border-left:4px solid var(--ink)}
+ul.cards li>a{font-weight:700;font-size:1.05rem}
+ul.cards p{margin:.2rem 0 0;font-size:.86rem;line-height:1.6}
+.n{margin-left:.5rem;font-size:.8rem;font-weight:400;color:var(--sub);white-space:nowrap}
+p.tochead{margin:1rem 0 0;font-size:.85rem;font-weight:600;color:var(--sub)}
+ul.toc{list-style:none;margin:.3rem 0 1rem;padding:0;display:flex;flex-wrap:wrap;gap:.1rem 1.2rem;font-size:.9rem}
+ul.toc li{max-width:none}
+ul.toc .n{margin-left:.25rem}
+h3 a.more{margin-left:.6rem;font-size:.82rem;font-weight:400}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:.9rem;margin:.6rem 0 .8rem}
+.gal figure{margin:0}
+.gal img{display:block;width:100%;height:9rem;object-fit:contain}
+details{margin:0 0 1.5rem}
+@media (min-width:60rem){
+.p-doc table.dt th:nth-child(1){width:13.5rem}
+.p-doc table.dt th:nth-child(3){width:6.5rem}
+.p-doc table.dt th:nth-child(4){width:8rem}
+.p-doc table.dt th:nth-child(5){width:13rem}
+.p-if table.dt th:nth-child(1){width:7rem}
+.p-if table.dt th:nth-child(2),.p-if table.dt th:nth-child(3){width:6.5rem}
+.p-if table.dt th:nth-child(4){width:11.5rem}
+.p-if table.dt th:nth-child(6){width:7.5rem}
+}
+summary{cursor:pointer;font-size:.9rem;color:var(--link)}
+@media print{nav.pages,ul.toc,p.tochead{display:none}}
+/*/index-pages*/
+</style></head>
+<body><div class="bar"></div><main>
+
+<nav class="pages" aria-label="図書一覧のページ"><a href="index.html">図書一覧</a><a href="index_guide.html">使い方・出典</a><a href="index_figures.html">図面</a><a href="index_documents.html">文書一覧</a><a href="index_interfaces.html">インタフェース一覧</a><a href="index_notes.html" aria-current="page">注記</a><a href="index_history.html">変更履歴</a></nav>
+<h2>5. 注記（出典間の相違・構成変更）</h2>
+<p>各文書の注記の節にある注記 1,460件を、<a href="index_documents.html">文書一覧</a>と同じ区分で集めています。ページの中は文書一覧の順です。</p>
+<ul class="cards">
+<li><a href="index_notes_vehicle.html">システム全体・推進</a><span class="n">45文書・157件</span><p>システム全体・外部要素（オービタ・ET・SRB・外部系）／主推進系（MPS）／軌道制御系（OMS）／姿勢制御系（RCS）</p></li>
+<li><a href="index_notes_avionics.html">誘導制御・データ処理・通信・警報</a><span class="n">34文書・145件</span><p>誘導・航法・制御（GN&amp;C）／データ処理系（DPS）／通信・追跡系（C&amp;T）／警報系（C/W）</p></li>
+<li><a href="index_notes_power.html">電力・油圧・熱</a><span class="n">23文書・109件</span><p>電力系（EPS）／補助動力装置・油圧系（APU/HYD）／熱制御・熱防護（TCS・TPS）</p></li>
+<li><a href="index_notes_crew.html">構造・機構・ペイロード・乗員・船外活動</a><span class="n">40文書・111件</span><p>構造（STR）／機械系（MECH）／ペイロード支援（PLS）／乗員系・脱出系（CREW）／船外活動（EVA/EMU）</p></li>
+<li><a href="index_notes_eclss.html">環境制御・生命維持系（ECLSS）</a><span class="n">42文書・223件</span></li>
+<li><a href="index_notes_ars.html">大気再生系（ARS）とその下位</a><span class="n">53文書・188件</span></li>
+<li><a href="index_notes_ops.html">運用・振る舞い・要求・検証</a><span class="n">35文書・214件</span><p>運用・振る舞い／要求・検証・トレース</p></li>
+<li><a href="index_notes_model.html">構成・資源・安全</a><span class="n">36文書・204件</span><p>構成・インタフェース・物理配置・モデル管理／構成の違い（機体・飛行）／資源・マージン／安全・故障</p></li>
+<li><a href="index_notes_hsi.html">人間系</a><span class="n">12文書・109件</span></li>
+</ul>
+</main></body></html>

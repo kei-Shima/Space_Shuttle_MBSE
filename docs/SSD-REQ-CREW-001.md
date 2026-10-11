@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-CREW-001 |
 | 表題 | 乗員系（CREW）要求書（L2） |
-| 版・日付 | Rev. B／2026-10-09 |
+| 版・日付 | Rev. C／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図64 乗員系 機能構成 |
@@ -145,6 +145,8 @@ CREWの機能説明書 7 件の機能行 52 件と、要求の割付先の IF �
 
 > **注記** REQ-CREW-05（医療）の装備・役割・処置の流れは [SSD-MED-ORB-001](SSD-MED-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-MED-ORB-001.sysml）。
 
+> **注記** NASA-STD-3001 との照合（Rev. BQ の判定の見直し）：REQ-CREW-06（検証の判定 VC-REQ-CREW-06 pass）は [V2 6095]（HSI-180）による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.5 Crew Systems（USA007587 Rev. A CPN-1、PDF p209） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/209
@@ -181,3 +183,4 @@ CREWの機能説明書 7 件の機能行 52 件と、要求の割付先の IF �
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 10件、機能行 52件とのトレース、検証の根拠） |
 | Rev. A | 2026-10-06 | 検証の根拠の文の行ずれを直した（REQ-CREW-02・03・06・09・10）。検証方法・状態・判定は変更なし、NASA-STD-3001 による評価との食い違い 2件の要求を注記（判定は据え置き）、人間系の基準の照合表 SSD-HSI-SYS-001 への参照を注記（Rev. AY） |
 | Rev. B | 2026-10-09 | 医療の構造と処置定義書 SSD-MED-ORB-001 への参照を注記（Rev. BP） |
+| Rev. C | 2026-10-11 | NASA-STD-3001 による評価との食い違い 1件の要求を注記（判定は据え置き。Rev. BQ の照合表の判定の見直し）（Rev. BQ） |

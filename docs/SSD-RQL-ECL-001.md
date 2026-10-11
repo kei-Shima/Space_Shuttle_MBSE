@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-RQL-ECL-001 |
 | 表題 | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） |
-| 版・日付 | 初版（Rev. -）／2026-10-08 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図166 ECLSS 要求の導出（L2 → L3）・図167 ECLSS 下位の機能行の網羅（要求の割付・判断） |
@@ -27,19 +27,19 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ECLSS-02 | 正・負の圧力逃し弁で乗員室構造を過大圧・過小圧から守り、急減圧（dP/dT −0.08 psi/min 以上）でクラクソンと MASTER ALARM を出すこと。 | 4 | REQ-PCS-08・REQ-PCS-09・REQ-PCS-10・REQ-PCS-12 |
 | REQ-ECLSS-03 | 非常時の 8 psia モードで酸素分圧と全圧を保ち、打上げ・帰還用スーツと非常用呼吸マスクへ呼吸用の酸素を供給できること。 | 5 | REQ-PCS-01・REQ-PCS-04・REQ-PCS-05・REQ-PCS-07・REQ-PCS-12 |
 | REQ-ECLSS-04 | EVA の前に乗員室を 10.2 psia まで下げ、エアロックを減圧・再与圧して、乗員室を減圧せずに EMU の乗員を出入りさせること。 | 10 | REQ-PCS-11・REQ-ALS-01・REQ-ALS-02・REQ-ALS-03・REQ-ALS-05・REQ-ALS-06・REQ-ALS-07・REQ-ALS-08・REQ-ALS-09・REQ-ALS-10 |
-| REQ-ECLSS-05 | ARS は乗員室の空気を循環させて、温度・湿度・二酸化炭素・一酸化炭素を制御し、乗員室のアビオニクスを冷やすこと。 | 20 | REQ-ARS-01・REQ-ARS-02・REQ-ARS-03・REQ-ARS-04・REQ-ARS-05・REQ-ARS-07・REQ-ARS-13・REQ-ARS-20・REQ-ARS-21・REQ-ARS-22・REQ-ARS-23・REQ-ARS-24・REQ-ARS-25・REQ-ARS-26・REQ-ARS-27・REQ-ARS-28・REQ-ARS-29・REQ-ARS-30・REQ-ARS-31・REQ-ALS-11 |
-| REQ-ECLSS-06 | LiOH キャニスタ（長期滞在では再生式 CO2 除去装置）で二酸化炭素を除き、活性炭で臭気と微量の汚染物質を除くこと。 | 12 | REQ-ARS-06・REQ-ARS-08・REQ-ARS-09・REQ-ARS-10・REQ-ARS-11・REQ-ARS-12・REQ-ARS-14・REQ-ARS-15・REQ-ARS-16・REQ-ARS-17・REQ-ARS-18・REQ-ARS-19 |
+| REQ-ECLSS-05 | ARS は乗員室の空気を循環させて、温度・湿度・二酸化炭素・一酸化炭素を制御し、乗員室のアビオニクスを冷やすこと。 | 21 | REQ-ARS-01・REQ-ARS-02・REQ-ARS-03・REQ-ARS-04・REQ-ARS-05・REQ-ARS-07・REQ-ARS-13・REQ-ARS-20・REQ-ARS-21・REQ-ARS-22・REQ-ARS-23・REQ-ARS-24・REQ-ARS-25・REQ-ARS-26・REQ-ARS-27・REQ-ARS-28・REQ-ARS-29・REQ-ARS-30・REQ-ARS-31・REQ-ARS-42・REQ-ALS-11 |
+| REQ-ECLSS-06 | LiOH キャニスタ（長期滞在では再生式 CO2 除去装置）で二酸化炭素を除き、活性炭で臭気と微量の汚染物質を除くこと。 | 13 | REQ-ARS-06・REQ-ARS-08・REQ-ARS-09・REQ-ARS-10・REQ-ARS-11・REQ-ARS-12・REQ-ARS-14・REQ-ARS-15・REQ-ARS-16・REQ-ARS-17・REQ-ARS-18・REQ-ARS-19・REQ-ARS-40 |
 | REQ-ECLSS-07 | 独立した2系統の水冷却ループで乗員室の熱を集めてフレオンループへ移し、ループ1はポンプを2台持つこと。 | 8 | REQ-ARS-32・REQ-ARS-33・REQ-ARS-34・REQ-ARS-35・REQ-ARS-36・REQ-ARS-37・REQ-ARS-38・REQ-ARS-39 |
 | REQ-ECLSS-08 | ATCS は同じ構成の2系統のフレオンループと、放熱器・FES・アンモニアボイラの3種のヒートシンクで、SRB 分離後の全段階の機体の熱を排出すること。 | 6 | REQ-ATCS-01・REQ-ATCS-02・REQ-ATCS-04・REQ-ATCS-05・REQ-ATCS-06・REQ-ATCS-07 |
 | REQ-ECLSS-09 | 水ループ2系統またはフレオンループ2系統の喪失では、上昇中はアボート、軌道上は早期の軌道離脱を判断すること。 | 2 | REQ-ARS-38・REQ-ATCS-03 |
-| REQ-ECLSS-10 | 4基の給水タンクに燃料電池の生成水を貯めて FES・飲用・衛生に供給し、廃水タンクに湿度分離器と乗員の廃水を貯めて船外へダンプできること。 | 15 | REQ-WTR-01・REQ-WTR-02・REQ-WTR-03・REQ-WTR-04・REQ-WTR-05・REQ-WTR-06・REQ-WTR-07・REQ-WTR-08・REQ-WTR-09・REQ-WTR-10・REQ-WTR-11・REQ-WTR-12・REQ-ALS-04・REQ-ALS-05・REQ-ALS-10 |
-| REQ-ECLSS-11 | イオン化式の煙検知器で煙濃度 2,000±200 µg/m3 または濃度の急な上昇を検知して警報を出し、アビオニクスベイの固定消火ボトルと携帯消火器で消火できること。 | 8 | REQ-ARS-28・REQ-FDS-01・REQ-FDS-02・REQ-FDS-03・REQ-FDS-04・REQ-FDS-05・REQ-FDS-06・REQ-FDS-07 |
+| REQ-ECLSS-10 | 4基の給水タンクに燃料電池の生成水を貯めて FES・飲用・衛生に供給し、廃水タンクに湿度分離器と乗員の廃水を貯めて船外へダンプできること。 | 17 | REQ-WTR-01・REQ-WTR-02・REQ-WTR-03・REQ-WTR-04・REQ-WTR-05・REQ-WTR-06・REQ-WTR-07・REQ-WTR-08・REQ-WTR-09・REQ-WTR-10・REQ-WTR-11・REQ-WTR-12・REQ-WTR-13・REQ-ALS-04・REQ-ALS-05・REQ-ALS-10・REQ-ATCS-08 |
+| REQ-ECLSS-11 | イオン化式の煙検知器で煙濃度 2,000±200 µg/m3 または濃度の急な上昇を検知して警報を出し、アビオニクスベイの固定消火ボトルと携帯消火器で消火できること。 | 9 | REQ-ARS-28・REQ-ARS-41・REQ-FDS-01・REQ-FDS-02・REQ-FDS-03・REQ-FDS-04・REQ-FDS-05・REQ-FDS-06・REQ-FDS-07 |
 | REQ-ECLSS-12 | 火災・消火や生命維持の機器の喪失に対し、生命維持の Go/No-Go 基準（A17-1001）でアボート・MDF・次の PLS を判断すること。 | 5 | REQ-ARS-27・REQ-WCS-09・REQ-FDS-05・REQ-FDS-08・REQ-FDS-09 |
-| REQ-ECLSS-13 | WCS で無重量環境の乗員の生物系廃棄物を収集・処理し、尿と凝縮水は廃水タンクへ送り、空気は臭気・細菌フィルタを通して乗員室へ戻すこと。 | 8 | REQ-WCS-01・REQ-WCS-02・REQ-WCS-03・REQ-WCS-04・REQ-WCS-05・REQ-WCS-06・REQ-WCS-07・REQ-WCS-08 |
+| REQ-ECLSS-13 | WCS で無重量環境の乗員の生物系廃棄物を収集・処理し、尿と凝縮水は廃水タンクへ送り、空気は臭気・細菌フィルタを通して乗員室へ戻すこと。 | 9 | REQ-WCS-01・REQ-WCS-02・REQ-WCS-03・REQ-WCS-04・REQ-WCS-05・REQ-WCS-06・REQ-WCS-07・REQ-WCS-08・REQ-WCS-10 |
 
 ## 4. 大気再生系（ARS）の要求
 
-大気再生系（ARS）（SSD-FD-ECL-ARS-001 の下位）の L3 の要求 39件を示す。
+大気再生系（ARS）（SSD-FD-ECL-ARS-001 の下位）の L3 の要求 42件を示す。
 
 | ID | 要求 | 値 | 根拠 | 上位 | 割付先 | フェーズ | 検証 |
 |---|---|---|---|---|---|---|---|
@@ -82,6 +82,9 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ARS-37 | アキュムレータ量 0（5）%、MIN BYP でインターチェンジャ流量 600（649）lb/hr 以上を保てない、14.7 psia で稼働ループのポンプ出口温度を 85（82.75）°F 未満に保てない、ループ間漏れの確認のいずれかで水ループの喪失と判定し、水ループの停止は 10 分以内とすること。 | 0（5）%、600（649）lb/hr、85（82.75）°F、停止 10 min | アキュムレータ量が 0（5）%、MIN BYP でインターチェンジャ流量 600（649）lb/hr 以上を保てない、ポンプ出口温度を 85（82.75）°F 未満に保てない、ループ間漏れの確認のいずれかで水ループを喪失とする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2059）水ループを止めておける時間は、S 帯電力増幅器の冷却の制約から 10 分である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2127） | REQ-ECLSS-07 | F-ARS-WCL-09・F-ARS-WCL-12・F-ARS-WCL-AVL-09・F-ARS-WCL-PMP-11・F-ARS-WCL-OPS-06・F-ARS-WCL-OPS-07・F-ARS-WCL-OPS-08・F-ARS-WCL-OPS-09・F-ARS-WCL-OPS-11・F-ARS-WCL-OPS-12 | PH-2（上昇）・PH-3（軌道）・PH-6（再突入） | A（解析） |
 | REQ-ARS-38 | 1ループの喪失ではゼロフォールトトレラントとして上昇中は初日の PLS とし、両ループの喪失では上昇中は AOA、軌道上は故障から4時間以内の着陸とすること。 | AOA、4 h | 両水ループを上昇中に失った場合は、早いアボートより AOA を選ぶ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2149）4時間以内の着陸は、7人の乗員と N2 262 lb を前提とする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2149） | REQ-ECLSS-07・REQ-ECLSS-09 | F-ARS-WCL-13・F-ARS-WCL-OPS-10 | PH-2（上昇）・PH-3（軌道） | A（解析） |
 | REQ-ARS-39 | 両フレオンループの蒸発器出口温度が 32°F 未満になれば両水ループを運転して水の凍結を防ぎ、インターチェンジャ出口 35°F 未満・キャビン熱交換器入口 34°F 未満の低温を SM 警報で知らせること。 | 32°F、35°F・34°F | 両フレオンループの蒸発器出口温度が 32°F 未満なら両水ループを運転し、インターチェンジャへのフレオン入口温度が 6°F に下がるまで水の凍結を防ぐ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2062）インターチェンジャ出口温度 35°F 未満、キャビン熱交換器入口温度 34°F 未満で SM 警報が出る。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=318） | REQ-ECLSS-07 | F-ARS-WCL-11・F-ARS-WCL-ICH-10・F-ARS-WCL-ICH-11・F-ARS-WCL-CLD-08・F-ARS-WCL-MON-11 | PH-2（上昇）・PH-3（軌道）・PH-6（再突入） | A（解析） |
+| REQ-ARS-40 | ATCO キャニスタで乗員室の大気の一酸化炭素を除き、一酸化炭素の濃度を宇宙機最大許容濃度（SMAC：7日で 55 ppm、30日・180日で 15 ppm）以下に保つこと。 | CO 7日 55 ppm・30日と180日 15 ppm（SMAC） | CO の宇宙機最大許容濃度（SMAC）は7日で 55 ppm、30日・180日で 15 ppm で、シャトルは白金2%・炭素担体の ATCO 触媒で CO を除く。（出典: https://ntrs.nasa.gov/api/citations/20150022484/downloads/20150022484.pdf#page=1） | REQ-ECLSS-06 | F-CO2-ATCO-09 | PH-3（軌道） | A（解析） |
+| REQ-ARS-41 | 燃焼生成物（CO・HCN・HCl）を実時間で測る携帯型の分析器（CSA-CP）を搭載し、飛行1日目に取り出してセンサを確かめ、規格を外れていれば軌道上でゼロ校正すること。 | CO・HCN・HCl の3成分、飛行1日目に確認 | CSA-CP は CO・HCN・HCl の3成分を実時間で分析する携帯型の分析器で、通常は飛行1日目に取り出し、センサを確かめて規格を外れていれば軌道上でゼロ校正する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/223） | REQ-ECLSS-11 | F-CO2-MON-10 | PH-3（軌道） | D（実証） |
+| REQ-ARS-42 | IMU 冷却系の入口と出口に消音器（入口3個・出口1個）を付けて、乗員室の騒音を抑えること。 | 消音器 入口 3個・出口 1個 | IMU 冷却系は当初オービタで最も大きな騒音源で、GFE の消音器（入口3個・出口1個）を開発して追加した。（出典: https://ntrs.nasa.gov/api/citations/20090043801/downloads/20090043801.pdf#page=4） | REQ-ECLSS-05 | F-ARS-IMU-INL-11 | PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | T（試験） |
 
 ## 5. 与圧系（PCS）の要求
 
@@ -104,7 +107,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 ## 6. 給水・廃水系（H2O）の要求
 
-給水・廃水系（H2O）（SSD-FD-ECL-H2O-001 の下位）の L3 の要求 12件を示す。
+給水・廃水系（H2O）（SSD-FD-ECL-H2O-001 の下位）の L3 の要求 13件を示す。
 
 | ID | 要求 | 値 | 根拠 | 上位 | 割付先 | フェーズ | 検証 |
 |---|---|---|---|---|---|---|---|
@@ -120,10 +123,11 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-WTR-10 | 飛行1日目にギャレーのヨウ素除去装置（GIRA または LIRS）を取り付け、乗員のヨウ素摂取を1人1日 1 mg 未満に保つこと。 | 1 mg/日/人 未満 | ヨウ素除去装置は飛行1日目に取り付け、乗員のヨウ素摂取を1人1日 1 mg 未満に保つ。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2001） | REQ-ECLSS-10 | F-ECL-H2O-GAL-06・F-ECL-H2O-GAL-07・F-ECL-H2O-GAL-08 | PH-3（軌道） | A（解析） |
 | REQ-WTR-11 | 1基の廃水タンク（排出可能量 165 lb）に尿と湿度分離器の凝縮水を受け入れて処分まで貯め、給水タンクと同じ窒素源で加圧すること。 | 廃水タンク 1（165 lb、残量 3.3 lb） | 廃水タンクは排出可能な水 165 lb（残量 3.3 lb）を貯め、給水タンクと同じ窒素源で加圧される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/401）廃水タンクは乗員の液体廃棄物と湿度凝縮水を貯める。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=143） | REQ-ECLSS-10 | F-ECL-H2O-WST-01・F-ECL-H2O-WST-02・F-ECL-H2O-WST-03・F-ECL-H2O-WST-04・F-ECL-H2O-WST-09・F-ECL-H2O-WST-10 | PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | D（実証） |
 | REQ-WTR-12 | 廃水量が 80% に達する前に廃水をダンプし、0（5）% まではダンプしないこと。 | 80%、0（5）% | 廃水量が 80% に達する前に廃水ダンプノズルからダンプする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1994）廃水タンクは 0（5）% までダンプしない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1995） | REQ-ECLSS-10 | F-ECL-H2O-WST-05・F-ECL-H2O-WST-07・F-ECL-H2O-WST-08・F-ECL-H2O-WST-12 | PH-3（軌道） | A（解析） |
+| REQ-WTR-13 | 乗員室に遊離した給水は FREE FLUID DISPOSAL の IFM で直ちに処理し、修理も隔離もできない漏れのあるタンクはベント・ダンプして隔離し、以後は使わないこと。 | — | 給水系の漏れでは、乗員室に遊離した給水があれば FREE FLUID DISPOSAL の IFM を直ちに行う。遊離した液は機器の電気回路の故障を起こしうるので許容できない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2052） | REQ-ECLSS-10 | F-ECL-H2O-SPL-12 | PH-3（軌道） | A（解析） |
 
 ## 7. 廃棄物収集系（WCS）の要求
 
-廃棄物収集系（WCS）（SSD-FD-ECL-WCS-001 の下位）の L3 の要求 9件を示す。
+廃棄物収集系（WCS）（SSD-FD-ECL-WCS-001 の下位）の L3 の要求 10件を示す。
 
 | ID | 要求 | 値 | 根拠 | 上位 | 割付先 | フェーズ | 検証 |
 |---|---|---|---|---|---|---|---|
@@ -136,6 +140,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-WCS-07 | 真空ベント系は隔離弁が閉じても弁板のオリフィス（14.7 psia で 3.0±0.25 lb/hr）で水素分離器の H2 を船外へ排出し続け、軌道上は管とノズルのヒータで管内の凍結を防ぐこと。 | 3.0±0.25 lb/hr（14.7 psia） | 真空ベント隔離弁を閉じても、弁のオリフィス板が 14.7 psia で 3.0±0.25 lb/hr を船外へ流す。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=152）隔離弁を開くと管とノズルのヒータが働き、管内の水蒸気の凍結を防ぐ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=152） | REQ-ECLSS-13 | F-ECL-WCS-VAC-01・F-ECL-WCS-VAC-02・F-ECL-WCS-VAC-03・F-ECL-WCS-VAC-04・F-ECL-WCS-VAC-06・F-ECL-WCS-VAC-07・F-ECL-WCS-VAC-08・F-ECL-WCS-VAC-09 | PH-2（上昇）・PH-3（軌道）・PH-6（再突入） | T（試験） |
 | REQ-WCS-08 | 真空ベント機能を失った（隔離弁が閉で故障し、便器不使用時の収集器圧力が 1.0 psia 超）場合は、WCS の真空弁を再突入まで開いたまま保ち、廃水ダンプ管を使う非常用の真空ベントで機能を回復するまで便器を使わないこと。 | 収集器圧力 1.0 psia | 隔離弁が閉で故障し、収集器圧力が 1.0 psia を超えると真空ベント機能の喪失とする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1986）真空ベント機能を失った場合は WCS の真空弁を再突入まで開いたままにし、機能を回復するまで便器の運用を止める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1989）真空ベント QD から非常用廃水クロスタイ QD へ移送ホースをつなぎ、廃水ダンプ管から排気できる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760） | REQ-ECLSS-13 | F-ECL-WCS-VAC-05・F-ECL-WCS-VAC-10・F-ECL-WCS-VAC-11・F-ECL-WCS-VAC-12・F-ECL-WCS-OPS-08 | PH-3（軌道）・PH-6（再突入） | A（解析） |
 | REQ-WCS-09 | 便器や尿収集を失ったときに備えて便袋 40 枚、UCD 58 個・UAS 36 個（少なくとも PLS＋2日分）を積み、WCS の喪失の基準を満たせば代替の収集具に切り替えること。 | 便袋 40、UCD 58、UAS 36（PLS＋2日分） | 標準の搭載量は便袋 40 枚と UCD 58 個・UAS 36 個で、少なくとも PLS＋2日分に当たる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1988）いずれの経路でも尿を廃水系へ運べない場合は、WCS の尿収集を喪失とする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1984） | REQ-ECLSS-12 | F-ECL-WCS-OPS-07・F-ECL-WCS-OPS-09・F-ECL-WCS-CMD-09・F-ECL-WCS-FSP-08・F-ECL-WCS-FSP-09・F-ECL-WCS-URN-08 | PH-3（軌道） | A（解析） |
+| REQ-WCS-10 | WCS は使用のたびにウェットワイプで清掃し、1日1回は消毒用ワイプで消毒すること。 | 消毒 1日1回 | WCS は1日1回、消毒用ワイプで消毒する。小便器のファンネルも毎日消毒できる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/759） | REQ-ECLSS-13 | F-ECL-WCS-OPS-12 | PH-3（軌道） | D（実証） |
 
 ## 8. 火災検知・消火系（FDS）の要求
 
@@ -173,7 +178,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 ## 10. 能動熱制御系（ATCS）の要求
 
-能動熱制御系（ATCS）（SSD-FD-ECL-ATCS-001 の下位）の L3 の要求 7件を示す。
+能動熱制御系（ATCS）（SSD-FD-ECL-ATCS-001 の下位）の L3 の要求 8件を示す。
 
 | ID | 要求 | 値 | 根拠 | 上位 | 割付先 | フェーズ | 検証 |
 |---|---|---|---|---|---|---|---|
@@ -184,10 +189,11 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ATCS-05 | 軌道上はペイロードベイドア内面の放熱器（有効放熱面積 1,195 ft2）で排熱して放熱器の出口温度を 38±2°F（HI では 57±2°F）に保ち、軌道離脱の準備で放熱器をコールドソークして再突入の後段のヒートシンクに使うこと。 | 1,195 ft2、出口 38±2°F（HI 57±2°F） | 放熱器の有効放熱面積は 1,195 ft2 で、前方の展開式パネルはドアから 35.5° 開き、コールドソークは再突入の後段のヒートシンクに使う。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384）放熱器の出口温度は NORM で 38±2°F、HI で 57±2°F に自動で制御される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/387） | REQ-ECLSS-08 | F-TCS-RAD-01・F-TCS-RAD-02・F-TCS-RAD-03・F-TCS-RAD-04・F-TCS-RAD-05 | PH-3（軌道）・PH-6（再突入）・PH-7（着陸後） | D（実証） |
 | REQ-ATCS-06 | 独立した2系統（各 49 lb）のアンモニア供給系と共通のボイラで、再突入の低高度と着陸後に地上冷却がつながるまでフレオンループを冷やし、主制御器の故障で出口温度が 31.25°F を10秒を超えて下回れば副制御器へ自動で切り替えること。 | タンク 2（各 49 lb）、31.25°F・10秒 | 各タンクは 49 lb のアンモニアを持ち、出口温度が 31.25°F を10秒を超えて下回ると副制御器へ自動で切り替わり、着陸後は地上冷却カートがつながるまで使う。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392）放熱器をコールドソークした場合は、放熱器の熱容量を使い切ってから一方の NH3 制御器を入れる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2083） | REQ-ECLSS-08 | F-TCS-NH3-01・F-TCS-NH3-02・F-TCS-NH3-03・F-TCS-NH3-04・F-TCS-NH3-05・F-TCS-NH3-06 | PH-2（上昇）・PH-6（再突入）・PH-7（着陸後） | D（実証） |
 | REQ-ATCS-07 | 打上げ前と着陸後は T-0 アンビリカルの GSE 熱交換器を地上冷却につないで排熱し、リフトオフから FES の起動まではループの熱容量で温度上昇を抑えること。 | 冷却カートの接続 着陸後 約30分以内 | GSE 熱交換器は打上げ前と着陸後のフレオンループのヒートシンクで、着陸後の冷却カートの接続は通常30分以内に行う。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=100）リフトオフから約2分は、フレオンループの熱容量で温度上昇を抑え、能動の排熱を要しない。着陸後はアンモニアボイラが地上冷却カートの接続まで冷やす。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405） | REQ-ECLSS-08 | F-TCS-GSE-01・F-TCS-GSE-02・F-TCS-GSE-03・F-TCS-GSE-04・F-TCS-GSE-05 | PH-1（打上げ前）・PH-2（上昇）・PH-7（着陸後） | D（実証） |
+| REQ-ATCS-08 | トッピング蒸発器で、軌道上の給水タンクの余剰の水を蒸発させて船外へ捨てられること。 | — | FES のトッピング蒸発器は、必要なら軌道上で給水タンクの余剰の水を捨てるために使える。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391） | REQ-ECLSS-10 | F-TCS-FES-05 | PH-3（軌道） | D（実証） |
 
 ## 11. トレース表（ARS）
 
-大気再生系（ARS）の下位の機能行 501行と、割り付けた要求を示す（要求あり 489行）。
+大気再生系（ARS）の下位の機能行 501行と、割り付けた要求を示す（要求あり 492行）。
 
 | 文書 | 機能行 | 機能（要約） | 要求 | 判断 |
 |---|---|---|---|---|
@@ -355,7 +361,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | SSD-FD-CO2-ATCO-001 | F-CO2-ATCO-06 | ATCOはSTS-4で初めて飛行し、性能評価の飛行試験要求（FTR 61VV002）は触媒の化学分析と飛行中のキャビン大… | REQ-ARS-13 | 要求あり |
 | SSD-FD-CO2-ATCO-001 | F-CO2-ATCO-07 | STS-4報告は、キャビン大気試料で検出された化合物の数が減ったのはATCOを搭載した効果である可能性が高いとしている。 | REQ-ARS-13 | 要求あり |
 | SSD-FD-CO2-ATCO-001 | F-CO2-ATCO-08 | 火災の鎮火後はWCSのチャコールフィルタ、ATCO、LiOHキャニスタで燃焼生成物をキャビン大気から除去する（SCOM … | REQ-ARS-06 | 要求あり |
-| SSD-FD-CO2-ATCO-001 | F-CO2-ATCO-09 | Monje（2015年）はシャトルのATCO触媒を白金2%・炭素担体とし、COの宇宙機最大許容濃度（SMAC）を7日で5… | — | 要求が抜けている（本書の判断。今後の課題） |
+| SSD-FD-CO2-ATCO-001 | F-CO2-ATCO-09 | Monje（2015年）はシャトルのATCO触媒を白金2%・炭素担体とし、COの宇宙機最大許容濃度（SMAC）を7日で5… | REQ-ARS-40 | 要求あり |
 | SSD-FD-CO2-ATCO-001 | F-CO2-ATCO-10 | NASAは1970年代にシャトルの常温CO酸化触媒として白金2%・炭素担体を選び、シャトルの設計空間速度での新しい触媒の… | REQ-ARS-13 | 要求あり |
 | SSD-FD-CO2-CAN-001 | F-CO2-CAN-01 | キャニスタ内の活性炭が臭気を抑え、CO2はLiOHと反応して炭酸リチウムになることで空気から除かれる（訓練マニュアル3.… | REQ-ARS-09 | 要求あり |
 | SSD-FD-CO2-CAN-001 | F-CO2-CAN-02 | LiOHとCO2の反応では、CO2 1 lbあたり875 Btuの熱が出る（1979年の飛行運用マニュアル）。 | REQ-ARS-09 | 要求あり |
@@ -378,7 +384,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | SSD-FD-CO2-MON-001 | F-CO2-MON-07 | IOAのCIL評価（1988年）では、PPCO2センサ（1個）の臨界度をNASAは2/2、IOAは3/3としたが、NAS… | REQ-ARS-11 | 要求あり |
 | SSD-FD-CO2-MON-001 | F-CO2-MON-08 | オービタ・Spacehab・宇宙服（EMU）のPPCO2計測用に、応答が遅く電解液の信頼性に懸念のある電気化学式センサに… | REQ-ARS-11 | 要求あり |
 | SSD-FD-CO2-MON-001 | F-CO2-MON-09 | STS-108では、キャビン圧を10.2 psiaとしていた間のセンサ表示6.02 mmHgが、Hamilton Sun… | REQ-ARS-11 | 要求あり |
-| SSD-FD-CO2-MON-001 | F-CO2-MON-10 | COなどの燃焼生成物はCSA-CP（CO・HCN・HClを実時間で分析する携帯型分析器）で測り、通常は飛行1日目に取り出… | — | 要求が抜けている（本書の判断。今後の課題） |
+| SSD-FD-CO2-MON-001 | F-CO2-MON-10 | COなどの燃焼生成物はCSA-CP（CO・HCN・HClを実時間で分析する携帯型分析器）で測り、通常は飛行1日目に取り出… | REQ-ARS-41 | 要求あり |
 | SSD-FD-CO2-MON-001 | F-CO2-MON-11 | CSA-CPより前に使われた燃焼生成物分析器（CPA）はCO・HF・HCl・HCNを測る携帯型分析器で、STS-41（1… | — | 要求なしで妥当（同じ文書の REQ-ARS-10・REQ-ARS-11・REQ-ARS-18 が受け持つ構成・運用の記述） |
 | SSD-FD-CO2-MON-001 | F-CO2-MON-12 | 携帯型のCO2モニタ（CDM）は電池で約10時間動作し、キャビン内のCO2を計測できる（Orbit Opsチェックリスト… | REQ-ARS-11 | 要求あり |
 | SSD-FD-CO2-STW-001 | F-CO2-STW-01 | 予備のLiOHキャニスタは最大30個を、ECLSSベイのパネルMD52Mの下に収める（訓練マニュアル3.2.2節）。 | REQ-ARS-12 | 要求あり |
@@ -438,8 +444,8 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-08 | IMU出口ホース（3本）はIMUマニホールドにつながり、IMUの緊急冷却ではこれらをマニホールドから外して掃除機のホース… | REQ-ARS-31 | 要求あり |
 | SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-09 | STS-1の消耗品・熱解析は、IMUを通る空気流量を156 lb/hr（14.7 psia）とした（JSC-16720 … | REQ-ARS-29 | 要求あり |
 | SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-10 | 同じ解析の表VIは、IMU冷却空気の入口温度の仕様上限を95°F（解析値79.6°F）とし、SODBの入口の上限は95°… | REQ-ARS-29 | 要求あり |
-| SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-11 | IMU冷却系は当初オービタで最も大きな騒音源で、GFEの消音器（入口3個・出口1個）が追加された（Goodman、NOI… | — | 要求が抜けている（本書の判断。今後の課題） |
-| SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-12 | STS-2の騒音調査では、ミッドデッキのIMU吸込口で68 dBが計測された（STS-2報告2.5.5節）。 | — | 要求なしで妥当（同じ文書の REQ-ARS-29・REQ-ARS-31 が受け持つ構成・運用の記述） |
+| SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-11 | IMU冷却系は当初オービタで最も大きな騒音源で、GFEの消音器（入口3個・出口1個）が追加された（Goodman、NOI… | REQ-ARS-42 | 要求あり |
+| SSD-FD-ARS-IMU-INL-001 | F-ARS-IMU-INL-12 | STS-2の騒音調査では、ミッドデッキのIMU吸込口で68 dBが計測された（STS-2報告2.5.5節）。 | — | 要求なしで妥当（同じ文書の REQ-ARS-29・REQ-ARS-31・REQ-ARS-42 が受け持つ構成・運用の記述） |
 | SSD-FD-ARS-IMU-MON-001 | F-ARS-IMU-MON-01 | IMU FAN信号調整器はIMUファンが正常に回っていることを確かめる回転数センサに給電し、H2O BYP LOOP 1… | REQ-ARS-30 | 要求あり |
 | SSD-FD-ARS-IMU-MON-001 | F-ARS-IMU-MON-02 | IMU FAN信号調整器には、パネルL4の遮断器（SIG CONDR IMU FAN）からAC3のB相の電力が供給される… | REQ-ARS-30 | 要求あり |
 | SSD-FD-ARS-IMU-MON-001 | F-ARS-IMU-MON-03 | IMUファンΔPセンサには、パネルO14のMNAの遮断器（H2O BYP LOOP 1 SNSR）から電力が供給される（… | REQ-ARS-30 | 要求あり |
@@ -773,7 +779,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 ## 13. トレース表（WTR）
 
-給水・廃水系（H2O）の下位の機能行 72行と、割り付けた要求を示す（要求あり 65行）。
+給水・廃水系（H2O）の下位の機能行 72行と、割り付けた要求を示す（要求あり 66行）。
 
 | 文書 | 機能行 | 機能（要約） | 要求 | 判断 |
 |---|---|---|---|---|
@@ -836,7 +842,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | SSD-FD-ECL-H2O-SPL-001 | F-ECL-H2O-SPL-09 | 運用飛行規則は、軌道上の標準構成（タンクA入口開・出口閉、タンクB〜Dの入口・出口開、クロスオーバ弁開）と、ISSへの給… | REQ-WTR-08 | 要求あり |
 | SSD-FD-ECL-H2O-SPL-001 | F-ECL-H2O-SPL-10 | ヨウ素がFESのコアを腐食させるため、タンクAの水を使うダンプとFES運転は最小にし、タンクAの水は飲用、非常時、着陸機… | REQ-WTR-04 | 要求あり |
 | SSD-FD-ECL-H2O-SPL-001 | F-ECL-H2O-SPL-11 | いつでも帰還できるための給水の最小量は175 lbm（165分の緊急軌道離脱の冷却に相当）とし、通常構成ではPLS点火の… | REQ-WTR-04 | 要求あり |
-| SSD-FD-ECL-H2O-SPL-001 | F-ECL-H2O-SPL-12 | 乗員室に遊離した給水はIFMで直ちに処理し、修理できないか隔離できない漏れのあるタンクはベント・ダンプして隔離し、以後は… | — | 要求が抜けている（本書の判断。今後の課題） |
+| SSD-FD-ECL-H2O-SPL-001 | F-ECL-H2O-SPL-12 | 乗員室に遊離した給水はIFMで直ちに処理し、修理できないか隔離できない漏れのあるタンクはベント・ダンプして隔離し、以後は… | REQ-WTR-13 | 要求あり |
 | SSD-FD-ECL-H2O-WST-001 | F-ECL-H2O-WST-01 | 廃水タンクは給水タンクと同じ形の1基で、ミッドデッキ床下にあり、乗員の液体廃棄物（尿）と湿度分離器の凝縮水を処分まで衛生… | REQ-WTR-11 | 要求あり |
 | SSD-FD-ECL-H2O-WST-001 | F-ECL-H2O-WST-02 | 廃水タンクの排出可能量は165 lb（残量3.3 lbを除く）で、給水タンクと同じ窒素源で加圧される（SCOM 2.9節… | REQ-WTR-11 | 要求あり |
 | SSD-FD-ECL-H2O-WST-001 | F-ECL-H2O-WST-03 | 廃水はパネルML31CのWASTE H2O TANK 1 VLVスイッチで操作する入口弁から入り、入口弁を開けばタンクの… | REQ-WTR-11 | 要求あり |
@@ -852,7 +858,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 ## 14. トレース表（WCS）
 
-廃棄物収集系（WCS）の下位の機能行 60行と、割り付けた要求を示す（要求あり 59行）。
+廃棄物収集系（WCS）の下位の機能行 60行と、割り付けた要求を示す（要求あり 60行）。
 
 | 文書 | 機能行 | 機能（要約） | 要求 | 判断 |
 |---|---|---|---|---|
@@ -891,7 +897,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | SSD-FD-ECL-WCS-OPS-001 | F-ECL-WCS-OPS-09 | 飛行継続の判断（A17-1001）では、WCSがない場合は少なくともPLS＋2日（3日）分の袋が要り、飛行の終了時期は排… | REQ-WCS-09 | 要求あり |
 | SSD-FD-ECL-WCS-OPS-001 | F-ECL-WCS-OPS-10 | AC1母線を失った場合はWCSのファンセパレータ1が止まるため、ホースをクレードルに収め、ホースブロックとFAN SEP… | REQ-WCS-03 | 要求あり |
 | SSD-FD-ECL-WCS-OPS-001 | F-ECL-WCS-OPS-11 | 小さなキャビン漏れの切り分けでは、MCCの指示でCOMMODE CNTLを下げ、WCSのVAC VLVと真空ベント隔離弁… | REQ-WCS-06 | 要求あり |
-| SSD-FD-ECL-WCS-OPS-001 | F-ECL-WCS-OPS-12 | 使用後はウェットワイプでWCSを清掃し、1日1回は消毒用ワイプで消毒する。小便器のファンネルも毎日消毒できる（SCOM … | — | 要求が抜けている（本書の判断。今後の課題） |
+| SSD-FD-ECL-WCS-OPS-001 | F-ECL-WCS-OPS-12 | 使用後はウェットワイプでWCSを清掃し、1日1回は消毒用ワイプで消毒する。小便器のファンネルも毎日消毒できる（SCOM … | REQ-WCS-10 | 要求あり |
 | SSD-FD-ECL-WCS-URN-001 | F-ECL-WCS-URN-01 | 小便器はホースに取り付けたファンネルで、男女とも使え、液体廃棄物を集めて廃水タンクへ運ぶ。液体の搬送気流はファンセパレー… | REQ-WCS-05 | 要求あり |
 | SSD-FD-ECL-WCS-URN-001 | F-ECL-WCS-URN-02 | MODEスイッチがAUTOのとき、小便器のホースをクレードルから外すと選んだファンセパレータが働き、小便器を通して毎分1… | REQ-WCS-05 | 要求あり |
 | SSD-FD-ECL-WCS-URN-001 | F-ECL-WCS-URN-03 | 1987年の飛行運用マニュアルは、無重量で液体を運ぶために気流を用い、尿の最大流量を0.09 lb/sとし、各乗員に個人… | REQ-WCS-05 | 要求あり |
@@ -1062,60 +1068,54 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 ## 17. トレース表（ATCS）
 
-能動熱制御系（ATCS）の下位の機能行 33行と、割り付けた要求を示す（要求あり 32行）。
+能動熱制御系（ATCS）の下位の機能行 33行と、割り付けた要求を示す（要求あり 33行）。
 
 | 文書 | 機能行 | 機能（要約） | 要求 | 判断 |
 |---|---|---|---|---|
 | SSD-FD-TCS-FCL-001 | F-TCS-FCL-01 | フレオン21冷却ループは同一構成の2系統で、各系統のポンプパッケージは2台のポンプとアキュムレータから成り、常に1台のポ… | REQ-ATCS-01 | 要求あり |
 | SSD-FD-TCS-FCL-001 | F-TCS-FCL-02 | 金属ベローズ式のアキュムレータは窒素で加圧され、ポンプの吸入圧を確保し、熱膨張を吸収する。 | REQ-ATCS-01 | 要求あり |
-| SSD-FD-TCS-FCL-001 | F-TCS-FCL-03 | フレオンは3基の燃料電池熱交換器と中胴コールドプレート網を並列に流れた後、油圧熱交換器、放熱器、GSE熱交換器、アンモニ… | REQ-ATCS-02 | 要求あり |
-| SSD-FD-TCS-FCL-001 | F-TCS-FCL-04 | その後、流路はECLSS酸素リストリクタ・ペイロード熱交換器・ARSインターチェンジャ側と、後部アビオニクスベイ4〜6側… | REQ-ATCS-02 | 要求あり |
+| SSD-FD-TCS-FCL-001 | F-TCS-FCL-03 | フレオンは燃料電池熱交換器と中胴コールドプレート網を並列に流れた後、油圧熱交換器、放熱器、GSE熱交換器、アンモニアボイ… | REQ-ATCS-02 | 要求あり |
+| SSD-FD-TCS-FCL-001 | F-TCS-FCL-04 | その後、流路はカーゴ熱交換器・ECLSS酸素リストリクタ・ペイロード熱交換器・ARSインターチェンジャ側と、後部アビオニ… | REQ-ATCS-02 | 要求あり |
 | SSD-FD-TCS-FCL-001 | F-TCS-FCL-05 | 左舷の放熱器パネルはループ1に、右舷のパネルはループ2に直列に接続される。 | REQ-ATCS-02 | 要求あり |
 | SSD-FD-TCS-FCL-001 | F-TCS-FCL-06 | 最初の39飛行では、コロンビアでのフレオン流量の低下が主要な問題の一つであった。 | REQ-ATCS-03 | 要求あり |
 | SSD-FD-TCS-FES-001 | F-TCS-FES-01 | FESは上昇時の高度140,000 ft超で排熱し、軌道上では必要に応じて放熱器を補い、軌道離脱・再突入では高度約100… | REQ-ATCS-04 | 要求あり |
 | SSD-FD-TCS-FES-001 | F-TCS-FES-02 | 1つの筐体に高負荷蒸発器とトッピング蒸発器があり、高負荷蒸発器は冷却能力が大きいが排気が左側のみで推力を生じる。 | REQ-ATCS-04 | 要求あり |
 | SSD-FD-TCS-FES-001 | F-TCS-FES-03 | フィン付きの芯に水を噴霧して蒸発させ、水1 lbあたり約1,000 Btuの熱を奪う。 | REQ-ATCS-04 | 要求あり |
-| SSD-FD-TCS-FES-001 | F-TCS-FES-04 | 水は飲料水タンクから給水系統A・Bで供給され、主制御器A・Bは出口温度を39°F、副制御器は62°Fに制御する。 | REQ-ATCS-04 | 要求あり |
-| SSD-FD-TCS-FES-001 | F-TCS-FES-05 | トッピング蒸発器は、軌道上で余剰の飲料水を捨てるためにも使える。 | — | 要求が抜けている（本書の判断。今後の課題） |
+| SSD-FD-TCS-FES-001 | F-TCS-FES-04 | 水は給水タンクから給水系統A・Bで供給され、主制御器A・Bは出口温度を39°F、副制御器は62°Fに制御する。 | REQ-ATCS-04 | 要求あり |
+| SSD-FD-TCS-FES-001 | F-TCS-FES-05 | トッピング蒸発器は、軌道上で給水タンクの余剰の水を捨てるためにも使える。 | REQ-ATCS-08 | 要求あり |
 | SSD-FD-TCS-FES-001 | F-TCS-FES-06 | STS-26とSTS-34では、FESの運用上の不具合が発生した。 | REQ-ATCS-04 | 要求あり |
 | SSD-FD-TCS-GSE-001 | F-TCS-GSE-01 | 地上作業（点検・打上げ前・着陸後）では、フレオン21ループ内のGSE熱交換器が地上冷却によって機体の熱を排出する。 | REQ-ATCS-07 | 要求あり |
 | SSD-FD-TCS-GSE-001 | F-TCS-GSE-02 | 打上げから高度140,000 ft未満（約125秒）までは、ループの熱容量（サーマルラグ）で熱を吸収する。 | REQ-ATCS-07 | 要求あり |
 | SSD-FD-TCS-GSE-001 | F-TCS-GSE-03 | 射点ではパッド地上冷却系がGSE熱交換器を通じて機上ループを十分に冷やし、軌道到達までの熱容量を確保する。 | REQ-ATCS-07 | 要求あり |
 | SSD-FD-TCS-GSE-001 | F-TCS-GSE-04 | 地上冷却系は、整備施設・組立棟・着陸施設でのオービタ通電時にも必要とされた。 | REQ-ATCS-07 | 要求あり |
 | SSD-FD-TCS-GSE-001 | F-TCS-GSE-05 | 着陸後の回収隊の冷却車は、T-0アンビリカルを通じてオービタの冷却系にFreon 114を供給した。 | REQ-ATCS-07 | 要求あり |
-| SSD-FD-TCS-HX-001 | F-TCS-HX-01 | ATCSは、水／フレオン熱交換器でARSの熱を、各燃料電池熱交換器で燃料電池の熱を受け取り、ECLSS酸素供給ラインのP… | REQ-ATCS-02 | 要求あり |
+| SSD-FD-TCS-HX-001 | F-TCS-HX-01 | ATCSは、水／フレオンインターチェンジャでARSが集めた乗員室の熱を、燃料電池熱交換器で燃料電池の熱を受け取り、酸素リ… | REQ-ATCS-02 | 要求あり |
 | SSD-FD-TCS-HX-001 | F-TCS-HX-02 | 開発では、フレオン冷却ループと他の5つの機体系の間で熱をやり取りする最適化された熱交換器が開発された。 | REQ-ATCS-02 | 要求あり |
 | SSD-FD-TCS-HX-001 | F-TCS-HX-03 | 油圧熱交換器は、軌道上の循環時は作動油を加温し、打上げ前・上昇・大気圏飛行中は油圧系の余剰熱をフレオンへ移す。 | REQ-ATCS-02 | 要求あり |
 | SSD-FD-TCS-HX-001 | F-TCS-HX-04 | フレオンポンプ、ARSインターチェンジャ、燃料電池熱交換器、ペイロード熱交換器、中胴コールドプレートは中胴前部の下部にあ… | REQ-ATCS-02 | 要求あり |
 | SSD-FD-TCS-HX-001 | F-TCS-HX-05 | 後部アビオニクスベイ4・5・6の電子機器とレートジャイロ組立も、フレオンのコールドプレートで冷却される。 | REQ-ATCS-02 | 要求あり |
-| SSD-FD-TCS-NH3-001 | F-TCS-NH3-01 | アンモニアボイラは、アンモニアの低い沸点を利用して、高度100,000 ft以下の再突入中にフレオン21ループを冷却する… | REQ-ATCS-06 | 要求あり |
+| SSD-FD-TCS-NH3-001 | F-TCS-NH3-01 | アンモニアボイラは、アンモニアの低い沸点を利用して、再突入中の高度400,000 ft未満または着陸後の地上でフレオン2… | REQ-ATCS-06 | 要求あり |
 | SSD-FD-TCS-NH3-001 | F-TCS-NH3-02 | 独立した2系統のアンモニア貯蔵・制御系が、1つの共通ボイラへ供給する。 | REQ-ATCS-06 | 要求あり |
-| SSD-FD-TCS-NH3-001 | F-TCS-NH3-03 | 各タンクは49 lbのアンモニアを持ち、ヘリウムで550〜83 psiaに加圧される。 | REQ-ATCS-06 | 要求あり |
-| SSD-FD-TCS-NH3-001 | F-TCS-NH3-04 | 制御器はボイラ出口のフレオン温度を34°Fに保ち、31°Fを10秒超下回ると主制御器から副制御器へ自動で切り替わる。 | REQ-ATCS-06 | 要求あり |
-| SSD-FD-TCS-NH3-001 | F-TCS-NH3-05 | 運転は着陸・滑走後も続き、地上冷却カートがGSE熱交換器に接続されるまで排熱する。 | REQ-ATCS-06 | 要求あり |
+| SSD-FD-TCS-NH3-001 | F-TCS-NH3-03 | 各タンクは49 lbのアンモニアを持ち、ヘリウムで最大運用圧力550 psiaに加圧される。 | REQ-ATCS-06 | 要求あり |
+| SSD-FD-TCS-NH3-001 | F-TCS-NH3-04 | 主制御器はボイラ出口のフレオン温度を35±3°F、副制御器は34±3°Fに制御し、PRI/GPCの構成で31.25°Fを… | REQ-ATCS-06 | 要求あり |
+| SSD-FD-TCS-NH3-001 | F-TCS-NH3-05 | アンモニアボイラは着陸後、地上冷却カートがGSE熱交換器に接続されるまで使われ、再突入で放熱器のコールドソークを使う場合… | REQ-ATCS-06 | 要求あり |
 | SSD-FD-TCS-NH3-001 | F-TCS-NH3-06 | 初期の飛行では、アンモニアボイラ系の問題も報告されている。 | REQ-ATCS-06 | 要求あり |
-| SSD-FD-TCS-RAD-001 | F-TCS-RAD-01 | 放熱器はペイロードベイドアの内面に取り付けられ、ドアを閉じている上昇・再突入時はバイパスされる。 | REQ-ATCS-05 | 要求あり |
-| SSD-FD-TCS-RAD-001 | F-TCS-RAD-02 | 基本構成は左右各3枚のパネル（前方ドアの展開式2枚と後方ドアの固定式1枚）で、21,500 Btu/hの排熱を想定し、4… | REQ-ATCS-05 | 要求あり |
+| SSD-FD-TCS-RAD-001 | F-TCS-RAD-01 | 放熱器はペイロードベイドアの内面に取り付けられ、ドアを閉じているときは通常バイパスされるが、軌道離脱の準備でコールドソー… | REQ-ATCS-05 | 要求あり |
+| SSD-FD-TCS-RAD-001 | F-TCS-RAD-02 | 放熱器は左右のペイロードベイドアの内面に各4枚のパネルがあり、前方の2枚は展開式、後方の3枚目と4枚目は固定式で、最大の… | REQ-ATCS-05 | 要求あり |
 | SSD-FD-TCS-RAD-001 | F-TCS-RAD-03 | 展開式パネルはドアから35.5°開いて両面から放熱し、表面には放射特性を得るための銀蒸着テフロンテープが貼られる。 | REQ-ATCS-05 | 要求あり |
 | SSD-FD-TCS-RAD-001 | F-TCS-RAD-04 | 各パネルは幅10 ft・長さ15 ftで、展開式2枚と固定式2枚を装備すると有効放熱面積は1,195 ft²となる。 | REQ-ATCS-05 | 要求あり |
 | SSD-FD-TCS-RAD-001 | F-TCS-RAD-05 | 流量制御弁が高温のバイパス流と放熱器からの低温流を混合し、放熱器出口温度を通常38°F（高設定57°F）に制御する。 | REQ-ATCS-05 | 要求あり |
 
 ## 18. 要求が抜けている機能行
 
-本来は値・機能の要求が要ると判断した機能行 6件を示す（今後の課題）。
+本来は値・機能の要求が要ると判断した機能行は、Rev. BR で L3 の要求を足したので 0件になった。
 
 | 機能行 | 文書 | 機能 |
 |---|---|---|
-| F-CO2-ATCO-09 | SSD-FD-CO2-ATCO-001 | Monje（2015年）はシャトルのATCO触媒を白金2%・炭素担体とし、COの宇宙機最大許容濃度（SMAC）を7日で55 ppm、30日・180日で15 ppmと示す。 |
-| F-CO2-MON-10 | SSD-FD-CO2-MON-001 | COなどの燃焼生成物はCSA-CP（CO・HCN・HClを実時間で分析する携帯型分析器）で測り、通常は飛行1日目に取り出してセンサを確認し、必要ならゼロ校正する（SCOM 2.5節）。 |
-| F-ARS-IMU-INL-11 | SSD-FD-ARS-IMU-INL-001 | IMU冷却系は当初オービタで最も大きな騒音源で、GFEの消音器（入口3個・出口1個）が追加された（Goodman、NOISE-CON 2010）。 |
-| F-ECL-H2O-SPL-12 | SSD-FD-ECL-H2O-SPL-001 | 乗員室に遊離した給水はIFMで直ちに処理し、修理できないか隔離できない漏れのあるタンクはベント・ダンプして隔離し、以後は使わない（A18-58）。 |
-| F-ECL-WCS-OPS-12 | SSD-FD-ECL-WCS-OPS-001 | 使用後はウェットワイプでWCSを清掃し、1日1回は消毒用ワイプで消毒する。小便器のファンネルも毎日消毒できる（SCOM 2.25節）。 |
-| F-TCS-FES-05 | SSD-FD-TCS-FES-001 | トッピング蒸発器は、軌道上で余剰の飲料水を捨てるためにも使える。 |
 
 ## 19. 検証（V&V）
 
-要求ごとの検証方法と検証の根拠を示す（根拠あり 79件・根拠なし 20件）。根拠ありは検証ケースの判定 pass、根拠なしは inconclusive とした（SysML の Results）。
+要求ごとの検証方法と検証の根拠を示す（根拠あり 95件・根拠なし 10件）。根拠ありは検証ケースの判定 pass、根拠なしは inconclusive とした（SysML の Results）。
 
 | ID | 検証方法 | 状態 | 根拠 |
 |---|---|---|---|
@@ -1123,19 +1123,19 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ARS-02 | T（試験） | 根拠あり | JSC と Rockwell の試験で、2相で起動したキャビンファンはファンの 3 A 遮断器を作動させた。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1948） |
 | REQ-ARS-03 | I（検査） | 根拠あり | STS-8 ではキャビンファンのフィルタを3回清掃し、清掃後もろ過能力は十分であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=14） |
 | REQ-ARS-04 | T（試験） | 根拠あり | STS-59 ではキャビンファン差圧が前回の OV-105 の飛行（STS-61）より低く、乗員室内のペイロードへの追加冷却によるものとされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
-| REQ-ARS-05 | A（解析） | 根拠なし | 喪失の判定値と停止時間の限度は性能帯と冷却の制約の解析によるもので、飛行でこの判定によりファンを切り替えた記述は今回の資料に無い。 |
-| REQ-ARS-06 | A（解析） | 根拠なし | 飛行中に火災後の大気の浄化を行った記述は今回の資料に無い。 |
+| REQ-ARS-05 | A（解析） | 根拠あり | 飛行規則 A17-101 の根拠の欄は、ファンの性能帯から差圧 4.2 in H2O で流量が約 1,575 lb/hr、最低流量 1,400 lb/hr を保つ差圧が 6.8 in H2O であると示し、A18-501 の根拠の欄は停止時間の限度（20 分・30 分）が DDU と MDU の冷却の制約によると記す。飛行では、STS-91 の報告が、LiOH の交換でキャビンファンを 16 分を超えて止め、地上の管制が冷却なしの停止を最大 20 分まで認める飛行規則に従って運用し、損傷は見られなかったと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1929）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2127）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-91%20Space%20Shuttle%20Mission%20Report.pdf#page=29）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1939） |
+| REQ-ARS-06 | A（解析） | 根拠あり | 飛行規則 A13-152 の根拠の欄は、酸性のガスは LiOH キャニスタで、CO は ATCO キャニスタだけで除かれ、HCl 500 ppm の試験で ATCO が完全に劣化したこと、解析では最悪の CO 濃度を約4時間で除けることを記し、A17-53 の根拠の欄はファンの対流が火に酸化剤を送ると記す（Skylab の M479 実験の報告は、強制の気流が燃焼を強めると結論する）。飛行では、STS-35 の報告が、表示装置の故障で焦げた臭いが出たあと CO 吸収カートリッジをキャビンのループに4時間取り付けたと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1923）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1799）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=14）（出典: https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf#page=8）（出典: https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf#page=1）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-104%20Space%20Shuttle%20Mission%20Report.pdf#page=29） |
 | REQ-ARS-07 | D（実証） | 根拠あり | 飛行の経験から、ブースタファンのフィルタの飛行中の清掃は要らないことが分かっている。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=178） |
-| REQ-ARS-08 | T（試験） | 根拠なし | 各キャニスタへの分流量はオリフィスで決まり、飛行で分流量を計測した記述は今回の資料に無い。 |
+| REQ-ARS-08 | T（試験） | 根拠なし | 各キャニスタへの分流量（約 120 lb/hr）を計測した飛行の記録も、オリフィスの流量を確かめた地上の試験の報告も、Mission Report 134 本と NTRS の検索では見つからない。STS-122 の報告は、蓋を付けたままのキャニスタが1個あるとキャビンファンの差圧と PPCO2 の下がり方が変わったと記すが、流量の値は示さない。 |
 | REQ-ARS-09 | T（試験） | 根拠あり | STS-65 では LiOH キャニスタを 15 時間ごとに交換し、CO2 分圧を平均 2.3 mmHg（最大 3.0 mmHg）に保った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
 | REQ-ARS-10 | A（解析） | 根拠あり | STS-108 では、乗員室が 14.7 psia のとき PPCO2 の最大は 5.38 mmHg であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=32） |
 | REQ-ARS-11 | T（試験） | 根拠あり | STS-108 では、10.2 psia の運用中にセンサが 6.02 を示し、Hamilton Sundstrand の換算で 9.35 に相当するとされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=32） |
 | REQ-ARS-12 | A（解析） | 根拠あり | STS-108 では ISS の装置が CO2 の大部分を管理し、交換計画より 12 個の LiOH キャニスタが使われずに済んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=31） |
 | REQ-ARS-13 | T（試験） | 根拠あり | STS-4 では ATCO の性能評価の飛行試験要求（FTR 61VV002）が一部達成された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=40） |
 | REQ-ARS-14 | D（実証） | 根拠あり | STS-50 が RCRS の初飛行で、RCRS は軌道投入直後に起動し、最初の 25 時間は満足に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-50%20Space%20Shuttle%20Mission%20Report.pdf#page=19） |
-| REQ-ARS-15 | I（検査） | 根拠なし | RCRS の流量を飛行で計測した記述は今回の資料に無い。 |
+| REQ-ARS-15 | I（検査） | 根拠なし | RCRS の流量制御弁を打上げ前に乗員数に合わせて設定した記録も、RCRS を通る流量（72 lb/hr・110 lb/hr）を計測した記録も、RCRS を搭載した飛行の Mission Report と NTRS の検索では見つからない。流量の値を書くのは SCOM と訓練マニュアルの説明だけである。 |
 | REQ-ARS-16 | T（試験） | 根拠あり | STS-50 では RCRS が6回停止し、両方の制御器が影響を受けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-50%20Space%20Shuttle%20Mission%20Report.pdf#page=19） |
-| REQ-ARS-17 | T（試験） | 根拠なし | RCRS の計装の値を飛行で確かめた記述は今回の資料に無い。 |
+| REQ-ARS-17 | T（試験） | 根拠なし | RCRS のベッド圧力と CO2 濃度の計測は飛行の記録があるが、ベッド差圧・真空圧力・フィルタ差圧・入口温度の計測と SPEC 66 の表示を確かめた記録は、Mission Report と NTRS の検索では見つからない。 |
 | REQ-ARS-18 | A（解析） | 根拠あり | STS-65 では RCRS をリストリクタ付きの LiOH キャニスタで補い、CO2 分圧を平均 2.3 mmHg（最大 3.0 mmHg）に保った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
 | REQ-ARS-19 | A（解析） | 根拠あり | 圧縮機が故障しても RCRS は運転を続けるが、再生のたびに真空へ失うキャビン空気が増え、この事象は飛行中にも起きている。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=218） |
 | REQ-ARS-20 | T（試験） | 根拠あり | STS-1 では、乗員が寒さを訴えたためバイパス弁を全WARM の位置へピン止めし、乗員は2回目の就寝時には快適だったと報告した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=55） |
@@ -1145,8 +1145,8 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ARS-24 | D（実証） | 根拠あり | STS-54 では、ベイ 1・2・3 の空気出口温度の最高値は 104・105・87°F で、ARS の性能は正常だった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18） |
 | REQ-ARS-25 | T（試験） | 根拠あり | STS-1 では、ベイの水と空気の出口温度（93°F・107°F）は規定の上限 130°F を大きく下回った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=55） |
 | REQ-ARS-26 | A（解析） | 根拠あり | STS-54 では、ベイ 1・2・3 の水コールドプレート温度の最高値は 89・90・79°F だった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18） |
-| REQ-ARS-27 | A（解析） | 根拠なし | ベイの両ファンや IMU ファン3台を失って A17-1001 の判断を行った飛行の記録は、手元の資料には見当たらない。 |
-| REQ-ARS-28 | A（解析） | 根拠なし | アビオニクスベイで火災が起きて Halon を放出した飛行の記録は、手元の資料には見当たらない。 |
+| REQ-ARS-27 | A（解析） | 根拠なし | 1ベイの両ファンや IMU ファン3台を失った飛行は無く、A17-1001 の注[4]〜[9]の判断（軌道到達可・次の PLS など）を導いた解析の記録も見つからない。飛行規則の 1996 年版と 2002 年版はどちらも A17-1001 の ARS AIR の項に根拠の欄が無い。 |
+| REQ-ARS-28 | A（解析） | 根拠あり | 飛行規則 A17-53 の根拠の欄は、ベイファンの対流が火に酸化剤を送り、対流が無ければ火は自ら消えるはずであると記し、Friedman の報告は NASA Lewis の Halon 1301 の小規模の試験で消火の限界が気流の速さに敏感であったと記し、Skylab の M479 実験の報告は強制の気流が燃焼を強めると結論する。飛行では、STS-3 の報告が、ベイ 3A の煙感知器がすべて働かなくなったためミッションルールに従って消火ボトルをそのベイに放出したと記し、飛行後のキャビンの大気から Halon 1301 が最大 3 ppm 検出されたと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1923）（出典: https://ntrs.nasa.gov/api/citations/19910011869/downloads/19910011869.pdf#page=6）（出典: https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf#page=8）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=38）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=94）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1924） |
 | REQ-ARS-29 | D（実証） | 根拠あり | STS-125 では、ファン B から A へ、さらに C へ切り替え、以後の飛行はファン C で IMU を冷却した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
 | REQ-ARS-30 | T（試験） | 根拠あり | STS-125 では、IMU ファンの差圧が飛行規則の限界 4.71 を上下したことを検知し、乗員にフィルタの点検を求めた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
 | REQ-ARS-31 | D（実証） | 根拠あり | STS-125 では、乗員が3枚の IMU フィルタがほぼ同じ状態であることを確かめて清掃した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
@@ -1155,21 +1155,24 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ARS-34 | T（試験） | 根拠あり | STS-44 では、ループ2が AUTO で正常に動作した。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2062） |
 | REQ-ARS-35 | D（実証） | 根拠あり | STS-1 では、ループ1の周期運転が GPC の制御で4時間ごとに行われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=55） |
 | REQ-ARS-36 | T（試験） | 根拠あり | STS-1 では、軌道上の全段階で温度・圧力と冷却ループ（空気と水）の流量が正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=55） |
-| REQ-ARS-37 | A（解析） | 根拠なし | 水ループの喪失を判定した飛行の記録は、手元の資料には見当たらない。 |
-| REQ-ARS-38 | A（解析） | 根拠なし | 両水ループを失って AOA や早期の着陸をした飛行の記録は、手元の資料には見当たらない。 |
-| REQ-ARS-39 | A（解析） | 根拠なし | 両フレオンループの低温で両水ループを運転した飛行の記録は、手元の資料には見当たらない。 |
+| REQ-ARS-37 | A（解析） | 根拠あり | 飛行規則 A18-101 の根拠の欄は、インターチェンジャ流量 600 lb/hr 未満では通常の再突入でベイ2のコールドプレートを 130°F 未満に保てないこと、ベイの熱交換器を出る空気がポンプ出口の水温より約 10°F 高いことを文書（SEH-ECS-86-106、飛行データ SEH-ITA-82-333）とともに記し、A18-501 の根拠の欄は停止 10 分の限度が S 帯電力増幅器の冷却の制約によると記す。飛行では、STS-74 の報告がインターチェンジャ流量が約 490 lb/hr に下がって FDA の警報（550 lb/hr）が出たが水ループは正常であったと記し、STS-62 の報告がアキュムレータ量の指示の低下をほかの計測から計器の異常と判断したと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2059）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2127）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-74%20Space%20Shuttle%20Mission%20Report.pdf#page=34）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-62%20Space%20Shuttle%20Mission%20Report.pdf#page=26） |
+| REQ-ARS-38 | A（解析） | 根拠あり | 飛行規則 A18-1001 の根拠の欄は、熱解析によれば両水ループを失うと2時間以内にキャビンが耐えられない状態（温度が 90°F に近づき相対湿度 100%）になり、4時間以内の着陸は乗員7名と N2 262 lb を前提とすると記し、根拠の文書に G189A による両水ループ喪失の ECLSS 解析（LESC-24843）を挙げる。同じ欄は、上昇中の両ループの喪失で AOA を選ぶ理由を、アビオニクスが AOA の時間（約 110 分）では過熱しないためと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2149） |
+| REQ-ARS-39 | A（解析） | 根拠あり | 飛行規則 A18-151 の根拠の欄は、解析によれば両水ループを運転し両フレオンループをインターチェンジャ側にすると、インターチェンジャへのフレオン入口温度が 6°F を下回るまで水の凍結を防げると記し、根拠の文書に LEMSCO 19630 を挙げる。飛行では、STS-102 の報告が、フレオンループ1がラジエータの中の凍結で流れを妨げられた事象のあいだに一次の水ループを起動してフレオンループへの熱負荷を増やしたと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2062）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=33）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
+| REQ-ARS-40 | A（解析） | 根拠あり | 飛行規則 A13-152 の根拠の欄は、CO は ATCO キャニスタだけで除かれ、解析では最悪の CO 濃度を約4時間で乗員室の大気から除けると記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1799） |
+| REQ-ARS-41 | D（実証） | 根拠なし | オービタの CSA-CP を飛行1日目に取り出してセンサを確かめた飛行の記録は、照合した Mission Report に見つからない（STS-104・STS-114 の記述は ISS の CSA の交換・使用である）。 |
+| REQ-ARS-42 | T（試験） | 根拠あり | 1980年の KSC の試験は、消音器を付けた後の両デッキの音源ごとの寄与を確かめた。（出典: https://ntrs.nasa.gov/api/citations/20090043801/downloads/20090043801.pdf#page=6） |
 | REQ-PCS-01 | T（試験） | 根拠あり | STS-114 では ARPCS が飛行の全期間正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
 | REQ-PCS-02 | D（実証） | 根拠あり | STS-114 では ARPCS が飛行の全期間正常に働いた（N2/O2 制御盤の自動切替の点検だけは飛行後に KSC で行う）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
 | REQ-PCS-03 | T（試験） | 根拠あり | STS-4 の ARPCS は STS-3 と同じく、テールを太陽に向けた姿勢での GN2 系の漏れを除いて正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=42） |
 | REQ-PCS-04 | T（試験） | 根拠あり | STS-114 では給水・廃水系（SWWMS）が飛行の全期間正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
-| REQ-PCS-05 | A（解析） | 根拠なし | 窒素の搭載量は飛行ごとの消耗品の解析で確かめるもので、照合した Mission Report にその妥当性を確かめた記述は無い。 |
+| REQ-PCS-05 | A（解析） | 根拠あり | 飛行規則 A17-202 の根拠の欄は、直径 0.45 インチの穴と 165 分後の着陸を前提に、O2 の流量・開始時の乗員室圧などの仮定と、機体の構成ごとの 8 psia の維持に要る N2 の量（2475 ft3 で 85.2 lbm など）を示す。STS-1 の ECLSS の解析（JSC-16730）のガスの収支表も、乗員室の穴の予備として高圧窒素 97.1 lb を計上する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1958）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1959）（出典: https://ntrs.nasa.gov/api/citations/19800020542/downloads/19800020542.pdf#page=33） |
 | REQ-PCS-06 | T（試験） | 根拠あり | STS-114 では ARPCS がオービタのペイロード用 O2 弁を通じた ISS への O2 移送を支えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
-| REQ-PCS-07 | D（実証） | 根拠なし | LES ヘルメットへの酸素の流量やブリードオリフィスの流量を飛行で確かめた記述は、照合した Mission Report に無い。 |
-| REQ-PCS-08 | T（試験） | 根拠なし | 逃し弁は過大圧・過小圧のときだけ開くため、飛行で作動を確かめた記述は無い。地上の試験で確かめる。 |
+| REQ-PCS-07 | D（実証） | 根拠あり | STS-26 の Mission Report は、上昇中の LES への酸素の流量が乗員5人で最大 28 lb/hr に達したと記す。STS-7・STS-60 の Mission Report は、酸素ブリードオリフィスが乗員5人には十分な大きさで、6人の代謝の消費率をわずかに上回る流量であったと記す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-26%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=17）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-7%20Space%20Shuttle%20Program%20Mission%20Report.pdf#page=13）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-60%20Space%20Shuttle%20Mission%20Report.pdf#page=22）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1971）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1957） |
+| REQ-PCS-08 | T（試験） | 根拠なし | 正圧逃し弁の開き始め（15.5 psid）・全開（16.0 psid、150 lb/hr）と負圧逃し弁の開き（0.2 psid）を確かめた試験の結果の記録は、Mission Report 134 件・NTRS・FRR の資料に見つからない。STS-120 の打上げ場の要求の審査の資料が OMRS の点検の項目として V61AQ0.020 Cabin Positive Pressure Relief Valve Checkout を挙げるので、地上で点検する項目があることまでは分かる。 |
 | REQ-PCS-09 | T（試験） | 根拠あり | STS-4 では、乗員室の与圧殻の漏れ率は規定の値を大きく下回った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=42） |
 | REQ-PCS-10 | T（試験） | 根拠あり | STS-4 の上昇中にも dP/dt が −0.05 psi/min の警報点を超え、クラクソンが作動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=42） |
 | REQ-PCS-11 | D（実証） | 根拠あり | STS-114 では ARPCS が3回の EVA を支え、10.2 psi の運用とオービタ・エアロックの再与圧を行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
-| REQ-PCS-12 | A（解析） | 根拠なし | 上昇中の乗員室の漏れでアボートや 8 psia の運用をした飛行の記述は、照合した Mission Report に無い。 |
+| REQ-PCS-12 | A（解析） | 根拠なし | 飛行規則 A17-201 の根拠の欄は 0.15 psia/min を技術的な判断（Engineering judgment）によるとし、値を導いた解析の報告は見つからない。上昇中の乗員室の漏れでアボートした飛行、8 psia で運用した飛行の記録も無い。 |
 | REQ-WTR-01 | T（試験） | 根拠あり | STS-1 では給水の貯蔵は全期間正常で、燃料電池の生成水の貯蔵に問題は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58） |
 | REQ-WTR-02 | I（検査） | 根拠あり | STS-1 では FES への給水圧は FES の運転に十分であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58） |
 | REQ-WTR-03 | T（試験） | 根拠あり | STS-114 では配管ヒータが給水ダンプ配管の温度を全期間 75〜94°F に保った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
@@ -1179,26 +1182,28 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-WTR-07 | T（試験） | 根拠あり | STS-114 では廃水ダンプを5回、平均毎分 1.94% で行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50）STS-65 では給水ダンプ中にノズル温度が 50°F へ急落し、ダンプを中止した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=32） |
 | REQ-WTR-08 | D（実証） | 根拠あり | STS-114 では 19 個の CWC に給水を満たし、18 個を ISS へ移送した。CWC のダンプはすべて問題なく行えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
 | REQ-WTR-09 | D（実証） | 根拠あり | STS-1 では飲料水は冷やされて給水所へ送られた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58） |
-| REQ-WTR-10 | A（解析） | 根拠なし | 飛行中の GIRA・LIRS の除去性能や乗員のヨウ素摂取量の記録は、抽出テキストの Mission Report に見当たらない。 |
+| REQ-WTR-10 | A（解析） | 根拠あり | McMonigal ほか（1999、NASA JSC）は、乗員のヨウ素の総摂取を最大 1.0 mg/日 に抑える勧告と、冷水のヨウ素を除き温水を 0.3 L/日 に制限して水からの摂取を 0.5 mg/日 とした 1998年の飛行の結果（ギャレーの冷水 <0.05 mg/L、飛行中の尿のヨウ素 平均 701 µg/24 hr、TSH に有意な変化なし）を示す。（出典: https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=21）（出典: https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=12）（出典: https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=11）（出典: https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=31）（出典: https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=15）（出典: https://ntrs.nasa.gov/api/citations/20260005992/downloads/20260005992_Redacted.pdf#page=9）（出典: https://ntrs.nasa.gov/api/citations/20260005992/downloads/20260005992_Redacted.pdf#page=44） |
 | REQ-WTR-11 | D（実証） | 根拠あり | STS-1 では廃水タンクが飛行中に液体廃棄物を集めた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59） |
 | REQ-WTR-12 | A（解析） | 根拠あり | STS-1 では廃水量を管理するため廃水ダンプを2回行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59） |
+| REQ-WTR-13 | A（解析） | 根拠あり | 飛行規則の根拠の欄は、STS-32 で湿分分離器の劣化により下部機器室に遊離水が生じ、FREE FLUID DISPOSAL の IFM で廃水のダンプ管から船外へ捨てたと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2052） |
 | REQ-WCS-01 | T（試験） | 根拠あり | STS-1 では便器を通る気流が不足し、固形廃棄物を使用者から分けられなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59）STS-114 では WCS は問題なく働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
 | REQ-WCS-02 | T（試験） | 根拠あり | STS-125 では WCS は正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=62） |
 | REQ-WCS-03 | T（試験） | 根拠あり | STS-65 ではファンセパレータ1の回転数が通常に達せず、乗員はファンセパレータ2に切り替えて残りの期間を使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
 | REQ-WCS-04 | I（検査） | 根拠あり | STS-114 では WCS は問題なく働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
 | REQ-WCS-05 | T（試験） | 根拠あり | STS-4 では小便器の気流が飛行中に低下し、プレフィルタを1回清掃すると回復した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=43） |
-| REQ-WCS-06 | A（解析） | 根拠なし | EMU の排水と小便器の同時使用、再与圧中の使用を試した飛行・試験の記録は、抽出テキストに見当たらない。 |
+| REQ-WCS-06 | A（解析） | 根拠あり | 飛行規則 A17-401 の根拠の欄は、ファンセパレータの最大の廃水流量 0.09 lbm/sec に対し、乗員の使用（0.088 lbm/sec）に EMU の廃水が重なると分離器があふれると記し、Shuttle Flight Operations Manual Vol. 12 は WCS の設計の最大の尿の流量を 0.09 lb/sec とし、EMU の排水中は小便器を使えないと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1987）（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=434）（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=447）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-49%20Space%20Shuttle%20Mission%20Report.pdf#page=19） |
 | REQ-WCS-07 | T（試験） | 根拠あり | STS-114 では真空ベント管の温度は 59.8〜79°F に保たれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
-| REQ-WCS-08 | A（解析） | 根拠なし | 真空ベントの喪失と非常用の真空ベントの IFM を飛行で行った記録は、抽出テキストに見当たらない。 |
+| REQ-WCS-08 | A（解析） | 根拠なし | 飛行規則 A17-354・A17-405 の根拠の欄は技術的な判断と予備の解析によるとし、解析の報告は見つからない。真空ベントの隔離弁の閉故障と、非常用の真空ベントの IFM を行った飛行の記録も無い。 |
 | REQ-WCS-09 | A（解析） | 根拠あり | STS-1 では便器を通る気流が不足し、固形廃棄物を使用者から分けられなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59） |
+| REQ-WCS-10 | D（実証） | 根拠なし | WCS の清掃・消毒を行ったことを記した飛行の記録は、照合した Mission Report に見つからない。 |
 | REQ-FDS-01 | T（試験） | 根拠あり | STS-8 ではベイ1の B 感知器が断続的に警報を出したが、乗員室の9個の感知器はすべて試験で良好で、B 感知器の遮断器を開いて誤警報を防いだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=11） |
 | REQ-FDS-02 | T（試験） | 根拠あり | 開発では、空気ポンプのベーンを Fluoroloy D に替えて 12,000 時間を超える運転で目立つ摩耗が無いことを示した。（出典: https://ntrs.nasa.gov/api/citations/19850008615/downloads/19850008615.pdf#page=7） |
 | REQ-FDS-03 | T（試験） | 根拠あり | STS-125 では感知器の点検を行い、A・B すべての感知器の回路が点検の要求を満たした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
 | REQ-FDS-04 | T（試験） | 根拠あり | 試験では、ボトルの放出の音圧レベルが最大 143 dB に達した。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=35） |
-| REQ-FDS-05 | A（解析） | 根拠なし | 飛行でベイの固定ボトルを放出した記録は無く（STS-114・STS-125 では消火系の使用は不要）、50時間は解析の値である。 |
+| REQ-FDS-05 | A（解析） | 根拠あり | 飛行規則 A17-3 の根拠の欄は、気密でないベイから Halon が乗員室へ散っても満充填のボトルによる濃度が 4 パーセントを 50 時間（漏れ率の高いベイ3A は 28 時間）上回ると記し、28 時間の根拠に BNA 287-200-098-017 のベイ3A の漏れの解析を挙げる。A13-152 の根拠の欄は、放出した Halon の約 50 パーセントが 50 時間以内に乗員室へ拡散するという計算の前提を示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1918）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1796）（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=35） |
 | REQ-FDS-06 | D（実証） | 根拠あり | シャトルの消火器は、宇宙では実演の目的でだけ放出された。（出典: https://ntrs.nasa.gov/api/citations/19910011869/downloads/19910011869.pdf#page=4） |
 | REQ-FDS-07 | A（解析） | 根拠あり | 試験では、14% に5分さらされた被験者も意識を失わなかった。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/122） |
-| REQ-FDS-08 | A（解析） | 根拠なし | 飛行で火災の処置を行った記録は無い（STS-114・STS-125 では消火系の使用は不要）。手順は飛行規則と故障処置手順の解析による。 |
+| REQ-FDS-08 | A（解析） | 根拠なし | 乗員の感覚による確認とファンの停止には、類似の事象（STS-28 の火花と煙、STS-35 の焦げたにおい）と無重量の燃焼の実験の記録があるが、2,000 µg/m3 と 3 lb/hr 以上のパージの値を導いた解析の報告は公開資料に見つからず、飛行で火災の処置を行った記録も無い。 |
 | REQ-FDS-09 | A（解析） | 根拠あり | STS-8 ではベイ1の B 感知器の誤警報に対し、B 感知器の遮断器を開いて飛行を続けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=11） |
 | REQ-ALS-01 | T（試験） | 根拠あり | STS-114 では EVA 2 の終わりに後部ハッチ右舷の均圧弁でエアロックを減圧できず、左舷の弁で減圧した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
 | REQ-ALS-02 | D（実証） | 根拠あり | STS-114 ではエアロックが3回の EVA を支え、EVA 乗員の退出のための減圧と再与圧を繰り返した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
@@ -1208,7 +1213,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ALS-06 | D（実証） | 根拠あり | STS-114 では外部エアロックから3回の EVA を正常に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
 | REQ-ALS-07 | A（解析） | 根拠あり | STS-108 では、EVA 中の外部エアロックの補給配管は限界内に十分収まった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=39） |
 | REQ-ALS-08 | D（実証） | 根拠あり | STS-114 では外部エアロックから3回の EVA を正常に行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
-| REQ-ALS-09 | A（解析） | 根拠なし | EMU の補給の温度の制約や消耗品の残り30分での帰還を飛行で確かめた記述は、照合した Mission Report に無い。 |
+| REQ-ALS-09 | A（解析） | 根拠あり | 飛行規則 A15-204 の根拠の欄は、流れの解析から O2 供給ラインの温度 80°F 以下で EMU に入る O2 が 90°F 未満になること、給水配管の温度 95°F 以下で配管の全体が EMU の熱の限度 100°F 未満になることを記し、A15-152 の根拠の欄は残り30分の限度の根拠に Hamilton Sundstrand の技術メモ EMUM1-0404 を挙げる。飛行では、STS-92 の報告が EMU の補給に使う酸素の配管を 90°F 未満に保ったと記し、STS-130 の報告が EVA の終わりの作業1件を乗員の消耗品の制約で取りやめたと記す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1876）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1877）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1866）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-92%20Space%20Shuttle%20Mission%20Report.pdf#page=31）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=63） |
 | REQ-ALS-10 | T（試験） | 根拠あり | STS-114 ではすべての構造ヒータの系統を飛行の全期間監視し、正常に働くことを確かめた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
 | REQ-ALS-11 | D（実証） | 根拠あり | STS-108 では、エアロックのブースタファン A が3相とも正常に起動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=31） |
 | REQ-ATCS-01 | D（実証） | 根拠あり | STS-1 では ATCS が正常に働き、熱を発する機器から放熱の機器へ熱を運んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=52） |
@@ -1218,6 +1223,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 | REQ-ATCS-05 | D（実証） | 根拠あり | STS-1 では放熱器の展開後、放熱器が予想どおりの割合で排熱した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=52）STS-54 では放熱器のコールドソークが着陸後4分間の冷却を担った。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18） |
 | REQ-ATCS-06 | D（実証） | 根拠あり | STS-54 では着陸後、地上冷却がつながるまでアンモニアボイラの主制御器 B を35分、A を20分運転した。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18） |
 | REQ-ATCS-07 | D（実証） | 根拠あり | STS-1 では T-15 秒に GSE のフレオンのアンビリカルを外した後、FES の出口温度が予想どおり上がった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=52） |
+| REQ-ATCS-08 | D（実証） | 根拠あり | STS-125 では、FES の一次 A 制御器で FES による水のダンプを約10時間行い、正常に終えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=19） |
 
 ## 20. 図
 
@@ -1225,7 +1231,7 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 ## 21. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-RQL-ECL-001.sysml](../SysML/SSD-RQL-ECL-001.sysml) に示す。ブロックごとのパッケージの requirement 99件（要求モデルの RequirementInfo・VerificationIntent を使う）、L2 → L3 の #derivation 110件、機能説明書の部品への satisfy、検証ケースの verification def と結果 99件から成る。要求モデル SSD_RQM_SYS_001 と構造モデル SSD_BLK_SYS_001 を読み込んでから読む。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-RQL-ECL-001.sysml](../SysML/SSD-RQL-ECL-001.sysml) に示す。ブロックごとのパッケージの requirement 105件（要求モデルの RequirementInfo・VerificationIntent を使う）、L2 → L3 の #derivation 116件、機能説明書の部品への satisfy、検証ケースの verification def と結果 105件から成る。要求モデル SSD_RQM_SYS_001 と構造モデル SSD_BLK_SYS_001 を読み込んでから読む。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 22. 注記（出典間の相違・構成変更）
 
@@ -1233,11 +1239,13 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 
 > **注記** 要求から参照されない機能行のうち、同じ文書に要求があって、その要求が受け持つ構成・運用の記述（過去の版の記述・飛行の実績・手順の注記など）は「要求なしで妥当」と判断した。行ごとに要否を詳しく検討したものではない。
 
-> **注記** 要求が抜けていると判断した6行（ATCO の一酸化炭素の上限値、燃焼生成物の計測、IMU ファンの騒音、遊離水の処理、WCS の清掃・消毒、FES の余剰水の排出）は、今後の課題とした。
+> **注記** Rev. BK で要求が抜けていると判断した6行（ATCO の一酸化炭素の上限値、燃焼生成物の計測、IMU ファンの騒音、遊離水の処理、WCS の清掃・消毒、FES の余剰水の排出）には、Rev. BR で L3 の要求（REQ-ARS-40・REQ-ARS-41・REQ-ARS-42・REQ-WTR-13・REQ-WCS-10・REQ-ATCS-08）を足した。
 
 > **注記** 新しい要求書の文書番号は SSD-REQ- で始めない。以前の版の要求モデル・検証・形式化の生成は SSD-REQ- で始まる要求書19件を前提にしており、それらは作り直さない（後の版の注記を残すため）。L3 の要求・導出・充足・検証は、本書と SysML のパッケージ SSD_RQL_ECL_001 に置いた。
 
 > **注記** 逆止弁の開く差圧など資料どうしで値の違うものは、要求の根拠に採った資料を示した（内部ブロック・流れ定義書の注記も参照）。
+
+> **注記** NASA-STD-3001 との照合（Rev. BQ の判定の見直し）：REQ-PCS-11（検証の状態 根拠あり）は [V2 6003]（HSI-101）による評価では 不適合。REQ-ALS-01（検証の状態 根拠あり）は [V2 6007]（HSI-104）による評価では 不適合。既存の判定と 3001 による評価が食い違うが、判定は据え置く（[SSD-HSI-SYS-001](SSD-HSI-SYS-001.md) §7）。
 
 ## 23. 参考文献
 
@@ -1292,139 +1300,180 @@ ECLSS の第2段のブロック（ARS・PCS・給水・廃水系・WCS・FDS・A
 49. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-1001 THERMAL GO/NO-GO CRITERIA（PDF p2149） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2149
 50. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-151 ARS WATER LOOP（PDF p2062） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2062
 51. JSC-48027 Rev. F Malfunction Procedures（MAL） （PDF p318） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=318
-52. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p25） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=25
-53. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p29） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=29
-54. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p365） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/365
-55. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p23） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=23
-56. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-202 8 PSIA CABIN CONTINGENCY 165-MINUTE RETURN（PDF p1958） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1958
-57. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-202 8 PSIA CABIN CONTINGENCY 165-MINUTE RETURN（PDF p1957） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1957
-58. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p21） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=21
-59. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p362） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/362
-60. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p30） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=30
-61. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p368） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/368
-62. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1966） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1966
-63. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p123） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/123
-64. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 2.6.4（PDF p46） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=46
-65. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1977） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1977
-66. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-254 CABIN O2 CONCENTRATION（PDF p1967） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1967
-67. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1955） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1955
-68. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1970） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1970
-69. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p394） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394
-70. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p395） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395
-71. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p143） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=143
-72. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p145） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=145
-73. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p400） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400
-74. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p152） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=152
-75. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-59 SUPPLY WATER REDLINE（PDF p2054） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2054
-76. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p146） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=146
-77. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-501 ALTERNATE PRESSURE VALVE MANAGEMENT（PDF p1993） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1993
-78. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p150） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=150
-79. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-54 SUPPLY WATER TANK A PRESSURE CONTROL MANAGEMENT（PDF p2046） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2046
-80. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p398） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398
-81. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-56 SUPPLY WATER DUMP NOZZLE TEMPERATURE CONSTRAINT（PDF p2048） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2048
-82. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-505 WASTE WATER DUMP NOZZLE TEMPERATURE CONSTRAINTS（PDF p1996） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1996
-83. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-503 WASTE WATER STORAGE（PDF p1995） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1995
-84. Shuttle Crew Operations Manual 2.12 Galley/Food（USA007587 Rev. A CPN-1、PDF p465） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/465
-85. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-551 IODINE REMOVAL IMPLEMENTATION（PDF p2001） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2001
-86. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p401） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/401
-87. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-503 WASTE WATER STORAGE（PDF p1994） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1994
-88. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p759） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/759
-89. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p755） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755
-90. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p758） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758
-91. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.17.4 Systems Performance, Limitations, and Constraints（PDF p477） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=477
-92. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p756） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/756
-93. Shuttle Flight Operations Manual Vol. 12 Crew Systems Odor/Bacteria Filter（PDF p440） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=440
-94. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.17.4.2 Waste Production Quantities（PDF p474） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=474
-95. Shuttle Flight Operations Manual Vol. 12 Crew Systems （PDF p439） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=439
-96. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-401 WCS USAGE CONSTRAINT（PDF p1987） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1987
-97. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-354 VACUUM VENT LOSS DEFINITION（PDF p1986） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1986
-98. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-405 VACUUM VENT SYSTEMS MANAGEMENT [CIL]（PDF p1989） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1989
-99. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p760） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760
-100. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-403 ALTERNATE FECAL COLLECTION（PDF p1988） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1988
-101. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-352 WCS URINE COLLECTION（PDF p1984） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1984
-102. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p23） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=23
-103. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p118） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/118
-104. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p25） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=25
-105. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-2 SMOKE DETECTION LOSS DEFINITION（PDF p1917） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1917
-106. JSC-08934 Vol.1 Rev. E Shuttle Operational Data Book（Systems Performance and Constraints Data） 3.4.6.5 Smoke Detection and Fire Suppression Subsystem（PDF p225） — https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=225
-107. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p114） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/114
-108. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p119） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/119
-109. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p35） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=35
-110. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p37） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=37
-111. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-3 FORWARD AVIONICS BAY FIRE SUPPRESSION（PDF p1918） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1918
-112. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p121） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/121
-113. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.24 Fire Extinguisher（PDF p573） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=573
-114. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.24.4 Systems Performance, Limitations, and Constraints（PDF p574） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=574
-115. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p122） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/122
-116. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-1 FIRE/POST-FIRE DEFINITIONS（PDF p1915） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1915
-117. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-53 FIRE AND POST-FIRE ACTIONS（PDF p1925） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1925
-118. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-51 MANAGEMENT FOLLOWING LOSS OF SMOKE DETECTION（PDF p1919） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1919
-119. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-51 MANAGEMENT FOLLOWING LOSS OF SMOKE DETECTION（PDF p1921） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1921
-120. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p452） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/452
-121. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.2（PDF p174） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=174
-122. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.2（PDF p175） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=175
-123. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.9.3（PDF p192） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=192
-124. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-101 EVA CAPABILITY（PDF p1855） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1855
-125. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.9.3.1（PDF p191） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=191
-126. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.5（PDF p179） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=179
-127. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-60 EXTERNAL AIRLOCK WATER LINES（PDF p2055） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2055
-128. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.5（PDF p180） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=180
-129. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-301 TCS HEATER CONFIGURATION（PDF p2093） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2093
-130. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p176） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=176
-131. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p69） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=69
-132. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-61 EXTERNAL AIRLOCK LCG FLUID LINE LOSS DEFINITION（PDF p2057） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2057
-133. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-204 EXTERNAL AIRLOCK EMU SERVICING CONSTRAINTS（PDF p1877） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1877
-134. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p456） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/456
-135. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p447） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/447
-136. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p449） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/449
-137. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-204 EXTERNAL AIRLOCK EMU SERVICING CONSTRAINTS（PDF p1876） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1876
-138. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-152 EMU CONSUMABLES WITH REAL-TIME EMU DATA DOWNLINK（PDF p1866） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1866
-139. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.8（PDF p187） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=187
-140. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.8.3（PDF p189） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=189
-141. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p381） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/381
-142. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-251 FREON COOLANT LOOPS (FCL)（PDF p2074） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2074
-143. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p382） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382
-144. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p384） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384
-145. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-201 FREON COOLANT LOOPS (FCL)（PDF p2064） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2064
-146. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p389） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389
-147. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p390） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/390
-148. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p387） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/387
-149. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p392） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392
-150. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-253 AMMONIA BOILER SUBSYSTEM (ABS)（PDF p2083） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2083
-151. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p100） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=100
-152. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p405） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405
-153. STS-114 Mission Report Atmospheric Revitalization System（PDF p49） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49
-154. STS-8 Mission Report Environmental Control and Life Support System（PDF p14） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=14
-155. STS-59 Mission Report Environmental Control and Life Support System（PDF p22） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=22
-156. STS-65 Mission Report （PDF p12） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=12
-157. STS-108 Mission Report Environmental Control and Life Support System（PDF p32） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=32
-158. STS-108 Mission Report （PDF p31） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=31
-159. STS-4 Orbiter Mission Report Flight Test Requirements（PDF p40） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=40
-160. NSTS-08277 STS-50 Space Shuttle Mission Report（1992-08、43頁、4,158,096 バイト） Environmental Control and Life Support System（PDF p19） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-50%20Space%20Shuttle%20Mission%20Report.pdf#page=19
-161. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） STS-1 Orbiter Final Mission Report（PDF p55） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=55
-162. NASA-CR-194116 STS-54 Mission Report（1993） STS-54 Mission Report（PDF p18） — https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18
-163. NSTS-37452 STS-125 Mission Report（2010） STS-125 Mission Report（PDF p50） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=50
-164. STS-4 Orbiter Mission Report STS-4 Orbiter Mission Report（PDF p42） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=42
-165. STS-114 Mission Report STS-114 Mission Report（PDF p50） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50
-166. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） 2.0 Orbiter Performance（PDF p58） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58
-167. STS-65 Mission Report STS-65 Mission Report（PDF p32） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=32
-168. STS-114 Mission Report STS-114 Mission Report（PDF p51） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51
-169. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） 2.0 Orbiter Performance（PDF p59） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59
-170. NSTS-37452 STS-125 Mission Report（2010） STS-125 Mission Report（PDF p62） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=62
-171. STS-65 Mission Report STS-65 Mission Report（PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=34
-172. STS-4 Orbiter Mission Report STS-4 Orbiter Mission Report（PDF p43） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=43
-173. STS-8 Mission Report Smoke Detector B in Avionics Bay 1 Tripped（PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=11
-174. Gibb 1985（NTRS 19850008615） Air Moving Pump Design（PDF p7） — https://ntrs.nasa.gov/api/citations/19850008615/downloads/19850008615.pdf#page=7
-175. NSTS-37452 STS-125 Mission Report（2010） Smoke Detection and Fire Suppression System（PDF p49） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=49
-176. Friedman 1991（NTRS 19910011869） Fire safety in spacecraft（PDF p4） — https://ntrs.nasa.gov/api/citations/19910011869/downloads/19910011869.pdf#page=4
-177. STS-108 Mission Report （PDF p39） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=39
-178. STS-114 Mission Report STS-114 Mission Report（PDF p57） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=57
-179. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） 2.4.1 Active Thermal Control System（PDF p52） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=52
-180. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
-181. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
+52. Evaluation of Low Temperature CO Removal Catalysts（Monje、ICES 2015） Introduction（PDF p1） — https://ntrs.nasa.gov/api/citations/20150022484/downloads/20150022484.pdf#page=1
+53. Shuttle Crew Operations Manual 2.5 Crew Systems（USA007587 Rev. A CPN-1、PDF p223） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/223
+54. Noise Control in Space Shuttle Orbiter（Goodman、NOISE-CON 2009） IMU cooling fan mufflers（PDF p4） — https://ntrs.nasa.gov/api/citations/20090043801/downloads/20090043801.pdf#page=4
+55. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p25） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=25
+56. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p29） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=29
+57. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p365） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/365
+58. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p23） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=23
+59. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-202 8 PSIA CABIN CONTINGENCY 165-MINUTE RETURN（PDF p1958） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1958
+60. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-202 8 PSIA CABIN CONTINGENCY 165-MINUTE RETURN（PDF p1957） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1957
+61. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p21） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=21
+62. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p362） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/362
+63. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p30） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=30
+64. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p368） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/368
+65. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1966） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1966
+66. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p123） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/123
+67. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 2.6.4（PDF p46） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=46
+68. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1977） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1977
+69. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-254 CABIN O2 CONCENTRATION（PDF p1967） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1967
+70. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1955） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1955
+71. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1970） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1970
+72. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p394） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394
+73. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p395） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395
+74. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p143） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=143
+75. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p145） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=145
+76. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p400） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400
+77. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p152） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=152
+78. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-59 SUPPLY WATER REDLINE（PDF p2054） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2054
+79. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p146） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=146
+80. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-501 ALTERNATE PRESSURE VALVE MANAGEMENT（PDF p1993） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1993
+81. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p150） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=150
+82. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-54 SUPPLY WATER TANK A PRESSURE CONTROL MANAGEMENT（PDF p2046） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2046
+83. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p398） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/398
+84. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-56 SUPPLY WATER DUMP NOZZLE TEMPERATURE CONSTRAINT（PDF p2048） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2048
+85. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-505 WASTE WATER DUMP NOZZLE TEMPERATURE CONSTRAINTS（PDF p1996） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1996
+86. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-503 WASTE WATER STORAGE（PDF p1995） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1995
+87. Shuttle Crew Operations Manual 2.12 Galley/Food（USA007587 Rev. A CPN-1、PDF p465） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/465
+88. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-551 IODINE REMOVAL IMPLEMENTATION（PDF p2001） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2001
+89. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p401） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/401
+90. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-503 WASTE WATER STORAGE（PDF p1994） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1994
+91. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p2052） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2052
+92. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p759） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/759
+93. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p755） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/755
+94. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p758） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758
+95. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.17.4 Systems Performance, Limitations, and Constraints（PDF p477） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=477
+96. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p756） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/756
+97. Shuttle Flight Operations Manual Vol. 12 Crew Systems Odor/Bacteria Filter（PDF p440） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=440
+98. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.17.4.2 Waste Production Quantities（PDF p474） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=474
+99. Shuttle Flight Operations Manual Vol. 12 Crew Systems （PDF p439） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=439
+100. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-401 WCS USAGE CONSTRAINT（PDF p1987） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1987
+101. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-354 VACUUM VENT LOSS DEFINITION（PDF p1986） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1986
+102. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-405 VACUUM VENT SYSTEMS MANAGEMENT [CIL]（PDF p1989） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1989
+103. Shuttle Crew Operations Manual 2.25 Waste Management System（USA007587 Rev. A CPN-1、PDF p760） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760
+104. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-403 ALTERNATE FECAL COLLECTION（PDF p1988） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1988
+105. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-352 WCS URINE COLLECTION（PDF p1984） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1984
+106. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p23） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=23
+107. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p118） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/118
+108. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p25） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=25
+109. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-2 SMOKE DETECTION LOSS DEFINITION（PDF p1917） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1917
+110. JSC-08934 Vol.1 Rev. E Shuttle Operational Data Book（Systems Performance and Constraints Data） 3.4.6.5 Smoke Detection and Fire Suppression Subsystem（PDF p225） — https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=225
+111. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p114） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/114
+112. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p119） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/119
+113. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p35） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=35
+114. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 3.3 Fire Detection and Suppression（PDF p37） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=37
+115. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-3 FORWARD AVIONICS BAY FIRE SUPPRESSION（PDF p1918） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1918
+116. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p121） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/121
+117. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.24 Fire Extinguisher（PDF p573） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=573
+118. Shuttle Flight Operations Manual Vol. 12 Crew Systems 3.24.4 Systems Performance, Limitations, and Constraints（PDF p574） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=574
+119. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p122） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/122
+120. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-1 FIRE/POST-FIRE DEFINITIONS（PDF p1915） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1915
+121. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-53 FIRE AND POST-FIRE ACTIONS（PDF p1925） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1925
+122. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-51 MANAGEMENT FOLLOWING LOSS OF SMOKE DETECTION（PDF p1919） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1919
+123. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-51 MANAGEMENT FOLLOWING LOSS OF SMOKE DETECTION（PDF p1921） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1921
+124. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p452） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/452
+125. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.2（PDF p174） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=174
+126. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.2（PDF p175） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=175
+127. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.9.3（PDF p192） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=192
+128. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-101 EVA CAPABILITY（PDF p1855） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1855
+129. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.9.3.1（PDF p191） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=191
+130. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.5（PDF p179） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=179
+131. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-60 EXTERNAL AIRLOCK WATER LINES（PDF p2055） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2055
+132. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.5（PDF p180） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=180
+133. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-301 TCS HEATER CONFIGURATION（PDF p2093） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2093
+134. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p176） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=176
+135. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p69） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=69
+136. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-61 EXTERNAL AIRLOCK LCG FLUID LINE LOSS DEFINITION（PDF p2057） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2057
+137. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-204 EXTERNAL AIRLOCK EMU SERVICING CONSTRAINTS（PDF p1877） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1877
+138. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p456） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/456
+139. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p447） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/447
+140. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p449） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/449
+141. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-204 EXTERNAL AIRLOCK EMU SERVICING CONSTRAINTS（PDF p1876） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1876
+142. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-152 EMU CONSUMABLES WITH REAL-TIME EMU DATA DOWNLINK（PDF p1866） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1866
+143. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.8（PDF p187） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=187
+144. USA006020 Rev. B ECLSS 21002 訓練マニュアル Section 6.8.3（PDF p189） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=189
+145. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p381） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/381
+146. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-251 FREON COOLANT LOOPS (FCL)（PDF p2074） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2074
+147. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p382） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382
+148. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p384） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/384
+149. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-201 FREON COOLANT LOOPS (FCL)（PDF p2064） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2064
+150. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p389） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/389
+151. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p390） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/390
+152. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p387） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/387
+153. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p392） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392
+154. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-253 AMMONIA BOILER SUBSYSTEM (ABS)（PDF p2083） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2083
+155. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p100） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=100
+156. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p405） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405
+157. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p391） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391
+158. STS-114 Mission Report Atmospheric Revitalization System（PDF p49） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=49
+159. STS-8 Mission Report Environmental Control and Life Support System（PDF p14） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=14
+160. STS-59 Mission Report Environmental Control and Life Support System（PDF p22） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=22
+161. NSTS-37421 STS-91 Space Shuttle Mission Report（JSC、1998年7月、57頁、3,891,467 バイト） （PDF p29） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-91%20Space%20Shuttle%20Mission%20Report.pdf#page=29
+162. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1799） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1799
+163. STS-35 Mission Report （PDF p14） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=14
+164. NASA-TM-X-70252 所収 Kimzey, J. H.「Skylab Experiment M479 Zero Gravity Flammability」（Proceedings of the Third Space Processing Symposium: Skylab Results, Vol. 1、1974年6月、NTRS 19740021777、16頁、1,221,156 バイト） （PDF p8） — https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf#page=8
+165. NASA-TM-X-70252 所収 Kimzey, J. H.「Skylab Experiment M479 Zero Gravity Flammability」（Proceedings of the Third Space Processing Symposium: Skylab Results, Vol. 1、1974年6月、NTRS 19740021777、16頁、1,221,156 バイト） （PDF p1） — https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf#page=1
+166. NSTS-37434 STS-104 Space Shuttle Mission Report（JSC、2001年9月、56頁、4,134,423 バイト） （PDF p29） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-104%20Space%20Shuttle%20Mission%20Report.pdf#page=29
+167. STS-65 Mission Report （PDF p12） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=12
+168. STS-108 Mission Report Environmental Control and Life Support System（PDF p32） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=32
+169. STS-108 Mission Report （PDF p31） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=31
+170. STS-4 Orbiter Mission Report Flight Test Requirements（PDF p40） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=40
+171. NSTS-08277 STS-50 Space Shuttle Mission Report（1992-08、43頁、4,158,096 バイト） Environmental Control and Life Support System（PDF p19） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-50%20Space%20Shuttle%20Mission%20Report.pdf#page=19
+172. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） STS-1 Orbiter Final Mission Report（PDF p55） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=55
+173. NASA-CR-194116 STS-54 Mission Report（1993） STS-54 Mission Report（PDF p18） — https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18
+174. Friedman 1991（NTRS 19910011869） （PDF p6） — https://ntrs.nasa.gov/api/citations/19910011869/downloads/19910011869.pdf#page=6
+175. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p38） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=38
+176. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p94） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=94
+177. NSTS-37452 STS-125 Mission Report（2010） STS-125 Mission Report（PDF p50） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=50
+178. NSTS-37404 STS-74 Space Shuttle Mission Report（JSC、1996年2月、58頁、3,620,224 バイト） （PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-74%20Space%20Shuttle%20Mission%20Report.pdf#page=34
+179. STS-62 Space Shuttle Mission Report（1994、59頁、4,338,007 バイト） （PDF p26） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-62%20Space%20Shuttle%20Mission%20Report.pdf#page=26
+180. NSTS-37433 STS-102 Space Shuttle Mission Report（JSC、2001年5月、63頁、4,926,846 バイト） （PDF p33） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=33
+181. NSTS-37433 STS-102 Space Shuttle Mission Report（JSC、2001年5月、63頁、4,926,846 バイト） （PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=34
+182. Noise Control in Space Shuttle Orbiter（Goodman、NOISE-CON 2009） Acoustic testing（PDF p6） — https://ntrs.nasa.gov/api/citations/20090043801/downloads/20090043801.pdf#page=6
+183. STS-4 Orbiter Mission Report STS-4 Orbiter Mission Report（PDF p42） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=42
+184. STS-114 Mission Report STS-114 Mission Report（PDF p50） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=50
+185. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1959） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1959
+186. JSC-16730（80-FM-36、NASA-TM-81032）Environmental Control and Life Support System Analysis of STS-1 9-psia Extravehicular Activity Configuration（1980年7月、39頁、1,601,735 バイト） （PDF p33） — https://ntrs.nasa.gov/api/citations/19800020542/downloads/19800020542.pdf#page=33
+187. NSTS-22070 STS-26 National Space Transportation System Mission Report（NASA JSC、1989年1月、44頁、2,839,485 バイト。OCR のテキスト層） （PDF p17） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-26%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=17
+188. JSC-19095 STS-7 Space Shuttle Program Mission Report（NASA JSC、1983年7月、15頁、712,814 バイト。OCR のテキスト層） （PDF p13） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-7%20Space%20Shuttle%20Program%20Mission%20Report.pdf#page=13
+189. NSTS-08239 STS-60 Space Shuttle Mission Report（NASA JSC、1994年4月、43頁、3,414,515 バイト。OCR のテキスト層） （PDF p22） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-60%20Space%20Shuttle%20Mission%20Report.pdf#page=22
+190. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1971） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1971
+191. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） 2.0 Orbiter Performance（PDF p58） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58
+192. STS-65 Mission Report STS-65 Mission Report（PDF p32） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=32
+193. STS-114 Mission Report STS-114 Mission Report（PDF p51） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51
+194. NTRS 20000081767 McMonigal, K. A.・Braverman, L. E.・Dunn, J. T.・Stanbury, J. B. ほか「Thyroid Function Changes Related to Use of Iodinated Water in United States Space Program」（NASA JSC ほか、投稿前の原稿 Rev. 13、1999-09-17、35頁、901,679 バイト。OCR のテキスト層） （PDF p21） — https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=21
+195. NTRS 20000081767 McMonigal, K. A.・Braverman, L. E.・Dunn, J. T.・Stanbury, J. B. ほか「Thyroid Function Changes Related to Use of Iodinated Water in United States Space Program」（NASA JSC ほか、投稿前の原稿 Rev. 13、1999-09-17、35頁、901,679 バイト。OCR のテキスト層） （PDF p12） — https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=12
+196. NTRS 20000081767 McMonigal, K. A.・Braverman, L. E.・Dunn, J. T.・Stanbury, J. B. ほか「Thyroid Function Changes Related to Use of Iodinated Water in United States Space Program」（NASA JSC ほか、投稿前の原稿 Rev. 13、1999-09-17、35頁、901,679 バイト。OCR のテキスト層） （PDF p11） — https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=11
+197. NTRS 20000081767 McMonigal, K. A.・Braverman, L. E.・Dunn, J. T.・Stanbury, J. B. ほか「Thyroid Function Changes Related to Use of Iodinated Water in United States Space Program」（NASA JSC ほか、投稿前の原稿 Rev. 13、1999-09-17、35頁、901,679 バイト。OCR のテキスト層） （PDF p31） — https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=31
+198. NTRS 20000081767 McMonigal, K. A.・Braverman, L. E.・Dunn, J. T.・Stanbury, J. B. ほか「Thyroid Function Changes Related to Use of Iodinated Water in United States Space Program」（NASA JSC ほか、投稿前の原稿 Rev. 13、1999-09-17、35頁、901,679 バイト。OCR のテキスト層） （PDF p15） — https://ntrs.nasa.gov/api/citations/20000081767/downloads/20000081767.pdf#page=15
+199. JSC 28379 Medical Effects of Iodine: Proceedings of NASA/JSC Conference（McMonigal, K. A. 編、NASA JSC Medical Operations Branch、1998年3月、NTRS 20260005992 の墨消し版、89頁、9,389,713 バイト。OCR のテキスト層） （PDF p9） — https://ntrs.nasa.gov/api/citations/20260005992/downloads/20260005992_Redacted.pdf#page=9
+200. JSC 28379 Medical Effects of Iodine: Proceedings of NASA/JSC Conference（McMonigal, K. A. 編、NASA JSC Medical Operations Branch、1998年3月、NTRS 20260005992 の墨消し版、89頁、9,389,713 バイト。OCR のテキスト層） （PDF p44） — https://ntrs.nasa.gov/api/citations/20260005992/downloads/20260005992_Redacted.pdf#page=44
+201. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） 2.0 Orbiter Performance（PDF p59） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=59
+202. NSTS-37452 STS-125 Mission Report（2010） STS-125 Mission Report（PDF p62） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=62
+203. STS-65 Mission Report STS-65 Mission Report（PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=34
+204. STS-4 Orbiter Mission Report STS-4 Orbiter Mission Report（PDF p43） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=43
+205. Shuttle Flight Operations Manual Vol. 12 Crew Systems （PDF p434） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=434
+206. Shuttle Flight Operations Manual Vol. 12 Crew Systems （PDF p447） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=447
+207. NSTS-08276 STS-49 Space Shuttle Mission Report（NASA JSC、1992年7月、47頁、3,165,780 バイト。OCR のテキスト層） （PDF p19） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-49%20Space%20Shuttle%20Mission%20Report.pdf#page=19
+208. STS-8 Mission Report Smoke Detector B in Avionics Bay 1 Tripped（PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=11
+209. Gibb 1985（NTRS 19850008615） Air Moving Pump Design（PDF p7） — https://ntrs.nasa.gov/api/citations/19850008615/downloads/19850008615.pdf#page=7
+210. NSTS-37452 STS-125 Mission Report（2010） Smoke Detection and Fire Suppression System（PDF p49） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=49
+211. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1796） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1796
+212. Friedman 1991（NTRS 19910011869） Fire safety in spacecraft（PDF p4） — https://ntrs.nasa.gov/api/citations/19910011869/downloads/19910011869.pdf#page=4
+213. STS-108 Mission Report （PDF p39） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=39
+214. STS-114 Mission Report STS-114 Mission Report（PDF p57） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=57
+215. NSTS-37430 STS-92 Space Shuttle Mission Report（JSC、2001年1月、61頁、3,812,185 バイト） （PDF p31） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-92%20Space%20Shuttle%20Mission%20Report.pdf#page=31
+216. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） （PDF p63） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=63
+217. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） 2.4.1 Active Thermal Control System（PDF p52） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=52
+218. NSTS-37452 STS-125 Mission Report（2010） FES water dump（PDF p19） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=19
+219. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
+220. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
 
 ## 24. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-08 | 初版作成（L3 の要求 99件、機能行 866行のトレース、検証 99件、図166・167、SysML v2 テキスト） |
+| Rev. A | 2026-10-11 | NASA-STD-3001 による評価との食い違い 2件の要求を注記（判定は据え置き。Rev. BQ の照合表の判定の見直し）（Rev. BQ） |
+| Rev. B | 2026-10-11 | 引いている機能・IF の文を、出典の更新で改めた文に合わせた（7か所）、要求が抜けていた機能行 6行に L3 の要求（REQ-ARS-40・REQ-ARS-41・REQ-ARS-42・REQ-WTR-13・REQ-WCS-10・REQ-ATCS-08）を足し、検証の根拠が無かった 20件のうち 12件を根拠ありに、8件の理由を改めた（Rev. BR） |

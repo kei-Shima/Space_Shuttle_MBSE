@@ -10,16 +10,16 @@ package SSD_TRC_SYS_001 {
     metadata def TraceGap { attribute category : String; attribute judgment : String; }
     view def ImpactView :> GridView { doc /* 起点の機器から連鎖を辿った影響の範囲（SSD-TRC-SYS-001 §9） */ render Views::asElementTable; }
     // ---- 関係（連鎖）
-    metadata <'TR-01'> tr_01 : TraceRelation { relation = "derive"; fromKind = "L1"; toKind = "L2"; count = 351; }
-    metadata <'TR-02'> tr_02 : TraceRelation { relation = "satisfy"; fromKind = "L1・L2"; toKind = "F・IF"; count = 1857; }
-    metadata <'TR-03'> tr_03 : TraceRelation { relation = "verify"; fromKind = "L1・L2"; toKind = "VC"; count = 311; }
+    metadata <'TR-01'> tr_01 : TraceRelation { relation = "derive"; fromKind = "L1"; toKind = "L2"; count = 357; }
+    metadata <'TR-02'> tr_02 : TraceRelation { relation = "satisfy"; fromKind = "L1・L2"; toKind = "F・IF"; count = 1863; }
+    metadata <'TR-03'> tr_03 : TraceRelation { relation = "verify"; fromKind = "L1・L2"; toKind = "VC"; count = 317; }
     metadata <'TR-04'> tr_04 : TraceRelation { relation = "own"; fromKind = "F"; toKind = "BLK"; count = 2075; }
     metadata <'TR-05'> tr_05 : TraceRelation { relation = "end"; fromKind = "IF"; toKind = "BLK"; count = 1175; }
     metadata <'TR-06'> tr_06 : TraceRelation { relation = "alloc"; fromKind = "PHY"; toKind = "F・BLK"; count = 459; }
     metadata <'TR-07'> tr_07 : TraceRelation { relation = "place"; fromKind = "PHY"; toKind = "CMP"; count = 120; }
     metadata <'TR-08'> tr_08 : TraceRelation { relation = "fmea"; fromKind = "FM"; toKind = "F・IF"; count = 1822; }
     metadata <'TR-09'> tr_09 : TraceRelation { relation = "rule"; fromKind = "RULE"; toKind = "BLK"; count = 83; }
-    metadata <'TR-10'> tr_10 : TraceRelation { relation = "act"; fromKind = "ACT"; toKind = "F"; count = 155; }
+    metadata <'TR-10'> tr_10 : TraceRelation { relation = "act"; fromKind = "ACT"; toKind = "F"; count = 154; }
     metadata <'TR-11'> tr_11 : TraceRelation { relation = "actpart"; fromKind = "ACT"; toKind = "BLK"; count = 51; }
     metadata <'TR-12'> tr_12 : TraceRelation { relation = "msg"; fromKind = "MSG"; toKind = "IF"; count = 48; }
     metadata <'TR-13'> tr_13 : TraceRelation { relation = "sm"; fromKind = "SM"; toKind = "BLK"; count = 17; }
@@ -74,10 +74,10 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-DPS-C7'> cov_DPS_C7 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C7"; covered = 7; total = 7; }
     metadata <'COV-DPS-C8'> cov_DPS_C8 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C8"; covered = 1; total = 8; }
     metadata <'COV-DPS-C9'> cov_DPS_C9 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C9"; covered = 7; total = 8; }
-    metadata <'COV-ECLSS-C1'> cov_ECLSS_C1 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C1"; covered = 112; total = 112; }
-    metadata <'COV-ECLSS-C2'> cov_ECLSS_C2 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C2"; covered = 112; total = 112; }
-    metadata <'COV-ECLSS-C3'> cov_ECLSS_C3 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C3"; covered = 91; total = 112; }
-    metadata <'COV-ECLSS-C4'> cov_ECLSS_C4 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C4"; covered = 939; total = 945; }
+    metadata <'COV-ECLSS-C1'> cov_ECLSS_C1 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C1"; covered = 118; total = 118; }
+    metadata <'COV-ECLSS-C2'> cov_ECLSS_C2 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C2"; covered = 118; total = 118; }
+    metadata <'COV-ECLSS-C3'> cov_ECLSS_C3 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C3"; covered = 108; total = 118; }
+    metadata <'COV-ECLSS-C4'> cov_ECLSS_C4 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C4"; covered = 945; total = 945; }
     metadata <'COV-ECLSS-C5'> cov_ECLSS_C5 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C5"; covered = 7; total = 298; }
     metadata <'COV-ECLSS-C6'> cov_ECLSS_C6 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C6"; covered = 108; total = 298; }
     metadata <'COV-ECLSS-C7'> cov_ECLSS_C7 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C7"; covered = 28; total = 28; }
@@ -166,7 +166,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-STR-C9'> cov_STR_C9 : CoverageMetric about SSD_BLK_SYS_001::STR { metric = "C9"; covered = 1; total = 7; }
     metadata <'COV-TPS-C1'> cov_TPS_C1 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C1"; covered = 7; total = 7; }
     metadata <'COV-TPS-C2'> cov_TPS_C2 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C2"; covered = 7; total = 7; }
-    metadata <'COV-TPS-C3'> cov_TPS_C3 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C3"; covered = 6; total = 7; }
+    metadata <'COV-TPS-C3'> cov_TPS_C3 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C3"; covered = 7; total = 7; }
     metadata <'COV-TPS-C4'> cov_TPS_C4 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C4"; covered = 16; total = 16; }
     metadata <'COV-TPS-C5'> cov_TPS_C5 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C5"; covered = 3; total = 3; }
     metadata <'COV-TPS-C6'> cov_TPS_C6 : CoverageMetric about SSD_BLK_SYS_001::TPS { metric = "C6"; covered = 0; total = 3; }
@@ -192,7 +192,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-SRB-C8'> cov_SRB_C8 : CoverageMetric about SSD_BLK_SYS_001::SRB { metric = "C8"; covered = 0; total = 7; }
     metadata <'COV-SRB-C9'> cov_SRB_C9 : CoverageMetric about SSD_BLK_SYS_001::SRB { metric = "C9"; covered = 3; total = 7; }
     // ---- 切れ目の分類と、一覧の要素
-    metadata <'GAP-01'> gap_01 : TraceGapCategory { title = "検証の判定が pass でない要求"; judgment = "判断済み"; count = 24; }
+    metadata <'GAP-01'> gap_01 : TraceGapCategory { title = "検証の判定が pass でない要求"; judgment = "判断済み"; count = 10; }
     metadata <'GAP-02'> gap_02 : TraceGapCategory { title = "要求なしで妥当と判断した機能行"; judgment = "判断済み"; count = 293; }
     metadata <'GAP-03'> gap_03 : TraceGapCategory { title = "トレースの対象外の機能行"; judgment = "範囲外"; count = 10; }
     metadata <'GAP-04'> gap_04 : TraceGapCategory { title = "要求の割付先でない IF"; judgment = "方針"; count = 550; }
@@ -203,30 +203,16 @@ package SSD_TRC_SYS_001 {
     metadata <'GAP-09'> gap_09 : TraceGapCategory { title = "既存の IF が無い流れ"; judgment = "未処理"; count = 0; }
     metadata <'GAP-10'> gap_10 : TraceGapCategory { title = "機器配分表に行が無い内部ブロック図の機器"; judgment = "未処理"; count = 0; }
     metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 88; }
-    metadata <'GAP-01-01'> gap_01_01 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_als_09 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_05 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-03'> gap_01_03 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_06 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-04'> gap_01_04 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_08 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-05'> gap_01_05 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_15 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-06'> gap_01_06 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_17 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-07'> gap_01_07 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_27 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-08'> gap_01_08 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_28 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-09'> gap_01_09 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_37 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-10'> gap_01_10 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_38 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-11'> gap_01_11 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_39 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-12'> gap_01_12 : TraceGap about SSD_VER_SYS_001::Results::vc_req_eclss_12 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-13'> gap_01_13 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_fds_05 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-14'> gap_01_14 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_fds_08 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-15'> gap_01_15 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_pcs_05 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-16'> gap_01_16 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_pcs_07 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-17'> gap_01_17 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_pcs_08 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-18'> gap_01_18 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_pcs_12 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-19'> gap_01_19 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_03 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-20'> gap_01_20 : TraceGap about SSD_VER_SYS_001::Results::vc_req_sys_05 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-21'> gap_01_21 : TraceGap about SSD_VER_SYS_001::Results::vc_req_tps_03 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-22'> gap_01_22 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_wcs_06 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-23'> gap_01_23 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_wcs_08 { category = "GAP-01"; judgment = "判断済み"; }
-    metadata <'GAP-01-24'> gap_01_24 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_wtr_10 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-01'> gap_01_01 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_08 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_15 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-03'> gap_01_03 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_17 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-04'> gap_01_04 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_27 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-05'> gap_01_05 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_ars_41 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-06'> gap_01_06 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_fds_08 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-07'> gap_01_07 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_pcs_08 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-08'> gap_01_08 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_pcs_12 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-09'> gap_01_09 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_wcs_08 { category = "GAP-01"; judgment = "判断済み"; }
+    metadata <'GAP-01-10'> gap_01_10 : TraceGap about SSD_RQL_ECL_001::Results::vc_req_wcs_10 { category = "GAP-01"; judgment = "判断済み"; }
     // ---- 影響分析のビュー（起点の機器から辿った要素を晒す）
     view <'IMP-01'> imp_01 : ImpactView {
         doc /* 燃料電池発電装置の変更（例：出力・冷却の仕様変更）。起点 PHY-EPS-01 */

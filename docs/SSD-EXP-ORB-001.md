@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-EXP-ORB-001 |
 | 表題 | 乗員の環境曝露定義書（曝露の量のパラメトリック・時間軸のプロファイル） |
-| 版・日付 | Rev. A／2026-10-08 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-HSI-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図145 乗員の曝露の量と基準（パラメトリック）・図146 乗員の曝露のプロファイル |
@@ -131,6 +131,8 @@
 
 > **注記** CO2 分圧・全圧・温湿度の時間変化のモデルと、実績・基準との比較は [SSD-ATM-ORB-001](SSD-ATM-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-ATM-ORB-001.sysml）。
 
+> **注記** SysML v2 テキストの書き方の変更（Rev. BR）：VS Code の拡張機能 SysML v2.0 Language Support の検査が、同じ名前を別のスコープで再定義している所を誤り（ambiguous-namespace-name）とするので、意味を変えずに書き方を改めた。基準の内にある実績 16件は、assert constraint の1行を、constraint の宣言と assert <名前>; の2行に分けた（制約を成り立つものとして主張する点は同じ）。Pilot で読み込んで誤り 0件・警告 0件を確かめた。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p360） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360
@@ -189,3 +191,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-10-07 | 初版作成（曝露の量 16件・実績 32件・プロファイル 4件、図145・146、SysML v2 テキスト） |
 | Rev. A | 2026-10-08 | キャビン大気の動的モデル定義書 SSD-ATM-ORB-001 への参照を注記（Rev. BJ） |
+| Rev. B | 2026-10-11 | SysML v2 テキストの assert constraint の書き方を改めた（意味は同じ）（Rev. BR） |

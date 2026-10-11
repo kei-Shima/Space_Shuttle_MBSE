@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-TRC-SYS-001 |
 | 表題 | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） |
-| 版・日付 | Rev. H／2026-10-09 |
+| 版・日付 | Rev. I／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図115 トレースの連鎖（要素の種類と関係）・図116 系ごとのトレース網羅・図117 変更の影響分析 |
@@ -19,13 +19,13 @@
 
 ## 3. 要素の種類
 
-グラフの要素 5501件を種類ごとに示す。
+グラフの要素 5513件を種類ごとに示す。
 
 | 種類 | 要素 | 件数 | 出どころ |
 |---|---|---|---|
 | L1 | L1 要求 | 18 | SSD-REQ-SYS-001 |
-| L2 | L2 要求 | 293 | SSD-REQ-<系>-001 |
-| VC | 検証ケース | 311 | SSD-VER-SYS-001 |
+| L2 | L2 要求 | 299 | SSD-REQ-<系>-001 |
+| VC | 検証ケース | 317 | SSD-VER-SYS-001 |
 | F | 機能行 | 2075 | SSD-FD-*（機能の表） |
 | IF | IF | 601 | SSD-FD-*（IF の表） |
 | BLK | 機能説明書 | 208 | SSD-FD-* |
@@ -42,20 +42,20 @@
 
 ## 4. 関係（連鎖）
 
-要素を結ぶ関係 18種・9988件を示す。向きは連鎖の向き（上位 → 下位、要求 → 割付先、行 → 対応先）。
+要素を結ぶ関係 18種・10005件を示す。向きは連鎖の向き（上位 → 下位、要求 → 割付先、行 → 対応先）。
 
 | ID | 関係 | 元 → 先 | 内容 | 件数 | 出どころ |
 |---|---|---|---|---|---|
-| TR-01 | derive | L1 → L2 | L1 要求から L2 要求を導出 | 351 | SSD-RQM-SYS-001 の #derivation |
-| TR-02 | satisfy | L1・L2 → F・IF | 要求の割付先（充足） | 1857 | SSD-RQM-SYS-001 の satisfy の割付先 |
-| TR-03 | verify | L1・L2 → VC | 要求を検証ケースで確かめる（判定つき） | 311 | SSD-VER-SYS-001 の Results |
+| TR-01 | derive | L1 → L2 | L1 要求から L2 要求を導出 | 357 | SSD-RQM-SYS-001 の #derivation |
+| TR-02 | satisfy | L1・L2 → F・IF | 要求の割付先（充足） | 1863 | SSD-RQM-SYS-001 の satisfy の割付先 |
+| TR-03 | verify | L1・L2 → VC | 要求を検証ケースで確かめる（判定つき） | 317 | SSD-VER-SYS-001 の Results |
 | TR-04 | own | F → BLK | 機能行を持つ機能説明書 | 2075 | SSD-ALC-SYS-001 の Functions |
 | TR-05 | end | IF → BLK | IF の端の機能説明書 | 1175 | SSD-BLK-SYS-001 の interface・connection |
 | TR-06 | alloc | PHY → F・BLK | 機器に割り付けた機能行と系 | 459 | SSD-ALC-SYS-001 の PhysicalAllocation |
 | TR-07 | place | PHY → CMP | 機器を置いた区画 | 120 | SSD-ALC-SYS-001 の PhysicalAllocation |
 | TR-08 | fmea | FM → F・IF | 故障解析表の行（CIL 課題・CIL 項目）と機能・IF | 1822 | SSD-FMEA-*-001、SSD-FMX-ECL-001 |
 | TR-09 | rule | RULE → BLK | [CIL] の規則と下位機能 | 83 | SSD-FMEA-*-001 |
-| TR-10 | act | ACT → F | 活動図の行動と機能行 | 155 | SSD-BEH-ORB-002・004・007、SSD-UC-ORB-001、SSD-MED-ORB-001 |
+| TR-10 | act | ACT → F | 活動図の行動と機能行 | 154 | SSD-BEH-ORB-002・004・007、SSD-UC-ORB-001、SSD-MED-ORB-001 |
 | TR-11 | actpart | ACT → BLK | 活動図の行動を受け持つ部品 | 51 | SSD-ALC-SYS-001 の BehaviorAllocation |
 | TR-12 | msg | MSG → IF | シーケンス図のメッセージが通る IF | 48 | SSD-BEH-ORB-003、SSD-UC-ORB-001 |
 | TR-13 | sm | SM → BLK | 状態機械を持つ部品（exhibit） | 17 | SSD-BEH-ORB-001・005・006・007、SSD-EMU-EVA-001 |
@@ -92,7 +92,7 @@
 | CT | 9/9 | 9/9 | 9/9 | 88/88 | 2/29 | 24/29 | 11/11 | 2/8 | 8/8 |
 | CW | 10/10 | 10/10 | 10/10 | 46/46 | 2/12 | 0/12 | 5/5 | 4/6 | 2/6 |
 | DPS | 13/13 | 13/13 | 13/13 | 91/91 | 6/29 | 22/29 | 7/7 | 1/8 | 7/8 |
-| ECLSS | 112/112 | 112/112 | 91/112 | 939/945 | 7/298 | 108/298 | 28/28 | 44/87 | 68/87 |
+| ECLSS | 118/118 | 118/118 | 108/118 | 945/945 | 7/298 | 108/298 | 28/28 | 44/87 | 68/87 |
 | EPS | 22/22 | 22/22 | 22/22 | 33/33 | 8/23 | 17/23 | 5/5 | 3/5 | 5/5 |
 | EVA | 8/8 | 8/8 | 8/8 | 85/85 | 3/15 | 0/15 | 3/3 | 2/7 | 6/7 |
 | GNC | 14/14 | 14/14 | 14/14 | 90/90 | 1/24 | 4/24 | 6/6 | 4/8 | 5/8 |
@@ -102,10 +102,10 @@
 | PLS | 9/9 | 9/9 | 9/9 | 50/50 | 0/12 | 0/12 | 5/5 | 4/7 | 7/7 |
 | RCS | 10/10 | 10/10 | 10/10 | 91/91 | 1/20 | 8/20 | 8/8 | 4/8 | 7/8 |
 | STR | 8/8 | 8/8 | 8/8 | 51/51 | 0/11 | 0/11 | 6/6 | 3/7 | 1/7 |
-| TPS | 7/7 | 7/7 | 6/7 | 16/16 | 3/3 | 0/3 | 5/5 | 2/3 | 1/3 |
+| TPS | 7/7 | 7/7 | 7/7 | 16/16 | 3/3 | 0/3 | 5/5 | 2/3 | 1/3 |
 | ET | 9/9 | 9/9 | 9/9 | 43/43 | 1/8 | 0/8 | — | 3/7 | 3/7 |
 | SRB | 9/9 | 9/9 | 9/9 | 49/49 | 1/10 | 0/10 | — | 0/7 | 3/7 |
-| 計 | 293/293（100%） | 293/293（100%） | 271/293（92%） | 2057/2063（100%） | 39/589（7%） | 230/589（39%） | 120/120（100%） | 99/206（48%） | 155/206（75%） |
+| 計 | 299/299（100%） | 299/299（100%） | 289/299（97%） | 2063/2063（100%） | 39/589（7%） | 230/589（39%） | 120/120（100%） | 99/206（48%） | 155/206（75%） |
 
 ## 7. 切れ目の分類
 
@@ -113,7 +113,7 @@
 
 | ID | 切れ目 | 判断 | 件数 | 説明 |
 |---|---|---|---|---|
-| GAP-01 | 検証の判定が pass でない要求 | 判断済み | 24 | 検証の根拠が見つからない要求（判定 inconclusive）。理由は各要求書の検証の節と SSD-VER-SYS-001 にある。 |
+| GAP-01 | 検証の判定が pass でない要求 | 判断済み | 10 | 検証の根拠が見つからない要求（判定 inconclusive）。理由は各要求書の検証の節と SSD-VER-SYS-001 にある。 |
 | GAP-02 | 要求なしで妥当と判断した機能行 | 判断済み | 293 | 系の全般の記述か、同じ下位機能の要求が受け持つ構成・運用の記述（各要求書の §5・§6）。 |
 | GAP-03 | トレースの対象外の機能行 | 範囲外 | 10 | 要求書のトレース表の対象でない文書の機能行。ECLSS の第2段より下は Rev. BK で ECLSS 下位要求書（SSD-RQL-ECL-001）の対象にした。残りは要求書のトレースの対象の外の文書（外部系 SSD-FD-EXT-001 とオービタの親 SSD-FD-ORB-001）の行。 |
 | GAP-04 | 要求の割付先でない IF | 方針 | 550 | 要求は主に機能行に割り付けたため、IF そのものを割付先にした要求は少ない。IF の要求（ICD の要求）は今後の課題。 |
@@ -127,34 +127,20 @@
 
 ## 8. 切れ目の一覧
 
-分類 GAP-01・GAP-06・GAP-09・GAP-10 の要素 24件を示す（SysML では各要素に TraceGap の metadata を付けた）。ほかの分類は件数が多いので §8 に系ごとの件数で示す。
+分類 GAP-01・GAP-06・GAP-09・GAP-10 の要素 10件を示す（SysML では各要素に TraceGap の metadata を付けた）。ほかの分類は件数が多いので §8 に系ごとの件数で示す。
 
 | ID | 要素 | 種類 | 系 | 内容 |
 |---|---|---|---|---|
-| GAP-01-01 | VC-REQ-ALS-09 | 検証ケース | — | REQ-ALS-09 の検証（判定 inconclusive） |
-| GAP-01-02 | VC-REQ-ARS-05 | 検証ケース | — | REQ-ARS-05 の検証（判定 inconclusive） |
-| GAP-01-03 | VC-REQ-ARS-06 | 検証ケース | — | REQ-ARS-06 の検証（判定 inconclusive） |
-| GAP-01-04 | VC-REQ-ARS-08 | 検証ケース | — | REQ-ARS-08 の検証（判定 inconclusive） |
-| GAP-01-05 | VC-REQ-ARS-15 | 検証ケース | — | REQ-ARS-15 の検証（判定 inconclusive） |
-| GAP-01-06 | VC-REQ-ARS-17 | 検証ケース | — | REQ-ARS-17 の検証（判定 inconclusive） |
-| GAP-01-07 | VC-REQ-ARS-27 | 検証ケース | — | REQ-ARS-27 の検証（判定 inconclusive） |
-| GAP-01-08 | VC-REQ-ARS-28 | 検証ケース | — | REQ-ARS-28 の検証（判定 inconclusive） |
-| GAP-01-09 | VC-REQ-ARS-37 | 検証ケース | — | REQ-ARS-37 の検証（判定 inconclusive） |
-| GAP-01-10 | VC-REQ-ARS-38 | 検証ケース | — | REQ-ARS-38 の検証（判定 inconclusive） |
-| GAP-01-11 | VC-REQ-ARS-39 | 検証ケース | — | REQ-ARS-39 の検証（判定 inconclusive） |
-| GAP-01-12 | VC-REQ-ECLSS-12 | 検証ケース | — | REQ-ECLSS-12 の検証（判定 inconclusive） |
-| GAP-01-13 | VC-REQ-FDS-05 | 検証ケース | — | REQ-FDS-05 の検証（判定 inconclusive） |
-| GAP-01-14 | VC-REQ-FDS-08 | 検証ケース | — | REQ-FDS-08 の検証（判定 inconclusive） |
-| GAP-01-15 | VC-REQ-PCS-05 | 検証ケース | — | REQ-PCS-05 の検証（判定 inconclusive） |
-| GAP-01-16 | VC-REQ-PCS-07 | 検証ケース | — | REQ-PCS-07 の検証（判定 inconclusive） |
-| GAP-01-17 | VC-REQ-PCS-08 | 検証ケース | — | REQ-PCS-08 の検証（判定 inconclusive） |
-| GAP-01-18 | VC-REQ-PCS-12 | 検証ケース | — | REQ-PCS-12 の検証（判定 inconclusive） |
-| GAP-01-19 | VC-REQ-SYS-03 | 検証ケース | — | REQ-SYS-03 の検証（判定 inconclusive） |
-| GAP-01-20 | VC-REQ-SYS-05 | 検証ケース | — | REQ-SYS-05 の検証（判定 inconclusive） |
-| GAP-01-21 | VC-REQ-TPS-03 | 検証ケース | — | REQ-TPS-03 の検証（判定 inconclusive） |
-| GAP-01-22 | VC-REQ-WCS-06 | 検証ケース | — | REQ-WCS-06 の検証（判定 inconclusive） |
-| GAP-01-23 | VC-REQ-WCS-08 | 検証ケース | — | REQ-WCS-08 の検証（判定 inconclusive） |
-| GAP-01-24 | VC-REQ-WTR-10 | 検証ケース | — | REQ-WTR-10 の検証（判定 inconclusive） |
+| GAP-01-01 | VC-REQ-ARS-08 | 検証ケース | — | REQ-ARS-08 の検証（判定 inconclusive） |
+| GAP-01-02 | VC-REQ-ARS-15 | 検証ケース | — | REQ-ARS-15 の検証（判定 inconclusive） |
+| GAP-01-03 | VC-REQ-ARS-17 | 検証ケース | — | REQ-ARS-17 の検証（判定 inconclusive） |
+| GAP-01-04 | VC-REQ-ARS-27 | 検証ケース | — | REQ-ARS-27 の検証（判定 inconclusive） |
+| GAP-01-05 | VC-REQ-ARS-41 | 検証ケース | — | REQ-ARS-41 の検証（判定 inconclusive） |
+| GAP-01-06 | VC-REQ-FDS-08 | 検証ケース | — | REQ-FDS-08 の検証（判定 inconclusive） |
+| GAP-01-07 | VC-REQ-PCS-08 | 検証ケース | — | REQ-PCS-08 の検証（判定 inconclusive） |
+| GAP-01-08 | VC-REQ-PCS-12 | 検証ケース | — | REQ-PCS-12 の検証（判定 inconclusive） |
+| GAP-01-09 | VC-REQ-WCS-08 | 検証ケース | — | REQ-WCS-08 の検証（判定 inconclusive） |
+| GAP-01-10 | VC-REQ-WCS-10 | 検証ケース | — | REQ-WCS-10 の検証（判定 inconclusive） |
 
 ## 9. 系ごとの切れ目の件数
 
@@ -309,7 +295,7 @@ ARS 床下機器（キャビンファン・熱交換器・LiOH キャニスタ�
 
 ## 18. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-TRC-SYS-001.sysml](../SysML/SSD-TRC-SYS-001.sysml) に示す。関係の metadata（TraceRelation）18件、系ごとの網羅の metadata（CoverageMetric、系の part def に付ける）162件、切れ目の分類の metadata（TraceGapCategory）11件と、§8 の要素に付けた metadata（TraceGap）24件、影響分析のビュー（ImpactView）5件から成る。ビューは影響の範囲の要素を晒す（expose）。区画・故障解析表の行・[CIL] の規則・メッセージはモデルの要素でないか道筋が無いので、ビューには入れず本書の表だけに示した。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-TRC-SYS-001.sysml](../SysML/SSD-TRC-SYS-001.sysml) に示す。関係の metadata（TraceRelation）18件、系ごとの網羅の metadata（CoverageMetric、系の part def に付ける）162件、切れ目の分類の metadata（TraceGapCategory）11件と、§8 の要素に付けた metadata（TraceGap）10件、影響分析のビュー（ImpactView）5件から成る。ビューは影響の範囲の要素を晒す（expose）。区画・故障解析表の行・[CIL] の規則・メッセージはモデルの要素でないか道筋が無いので、ビューには入れず本書の表だけに示した。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 19. 注記（出典間の相違・構成変更）
 
@@ -341,3 +327,4 @@ ARS 床下機器（キャビンファン・熱交換器・LiOH キャニスタ�
 | Rev. F | 2026-10-09 | ECLSS の状態機械・活動（SSD-BEH-ORB-007）と故障モード（SSD-FMX-ECL-001）を数え、網羅と切れ目を数え直した（Rev. BL） |
 | Rev. G | 2026-10-09 | EMU・エアロックの状態機械（SSD-EMU-EVA-001）を振る舞いに数え、網羅を数え直した（Rev. BM） |
 | Rev. H | 2026-10-09 | 医療の活動図（SSD-MED-ORB-001）の行動を振る舞いに数え、網羅を数え直した（Rev. BP） |
+| Rev. I | 2026-10-11 | L3 の要求 6件の追加と検証の根拠の調査（inconclusive 24件 → 10件）を受けて、網羅と切れ目を数え直した（Rev. BR） |

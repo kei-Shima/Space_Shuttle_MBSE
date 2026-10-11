@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>図面｜スペースシャトル システム設計 図書一覧</title><style>
+:root{--ink:#15202B;--sub:#4A5563;--paper:#FFFFFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+ line-height:1.75;font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.bar{height:6px;background:var(--flag)}
+main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+nav.crumb{font-size:.85rem;color:var(--sub);margin:.25rem 0 1.25rem}
+nav.crumb a{color:var(--link)}
+table.tb{border-collapse:collapse;width:100%;max-width:40rem;border:2px solid var(--ink);margin:0 0 2rem;font-size:.9rem}
+table.tb th{background:#E9EDF2;text-align:left;font-weight:600;white-space:nowrap;width:9.5rem}
+table.tb th,table.tb td{border:1px solid var(--ink);padding:.35rem .6rem;vertical-align:top}
+table.tb td.t{font-size:1.15rem;font-weight:700;line-height:1.5}
+h2{font-size:1.2rem;margin:2.5rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,li{max-width:46rem}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all}
+table.dt{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0 1rem}
+table.dt th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem;white-space:nowrap}
+table.dt td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+table.dt tr:nth-child(even) td{background:var(--panel)}
+table.dt td.id{white-space:nowrap;font-weight:600}
+table.dt td.nw{white-space:nowrap}
+table.dt td.pt{min-width:9.5em}
+tr:target td{background:#FFF1E8 !important;box-shadow:inset 4px 0 0 var(--flag)}
+.chip{display:inline-block;padding:0 .45rem;border-radius:3px;font-size:.78rem;font-weight:600;color:#fff;white-space:nowrap}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.6rem 0;max-width:52rem}
+.note b{color:var(--flag)}
+ol.refs{padding-left:1.4rem;font-size:.88rem}
+ol.refs li{margin:.3rem 0;max-width:none}
+figure{margin:1rem 0 1.5rem}
+figure img{max-width:100%;border:1px solid var(--rule)}
+figcaption{font-size:.85rem;color:var(--sub)}
+.scroll{overflow-x:auto}
+@media print{.bar{display:none} main{max-width:none;padding:0} a{color:var(--ink)} table.dt th{color:#000;background:#DDD}}
+/*index-pages*/
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 1.25rem;font-size:.88rem}
+nav.pages a{padding:.1rem .65rem;border:1px solid var(--rule);border-radius:3px;text-decoration:none;white-space:nowrap}
+nav.pages a[aria-current]{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+nav.pages.sub{margin:.75rem 0 1rem}
+ul.cards{list-style:none;margin:1rem 0 2rem;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(18rem,1fr));gap:.75rem}
+ul.cards li{max-width:none;margin:0;padding:.6rem .85rem .7rem;background:var(--panel);border-left:4px solid var(--ink)}
+ul.cards li>a{font-weight:700;font-size:1.05rem}
+ul.cards p{margin:.2rem 0 0;font-size:.86rem;line-height:1.6}
+.n{margin-left:.5rem;font-size:.8rem;font-weight:400;color:var(--sub);white-space:nowrap}
+p.tochead{margin:1rem 0 0;font-size:.85rem;font-weight:600;color:var(--sub)}
+ul.toc{list-style:none;margin:.3rem 0 1rem;padding:0;display:flex;flex-wrap:wrap;gap:.1rem 1.2rem;font-size:.9rem}
+ul.toc li{max-width:none}
+ul.toc .n{margin-left:.25rem}
+h3 a.more{margin-left:.6rem;font-size:.82rem;font-weight:400}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:.9rem;margin:.6rem 0 .8rem}
+.gal figure{margin:0}
+.gal img{display:block;width:100%;height:9rem;object-fit:contain}
+details{margin:0 0 1.5rem}
+@media (min-width:60rem){
+.p-doc table.dt th:nth-child(1){width:13.5rem}
+.p-doc table.dt th:nth-child(3){width:6.5rem}
+.p-doc table.dt th:nth-child(4){width:8rem}
+.p-doc table.dt th:nth-child(5){width:13rem}
+.p-if table.dt th:nth-child(1){width:7rem}
+.p-if table.dt th:nth-child(2),.p-if table.dt th:nth-child(3){width:6.5rem}
+.p-if table.dt th:nth-child(4){width:11.5rem}
+.p-if table.dt th:nth-child(6){width:7.5rem}
+}
+summary{cursor:pointer;font-size:.9rem;color:var(--link)}
+@media print{nav.pages,ul.toc,p.tochead{display:none}}
+/*/index-pages*/
+</style></head>
+<body><div class="bar"></div><main>
+
+<nav class="pages" aria-label="図書一覧のページ"><a href="index.html">図書一覧</a><a href="index_guide.html">使い方・出典</a><a href="index_figures.html" aria-current="page">図面</a><a href="index_documents.html">文書一覧</a><a href="index_interfaces.html">インタフェース一覧</a><a href="index_notes.html">注記</a><a href="index_history.html">変更履歴</a></nav>
+<h2>2. 図面</h2>
+<p>図 190枚を、ビューポイント（<a href='docs/SSD-VPT-SYS-001.html'>SSD-VPT-SYS-001</a>）ごとに並べています。縮小図を選ぶと、リンク付きの SVG が開きます。</p>
+<ul class="toc"><li><a href="#g-vp01">構成</a><span class="n">VP-01・34枚</span></li><li><a href="#g-vp02">インタフェース</a><span class="n">VP-02・16枚</span></li><li><a href="#g-vp03">要求・検証</a><span class="n">VP-03・7枚</span></li><li><a href="#g-vp04">運用</a><span class="n">VP-04・13枚</span></li><li><a href="#g-vp05">系の振る舞い</a><span class="n">VP-05・23枚</span></li><li><a href="#g-vp06">安全・故障</a><span class="n">VP-06・18枚</span></li><li><a href="#g-vp07">資源・マージン</a><span class="n">VP-07・7枚</span></li><li><a href="#g-vp08">物理配置</a><span class="n">VP-08・2枚</span></li><li><a href="#g-vp09">構成の違い</a><span class="n">VP-09・4枚</span></li><li><a href="#g-vp10">根拠の追跡</a><span class="n">VP-10・33枚</span></li><li><a href="#g-vp11">モデル管理</a><span class="n">VP-11・3枚</span></li><li><a href="#g-vp12">トレース・影響</a><span class="n">VP-12・3枚</span></li><li><a href="#g-vp13">人間系</a><span class="n">VP-13・27枚</span></li><li><a href="#g-src">原本と SysML v2 テキスト</a><span class="n">42件</span></li></ul>
+<h3 id="g-vp01">構成<span class="n">VP-01・34枚</span></h3>
+<div class="gal">
+<!--[figs:vp01]-->
+<figure><a href='SSD-SYS-ARC-001_p1_system.svg'><img src='preview/SSD-SYS-ARC-001_p1_system.png' alt='図1 システム構成のプレビュー' loading='lazy'></a><figcaption>図1 システム構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p2_orbiter.svg'><img src='preview/SSD-SYS-ARC-001_p2_orbiter.png' alt='図2 オービタ サブシステム構成のプレビュー' loading='lazy'></a><figcaption>図2 オービタ サブシステム構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p3_eclss.svg'><img src='preview/SSD-SYS-ARC-001_p3_eclss.png' alt='図3 ECLSS 機能構成のプレビュー' loading='lazy'></a><figcaption>図3 ECLSS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p6_eps.svg'><img src='preview/SSD-SYS-ARC-001_p6_eps.png' alt='図6 EPS 機能構成のプレビュー' loading='lazy'></a><figcaption>図6 EPS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p8_tcs.svg'><img src='preview/SSD-SYS-ARC-001_p8_tcs.png' alt='図8 熱制御 機能構成のプレビュー' loading='lazy'></a><figcaption>図8 熱制御 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p12_ars.svg'><img src='preview/SSD-SYS-ARC-001_p12_ars.png' alt='図12 ARS 機能構成のプレビュー' loading='lazy'></a><figcaption>図12 ARS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p14_co2.svg'><img src='preview/SSD-SYS-ARC-001_p14_co2.png' alt='図14 CO2・CO除去 機能構成のプレビュー' loading='lazy'></a><figcaption>図14 CO2・CO除去 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p16_cac.svg'><img src='preview/SSD-SYS-ARC-001_p16_cac.png' alt='図16 キャビン空気循環 機能構成のプレビュー' loading='lazy'></a><figcaption>図16 キャビン空気循環 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p18_pcs.svg'><img src='preview/SSD-SYS-ARC-001_p18_pcs.png' alt='図18 圧力制御系 機能構成のプレビュー' loading='lazy'></a><figcaption>図18 圧力制御系 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p20_h2o.svg'><img src='preview/SSD-SYS-ARC-001_p20_h2o.png' alt='図20 給水・廃水系 機能構成のプレビュー' loading='lazy'></a><figcaption>図20 給水・廃水系 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p22_wcs.svg'><img src='preview/SSD-SYS-ARC-001_p22_wcs.png' alt='図22 廃棄物収集系 機能構成のプレビュー' loading='lazy'></a><figcaption>図22 廃棄物収集系 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p24_als.svg'><img src='preview/SSD-SYS-ARC-001_p24_als.png' alt='図24 エアロック支援系 機能構成のプレビュー' loading='lazy'></a><figcaption>図24 エアロック支援系 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p26_fds.svg'><img src='preview/SSD-SYS-ARC-001_p26_fds.png' alt='図26 煙検知・消火系 機能構成のプレビュー' loading='lazy'></a><figcaption>図26 煙検知・消火系 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p28_rcrs.svg'><img src='preview/SSD-SYS-ARC-001_p28_rcrs.png' alt='図28 再生式CO2除去装置 機能構成のプレビュー' loading='lazy'></a><figcaption>図28 再生式CO2除去装置 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p30_thc.svg'><img src='preview/SSD-SYS-ARC-001_p30_thc.png' alt='図30 キャビン温湿度制御 機能構成のプレビュー' loading='lazy'></a><figcaption>図30 キャビン温湿度制御 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p32_avb.svg'><img src='preview/SSD-SYS-ARC-001_p32_avb.png' alt='図32 アビオニクスベイ空冷 機能構成のプレビュー' loading='lazy'></a><figcaption>図32 アビオニクスベイ空冷 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p34_imu.svg'><img src='preview/SSD-SYS-ARC-001_p34_imu.png' alt='図34 IMU空冷 機能構成のプレビュー' loading='lazy'></a><figcaption>図34 IMU空冷 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p36_wcl.svg'><img src='preview/SSD-SYS-ARC-001_p36_wcl.png' alt='図36 水冷却ループ 機能構成のプレビュー' loading='lazy'></a><figcaption>図36 水冷却ループ 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p46_gnc.svg'><img src='preview/SSD-SYS-ARC-001_p46_gnc.png' alt='図46 GN&amp;C 機能構成のプレビュー' loading='lazy'></a><figcaption>図46 GN&amp;C 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p48_dps.svg'><img src='preview/SSD-SYS-ARC-001_p48_dps.png' alt='図48 DPS 機能構成のプレビュー' loading='lazy'></a><figcaption>図48 DPS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p50_mps.svg'><img src='preview/SSD-SYS-ARC-001_p50_mps.png' alt='図50 MPS 機能構成のプレビュー' loading='lazy'></a><figcaption>図50 MPS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p52_oms.svg'><img src='preview/SSD-SYS-ARC-001_p52_oms.png' alt='図52 OMS 機能構成のプレビュー' loading='lazy'></a><figcaption>図52 OMS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p54_rcs.svg'><img src='preview/SSD-SYS-ARC-001_p54_rcs.png' alt='図54 RCS 機能構成のプレビュー' loading='lazy'></a><figcaption>図54 RCS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p56_apu.svg'><img src='preview/SSD-SYS-ARC-001_p56_apu.png' alt='図56 APU/HYD 機能構成のプレビュー' loading='lazy'></a><figcaption>図56 APU/HYD 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p58_ct.svg'><img src='preview/SSD-SYS-ARC-001_p58_ct.png' alt='図58 C&amp;T 機能構成のプレビュー' loading='lazy'></a><figcaption>図58 C&amp;T 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p60_eva.svg'><img src='preview/SSD-SYS-ARC-001_p60_eva.png' alt='図60 EVA 機能構成のプレビュー' loading='lazy'></a><figcaption>図60 EVA 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p62_cw.svg'><img src='preview/SSD-SYS-ARC-001_p62_cw.png' alt='図62 C/W 機能構成のプレビュー' loading='lazy'></a><figcaption>図62 C/W 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p64_crew.svg'><img src='preview/SSD-SYS-ARC-001_p64_crew.png' alt='図64 CREW 機能構成のプレビュー' loading='lazy'></a><figcaption>図64 CREW 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p66_pls.svg'><img src='preview/SSD-SYS-ARC-001_p66_pls.png' alt='図66 PLS 機能構成のプレビュー' loading='lazy'></a><figcaption>図66 PLS 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p68_mech.svg'><img src='preview/SSD-SYS-ARC-001_p68_mech.png' alt='図68 MECH 機能構成のプレビュー' loading='lazy'></a><figcaption>図68 MECH 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p70_str.svg'><img src='preview/SSD-SYS-ARC-001_p70_str.png' alt='図70 STR 機能構成のプレビュー' loading='lazy'></a><figcaption>図70 STR 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p72_et.svg'><img src='preview/SSD-SYS-ARC-001_p72_et.png' alt='図72 ET 機能構成のプレビュー' loading='lazy'></a><figcaption>図72 ET 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p74_srb.svg'><img src='preview/SSD-SYS-ARC-001_p74_srb.png' alt='図74 SRB 機能構成のプレビュー' loading='lazy'></a><figcaption>図74 SRB 機能構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p89_bdd_structure.svg'><img src='preview/SSD-SYS-ARC-001_p89_bdd_structure.png' alt='図89 システム構成 ブロック定義図のプレビュー' loading='lazy'></a><figcaption>図89 システム構成 ブロック定義図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp01]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp01]-->
+<tr><td class='id'>図1</td><td>図1 システム構成</td><td><a href='SSD-SYS-ARC-001_p1_system.svg'>SSD-SYS-ARC-001_p1_system.svg</a></td></tr>
+<tr><td class='id'>図2</td><td>図2 オービタ サブシステム構成</td><td><a href='SSD-SYS-ARC-001_p2_orbiter.svg'>SSD-SYS-ARC-001_p2_orbiter.svg</a></td></tr>
+<tr><td class='id'>図3</td><td>図3 ECLSS 機能構成</td><td><a href='SSD-SYS-ARC-001_p3_eclss.svg'>SSD-SYS-ARC-001_p3_eclss.svg</a></td></tr>
+<tr><td class='id'>図6</td><td>図6 EPS 機能構成</td><td><a href='SSD-SYS-ARC-001_p6_eps.svg'>SSD-SYS-ARC-001_p6_eps.svg</a></td></tr>
+<tr><td class='id'>図8</td><td>図8 熱制御 機能構成</td><td><a href='SSD-SYS-ARC-001_p8_tcs.svg'>SSD-SYS-ARC-001_p8_tcs.svg</a></td></tr>
+<tr><td class='id'>図12</td><td>図12 ARS 機能構成</td><td><a href='SSD-SYS-ARC-001_p12_ars.svg'>SSD-SYS-ARC-001_p12_ars.svg</a></td></tr>
+<tr><td class='id'>図14</td><td>図14 CO2・CO除去 機能構成</td><td><a href='SSD-SYS-ARC-001_p14_co2.svg'>SSD-SYS-ARC-001_p14_co2.svg</a></td></tr>
+<tr><td class='id'>図16</td><td>図16 キャビン空気循環 機能構成</td><td><a href='SSD-SYS-ARC-001_p16_cac.svg'>SSD-SYS-ARC-001_p16_cac.svg</a></td></tr>
+<tr><td class='id'>図18</td><td>図18 圧力制御系 機能構成</td><td><a href='SSD-SYS-ARC-001_p18_pcs.svg'>SSD-SYS-ARC-001_p18_pcs.svg</a></td></tr>
+<tr><td class='id'>図20</td><td>図20 給水・廃水系 機能構成</td><td><a href='SSD-SYS-ARC-001_p20_h2o.svg'>SSD-SYS-ARC-001_p20_h2o.svg</a></td></tr>
+<tr><td class='id'>図22</td><td>図22 廃棄物収集系 機能構成</td><td><a href='SSD-SYS-ARC-001_p22_wcs.svg'>SSD-SYS-ARC-001_p22_wcs.svg</a></td></tr>
+<tr><td class='id'>図24</td><td>図24 エアロック支援系 機能構成</td><td><a href='SSD-SYS-ARC-001_p24_als.svg'>SSD-SYS-ARC-001_p24_als.svg</a></td></tr>
+<tr><td class='id'>図26</td><td>図26 煙検知・消火系 機能構成</td><td><a href='SSD-SYS-ARC-001_p26_fds.svg'>SSD-SYS-ARC-001_p26_fds.svg</a></td></tr>
+<tr><td class='id'>図28</td><td>図28 再生式CO2除去装置 機能構成</td><td><a href='SSD-SYS-ARC-001_p28_rcrs.svg'>SSD-SYS-ARC-001_p28_rcrs.svg</a></td></tr>
+<tr><td class='id'>図30</td><td>図30 キャビン温湿度制御 機能構成</td><td><a href='SSD-SYS-ARC-001_p30_thc.svg'>SSD-SYS-ARC-001_p30_thc.svg</a></td></tr>
+<tr><td class='id'>図32</td><td>図32 アビオニクスベイ空冷 機能構成</td><td><a href='SSD-SYS-ARC-001_p32_avb.svg'>SSD-SYS-ARC-001_p32_avb.svg</a></td></tr>
+<tr><td class='id'>図34</td><td>図34 IMU空冷 機能構成</td><td><a href='SSD-SYS-ARC-001_p34_imu.svg'>SSD-SYS-ARC-001_p34_imu.svg</a></td></tr>
+<tr><td class='id'>図36</td><td>図36 水冷却ループ 機能構成</td><td><a href='SSD-SYS-ARC-001_p36_wcl.svg'>SSD-SYS-ARC-001_p36_wcl.svg</a></td></tr>
+<tr><td class='id'>図46</td><td>図46 GN&amp;C 機能構成</td><td><a href='SSD-SYS-ARC-001_p46_gnc.svg'>SSD-SYS-ARC-001_p46_gnc.svg</a></td></tr>
+<tr><td class='id'>図48</td><td>図48 DPS 機能構成</td><td><a href='SSD-SYS-ARC-001_p48_dps.svg'>SSD-SYS-ARC-001_p48_dps.svg</a></td></tr>
+<tr><td class='id'>図50</td><td>図50 MPS 機能構成</td><td><a href='SSD-SYS-ARC-001_p50_mps.svg'>SSD-SYS-ARC-001_p50_mps.svg</a></td></tr>
+<tr><td class='id'>図52</td><td>図52 OMS 機能構成</td><td><a href='SSD-SYS-ARC-001_p52_oms.svg'>SSD-SYS-ARC-001_p52_oms.svg</a></td></tr>
+<tr><td class='id'>図54</td><td>図54 RCS 機能構成</td><td><a href='SSD-SYS-ARC-001_p54_rcs.svg'>SSD-SYS-ARC-001_p54_rcs.svg</a></td></tr>
+<tr><td class='id'>図56</td><td>図56 APU/HYD 機能構成</td><td><a href='SSD-SYS-ARC-001_p56_apu.svg'>SSD-SYS-ARC-001_p56_apu.svg</a></td></tr>
+<tr><td class='id'>図58</td><td>図58 C&amp;T 機能構成</td><td><a href='SSD-SYS-ARC-001_p58_ct.svg'>SSD-SYS-ARC-001_p58_ct.svg</a></td></tr>
+<tr><td class='id'>図60</td><td>図60 EVA 機能構成</td><td><a href='SSD-SYS-ARC-001_p60_eva.svg'>SSD-SYS-ARC-001_p60_eva.svg</a></td></tr>
+<tr><td class='id'>図62</td><td>図62 C/W 機能構成</td><td><a href='SSD-SYS-ARC-001_p62_cw.svg'>SSD-SYS-ARC-001_p62_cw.svg</a></td></tr>
+<tr><td class='id'>図64</td><td>図64 CREW 機能構成</td><td><a href='SSD-SYS-ARC-001_p64_crew.svg'>SSD-SYS-ARC-001_p64_crew.svg</a></td></tr>
+<tr><td class='id'>図66</td><td>図66 PLS 機能構成</td><td><a href='SSD-SYS-ARC-001_p66_pls.svg'>SSD-SYS-ARC-001_p66_pls.svg</a></td></tr>
+<tr><td class='id'>図68</td><td>図68 MECH 機能構成</td><td><a href='SSD-SYS-ARC-001_p68_mech.svg'>SSD-SYS-ARC-001_p68_mech.svg</a></td></tr>
+<tr><td class='id'>図70</td><td>図70 STR 機能構成</td><td><a href='SSD-SYS-ARC-001_p70_str.svg'>SSD-SYS-ARC-001_p70_str.svg</a></td></tr>
+<tr><td class='id'>図72</td><td>図72 ET 機能構成</td><td><a href='SSD-SYS-ARC-001_p72_et.svg'>SSD-SYS-ARC-001_p72_et.svg</a></td></tr>
+<tr><td class='id'>図74</td><td>図74 SRB 機能構成</td><td><a href='SSD-SYS-ARC-001_p74_srb.svg'>SSD-SYS-ARC-001_p74_srb.svg</a></td></tr>
+<tr><td class='id'>図89</td><td>図89 システム構成 ブロック定義図</td><td><a href='SSD-SYS-ARC-001_p89_bdd_structure.svg'>SSD-SYS-ARC-001_p89_bdd_structure.svg</a></td></tr>
+<!--[/figrows:vp01]--></table>
+</details>
+<h3 id="g-vp02">インタフェース<span class="n">VP-02・16枚</span></h3>
+<div class="gal">
+<!--[figs:vp02]-->
+<figure><a href='SSD-SYS-ARC-001_p38_n2.svg'><img src='preview/SSD-SYS-ARC-001_p38_n2.png' alt='図38 オービタ N2 インタフェース行列のプレビュー' loading='lazy'></a><figcaption>図38 オービタ N2 インタフェース行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p41_aux_ground.svg'><img src='preview/SSD-SYS-ARC-001_p41_aux_ground.png' alt='図41 補助図 T-0 アンビリカルと ET・SRBのプレビュー' loading='lazy'></a><figcaption>図41 補助図 T-0 アンビリカルと ET・SRB（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p42_aux_data.svg'><img src='preview/SSD-SYS-ARC-001_p42_aux_data.png' alt='図42 補助図 データ・冷却・構造のプレビュー' loading='lazy'></a><figcaption>図42 補助図 データ・冷却・構造（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p112_ibd_eps.svg'><img src='preview/SSD-SYS-ARC-001_p112_ibd_eps.png' alt='図112 EPS 発電・配電 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図112 EPS 発電・配電 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p113_ibd_atcs.svg'><img src='preview/SSD-SYS-ARC-001_p113_ibd_atcs.png' alt='図113 ATCS 冷却ループ 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図113 ATCS 冷却ループ 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p114_ibd_mps.svg'><img src='preview/SSD-SYS-ARC-001_p114_ibd_mps.png' alt='図114 MPS 推進薬供給 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図114 MPS 推進薬供給 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p128_ibd_dps.svg'><img src='preview/SSD-SYS-ARC-001_p128_ibd_dps.png' alt='図128 DPS データバス網 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図128 DPS データバス網 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p129_ibd_apu.svg'><img src='preview/SSD-SYS-ARC-001_p129_ibd_apu.png' alt='図129 APU・油圧 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図129 APU・油圧 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p130_ibd_prop.svg'><img src='preview/SSD-SYS-ARC-001_p130_ibd_prop.png' alt='図130 OMS・RCS 推進薬 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図130 OMS・RCS 推進薬 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p131_ibd_ct.svg'><img src='preview/SSD-SYS-ARC-001_p131_ibd_ct.png' alt='図131 C&amp;T RF リンク 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図131 C&amp;T RF リンク 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p159_ibd_ars_air.svg'><img src='preview/SSD-SYS-ARC-001_p159_ibd_ars_air.png' alt='図159 ARS キャビン空気ループ 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図159 ARS キャビン空気ループ 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p160_ibd_ars_water.svg'><img src='preview/SSD-SYS-ARC-001_p160_ibd_ars_water.png' alt='図160 ARS 水冷却ループ 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図160 ARS 水冷却ループ 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p161_ibd_pcs.svg'><img src='preview/SSD-SYS-ARC-001_p161_ibd_pcs.png' alt='図161 PCS 酸素・窒素供給 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図161 PCS 酸素・窒素供給 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p162_ibd_water.svg'><img src='preview/SSD-SYS-ARC-001_p162_ibd_water.png' alt='図162 給水・廃水・WCS 内部ブロック図のプレビュー' loading='lazy'></a><figcaption>図162 給水・廃水・WCS 内部ブロック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p179_emu_structure.svg'><img src='preview/SSD-SYS-ARC-001_p179_emu_structure.png' alt='図179 EMU の構造（ブロック定義）のプレビュー' loading='lazy'></a><figcaption>図179 EMU の構造（ブロック定義）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p180_ibd_emu.svg'><img src='preview/SSD-SYS-ARC-001_p180_ibd_emu.png' alt='図180 EMU 内部ブロック図（換気・冷却水・電力・通信）のプレビュー' loading='lazy'></a><figcaption>図180 EMU 内部ブロック図（換気・冷却水・電力・通信）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp02]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp02]-->
+<tr><td class='id'>図38</td><td>図38 オービタ N2 インタフェース行列</td><td><a href='SSD-SYS-ARC-001_p38_n2.svg'>SSD-SYS-ARC-001_p38_n2.svg</a></td></tr>
+<tr><td class='id'>図41</td><td>図41 補助図 T-0 アンビリカルと ET・SRB</td><td><a href='SSD-SYS-ARC-001_p41_aux_ground.svg'>SSD-SYS-ARC-001_p41_aux_ground.svg</a></td></tr>
+<tr><td class='id'>図42</td><td>図42 補助図 データ・冷却・構造</td><td><a href='SSD-SYS-ARC-001_p42_aux_data.svg'>SSD-SYS-ARC-001_p42_aux_data.svg</a></td></tr>
+<tr><td class='id'>図112</td><td>図112 EPS 発電・配電 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p112_ibd_eps.svg'>SSD-SYS-ARC-001_p112_ibd_eps.svg</a></td></tr>
+<tr><td class='id'>図113</td><td>図113 ATCS 冷却ループ 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p113_ibd_atcs.svg'>SSD-SYS-ARC-001_p113_ibd_atcs.svg</a></td></tr>
+<tr><td class='id'>図114</td><td>図114 MPS 推進薬供給 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p114_ibd_mps.svg'>SSD-SYS-ARC-001_p114_ibd_mps.svg</a></td></tr>
+<tr><td class='id'>図128</td><td>図128 DPS データバス網 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p128_ibd_dps.svg'>SSD-SYS-ARC-001_p128_ibd_dps.svg</a></td></tr>
+<tr><td class='id'>図129</td><td>図129 APU・油圧 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p129_ibd_apu.svg'>SSD-SYS-ARC-001_p129_ibd_apu.svg</a></td></tr>
+<tr><td class='id'>図130</td><td>図130 OMS・RCS 推進薬 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p130_ibd_prop.svg'>SSD-SYS-ARC-001_p130_ibd_prop.svg</a></td></tr>
+<tr><td class='id'>図131</td><td>図131 C&amp;T RF リンク 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p131_ibd_ct.svg'>SSD-SYS-ARC-001_p131_ibd_ct.svg</a></td></tr>
+<tr><td class='id'>図159</td><td>図159 ARS キャビン空気ループ 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p159_ibd_ars_air.svg'>SSD-SYS-ARC-001_p159_ibd_ars_air.svg</a></td></tr>
+<tr><td class='id'>図160</td><td>図160 ARS 水冷却ループ 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p160_ibd_ars_water.svg'>SSD-SYS-ARC-001_p160_ibd_ars_water.svg</a></td></tr>
+<tr><td class='id'>図161</td><td>図161 PCS 酸素・窒素供給 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p161_ibd_pcs.svg'>SSD-SYS-ARC-001_p161_ibd_pcs.svg</a></td></tr>
+<tr><td class='id'>図162</td><td>図162 給水・廃水・WCS 内部ブロック図</td><td><a href='SSD-SYS-ARC-001_p162_ibd_water.svg'>SSD-SYS-ARC-001_p162_ibd_water.svg</a></td></tr>
+<tr><td class='id'>図179</td><td>図179 EMU の構造（ブロック定義）</td><td><a href='SSD-SYS-ARC-001_p179_emu_structure.svg'>SSD-SYS-ARC-001_p179_emu_structure.svg</a></td></tr>
+<tr><td class='id'>図180</td><td>図180 EMU 内部ブロック図（換気・冷却水・電力・通信）</td><td><a href='SSD-SYS-ARC-001_p180_ibd_emu.svg'>SSD-SYS-ARC-001_p180_ibd_emu.svg</a></td></tr>
+<!--[/figrows:vp02]--></table>
+</details>
+<h3 id="g-vp03">要求・検証<span class="n">VP-03・7枚</span></h3>
+<div class="gal">
+<!--[figs:vp03]-->
+<figure><a href='SSD-SYS-ARC-001_p90_req_matrix.svg'><img src='preview/SSD-SYS-ARC-001_p90_req_matrix.png' alt='図90 要求の導出・充足 行列のプレビュー' loading='lazy'></a><figcaption>図90 要求の導出・充足 行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p110_verification.svg'><img src='preview/SSD-SYS-ARC-001_p110_verification.png' alt='図110 検証マトリクスのプレビュー' loading='lazy'></a><figcaption>図110 検証マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p124_req_formal.svg'><img src='preview/SSD-SYS-ARC-001_p124_req_formal.png' alt='図124 要求の形式化の区分のプレビュー' loading='lazy'></a><figcaption>図124 要求の形式化の区分（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p125_req_evaluation.svg'><img src='preview/SSD-SYS-ARC-001_p125_req_evaluation.png' alt='図125 要求の値による判定のプレビュー' loading='lazy'></a><figcaption>図125 要求の値による判定（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p133_flight_tests.svg'><img src='preview/SSD-SYS-ARC-001_p133_flight_tests.png' alt='図133 飛行試験の結果と要求のプレビュー' loading='lazy'></a><figcaption>図133 飛行試験の結果と要求（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p166_rql_derivation.svg'><img src='preview/SSD-SYS-ARC-001_p166_rql_derivation.png' alt='図166 ECLSS 要求の導出（L2 → L3）のプレビュー' loading='lazy'></a><figcaption>図166 ECLSS 要求の導出（L2 → L3）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p167_rql_coverage.svg'><img src='preview/SSD-SYS-ARC-001_p167_rql_coverage.png' alt='図167 ECLSS 下位の機能行の網羅（要求の割付・判断）のプレビュー' loading='lazy'></a><figcaption>図167 ECLSS 下位の機能行の網羅（要求の割付・判断）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp03]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp03]-->
+<tr><td class='id'>図90</td><td>図90 要求の導出・充足 行列</td><td><a href='SSD-SYS-ARC-001_p90_req_matrix.svg'>SSD-SYS-ARC-001_p90_req_matrix.svg</a></td></tr>
+<tr><td class='id'>図110</td><td>図110 検証マトリクス</td><td><a href='SSD-SYS-ARC-001_p110_verification.svg'>SSD-SYS-ARC-001_p110_verification.svg</a></td></tr>
+<tr><td class='id'>図124</td><td>図124 要求の形式化の区分</td><td><a href='SSD-SYS-ARC-001_p124_req_formal.svg'>SSD-SYS-ARC-001_p124_req_formal.svg</a></td></tr>
+<tr><td class='id'>図125</td><td>図125 要求の値による判定</td><td><a href='SSD-SYS-ARC-001_p125_req_evaluation.svg'>SSD-SYS-ARC-001_p125_req_evaluation.svg</a></td></tr>
+<tr><td class='id'>図133</td><td>図133 飛行試験の結果と要求</td><td><a href='SSD-SYS-ARC-001_p133_flight_tests.svg'>SSD-SYS-ARC-001_p133_flight_tests.svg</a></td></tr>
+<tr><td class='id'>図166</td><td>図166 ECLSS 要求の導出（L2 → L3）</td><td><a href='SSD-SYS-ARC-001_p166_rql_derivation.svg'>SSD-SYS-ARC-001_p166_rql_derivation.svg</a></td></tr>
+<tr><td class='id'>図167</td><td>図167 ECLSS 下位の機能行の網羅（要求の割付・判断）</td><td><a href='SSD-SYS-ARC-001_p167_rql_coverage.svg'>SSD-SYS-ARC-001_p167_rql_coverage.svg</a></td></tr>
+<!--[/figrows:vp03]--></table>
+</details>
+<h3 id="g-vp04">運用<span class="n">VP-04・13枚</span></h3>
+<div class="gal">
+<!--[figs:vp04]-->
+<figure><a href='SSD-SYS-ARC-001_p39_phase_matrix.svg'><img src='preview/SSD-SYS-ARC-001_p39_phase_matrix.png' alt='図39 フェーズ別 サブシステム稼働表のプレビュー' loading='lazy'></a><figcaption>図39 フェーズ別 サブシステム稼働表（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p40_ascent_seq.svg'><img src='preview/SSD-SYS-ARC-001_p40_ascent_seq.png' alt='図40 上昇シーケンスのプレビュー' loading='lazy'></a><figcaption>図40 上昇シーケンス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p76_mode_sm.svg'><img src='preview/SSD-SYS-ARC-001_p76_mode_sm.png' alt='図76 ミッションフェーズ・アボート 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図76 ミッションフェーズ・アボート 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p77_gonogo_sm.svg'><img src='preview/SSD-SYS-ARC-001_p77_gonogo_sm.png' alt='図77 飛行継続判断（Go/No-Go）状態遷移図のプレビュー' loading='lazy'></a><figcaption>図77 飛行継続判断（Go/No-Go）状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p83_seq_deorbit.svg'><img src='preview/SSD-SYS-ARC-001_p83_seq_deorbit.png' alt='図83 軌道離脱〜着陸 シーケンス図のプレビュー' loading='lazy'></a><figcaption>図83 軌道離脱〜着陸 シーケンス図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p84_seq_ascent.svg'><img src='preview/SSD-SYS-ARC-001_p84_seq_ascent.png' alt='図84 上昇 シーケンス図のプレビュー' loading='lazy'></a><figcaption>図84 上昇 シーケンス図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p85_seq_command.svg'><img src='preview/SSD-SYS-ARC-001_p85_seq_command.png' alt='図85 指令・テレメトリ経路 シーケンス図のプレビュー' loading='lazy'></a><figcaption>図85 指令・テレメトリ経路 シーケンス図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p87_act_eva.svg'><img src='preview/SSD-SYS-ARC-001_p87_act_eva.png' alt='図87 EVA 準備〜再与圧 活動図のプレビュー' loading='lazy'></a><figcaption>図87 EVA 準備〜再与圧 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p93_uc_mission.svg'><img src='preview/SSD-SYS-ARC-001_p93_uc_mission.png' alt='図93 運用のユースケース図のプレビュー' loading='lazy'></a><figcaption>図93 運用のユースケース図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p94_seq_rndz.svg'><img src='preview/SSD-SYS-ARC-001_p94_seq_rndz.png' alt='図94 ランデブー・ドッキング シーケンス図のプレビュー' loading='lazy'></a><figcaption>図94 ランデブー・ドッキング シーケンス図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p95_seq_rsls.svg'><img src='preview/SSD-SYS-ARC-001_p95_seq_rsls.png' alt='図95 最終秒読み〜RSLS アボート シーケンス図のプレビュー' loading='lazy'></a><figcaption>図95 最終秒読み〜RSLS アボート シーケンス図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p96_act_deploy.svg'><img src='preview/SSD-SYS-ARC-001_p96_act_deploy.png' alt='図96 RMS によるペイロード放出 活動図のプレビュー' loading='lazy'></a><figcaption>図96 RMS によるペイロード放出 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p97_act_abort.svg'><img src='preview/SSD-SYS-ARC-001_p97_act_abort.png' alt='図97 上昇アボートの選択 活動図のプレビュー' loading='lazy'></a><figcaption>図97 上昇アボートの選択 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp04]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp04]-->
+<tr><td class='id'>図39</td><td>図39 フェーズ別 サブシステム稼働表</td><td><a href='SSD-SYS-ARC-001_p39_phase_matrix.svg'>SSD-SYS-ARC-001_p39_phase_matrix.svg</a></td></tr>
+<tr><td class='id'>図40</td><td>図40 上昇シーケンス</td><td><a href='SSD-SYS-ARC-001_p40_ascent_seq.svg'>SSD-SYS-ARC-001_p40_ascent_seq.svg</a></td></tr>
+<tr><td class='id'>図76</td><td>図76 ミッションフェーズ・アボート 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p76_mode_sm.svg'>SSD-SYS-ARC-001_p76_mode_sm.svg</a></td></tr>
+<tr><td class='id'>図77</td><td>図77 飛行継続判断（Go/No-Go）状態遷移図</td><td><a href='SSD-SYS-ARC-001_p77_gonogo_sm.svg'>SSD-SYS-ARC-001_p77_gonogo_sm.svg</a></td></tr>
+<tr><td class='id'>図83</td><td>図83 軌道離脱〜着陸 シーケンス図</td><td><a href='SSD-SYS-ARC-001_p83_seq_deorbit.svg'>SSD-SYS-ARC-001_p83_seq_deorbit.svg</a></td></tr>
+<tr><td class='id'>図84</td><td>図84 上昇 シーケンス図</td><td><a href='SSD-SYS-ARC-001_p84_seq_ascent.svg'>SSD-SYS-ARC-001_p84_seq_ascent.svg</a></td></tr>
+<tr><td class='id'>図85</td><td>図85 指令・テレメトリ経路 シーケンス図</td><td><a href='SSD-SYS-ARC-001_p85_seq_command.svg'>SSD-SYS-ARC-001_p85_seq_command.svg</a></td></tr>
+<tr><td class='id'>図87</td><td>図87 EVA 準備〜再与圧 活動図</td><td><a href='SSD-SYS-ARC-001_p87_act_eva.svg'>SSD-SYS-ARC-001_p87_act_eva.svg</a></td></tr>
+<tr><td class='id'>図93</td><td>図93 運用のユースケース図</td><td><a href='SSD-SYS-ARC-001_p93_uc_mission.svg'>SSD-SYS-ARC-001_p93_uc_mission.svg</a></td></tr>
+<tr><td class='id'>図94</td><td>図94 ランデブー・ドッキング シーケンス図</td><td><a href='SSD-SYS-ARC-001_p94_seq_rndz.svg'>SSD-SYS-ARC-001_p94_seq_rndz.svg</a></td></tr>
+<tr><td class='id'>図95</td><td>図95 最終秒読み〜RSLS アボート シーケンス図</td><td><a href='SSD-SYS-ARC-001_p95_seq_rsls.svg'>SSD-SYS-ARC-001_p95_seq_rsls.svg</a></td></tr>
+<tr><td class='id'>図96</td><td>図96 RMS によるペイロード放出 活動図</td><td><a href='SSD-SYS-ARC-001_p96_act_deploy.svg'>SSD-SYS-ARC-001_p96_act_deploy.svg</a></td></tr>
+<tr><td class='id'>図97</td><td>図97 上昇アボートの選択 活動図</td><td><a href='SSD-SYS-ARC-001_p97_act_abort.svg'>SSD-SYS-ARC-001_p97_act_abort.svg</a></td></tr>
+<!--[/figrows:vp04]--></table>
+</details>
+<h3 id="g-vp05">系の振る舞い<span class="n">VP-05・23枚</span></h3>
+<div class="gal">
+<!--[figs:vp05]-->
+<figure><a href='SSD-SYS-ARC-001_p98_sm_gpc.svg'><img src='preview/SSD-SYS-ARC-001_p98_sm_gpc.png' alt='図98 GPC 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図98 GPC 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p99_sm_fc.svg'><img src='preview/SSD-SYS-ARC-001_p99_sm_fc.png' alt='図99 燃料電池 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図99 燃料電池 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p100_sm_apu.svg'><img src='preview/SSD-SYS-ARC-001_p100_sm_apu.png' alt='図100 APU 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図100 APU 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p101_sm_rms.svg'><img src='preview/SSD-SYS-ARC-001_p101_sm_rms.png' alt='図101 RMS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図101 RMS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p102_sm_atcs.svg'><img src='preview/SSD-SYS-ARC-001_p102_sm_atcs.png' alt='図102 ATCS 排熱 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図102 ATCS 排熱 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p103_mode_phase.svg'><img src='preview/SSD-SYS-ARC-001_p103_mode_phase.png' alt='図103 系のモード × フェーズ 行列のプレビュー' loading='lazy'></a><figcaption>図103 系のモード × フェーズ 行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p136_sm_oms.svg'><img src='preview/SSD-SYS-ARC-001_p136_sm_oms.png' alt='図136 OMS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図136 OMS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p137_sm_rcs.svg'><img src='preview/SSD-SYS-ARC-001_p137_sm_rcs.png' alt='図137 RCS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図137 RCS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p138_sm_mps.svg'><img src='preview/SSD-SYS-ARC-001_p138_sm_mps.png' alt='図138 MPS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図138 MPS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p139_sm_ct.svg'><img src='preview/SSD-SYS-ARC-001_p139_sm_ct.png' alt='図139 C&amp;T 通信構成 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図139 C&amp;T 通信構成 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p140_sm_pcs.svg'><img src='preview/SSD-SYS-ARC-001_p140_sm_pcs.png' alt='図140 与圧系 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図140 与圧系 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p141_sm_ods.svg'><img src='preview/SSD-SYS-ARC-001_p141_sm_ods.png' alt='図141 ODS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図141 ODS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p142_mode_phase_2.svg'><img src='preview/SSD-SYS-ARC-001_p142_mode_phase_2.png' alt='図142 系のモード × フェーズ 行列（その2）のプレビュー' loading='lazy'></a><figcaption>図142 系のモード × フェーズ 行列（その2）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p168_sm_ars.svg'><img src='preview/SSD-SYS-ARC-001_p168_sm_ars.png' alt='図168 ARS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図168 ARS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p169_sm_fds.svg'><img src='preview/SSD-SYS-ARC-001_p169_sm_fds.png' alt='図169 FDS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図169 FDS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p170_sm_water.svg'><img src='preview/SSD-SYS-ARC-001_p170_sm_water.png' alt='図170 給水・廃水系 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図170 給水・廃水系 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p171_sm_wcs.svg'><img src='preview/SSD-SYS-ARC-001_p171_sm_wcs.png' alt='図171 WCS 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図171 WCS 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p172_mode_phase_3.svg'><img src='preview/SSD-SYS-ARC-001_p172_mode_phase_3.png' alt='図172 ECLSS のモード × フェーズ 行列のプレビュー' loading='lazy'></a><figcaption>図172 ECLSS のモード × フェーズ 行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p173_act_lioh.svg'><img src='preview/SSD-SYS-ARC-001_p173_act_lioh.png' alt='図173 LiOH キャニスタの交換 活動図のプレビュー' loading='lazy'></a><figcaption>図173 LiOH キャニスタの交換 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p174_act_dump.svg'><img src='preview/SSD-SYS-ARC-001_p174_act_dump.png' alt='図174 給水・廃水のダンプ 活動図のプレビュー' loading='lazy'></a><figcaption>図174 給水・廃水のダンプ 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p175_act_water_loop.svg'><img src='preview/SSD-SYS-ARC-001_p175_act_water_loop.png' alt='図175 水冷却ループの喪失の処置 活動図のプレビュー' loading='lazy'></a><figcaption>図175 水冷却ループの喪失の処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p181_sm_emu.svg'><img src='preview/SSD-SYS-ARC-001_p181_sm_emu.png' alt='図181 EMU 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図181 EMU 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p182_sm_airlock.svg'><img src='preview/SSD-SYS-ARC-001_p182_sm_airlock.png' alt='図182 エアロック 状態遷移図のプレビュー' loading='lazy'></a><figcaption>図182 エアロック 状態遷移図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp05]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp05]-->
+<tr><td class='id'>図98</td><td>図98 GPC 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p98_sm_gpc.svg'>SSD-SYS-ARC-001_p98_sm_gpc.svg</a></td></tr>
+<tr><td class='id'>図99</td><td>図99 燃料電池 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p99_sm_fc.svg'>SSD-SYS-ARC-001_p99_sm_fc.svg</a></td></tr>
+<tr><td class='id'>図100</td><td>図100 APU 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p100_sm_apu.svg'>SSD-SYS-ARC-001_p100_sm_apu.svg</a></td></tr>
+<tr><td class='id'>図101</td><td>図101 RMS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p101_sm_rms.svg'>SSD-SYS-ARC-001_p101_sm_rms.svg</a></td></tr>
+<tr><td class='id'>図102</td><td>図102 ATCS 排熱 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p102_sm_atcs.svg'>SSD-SYS-ARC-001_p102_sm_atcs.svg</a></td></tr>
+<tr><td class='id'>図103</td><td>図103 系のモード × フェーズ 行列</td><td><a href='SSD-SYS-ARC-001_p103_mode_phase.svg'>SSD-SYS-ARC-001_p103_mode_phase.svg</a></td></tr>
+<tr><td class='id'>図136</td><td>図136 OMS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p136_sm_oms.svg'>SSD-SYS-ARC-001_p136_sm_oms.svg</a></td></tr>
+<tr><td class='id'>図137</td><td>図137 RCS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p137_sm_rcs.svg'>SSD-SYS-ARC-001_p137_sm_rcs.svg</a></td></tr>
+<tr><td class='id'>図138</td><td>図138 MPS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p138_sm_mps.svg'>SSD-SYS-ARC-001_p138_sm_mps.svg</a></td></tr>
+<tr><td class='id'>図139</td><td>図139 C&amp;T 通信構成 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p139_sm_ct.svg'>SSD-SYS-ARC-001_p139_sm_ct.svg</a></td></tr>
+<tr><td class='id'>図140</td><td>図140 与圧系 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p140_sm_pcs.svg'>SSD-SYS-ARC-001_p140_sm_pcs.svg</a></td></tr>
+<tr><td class='id'>図141</td><td>図141 ODS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p141_sm_ods.svg'>SSD-SYS-ARC-001_p141_sm_ods.svg</a></td></tr>
+<tr><td class='id'>図142</td><td>図142 系のモード × フェーズ 行列（その2）</td><td><a href='SSD-SYS-ARC-001_p142_mode_phase_2.svg'>SSD-SYS-ARC-001_p142_mode_phase_2.svg</a></td></tr>
+<tr><td class='id'>図168</td><td>図168 ARS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p168_sm_ars.svg'>SSD-SYS-ARC-001_p168_sm_ars.svg</a></td></tr>
+<tr><td class='id'>図169</td><td>図169 FDS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p169_sm_fds.svg'>SSD-SYS-ARC-001_p169_sm_fds.svg</a></td></tr>
+<tr><td class='id'>図170</td><td>図170 給水・廃水系 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p170_sm_water.svg'>SSD-SYS-ARC-001_p170_sm_water.svg</a></td></tr>
+<tr><td class='id'>図171</td><td>図171 WCS 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p171_sm_wcs.svg'>SSD-SYS-ARC-001_p171_sm_wcs.svg</a></td></tr>
+<tr><td class='id'>図172</td><td>図172 ECLSS のモード × フェーズ 行列</td><td><a href='SSD-SYS-ARC-001_p172_mode_phase_3.svg'>SSD-SYS-ARC-001_p172_mode_phase_3.svg</a></td></tr>
+<tr><td class='id'>図173</td><td>図173 LiOH キャニスタの交換 活動図</td><td><a href='SSD-SYS-ARC-001_p173_act_lioh.svg'>SSD-SYS-ARC-001_p173_act_lioh.svg</a></td></tr>
+<tr><td class='id'>図174</td><td>図174 給水・廃水のダンプ 活動図</td><td><a href='SSD-SYS-ARC-001_p174_act_dump.svg'>SSD-SYS-ARC-001_p174_act_dump.svg</a></td></tr>
+<tr><td class='id'>図175</td><td>図175 水冷却ループの喪失の処置 活動図</td><td><a href='SSD-SYS-ARC-001_p175_act_water_loop.svg'>SSD-SYS-ARC-001_p175_act_water_loop.svg</a></td></tr>
+<tr><td class='id'>図181</td><td>図181 EMU 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p181_sm_emu.svg'>SSD-SYS-ARC-001_p181_sm_emu.svg</a></td></tr>
+<tr><td class='id'>図182</td><td>図182 エアロック 状態遷移図</td><td><a href='SSD-SYS-ARC-001_p182_sm_airlock.svg'>SSD-SYS-ARC-001_p182_sm_airlock.svg</a></td></tr>
+<!--[/figrows:vp05]--></table>
+</details>
+<h3 id="g-vp06">安全・故障<span class="n">VP-06・18枚</span></h3>
+<div class="gal">
+<!--[figs:vp06]-->
+<figure><a href='SSD-SYS-ARC-001_p45_redundancy.svg'><img src='preview/SSD-SYS-ARC-001_p45_redundancy.png' alt='図45 冗長度の重ね図のプレビュー' loading='lazy'></a><figcaption>図45 冗長度の重ね図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p80_act_he.svg'><img src='preview/SSD-SYS-ARC-001_p80_act_he.png' alt='図80 MPS ヘリウム漏れ処置 活動図のプレビュー' loading='lazy'></a><figcaption>図80 MPS ヘリウム漏れ処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p81_act_fc.svg'><img src='preview/SSD-SYS-ARC-001_p81_act_fc.png' alt='図81 燃料電池の冷却喪失処置 活動図のプレビュー' loading='lazy'></a><figcaption>図81 燃料電池の冷却喪失処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p82_act_fire.svg'><img src='preview/SSD-SYS-ARC-001_p82_act_fire.png' alt='図82 火災処置 活動図のプレビュー' loading='lazy'></a><figcaption>図82 火災処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p86_act_leak.svg'><img src='preview/SSD-SYS-ARC-001_p86_act_leak.png' alt='図86 キャビン減圧処置 活動図のプレビュー' loading='lazy'></a><figcaption>図86 キャビン減圧処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p88_act_plbd.svg'><img src='preview/SSD-SYS-ARC-001_p88_act_plbd.png' alt='図88 ペイロードベイドア閉鎖不能処置 活動図のプレビュー' loading='lazy'></a><figcaption>図88 ペイロードベイドア閉鎖不能処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p106_fta_a.svg'><img src='preview/SSD-SYS-ARC-001_p106_fta_a.png' alt='図106 故障の木 A（28 VDC 主電力の喪失）のプレビュー' loading='lazy'></a><figcaption>図106 故障の木 A（28 VDC 主電力の喪失）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p107_fta_b.svg'><img src='preview/SSD-SYS-ARC-001_p107_fta_b.png' alt='図107 故障の木 B（空力舵面の油圧の喪失）のプレビュー' loading='lazy'></a><figcaption>図107 故障の木 B（空力舵面の油圧の喪失）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p108_fta_c.svg'><img src='preview/SSD-SYS-ARC-001_p108_fta_c.png' alt='図108 故障の木 C（CO2 制御の喪失）のプレビュー' loading='lazy'></a><figcaption>図108 故障の木 C（CO2 制御の喪失）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p118_fdir_lights.svg'><img src='preview/SSD-SYS-ARC-001_p118_fdir_lights.png' alt='図118 C/W 警告灯と検知・処置の対応のプレビュー' loading='lazy'></a><figcaption>図118 C/W 警告灯と検知・処置の対応（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p119_fdir_chain.svg'><img src='preview/SSD-SYS-ARC-001_p119_fdir_chain.png' alt='図119 故障検知・処置の連鎖と網羅のプレビュー' loading='lazy'></a><figcaption>図119 故障検知・処置の連鎖と網羅（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p120_hazard_matrix.svg'><img src='preview/SSD-SYS-ARC-001_p120_hazard_matrix.png' alt='図120 ハザードのリスク行列のプレビュー' loading='lazy'></a><figcaption>図120 ハザードのリスク行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p121_hazard_bowtie.svg'><img src='preview/SSD-SYS-ARC-001_p121_hazard_bowtie.png' alt='図121 ハザードの原因と管理策のプレビュー' loading='lazy'></a><figcaption>図121 ハザードの原因と管理策（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p126_fmm_chain.svg'><img src='preview/SSD-SYS-ARC-001_p126_fmm_chain.png' alt='図126 故障モードから見た安全の連鎖のプレビュー' loading='lazy'></a><figcaption>図126 故障モードから見た安全の連鎖（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p127_fmm_coverage.svg'><img src='preview/SSD-SYS-ARC-001_p127_fmm_coverage.png' alt='図127 故障モードの網羅（系・原因ごと）のプレビュー' loading='lazy'></a><figcaption>図127 故障モードの網羅（系・原因ごと）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p176_fmx_modes.svg'><img src='preview/SSD-SYS-ARC-001_p176_fmx_modes.png' alt='図176 ECLSS 機能の故障モード（ブロック × 検知・原因）のプレビュー' loading='lazy'></a><figcaption>図176 ECLSS 機能の故障モード（ブロック × 検知・原因）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p177_fta_x1.svg'><img src='preview/SSD-SYS-ARC-001_p177_fta_x1.png' alt='図177 故障の木 X1（乗員室の圧力の喪失）のプレビュー' loading='lazy'></a><figcaption>図177 故障の木 X1（乗員室の圧力の喪失）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p178_fta_x2.svg'><img src='preview/SSD-SYS-ARC-001_p178_fta_x2.png' alt='図178 故障の木 X2（CO2 除去の喪失）のプレビュー' loading='lazy'></a><figcaption>図178 故障の木 X2（CO2 除去の喪失）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp06]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp06]-->
+<tr><td class='id'>図45</td><td>図45 冗長度の重ね図</td><td><a href='SSD-SYS-ARC-001_p45_redundancy.svg'>SSD-SYS-ARC-001_p45_redundancy.svg</a></td></tr>
+<tr><td class='id'>図80</td><td>図80 MPS ヘリウム漏れ処置 活動図</td><td><a href='SSD-SYS-ARC-001_p80_act_he.svg'>SSD-SYS-ARC-001_p80_act_he.svg</a></td></tr>
+<tr><td class='id'>図81</td><td>図81 燃料電池の冷却喪失処置 活動図</td><td><a href='SSD-SYS-ARC-001_p81_act_fc.svg'>SSD-SYS-ARC-001_p81_act_fc.svg</a></td></tr>
+<tr><td class='id'>図82</td><td>図82 火災処置 活動図</td><td><a href='SSD-SYS-ARC-001_p82_act_fire.svg'>SSD-SYS-ARC-001_p82_act_fire.svg</a></td></tr>
+<tr><td class='id'>図86</td><td>図86 キャビン減圧処置 活動図</td><td><a href='SSD-SYS-ARC-001_p86_act_leak.svg'>SSD-SYS-ARC-001_p86_act_leak.svg</a></td></tr>
+<tr><td class='id'>図88</td><td>図88 ペイロードベイドア閉鎖不能処置 活動図</td><td><a href='SSD-SYS-ARC-001_p88_act_plbd.svg'>SSD-SYS-ARC-001_p88_act_plbd.svg</a></td></tr>
+<tr><td class='id'>図106</td><td>図106 故障の木 A（28 VDC 主電力の喪失）</td><td><a href='SSD-SYS-ARC-001_p106_fta_a.svg'>SSD-SYS-ARC-001_p106_fta_a.svg</a></td></tr>
+<tr><td class='id'>図107</td><td>図107 故障の木 B（空力舵面の油圧の喪失）</td><td><a href='SSD-SYS-ARC-001_p107_fta_b.svg'>SSD-SYS-ARC-001_p107_fta_b.svg</a></td></tr>
+<tr><td class='id'>図108</td><td>図108 故障の木 C（CO2 制御の喪失）</td><td><a href='SSD-SYS-ARC-001_p108_fta_c.svg'>SSD-SYS-ARC-001_p108_fta_c.svg</a></td></tr>
+<tr><td class='id'>図118</td><td>図118 C/W 警告灯と検知・処置の対応</td><td><a href='SSD-SYS-ARC-001_p118_fdir_lights.svg'>SSD-SYS-ARC-001_p118_fdir_lights.svg</a></td></tr>
+<tr><td class='id'>図119</td><td>図119 故障検知・処置の連鎖と網羅</td><td><a href='SSD-SYS-ARC-001_p119_fdir_chain.svg'>SSD-SYS-ARC-001_p119_fdir_chain.svg</a></td></tr>
+<tr><td class='id'>図120</td><td>図120 ハザードのリスク行列</td><td><a href='SSD-SYS-ARC-001_p120_hazard_matrix.svg'>SSD-SYS-ARC-001_p120_hazard_matrix.svg</a></td></tr>
+<tr><td class='id'>図121</td><td>図121 ハザードの原因と管理策</td><td><a href='SSD-SYS-ARC-001_p121_hazard_bowtie.svg'>SSD-SYS-ARC-001_p121_hazard_bowtie.svg</a></td></tr>
+<tr><td class='id'>図126</td><td>図126 故障モードから見た安全の連鎖</td><td><a href='SSD-SYS-ARC-001_p126_fmm_chain.svg'>SSD-SYS-ARC-001_p126_fmm_chain.svg</a></td></tr>
+<tr><td class='id'>図127</td><td>図127 故障モードの網羅（系・原因ごと）</td><td><a href='SSD-SYS-ARC-001_p127_fmm_coverage.svg'>SSD-SYS-ARC-001_p127_fmm_coverage.svg</a></td></tr>
+<tr><td class='id'>図176</td><td>図176 ECLSS 機能の故障モード（ブロック × 検知・原因）</td><td><a href='SSD-SYS-ARC-001_p176_fmx_modes.svg'>SSD-SYS-ARC-001_p176_fmx_modes.svg</a></td></tr>
+<tr><td class='id'>図177</td><td>図177 故障の木 X1（乗員室の圧力の喪失）</td><td><a href='SSD-SYS-ARC-001_p177_fta_x1.svg'>SSD-SYS-ARC-001_p177_fta_x1.svg</a></td></tr>
+<tr><td class='id'>図178</td><td>図178 故障の木 X2（CO2 除去の喪失）</td><td><a href='SSD-SYS-ARC-001_p178_fta_x2.svg'>SSD-SYS-ARC-001_p178_fta_x2.svg</a></td></tr>
+<!--[/figrows:vp06]--></table>
+</details>
+<h3 id="g-vp07">資源・マージン<span class="n">VP-07・7枚</span></h3>
+<div class="gal">
+<!--[figs:vp07]-->
+<figure><a href='SSD-SYS-ARC-001_p44_budget.svg'><img src='preview/SSD-SYS-ARC-001_p44_budget.png' alt='図44 収支マージン要約のプレビュー' loading='lazy'></a><figcaption>図44 収支マージン要約（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p78_par_consumables.svg'><img src='preview/SSD-SYS-ARC-001_p78_par_consumables.png' alt='図78 消耗品 パラメトリック図のプレビュー' loading='lazy'></a><figcaption>図78 消耗品 パラメトリック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p79_par_power.svg'><img src='preview/SSD-SYS-ARC-001_p79_par_power.png' alt='図79 電力・反応剤・排熱 パラメトリック図のプレビュー' loading='lazy'></a><figcaption>図79 電力・反応剤・排熱 パラメトリック図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p104_trade_co2.svg'><img src='preview/SSD-SYS-ARC-001_p104_trade_co2.png' alt='図104 CO2 除去のトレードスタディのプレビュー' loading='lazy'></a><figcaption>図104 CO2 除去のトレードスタディ（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p105_mass_dv.svg'><img src='preview/SSD-SYS-ARC-001_p105_mass_dv.png' alt='図105 質量特性・Δv の解析のプレビュー' loading='lazy'></a><figcaption>図105 質量特性・Δv の解析（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p134_profile_design.svg'><img src='preview/SSD-SYS-ARC-001_p134_profile_design.png' alt='図134 標準ミッションの消耗品の残量（設計）のプレビュー' loading='lazy'></a><figcaption>図134 標準ミッションの消耗品の残量（設計）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p135_profile_actual.svg'><img src='preview/SSD-SYS-ARC-001_p135_profile_actual.png' alt='図135 反応剤の残量の設計と実績（STS-1・114・125）のプレビュー' loading='lazy'></a><figcaption>図135 反応剤の残量の設計と実績（STS-1・114・125）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp07]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp07]-->
+<tr><td class='id'>図44</td><td>図44 収支マージン要約</td><td><a href='SSD-SYS-ARC-001_p44_budget.svg'>SSD-SYS-ARC-001_p44_budget.svg</a></td></tr>
+<tr><td class='id'>図78</td><td>図78 消耗品 パラメトリック図</td><td><a href='SSD-SYS-ARC-001_p78_par_consumables.svg'>SSD-SYS-ARC-001_p78_par_consumables.svg</a></td></tr>
+<tr><td class='id'>図79</td><td>図79 電力・反応剤・排熱 パラメトリック図</td><td><a href='SSD-SYS-ARC-001_p79_par_power.svg'>SSD-SYS-ARC-001_p79_par_power.svg</a></td></tr>
+<tr><td class='id'>図104</td><td>図104 CO2 除去のトレードスタディ</td><td><a href='SSD-SYS-ARC-001_p104_trade_co2.svg'>SSD-SYS-ARC-001_p104_trade_co2.svg</a></td></tr>
+<tr><td class='id'>図105</td><td>図105 質量特性・Δv の解析</td><td><a href='SSD-SYS-ARC-001_p105_mass_dv.svg'>SSD-SYS-ARC-001_p105_mass_dv.svg</a></td></tr>
+<tr><td class='id'>図134</td><td>図134 標準ミッションの消耗品の残量（設計）</td><td><a href='SSD-SYS-ARC-001_p134_profile_design.svg'>SSD-SYS-ARC-001_p134_profile_design.svg</a></td></tr>
+<tr><td class='id'>図135</td><td>図135 反応剤の残量の設計と実績（STS-1・114・125）</td><td><a href='SSD-SYS-ARC-001_p135_profile_actual.svg'>SSD-SYS-ARC-001_p135_profile_actual.svg</a></td></tr>
+<!--[/figrows:vp07]--></table>
+</details>
+<h3 id="g-vp08">物理配置<span class="n">VP-08・2枚</span></h3>
+<div class="gal">
+<!--[figs:vp08]-->
+<figure><a href='SSD-SYS-ARC-001_p43_physical.svg'><img src='preview/SSD-SYS-ARC-001_p43_physical.png' alt='図43 オービタ区画・機器配置図のプレビュー' loading='lazy'></a><figcaption>図43 オービタ区画・機器配置図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p91_alloc_matrix.svg'><img src='preview/SSD-SYS-ARC-001_p91_alloc_matrix.png' alt='図91 割付行列（系 × 区画）のプレビュー' loading='lazy'></a><figcaption>図91 割付行列（系 × 区画）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp08]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp08]-->
+<tr><td class='id'>図43</td><td>図43 オービタ区画・機器配置図</td><td><a href='SSD-SYS-ARC-001_p43_physical.svg'>SSD-SYS-ARC-001_p43_physical.svg</a></td></tr>
+<tr><td class='id'>図91</td><td>図91 割付行列（系 × 区画）</td><td><a href='SSD-SYS-ARC-001_p91_alloc_matrix.svg'>SSD-SYS-ARC-001_p91_alloc_matrix.svg</a></td></tr>
+<!--[/figrows:vp08]--></table>
+</details>
+<h3 id="g-vp09">構成の違い<span class="n">VP-09・4枚</span></h3>
+<div class="gal">
+<!--[figs:vp09]-->
+<figure><a href='SSD-SYS-ARC-001_p109_variants.svg'><img src='preview/SSD-SYS-ARC-001_p109_variants.png' alt='図109 機体・ミッションキットの構成行列のプレビュー' loading='lazy'></a><figcaption>図109 機体・ミッションキットの構成行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p122_individuals.svg'><img src='preview/SSD-SYS-ARC-001_p122_individuals.png' alt='図122 機体と飛行の個体・時間切片のプレビュー' loading='lazy'></a><figcaption>図122 機体と飛行の個体・時間切片（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p123_actuals.svg'><img src='preview/SSD-SYS-ARC-001_p123_actuals.png' alt='図123 飛行の実績と設計値のプレビュー' loading='lazy'></a><figcaption>図123 飛行の実績と設計値（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p132_flight_config.svg'><img src='preview/SSD-SYS-ARC-001_p132_flight_config.png' alt='図132 飛行ごとの構成（機体・キット・特徴）のプレビュー' loading='lazy'></a><figcaption>図132 飛行ごとの構成（機体・キット・特徴）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp09]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp09]-->
+<tr><td class='id'>図109</td><td>図109 機体・ミッションキットの構成行列</td><td><a href='SSD-SYS-ARC-001_p109_variants.svg'>SSD-SYS-ARC-001_p109_variants.svg</a></td></tr>
+<tr><td class='id'>図122</td><td>図122 機体と飛行の個体・時間切片</td><td><a href='SSD-SYS-ARC-001_p122_individuals.svg'>SSD-SYS-ARC-001_p122_individuals.svg</a></td></tr>
+<tr><td class='id'>図123</td><td>図123 飛行の実績と設計値</td><td><a href='SSD-SYS-ARC-001_p123_actuals.svg'>SSD-SYS-ARC-001_p123_actuals.svg</a></td></tr>
+<tr><td class='id'>図132</td><td>図132 飛行ごとの構成（機体・キット・特徴）</td><td><a href='SSD-SYS-ARC-001_p132_flight_config.svg'>SSD-SYS-ARC-001_p132_flight_config.svg</a></td></tr>
+<!--[/figrows:vp09]--></table>
+</details>
+<h3 id="g-vp10">根拠の追跡<span class="n">VP-10・33枚</span></h3>
+<div class="gal">
+<!--[figs:vp10]-->
+<figure><a href='SSD-SYS-ARC-001_p4_eclss_docs.svg'><img src='preview/SSD-SYS-ARC-001_p4_eclss_docs.png' alt='図4 ECLSS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図4 ECLSS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p7_eps_docs.svg'><img src='preview/SSD-SYS-ARC-001_p7_eps_docs.png' alt='図7 EPS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図7 EPS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p9_tcs_docs.svg'><img src='preview/SSD-SYS-ARC-001_p9_tcs_docs.png' alt='図9 熱制御 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図9 熱制御 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p10_flight_rules.svg'><img src='preview/SSD-SYS-ARC-001_p10_flight_rules.png' alt='図10 運用飛行規則 章構成のプレビュー' loading='lazy'></a><figcaption>図10 運用飛行規則 章構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p11_scom.svg'><img src='preview/SSD-SYS-ARC-001_p11_scom.png' alt='図11 乗員運用マニュアル 節構成のプレビュー' loading='lazy'></a><figcaption>図11 乗員運用マニュアル 節構成（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p13_ars_docs.svg'><img src='preview/SSD-SYS-ARC-001_p13_ars_docs.png' alt='図13 ARS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図13 ARS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p15_co2_docs.svg'><img src='preview/SSD-SYS-ARC-001_p15_co2_docs.png' alt='図15 CO2・CO除去 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図15 CO2・CO除去 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p17_cac_docs.svg'><img src='preview/SSD-SYS-ARC-001_p17_cac_docs.png' alt='図17 キャビン空気循環 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図17 キャビン空気循環 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p19_pcs_docs.svg'><img src='preview/SSD-SYS-ARC-001_p19_pcs_docs.png' alt='図19 圧力制御系 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図19 圧力制御系 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p21_h2o_docs.svg'><img src='preview/SSD-SYS-ARC-001_p21_h2o_docs.png' alt='図21 給水・廃水系 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図21 給水・廃水系 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p23_wcs_docs.svg'><img src='preview/SSD-SYS-ARC-001_p23_wcs_docs.png' alt='図23 廃棄物収集系 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図23 廃棄物収集系 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p25_als_docs.svg'><img src='preview/SSD-SYS-ARC-001_p25_als_docs.png' alt='図25 エアロック支援系 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図25 エアロック支援系 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p27_fds_docs.svg'><img src='preview/SSD-SYS-ARC-001_p27_fds_docs.png' alt='図27 煙検知・消火系 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図27 煙検知・消火系 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p29_rcrs_docs.svg'><img src='preview/SSD-SYS-ARC-001_p29_rcrs_docs.png' alt='図29 再生式CO2除去装置 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図29 再生式CO2除去装置 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p31_thc_docs.svg'><img src='preview/SSD-SYS-ARC-001_p31_thc_docs.png' alt='図31 キャビン温湿度制御 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図31 キャビン温湿度制御 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p33_avb_docs.svg'><img src='preview/SSD-SYS-ARC-001_p33_avb_docs.png' alt='図33 アビオニクスベイ空冷 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図33 アビオニクスベイ空冷 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p35_imu_docs.svg'><img src='preview/SSD-SYS-ARC-001_p35_imu_docs.png' alt='図35 IMU空冷 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図35 IMU空冷 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p37_wcl_docs.svg'><img src='preview/SSD-SYS-ARC-001_p37_wcl_docs.png' alt='図37 水冷却ループ 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図37 水冷却ループ 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p47_gnc_docs.svg'><img src='preview/SSD-SYS-ARC-001_p47_gnc_docs.png' alt='図47 GN&amp;C 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図47 GN&amp;C 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p49_dps_docs.svg'><img src='preview/SSD-SYS-ARC-001_p49_dps_docs.png' alt='図49 DPS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図49 DPS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p51_mps_docs.svg'><img src='preview/SSD-SYS-ARC-001_p51_mps_docs.png' alt='図51 MPS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図51 MPS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p53_oms_docs.svg'><img src='preview/SSD-SYS-ARC-001_p53_oms_docs.png' alt='図53 OMS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図53 OMS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p55_rcs_docs.svg'><img src='preview/SSD-SYS-ARC-001_p55_rcs_docs.png' alt='図55 RCS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図55 RCS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p57_apu_docs.svg'><img src='preview/SSD-SYS-ARC-001_p57_apu_docs.png' alt='図57 APU/HYD 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図57 APU/HYD 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p59_ct_docs.svg'><img src='preview/SSD-SYS-ARC-001_p59_ct_docs.png' alt='図59 C&amp;T 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図59 C&amp;T 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p61_eva_docs.svg'><img src='preview/SSD-SYS-ARC-001_p61_eva_docs.png' alt='図61 EVA 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図61 EVA 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p63_cw_docs.svg'><img src='preview/SSD-SYS-ARC-001_p63_cw_docs.png' alt='図63 C/W 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図63 C/W 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p65_crew_docs.svg'><img src='preview/SSD-SYS-ARC-001_p65_crew_docs.png' alt='図65 CREW 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図65 CREW 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p67_pls_docs.svg'><img src='preview/SSD-SYS-ARC-001_p67_pls_docs.png' alt='図67 PLS 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図67 PLS 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p69_mech_docs.svg'><img src='preview/SSD-SYS-ARC-001_p69_mech_docs.png' alt='図69 MECH 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図69 MECH 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p71_str_docs.svg'><img src='preview/SSD-SYS-ARC-001_p71_str_docs.png' alt='図71 STR 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図71 STR 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p73_et_docs.svg'><img src='preview/SSD-SYS-ARC-001_p73_et_docs.png' alt='図73 ET 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図73 ET 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p75_srb_docs.svg'><img src='preview/SSD-SYS-ARC-001_p75_srb_docs.png' alt='図75 SRB 関連文書マトリクスのプレビュー' loading='lazy'></a><figcaption>図75 SRB 関連文書マトリクス（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp10]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp10]-->
+<tr><td class='id'>図4</td><td>図4 ECLSS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p4_eclss_docs.svg'>SSD-SYS-ARC-001_p4_eclss_docs.svg</a></td></tr>
+<tr><td class='id'>図7</td><td>図7 EPS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p7_eps_docs.svg'>SSD-SYS-ARC-001_p7_eps_docs.svg</a></td></tr>
+<tr><td class='id'>図9</td><td>図9 熱制御 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p9_tcs_docs.svg'>SSD-SYS-ARC-001_p9_tcs_docs.svg</a></td></tr>
+<tr><td class='id'>図10</td><td>図10 運用飛行規則 章構成</td><td><a href='SSD-SYS-ARC-001_p10_flight_rules.svg'>SSD-SYS-ARC-001_p10_flight_rules.svg</a></td></tr>
+<tr><td class='id'>図11</td><td>図11 乗員運用マニュアル 節構成</td><td><a href='SSD-SYS-ARC-001_p11_scom.svg'>SSD-SYS-ARC-001_p11_scom.svg</a></td></tr>
+<tr><td class='id'>図13</td><td>図13 ARS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p13_ars_docs.svg'>SSD-SYS-ARC-001_p13_ars_docs.svg</a></td></tr>
+<tr><td class='id'>図15</td><td>図15 CO2・CO除去 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p15_co2_docs.svg'>SSD-SYS-ARC-001_p15_co2_docs.svg</a></td></tr>
+<tr><td class='id'>図17</td><td>図17 キャビン空気循環 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p17_cac_docs.svg'>SSD-SYS-ARC-001_p17_cac_docs.svg</a></td></tr>
+<tr><td class='id'>図19</td><td>図19 圧力制御系 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p19_pcs_docs.svg'>SSD-SYS-ARC-001_p19_pcs_docs.svg</a></td></tr>
+<tr><td class='id'>図21</td><td>図21 給水・廃水系 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p21_h2o_docs.svg'>SSD-SYS-ARC-001_p21_h2o_docs.svg</a></td></tr>
+<tr><td class='id'>図23</td><td>図23 廃棄物収集系 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p23_wcs_docs.svg'>SSD-SYS-ARC-001_p23_wcs_docs.svg</a></td></tr>
+<tr><td class='id'>図25</td><td>図25 エアロック支援系 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p25_als_docs.svg'>SSD-SYS-ARC-001_p25_als_docs.svg</a></td></tr>
+<tr><td class='id'>図27</td><td>図27 煙検知・消火系 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p27_fds_docs.svg'>SSD-SYS-ARC-001_p27_fds_docs.svg</a></td></tr>
+<tr><td class='id'>図29</td><td>図29 再生式CO2除去装置 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p29_rcrs_docs.svg'>SSD-SYS-ARC-001_p29_rcrs_docs.svg</a></td></tr>
+<tr><td class='id'>図31</td><td>図31 キャビン温湿度制御 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p31_thc_docs.svg'>SSD-SYS-ARC-001_p31_thc_docs.svg</a></td></tr>
+<tr><td class='id'>図33</td><td>図33 アビオニクスベイ空冷 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p33_avb_docs.svg'>SSD-SYS-ARC-001_p33_avb_docs.svg</a></td></tr>
+<tr><td class='id'>図35</td><td>図35 IMU空冷 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p35_imu_docs.svg'>SSD-SYS-ARC-001_p35_imu_docs.svg</a></td></tr>
+<tr><td class='id'>図37</td><td>図37 水冷却ループ 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p37_wcl_docs.svg'>SSD-SYS-ARC-001_p37_wcl_docs.svg</a></td></tr>
+<tr><td class='id'>図47</td><td>図47 GN&amp;C 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p47_gnc_docs.svg'>SSD-SYS-ARC-001_p47_gnc_docs.svg</a></td></tr>
+<tr><td class='id'>図49</td><td>図49 DPS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p49_dps_docs.svg'>SSD-SYS-ARC-001_p49_dps_docs.svg</a></td></tr>
+<tr><td class='id'>図51</td><td>図51 MPS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p51_mps_docs.svg'>SSD-SYS-ARC-001_p51_mps_docs.svg</a></td></tr>
+<tr><td class='id'>図53</td><td>図53 OMS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p53_oms_docs.svg'>SSD-SYS-ARC-001_p53_oms_docs.svg</a></td></tr>
+<tr><td class='id'>図55</td><td>図55 RCS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p55_rcs_docs.svg'>SSD-SYS-ARC-001_p55_rcs_docs.svg</a></td></tr>
+<tr><td class='id'>図57</td><td>図57 APU/HYD 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p57_apu_docs.svg'>SSD-SYS-ARC-001_p57_apu_docs.svg</a></td></tr>
+<tr><td class='id'>図59</td><td>図59 C&amp;T 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p59_ct_docs.svg'>SSD-SYS-ARC-001_p59_ct_docs.svg</a></td></tr>
+<tr><td class='id'>図61</td><td>図61 EVA 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p61_eva_docs.svg'>SSD-SYS-ARC-001_p61_eva_docs.svg</a></td></tr>
+<tr><td class='id'>図63</td><td>図63 C/W 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p63_cw_docs.svg'>SSD-SYS-ARC-001_p63_cw_docs.svg</a></td></tr>
+<tr><td class='id'>図65</td><td>図65 CREW 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p65_crew_docs.svg'>SSD-SYS-ARC-001_p65_crew_docs.svg</a></td></tr>
+<tr><td class='id'>図67</td><td>図67 PLS 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p67_pls_docs.svg'>SSD-SYS-ARC-001_p67_pls_docs.svg</a></td></tr>
+<tr><td class='id'>図69</td><td>図69 MECH 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p69_mech_docs.svg'>SSD-SYS-ARC-001_p69_mech_docs.svg</a></td></tr>
+<tr><td class='id'>図71</td><td>図71 STR 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p71_str_docs.svg'>SSD-SYS-ARC-001_p71_str_docs.svg</a></td></tr>
+<tr><td class='id'>図73</td><td>図73 ET 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p73_et_docs.svg'>SSD-SYS-ARC-001_p73_et_docs.svg</a></td></tr>
+<tr><td class='id'>図75</td><td>図75 SRB 関連文書マトリクス</td><td><a href='SSD-SYS-ARC-001_p75_srb_docs.svg'>SSD-SYS-ARC-001_p75_srb_docs.svg</a></td></tr>
+<!--[/figrows:vp10]--></table>
+</details>
+<h3 id="g-vp11">モデル管理<span class="n">VP-11・3枚</span></h3>
+<div class="gal">
+<!--[figs:vp11]-->
+<figure><a href='SSD-SYS-ARC-001_p5_register.svg'><img src='preview/SSD-SYS-ARC-001_p5_register.png' alt='図5 文書・インタフェース一覧のプレビュー' loading='lazy'></a><figcaption>図5 文書・インタフェース一覧（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p92_model_packages.svg'><img src='preview/SSD-SYS-ARC-001_p92_model_packages.png' alt='図92 モデルの構成 パッケージ図のプレビュー' loading='lazy'></a><figcaption>図92 モデルの構成 パッケージ図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p111_viewpoints.svg'><img src='preview/SSD-SYS-ARC-001_p111_viewpoints.png' alt='図111 ビューポイントと関係者の行列のプレビュー' loading='lazy'></a><figcaption>図111 ビューポイントと関係者の行列（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp11]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp11]-->
+<tr><td class='id'>図5</td><td>図5 文書・インタフェース一覧</td><td><a href='SSD-SYS-ARC-001_p5_register.svg'>SSD-SYS-ARC-001_p5_register.svg</a></td></tr>
+<tr><td class='id'>図92</td><td>図92 モデルの構成 パッケージ図</td><td><a href='SSD-SYS-ARC-001_p92_model_packages.svg'>SSD-SYS-ARC-001_p92_model_packages.svg</a></td></tr>
+<tr><td class='id'>図111</td><td>図111 ビューポイントと関係者の行列</td><td><a href='SSD-SYS-ARC-001_p111_viewpoints.svg'>SSD-SYS-ARC-001_p111_viewpoints.svg</a></td></tr>
+<!--[/figrows:vp11]--></table>
+</details>
+<h3 id="g-vp12">トレース・影響<span class="n">VP-12・3枚</span></h3>
+<div class="gal">
+<!--[figs:vp12]-->
+<figure><a href='SSD-SYS-ARC-001_p115_trace_chain.svg'><img src='preview/SSD-SYS-ARC-001_p115_trace_chain.png' alt='図115 トレースの連鎖（要素の種類と関係）のプレビュー' loading='lazy'></a><figcaption>図115 トレースの連鎖（要素の種類と関係）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p116_trace_coverage.svg'><img src='preview/SSD-SYS-ARC-001_p116_trace_coverage.png' alt='図116 系ごとのトレース網羅のプレビュー' loading='lazy'></a><figcaption>図116 系ごとのトレース網羅（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p117_impact.svg'><img src='preview/SSD-SYS-ARC-001_p117_impact.png' alt='図117 変更の影響分析のプレビュー' loading='lazy'></a><figcaption>図117 変更の影響分析（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp12]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp12]-->
+<tr><td class='id'>図115</td><td>図115 トレースの連鎖（要素の種類と関係）</td><td><a href='SSD-SYS-ARC-001_p115_trace_chain.svg'>SSD-SYS-ARC-001_p115_trace_chain.svg</a></td></tr>
+<tr><td class='id'>図116</td><td>図116 系ごとのトレース網羅</td><td><a href='SSD-SYS-ARC-001_p116_trace_coverage.svg'>SSD-SYS-ARC-001_p116_trace_coverage.svg</a></td></tr>
+<tr><td class='id'>図117</td><td>図117 変更の影響分析</td><td><a href='SSD-SYS-ARC-001_p117_impact.svg'>SSD-SYS-ARC-001_p117_impact.svg</a></td></tr>
+<!--[/figrows:vp12]--></table>
+</details>
+<h3 id="g-vp13">人間系<span class="n">VP-13・27枚</span></h3>
+<div class="gal">
+<!--[figs:vp13]-->
+<figure><a href='SSD-SYS-ARC-001_p143_hsi_coverage.svg'><img src='preview/SSD-SYS-ARC-001_p143_hsi_coverage.png' alt='図143 人間系の基準の照合（章 × 判定）のプレビュー' loading='lazy'></a><figcaption>図143 人間系の基準の照合（章 × 判定）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p144_hsi_values.svg'><img src='preview/SSD-SYS-ARC-001_p144_hsi_values.png' alt='図144 人間系の基準の値とシャトルの値のプレビュー' loading='lazy'></a><figcaption>図144 人間系の基準の値とシャトルの値（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p145_exp_params.svg'><img src='preview/SSD-SYS-ARC-001_p145_exp_params.png' alt='図145 乗員の曝露の量と基準（パラメトリック）のプレビュー' loading='lazy'></a><figcaption>図145 乗員の曝露の量と基準（パラメトリック）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p146_exp_profiles.svg'><img src='preview/SSD-SYS-ARC-001_p146_exp_profiles.png' alt='図146 乗員の曝露のプロファイルのプレビュー' loading='lazy'></a><figcaption>図146 乗員の曝露のプロファイル（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p147_tsk_alloc.svg'><img src='preview/SSD-SYS-ARC-001_p147_tsk_alloc.png' alt='図147 機能の分担（人・自動化・地上）のプレビュー' loading='lazy'></a><figcaption>図147 機能の分担（人・自動化・地上）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p148_tsk_deorbit.svg'><img src='preview/SSD-SYS-ARC-001_p148_tsk_deorbit.png' alt='図148 作業分析：軌道離脱準備から着陸までのプレビュー' loading='lazy'></a><figcaption>図148 作業分析：軌道離脱準備から着陸まで（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p149_tsk_eva.svg'><img src='preview/SSD-SYS-ARC-001_p149_tsk_eva.png' alt='図149 作業分析：EVA の準備のプレビュー' loading='lazy'></a><figcaption>図149 作業分析：EVA の準備（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p150_hea_matrix.svg'><img src='preview/SSD-SYS-ARC-001_p150_hea_matrix.png' alt='図150 作業 × 誤りの種類のプレビュー' loading='lazy'></a><figcaption>図150 作業 × 誤りの種類（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p151_hea_chain.svg'><img src='preview/SSD-SYS-ARC-001_p151_hea_chain.png' alt='図151 誤りからハザードへの連鎖と管理策のプレビュー' loading='lazy'></a><figcaption>図151 誤りからハザードへの連鎖と管理策（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p152_cif_alerts.svg'><img src='preview/SSD-SYS-ARC-001_p152_cif_alerts.png' alt='図152 警報の階層の対応（シャトル × 3001）のプレビュー' loading='lazy'></a><figcaption>図152 警報の階層の対応（シャトル × 3001）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p153_cif_panels.svg'><img src='preview/SSD-SYS-ARC-001_p153_cif_panels.png' alt='図153 表示・操作の盤と作業位置のプレビュー' loading='lazy'></a><figcaption>図153 表示・操作の盤と作業位置（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p154_hab_funcs.svg'><img src='preview/SSD-SYS-ARC-001_p154_hab_funcs.png' alt='図154 居住・医療の機能と 3001 の照合、乗員の1日のプレビュー' loading='lazy'></a><figcaption>図154 居住・医療の機能と 3001 の照合、乗員の1日（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p155_hab_uc.svg'><img src='preview/SSD-SYS-ARC-001_p155_hab_uc.png' alt='図155 居住・医療のユースケースのプレビュー' loading='lazy'></a><figcaption>図155 居住・医療のユースケース（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p156_egr_paths.svg'><img src='preview/SSD-SYS-ARC-001_p156_egr_paths.png' alt='図156 乗員区画のつながりと移動の経路のプレビュー' loading='lazy'></a><figcaption>図156 乗員区画のつながりと移動の経路（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p157_egr_modes.svg'><img src='preview/SSD-SYS-ARC-001_p157_egr_modes.png' alt='図157 非常退避・退出のモード × フェーズのプレビュー' loading='lazy'></a><figcaption>図157 非常退避・退出のモード × フェーズ（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p158_hvm_methods.svg'><img src='preview/SSD-SYS-ARC-001_p158_hvm_methods.png' alt='図158 人間系の評価方法と図表の対応のプレビュー' loading='lazy'></a><figcaption>図158 人間系の評価方法と図表の対応（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p163_atm_co2.svg'><img src='preview/SSD-SYS-ARC-001_p163_atm_co2.png' alt='図163 CO2 分圧の時間変化（LiOH・RCRS・除去なし）のプレビュー' loading='lazy'></a><figcaption>図163 CO2 分圧の時間変化（LiOH・RCRS・除去なし）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p164_atm_pressure.svg'><img src='preview/SSD-SYS-ARC-001_p164_atm_pressure.png' alt='図164 乗員室の全圧・酸素分圧（穴の減圧・PPO2 の周期）のプレビュー' loading='lazy'></a><figcaption>図164 乗員室の全圧・酸素分圧（穴の減圧・PPO2 の周期）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p165_atm_thermal.svg'><img src='preview/SSD-SYS-ARC-001_p165_atm_thermal.png' alt='図165 乗員室の温度と湿度（定常・冷却の喪失）のプレビュー' loading='lazy'></a><figcaption>図165 乗員室の温度と湿度（定常・冷却の喪失）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p183_epb_consumables.svg'><img src='preview/SSD-SYS-ARC-001_p183_epb_consumables.png' alt='図183 EMU の消耗品の持続時間（代謝率との関係）のプレビュー' loading='lazy'></a><figcaption>図183 EMU の消耗品の持続時間（代謝率との関係）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p184_epb_prebreathe.svg'><img src='preview/SSD-SYS-ARC-001_p184_epb_prebreathe.png' alt='図184 前呼吸の手順と組織の窒素（R 値）のプレビュー' loading='lazy'></a><figcaption>図184 前呼吸の手順と組織の窒素（R 値）（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p185_hrs_budget.svg'><img src='preview/SSD-SYS-ARC-001_p185_hrs_budget.png' alt='図185 居住の資源の量と標準ミッションの収支のプレビュー' loading='lazy'></a><figcaption>図185 居住の資源の量と標準ミッションの収支（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p186_hrs_stowage.svg'><img src='preview/SSD-SYS-ARC-001_p186_hrs_stowage.png' alt='図186 収納の場所と容積のプレビュー' loading='lazy'></a><figcaption>図186 収納の場所と容積（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p187_med_soms.svg'><img src='preview/SSD-SYS-ARC-001_p187_med_soms.png' alt='図187 医療システム（SOMS）の構成と役割のプレビュー' loading='lazy'></a><figcaption>図187 医療システム（SOMS）の構成と役割（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p188_act_medical.svg'><img src='preview/SSD-SYS-ARC-001_p188_act_medical.png' alt='図188 乗員の傷病の処置 活動図のプレビュー' loading='lazy'></a><figcaption>図188 乗員の傷病の処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p189_act_dcs.svg'><img src='preview/SSD-SYS-ARC-001_p189_act_dcs.png' alt='図189 減圧症の疑いの処置 活動図のプレビュー' loading='lazy'></a><figcaption>図189 減圧症の疑いの処置 活動図（クリックでリンク付きSVGを開く）</figcaption></figure>
+<figure><a href='SSD-SYS-ARC-001_p190_med_events.svg'><img src='preview/SSD-SYS-ARC-001_p190_med_events.png' alt='図190 飛行中の医療の事象の実績のプレビュー' loading='lazy'></a><figcaption>図190 飛行中の医療の事象の実績（クリックでリンク付きSVGを開く）</figcaption></figure>
+<!--[/figs:vp13]-->
+</div>
+<details><summary>一覧表（図・内容・ファイル）</summary>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:vp13]-->
+<tr><td class='id'>図143</td><td>図143 人間系の基準の照合（章 × 判定）</td><td><a href='SSD-SYS-ARC-001_p143_hsi_coverage.svg'>SSD-SYS-ARC-001_p143_hsi_coverage.svg</a></td></tr>
+<tr><td class='id'>図144</td><td>図144 人間系の基準の値とシャトルの値</td><td><a href='SSD-SYS-ARC-001_p144_hsi_values.svg'>SSD-SYS-ARC-001_p144_hsi_values.svg</a></td></tr>
+<tr><td class='id'>図145</td><td>図145 乗員の曝露の量と基準（パラメトリック）</td><td><a href='SSD-SYS-ARC-001_p145_exp_params.svg'>SSD-SYS-ARC-001_p145_exp_params.svg</a></td></tr>
+<tr><td class='id'>図146</td><td>図146 乗員の曝露のプロファイル</td><td><a href='SSD-SYS-ARC-001_p146_exp_profiles.svg'>SSD-SYS-ARC-001_p146_exp_profiles.svg</a></td></tr>
+<tr><td class='id'>図147</td><td>図147 機能の分担（人・自動化・地上）</td><td><a href='SSD-SYS-ARC-001_p147_tsk_alloc.svg'>SSD-SYS-ARC-001_p147_tsk_alloc.svg</a></td></tr>
+<tr><td class='id'>図148</td><td>図148 作業分析：軌道離脱準備から着陸まで</td><td><a href='SSD-SYS-ARC-001_p148_tsk_deorbit.svg'>SSD-SYS-ARC-001_p148_tsk_deorbit.svg</a></td></tr>
+<tr><td class='id'>図149</td><td>図149 作業分析：EVA の準備</td><td><a href='SSD-SYS-ARC-001_p149_tsk_eva.svg'>SSD-SYS-ARC-001_p149_tsk_eva.svg</a></td></tr>
+<tr><td class='id'>図150</td><td>図150 作業 × 誤りの種類</td><td><a href='SSD-SYS-ARC-001_p150_hea_matrix.svg'>SSD-SYS-ARC-001_p150_hea_matrix.svg</a></td></tr>
+<tr><td class='id'>図151</td><td>図151 誤りからハザードへの連鎖と管理策</td><td><a href='SSD-SYS-ARC-001_p151_hea_chain.svg'>SSD-SYS-ARC-001_p151_hea_chain.svg</a></td></tr>
+<tr><td class='id'>図152</td><td>図152 警報の階層の対応（シャトル × 3001）</td><td><a href='SSD-SYS-ARC-001_p152_cif_alerts.svg'>SSD-SYS-ARC-001_p152_cif_alerts.svg</a></td></tr>
+<tr><td class='id'>図153</td><td>図153 表示・操作の盤と作業位置</td><td><a href='SSD-SYS-ARC-001_p153_cif_panels.svg'>SSD-SYS-ARC-001_p153_cif_panels.svg</a></td></tr>
+<tr><td class='id'>図154</td><td>図154 居住・医療の機能と 3001 の照合、乗員の1日</td><td><a href='SSD-SYS-ARC-001_p154_hab_funcs.svg'>SSD-SYS-ARC-001_p154_hab_funcs.svg</a></td></tr>
+<tr><td class='id'>図155</td><td>図155 居住・医療のユースケース</td><td><a href='SSD-SYS-ARC-001_p155_hab_uc.svg'>SSD-SYS-ARC-001_p155_hab_uc.svg</a></td></tr>
+<tr><td class='id'>図156</td><td>図156 乗員区画のつながりと移動の経路</td><td><a href='SSD-SYS-ARC-001_p156_egr_paths.svg'>SSD-SYS-ARC-001_p156_egr_paths.svg</a></td></tr>
+<tr><td class='id'>図157</td><td>図157 非常退避・退出のモード × フェーズ</td><td><a href='SSD-SYS-ARC-001_p157_egr_modes.svg'>SSD-SYS-ARC-001_p157_egr_modes.svg</a></td></tr>
+<tr><td class='id'>図158</td><td>図158 人間系の評価方法と図表の対応</td><td><a href='SSD-SYS-ARC-001_p158_hvm_methods.svg'>SSD-SYS-ARC-001_p158_hvm_methods.svg</a></td></tr>
+<tr><td class='id'>図163</td><td>図163 CO2 分圧の時間変化（LiOH・RCRS・除去なし）</td><td><a href='SSD-SYS-ARC-001_p163_atm_co2.svg'>SSD-SYS-ARC-001_p163_atm_co2.svg</a></td></tr>
+<tr><td class='id'>図164</td><td>図164 乗員室の全圧・酸素分圧（穴の減圧・PPO2 の周期）</td><td><a href='SSD-SYS-ARC-001_p164_atm_pressure.svg'>SSD-SYS-ARC-001_p164_atm_pressure.svg</a></td></tr>
+<tr><td class='id'>図165</td><td>図165 乗員室の温度と湿度（定常・冷却の喪失）</td><td><a href='SSD-SYS-ARC-001_p165_atm_thermal.svg'>SSD-SYS-ARC-001_p165_atm_thermal.svg</a></td></tr>
+<tr><td class='id'>図183</td><td>図183 EMU の消耗品の持続時間（代謝率との関係）</td><td><a href='SSD-SYS-ARC-001_p183_epb_consumables.svg'>SSD-SYS-ARC-001_p183_epb_consumables.svg</a></td></tr>
+<tr><td class='id'>図184</td><td>図184 前呼吸の手順と組織の窒素（R 値）</td><td><a href='SSD-SYS-ARC-001_p184_epb_prebreathe.svg'>SSD-SYS-ARC-001_p184_epb_prebreathe.svg</a></td></tr>
+<tr><td class='id'>図185</td><td>図185 居住の資源の量と標準ミッションの収支</td><td><a href='SSD-SYS-ARC-001_p185_hrs_budget.svg'>SSD-SYS-ARC-001_p185_hrs_budget.svg</a></td></tr>
+<tr><td class='id'>図186</td><td>図186 収納の場所と容積</td><td><a href='SSD-SYS-ARC-001_p186_hrs_stowage.svg'>SSD-SYS-ARC-001_p186_hrs_stowage.svg</a></td></tr>
+<tr><td class='id'>図187</td><td>図187 医療システム（SOMS）の構成と役割</td><td><a href='SSD-SYS-ARC-001_p187_med_soms.svg'>SSD-SYS-ARC-001_p187_med_soms.svg</a></td></tr>
+<tr><td class='id'>図188</td><td>図188 乗員の傷病の処置 活動図</td><td><a href='SSD-SYS-ARC-001_p188_act_medical.svg'>SSD-SYS-ARC-001_p188_act_medical.svg</a></td></tr>
+<tr><td class='id'>図189</td><td>図189 減圧症の疑いの処置 活動図</td><td><a href='SSD-SYS-ARC-001_p189_act_dcs.svg'>SSD-SYS-ARC-001_p189_act_dcs.svg</a></td></tr>
+<tr><td class='id'>図190</td><td>図190 飛行中の医療の事象の実績</td><td><a href='SSD-SYS-ARC-001_p190_med_events.svg'>SSD-SYS-ARC-001_p190_med_events.svg</a></td></tr>
+<!--[/figrows:vp13]--></table>
+</details>
+<h3 id="g-src">原本と SysML v2 テキスト<span class="n">42件</span></h3>
+<table class='dt'><tr><th>図</th><th>内容</th><th>ファイル</th></tr><!--[figrows:src]-->
+<tr><td class='id'>原本</td><td>編集用 draw.io ファイル（190ページ）</td><td><a href='../Draw_io/SSD-SYS-ARC-001.drawio'>SSD-SYS-ARC-001.drawio</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>状態遷移（SSD-BEH-ORB-001 から生成）</td><td><a href='../SysML/SSD-BEH-ORB-001.sysml'>SysML/SSD-BEH-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>パラメトリック（SSD-PAR-ORB-001 から生成）</td><td><a href='../SysML/SSD-PAR-ORB-001.sysml'>SysML/SSD-PAR-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>故障処置の活動（SSD-BEH-ORB-002 から生成）</td><td><a href='../SysML/SSD-BEH-ORB-002.sysml'>SysML/SSD-BEH-ORB-002.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>シーケンス（SSD-BEH-ORB-003 から生成）</td><td><a href='../SysML/SSD-BEH-ORB-003.sysml'>SysML/SSD-BEH-ORB-003.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>運用・非常時の活動（SSD-BEH-ORB-004 から生成）</td><td><a href='../SysML/SSD-BEH-ORB-004.sysml'>SysML/SSD-BEH-ORB-004.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>構造：ブロック・ポート・インタフェース（SSD-BLK-SYS-001 から生成）</td><td><a href='../SysML/SSD-BLK-SYS-001.sysml'>SysML/SSD-BLK-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>要求：導出・充足・検証方法。SSD-RQM-SYS-001 から生成</td><td><a href='../SysML/SSD-RQM-SYS-001.sysml'>SysML/SSD-RQM-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>割付：機能・機器・区画・振る舞い。SSD-ALC-SYS-001 から生成</td><td><a href='../SysML/SSD-ALC-SYS-001.sysml'>SysML/SSD-ALC-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>モデル全体の入口と統合の関係。SSD-MDL-SYS-001 から生成</td><td><a href='../SysML/SSD-MDL-SYS-001.sysml'>SysML/SSD-MDL-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>運用のユースケース・シナリオ。SSD-UC-ORB-001 から生成</td><td><a href='../SysML/SSD-UC-ORB-001.sysml'>SysML/SSD-UC-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>系の状態遷移。SSD-BEH-ORB-005 から生成</td><td><a href='../SysML/SSD-BEH-ORB-005.sysml'>SysML/SSD-BEH-ORB-005.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>解析：トレード・質量・Δv・故障の木。SSD-ANA-ORB-001 から生成</td><td><a href='../SysML/SSD-ANA-ORB-001.sysml'>SysML/SSD-ANA-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>構成の違い：機体・ミッションキット。SSD-VAR-ORB-001 から生成</td><td><a href='../SysML/SSD-VAR-ORB-001.sysml'>SysML/SSD-VAR-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>検証ケースと検証の結果。SSD-VER-SYS-001 から生成</td><td><a href='../SysML/SSD-VER-SYS-001.sysml'>SysML/SSD-VER-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>ECLSS 下位要求（L3）。SSD-RQL-ECL-001 から生成</td><td><a href='../SysML/SSD-RQL-ECL-001.sysml'>SysML/SSD-RQL-ECL-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>ECLSS の状態遷移と活動。SSD-BEH-ORB-007 から生成</td><td><a href='../SysML/SSD-BEH-ORB-007.sysml'>SysML/SSD-BEH-ORB-007.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>ECLSS の故障モード。SSD-FMX-ECL-001 から生成</td><td><a href='../SysML/SSD-FMX-ECL-001.sysml'>SysML/SSD-FMX-ECL-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>EMU の構造・内部ブロック・状態。SSD-EMU-EVA-001 から生成</td><td><a href='../SysML/SSD-EMU-EVA-001.sysml'>SysML/SSD-EMU-EVA-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>EMU の消耗品と前呼吸（持続時間・R 値）。SSD-EPB-EVA-001 から生成</td><td><a href='../SysML/SSD-EPB-EVA-001.sysml'>SysML/SSD-EPB-EVA-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>居住の資源と収支（食料・衛生・就寝・廃棄物・収納）。SSD-HRS-ORB-001 から生成</td><td><a href='../SysML/SSD-HRS-ORB-001.sysml'>SysML/SSD-HRS-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>医療の構造と処置（SOMS・処置の流れ・事象）。SSD-MED-ORB-001 から生成</td><td><a href='../SysML/SSD-MED-ORB-001.sysml'>SysML/SSD-MED-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>ビューポイント・ビュー・表記の規約。SSD-VPT-SYS-001 から生成</td><td><a href='../SysML/SSD-VPT-SYS-001.sysml'>SysML/SSD-VPT-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>内部ブロック図：機器の接続・流れる物・量と単位。SSD-IBD-ORB-001 から生成</td><td><a href='../SysML/SSD-IBD-ORB-001.sysml'>SysML/SSD-IBD-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>トレース網羅・影響分析：関係・網羅・切れ目・影響のビュー。SSD-TRC-SYS-001 から生成</td><td><a href='../SysML/SSD-TRC-SYS-001.sysml'>SysML/SSD-TRC-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>故障検知・処置：警報・監視・処置・状態遷移の事象。SSD-FDIR-ORB-001 から生成</td><td><a href='../SysML/SSD-FDIR-ORB-001.sysml'>SysML/SSD-FDIR-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>ハザード解析：ハザード・原因・管理策・リスク。SSD-HAZ-ORB-001 から生成</td><td><a href='../SysML/SSD-HAZ-ORB-001.sysml'>SysML/SSD-HAZ-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>個体・時間：機体・飛行の個体、時間切片、実績。SSD-IND-ORB-001 から生成</td><td><a href='../SysML/SSD-IND-ORB-001.sysml'>SysML/SSD-IND-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>要求の形式化：属性・制約・値による判定。SSD-RQF-SYS-001 から生成</td><td><a href='../SysML/SSD-RQF-SYS-001.sysml'>SysML/SSD-RQF-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>故障モードモデル：故障モード・原因・検知の連鎖。SSD-FMM-ORB-001 から生成</td><td><a href='../SysML/SSD-FMM-ORB-001.sysml'>SysML/SSD-FMM-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>飛行構成・飛行試験：構成の解決と検証の証拠。SSD-FLT-ORB-001 から生成</td><td><a href='../SysML/SSD-FLT-ORB-001.sysml'>SysML/SSD-FLT-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>消耗品・電力プロファイル：時系列・枯渇の日・設計と実績。SSD-PRF-ORB-001 から生成</td><td><a href='../SysML/SSD-PRF-ORB-001.sysml'>SysML/SSD-PRF-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>系の状態遷移その2。SSD-BEH-ORB-006 から生成</td><td><a href='../SysML/SSD-BEH-ORB-006.sysml'>SysML/SSD-BEH-ORB-006.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>人間系の基準の照合：NASA-STD-3001 の要求と既存の要求の評価。SSD-HSI-SYS-001 から生成</td><td><a href='../SysML/SSD-HSI-SYS-001.sysml'>SysML/SSD-HSI-SYS-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>乗員の環境曝露（パラメトリック・プロファイル）。SSD-EXP-ORB-001 から生成</td><td><a href='../SysML/SSD-EXP-ORB-001.sysml'>SysML/SSD-EXP-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>キャビン大気の動的モデル（CO2・圧力と漏れ・熱と湿度）。SSD-ATM-ORB-001 から生成</td><td><a href='../SysML/SSD-ATM-ORB-001.sysml'>SysML/SSD-ATM-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>乗員の作業分析・機能の分担。SSD-TSK-ORB-001 から生成</td><td><a href='../SysML/SSD-TSK-ORB-001.sysml'>SysML/SSD-TSK-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>ヒューマンエラー解析。SSD-HEA-ORB-001 から生成</td><td><a href='../SysML/SSD-HEA-ORB-001.sysml'>SysML/SSD-HEA-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>乗員インタフェース（警報の階層・表示と操作）。SSD-CIF-ORB-001 から生成</td><td><a href='../SysML/SSD-CIF-ORB-001.sysml'>SysML/SSD-CIF-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>居住性と医療（機能・乗員の1日・ユースケース）。SSD-HAB-ORB-001 から生成</td><td><a href='../SysML/SSD-HAB-ORB-001.sysml'>SysML/SSD-HAB-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>容積・動線・緊急脱出。SSD-EGR-ORB-001 から生成</td><td><a href='../SysML/SSD-EGR-ORB-001.sysml'>SysML/SSD-EGR-ORB-001.sysml</a></td></tr>
+<tr><td class='id'>SysML v2</td><td>人間系の評価方法とビューポイント。SSD-HVM-SYS-001 から生成</td><td><a href='../SysML/SSD-HVM-SYS-001.sysml'>SysML/SSD-HVM-SYS-001.sysml</a></td></tr>
+<!--[/figrows:src]--></table>
+</main></body></html>

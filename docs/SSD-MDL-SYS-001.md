@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. AE／2026-10-09 |
+| 版・日付 | Rev. AG／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -39,16 +39,16 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 18 | SysML/SSD-RQF-SYS-001.sysml | 要求の形式化（属性・制約・値による判定） | SSD-PAR-ORB-001・SSD-RQM-SYS-001・SSD-ANA-ORB-001・SSD-IND-ORB-001 | 1649 | 186 | 0 | 0 |
 | 19 | SysML/SSD-FLT-ORB-001.sysml | 飛行構成・飛行試験（構成の解決・検証の証拠） | SSD-RQM-SYS-001・SSD-VAR-ORB-001・SSD-IND-ORB-001 | 308 | 10 | 0 | 0 |
 | 20 | SysML/SSD-HSI-SYS-001.sysml | 人間系の基準の照合（NASA-STD-3001 による後付け評価） | SSD-RQM-SYS-001 | 2485 | 548 | 0 | 0 |
-| 21 | SysML/SSD-EXP-ORB-001.sysml | 乗員の環境曝露（パラメトリック・プロファイル） | SSD-HSI-SYS-001 | 212 | 19 | 0 | 0 |
+| 21 | SysML/SSD-EXP-ORB-001.sysml | 乗員の環境曝露（パラメトリック・プロファイル） | SSD-HSI-SYS-001 | 228 | 19 | 0 | 0 |
 | 22 | SysML/SSD-ATM-ORB-001.sysml | キャビン大気の動的モデル（CO2・圧力と漏れ・熱と湿度） | SSD-HSI-SYS-001 | 165 | 29 | 0 | 0 |
 | 23 | SysML/SSD-EPB-EVA-001.sysml | EMU の消耗品と前呼吸（持続時間・R 値） | SSD-HSI-SYS-001 | 153 | 25 | 0 | 0 |
 | 24 | SysML/SSD-HRS-ORB-001.sysml | 居住の資源と収支（食料・衛生・就寝・廃棄物・収納） | SSD-HSI-SYS-001 | 117 | 4 | 0 | 0 |
-| 25 | SysML/SSD-MED-ORB-001.sysml | 医療の構造と処置（SOMS・処置の流れ・事象） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 263 | 35 | 0 | 0 |
+| 25 | SysML/SSD-MED-ORB-001.sysml | 医療の構造と処置（SOMS・処置の流れ・事象） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 269 | 35 | 0 | 0 |
 | 26 | SysML/SSD-TSK-ORB-001.sysml | 乗員の作業分析・機能の分担 | — | 198 | 43 | 0 | 0 |
 | 27 | SysML/SSD-PRF-ORB-001.sysml | 消耗品・電力プロファイル（時間軸の残量・設計と実績） | SSD-PAR-ORB-001・SSD-IND-ORB-001 | 78 | 4 | 0 | 0 |
 | 28 | SysML/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
-| 29 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2356 | 99 | 0 | 0 |
-| 30 | SysML/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-VER-SYS-001・SSD-RQL-ECL-001 | 549 | 6 | 0 | 0 |
+| 29 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2488 | 105 | 0 | 0 |
+| 30 | SysML/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-VER-SYS-001・SSD-RQL-ECL-001 | 535 | 6 | 0 | 0 |
 | 31 | SysML/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007 | 349 | 46 | 0 | 0 |
 | 32 | SysML/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
 | 33 | SysML/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
@@ -160,7 +160,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 流れ → IF の詳細化 | SSD-IBD-ORB-001 の IF との対応の表 | SSD-IBD-ORB-001 の #refinement | 342 | 342 | 一致 |
 | トレースの関係 | SSD-TRC-SYS-001 の関係の表 | SSD-TRC-SYS-001 の TraceRelation | 18 | 18 | 一致 |
 | 切れ目の分類 | SSD-TRC-SYS-001 の切れ目の分類の表 | SSD-TRC-SYS-001 の TraceGapCategory | 11 | 11 | 一致 |
-| 切れ目の要素 | SSD-TRC-SYS-001 の切れ目の一覧 | SSD-TRC-SYS-001 の TraceGap | 24 | 24 | 一致 |
+| 切れ目の要素 | SSD-TRC-SYS-001 の切れ目の一覧 | SSD-TRC-SYS-001 の TraceGap | 10 | 10 | 一致 |
 | 影響分析 | SSD-TRC-SYS-001 の影響分析の結果の表 | SSD-TRC-SYS-001 の view（ImpactView） | 5 | 5 | 一致 |
 | 警報 | SSD-FDIR-ORB-001 の警報の表（予備の灯を除く） | SSD-FDIR-ORB-001 の警報の item def | 40 | 40 | 一致 |
 | 警報の監視 | SSD-FDIR-ORB-001 の警報の表の監視する機能ブロック | SSD-FDIR-ORB-001 の #Monitors | 56 | 56 | 一致 |
@@ -168,7 +168,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | ハザード | SSD-HAZ-ORB-001 のハザードの表 | SSD-HAZ-ORB-001 の Hazard の occurrence def | 16 | 16 | 一致 |
 | ハザードの原因 | SSD-HAZ-ORB-001 の原因の表 | SSD-HAZ-ORB-001 の #causation | 49 | 49 | 一致 |
 | ハザードの管理策 | SSD-HAZ-ORB-001 の管理策の表 | SSD-HAZ-ORB-001 の requirement | 69 | 69 | 一致 |
-| 飛行の個体 | SSD-IND-ORB-001 の飛行の個体の表 | SSD-IND-ORB-001 の individual def | 3 | 3 | 一致 |
+| 飛行の個体 | SSD-IND-ORB-001 の飛行の個体の表 | SSD-IND-ORB-001 の individual occurrence def | 3 | 3 | 一致 |
 | 時間切片 | SSD-IND-ORB-001 の時間切片の表 | SSD-IND-ORB-001 の timeslice | 22 | 22 | 一致 |
 | 飛行の実績 | SSD-IND-ORB-001 の実績と設計値の表 | SSD-IND-ORB-001 の実績の属性 | 35 | 35 | 一致 |
 | 形式化した要求 | SSD-RQF-SYS-001 の形式化した制約の表の要求 | SSD-RQF-SYS-001 の requirement def | 184 | 184 | 一致 |
@@ -204,9 +204,9 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 大気のモデル（式） | SSD-ATM-ORB-001 のモデルの表 | SSD-ATM-ORB-001 の constraint def | 7 | 7 | 一致 |
 | 大気のシナリオ | SSD-ATM-ORB-001 のシナリオの表 | SSD-ATM-ORB-001 の analysis def | 10 | 10 | 一致 |
 | 大気の照合 | SSD-ATM-ORB-001 の照合の表 | SSD-ATM-ORB-001 の requirement def | 8 | 8 | 一致 |
-| L3 の要求 | SSD-RQL-ECL-001 の要求の表 | SSD-RQL-ECL-001 の requirement | 99 | 99 | 一致 |
-| 導出（L2→L3） | SSD-RQL-ECL-001 の上位の欄 | SSD-RQL-ECL-001 の #derivation | 110 | 110 | 一致 |
-| L3 の検証ケース | SSD-RQL-ECL-001 の検証の表 | SSD-RQL-ECL-001 の verification def | 99 | 99 | 一致 |
+| L3 の要求 | SSD-RQL-ECL-001 の要求の表 | SSD-RQL-ECL-001 の requirement | 105 | 105 | 一致 |
+| 導出（L2→L3） | SSD-RQL-ECL-001 の上位の欄 | SSD-RQL-ECL-001 の #derivation | 116 | 116 | 一致 |
+| L3 の検証ケース | SSD-RQL-ECL-001 の検証の表 | SSD-RQL-ECL-001 の verification def | 105 | 105 | 一致 |
 | ECLSS の状態 | SSD-BEH-ORB-007 の状態の表 | SSD-BEH-ORB-007 の state | 43 | 43 | 一致 |
 | ECLSS の遷移 | SSD-BEH-ORB-007 の遷移の表 | SSD-BEH-ORB-007 の transition | 58 | 58 | 一致 |
 | ECLSS の活動の行動 | SSD-BEH-ORB-007 の節点の表 | SSD-BEH-ORB-007 の action | 22 | 22 | 一致 |
@@ -297,3 +297,5 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. AC | 2026-10-09 | 読み込むパッケージに Rev. BN の SSD-EPB-EVA-001 を加えた、文書とモデルの一致を 89分類にした（Rev. BN） |
 | Rev. AD | 2026-10-09 | 読み込むパッケージに Rev. BO の SSD-HRS-ORB-001 を加えた、文書とモデルの一致を 92分類にした（Rev. BO） |
 | Rev. AE | 2026-10-09 | 読み込むパッケージに Rev. BP の SSD-MED-ORB-001 を加えた、文書とモデルの一致を 95分類にした（Rev. BP） |
+| Rev. AF | 2026-10-11 | Rev. BQ（照合表の判定の見直し・飛行試験の反証の決定・本書の判断の確認）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 95分類にした（Rev. BQ） |
+| Rev. AG | 2026-10-11 | Rev. BR（出典の更新・L3 の要求の追加・検証の根拠の調査・SysML の書き方）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 95分類にした（Rev. BR） |

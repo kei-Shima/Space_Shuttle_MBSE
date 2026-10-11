@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-EPS-FCP-001 |
 | 表題 | 燃料電池発電装置（FCP）機能説明書 |
-| 版・日付 | Rev. E／2026-10-04 |
+| 版・日付 | Rev. F／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-EPS-001 |
 | 関連図 | SSD-SYS-ARC-001 図6 EPS 機能構成 |
@@ -17,26 +17,26 @@
 
 | 機能番号 | 内容 |
 |---|---|
-| F-EPS-FCP-01 | 3基の燃料電池は再使用・再起動が可能で、中胴前部のペイロードベイの下に置かれる。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
+| F-EPS-FCP-01 | 3基の燃料電池は再使用・再起動が可能で、中胴前部のペイロードベイの下に置かれる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/319） |
 | F-EPS-FCP-02 | 3基は独立した電源として動作し、それぞれが分離された28 V直流母線に同時に給電する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
-| F-EPS-FCP-03 | 発電部は3つのサブスタックに収めた96セルから成り、電解質は水酸化カリウム水溶液である。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
-| F-EPS-FCP-04 | 補機部は反応剤流量を監視し、排熱と生成水を取り除き、スタック温度を制御する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
-| F-EPS-FCP-05 | 冷却材がスタックの排熱を燃料電池熱交換器経由でフレオン21冷却ループへ移し、スタックを約200°Fに保つ。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
-| F-EPS-FCP-06 | 反応剤中の不活性ガスなどを除くため、少なくとも1日2回パージが必要である。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
-| F-EPS-FCP-07 | 1基の能力は最大連続7 kW・ピーク12 kWで、3基では連続21 kW・15分間のピーク36 kWとされ、オービタの平均消費電力は約14 kWと見込まれている。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） |
+| F-EPS-FCP-03 | 発電部は3つのサブスタックに収めた96セルから成り、電解質は水酸化カリウム水溶液である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320） |
+| F-EPS-FCP-04 | 補機部は反応剤流量を監視し、排熱と生成水を取り除き、スタック温度を制御する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320） |
+| F-EPS-FCP-05 | 冷却材がスタックの排熱を燃料電池熱交換器経由でフレオン21冷却ループへ移し、スタックを約200°Fに保つ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320） |
+| F-EPS-FCP-06 | 反応剤中の不活性ガスを除くため、96時間を超えない間隔で計画的にパージする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439） |
+| F-EPS-FCP-07 | 1基の能力は通常時の最大連続10 kW・非通常時（1基以上の燃料電池が故障したとき）の連続12 kW・10分間の最大16 kWで、オービタの軌道上の平均消費電力は約14 kWである。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320） |
 | F-EPS-FCP-08 | オービタには予備バッテリがなく、3基の燃料電池が機上電力のすべてを生み出す。（出典: https://ntrs.nasa.gov/api/citations/20040010319/downloads/20040010319.pdf） |
 
 ## 3. インタフェース
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-EPS-03 | 反応剤貯蔵・分配（PRSD） | 推進薬・流体 | 受信 | 反応剤はリリーフ弁／フィルタと弁モジュールを経て共通マニホールドから燃料電池へ流れ、酸素は815〜881 psia、水素は200〜243 psiaで供給される。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | — |
-| IF-EPS-05 | 直流配電（EPDC-DC） | 電力（28 VDC） | 送信 | 各燃料電池の直流電力は対応する分配器へ送られ、燃料電池1は主母線A、2は主母線B、3は主母線Cに対応する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | — |
-| IF-EPS-06 | 給水・廃水系（ECLSS） | 推進薬・流体 | 送信 | 3基の燃料電池の生成水は単一の水リリーフ制御盤へ集まり、通常は飲料水タンクAへ送られ、凍結時に備えてタンクBへの冗長経路もある。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | 上位: IF-ECL-10 |
-| IF-EPS-07 | 熱制御：熱交換器網 | 熱 | 送信 | 燃料電池の冷却材（フッ素系炭化水素）は、燃料電池熱交換器を通じてスタックの排熱を中胴のフレオン21冷却ループへ移す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | 上位: IF-ECL-09 |
-| IF-EPS-08 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 水タンクが満杯または配管が閉塞した場合、水リリーフ弁が45 psiaで開いて生成水を船外へ排出する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）パージ時は反応剤を流して不活性ガスなどの不純物をパージ配管から船外へ吹き出す。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | — |
+| IF-EPS-03 | 反応剤貯蔵・分配（PRSD） | 推進薬・流体 | 受信 | 反応剤はリリーフ弁／フィルタと弁モジュールを経て共通マニホールドから燃料電池へ流れ、酸素は803〜883 psia、水素は200〜243 psiaで供給される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/317） | — |
+| IF-EPS-05 | 直流配電（EPDC-DC） | 電力（28 VDC） | 送信 | 各燃料電池の直流電力は対応する分配器へ送られ、燃料電池1は主母線A、2は主母線B、3は主母線Cに対応する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/338） | — |
+| IF-EPS-06 | 給水・廃水系（ECLSS） | 推進薬・流体 | 送信 | 3基の燃料電池の生成水は単一の水リリーフ制御盤へ集まり、通常は飲料水タンクAへ送られ、タンクへの主経路の閉塞時に備えてタンクBへの冗長経路もある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） | 上位: IF-ECL-10 |
+| IF-EPS-07 | 熱制御：熱交換器網 | 熱 | 送信 | 燃料電池の冷却材（フッ素系炭化水素）は、燃料電池熱交換器を通じてスタックの排熱を中胴のフレオン21冷却ループへ移す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320） | 上位: IF-ECL-09 |
+| IF-EPS-08 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 水タンクが満杯または配管が閉塞した場合、水リリーフ弁が45 psiaで開いて生成水を船外へ排出する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/324）パージ時は反応剤を流して不活性ガスなどの不純物をパージ配管から船外へ吹き出す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/325） | — |
 | IF-EPS-09 | DPS | データ・指令 | 双方向 | 自動パージでは、GPCがパージ配管ヒータを入れて温度を確認し、燃料電池1・2・3のパージ弁を順に2分間開閉する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/326） | 上位: IF-ORB-20 |
-| IF-EPS-13 | 交流発電・配電（EPDC-AC） | 電力（28 VDC） | 受信 | 燃料電池の冷却材ポンプは3相交流で駆動され、電子制御ユニットが冷却材ポンプと水素ポンプ／水分離器への交流電力を制御する。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | — |
+| IF-EPS-13 | 交流発電・配電（EPDC-AC） | 電力（28 VDC） | 受信 | 燃料電池の冷却材ポンプは3相交流で駆動され、電子制御ユニットが冷却材ポンプと水素ポンプ／水分離器への交流電力を制御する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/330） | — |
 | IF-EPS-16 | 直流配電（EPDC-DC） | 電力（28 VDC） | 受信 | 電気制御ユニット（ECU）は冷却材ポンプ・水素ポンプ/水分離器・pH センサへの交流を制御する。三相交流を3台の燃料電池へつなぐ回路遮断器9個がパネル L4 にあり、ECU は必須母線から給電される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/328）必須母線の電圧が 25 V DC 未満で SM ALERT になる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/341） | — |
 
 ## 4. 関連文書
@@ -71,6 +71,14 @@
 
 > **注記** 燃料電池発電装置の状態と遷移（図99）は [SSD-BEH-ORB-005](SSD-BEH-ORB-005.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-005.sysml）。
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はタンクBへの冗長経路を主経路の凍結に備えるものとしていたが、SCOM（OI-33）は主経路の閉塞に備えるものとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は少なくとも1日2回のパージが必要としていたが、運用飛行規則 Vol. A（2002年）の規則A9-52は96時間を超えない間隔で計画的にパージするとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は1基の能力を最大連続7 kW・ピーク12 kW、3基で連続21 kW・15分間のピーク36 kWとしていたが、SCOM（OI-33）は1基あたり通常時の最大連続10 kW・非通常時の連続12 kW・10分間の最大16 kWとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320）
+
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は酸素の供給圧力を815〜881 psiaとしていたが、SCOM（OI-33）は803〜883 psiaとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/317）
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Electrical Power System（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eps.html
@@ -81,6 +89,15 @@
 6. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p326） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/326
 7. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p328） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/328
 8. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p341） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/341
+9. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p319） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/319
+10. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p320） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/320
+11. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A9-52 FC PURGE（PDF p1439） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439
+12. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p317） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/317
+13. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p338） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/338
+14. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water System（PDF p394） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394
+15. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p324） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/324
+16. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p325） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/325
+17. Shuttle Crew Operations Manual 2.8 Electrical Power System（USA007587 Rev. A CPN-1、PDF p330） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/330
 
 ## 7. 変更履歴
 
@@ -92,3 +109,4 @@
 | Rev. C | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（1文）（Rev. Q） |
 | Rev. D | 2026-10-03 | 系の状態遷移定義書 SSD-BEH-ORB-005 への参照を注記（Rev. AI） |
 | Rev. E | 2026-10-04 | 内部ブロック図の機能ブロックをまたぐ流れの IF IF-EPS-16 を足した（GAP-09 の解消）（Rev. AU） |
+| Rev. F | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（13文。うち本文を改めた4文に注記）（Rev. BR） |

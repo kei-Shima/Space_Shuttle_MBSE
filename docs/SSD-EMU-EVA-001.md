@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-EMU-EVA-001 |
 | 表題 | EMU の構造・内部ブロック・状態定義書（PLSS・SOP・DCM・宇宙服、換気と冷却水の流れ、EMU とエアロックの状態） |
-| 版・日付 | Rev. A／2026-10-09 |
+| 版・日付 | Rev. B／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-EVA-001 |
 | 関連図 | SSD-SYS-ARC-001 図179 EMU の構造（ブロック定義）・図180 EMU 内部ブロック図（換気・冷却水・電力・通信）・図181 EMU 状態遷移図・図182 エアロック 状態遷移図 |
@@ -304,6 +304,8 @@ EMU の警報系（CWS）の表示で始まる遷移 11件を示す。EMU の警
 
 > **注記** EMU の一次 O2・LiOH・電池の持続時間と前呼吸の R 値は [SSD-EPB-EVA-001](SSD-EPB-EVA-001.md) に示す（SysML v2 テキスト：SysML/SSD-EPB-EVA-001.sysml）。
 
+> **注記** 本書の判断の確認（Rev. BQ）：EMU の機器を機能説明書・構造モデルの機能ブロックに増やさず、本書の構造（Emu）に置く扱いは、確定とする。NASA の EVA の設計基準は、EMU を、環境からの保護・移動・生命維持・通信を与える独立した人体形のシステムとし、基準の飛行に2着を積むとする。（出典: https://ntrs.nasa.gov/api/citations/19830021026/downloads/19830021026.pdf#page=13）EMU はオービタの系ではなく、オービタとは SCU・エアロックの IF（IF-ALS-06・IF-ALS-07 など）でつながる独立のシステムなので、オービタの機能ブロックの下位に入れず、IF の相手として扱う。機器配分表は EMU 全体の行（PHY-EVA-01）のままとする。
+
 ## 17. 参考文献
 
 1. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p444） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/444
@@ -509,3 +511,4 @@ EMU の警報系（CWS）の表示で始まる遷移 11件を示す。EMU の警
 |---|---|---|
 | 初版（Rev. -） | 2026-10-09 | 初版作成（構造 12件、機器 19件・流れ 35件、図181 の状態 13件・遷移 22件、図182 の状態 12件・遷移 16件、SysML v2 テキスト） |
 | Rev. A | 2026-10-09 | EMU の消耗品と前呼吸の定義書 SSD-EPB-EVA-001 への参照を注記（Rev. BN） |
+| Rev. B | 2026-10-11 | EMU を機能説明書に増やさない扱いを確認して確定とした（Rev. BQ） |

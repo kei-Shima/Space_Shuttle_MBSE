@@ -1501,7 +1501,7 @@ package SSD_VER_SYS_001 {
         }
         verification vc_req_sys_03 : VC_REQ_SYS_03 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.str;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_sys_04 : VC_REQ_SYS_04 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.srb;
@@ -1509,7 +1509,7 @@ package SSD_VER_SYS_001 {
         }
         verification vc_req_sys_05 : VC_REQ_SYS_05 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.crew;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_sys_06 : VC_REQ_SYS_06 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eps.prsd;
@@ -1697,7 +1697,7 @@ package SSD_VER_SYS_001 {
         }
         verification vc_req_eclss_12 : VC_REQ_ECLSS_12 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.fds;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_eclss_13 : VC_REQ_ECLSS_13 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.wcs;
@@ -2029,7 +2029,7 @@ package SSD_VER_SYS_001 {
         }
         verification vc_req_tps_03 : VC_REQ_TPS_03 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.tcs;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_tps_04 : VC_REQ_TPS_04 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.tcs;

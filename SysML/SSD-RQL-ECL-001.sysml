@@ -36,13 +36,13 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* キャビンファンの喪失を差圧 4.20 in H2O 未満または 6.80 in H2O 超と乗員による気流の喪失の確認で判定し、MECO 前を除いて予備のファンへ切り替え、冷却に要る最低流量 1,400 lb/hr を保ち、軌道上のファンの停止を MDU 搭載で 30 分（旧 DDU 搭載で 20 分）以内とすること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "最低 1,400 lb/hr、停止 30 分（旧 DDU 20 分）以内"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ARS-06'> REQ_ARS_06 {
             subject s : Parts::Part;
             doc /* 乗員室の火災ではキャビンファンを止め、鎮火後は WCS の活性炭フィルタ・ATCO・LiOH キャニスタで乗員室の大気から燃焼生成物を除くこと。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "—"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ARS-07'> REQ_ARS_07 {
             subject s : Parts::Part;
@@ -174,7 +174,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* アビオニクスベイの火災では、そのベイの Halon ボトルを放出してベイファンを止め、放出後のベイの電源断でも IMU ファンは止めずに運転を続けること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "—"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ARS-29'> REQ_ARS_29 {
             subject s : Parts::Part;
@@ -228,19 +228,37 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* アキュムレータ量 0（5）%、MIN BYP でインターチェンジャ流量 600（649）lb/hr 以上を保てない、14.7 psia で稼働ループのポンプ出口温度を 85（82.75）°F 未満に保てない、ループ間漏れの確認のいずれかで水ループの喪失と判定し、水ループの停止は 10 分以内とすること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "0（5）%、600（649）lb/hr、85（82.75）°F、停止 10 min"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ARS-38'> REQ_ARS_38 {
             subject s : Parts::Part;
             doc /* 1ループの喪失ではゼロフォールトトレラントとして上昇中は初日の PLS とし、両ループの喪失では上昇中は AOA、軌道上は故障から4時間以内の着陸とすること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "AOA、4 h"; phases = "PH-2（上昇）・PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ARS-39'> REQ_ARS_39 {
             subject s : Parts::Part;
             doc /* 両フレオンループの蒸発器出口温度が 32°F 未満になれば両水ループを運転して水の凍結を防ぎ、インターチェンジャ出口 35°F 未満・キャビン熱交換器入口 34°F 未満の低温を SM 警報で知らせること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "32°F、35°F・34°F"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
+        }
+        requirement <'REQ-ARS-40'> REQ_ARS_40 {
+            subject s : Parts::Part;
+            doc /* ATCO キャニスタで乗員室の大気の一酸化炭素を除き、一酸化炭素の濃度を宇宙機最大許容濃度（SMAC：7日で 55 ppm、30日・180日で 15 ppm）以下に保つこと。 */
+            @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "CO 7日 55 ppm・30日と180日 15 ppm（SMAC）"; phases = "PH-3（軌道）"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
+        }
+        requirement <'REQ-ARS-41'> REQ_ARS_41 {
+            subject s : Parts::Part;
+            doc /* 燃焼生成物（CO・HCN・HCl）を実時間で測る携帯型の分析器（CSA-CP）を搭載し、飛行1日目に取り出してセンサを確かめ、規格を外れていれば軌道上でゼロ校正すること。 */
+            @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "CO・HCN・HCl の3成分、飛行1日目に確認"; phases = "PH-3（軌道）"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+        }
+        requirement <'REQ-ARS-42'> REQ_ARS_42 {
+            subject s : Parts::Part;
+            doc /* IMU 冷却系の入口と出口に消音器（入口3個・出口1個）を付けて、乗員室の騒音を抑えること。 */
+            @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "消音器 入口 3個・出口 1個"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
     }
     package <'REQ-PCS'> REQ_PCS {
@@ -273,7 +291,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* 窒素タンク（最大8基）に、機体の漏れ・ベント・EVA の再与圧の使用量に加えて、0.45 インチの穴の漏れで 8 psia を保ち 165 分後に着陸できる量の窒素を搭載すること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "8 psia・165 分"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-PCS-06'> REQ_PCS_06 {
             subject s : Parts::Part;
@@ -285,7 +303,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* 打上げ・帰還では LES ヘルメットへ乗員1人あたり少なくとも 2.5 lb/hr の酸素を送り、軌道上は乗員数に合わせたブリードオリフィス（4〜5人 0.24 lbm/hr、6〜7人 0.36 lbm/hr）で代謝用の酸素を補うこと。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "2.5 lb/hr/人、0.24・0.36 lbm/hr"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'REQ-PCS-08'> REQ_PCS_08 {
             subject s : Parts::Part;
@@ -378,7 +396,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* 飛行1日目にギャレーのヨウ素除去装置（GIRA または LIRS）を取り付け、乗員のヨウ素摂取を1人1日 1 mg 未満に保つこと。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "1 mg/日/人 未満"; phases = "PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-WTR-11'> REQ_WTR_11 {
             subject s : Parts::Part;
@@ -390,6 +408,12 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* 廃水量が 80% に達する前に廃水をダンプし、0（5）% まではダンプしないこと。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "80%、0（5）%"; phases = "PH-3（軌道）"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
+        }
+        requirement <'REQ-WTR-13'> REQ_WTR_13 {
+            subject s : Parts::Part;
+            doc /* 乗員室に遊離した給水は FREE FLUID DISPOSAL の IFM で直ちに処理し、修理も隔離もできない漏れのあるタンクはベント・ダンプして隔離し、以後は使わないこと。 */
+            @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "—"; phases = "PH-3（軌道）"; }
             @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
     }
@@ -429,7 +453,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* EMU の排水中は小便器を使わず（分離器の最大廃水流量 0.09 lbm/s）、乗員室の再与圧中は WCS を使わないこと。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "0.09 lbm/s"; phases = "PH-3（軌道）・PH-5（EVA）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-WCS-07'> REQ_WCS_07 {
             subject s : Parts::Part;
@@ -448,6 +472,12 @@ package SSD_RQL_ECL_001 {
             doc /* 便器や尿収集を失ったときに備えて便袋 40 枚、UCD 58 個・UAS 36 個（少なくとも PLS＋2日分）を積み、WCS の喪失の基準を満たせば代替の収集具に切り替えること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "便袋 40、UCD 58、UAS 36（PLS＋2日分）"; phases = "PH-3（軌道）"; }
             @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
+        }
+        requirement <'REQ-WCS-10'> REQ_WCS_10 {
+            subject s : Parts::Part;
+            doc /* WCS は使用のたびにウェットワイプで清掃し、1日1回は消毒用ワイプで消毒すること。 */
+            @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "消毒 1日1回"; phases = "PH-3（軌道）"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
         }
     }
     package <'REQ-FDS'> REQ_FDS {
@@ -480,7 +510,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* 放出したベイの Halon 濃度を、消火に要る 4% を超えて50時間（冷却を強化し能動冷却のペイロードを置いたベイ3Aは28時間）保ち、これを過ぎたか放出音の無い AGENT DISCH 灯の点灯でそのベイの消火を喪失とすること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "50時間（ベイ3A 28時間）、4%"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-FDS-06'> REQ_FDS_06 {
             subject s : Parts::Part;
@@ -561,7 +591,7 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* EMU の O2 補給は O2 供給ラインの温度が 80°F（指示値）以下、給水の再充填は給水配管の温度が両区域で 95°F 以下のときに行い、EVA 乗員は EMU の消耗品が残り30分になったらエアロックに入って SCU に接続すること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "80°F・95°F、残り30分"; phases = "PH-5（EVA）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'REQ-ALS-10'> REQ_ALS_10 {
             subject s : Parts::Part;
@@ -618,6 +648,12 @@ package SSD_RQL_ECL_001 {
             subject s : Parts::Part;
             doc /* 打上げ前と着陸後は T-0 アンビリカルの GSE 熱交換器を地上冷却につないで排熱し、リフトオフから FES の起動まではループの熱容量で温度上昇を抑えること。 */
             @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "冷却カートの接続 着陸後 約30分以内"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-7（着陸後）"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
+        }
+        requirement <'REQ-ATCS-08'> REQ_ATCS_08 {
+            subject s : Parts::Part;
+            doc /* トッピング蒸発器で、軌道上の給水タンクの余剰の水を蒸発させて船外へ捨てられること。 */
+            @RequirementInfo { document = "SSD-RQL-ECL-001"; valueText = "—"; phases = "PH-3（軌道）"; }
             @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
     }
@@ -791,6 +827,18 @@ package SSD_RQL_ECL_001 {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_07;
             end #derive ::> REQ_ARS::REQ_ARS_39;
         }
+        #derivation connection <'REQ-ECLSS-06>REQ-ARS-40'> {
+            end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_06;
+            end #derive ::> REQ_ARS::REQ_ARS_40;
+        }
+        #derivation connection <'REQ-ECLSS-11>REQ-ARS-41'> {
+            end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_11;
+            end #derive ::> REQ_ARS::REQ_ARS_41;
+        }
+        #derivation connection <'REQ-ECLSS-05>REQ-ARS-42'> {
+            end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_05;
+            end #derive ::> REQ_ARS::REQ_ARS_42;
+        }
         #derivation connection <'REQ-ECLSS-01>REQ-PCS-01'> {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_01;
             end #derive ::> REQ_PCS::REQ_PCS_01;
@@ -907,6 +955,10 @@ package SSD_RQL_ECL_001 {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_10;
             end #derive ::> REQ_WTR::REQ_WTR_12;
         }
+        #derivation connection <'REQ-ECLSS-10>REQ-WTR-13'> {
+            end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_10;
+            end #derive ::> REQ_WTR::REQ_WTR_13;
+        }
         #derivation connection <'REQ-ECLSS-13>REQ-WCS-01'> {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_13;
             end #derive ::> REQ_WCS::REQ_WCS_01;
@@ -942,6 +994,10 @@ package SSD_RQL_ECL_001 {
         #derivation connection <'REQ-ECLSS-12>REQ-WCS-09'> {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_12;
             end #derive ::> REQ_WCS::REQ_WCS_09;
+        }
+        #derivation connection <'REQ-ECLSS-13>REQ-WCS-10'> {
+            end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_13;
+            end #derive ::> REQ_WCS::REQ_WCS_10;
         }
         #derivation connection <'REQ-ECLSS-11>REQ-FDS-01'> {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_11;
@@ -1063,6 +1119,10 @@ package SSD_RQL_ECL_001 {
             end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_08;
             end #derive ::> REQ_ATCS::REQ_ATCS_07;
         }
+        #derivation connection <'REQ-ECLSS-10>REQ-ATCS-08'> {
+            end #original ::> SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_10;
+            end #derive ::> REQ_ATCS::REQ_ATCS_08;
+        }
     }
     // ---- 充足（割付先の機能行を持つ機能説明書の部品）
     package Satisfaction {
@@ -1182,6 +1242,9 @@ package SSD_RQL_ECL_001 {
         satisfy REQ_ARS::REQ_ARS_39 by context.sts.orb.eclss.ars.wcl.ich { doc /* 割付先：F-ARS-WCL-ICH-10・F-ARS-WCL-ICH-11 */ }
         satisfy REQ_ARS::REQ_ARS_39 by context.sts.orb.eclss.ars.wcl.cld { doc /* 割付先：F-ARS-WCL-CLD-08 */ }
         satisfy REQ_ARS::REQ_ARS_39 by context.sts.orb.eclss.ars.wcl.mon { doc /* 割付先：F-ARS-WCL-MON-11 */ }
+        satisfy REQ_ARS::REQ_ARS_40 by context.sts.orb.eclss.ars.co2.atco { doc /* 割付先：F-CO2-ATCO-09 */ }
+        satisfy REQ_ARS::REQ_ARS_41 by context.sts.orb.eclss.ars.co2.mon { doc /* 割付先：F-CO2-MON-10 */ }
+        satisfy REQ_ARS::REQ_ARS_42 by context.sts.orb.eclss.ars.imu.inl { doc /* 割付先：F-ARS-IMU-INL-11 */ }
         satisfy REQ_PCS::REQ_PCS_01 by context.sts.orb.eclss.pcs.mnf { doc /* 割付先：F-ECL-PCS-MNF-01・F-ECL-PCS-MNF-02・F-ECL-PCS-MNF-03・F-ECL-PCS-MNF-04 */ }
         satisfy REQ_PCS::REQ_PCS_02 by context.sts.orb.eclss.pcs.mnf { doc /* 割付先：F-ECL-PCS-MNF-05・F-ECL-PCS-MNF-06・F-ECL-PCS-MNF-07・F-ECL-PCS-MNF-08・F-ECL-PCS-MNF-09・F-ECL-PCS-MNF-10 */ }
         satisfy REQ_PCS::REQ_PCS_02 by context.sts.orb.eclss.pcs.ops { doc /* 割付先：F-ECL-PCS-OPS-01 */ }
@@ -1213,6 +1276,7 @@ package SSD_RQL_ECL_001 {
         satisfy REQ_WTR::REQ_WTR_10 by context.sts.orb.eclss.h2o.gal { doc /* 割付先：F-ECL-H2O-GAL-06・F-ECL-H2O-GAL-07・F-ECL-H2O-GAL-08 */ }
         satisfy REQ_WTR::REQ_WTR_11 by context.sts.orb.eclss.h2o.wst { doc /* 割付先：F-ECL-H2O-WST-01・F-ECL-H2O-WST-02・F-ECL-H2O-WST-03・F-ECL-H2O-WST-04・F-ECL-H2O-WST-09・F-ECL-H2O-WST-10 */ }
         satisfy REQ_WTR::REQ_WTR_12 by context.sts.orb.eclss.h2o.wst { doc /* 割付先：F-ECL-H2O-WST-05・F-ECL-H2O-WST-07・F-ECL-H2O-WST-08・F-ECL-H2O-WST-12 */ }
+        satisfy REQ_WTR::REQ_WTR_13 by context.sts.orb.eclss.h2o.spl { doc /* 割付先：F-ECL-H2O-SPL-12 */ }
         satisfy REQ_WCS::REQ_WCS_01 by context.sts.orb.eclss.wcs.cmd { doc /* 割付先：F-ECL-WCS-CMD-01・F-ECL-WCS-CMD-02・F-ECL-WCS-CMD-04・F-ECL-WCS-CMD-05・F-ECL-WCS-CMD-07・F-ECL-WCS-CMD-08 */ }
         satisfy REQ_WCS::REQ_WCS_02 by context.sts.orb.eclss.wcs.cmd { doc /* 割付先：F-ECL-WCS-CMD-03・F-ECL-WCS-CMD-06・F-ECL-WCS-CMD-10・F-ECL-WCS-CMD-11・F-ECL-WCS-CMD-12 */ }
         satisfy REQ_WCS::REQ_WCS_02 by context.sts.orb.eclss.wcs.ops { doc /* 割付先：F-ECL-WCS-OPS-01・F-ECL-WCS-OPS-02 */ }
@@ -1229,6 +1293,7 @@ package SSD_RQL_ECL_001 {
         satisfy REQ_WCS::REQ_WCS_09 by context.sts.orb.eclss.wcs.cmd { doc /* 割付先：F-ECL-WCS-CMD-09 */ }
         satisfy REQ_WCS::REQ_WCS_09 by context.sts.orb.eclss.wcs.fsp { doc /* 割付先：F-ECL-WCS-FSP-08・F-ECL-WCS-FSP-09 */ }
         satisfy REQ_WCS::REQ_WCS_09 by context.sts.orb.eclss.wcs.urn { doc /* 割付先：F-ECL-WCS-URN-08 */ }
+        satisfy REQ_WCS::REQ_WCS_10 by context.sts.orb.eclss.wcs.ops { doc /* 割付先：F-ECL-WCS-OPS-12 */ }
         satisfy REQ_FDS::REQ_FDS_01 by context.sts.orb.eclss.fds.det { doc /* 割付先：F-ECL-FDS-DET-01・F-ECL-FDS-DET-02・F-ECL-FDS-DET-05・F-ECL-FDS-DET-12 */ }
         satisfy REQ_FDS::REQ_FDS_02 by context.sts.orb.eclss.fds.det { doc /* 割付先：F-ECL-FDS-DET-03・F-ECL-FDS-DET-04・F-ECL-FDS-DET-06・F-ECL-FDS-DET-07・F-ECL-FDS-DET-08・F-ECL-FDS-DET-09・F-ECL-FDS-DET-10・F-ECL-FDS-DET-11 */ }
         satisfy REQ_FDS::REQ_FDS_03 by context.sts.orb.eclss.fds.alm { doc /* 割付先：F-ECL-FDS-ALM-01・F-ECL-FDS-ALM-02・F-ECL-FDS-ALM-03・F-ECL-FDS-ALM-04・F-ECL-FDS-ALM-05・F-ECL-FDS-ALM-06・F-ECL-FDS-ALM-07・F-ECL-FDS-ALM-08・F-ECL-FDS-ALM-09・F-ECL-FDS-ALM-10・F-ECL-FDS-ALM-11・F-ECL-FDS-ALM-12 */ }
@@ -1258,6 +1323,7 @@ package SSD_RQL_ECL_001 {
         satisfy REQ_ATCS::REQ_ATCS_05 by context.sts.orb.eclss.atcs.rad { doc /* 割付先：F-TCS-RAD-01・F-TCS-RAD-02・F-TCS-RAD-03・F-TCS-RAD-04・F-TCS-RAD-05 */ }
         satisfy REQ_ATCS::REQ_ATCS_06 by context.sts.orb.eclss.atcs.nh3 { doc /* 割付先：F-TCS-NH3-01・F-TCS-NH3-02・F-TCS-NH3-03・F-TCS-NH3-04・F-TCS-NH3-05・F-TCS-NH3-06 */ }
         satisfy REQ_ATCS::REQ_ATCS_07 by context.sts.orb.eclss.atcs.gse { doc /* 割付先：F-TCS-GSE-01・F-TCS-GSE-02・F-TCS-GSE-03・F-TCS-GSE-04・F-TCS-GSE-05 */ }
+        satisfy REQ_ATCS::REQ_ATCS_08 by context.sts.orb.eclss.atcs.fes { doc /* 割付先：F-TCS-FES-05 */ }
     }
     // ---- 検証ケース（要求ごと）と結果
     package Verification {
@@ -1534,6 +1600,27 @@ package SSD_RQL_ECL_001 {
             objective { verify REQ_ARS::REQ_ARS_39; }
             return verdict : VerdictKind;
         }
+        verification def <'VC-REQ-ARS-40'> VC_REQ_ARS_40 {
+            doc /* REQ-ARS-40 をA（解析）で確かめる。 */
+            @VerificationMethod { kind = VerificationMethodKind::analyze; }
+            subject s : Parts::Part;
+            objective { verify REQ_ARS::REQ_ARS_40; }
+            return verdict : VerdictKind;
+        }
+        verification def <'VC-REQ-ARS-41'> VC_REQ_ARS_41 {
+            doc /* REQ-ARS-41 をD（実証）で確かめる。 */
+            @VerificationMethod { kind = VerificationMethodKind::demo; }
+            subject s : Parts::Part;
+            objective { verify REQ_ARS::REQ_ARS_41; }
+            return verdict : VerdictKind;
+        }
+        verification def <'VC-REQ-ARS-42'> VC_REQ_ARS_42 {
+            doc /* REQ-ARS-42 をT（試験）で確かめる。 */
+            @VerificationMethod { kind = VerificationMethodKind::test; }
+            subject s : Parts::Part;
+            objective { verify REQ_ARS::REQ_ARS_42; }
+            return verdict : VerdictKind;
+        }
         verification def <'VC-REQ-PCS-01'> VC_REQ_PCS_01 {
             doc /* REQ-PCS-01 をT（試験）で確かめる。 */
             @VerificationMethod { kind = VerificationMethodKind::test; }
@@ -1702,6 +1789,13 @@ package SSD_RQL_ECL_001 {
             objective { verify REQ_WTR::REQ_WTR_12; }
             return verdict : VerdictKind;
         }
+        verification def <'VC-REQ-WTR-13'> VC_REQ_WTR_13 {
+            doc /* REQ-WTR-13 をA（解析）で確かめる。 */
+            @VerificationMethod { kind = VerificationMethodKind::analyze; }
+            subject s : Parts::Part;
+            objective { verify REQ_WTR::REQ_WTR_13; }
+            return verdict : VerdictKind;
+        }
         verification def <'VC-REQ-WCS-01'> VC_REQ_WCS_01 {
             doc /* REQ-WCS-01 をT（試験）で確かめる。 */
             @VerificationMethod { kind = VerificationMethodKind::test; }
@@ -1763,6 +1857,13 @@ package SSD_RQL_ECL_001 {
             @VerificationMethod { kind = VerificationMethodKind::analyze; }
             subject s : Parts::Part;
             objective { verify REQ_WCS::REQ_WCS_09; }
+            return verdict : VerdictKind;
+        }
+        verification def <'VC-REQ-WCS-10'> VC_REQ_WCS_10 {
+            doc /* REQ-WCS-10 をD（実証）で確かめる。 */
+            @VerificationMethod { kind = VerificationMethodKind::demo; }
+            subject s : Parts::Part;
+            objective { verify REQ_WCS::REQ_WCS_10; }
             return verdict : VerdictKind;
         }
         verification def <'VC-REQ-FDS-01'> VC_REQ_FDS_01 {
@@ -1954,6 +2055,13 @@ package SSD_RQL_ECL_001 {
             objective { verify REQ_ATCS::REQ_ATCS_07; }
             return verdict : VerdictKind;
         }
+        verification def <'VC-REQ-ATCS-08'> VC_REQ_ATCS_08 {
+            doc /* REQ-ATCS-08 をD（実証）で確かめる。 */
+            @VerificationMethod { kind = VerificationMethodKind::demo; }
+            subject s : Parts::Part;
+            objective { verify REQ_ATCS::REQ_ATCS_08; }
+            return verdict : VerdictKind;
+        }
     }
     package Results {
         verification vc_req_ars_01 : Verification::VC_REQ_ARS_01 {
@@ -1974,11 +2082,11 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_ars_05 : Verification::VC_REQ_ARS_05 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.cac;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_ars_06 : Verification::VC_REQ_ARS_06 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.cac.ops;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_ars_07 : Verification::VC_REQ_ARS_07 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.cac.dct;
@@ -2066,7 +2174,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_ars_28 : Verification::VC_REQ_ARS_28 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.avb.ops;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_ars_29 : Verification::VC_REQ_ARS_29 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.imu;
@@ -2102,15 +2210,27 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_ars_37 : Verification::VC_REQ_ARS_37 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.wcl;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_ars_38 : Verification::VC_REQ_ARS_38 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.wcl;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_ars_39 : Verification::VC_REQ_ARS_39 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.wcl;
+            return :>> verdict = VerdictKind::pass;
+        }
+        verification vc_req_ars_40 : Verification::VC_REQ_ARS_40 {
+            subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.co2.atco;
+            return :>> verdict = VerdictKind::pass;
+        }
+        verification vc_req_ars_41 : Verification::VC_REQ_ARS_41 {
+            subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.co2.mon;
             return :>> verdict = VerdictKind::inconclusive;
+        }
+        verification vc_req_ars_42 : Verification::VC_REQ_ARS_42 {
+            subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.ars.imu.inl;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_pcs_01 : Verification::VC_REQ_PCS_01 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.pcs.mnf;
@@ -2130,7 +2250,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_pcs_05 : Verification::VC_REQ_PCS_05 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.pcs.n2s;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_pcs_06 : Verification::VC_REQ_PCS_06 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.pcs.o2s;
@@ -2138,7 +2258,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_pcs_07 : Verification::VC_REQ_PCS_07 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.pcs.o2s;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_pcs_08 : Verification::VC_REQ_PCS_08 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.pcs.rlf;
@@ -2198,7 +2318,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_wtr_10 : Verification::VC_REQ_WTR_10 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.h2o.gal;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_wtr_11 : Verification::VC_REQ_WTR_11 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.h2o.wst;
@@ -2206,6 +2326,10 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_wtr_12 : Verification::VC_REQ_WTR_12 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.h2o.wst;
+            return :>> verdict = VerdictKind::pass;
+        }
+        verification vc_req_wtr_13 : Verification::VC_REQ_WTR_13 {
+            subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.h2o.spl;
             return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_wcs_01 : Verification::VC_REQ_WCS_01 {
@@ -2230,7 +2354,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_wcs_06 : Verification::VC_REQ_WCS_06 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.wcs.urn;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_wcs_07 : Verification::VC_REQ_WCS_07 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.wcs.vac;
@@ -2243,6 +2367,10 @@ package SSD_RQL_ECL_001 {
         verification vc_req_wcs_09 : Verification::VC_REQ_WCS_09 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.wcs.ops;
             return :>> verdict = VerdictKind::pass;
+        }
+        verification vc_req_wcs_10 : Verification::VC_REQ_WCS_10 {
+            subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.wcs.ops;
+            return :>> verdict = VerdictKind::inconclusive;
         }
         verification vc_req_fds_01 : Verification::VC_REQ_FDS_01 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.fds.det;
@@ -2262,7 +2390,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_fds_05 : Verification::VC_REQ_FDS_05 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.fds.fix;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_fds_06 : Verification::VC_REQ_FDS_06 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.fds.pfe;
@@ -2314,7 +2442,7 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_als_09 : Verification::VC_REQ_ALS_09 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.als.scu;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_req_als_10 : Verification::VC_REQ_ALS_10 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.als.mon;
@@ -2350,6 +2478,10 @@ package SSD_RQL_ECL_001 {
         }
         verification vc_req_atcs_07 : Verification::VC_REQ_ATCS_07 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.atcs.gse;
+            return :>> verdict = VerdictKind::pass;
+        }
+        verification vc_req_atcs_08 : Verification::VC_REQ_ATCS_08 {
+            subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss.atcs.fes;
             return :>> verdict = VerdictKind::pass;
         }
     }

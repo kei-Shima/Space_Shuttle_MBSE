@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-SYS-001 |
 | 表題 | システム要求書（L1） |
-| 版・日付 | Rev. J／2026-10-08 |
+| 版・日付 | Rev. K／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -89,15 +89,15 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 
 ## 6. 検証（V&V）
 
-各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（18件のうち根拠あり 16件・根拠なし 2件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
+各要求の検証方法（解析 A・試験 T・検査 I・実証 D）について、その方法で要求が満たされたことを示す公開資料の頁を「検証の根拠」に示す（18件のうち根拠あり 18件・根拠なし 0件）。根拠が見つからないものは「根拠なし」とし、理由を書いた。
 
 | ID | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|
 | REQ-SYS-01 | I（検査） | 根拠あり | STS-135 の飛行報告は、飛行した機体の構成をオービタ OV-104、外部タンク ET-138、3基の Block II SSME（製造番号つき）、2本の RSRB（BI-146）として記録しており、4つの主要素から成る構成を機体ごとの構成記録で確かめられることを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=6） |
 | REQ-SYS-02 | D（実証） | 根拠あり | STS-125 の飛行報告は、ハッブル宇宙望遠鏡へのランデブーで OMS-5 の後にオービタが 303.0 × 303.3 n.mi. の軌道に入ったことを示し、範囲の上限（312 n.mi.）に近い高度へ実際に到達したことの実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=14）STS-59 の飛行報告は、直接投入の後の OMS-2 で 121.3 × 120.5 n.mi. の軌道を得たことを示し、範囲の下限側の低い軌道での運用の実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=18） |
-| REQ-SYS-03 | I（検査） | 根拠なし | 根拠なし：ペイロードベイの寸法（直径 15 ft・長さ 60 ft）を検査・計測した記録は手元の資料に無い。SODB 3.4.5.2（p187）が「標準の直径 15 ft のペイロード包絡域」に触れるだけで、長さを含む寸法の検査の根拠にはならない。 |
+| REQ-SYS-03 | I（検査） | 根拠あり | NASA の Space Transportation System User Handbook（1977年6月）は、オービタの貨物室のペイロードの包絡域を 15 × 60 フィート（4572 × 18288 mm）と定め、NASA SP-2010-3409 は、オービタのペイロードベイを長さ 18.3 m（60 ft）・幅 4.6 m（15 ft）と記す。（出典: https://ntrs.nasa.gov/api/citations/19770081124/downloads/19770081124.pdf#page=43）（出典: https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf#page=7） |
 | REQ-SYS-04 | D（実証） | 根拠あり | STS-135 の飛行報告は、この飛行がアトランティス（OV-104）の33回目で最後の飛行であったことを示し、同じオービタを33回再使用したことの実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=6）STS-108 の飛行報告は、2本の SRB が回収されて KSC へ戻され、点検・分解・再整備に回されたこと、点検で両 SRB の状態が極めて良好だったことを示し、SRB を回収して再使用する運用の実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=19） |
-| REQ-SYS-05 | D（実証） | 根拠なし | 根拠なし：手元の飛行報告で同時に搭乗した乗員は最大7人である（STS-114・STS-125 は7人、STS-122 の「8人」は ISS 要員の交代を含む延べ人数で上り下りとも7人）。8人が搭乗した飛行（STS-61A・STS-71）の報告は資料に無い。 |
+| REQ-SYS-05 | D（実証） | 根拠あり | STS 61-A の Mission Report（JSC-20956）は、乗員として Hartsfield 以下8人の名前を挙げ、1985年10月30日の打上げから Edwards AFB への着陸までを記す。STS-71 の Mission Report は、打上げ時の5人に加えて Mir-18 の乗員3人を地球へ帰還させたと記す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-61-A%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=3）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-61-A%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=4）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=7）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=8）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
 | REQ-SYS-06 | A（解析） | 根拠あり | STS-65 の飛行報告は、EDO パレットを積んだ飛行で、着陸時に残った酸素・水素で平均 18.8 kW のまま47時間の延長が可能だったと評価しており、14日17時間の飛行に約2日を加えた約16.7日の滞在能力を消耗品の解析で示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=30）同じ報告は、STS-65 の飛行時間が14日17時間55分で、当時のシャトル計画で最長だったことを示し、16日に近い滞在の実績が解析の前提と合うことを裏づける。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | REQ-SYS-07 | T（試験） | 根拠あり | STS-2（軌道飛行試験）の飛行報告は、打上げ前に乗員室の与圧の健全性チェックを行い、飛行中の与圧殻の漏れ量が 0.7 lb/日（STS-1 は 2.7 lb/日）だったことを示し、乗員室の圧力を保つ能力を試験で確かめた記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=51）STS-125 の飛行報告は、ARPCS が飛行中チェックアウトの要求をすべて満たし、約 14.7 psia からの減圧と 14.7 psia への再加圧の後に圧力制御系2のチェックアウトを行ったことを示し、14.7 psia の圧力制御を飛行中に試験した記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
 | REQ-SYS-08 | A（解析） | 根拠あり | SODB 3.4.1.1 は、上昇軌道の軸方向荷重倍数を 3 g 以下とし、この荷重倍数をすべての intact アボートにも適用すること、SSME 1基の推力が 104% で固着すると 3 g を超えるため詳細な荷重解析が要ることを示し、3 g の限界が構造荷重の解析で管理されていることの根拠である。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=46）STS-135 の飛行報告の事象表は、上昇中に 3 g のための SSME の絞り込み指令が3基とも受け付けられ、全荷重倍数が 3 g に達した時刻を記録しており、解析どおりに加速度が 3 g に抑えられたことを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
@@ -133,6 +133,8 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 > **注記** 要求の値の見直し（Rev. BG）・延長日：REQ-SYS-13 は値（2日）を据え置き、要求の文を「打上げ前の計画と延長の決定のときに確保する」とした（運用飛行規則 A2-103 の A・B）。以前は着陸のときの残量と比べて満たさないとしたが、（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=586）STS-114 は12日＋予備2日で計画し、予備のうち1日を天候で使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=8）STS-125 は FD12・13 の KSC の着陸を天候で見送り、FD14 に EAFB へ着陸した（予備を2日とも使った）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=26）
 
 > **注記** 実際に飛んだクロスレンジ（Rev. BH の調査）：STS-7（1983年）は、KSC への着陸を天候で見送るときの代わりを Edwards への約732 n.mi. のクロスレンジとしていた（飛行前の会議録）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_001M.pdf#page=1）実際にこのクロスレンジで Edwards へ降り、クロスレンジが大きかったため、通信途絶の前の再突入の試験（PTI）を取りやめた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_005M.pdf#page=5）JSC の GNC 飛行後報告（STS-7、1983-06-28、https://www.ibiblio.org/apollo/Shuttle/Reports/GNC%20Post%20Flight%20Reports/STS-7%20GNC%20Post%20Flight%20Report.pdf の p9.1.4）はクロスレンジを 740 n.mi. とするが、画像の PDF でテキスト層が無く、照合語で確かめられない。1984年以降の飛行の実績のクロスレンジは資料に見つからず、これが計画全体の最大とは言えない。STS-7 の値は運用の限界（REQ-SYS-09 の 753〜828 n.mi.）の内で、限界に近い。
+
+> **注記** 検証の根拠の調査（Rev. BR）：REQ-SYS-03・REQ-SYS-05 は検証の根拠が無かったが、公開資料（Mission Report・運用飛行規則の根拠の欄・NASA の文書）を調べ直して根拠を見つけ、検証の状態を根拠ありに改めた。調べた範囲と残る制約は検証定義書 [SSD-VER-SYS-001](SSD-VER-SYS-001.md) の注記に示す。
 
 ## 8. 参考文献
 
@@ -185,6 +187,13 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 47. NSTS-37452 STS-125 Mission Report（2010） Flight day 14（PDF p26） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=26
 48. DA3-83-22 Ascent/Entry Flight Techniques Panel 会議録 No. 1（1983-05-27、5頁、283,863 バイト） STS-7（PDF p1） — https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_001M.pdf#page=1
 49. DA8-83-60 Ascent/Entry Flight Techniques Panel 会議録 No. 5（1983-09-09、7頁、302,696 バイト） DTO Crossrange/Energy Criteria（PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Ascent%20Entry%20Flight%20Techniques%20Panel/AE_005M.pdf#page=5
+50. NASA-TM-74831 Space Transportation System User Handbook（NASA、1977年6月、NTRS 19770081124、181頁、14,384,193 バイト。OCR のテキスト層） （PDF p43） — https://ntrs.nasa.gov/api/citations/19770081124/downloads/19770081124.pdf#page=43
+51. NASA SP-2010-3409「Wings in Orbit」3章（53〜73頁、23頁、8,439,919 バイト） （PDF p7） — https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf#page=7
+52. JSC-20956 STS 61-A National Space Transportation System Mission Report（NASA JSC、1986年3月、8頁、451,218 バイト。OCR のテキスト層） （PDF p3） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-61-A%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=3
+53. JSC-20956 STS 61-A National Space Transportation System Mission Report（NASA JSC、1986年3月、8頁、451,218 バイト。OCR のテキスト層） （PDF p4） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-61-A%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=4
+54. NSTS-08298 STS-71 Space Shuttle Mission Report（NASA JSC、1995年8月、66頁、4,641,598 バイト。OCR のテキスト層） （PDF p7） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=7
+55. NSTS-08298 STS-71 Space Shuttle Mission Report（NASA JSC、1995年8月、66頁、4,641,598 バイト。OCR のテキスト層） （PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=8
+56. NSTS-08298 STS-71 Space Shuttle Mission Report（NASA JSC、1995年8月、66頁、4,641,598 バイト。OCR のテキスト層） （PDF p50） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=50
 
 ## 9. 変更履歴
 
@@ -201,3 +210,4 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | Rev. H | 2026-10-06 | 人間系の基準の照合表 SSD-HSI-SYS-001 への参照を注記（Rev. AY） |
 | Rev. I | 2026-10-07 | REQ-SYS-09 を運用のクロスレンジ（SCOM 9.3 の限界）に改めて当初の設計要求 1,100 n.mi. を注記に分け、REQ-SYS-13 を打上げ前・延長の決定時に確保する要求と書き直した（要求の値の見直し）（Rev. BG） |
 | Rev. J | 2026-10-08 | 実際に飛んだクロスレンジ（STS-7 の約732〜740 n.mi.）を注記（Rev. BH） |
+| Rev. K | 2026-10-11 | REQ-SYS-03・REQ-SYS-05 の検証の根拠を見つけ、検証の状態を根拠ありに改めた（Rev. BR） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-EPS-001 |
 | 表題 | 電力系（EPS）要求書（L2） |
-| 版・日付 | Rev. E／2026-10-08 |
+| 版・日付 | Rev. G／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図6 EPS 機能構成 |
@@ -70,8 +70,8 @@
 | SSD-FD-EPS-001 | F-EPS-04 | 3基の燃料電池は独立した電源として動作し、それぞれが分離された28 V直流母線に同時に給電する。 | REQ-EPS-03・REQ-EPS-18 | — |
 | SSD-FD-EPS-001 | F-EPS-05 | 基本構成での3基の燃料電池の能力は、合計で平均14 kW、ピーク最大24 kWである（1975年の設計論文）。 | REQ-EPS-04・REQ-EPS-19 | — |
 | SSD-FD-EPS-AC-001 | F-EPS-AC-01 | 各主直流母線は3台の単相静止形インバータに給電し、これが1本の3相交流母線を構成する。 | REQ-EPS-08 | — |
-| SSD-FD-EPS-AC-001 | F-EPS-AC-02 | 9台のインバータで115 V・400 Hzの交流を作り、交流母線AC1・AC2・AC3へ配電する。 | REQ-EPS-08 | — |
-| SSD-FD-EPS-AC-001 | F-EPS-AC-03 | インバータは前部アビオニクスベイにあり、出力は116〜120 V（実効値）・400±7 Hzである。 | REQ-EPS-08 | — |
+| SSD-FD-EPS-AC-001 | F-EPS-AC-02 | 9台のインバータで117 V（実効値）・400 Hzの交流を作り、交流母線AC1・AC2・AC3へ配電する。 | REQ-EPS-08 | — |
+| SSD-FD-EPS-AC-001 | F-EPS-AC-03 | インバータは前部アビオニクスベイにあり、出力は117 V（実効値）・400 Hzである。 | REQ-EPS-08 | — |
 | SSD-FD-EPS-AC-001 | F-EPS-AC-04 | 交流母線センサは過電圧・不足電圧・過負荷を監視し、自動トリップ位置では異常のあるインバータを母線から切り離す。 | REQ-EPS-09 | — |
 | SSD-FD-EPS-AC-001 | F-EPS-AC-05 | 10台のモータ制御組立が、ベントドア、ペイロードベイドア、RCS/OMSの電動弁などの交流モータへ電力を供給する。 | （なし） | 要求なしで妥当：モータ制御組立の構成の記述で、交流モータ負荷への給電は REQ-EPS-08 の交流電源の要求が受け持つ。 |
 | SSD-FD-EPS-DC-001 | F-EPS-DC-01 | 3本の主直流母線（MNA・MNB・MNC）が機体の直流負荷の主電源となり、前部・中部・後部へ配電する。 | REQ-EPS-03・REQ-EPS-06・REQ-EPS-18 | — |
@@ -80,21 +80,21 @@
 | SSD-FD-EPS-DC-001 | F-EPS-DC-04 | 遠隔電力制御器（RPC）は3〜20 Aの負荷用の半導体スイッチで、定格の150%で電流を制限し、3秒以内に遮断する。 | REQ-EPS-17 | — |
 | SSD-FD-EPS-DC-001 | F-EPS-DC-05 | 主母線同士はバスタイで接続でき、主母線電圧が26.4 V以下になるとC/W警報が点灯する。 | REQ-EPS-03・REQ-EPS-06 | — |
 | SSD-FD-EPS-DC-001 | F-EPS-DC-06 | ペイロード用には主ペイロード母線（燃料電池3または主母線B・Cから給電）、後部ペイロード母線、補助ペイロード母線がある。 | REQ-EPS-19 | — |
-| SSD-FD-EPS-DC-001 | F-EPS-DC-07 | 中胴の電気部品はフレオン21ループのコールドプレートで、前部アビオニクスベイの配電組立は水冷却ループで冷却される。 | REQ-EPS-22 | — |
+| SSD-FD-EPS-DC-001 | F-EPS-DC-07 | 中胴の電気部品はフレオン21ループのコールドプレートで、前部アビオニクスベイ1〜3の電力・負荷・モータ制御組立とインバータは水冷却ループのコールドプレートで冷却され、インバータ配電組立は空冷である。 | REQ-EPS-22 | — |
 | SSD-FD-EPS-FCP-001 | F-EPS-FCP-01 | 3基の燃料電池は再使用・再起動が可能で、中胴前部のペイロードベイの下に置かれる。 | REQ-EPS-20 | — |
 | SSD-FD-EPS-FCP-001 | F-EPS-FCP-02 | 3基は独立した電源として動作し、それぞれが分離された28 V直流母線に同時に給電する。 | REQ-EPS-03 | — |
 | SSD-FD-EPS-FCP-001 | F-EPS-FCP-03 | 発電部は3つのサブスタックに収めた96セルから成り、電解質は水酸化カリウム水溶液である。 | REQ-EPS-05 | — |
 | SSD-FD-EPS-FCP-001 | F-EPS-FCP-04 | 補機部は反応剤流量を監視し、排熱と生成水を取り除き、スタック温度を制御する。 | REQ-EPS-15・REQ-EPS-16 | — |
 | SSD-FD-EPS-FCP-001 | F-EPS-FCP-05 | 冷却材がスタックの排熱を燃料電池熱交換器経由でフレオン21冷却ループへ移し、スタックを約200°Fに保つ。 | REQ-EPS-15 | — |
-| SSD-FD-EPS-FCP-001 | F-EPS-FCP-06 | 反応剤中の不活性ガスなどを除くため、少なくとも1日2回パージが必要である。 | REQ-EPS-14 | — |
-| SSD-FD-EPS-FCP-001 | F-EPS-FCP-07 | 1基の能力は最大連続7 kW・ピーク12 kWで、3基では連続21 kW・15分間のピーク36 kWとされ、オービタの平均消費電力は約14 kWと見込まれている。 | REQ-EPS-04・REQ-EPS-05 | — |
+| SSD-FD-EPS-FCP-001 | F-EPS-FCP-06 | 反応剤中の不活性ガスを除くため、96時間を超えない間隔で計画的にパージする。 | REQ-EPS-14 | — |
+| SSD-FD-EPS-FCP-001 | F-EPS-FCP-07 | 1基の能力は通常時の最大連続10 kW・非通常時（1基以上の燃料電池が故障したとき）の連続12 kW・10分間の最大16 kWで、オービタの軌道上の平均消費電力は約14 kWである。 | REQ-EPS-04・REQ-EPS-05 | — |
 | SSD-FD-EPS-FCP-001 | F-EPS-FCP-08 | オービタには予備バッテリがなく、3基の燃料電池が機上電力のすべてを生み出す。 | REQ-EPS-02 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-01 | PRSDは極低温の水素と酸素を超臨界状態で貯蔵して3基の燃料電池へ供給し、あわせて乗員室与圧用の酸素をECLSSへ供給する。 | REQ-EPS-10 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-02 | 液体酸素は−285°F、液体水素は−420°Fで貯蔵される。 | REQ-EPS-10 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-03 | タンクは真空断熱層を持つ二重壁の球形で、消費に伴う圧力低下をヒータで補い、残量を計測できる。 | REQ-EPS-10 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-04 | タンクは水素1基と酸素1基を1セットとし、ミッションに応じて最大5セットを中胴のペイロードベイ内張の下に搭載する。 | REQ-EPS-12・REQ-EPS-18 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-05 | 酸素タンクは1基あたり781 lb、水素タンクは92 lbを貯蔵する。 | REQ-EPS-12 | — |
-| SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-06 | 軌道上ではヒータ制御の圧力設定が高いタンク3・4が燃料電池へ供給し、再突入ではタンク1・2が供給する。 | REQ-EPS-21 | — |
+| SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-06 | 軌道上ではヒータ制御の圧力設定が高いタンク3・4・5が燃料電池へ供給し、再突入ではタンク1・2が供給する。 | REQ-EPS-21 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-07 | 弁モジュール内の逆止弁が、1基のタンクが漏れても反応剤全体を失わないようにする。 | REQ-EPS-13 | — |
 | SSD-FD-EPS-PRSD-001 | F-EPS-PRSD-08 | STS-50では、通常の4セットに加えて4セットのタンクを積むEDO極低温パレットが初めて飛行した。 | REQ-EPS-12 | — |
 | SSD-FD-ECL-PCS-001 | IF-ECL-01 | （IF の行。内容は所有文書） | REQ-EPS-11 | — |
@@ -143,7 +143,7 @@
 | REQ-EPS-13 | A（解析） | 根拠あり | IOA の PRSD の評価票（PRSD-313）は、酸素タンクの逆止弁が開いたまま故障し、さらに大きな外部漏れが重なると7秒で極低温の圧力が安全な値を下回るとして重要度 2/1R とし、この故障は飛行中に検出できない（スクリーン B 不合格）と評価しており、逆止弁が他のタンクの反応剤を守る機能を故障解析で確かめた根拠である。（出典: https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=209）同じ評価は水素の逆止弁（PRSD-237、CV031・CV041）についても同じ故障の組合せで重要度 2/1R とし、NASA の FMEA と一致したことを示す。（出典: https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=191） |
 | REQ-EPS-14 | D（実証） | 根拠あり | A9-52A（PDF p1439）：定期のパージの間隔を96時間以内とし、96時間は燃料電池の電圧が 0.2 V 低下するまでの時間の平均の最大を飛行の経験から取ったものとする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439）STS-135 の飛行報告（p44）はパージの間隔を 42〜60時間とする。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=44）STS-65 の飛行報告（p30）は8回のパージを MET 約19〜347時間に行ったとする（間隔は約19〜62時間、本書の計算）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=30） |
 | REQ-EPS-15 | T（試験） | 根拠あり | SODB 3.4.4.1 は、重要な飛行段階ではポンプなしでの燃料電池の非常運転を 7 kW で最大9分まで認め、スタック冷却材の入口温度を 176〜191°F と定めており、冷却を失ったときの9分（7 kW）の値が開発データと解析で示された能力であることを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=158）SODB の図 3.4.4.1-1 は、燃料電池のスタック出口温度の許容範囲を負荷電流に対して 180〜230°F の目盛りの上で示しており、スタックを負荷に応じた約 200°F に保つ要求と合う。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=160） |
-| REQ-EPS-16 | T（試験） | 根拠あり | STS-2（軌道飛行試験）の飛行報告は、燃料電池1の高 pH の生成水を飲料水タンク A から切り離して補給タンク B へ流し、乗員が燃料電池からの供給管の水を直接飲んだことを示し、生成水が ECLSS の水タンクへ送られる経路を飛行試験で確かめた記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=51）STS-108 の飛行報告は、燃料電池が 3,912 kWh を発電する間に 3,025 lb の飲料水を作ったことを示し、生成水が発電の間取り除かれ続けたことの記録である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=28） |
+| REQ-EPS-16 | T（試験） | 根拠あり | STS-2 の燃料電池 1 の浸水は水素ポンプのアスピレータの閉塞が原因で、燃料電池の交換とアスピレータのノズルの点検で是正した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=149）STS-3 では 3台の燃料電池が約 224 時間・2851 kWh を正常に運転した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=21）STS-125 では 309.65 時間に 4630 kWh を発電して 3601 lbm の飲料水を作り、飛行中の異常は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46） |
 | REQ-EPS-17 | D（実証） | 根拠あり | STS-125 の飛行報告は、主母線 A・B の電流が RPC-10（APCA-4）で 12.5 A、RPC-12（APCA-5）で 7.5 A に上がり、2.5秒続いた後に遮断したことを示し、短絡のときに RPC が電流を保ったまま3秒以内に遮断したことの実証である。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=47） |
 | REQ-EPS-18 | A（解析） | 根拠あり | 飛行規則 A9-1001 の根拠の欄は、極低温タンク1基の故障では喪失までにさらに2故障を要するため MDF、2基の故障では同種の故障の危険が増すため次の PLS とし、極低温の喪失は乗員・機体の喪失であるとしており、判定区分を故障の余裕の評価で導いていることを示す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1518）IOA の PRSD の評価票（PRSD-216）は、水素タンクの外部漏れを重要度 1/1 と評価しており、タンクの喪失を判定基準で数える根拠となる故障解析である。（出典: https://ntrs.nasa.gov/api/citations/19900001639/downloads/19900001639.pdf#page=188） |
 | REQ-EPS-19 | A（解析） | 根拠あり | SODB 3.4.4.1 は、燃料電池1基の連続出力を 7 kW（3基で 21 kW）とし、系全体の出力を 36 kW 以下に制限しており、発電能力の上限を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=154）STS-135 の飛行報告は、飛行の平均電力と負荷が 13.6 kW・442 A だったことを示し、平均消費電力が連続の発電能力（21 kW）を下回り、ペイロードに使える余裕が残ることを裏づける。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
@@ -172,6 +172,8 @@
 > **注記** 要求の値の見直し（Rev. BG）：REQ-EPS-14 のパージの間隔は、以前は SODB Rev. E（JSC-08934）の制約「最大12時間」を値としていたが、飛行の実績（約19〜93時間）と合わなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf#page=154）運用飛行規則 A9-52A は 0.2 V の電圧の低下を頻度の基準とし、間隔の上限を飛行の経験から96時間とする（規則の変更記録から 1994年ごろの改訂と読める）ので、これに改め、検証の状態を根拠ありとした。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1439）12時間の値が使われなくなった経緯は Rev. BH の注記に示す。機能行 F-EPS-FCP-06 の「少なくとも1日2回」も古い資料の記述である。
 
 > **注記** パージの間隔の経緯（Rev. BH の調査）：1984年の運用マニュアル（JSC-12770 Vol. 2）は、パージの間隔を最大8時間とし、就寝の前後に行うとしていた。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-12770,%20Vol.2%20-%20Shuttle%20Flight%20Operations%20Manual,%20Electrical%20Power%20Systems%20(1984-11-28).pdf#page=35）1992年、STS-50 で240時間以上パージしなかった燃料電池の電圧の低下が小さかったことから、STS-46 以降のパージの計画を改めた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-46%20Space%20Shuttle%20Mission%20Report.pdf#page=15）STS-46 は48時間ごと、または 0.2 V の低下でパージした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-46%20Space%20Shuttle%20Mission%20Report.pdf#page=7）1993年の STS-56 の規則は72時間ごと（または 0.2 V の低下）とした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-56%20Space%20Shuttle%20Mission%20Report.pdf#page=23）1994年の STS-59 で初めて96時間の間隔で飛んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=20）1996年版の運用飛行規則（NSTS-12820 PCN-8）は、96時間を超えない間隔と 0.2 V の基準を定めている。（出典: https://www.ibiblio.org/apollo/Shuttle/NSTS-12820,%20Vol.A,%20PCN-8%20-%20Space%20Shuttle%20Operational%20Flight%20Rules,%20Volume%20A,%20All%20Flights%20(Final,%201996-06-06).PDF#page=1374）このように 12時間（その前は8時間）から、飛行の実績を見ながら 48 → 72 → 96時間へ段階的に延ばした。燃料電池の機器の改修を理由に挙げた資料は見つからない（規則の変更記録の番号から、規則化は1994年9月ごろと読める）。
+
+> **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-EPS-16 は STS-2 で燃料電池 1 が浸水して停止した（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-2-10）が、原因（アスピレータの閉塞）と是正処置が飛行報告にあり、STS-3 以降の飛行に正常な記録があるので、判定（pass）と要求の文・値は変えず、検証の根拠を故障した当の飛行（STS-2）の記録から STS-3・STS-125 の記録に差し替えた。
 
 ## 9. 参考文献
 
@@ -224,6 +226,9 @@
 47. STS-56 Space Shuttle Mission Report（1993、51頁、4,013,614 バイト） Fuel cell（PDF p23） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-56%20Space%20Shuttle%20Mission%20Report.pdf#page=23
 48. STS-59 Mission Report Fuel cell（PDF p20） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=20
 49. NSTS-12820 Vol. A PCN-8 Space Shuttle Operational Flight Rules, Volume A, All Flights（Final 1996-06-06、2313頁、5,885,090 バイト） A9.1.2-2 FC PURGE（PDF p1374） — https://www.ibiblio.org/apollo/Shuttle/NSTS-12820,%20Vol.A,%20PCN-8%20-%20Space%20Shuttle%20Operational%20Flight%20Rules,%20Volume%20A,%20All%20Flights%20(Final,%201996-06-06).PDF#page=1374
+50. STS-2 Orbiter Mission Report （PDF p149） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=149
+51. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p21） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=21
+52. NSTS-37452 STS-125 Mission Report（2010） PRSD（PDF p46） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=46
 
 ## 10. 変更履歴
 
@@ -235,3 +240,5 @@
 | Rev. C | 2026-10-03 | 要求の形式化定義書 SSD-RQF-SYS-001 への参照を注記（Rev. AS） |
 | Rev. D | 2026-10-07 | REQ-EPS-14 のパージの間隔を運用飛行規則 A9-52A の96時間以内に見直し、検証の状態を根拠ありにした（要求の値の見直し）、上位の要求 REQ-SYS-13 の文を改めた（Rev. BG の要求の値の見直し）（Rev. BG） |
 | Rev. E | 2026-10-08 | パージの間隔が12時間から96時間へ変わった経緯（1992〜1996年）を注記（Rev. BH） |
+| Rev. F | 2026-10-11 | REQ-EPS-16 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |
+| Rev. G | 2026-10-11 | 引いている機能・IF の文を、出典の更新で改めた文に合わせた（6か所）（Rev. BR） |

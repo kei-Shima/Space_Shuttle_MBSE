@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-PLS-001 |
 | 表題 | ペイロード系（PLS）要求書（L2） |
-| 版・日付 | 初版（Rev. -）／2026-10-02 |
+| 版・日付 | Rev. A／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図66 ペイロード系 機能構成 |
@@ -121,7 +121,7 @@ PLSの機能説明書 7 件の機能行 50 件と、要求の割付先の IF 行
 | ID | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|
 | REQ-PLS-01 | D（実証） | 根拠あり | 2.21節 Remote Manipulator System（PDF p687〜697）：アームの寸法・関節駆動・SPA・構造を述べる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/690） |
-| REQ-PLS-02 | T（試験） | 根拠あり | （PDF p10）：SRMSの肘カメラが正しく収納されていなかった事象を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
+| REQ-PLS-02 | T（試験） | 根拠あり | STS-2 で予備駆動の肩ヨー関節が動かなかったのは、地上での取扱いでケーブルの電線（ピン 5）が切れていたためで、修理して再検証した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=158）STS-3 では FTO 355-01（RMS の予備モードの制御性能）の 4 つの手順がすべて成功し、予備モードでのアームの収納を両方の乗員が難なく行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87） |
 | REQ-PLS-03 | T（試験） | 根拠あり | （PDF p44）：MCIUのテレメトリデータに関する飛行中の事象を示す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
 | REQ-PLS-04 | D（実証） | 根拠あり | PDRSの章の目次（PDF p23）：C/WのMCIU灯やGPCデータ灯に対する処置を挙げる。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=23） |
 | REQ-PLS-05 | D（実証） | 根拠あり | MPM STOW/DEPLOY（目次、PDF p50）：EVAでMPMを収納・展開する手順があることを示す。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=50） |
@@ -133,6 +133,8 @@ PLSの機能説明書 7 件の機能行 50 件と、要求の割付先の IF 行
 ## 8. 注記（出典間の相違・構成変更）
 
 > **注記** トレース表の「要求なしで妥当」は、親の説明書の全般の記述か、同じ下位機能（文書）に割り付けた要求が受け持つ構成・運用の記述であることを根拠に、文書ごとにまとめて判断したもので、機能行1件ずつに要求の要否を検討したものではない。
+
+> **注記** 飛行試験の反証の決定（Rev. BQ）：REQ-PLS-02 は STS-2 で予備駆動の肩ヨー関節が動かなかった（[SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) の FT-2-15）が、原因は地上の取扱いによるケーブルの断線で、STS-3 で同じ試験が全手順成功した。判定（pass）と要求の文・値は変えない。以前の検証の根拠（STS-122 の肘カメラの収納の記述）は関節の駆動の証拠ではなかったので、 STS-3 の記録に差し替えた。STS-5 以降に予備モードで関節を動かした飛行の記録は見つからない。
 
 ## 9. 参考文献
 
@@ -158,9 +160,12 @@ PLSの機能説明書 7 件の機能行 50 件と、要求の割付先の IF 行
 20. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） Contents（PDF p50） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=50
 21. STS-108 Mission Report Docking（PDF p51） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=51
 22. STS-122 Mission Report Flight Summary（PDF p12） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=12
+23. STS-2 Orbiter Mission Report （PDF p158） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=158
+24. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p87） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87
 
 ## 10. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-02 | 初版作成（L2 要求 9件、機能行 50件とのトレース、検証の根拠） |
+| Rev. A | 2026-10-11 | REQ-PLS-02 の飛行試験の反証を決定した（判定は pass のまま、検証の根拠を差し替え）（Rev. BQ） |

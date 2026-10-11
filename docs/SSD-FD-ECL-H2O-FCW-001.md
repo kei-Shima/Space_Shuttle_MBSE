@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-H2O-FCW-001 |
 | 表題 | 生成水受入れ・処理（FCW）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-11 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-H2O-001 |
 | 関連図 | SSD-SYS-ARC-001 図20 給水・廃水系 機能構成 |
@@ -34,7 +34,7 @@
 
 | IF番号 | 相手 | 種別 | 方向 | 内容 | 上位IF／下位IF |
 |---|---|---|---|---|---|
-| IF-EPS-06 | 燃料電池発電装置（FCP×3） | 推進薬・流体 | 受信 | 3基の燃料電池の生成水は単一の水リリーフ制御盤へ集まり、通常は飲料水タンクAへ送られ、凍結時に備えてタンクBへの冗長経路もある。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html） | 上位: IF-ECL-10 |
+| IF-EPS-06 | 燃料電池発電装置（FCP×3） | 推進薬・流体 | 受信 | 3基の燃料電池の生成水は単一の水リリーフ制御盤へ集まり、通常は飲料水タンクAへ送られ、タンクへの主経路の閉塞時に備えてタンクBへの冗長経路もある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） | 上位: IF-ECL-10 |
 | IF-H2O-01 | 給水貯蔵・分配 | 推進薬・流体 | 送信 | 水素分離器と微生物フィルタを通った生成水をタンクAへ送り、タンクAが満杯か入口弁が閉じているときは1.5 psidの逆止弁を経てタンクB、さらにタンクC・Dへ送る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/395）閉塞に備えて、水素分離器を通らずにタンクBの入口マニホールドへ向かう冗長経路もある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394） | — |
 | IF-H2O-02 | 宇宙空間（船外） | 推進薬・流体 | 送信 | 水素分離器の銀パラジウム管を透過した水素は、真空ベント配管を通って船外へ排出される。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=143）運用飛行規則は、燃料電池の生成水から抽出した水素（約0.0000975 lb/hr）を船外へ排出することを真空ベントの主な機能に挙げる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1986） | 上位: IF-ECL-22 |
 
@@ -65,6 +65,8 @@
 
 > **注記** STS-122ではタンクA・Bが満杯になった後にA/B逆止弁がすぐに開かず、給水圧が40 psiaの限界を超えて警報が出た。この間はB/C逆止弁が開き、生成水は代替経路を流れた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=52）
 
+> **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はタンクBへの冗長経路を主経路の凍結に備えるものとしていたが、SCOM（OI-33）は主経路の閉塞に備えるものとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394）
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Supply Water System（PDF p394） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394
@@ -83,3 +85,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（1文。うち本文を改めた1文に注記）（Rev. BR） |
