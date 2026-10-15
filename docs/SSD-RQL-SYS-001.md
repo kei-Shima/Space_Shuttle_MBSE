@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-RQL-SYS-001 |
 | 表題 | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） |
-| 版・日付 | 初版（Rev. -）／2026-10-12 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図225 L2 の要求から L3 の要求への導出（系ごとの数）・図226 機能ブロックごとの L3 の要求と機能行の対応 |
@@ -23,24 +23,24 @@ ECLSS 以外の17系（APU・CREW・CT・CW・DPS・EPS・EVA・GNC・MECH・MPS
 
 | 系 | 名前 | 上位の L2 | L3 の要求 | 根拠あり | 根拠なし | 機能ブロック | 機能行 |
 |---|---|---|---|---|---|---|---|
-| APU | 補助動力装置・油圧系（APU/HYD） | 9 | 30 | 18 | 12 | 7 | 47/92 |
+| APU | 補助動力装置・油圧系（APU/HYD） | 9 | 30 | 20 | 10 | 7 | 47/92 |
 | CREW | 乗員系・脱出系（CREW） | 9 | 30 | 12 | 18 | 6 | 41/52 |
 | CT | 通信・追跡系（C&T） | 9 | 30 | 20 | 10 | 7 | 66/88 |
 | CW | 警報系（C/W） | 9 | 22 | 8 | 14 | 5 | 34/46 |
-| DPS | データ処理系（DPS） | 12 | 30 | 13 | 17 | 7 | 52/91 |
+| DPS | データ処理系（DPS） | 12 | 30 | 14 | 16 | 7 | 52/91 |
 | EPS | 電力系（EPS） | 13 | 18 | 8 | 10 | 4 | 16/33 |
 | EVA | 船外活動（EVA） | 8 | 29 | 13 | 16 | 6 | 58/85 |
 | GNC | 誘導・航法・制御（GN&C） | 13 | 27 | 22 | 5 | 7 | 49/90 |
-| MECH | 機械系（MECH） | 9 | 27 | 13 | 14 | 6 | 29/52 |
-| MPS | 主推進系（MPS） | 12 | 30 | 17 | 13 | 7 | 62/96 |
-| OMS | 軌道制御系（OMS） | 11 | 29 | 11 | 18 | 7 | 58/93 |
+| MECH | 機械系（MECH） | 9 | 27 | 15 | 12 | 6 | 29/52 |
+| MPS | 主推進系（MPS） | 12 | 30 | 18 | 12 | 7 | 62/96 |
+| OMS | 軌道制御系（OMS） | 11 | 29 | 13 | 16 | 7 | 58/93 |
 | PLS | ペイロード支援（PLS） | 9 | 27 | 19 | 8 | 6 | 30/50 |
-| RCS | 姿勢制御系（RCS） | 10 | 30 | 14 | 16 | 7 | 53/91 |
+| RCS | 姿勢制御系（RCS） | 10 | 30 | 18 | 12 | 7 | 53/91 |
 | STR | 構造（STR） | 8 | 28 | 13 | 15 | 6 | 28/51 |
 | TPS | 熱防護・熱制御（TPS・TCS） | 7 | 12 | 7 | 5 | 3 | 15/16 |
-| ET | 外部タンク（ET） | 9 | 29 | 12 | 17 | 6 | 36/43 |
+| ET | 外部タンク（ET） | 9 | 29 | 13 | 16 | 6 | 36/43 |
 | SRB | 固体ロケットブースタ（SRB） | 9 | 29 | 20 | 9 | 6 | 37/49 |
-| 計 | — | 166 | 457 | 240 | 217 | 103 | — |
+| 計 | — | 166 | 457 | 253 | 204 | 103 | — |
 
 ## 4. APU の要求
 
@@ -620,32 +620,32 @@ ECLSS 以外の17系（APU・CREW・CT・CW・DPS・EPS・EVA・GNC・MECH・MPS
 
 ## 21. 検証
 
-L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あり 240件・根拠なし 217件）。
+L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あり 253件・根拠なし 204件）。
 
 | 検証ケース | 要求 | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|---|
 | VC-LRQ-APU-01 | LRQ-APU-01 | T（試験） | 根拠あり | STS-108 では系1の循環ポンプの2回の運転で圧力が公称に達するまで 12〜15 秒かかったが、認定データでは本体温度が +20〜+35°F の始動で最大 20 秒の遅れが予想され、ポンプに有害でなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
-| VC-LRQ-APU-02 | LRQ-APU-02 | D（実証） | 根拠なし | （根拠なし）STS-54 に系3の循環ポンプの特別な運転で TVC 隔離弁を開く記述はあるが、100 psid の圧力を与えたことを確かめる記録ではなく、根拠にしなかった。 |
-| VC-LRQ-APU-03 | LRQ-APU-03 | A（解析） | 根拠なし | （根拠なし）Mission Report（STS-1〜4・54・59・65・108・114・122・125・135）に、循環ポンプの 230°F 超の喪失判定や火工品との干渉に触れた記録は無かった。 |
-| VC-LRQ-APU-04 | LRQ-APU-04 | A（解析） | 根拠なし | （根拠なし）FES の故障や APU の始動の遅れで循環ポンプを使った飛行の記録は、取り込み済みの Mission Report に無かった。 |
+| VC-LRQ-APU-02 | LRQ-APU-02 | D（実証） | 根拠あり | 循環ポンプが APU の停止中に MPS/TVC 隔離弁・ブレーキ隔離弁を操作する圧力を与える機能は、運転で使われた記録がある。STS-120 では打上げ前に循環ポンプを起動して系の圧力が 250〜300 psia のところで TVC 隔離弁を開くと、系の圧力が 450〜500 psia に上がり、STS-114 では循環ポンプの作動中にブレーキ隔離弁を開閉して脚の充てんを行い、STS-54 では系3の循環ポンプの特別な運転で MPS の TVC 隔離弁を開いた（切替え弁の差圧 470 psia）。いずれも APU が止まった状態で循環ポンプの圧力により隔離弁が操作されたことを示す。要求のうち、運転指令による循環ポンプの自動切り離しと、100 psid 以上の差圧の値は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-120%20Space%20Shuttle%20Mission%20Report.pdf#page=42）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=46）（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=19） |
+| VC-LRQ-APU-03 | LRQ-APU-03 | A（解析） | 根拠なし | （根拠なし）fr の根拠の欄は「230°F 超は電子部品の限度を超え、試験で寿命が大きく縮むことが分かった」「起動時の突入電流で母線電圧が 4〜5 V 下がる」と述べるが、これは要求の出どころとして ctx に引かれている文と同じ頁・同じ記述で、試験や解析の結果の数値・本体は示さない。Mission Report には循環ポンプが 230°F を超えた記録も、火工品のペイロード展開と循環ポンプの入り切りを調整した記録も見つからなかった（STS-50 の系2の循環ポンプの長時間運転は温度上昇の記述だが 230°F 超ではない）。 |
+| VC-LRQ-APU-04 | LRQ-APU-04 | A（解析） | 根拠なし | （根拠なし）FES の故障時にフレオンループの補助冷却として循環ポンプを使った記録も、APU の始動が EI−13 分より遅れて作動油の加温に循環ポンプを使った記録も見つからなかった。STS-76 は循環ポンプで突入前の飛行制御系の点検（9分24秒）を行ったが、補助冷却・加温の目的ではない。fr の根拠の欄は 35°F までの加温の理由を述べるだけで、解析の結果の値は無い。 |
 | VC-LRQ-APU-05 | LRQ-APU-05 | T（試験） | 根拠あり | STS-65 では APU 2 のギアボックスの窒素（GN2）圧力が約 6.2 psia に達して再加圧が1回あり、気にすることではなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=31） |
-| VC-LRQ-APU-06 | LRQ-APU-06 | T（試験） | 根拠なし | （根拠なし）Mission Report には回転数の選択（NORM・HIGH）の設定値を確かめた記述が無く、制御器の試験記録は取り込み済みの資料に無かった。 |
-| VC-LRQ-APU-07 | LRQ-APU-07 | T（試験） | 根拠なし | （根拠なし）Mission Report には始動論理の遅れ（10.5 秒）や READY TO START 表示の条件を確かめた記述が無かった。 |
-| VC-LRQ-APU-08 | LRQ-APU-08 | T（試験） | 根拠なし | （根拠なし）Mission Report に、自動停止を INHIBIT にして飛行した記録や回転数の警報の作動した記録は無かった。 |
-| VC-LRQ-APU-09 | LRQ-APU-09 | T（試験） | 根拠なし | （根拠なし）Mission Report に、燃料タンク隔離弁の逆方向の逃がしや弁温度の計測値に触れた記録は無かった。 |
+| VC-LRQ-APU-06 | LRQ-APU-06 | T（試験） | 根拠なし | （根拠なし）STS-31 の報告に、APU 1 が通常回転（NORM）の選択中に始動直後から室圧 400 psia で頭打ちとなり回転数が「111〜113 %（高速）」を示し、HIGH へ手動で切り替えると 2.5 分間正常だったが NORM に戻すと再発した（LCC 違反で打上げ延期）との記述がある。しかし副制御弁による 113% の制御と名指しせず、HIGH の制御値（81,360 rpm＝113%±8%）や第2の予備（115%）を回転数で確かめた記述でもなく、APU の不具合の記録のため、要求の値の検証には使わなかった。STS-76 は高速運転の時間を記すだけで回転数の値は無い。制御器の試験の記録は公開資料に無い。 |
+| VC-LRQ-APU-07 | LRQ-APU-07 | T（試験） | 根拠なし | （根拠なし）始動指令後 10.5 秒の低速度検査の遅れや READY TO START 表示の条件（ガス発生器温度 190°F 超など）を確かめた記録は無かった。STS-7（bq_ft_sts7 p6）の APU 3 は始動時にタービンの低速度状態で停止した記録があるが、低速度検査が働いた事象であり、遅れの時間や表示の条件は示さない。 |
+| VC-LRQ-APU-08 | LRQ-APU-08 | T（試験） | 根拠なし | （根拠なし）AUTO SHUT DOWN スイッチを INHIBIT にして飛行した記録も、80% 未満・129% 超で灯と警報音が続いた記録も見つからなかった。STS-9 では着陸後に APU 1・2 が低速度で自動停止したが、これは自動停止が働いた事象（火災・漏れによる）であり、INHIBIT の機能を確かめた記録ではない。主燃料制御弁のパルスやバイパス管の挙動を測った記録も無い。 |
+| VC-LRQ-APU-09 | LRQ-APU-09 | T（試験） | 根拠あり | 燃料タンク隔離弁を閉じた後の熱の戻りによる逆方向の逃がしは、STS-62 の飛行データで確かめられている。FCS 点検後の APU 3 の停止から約 30 分後に、ポンプ入口の燃料圧力が約 160 psid で燃料タンクへ戻る向きに逃がされ、その後の熱の戻りの間も正常に逃がし続けた。約 160 psid は要求の 40〜200 psi 高の範囲内にある。要求のうち、弁の温度を弁ごとに2点計測することは、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-62%20Space%20Shuttle%20Mission%20Report.pdf#page=7）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-62%20Space%20Shuttle%20Mission%20Report.pdf#page=24） |
 | VC-LRQ-APU-10 | LRQ-APU-10 | D（実証） | 根拠あり | STS-114 では APU 1 のドレン配管の圧力が 15.2 psi から約 1.2 psi まで低下したが、ドレン系に APU 運転中の燃料の漏れの形跡は無く、ミッションへの影響は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
-| VC-LRQ-APU-11 | LRQ-APU-11 | T（試験） | 根拠なし | （根拠なし）Mission Report に、燃料制御弁が電力を失った記録は無かった。 |
+| VC-LRQ-APU-11 | LRQ-APU-11 | T（試験） | 根拠なし | （根拠なし）燃料制御弁が電力を失ったときの動き（主弁は全開、副弁は閉で APU 停止）を確かめた記録は見つからなかった。見つかった speed control valve の記述は SRB の APU（STS-66、STS-53）のもので、オービタの APU ではない。 |
 | VC-LRQ-APU-12 | LRQ-APU-12 | D（実証） | 根拠あり | STS-122 では APU 3 のシール空洞ドレン配管ヒータの A 系がサーモスタットの OFF 設定値のずれを示したため、パネル A12 の APU 3 の A 系ヒータ回路を停止し、10 秒後に B 系回路を作動させた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=46）STS-4 では APU の燃料・潤滑油・水系のヒータが軌道上の停止中に温度を限界内に保ち、A 系と B 系の両方を使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
-| VC-LRQ-APU-13 | LRQ-APU-13 | T（試験） | 根拠なし | （根拠なし）Mission Report に、始動時の主ポンプの減圧（500〜1,000 psi）や高速時の流量を確かめた記述が無かった。 |
+| VC-LRQ-APU-13 | LRQ-APU-13 | T（試験） | 根拠なし | （根拠なし）始動時の主ポンプの減圧（500〜1,000 psi）や高速時の流量（最大 69.6 gpm）を測った記録は見つからなかった。STS-62・STS-95・STS-76 に APU を低圧モードで運転した記述があるが、油圧の圧力値は記さない。STS-7 の 550 psi は APU のガス発生器の圧力であり油圧ではない。STS-69 は主ポンプ3の減圧ソレノイドが作動せず、スイッチを 4 回切り替えて低圧になった（要求の機能が一度働かなかった記録）。 |
 | VC-LRQ-APU-14 | LRQ-APU-14 | T（試験） | 根拠あり | STS-122 の File IX の確認では、3系統のプライオリティ弁の再着座の要求値は 2675 psia 以下で、APU 停止時の再着座は系統2の上昇後を除いて要求内だった（系統2の値は約 2671 psia）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=47） |
-| VC-LRQ-APU-15 | LRQ-APU-15 | I（検査） | 根拠なし | （根拠なし）Mission Report にリザーバの容量・作動油の規格・アキュムレータの予圧に触れた記録は無く、機器の検査記録は取り込み済みの資料に無かった。 |
+| VC-LRQ-APU-15 | LRQ-APU-15 | I（検査） | 根拠なし | （根拠なし）リザーバの容量 8 ガロン、作動油の規格、アキュムレータの予圧 1,700 psig（70°F）を点検・分解で確かめた記録は見つからなかった。STS-114 などはアキュムレータの充てんが正常だったと記すが、予圧の値や容積の検査の記述ではない。 |
 | VC-LRQ-APU-16 | LRQ-APU-16 | D（実証） | 根拠あり | STS-54 では MECO の後の APU 停止の際、TVC 隔離弁を 1・2・3 の順に閉じた。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=6） |
 | VC-LRQ-APU-17 | LRQ-APU-17 | D（実証） | 根拠あり | STS-1 では3台の APU が打上げの5分前に起動された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=23）STS-4 でも APU は打上げの5分前に起動された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
 | VC-LRQ-APU-18 | LRQ-APU-18 | D（実証） | 根拠あり | STS-1 では APU は主推進系の投棄が完了した後に停止された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=23）STS-4 でも APU は MPS の投棄の後に停止された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
 | VC-LRQ-APU-19 | LRQ-APU-19 | D（実証） | 根拠あり | STS-122 では FCS チェックアウトで APU 3 を 4 分 23 秒運転して燃料を 14 lb 使い、運転中のすべての APU のパラメータは公称だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
 | VC-LRQ-APU-20 | LRQ-APU-20 | D（実証） | 根拠あり | STS-4 の突入では、APU 2 を軌道離脱噴射の点火の5分前に、APU 1 と 3 を突入インタフェースの13分前に起動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
-| VC-LRQ-APU-21 | LRQ-APU-21 | A（解析） | 根拠なし | （根拠なし）単一の APU で着陸した飛行は無く、Mission Report の APU 節（3台とも運転）に必要台数の定義を確かめる記録は無かった。 |
-| VC-LRQ-APU-22 | LRQ-APU-22 | A（解析） | 根拠なし | （根拠なし）APU の燃料漏れを疑って停止・再起動した飛行の記録は、取り込み済みの Mission Report に無かった（STS-4 の APU 1 の燃料系の軽い漏れ、STS-114 のドレン配管の圧力低下は処置を伴わなかった）。 |
+| VC-LRQ-APU-21 | LRQ-APU-21 | A（解析） | 根拠なし | （根拠なし）単一の APU/油圧系で着陸した飛行は無く、APU が「必要」である理由を解析で確かめた結果も公開資料に無い。fr の A10-33 は定義と「単一の APU/油圧系の着陸は認定されていない」を述べるだけで、これは ctx が要求の出どころとして引いている文と同じである。 |
+| VC-LRQ-APU-22 | LRQ-APU-22 | A（解析） | 根拠なし | （根拠なし）燃料と窒素の漏れを区別できないため燃料漏れとして扱い、MECO 後に APU を停止・隔離・再起動した飛行の記録は無かった。STS-114 は APU のドレン圧力の低下を GN2 の外部漏れと判断し、STS-118・STS-123 は APU 3 のドレン系で同様に判断しており、処置を伴う燃料漏れの扱いではない。 |
 | VC-LRQ-APU-23 | LRQ-APU-23 | T（試験） | 根拠あり | STS-4 では、燃料ポンプとガス発生器弁モジュールの水冷却系が停止後の熱の戻りの間も温度を 200°F の限界未満に保ち、一次と二次の水系の両方を使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
 | VC-LRQ-APU-24 | LRQ-APU-24 | T（試験） | 根拠あり | STS-4 では、燃料ポンプとガス発生器弁モジュールが停止後の熱の戻りの間 200°F の限界未満に保たれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
 | VC-LRQ-APU-25 | LRQ-APU-25 | D（実証） | 根拠あり | STS-4 では APU の燃料・潤滑油・水系の熱制御ヒータが軌道上の停止中に温度を限界内に保ち、A 系と B 系の両方を使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=15） |
@@ -654,58 +654,58 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 | VC-LRQ-APU-28 | LRQ-APU-28 | D（実証） | 根拠あり | STS-35 では APU 2 の潤滑油冷却の噴霧が MECO の約2分後に予定どおり始まった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
 | VC-LRQ-APU-29 | LRQ-APU-29 | T（試験） | 根拠あり | STS-59 では FCS チェックアウトで潤滑油の戻り温度が 250°F に達したときに WSB 2B 制御器による噴霧冷却が始まり、目立つ温度超過や冷却の遅れは無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=8） |
 | VC-LRQ-APU-30 | LRQ-APU-30 | A（解析） | 根拠あり | STS-59 では上昇後に APU 2 の潤滑油戻り温度が 250°F を超え、305°F で制御器を 2A から 2B に切り替えたが WSB 2 の冷却の兆候は無く、323°F で APU 2 を停止した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=7） |
-| VC-LRQ-CREW-01 | LRQ-CREW-01 | I（検査） | 根拠なし | （根拠なし）STS-1・2・4 の Mission Report と OFT Medical Report を探したが、睡眠ステーションの構成（段・照明・換気）を点検した記録は無かった（OFT 時代は固定式の睡眠ステーションを積んでいない）。 |
-| VC-LRQ-CREW-02 | LRQ-CREW-02 | I（検査） | 根拠なし | （根拠なし）STS-1〜4 の Mission Report と OFT Medical Report を探したが、衛生用品の数量を点検した記録は無かった（STS-1 の報告は廃棄物管理系の不調を述べるが数量の記述ではない）。 |
+| VC-LRQ-CREW-01 | LRQ-CREW-01 | I（検査） | 根拠なし | （根拠なし）固定式の睡眠ステーション4段の構成（寝袋・ライナー・収納・照明・換気の向き）を点検した記録は見つからなかった。STS-4 の乗員の報告（ms_sts4supp）は睡眠用の拘束具の設営の難しさを述べ、STS-42 は睡眠ステーションの下パネルを外した記述があるが、構成の点検ではない。 |
+| VC-LRQ-CREW-02 | LRQ-CREW-02 | I（検査） | 根拠なし | （根拠なし）タオル・ウォッシュクロスの数量や非常用衛生用品の収納（Volume G）を点検した記録は見つからなかった。 |
 | VC-LRQ-CREW-03 | LRQ-CREW-03 | D（実証） | 根拠あり | シャトルで試験された運動器具は、トレッドミル2種・自転車エルゴメータ・ローイング装置の4つで、飛行中の最大酸素摂取量は変わらなかった。（出典: https://ntrs.nasa.gov/api/citations/20110016707/downloads/20110016707.pdf#page=1） |
 | VC-LRQ-CREW-04 | LRQ-CREW-04 | D（実証） | 根拠あり | STS-1 では、キャビンファンのフィルタの清掃の機内整備は非常にうまくいった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=141） |
 | VC-LRQ-CREW-05 | LRQ-CREW-05 | D（実証） | 根拠あり | STS-133〜135 の Volume F のごみは、個人衛生の廃棄物が全体の 56% を占めると分類された。（出典: https://ntrs.nasa.gov/api/citations/20120000409/downloads/20120000409.pdf#page=16） |
-| VC-LRQ-CREW-06 | LRQ-CREW-06 | T（試験） | 根拠なし | （根拠なし）STS-1〜4 と STS-114・122・125・135 の Mission Report を探したが、非常照明を点灯した試験や使用の記録は無かった（STS-130 の手順書に電源の入れ方の記述があるだけ）。 |
-| VC-LRQ-CREW-07 | LRQ-CREW-07 | D（実証） | 根拠なし | （根拠なし）STS-1〜4 と STS-114・122・125・135 の Mission Report を探したが、中甲板の投光照明を点検した記録は無かった。 |
+| VC-LRQ-CREW-06 | LRQ-CREW-06 | T（試験） | 根拠なし | （根拠なし）非常照明（C3・ML18F の2スイッチ、全明るさ、ケミカルライト）を点灯した試験や使用の記録は見つからなかった。STS-130 の emergency lighting power supply は ISS の Node の設備で、オービタの非常照明ではない。 |
+| VC-LRQ-CREW-07 | LRQ-CREW-07 | D（実証） | 根拠なし | （根拠なし）中甲板の8つの投光照明を MID DECK FLOODS スイッチで個別に入切した記録は見つからなかった。見つかった floodlight の記録はペイロードベイの投光照明（別の器具）である。 |
 | VC-LRQ-CREW-08 | LRQ-CREW-08 | T（試験） | 根拠あり | STS-125 では、乗員が後部飛行甲板でランプ試験を行ったときに、パネル A2 のマイクロホンのキー灯の故障を見つけた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | VC-LRQ-CREW-09 | LRQ-CREW-09 | T（試験） | 根拠あり | STS-122 では、6つのペイロードベイ投光照明を点けたときの電流の増え方が小さく、1つずつ消して、中部左舷の投光照明が正常でないと分かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
-| VC-LRQ-CREW-10 | LRQ-CREW-10 | I（検査） | 根拠なし | （根拠なし）STS-114・122・125・135 の Mission Report を探したが、投光照明の冷却ループの点検や不具合の記録は無かった。 |
+| VC-LRQ-CREW-10 | LRQ-CREW-10 | I（検査） | 根拠なし | （根拠なし）前方隔壁の投光照明が水ループの冷却板で冷やされることを示す記録が見つかった（STS-104 の報告：WCL 1 の投光照明の冷却板の戻り配管が 36°F まで下がり、飛行後の調査で配管の一部にアルミテープが巻かれていなかった。bq_va_sts104 p29・p35）。しかし要求の前半（ペイロードベイの投光照明の電源をフレオンループで冷やす）を確かめた記録は無く、水ループの記述も配管の断熱の不具合の調査であって構成を点検した記録ではないため、根拠なしのままにした。 |
 | VC-LRQ-CREW-11 | LRQ-CREW-11 | I（検査） | 根拠あり | OFT の4回の飛行で SOMS の医療キットを使った場合、必要な品が備わっていて、乗員がすぐに見つけられた。（出典: https://ntrs.nasa.gov/api/citations/19830025244/downloads/19830025244.pdf#page=16） |
-| VC-LRQ-CREW-12 | LRQ-CREW-12 | D（実証） | 根拠なし | （根拠なし）OFT Medical Report と STS-1〜4 の Mission Report を探したが、蘇生器や洗眼器を飛行中に使った記録や点検の記述は無かった。 |
-| VC-LRQ-CREW-13 | LRQ-CREW-13 | T（試験） | 根拠なし | （根拠なし）OFT Medical Report と STS-1〜4 の Mission Report を探したが、飛行中の心電図の取得と地上への送信を確かめた記録は取り込んだ資料に無かった。 |
+| VC-LRQ-CREW-12 | LRQ-CREW-12 | D（実証） | 根拠なし | （根拠なし）蘇生器（100% の補助酸素、6 ft のホース）や洗眼器を飛行中に使った記録は見つからなかった。 |
+| VC-LRQ-CREW-13 | LRQ-CREW-13 | T（試験） | 根拠なし | （根拠なし）EVA 中の心電図の信号が EMU 経由で地上に届いた記録は複数ある（STS-110・111・112 など。信号の欠落の記録も多い）が、胸の3電極、0〜5 V の信号調整器、2つの生体計測チャネル（パネル R10）、航空医官の要請の場合だけ使う運用を確かめた記録ではなく、EVA の経路と本要求の経路が同じかを資料から判断できないため根拠にしなかった。STS-76・STS-80 は EV2 の信号調整器を医療キットの品と交換した記録で、0〜5 V の確認は無い。 |
 | VC-LRQ-CREW-14 | LRQ-CREW-14 | D（実証） | 根拠あり | STS-8 では、放射線モニタ装置の予定した運用がすべて成功した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=18） |
 | VC-LRQ-CREW-15 | LRQ-CREW-15 | T（試験） | 根拠あり | STS-1 では、ガスサンプリングの試験が行われ、固体溶剤サンプラーを真空に開放したときの蓋のシールの固さだけが問題だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=142） |
-| VC-LRQ-CREW-16 | LRQ-CREW-16 | D（実証） | 根拠なし | （根拠なし）OFT Medical Report は使った品を表（Table 3-2）に列挙するが、機内の記録カードと報告の運用を確かめる記述は無かった。 |
+| VC-LRQ-CREW-16 | LRQ-CREW-16 | D（実証） | 根拠なし | （根拠なし）医療キットの品を使い、機内で個別のカードに記録し、飛行後の報告で航空医官に伝えた記録は見つからなかった。STS-76・STS-80（信号調整器）や STS-117（ホッチキス）は医療キットの品を使った記録だが、承認が必要な品の記録・報告の運用は示さない。 |
 | VC-LRQ-CREW-17 | LRQ-CREW-17 | D（実証） | 根拠あり | OFT の飛行では、医療キットが必要になったとき、乗員は管制の航空医官の指示にすぐ、困難なく応じた。（出典: https://ntrs.nasa.gov/api/citations/19830025244/downloads/19830025244.pdf#page=12） |
-| VC-LRQ-CREW-18 | LRQ-CREW-18 | A（解析） | 根拠なし | （根拠なし）医療上の理由で上昇中止や早期終了をした飛行は無く、取り込んだ Mission Report に該当の記述が見つからなかった。 |
+| VC-LRQ-CREW-18 | LRQ-CREW-18 | A（解析） | 根拠なし | （根拠なし）医療上の理由で打上げ中止や早期終了を判断した飛行は無く、判断の根拠となる解析の結果も公開資料に無い。fr の根拠の欄は ctx が要求の出どころとして引いた文と同じ内容である。 |
 | VC-LRQ-CREW-19 | LRQ-CREW-19 | A（解析） | 根拠あり | STS-1 の乗員室の騒音は、飛行甲板で 62〜65 dB、中甲板で 67 dB と測られ、乗員は騒音環境を許容できると評価した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=141） |
 | VC-LRQ-CREW-20 | LRQ-CREW-20 | A（解析） | 根拠あり | OFT の飛行では、1日の予測線量を STS-1 で 10 ミリラド、STS-2〜4 で 6 ミリラドと見積もり、有意な太陽粒子現象は起きなかった。（出典: https://ntrs.nasa.gov/api/citations/19830025244/downloads/19830025244.pdf#page=73） |
-| VC-LRQ-CREW-21 | LRQ-CREW-21 | I（検査） | 根拠なし | （根拠なし）STS-1〜4 と STS-114・122・125・135 の Mission Report を探したが、ロッカーの取付けやトレイの構成を点検した記録は無かった（STS-1 の報告はロッカーの扉の不具合を述べる）。 |
+| VC-LRQ-CREW-21 | LRQ-CREW-21 | I（検査） | 根拠なし | （根拠なし）モジュラーロッカーの取付け（ばね付き拘束ボルト）、トレイの4種、扉の 180° 開き、扉が閉まらないときのターンバックルの措置を点検した記録は見つからなかった。STS-1・STS-4・STS-7 にロッカーの扉の位置ずれ・変形・ねじの食い込みでラッチが掛かりにくい記述があり、STS-7 は扉枠の変形を飛行後に評価するための印を付けたと記すが、要求の構成を確かめた記録ではない。 |
 | VC-LRQ-CREW-22 | LRQ-CREW-22 | D（実証） | 根拠あり | 2007 年の資料では、シャトルの収納として、床下の LiOH 箱、Volume H（EVA 用品）、Volume F（湿ったごみ）、Volume G（非常用衛生用品）、Volume D（ミッション別）が使われている。（出典: https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=5） |
-| VC-LRQ-CREW-23 | LRQ-CREW-23 | I（検査） | 根拠なし | （根拠なし）STS-1 の Mission Report は食事の盆の固定や廃棄物管理系の扉の不具合を述べるが、足ループやはしごなどの拘束具・移動補助具を点検した記述は無かった。 |
-| VC-LRQ-CREW-24 | LRQ-CREW-24 | I（検査） | 根拠なし | （根拠なし）Mission Report にはラックの容量・重量を点検した記述が無く、2007 年の収納の資料（bg_stowage）は軽量 MAR を 6 MLE と述べるが、点検の記録ではない。 |
-| VC-LRQ-CREW-25 | LRQ-CREW-25 | T（試験） | 根拠なし | （根拠なし）STS-1〜4 の Mission Report と OFT Medical Report を探したが、ACES は Challenger 事故後の装備で、取り込んだ飛行の記録に与圧の試験や使用の記述は無かった。 |
-| VC-LRQ-CREW-26 | LRQ-CREW-26 | T（試験） | 根拠なし | （根拠なし）取り込んだ Mission Report と SCOM の範囲では、非常用酸素の供給量を飛行中や試験で確かめた記録は見つからなかった。 |
-| VC-LRQ-CREW-27 | LRQ-CREW-27 | T（試験） | 根拠なし | （根拠なし）脱出系は飛行中に作動した例が無く、取り込んだ Mission Report と Return-to-Flight 報告（bu_impl87）にも、キャビンベントとハッチ投棄の作動試験の記述は見つからなかった。 |
-| VC-LRQ-CREW-28 | LRQ-CREW-28 | A（解析） | 根拠なし | （根拠なし）脱出ポールを使ったベイルアウトの飛行は無く、取り込んだ資料に実機での時間計測の記述が見つからなかった（STS-77 の報告に、中甲板天井に積んだ脱出ポールが通信アンテナを遮った可能性の記述があるだけ）。 |
-| VC-LRQ-CREW-29 | LRQ-CREW-29 | T（試験） | 根拠なし | （根拠なし）頭上窓の投棄が飛行や着陸後に使われた例が無く、取り込んだ資料に試験の記録が見つからなかった。 |
-| VC-LRQ-CREW-30 | LRQ-CREW-30 | D（実証） | 根拠なし | （根拠なし）スライドワイヤで実際に脱出した例は無く、KSC の資料（be_lc39）は設備の記述だけで、カウントダウン実証試験の脱出訓練の記録は取り込んでいない。 |
-| VC-LRQ-CT-01 | LRQ-CT-01 | T（試験） | 根拠なし | （根拠なし）ACCU の主系・副系の切替えの飛行記録は上記の Mission Report に見つからなかった（地上試験の記録は公開資料に無い）。 |
+| VC-LRQ-CREW-23 | LRQ-CREW-23 | I（検査） | 根拠なし | （根拠なし）足ループの粘着テープ、非常脱出ネット（トランポリン）、甲板間のはしごを点検した記録は見つからなかった。STS-112 は非常脱出ネットを張った状態（打上げ中）と、軌道上で収納する際に解除機構の摘みが外れた不具合を記すが、構成の点検ではない。STS-4 の乗員報告（ms_sts4supp p35）は客室温度制御器の点検扉の周りに粘着テープで足ループを付けて試した記述があるが、床ではなく要求の構成の点検ではない。 |
+| VC-LRQ-CREW-24 | LRQ-CREW-24 | I（検査） | 根拠なし | （根拠なし）中甲板収納ラックの容積・重量（約 15 ft3・約 340 lb、LWMAR 約 390 lb）を点検した記録は見つからなかった。 |
+| VC-LRQ-CREW-25 | LRQ-CREW-25 | T（試験） | 根拠なし | （根拠なし）ACES の与圧の開始（約 35,000 ft）、全加圧 3.67 psia、手袋・バイザー・BIP プラグの3条件を試験した記録は見つからなかった。STS-123 に ACES の手袋の気密袋が裂けていた飛行前の点検の記録があるが、与圧の試験ではない。 |
+| VC-LRQ-CREW-26 | LRQ-CREW-26 | T（試験） | 根拠なし | （根拠なし）ACES の非常用酸素（401 L、38 L/min で 10 分以上）を測った試験の記録は見つからなかった。 |
+| VC-LRQ-CREW-27 | LRQ-CREW-27 | T（試験） | 根拠なし | （根拠なし）キャビンベントの作動（40,000 ft から約 75 秒で均圧）とハッチ投棄の試験の記録は見つからなかった。 |
+| VC-LRQ-CREW-28 | LRQ-CREW-28 | A（解析） | 根拠なし | （根拠なし）脱出ポールを使ったベイルアウトの時間（8人で約2分）や高度手順を解析・計測した記録は見つからなかった。STS-77 に、中甲板の天井に積んだ脱出ポールが通信アンテナの利得を妨げた可能性の記述（bq_va_sts77 p32）があるだけである。 |
+| VC-LRQ-CREW-29 | LRQ-CREW-29 | T（試験） | 根拠なし | （根拠なし）頭上窓（窓8）の投棄（内側ガラスが 0.3 秒遅れ）と降下器 7 個を試験した記録は見つからなかった。窓8は衝突痕の検査記録だけが見つかった。 |
+| VC-LRQ-CREW-30 | LRQ-CREW-30 | D（実証） | 根拠なし | （根拠なし）スライドワイヤのバスケットで乗員が脱出した実使用の記録は無い。STS-106 の打上げ後の点検に非常脱出バスケット7が展開して着地域の近くにあった記述（ms_sts106 p43）があり、STS-115・117・118 などはバスケットが固定されたままと記すが、乗員の脱出の実証ではない。約 55 mph・約 30 秒の計測も無い。 |
+| VC-LRQ-CT-01 | LRQ-CT-01 | T（試験） | 根拠なし | （根拠なし）ACCU の主系・副系の切替えや AUDIO CENTER スイッチの OFF を確かめた記録は見つからなかった。ATU の遮断器が開いた記録（STS-5・STS-67・STS-69）は ATU の電源の不具合で、ACCU の記録ではない。 |
 | VC-LRQ-CT-02 | LRQ-CT-02 | D（実証） | 根拠あり | STS-4 では EVA/ATC の UHF 送受信機が S帯 PM と併せてオービタとの良好な音声通信を提供し、STS-108 では EMU の点検を SSOR 1 で行い EVA 中に通信の問題はなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=24）STS-108 では EVA の準備中に A/G 2 と SSER に雑音が出たが、SSOR 1 から SSOR 2 へ切り替えて解消し、EVA 中の通信の質は高かったと乗員が述べた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
-| VC-LRQ-CT-03 | LRQ-CT-03 | T（試験） | 根拠なし | （根拠なし）打上げアンビリカルの ICOM 通話と打上げ・再突入用ヘルメットの通信接続の記録は、Mission Report（sts1〜sts4・sts8・sts35・sts59・sts65・sts108・sts114・sts122・sts125・sts135）に見つからなかった。 |
-| VC-LRQ-CT-04 | LRQ-CT-04 | I（検査） | 根拠なし | （根拠なし）ATU の配置・スイッチ位置とスピーカの区分の検査記録は、上記の Mission Report に見つからなかった（STS-3 には WCCU・MHS の使用の記述のみ）。 |
+| VC-LRQ-CT-03 | LRQ-CT-03 | T（試験） | 根拠なし | （根拠なし）打上げアンビリカルの ICOM A・B 通話や、打上げ・再突入で CCA を HIU・CCU 経由で ATU につないだ記録は見つからなかった。STS-107 の ICOM A・B は Spacehab のループの切替えの記述で、アンビリカルの通話ではない。HIU の故障と予備への交換の記録（STS-55 の bh_sts56 p29、STS-60 の bq_vb_sts60 p23）があるが、軌道上の通信構成での故障であり、打上げ・再突入の CCA-HIU-CCU-ATU の接続を確かめた記録ではない。 |
+| VC-LRQ-CT-04 | LRQ-CT-04 | I（検査） | 根拠なし | （根拠なし）ATU の6か所の配置・電源3位置・スピーカの区分を検査した記録は見つからなかった。 |
 | VC-LRQ-CT-05 | LRQ-CT-05 | D（実証） | 根拠あり | STS-4 の CCTV は、ペイロードベイの4か所（A・B・C・D）、RMS の手首と肘、キャビンの2台のカメラで広く使われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=25） |
 | VC-LRQ-CT-06 | LRQ-CT-06 | T（試験） | 根拠あり | STS-114 では MCC が OBSS のセンサパッケージ 1 の PTU とカメラのモードを指令して指令の到達を確かめ、LDRI モードの映像を地上で受けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=83） |
 | VC-LRQ-CT-07 | LRQ-CT-07 | D（実証） | 根拠あり | STS-114 では OBSS のセンサパッケージ 1 の映像（LDRI モード）を地上で受けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=83）STS-114 では RMS を OBSS の把持前位置に置いて Ku帯アンテナとの間隔を映像で確かめながら、単モータ駆動で展開し、以後の飛行で Ku帯を使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
-| VC-LRQ-CT-08 | LRQ-CT-08 | D（実証） | 根拠なし | （根拠なし）STS-122 には ISS のカメラ映像（チャネル71）をオービタへ中継できなかった記述と DTV の VTR の雑音の記述があるが、いずれも要求が満たされた記録ではないので根拠にしない。 |
+| VC-LRQ-CT-08 | LRQ-CT-08 | D（実証） | 根拠なし | （根拠なし）VPU による ISS との映像の受け渡し（2本・1本）と DTV の Ku帯チャネル3 での MCC への送信を示した記録は見つからなかった。STS-122 に ISS のカメラ映像（チャネル71）をオービタへ中継できなかった記述（sts122 p16）と DTV の VTR の雑音の記述（sts122 p82）があるが、いずれも要求が満たされた記録ではない。STS-130 の DTV は高精細映像の別の系の不具合の記述で、本要求の DTV と同じか確かめられない。 |
 | VC-LRQ-CT-09 | LRQ-CT-09 | I（検査） | 根拠あり | STS-122 では OI のセンサ、シグナルコンディショナ、燃料電池の監視系が正常に働き、解析で IFA は見つからなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=58） |
 | VC-LRQ-CT-10 | LRQ-CT-10 | T（試験） | 根拠あり | STS-125 では PCMMU、PDI、MTU、センサ、シグナルコンディショナ、燃料電池の監視系を含む OI 系が正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=56） |
 | VC-LRQ-CT-11 | LRQ-CT-11 | T（試験） | 根拠あり | STS-122 では PDI のデコミュテータ 1 が OIU のデータで同期を失ったためデコミュテータ 2 に切り替えて原因を OIU 側に切り分け、同期の喪失は約 10〜14 時間に1回起こると説明された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=58） |
-| VC-LRQ-CT-12 | LRQ-CT-12 | T（試験） | 根拠なし | （根拠なし）PI・PSP のペイロード通信とベントパイプの飛行記録は、上記の Mission Report に見つからなかった（ペイロードごとの運用記録に属する）。 |
+| VC-LRQ-CT-12 | LRQ-CT-12 | T（試験） | 根拠なし | （根拠なし）PI と分離したペイロードの全二重通信は STS-80（SPAS の指令に PI を使用）・STS-103（HST のテレメトリで PSP を迂回する折返しプラグ）に記録があるが、いずれも運用上の不具合・回避の記述で、PSP が副搬送波から復調して PDI へ送ることや非互換データを Ku帯へ直接送ることを確かめた記録ではなく、根拠にしなかった。 |
 | VC-LRQ-CT-13 | LRQ-CT-13 | D（実証） | 根拠あり | STS-59 では SIR-C のデータ取得（45 Mbps）にKu帯のチャネル3を使い、同時にチャネル2で記録器のデータをダンプした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=27）STS-65 では TDRS の地上端末の試験で、Ku帯が複数のカメラの映像と 2 Mbps の実時間データ（チャネル2）を下ろした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
-| VC-LRQ-CT-14 | LRQ-CT-14 | T（試験） | 根拠なし | （根拠なし）Ku帯のフォワードリンク（運用 72 kbps・OCA 128 kbps）の性能の記録の記録は、Mission Report（sts1〜sts4・sts8・sts35・sts59・sts65・sts108・sts114・sts122・sts125・sts135）に見つからなかった。 |
-| VC-LRQ-CT-15 | LRQ-CT-15 | I（検査） | 根拠なし | （根拠なし）アンテナの質量・寸法と非カバー域の検査・測定の記録の記録は、Mission Report（sts1〜sts4・sts8・sts35・sts59・sts65・sts108・sts114・sts122・sts125・sts135）に見つからなかった。 |
+| VC-LRQ-CT-14 | LRQ-CT-14 | T（試験） | 根拠なし | （根拠なし）Ku帯の COMM モードのフォワード（運用 72 kbps と OCA 128 kbps）やリターンの NSP の扱いを測った記録は見つからなかった。STS-126 に Ku帯の 216 kbps のフォワードリンクのフレーム同期の記述があるが、モード1の内訳（運用 72 kbps と OCA 128 kbps）を確かめた記述ではない。 |
+| VC-LRQ-CT-15 | LRQ-CT-15 | I（検査） | 根拠なし | （根拠なし）展開アンテナ組立の質量・寸法・非カバー域（4° と 32°）を検査・測定した記録は見つからなかった。STS-45 にアンテナ皿に金属の削りくずが見つかった記述があるだけである。 |
 | VC-LRQ-CT-16 | LRQ-CT-16 | D（実証） | 根拠あり | STS-135 では乗員が Ku帯を RADAR モードにして距離 144,000 ft で ISS を検出し、RADAR モードは期待どおり働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=10）STS-125 では Ku帯が RADAR の自己試験に合格し、乗員が COMM モードに入れて正常に動作した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=11）STS-122 ではランデブの RADAR PASSIVE での Ku帯の運用が正常で、RADAR Active（協力モード）の自己試験が失敗しても影響はなく、同モードは運用で使われていない。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
 | VC-LRQ-CT-17 | LRQ-CT-17 | A（解析） | 根拠あり | STS-122 では Ku帯の格納中に ISS の S1 トラスが約3秒放射されたが、トラスの電界は 40 V/m 未満で ISS の限度 125 V/m を下回り問題はなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
-| VC-LRQ-CT-18 | LRQ-CT-18 | T（試験） | 根拠なし | （根拠なし）サイトインビューの旗によるアップリンクの自動遮断と UPLINK スイッチの手動遮断の飛行記録の記録は、Mission Report（sts1〜sts4・sts8・sts35・sts59・sts65・sts108・sts114・sts122・sts125・sts135）に見つからなかった。 |
+| VC-LRQ-CT-18 | LRQ-CT-18 | T（試験） | 根拠なし | （根拠なし）サイトインビューの旗による SM の自動遮断や、パネル C3 の UPLINK スイッチの手動遮断を確かめた記録は見つからなかった。 |
 | VC-LRQ-CT-19 | LRQ-CT-19 | T（試験） | 根拠あり | STS-122 では S帯の系統1が 27 時間 10 分運用され、バックアップ系統を連続 24 ± 4 時間運用する OMRSD の要求を満たした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=58）STS-1 では冗長側の S帯トランスポンダ1を飛行中に使わず、S帯 PM は打上げ時に高電力で運用し、UHF 送受信機は全飛行で運用した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=48） |
-| VC-LRQ-CT-20 | LRQ-CT-20 | A（解析） | 根拠なし | （根拠なし）21° の beta plus mask と EVA の 20 V/m の評価の記録は上記の Mission Report に見つからなかった（STS-122 の 125 V/m は ISS の限度で本要求とは別）。 |
+| VC-LRQ-CT-20 | LRQ-CT-20 | A（解析） | 根拠なし | （根拠なし）fr の根拠の欄が 21° のマスクで 10 V/m を超えず、EVA で 20 V/m 未満に保つと述べるが、ctx が要求の出どころとして引いた文と同じで、解析の結果の値は示さない。Mission Report には STS-81（EVA 保護モードの設定が働かなかった）・STS-86（EVA 中の Ku帯の遮蔽）・STS-122（ISS のトラスへ 40 V/m 未満で放射、ISS の限度は 125 V/m）の記述があるが、21° のマスクや 20 V/m の評価ではない。 |
 | VC-LRQ-CT-21 | LRQ-CT-21 | D（実証） | 根拠あり | STS-65 では OPS 記録器 2 のトラック2のダンプ品質が劣化したため、記録器 2 のトラック3〜14を AOS 記録器として残りの飛行に使った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=36） |
-| VC-LRQ-CT-22 | LRQ-CT-22 | A（解析） | 根拠なし | （根拠なし）PCMMU・ACCU の喪失や全音声の喪失を実際に判断した記録は、上記の Mission Report に見つからなかった（そうした故障が起きていない）。 |
+| VC-LRQ-CT-22 | LRQ-CT-22 | A（解析） | 根拠なし | （根拠なし）PCMMU や ACCU を失う故障、全音声を失う故障は起きておらず、これらの判断を実際に適用した記録は無い。fr の根拠の欄は ctx が要求の出どころとして引いた文と同じである。 |
 | VC-LRQ-CT-23 | LRQ-CT-23 | T（試験） | 根拠あり | STS-1 では S帯 PM を打上げ時に高電力に設定し、次に SGLS モード、その後 STDN の低電力高周波モードへ切り替えて、問題はなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=48）STS-108 では TDRS West の支援中に S帯の電力増幅器 2 の出力が約20秒低下して SM メッセージが出たが再発せず、PA 2 は残りの飛行で正常に使われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
 | VC-LRQ-CT-24 | LRQ-CT-24 | D（実証） | 根拠あり | STS-1 では S帯のアンテナ切替組立が全飛行で計算機制御のまま、オービタの姿勢に合わせてクワッドとヘミのアンテナが選ばれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=48）STS-125 では下側右クワッドのアンテナ経路でフォワードリンクが途切れたが、再突入では上側クワッドが選ばれていたため影響は小さかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=86） |
 | VC-LRQ-CT-25 | LRQ-CT-25 | T（試験） | 根拠あり | STS-35 では A/G 2 のダウンリンクの雑音が NSP 2 で運用したときだけ出て、NSP 1 に切り替えると消えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=17） |
@@ -714,112 +714,112 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 | VC-LRQ-CT-28 | LRQ-CT-28 | D（実証） | 根拠あり | STS-4 の着陸フェーズでは DFRF が UHF を解放しなかったため2つの UHF アップリンク送信機が同時に働き、7 分を超える音声の乱れが出たが、DFRF の UHF アップリンクが優勢になると改善した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=24） |
 | VC-LRQ-CT-29 | LRQ-CT-29 | D（実証） | 根拠あり | STS-108 では SSOR 1 で EMU の点検に成功し、雑音は SSOR 2 へ切り替えて解消し、SSOR 1 はランデブ・ドッキング・アンドッキング中も正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11）STS-122 では SSOR 1 と SSSR 2 のフレーム同期が15分間断続したため SSOR 2 に切り替え、その後 SSOR 1 に戻して12日目のアンドッキングまで再発しなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=14） |
 | VC-LRQ-CT-30 | LRQ-CT-30 | D（実証） | 根拠あり | STS-108 では EVA の準備の通信点検で A/G 2 と SSER の雑音を SSOR の切替えで解消し、EVA 中は通信の問題がなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
-| VC-LRQ-CW-01 | LRQ-CW-01 | I（検査） | 根拠なし | （根拠なし）Mission Report には120入力の内訳を確かめた記述が見つからなかった。 |
-| VC-LRQ-CW-02 | LRQ-CW-02 | T（試験） | 根拠なし | （根拠なし）入力の電圧範囲と上下限検出を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-CW-01 | LRQ-CW-01 | I（検査） | 根拠なし | （根拠なし）Mission Report には C/W が受ける入力数や直接入力・IOP・ソフトウェア入力の内訳を数えた検査の記述は無く、検索でも当たらなかった。SCOM の記述は設計の記述であり、検査（I）に当たる飛行後の点検・分解の記録でもない。 |
+| VC-LRQ-CW-02 | LRQ-CW-02 | T（試験） | 根拠なし | （根拠なし）入力のアナログ電圧範囲（0〜5 V DC）と全入力の上下限検出を測った記録は見つからなかった。STS-113 は R13U の限界設定値を変えようとした際のつまみの不具合を述べるだけで、入力信号の範囲や検出を確かめた記録ではない。 |
 | VC-LRQ-CW-03 | LRQ-CW-03 | T（試験） | 根拠あり | STS-102 では、10.2 psia への減圧のためにハードウェアの C&W の限界を切り替えたとき、乗員は limit-set volts 押しボタン回転つまみの小数第1位の「下」位置が効かないことを報告したが、「上」位置で選べたため運用に支障はなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
-| VC-LRQ-CW-04 | LRQ-CW-04 | T（試験） | 根拠なし | （根拠なし）電源Aの喪失は飛行で起きておらず、F7 の全灯点灯を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-CW-04 | LRQ-CW-04 | T（試験） | 根拠なし | （根拠なし）電源 A を喪失して F7 の全灯が点灯したという記録は、検索した範囲に無い。STS-118 の F7 ランプ試験の不具合はパネル O8 の試験スイッチ側の故障で、電源喪失時の動作ではない。fr の A9-4 は喪失の定義の記述で、試験結果ではない。 |
 | VC-LRQ-CW-05 | LRQ-CW-05 | T（試験） | 根拠あり | STS-3 では、上昇中に客室の dP/dt が −0.05 psi/min の警報点を超えてクラクソンが作動し、この限界は最初の3回の試験飛行のすべてで超えられたため、作動率を −0.08 psi/min に上げる変更の手続きが進められた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=37）STS-4 でも、上昇中に dP/dt が −0.05 psi/min の警報点を再び超えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=42） |
 | VC-LRQ-CW-06 | LRQ-CW-06 | T（試験） | 根拠あり | STS-65 では、着陸後に左のフライトデッキの煙検知器から濃度の変化を伴わない master alarm を受けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
-| VC-LRQ-CW-07 | LRQ-CW-07 | T（試験） | 根拠なし | （根拠なし）クラクソン・サイレンの専用スピーカ出力を確かめた記録は Mission Report に見つからなかった（クラクソンが作動した記録は項目5）。 |
-| VC-LRQ-CW-08 | LRQ-CW-08 | T（試験） | 根拠なし | （根拠なし）MASTER ALARM 押しボタンでトーンがリセットされることを確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-CW-09 | LRQ-CW-09 | D（実証） | 根拠なし | （根拠なし）F7 の表示灯の保持と上昇モードの MASTER ALARM 灯の動作を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-CW-07 | LRQ-CW-07 | T（試験） | 根拠なし | （根拠なし）クラクソンとサイレンを専用スピーカへ直接送る出力の経路を試験した記録は無い。STS-1 の p232 はクラクソンが聞こえなかった理由を、乗員の耳栓がマスターアラームのトーンしか通さず、ヘルメットと酸素流の中で短いクラクソンが騒音に埋もれたためと記すが、これは事後の説明であり、出力経路の確認ではない。STS-3・STS-4 はクラクソンが作動したことを述べるだけである。 |
+| VC-LRQ-CW-08 | LRQ-CW-08 | T（試験） | 根拠なし | （根拠なし）STS-1 は乗員がマスターアラームを 2 秒以内にリセットしたと記すが、これはマスターアラームを押した運用の記録で、4 つの押しボタンのどれでも SM トーンを含む全トーンがリセットされることを確かめた記録ではない。また検証方法 T の要求に対し、記録は D（運用）の性質である。STS-32 の別のトーンはマスターアラームのスイッチで止められなかったと述べるが、RMS 由来の異常なトーンの記述で、この要求の機能の試験ではない。 |
+| VC-LRQ-CW-09 | LRQ-CW-09 | D（実証） | 根拠なし | （根拠なし）F7 の表示灯が限界内に戻るまで消えない動作や、上昇モードでコマンダのマスターアラーム灯が点灯しないことを飛行で使って示した記録は無い。STS-93 は AC バス 1 の電圧低下で水ループの灯が一瞬点いたと述べ、STS-117 は F7 を診断の補助に使ったと述べるが、いずれも灯の保持や上昇モードの動作を確かめた記述ではない。 |
 | VC-LRQ-CW-10 | LRQ-CW-10 | D（実証） | 根拠あり | STS-125 では、左 SSME の GH2 出口圧のトランスデューサが点火後に不安定になり、バックアップ C&W が上昇中に計4回作動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
-| VC-LRQ-CW-11 | LRQ-CW-11 | A（解析） | 根拠なし | （根拠なし）GAX の判定を確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-CW-12 | LRQ-CW-12 | T（試験） | 根拠なし | （根拠なし）BFS が STANDBY のときのアラームの出方を確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-CW-13 | LRQ-CW-13 | D（実証） | 根拠なし | （根拠なし）故障メッセージの ACK と MSG RESET の動作を確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-CW-14 | LRQ-CW-14 | T（試験） | 根拠なし | （根拠なし）メッセージの重複の抑止を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-CW-11 | LRQ-CW-11 | A（解析） | 根拠なし | （根拠なし）fr の p253 は PASS の SSME 故障メッセージが GAX で生成されると書くだけで、GAX が警報の要否を決める判定を解析した結果ではない。Mission Report の FDA の記述は個々の限界超過の事象で、GAX の判定の解析ではない。 |
+| VC-LRQ-CW-12 | LRQ-CW-12 | T（試験） | 根拠なし | （根拠なし）STS-89 は GPC 5 を誤って RUN にしたため BFS が一時ペイロードバスを制御し、故障メッセージが 2 件出たと記す。これは BFS が待機でなくなった場合の例で、待機中に灯とトーンが出ないことを確かめた記録ではない。STS-117 の BFS が OA2 の MDM のパラメータを無視した事象も、待機時のアラームの出方の記録ではない。 |
+| VC-LRQ-CW-13 | LRQ-CW-13 | D（実証） | 根拠なし | （根拠なし）故障メッセージの ACK による点滅解除と MSG RESET による消去を運用した記録は見つからなかった。STS-1 の乗員がマスターアラームをリセットしたという記述はマスターアラームの記述で、故障メッセージの ACK・MSG RESET ではない。 |
+| VC-LRQ-CW-14 | LRQ-CW-14 | T（試験） | 根拠なし | （根拠なし）4.8 秒以内の同一故障メッセージを抑止する論理を確かめた記録は無く、4.8 秒の検索で当たったものは無関係の時間（着陸の時刻差、点火の遅れなど）だった。 |
 | VC-LRQ-CW-15 | LRQ-CW-15 | D（実証） | 根拠あり | STS-122 では、補給水の入口圧が FDA 限界の 40 psia を超え、乗員の睡眠中に警報が出た。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=52）STS-74 では、水ループ2の熱交換器の流量が FDA 警報限界の 550 lb/hr を下回り、警報が乗員を起こした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-74%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
-| VC-LRQ-CW-16 | LRQ-CW-16 | T（試験） | 根拠なし | （根拠なし）SM アラートトーンの長さを確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-CW-17 | LRQ-CW-17 | T（試験） | 根拠なし | （根拠なし）水ループ2のポンプ出口圧の限界の切替えを確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-CW-18 | LRQ-CW-18 | I（検査） | 根拠なし | （根拠なし）PARAMETER SELECT の設定を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-CW-16 | LRQ-CW-16 | T（試験） | 根拠なし | （根拠なし）SM アラートトーンの長さ・連続音の仕様を測った記録は無い。alert tone で当たったものは EMU のトーンや CFES（STS-4 補足）の記述で、オービタの SM アラートトーンではない。 |
+| VC-LRQ-CW-17 | LRQ-CW-17 | T（試験） | 根拠なし | （根拠なし）水ループ 2 のポンプ出口圧がポンプの運転中と停止中で別の限界を使うことを確かめた記録は無い。STS-93 は AC バス 1 の電圧低下の影響で、水ループ 2 の信号調整器から F7 の水ループ灯が一瞬点いたと述べるだけで、限界の切替えの記述ではない。 |
+| VC-LRQ-CW-18 | LRQ-CW-18 | I（検査） | 根拠なし | （根拠なし）R13U を使わないときのつまみの位置（119 超）を点検した記録は無い。STS-88 と STS-113 は PARAMETER SELECT のつまみが固いこと、プランジャーが働かないことを述べる不具合の記述で、使わないときの設定の検査ではない。 |
 | VC-LRQ-CW-19 | LRQ-CW-19 | D（実証） | 根拠あり | STS-102 では、10.2 psia への減圧のために乗員がハードウェアの C&W の限界を切り替えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | VC-LRQ-CW-20 | LRQ-CW-20 | D（実証） | 根拠あり | STS-125 では、窒素系の流量計の既知の異常のため、窒素系1・2のマスタアラームとバックアップ C&W を全期間で抑止した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48）STS-122 では、燃料電池3の酸素流量計が不安定になり、飛行管制がオンボードのクラス3 FDA の上限（11 lb/hr）を抑止した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=82）STS-130 では、燃料電池の CPM の自己試験が断続的に失敗したため、乗員への迷惑警報を避けるためオンボードの SM アラートを抑止した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=20） |
 | VC-LRQ-CW-21 | LRQ-CW-21 | D（実証） | 根拠あり | STS-130 では、迷惑警報を避けるため、APU 3 の燃料ポンプのドレーン管温度2の FDA 限界を 43 °F から 36 °F に変える TMBU をアップリンクした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=46） |
-| VC-LRQ-CW-22 | LRQ-CW-22 | A（解析） | 根拠なし | （根拠なし）C&W の電源喪失は飛行で起きておらず、この判断の定義を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-CW-22 | LRQ-CW-22 | A（解析） | 根拠なし | （根拠なし）fr の A9-4 の根拠欄は、電源が無ければ C&W は動かない、自己試験に失敗すれば信頼できない、と判断の理由を書くだけで、解析の結果の値は無い。電源 A・B の喪失は飛行で起きていない。 |
 | VC-LRQ-DPS-01 | LRQ-DPS-01 | A（解析） | 根拠あり | STS-108 の打上げ前に SSME 2 の 60 kbit データ列で列パリティ誤りが出たが、原因は EIU の GPC と SSME 2 制御器の間のインタフェース回路ではないと判定された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
 | VC-LRQ-DPS-02 | LRQ-DPS-02 | T（試験） | 根拠あり | STS-1 では、チャネル3の EIU の一次ポートが MECO の直後にバイパスされ、これは主エンジン制御器の電源を落としたことと対応づけられた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=45） |
-| VC-LRQ-DPS-03 | LRQ-DPS-03 | T（試験） | 根拠なし | （根拠なし）STS-1〜4・8 などの Mission Report に打上げ前の MDM 故障の記述はあるが（STS-2 は取り替え）、打上げ MDM の自動ポート切替が働いた記録は見つからなかった。 |
-| VC-LRQ-DPS-04 | LRQ-DPS-04 | D（実証） | 根拠なし | （根拠なし）Mission Report には軌道投入後の O17 スイッチ操作を記した頁は見つからなかった（SCOM・運用規則の手順の記述だけ）。 |
+| VC-LRQ-DPS-03 | LRQ-DPS-03 | T（試験） | 根拠なし | （根拠なし）打上げ前に LF1 または LA1 の MDM で入出力エラーを検出して、自動でポートが切り替わったという記録は無い。打上げ前の MDM 故障の記述は取替えで対処した例にとどまる。 |
+| VC-LRQ-DPS-04 | LRQ-DPS-04 | D（実証） | 根拠なし | （根拠なし）軌道投入後に O17 のスイッチで ATVC 4 台、EIU 3 台、MEC 2 台の電源を切った記録は無い。STS-133 は FCS チェックアウトでの ATVC 1 の再起動不良を述べるが、軌道投入後の電源断ではない。 |
 | VC-LRQ-DPS-05 | LRQ-DPS-05 | T（試験） | 根拠あり | STS-8 では、再突入に向けて GPC 1 と GPC 4 の間でストリングの割当てを入れ替えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=13） |
-| VC-LRQ-DPS-06 | LRQ-DPS-06 | D（実証） | 根拠なし | （根拠なし）STS-3 の MIA burp など MDM の入出力エラーの記録はあるが（STS-3 p140）、乗員がポート2へ切り替えた飛行の記録は取り込み済みの資料に見つからなかった。 |
-| VC-LRQ-DPS-07 | LRQ-DPS-07 | I（検査） | 根拠なし | （根拠なし）Mission Report には個別のバス本数を確かめる記述が無く、PCMMU データの受信の記述（STS-108）があるだけで検証方法 I に合う記録は見つからなかった。 |
-| VC-LRQ-DPS-08 | LRQ-DPS-08 | I（検査） | 根拠なし | （根拠なし）MDM の質量・冷却・消費電力を確かめた飛行・試験の記録は Mission Report に見つからなかった。 |
+| VC-LRQ-DPS-06 | LRQ-DPS-06 | D（実証） | 根拠あり | STS-34 では飛行重要の MDM である FA 1 が OPS 2 の前に入出力エラーを起こし、MECO の直後に故障として PASS と BFS の両方に検出された。この MDM は、ストリング 1 を副ポートへポートモードすることで回復し、残りの飛行の運転は満足だった。FC MDM の主ポートが故障したときに、ストリング単位でポートを切り替えて運転を続けるという要求の機能を、飛行で使った記録である。要求のうち、乗員がポート2を選んだこと（報告は地上の指示の可能性を排除しない）は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-34%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=5）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-34%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=15） |
+| VC-LRQ-DPS-07 | LRQ-DPS-07 | I（検査） | 根拠なし | （根拠なし）ペイロードバス 2 本、計装/PCMMU バス 5 本、ICC バス 5 本を検査で数えた記録は無い。PCMMU のデータ受信の記述（STS-108）や GPC の動作の記述は、バスの本数や接続を確かめるものではない。 |
+| VC-LRQ-DPS-08 | LRQ-DPS-08 | I（検査） | 根拠なし | （根拠なし）MDM の質量 約 38.5 lb、消費電力 80 W 未満、冷却の割付けを検査・計測した記録は無い。STS-77 と STS-106 の avionics bay の水冷却ループ・ファンの数値はベイ全体の温度と差圧で、MDM 個別の質量・電力・冷却の検査ではない。 |
 | VC-LRQ-DPS-09 | LRQ-DPS-09 | D（実証） | 根拠あり | STS-135 では、SM GPC であった GPC 4 の故障で MASTER ALARM が出たため、GPC 2 を PASS の SM GPC に割り当て直して DPS を安定な構成に戻した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=13）STS-102 では、GPC 1・2・3 で冗長セットを組んで OPS 2 を実行する間も、GPC 4 は共通セットで SM ソフトウェアを実行し続けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
-| VC-LRQ-DPS-10 | LRQ-DPS-10 | A（解析） | 根拠なし | （根拠なし）RTLS の中断着陸は実際に行われず、メモリ構成1の OPS 6 への遷移を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-DPS-10 | LRQ-DPS-10 | A（解析） | 根拠なし | （根拠なし）メモリ構成 1 が OPS 1 と OPS 6 を併せ持ち、RTLS で新たなロードを要しないことを解析した結果は見つからなかった。SCOM の p245・p265 は設計の記述である。RTLS は飛行で行われていない。 |
 | VC-LRQ-DPS-11 | LRQ-DPS-11 | D（実証） | 根拠あり | STS-71 では SM のチェックポイントが MMU 1 で失敗（off/busy）したが、再試行で MMU 1 に成功し、MMU は以後正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=12）STS-74 では MMU 2 へのチェックポイントの失敗の後、2回目の試行が成功した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-74%20Space%20Shuttle%20Mission%20Report.pdf#page=36） |
 | VC-LRQ-DPS-12 | LRQ-DPS-12 | D（実証） | 根拠あり | STS-1 の打上げ前の BFS は MM 101 にされ、PASS を4本の飛行重要ストリングのすべてで追従し、航法も赤線の内側だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=45） |
-| VC-LRQ-DPS-13 | LRQ-DPS-13 | I（検査） | 根拠なし | （根拠なし）GPC の配置とファンの運用を確かめた記録は Mission Report に見つからなかった（ベイのファン故障の記述も無い）。 |
-| VC-LRQ-DPS-14 | LRQ-DPS-14 | A（解析） | 根拠なし | （根拠なし）ファンの2台故障は飛行で起きておらず、過熱までの時間を確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-DPS-15 | LRQ-DPS-15 | I（検査） | 根拠なし | （根拠なし）主記憶の容量と電池保持を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-DPS-13 | LRQ-DPS-13 | I（検査） | 根拠なし | （根拠なし）GPC をベイ 1・2・3 に置いたことや、各ベイのファン 2 台のうち 1 台だけを使う運用を検査した記録は無い。STS-93・STS-96・STS-106 のベイのファン差圧の記述は、ファンの性能の記述で、GPC の配置の検査ではない。 |
+| VC-LRQ-DPS-14 | LRQ-DPS-14 | A（解析） | 根拠なし | （根拠なし）ファン 2 台故障後の過熱までの 25 分（14.7 psi）／17 分（10.2 psi）を示すのは SCOM p227 の注意書きだけで、設計の記述である。fr の A17-105 の根拠欄には GPC の許容温度と出口温度限界の解析（メモ DF7-93-46 など）があるが、2 台故障後に過熱するまでの時間ではなく、25 分・17 分の値を導いた解析は見つからなかった。 |
+| VC-LRQ-DPS-15 | LRQ-DPS-15 | I（検査） | 根拠なし | （根拠なし）GPC 主記憶の容量と電源断中の電池による保持を検査した記録は無い。STS-121 の memory keeper battery は EDAS の別機器の電池で、GPC のものではない。 |
 | VC-LRQ-DPS-16 | LRQ-DPS-16 | D（実証） | 根拠あり | STS-114 の DPS は全ミッションで正常で、PASS と BFS の想定外の GPC エラーや入出力エラーは出なかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=53） |
-| VC-LRQ-DPS-17 | LRQ-DPS-17 | T（試験） | 根拠なし | （根拠なし）OUTPUT スイッチの設定を飛行で確かめた記録は Mission Report に見つからなかった。 |
-| VC-LRQ-DPS-18 | LRQ-DPS-18 | D（実証） | 根拠なし | （根拠なし）IDP の3台駆動の制限や X 表示・POLL FAIL を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-DPS-17 | LRQ-DPS-17 | T（試験） | 根拠なし | （根拠なし）STS-89 は GPC 5 を誤って STANDBY から RUN にしたため（OUTPUT スイッチを BACKUP にするはずだった）、BFS がペイロードバスを一時制御して故障メッセージが 2 件出たと記す。STS-78 は GPC 4 の OUTPUT スイッチを TERMINATE から NORMAL に戻した操作が BFS の engage エラーの原因と説明する。いずれもスイッチの位置が出力に影響することを示すが、ハードウェアで出力を禁止できることと PASS・BFS・SM の標準設定を確かめた記録ではない。 |
+| VC-LRQ-DPS-18 | LRQ-DPS-18 | D（実証） | 根拠なし | （根拠なし）IDP を同時に 3 台までしか駆動できないことと、駆動されない IDP の大きな X と POLL FAIL の表示を、飛行で確かめた記録は無い。STS-64 は訓練用シミュレーターでの BFS の big X が POLL FAIL なしで出る不具合を述べ、STS-124 は大きな X が一瞬出たと述べるが、いずれも駆動されない IDP の標準の表示の確認ではない。STS-116 の IDP4 への GPC の二重割付けは MIA の入出力エラーの例で、3 台制限の記録ではない。 |
 | VC-LRQ-DPS-19 | LRQ-DPS-19 | D（実証） | 根拠あり | STS-114 では、MDU CDR2 の電源投入時に指令側の IDP 1 が CDR2 の BITE 故障を報告した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=13）STS-125 では、IDP 4 が電源投入時に BITE 故障メッセージを出し、以後の電源投入のたびに BITE 表示が再現したが IDP は正常に動作した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
-| VC-LRQ-DPS-20 | LRQ-DPS-20 | T（試験） | 根拠なし | （根拠なし）ADC の変換と割当てを確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-DPS-20 | LRQ-DPS-20 | T（試験） | 根拠なし | （根拠なし）ADC のアナログ入力の割当てと 12 ビットの変換を測った記録は無い。STS-78 の A/D コンバータの記述は MDM のアナログ入力カードの BITE で、IDP に渡す ADC ではない。 |
 | VC-LRQ-DPS-21 | LRQ-DPS-21 | T（試験） | 根拠あり | STS-102（CRT 表示の時代）では、GPC の再構成の後、CRT の主機能スイッチを GN&C と SM の間で切り替えて、GN&C GPC と SM GPC とのインタフェースが正しいことを確かめた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
-| VC-LRQ-DPS-22 | LRQ-DPS-22 | T（試験） | 根拠なし | （根拠なし）累算器の選択の順を確かめた記録は Mission Report に見つからなかった（STS-125 は累算器の不一致の報告のみで、順の記述は無い）。 |
-| VC-LRQ-DPS-23 | LRQ-DPS-23 | A（解析） | 根拠なし | （根拠なし）PASS の MET の計算方法を確かめた記録は Mission Report に見つからなかった。 |
+| VC-LRQ-DPS-22 | LRQ-DPS-22 | T（試験） | 根拠なし | （根拠なし）STS-123 は MTU が GPS に対して 1 日あたり約 0.6 ミリ秒ずれたと述べ、STS-125 は累算器の不一致報告が BITE の誤報だったと述べる。いずれも毎秒の時刻照合や累算器 1 から他の累算器、最小番号の GPC へ試す順序を確かめた記録ではない。 |
+| VC-LRQ-DPS-23 | LRQ-DPS-23 | A（解析） | 根拠なし | （根拠なし）PASS の GPC が GMT とリフトオフ時刻から MET を計算する方法を解析した結果は見つからなかった。STS-134 の MSN timer の GMT 4 時間ずれは表示の機器の事象で、GPC の MET 計算ではない。 |
 | VC-LRQ-DPS-24 | LRQ-DPS-24 | T（試験） | 根拠あり | STS-125 では、DPS が MTU の累算器の不一致を報告したが、記録の確認で MTU の BITE 異常は見つからず、報告は両方の発振器を含む複数の内部故障を要するものだった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
-| VC-LRQ-DPS-25 | LRQ-DPS-25 | I（検査） | 根拠なし | （根拠なし）MTU の暖機を確かめた記録は Mission Report に見つからなかった（SODB の設計の記述のみ）。 |
+| VC-LRQ-DPS-25 | LRQ-DPS-25 | I（検査） | 根拠なし | （根拠なし）MTU の 12 時間の暖機を検査した記録は無い。warm-up の検索で当たったものは EMU、FES、燃料電池など無関係の機器だった。 |
 | VC-LRQ-DPS-26 | LRQ-DPS-26 | D（実証） | 根拠あり | STS-135 では、GPC 4 を SM GPC に割り当て直して、GPC を標準の飛行構成に戻した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=15） |
 | VC-LRQ-DPS-27 | LRQ-DPS-27 | D（実証） | 根拠あり | STS-135 では、SM GPC であった GPC 4 の故障の後、GN&C の冗長セットに加えて運転時間を与えたところ数時間正常に動作し、解析は一時的な故障と整合する結果だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=15） |
 | VC-LRQ-DPS-28 | LRQ-DPS-28 | D（実証） | 根拠あり | STS-71 では、GPC 4 の冗長セットの同期不良の後、GPC 4 に IPL を行い、G2 の冗長セットに加え、乗員の睡眠中はフリーズドライとして、翌日に SM 機に割り当て直した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-71%20Space%20Shuttle%20Mission%20Report.pdf#page=45） |
-| VC-LRQ-DPS-29 | LRQ-DPS-29 | A（解析） | 根拠なし | （根拠なし）Mission Report には 2 台の GNC GPC のストリング割当てを確かめた記述が見つからなかった（STS-122 の Dual G2 の記述は割当ての内訳を述べない）。 |
-| VC-LRQ-DPS-30 | LRQ-DPS-30 | D（実証） | 根拠なし | （根拠なし）アビオニクスベイの冷却喪失は飛行で起きておらず、GPC FRP-7 を実施した記録は Mission Report に見つからなかった。 |
-| VC-LRQ-EPS-01 | LRQ-EPS-01 | T（試験） | 根拠なし | （根拠なし）Mission Report の PRSD の節には消費量と残量の記録はあるが、マニフォールドの供給圧力の実測値の記述が見つからなかった。 |
-| VC-LRQ-EPS-02 | LRQ-EPS-02 | T（試験） | 根拠なし | （根拠なし）探した Mission Report には STS-91 の燃料電池 3 の水素/酸素リリーフ弁の漏れの記述はあるが、作動圧力の確認の記述が見つからなかった。 |
+| VC-LRQ-DPS-29 | LRQ-DPS-29 | A（解析） | 根拠なし | （根拠なし）fr の A7-102C の根拠欄は、この割当てが最適な冗長性を与え、一方の GNC GPC が故障しても（他の故障は無いと仮定して）連続した制御ができると書くが、これは設計の理由の記述で、解析の結果の値や解析の出典は示さない。Mission Report の STS-122 の Dual G2 の記述も割当ての内訳を述べない。 |
+| VC-LRQ-DPS-30 | LRQ-DPS-30 | D（実証） | 根拠なし | （根拠なし）アビオニクスベイの冷却を失って GPC FRP-7 を実施した記録は無い。mal は手順の記述で実施の記録ではない。HALT に関する飛行の記述（STS-66・STS-84・STS-112 の GPC のモード切替え）は GPC のモードスイッチの不具合や訓練で、冷却喪失への対処ではない。 |
+| VC-LRQ-EPS-01 | LRQ-EPS-01 | T（試験） | 根拠なし | （根拠なし）PRSD のマニフォールドへの供給圧（水素 200〜243 psia、酸素 803〜883 psia）を測った記録と、12 ミクロンのフィルタの検査の記録は見つからなかった。Mission Report の PRSD の節は消費量と残量の記述が中心である。 |
+| VC-LRQ-EPS-02 | LRQ-EPS-02 | T（試験） | 根拠なし | （根拠なし）STS-130 は、O2 マニフォールド 1 の圧力が 974〜975 psia、マニフォールド 2 が 950 psia まで上がり、マニフォールドのリリーフ弁は 975 psia で開くよう規定されていると記し、最大圧で約 1.5 分の頭打ちがあったと述べる。これは酸素側のマニフォールドのリリーフ弁だけに関する記述で、弁が開いたことを明言せず、水素側のマニフォールド弁（290 psi）、タンクのリリーフ弁（酸素 1,005 psia・水素 302 psia）には記録が無い。STS-91 の燃料電池 3 のリリーフ弁の漏れは水のリリーフ弁で、本要求の弁ではない。 |
 | VC-LRQ-EPS-03 | LRQ-EPS-03 | T（試験） | 根拠あり | STS-91 の飛行中に、酸素タンクの電流レベル検出器の試験を行い、遮断機能が正しく働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-91%20Space%20Shuttle%20Mission%20Report.pdf#page=25） |
-| VC-LRQ-EPS-04 | LRQ-EPS-04 | T（試験） | 根拠なし | （根拠なし）STS-74 の記録に酸素マニフォールド 1 の隔離弁が閉じなかった事象とマニフォールド 2 の隔離弁を閉じた記述はあるが、3 基への供給継続を確かめた記述が見つからなかった。 |
+| VC-LRQ-EPS-04 | LRQ-EPS-04 | T（試験） | 根拠なし | （根拠なし）STS-71 と STS-74 は、マニフォールド 1 の隔離弁が閉じない不具合の後、マニフォールド 2 の弁で運用を続けたと記すが、3 基すべての燃料電池への供給継続を測った記録ではなく、水素 150 psia・酸素 200 psia を下回ったときの SM ALERT を確かめた記録も無い。STS-71 の燃料電池は非常に満足と記されるが、片系の弁を閉じた状態での供給の試験ではない。 |
 | VC-LRQ-EPS-05 | LRQ-EPS-05 | A（解析） | 根拠あり | STS-125 では、燃料電池 1 のサブスタック 1 の ΔV が基線から 26 mV の増加（合計 32 mV）にとどまり、50 mV の基準に達しなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=19）STS-74 では、燃料電池 3 のサブスタックの ΔV が約 8 mV 変化したため、予防として主母線 B と C の母線タイを行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-74%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
 | VC-LRQ-EPS-06 | LRQ-EPS-06 | D（実証） | 根拠あり | STS-54 では、燃料電池 2 を DTO のため 9 時間停止し、再起動の指令から 7 分後に負荷可（ready-to-load）の表示を得た。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=17） |
 | VC-LRQ-EPS-07 | LRQ-EPS-07 | T（試験） | 根拠あり | STS-1 では、燃料電池の水リリーフ弁が一時的に作動して船外への流れを示す温度変化が出た後、弁は正しく閉じ直した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=34） |
-| VC-LRQ-EPS-08 | LRQ-EPS-08 | T（試験） | 根拠なし | （根拠なし）探した Mission Report に ECU の給電や必須母線電圧の警報の確認の記述が見つからなかった（EPDC の節は「正常」とだけ書く）。 |
-| VC-LRQ-EPS-09 | LRQ-EPS-09 | T（試験） | 根拠なし | （根拠なし）探した Mission Report に pH センサの警報の確認の記述が見つからなかった（STS-104 の KOH の記述は電池の漏れで、燃料電池の電解質ではない）。 |
-| VC-LRQ-EPS-10 | LRQ-EPS-10 | I（検査） | 根拠なし | （根拠なし）母線の構成の確認は設計の検査で、Mission Report に構成の数を確かめた記録が見つからなかった。 |
-| VC-LRQ-EPS-11 | LRQ-EPS-11 | T（試験） | 根拠なし | （根拠なし）探した Mission Report には、EPDC の解析項目に制御母線の電圧と RPC の状態を挙げる記述（STS-114）はあるが、警報の確認や RPC の復帰の記述が見つからなかった。 |
-| VC-LRQ-EPS-12 | LRQ-EPS-12 | T（試験） | 根拠なし | （根拠なし）探した Mission Report にペイロード母線の電源の切替を確かめた記述が見つからなかった（STS-92 に客室ペイロード母線の喪失の記述はあるが、本要求の確認ではない）。 |
+| VC-LRQ-EPS-08 | LRQ-EPS-08 | T（試験） | 根拠なし | （根拠なし）燃料電池の ECU の給電、三相交流の回路遮断器 9 個、必須母線 25 V DC 未満の SM ALERT を確かめた記録は見つからなかった。EPDC の節は必須母線の電圧を解析したという項目の列挙で、警報の動作を確かめた記録ではない。 |
+| VC-LRQ-EPS-09 | LRQ-EPS-09 | T（試験） | 根拠なし | （根拠なし）STS-37 は FC 3 の pH センサが高 pH を示したが共通の pH センサは KOH を確認せず、燃料電池は健全だったと記す。STS-93 は AC バス 1 の電圧低下による自己試験で FC 1 が 32 秒間高 pH を示したと記し、STS-123 は共通 pH センサの一時的な誤指示を記す。いずれも実際に KOH が混入した例ではなく、誤警報の事象である。電解質の混入を検知して SM ALERT と SM SPEC 69 で知らせたことを確かめた記録は無い。 |
+| VC-LRQ-EPS-10 | LRQ-EPS-10 | I（検査） | 根拠なし | （根拠なし）主母線 3、必須母線 3、制御母線 9、予備母線 2 を検査で数えた記録は無い。EPDC の節は母線の電圧・状態の解析項目の列挙で、構成の検査ではない。 |
+| VC-LRQ-EPS-11 | LRQ-EPS-11 | T（試験） | 根拠なし | （根拠なし）STS-112・STS-113 は制御母線 AB1 を落として原因を調べたと述べるが、24.5 V DC 未満の SM ALERT や RESET による RPC の復帰を確かめた記録ではない。STS-114 は制御母線の電圧と RPC の状態を EPDC の解析項目に挙げるだけである。 |
+| VC-LRQ-EPS-12 | LRQ-EPS-12 | T（試験） | 根拠なし | （根拠なし）主ペイロード母線の 3 つの電源、後部ペイロード母線の AFT MN B・C スイッチ、補助ペイロード母線 A・B の給電を確かめた記録は見つからなかった。STS-92 の客室ペイロード母線の喪失と STS-98 の APCU の電源投入は別の母線・機器の記述である。 |
 | VC-LRQ-EPS-13 | LRQ-EPS-13 | D（実証） | 根拠あり | STS-7 では、着陸後に 3 本の主母線すべてで母線タイの実証（DTO）を行い、大きな過渡変動はなく、主エンジン制御器にも影響がなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-7%20Space%20Shuttle%20Program%20Mission%20Report.pdf#page=13）STS-74 では、燃料電池 3 の ΔV の変化に対して予防として主母線 B と C の母線タイを行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-74%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
 | VC-LRQ-EPS-14 | LRQ-EPS-14 | T（試験） | 根拠あり | STS-59 では、EPDC の全データが正常な電圧・電流の特徴を示し、規定の限界を超えなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
-| VC-LRQ-EPS-15 | LRQ-EPS-15 | T（試験） | 根拠なし | （根拠なし）STS-5 に AC1 の B 相インバータが過負荷なしで切り離された記録はあるが、これは誤った切離しで、判定値どおりに切り離した確認ではない。 |
+| VC-LRQ-EPS-15 | LRQ-EPS-15 | T（試験） | 根拠なし | （根拠なし）STS-5 では AC 1 の B 相インバータが過負荷が無いのにバスから切り離され、判定値（14.5 A 超 10〜20 秒、17.3〜21.1 A 超 4〜6 秒）に基づく切離しではなく誤った切離しだった。STS-93 は AC バス 1 の短絡で電流が 20 A を超え電圧が 114 V から 21.5 V に落ちたが、440 ミリ秒で短絡が消え、判定時間（4〜6 秒）に達しないため切離しは起きなかった。いずれも過負荷の判定値どおりの動作を確かめた記録ではない。 |
 | VC-LRQ-EPS-16 | LRQ-EPS-16 | D（実証） | 根拠あり | STS-5 では、ペイロードベイドアの閉鎖中に切り離された AC1 の B 相インバータを再突入前に母線へつなぎ直し、自動切離しを抑止して、AC1 の負荷は正常な範囲に保たれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-5%20Space%20Shuttle%20Program%20Mission%20Report.pdf#page=12） |
 | VC-LRQ-EPS-17 | LRQ-EPS-17 | I（検査） | 根拠あり | STS-114 では、前方・中部・後方のモータ制御組立の動作状態を含む EPDC の全項目を解析し、異常な状態は見つからなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
-| VC-LRQ-EPS-18 | LRQ-EPS-18 | T（試験） | 根拠なし | （根拠なし）探した Mission Report には、インバータの起動の手順とタルクバックの確認を記録した記述が見つからなかった。 |
+| VC-LRQ-EPS-18 | LRQ-EPS-18 | T（試験） | 根拠なし | （根拠なし）INV PWR スイッチで AC 1・2・3 を MN A・B・C から給電することや、3 台のインバータが接続されて初めてタルクバックが ON を示すことを確かめた記録は見つからなかった。インバータの記述は故障の事例（STS-5、STS-36）に限られる。 |
 | VC-LRQ-EVA-01 | LRQ-EVA-01 | D（実証） | 根拠あり | STS-54 では 10.2 psia のキャビンで行った2着の EMU の点検に異常はなかった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=23）STS-125 の EMU の点検は 132/17:59 GMT に問題なく完了し、懸念は報告されなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
-| VC-LRQ-EVA-02 | LRQ-EVA-02 | T（試験） | 根拠なし | （根拠なし）ファン・ポンプの運転時間と SOP 第1段の調圧（600 psig）の点検値は、Mission Report（sts54・sts108・sts114・sts125 ほか）には「点検に異常なし」の記述だけで値が無く、根拠にしなかった。 |
+| VC-LRQ-EVA-02 | LRQ-EVA-02 | T（試験） | 根拠なし | （根拠なし）ファン運転の約2分や LCVG の水温低下を測った記録は無い（STS-114 p62 は LCG 配管の加熱の記述だけ）。SOP の点検の記述は STS-51 p35 に SOP 圧が EMU 2 で 5,880 psia・EMU 1 で 6,090 psia とあるが、これは酸素ボトル圧（6,000±200 psia）で、要求の第1段調圧 600 psig 未満（中間段ゲージ）ではない。fr の根拠欄は設計の理由で試験値ではない。 |
 | VC-LRQ-EVA-03 | LRQ-EVA-03 | D（実証） | 根拠あり | STS-92 では DTO 689 の SAFER の飛行実証を EVA 4 で行い、2名の乗員が目的をすべて達成して2台の SAFER が正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-92%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
-| VC-LRQ-EVA-04 | LRQ-EVA-04 | I（検査） | 根拠なし | （根拠なし）投光器の消灯時機と無線ビデオのヒータの入れ時機の実績は、Mission Report に見つからなかった（STS-125 の投光器の記述は故障の報告のみ）。 |
+| VC-LRQ-EVA-04 | LRQ-EVA-04 | I（検査） | 根拠なし | （根拠なし）投光器の記述は故障（STS-100・116・120 の中左舷投光器の不点灯など）と EVA 4 のための点灯の記録だけで、EVA 前の消灯時機や冷却時間を確かめた記録ではない。無線ビデオのヒータの記述は見つからなかった。検査（I）に当たる飛行後の確認も無い。 |
 | VC-LRQ-EVA-05 | LRQ-EVA-05 | D（実証） | 根拠あり | STS-54 では飛行3日目に 10.2 psia へ減圧し、5日目の EVA は EMU の着用の後の 40 分の前呼吸で行われ、EMU は期待どおり働いた。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=23）STS-108 では 10.2 psia への減圧を終え、約 75 分の前呼吸の後に EVA を行い、EVA は 4 時間 11 分で EMU の異常はなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | VC-LRQ-EVA-06 | LRQ-EVA-06 | D（実証） | 根拠あり | STS-125 では EVA 2 の減圧で減圧弁の蓋を付けたままにして 10.2 から 7 psia が 0.44 psia/min と遅かったが、蓋を外して通常どおり減圧でき、続く3回の EVA の減圧は正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=48）STS-114 では EVA 3 のエアロックからの出口で減圧に関する異常は報告されなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=16） |
 | VC-LRQ-EVA-07 | LRQ-EVA-07 | D（実証） | 根拠あり | STS-114 では EVA 2 の後の再与圧と漏れ点検が正常に完了した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=16）STS-54 ではエアロックの系のパラメータが予想の範囲内に収まった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=19） |
-| VC-LRQ-EVA-08 | LRQ-EVA-08 | A（解析） | 根拠なし | （根拠なし）運用飛行規則の Go/No-Go 基準に当たる記述で、エアロックの漏れが 0.2 psi/min を超えた飛行の記録や正圧逃し弁の固着の記録は Mission Report に見つからなかった。 |
+| VC-LRQ-EVA-08 | LRQ-EVA-08 | A（解析） | 根拠なし | （根拠なし）エアロック側の漏れの記録は STS-96（ハッチ D の漏れ、vestibule から airlock へ 2.7 lb）と STS-92（減圧中の漏れの検知と中断）にあるが、いずれも psi/min の値で 0.2 psi/min と比べた解析ではなく、喪失判定の解析の結果でもない。EMU の正圧逃し弁が閉じたまま開かない記録は無い（検索 0 件）。 |
 | VC-LRQ-EVA-09 | LRQ-EVA-09 | D（実証） | 根拠あり | STS-114 では右舷の均圧弁が EMER 位置で流れなくなったため左舷の均圧弁でエアロックを減圧し、EVA 3 の後も左舷の均圧弁で減圧できた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=16）STS-92 では EVA 3 の初めにエアロックの減圧弁の蓋が離れたため弁を使わなくなり、EVA 4 の減圧にはハッチの均圧弁の1つが使われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-92%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
-| VC-LRQ-EVA-10 | LRQ-EVA-10 | I（検査） | 根拠なし | （根拠なし）保温カバーの開閉と水配管の凍結の記録は、Mission Report（sts54・sts108・sts114・sts125 ほか）に見つからなかった。 |
-| VC-LRQ-EVA-11 | LRQ-EVA-11 | A（解析） | 根拠なし | （根拠なし）非常時 EVA を実際に行った飛行は取り込んだ Mission Report に無く、手順の練習の記録も見つからなかった。 |
-| VC-LRQ-EVA-12 | LRQ-EVA-12 | T（試験） | 根拠なし | （根拠なし）コールドリスタートの試験の記録は取り込んだ資料（Mission Report と NASA-CR-185540 の bm_ibd_ioaemu の検索範囲）に見つからなかった。 |
-| VC-LRQ-EVA-13 | LRQ-EVA-13 | A（解析） | 根拠なし | （根拠なし）EMU の化学汚染の処置を実際に行った飛行は取り込んだ Mission Report に無く、消耗品の残り時間の解析結果も公開資料に見つからなかった。 |
+| VC-LRQ-EVA-10 | LRQ-EVA-10 | I（検査） | 根拠なし | （根拠なし）ヒットした thermal cover は ISS の機器（Cupola・CBM・DDCU など）の覆いで、オービタの外部エアロックのハッチ保温カバーの開閉や水配管の凍結を述べる記録は無い。飛行後の検査の記録も見つからなかった。 |
+| VC-LRQ-EVA-11 | LRQ-EVA-11 | A（解析） | 根拠なし | （根拠なし）非常時の EVA を実際に行った飛行も、故障ごとの処置表を解析した結果も、Mission Report には無い。SCOM（設計の記述）は根拠にならない。練習（訓練）の記録は公開資料に無い。 |
+| VC-LRQ-EVA-12 | LRQ-EVA-12 | T（試験） | 根拠なし | （根拠なし）EMU のコールドリスタート（TIME EV・TIME LF のリセット）や 8.0 psi 以上での実施を述べる記録は無い（ヒットしたのは OMS の cold restart FTO や NCS の cold restart で別件）。地上の試験の報告も手元の資料に無い。 |
+| VC-LRQ-EVA-13 | LRQ-EVA-13 | A（解析） | 根拠なし | （根拠なし）EMU の化学汚染の処置を行った記録も、1 時間 55 分・55 分の消耗品の残しを解析した結果も見つからなかった。飛行規則と EVA チェックリストは規則・手順で、解析の結果ではない。 |
 | VC-LRQ-EVA-14 | LRQ-EVA-14 | D（実証） | 根拠あり | STS-92 では DTO 689 の SAFER の飛行実証を EVA 4 で行い、2台の SAFER が正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-92%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
-| VC-LRQ-EVA-15 | LRQ-EVA-15 | A（解析） | 根拠なし | （根拠なし）BTA で乗員を処置した飛行は取り込んだ Mission Report と NASA の医学資料（bm_pb_dcsevid）に見つからなかった（使用の記録が無い）。 |
+| VC-LRQ-EVA-15 | LRQ-EVA-15 | A（解析） | 根拠なし | （根拠なし）BTA で乗員を処置した飛行も、6 → 8 psid の手順を解析した結果も無い。DCS の語は STS-80 の RME 1309（超音波によるリスク評価。EVA 中止で未実施）に出るだけで、処置の記録ではない。 |
 | VC-LRQ-EVA-16 | LRQ-EVA-16 | D（実証） | 根拠あり | STS-54 では EVA の後に EMU に O2 を再充填し、電池を一晩充電した。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=23） |
 | VC-LRQ-EVA-17 | LRQ-EVA-17 | D（実証） | 根拠あり | STS-54 では EVA の後に電池を一晩充電した。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=23）STS-102 では EVA 1 の待機中に乗員が SCU 電源につながれた時間が 2 時間 12 分あり、EMU と EVA 工具は正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
-| VC-LRQ-EVA-18 | LRQ-EVA-18 | I（検査） | 根拠なし | （根拠なし）LiOH カートリッジ交換時の差圧の実測や取扱いの記録は Mission Report に見つからなかった（STS-104 の記述は電池の漏れで別件）。 |
-| VC-LRQ-EVA-19 | LRQ-EVA-19 | A（解析） | 根拠なし | （根拠なし）帰還前日の EVA の時機と着陸構成の固定の実績は、取り込んだ Mission Report に見つからなかった。 |
+| VC-LRQ-EVA-18 | LRQ-EVA-18 | I（検査） | 根拠なし | （根拠なし）LiOH カートリッジ交換時のキャップ前後の差圧や、ポートを顔に向けない取扱いを調べた記録は無い。10.2 psi キャビンでの EVA（STS-51 など）の記録は準備の手順の記述で、この取扱いの検査ではない。 |
+| VC-LRQ-EVA-19 | LRQ-EVA-19 | A（解析） | 根拠なし | （根拠なし）帰還前日に EVA を行った飛行で、就寝 7 時間前までにエアロックへの進入を終えたかを確かめられる記録は無い。EMU を着陸構成で拘束袋に固定した記録も見つからなかった。7 時間の所要を解析した結果は公開されていない。 |
 | VC-LRQ-EVA-20 | LRQ-EVA-20 | D（実証） | 根拠あり | STS-125 では 1 回目の EVA の前呼吸が 134/11:36 GMT に始まり、減圧の開始が 12:38 GMT、EVA の開始（EMU の電池電源への切替え）が 12:51 GMT だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=15）STS-108 では約 75 分の前呼吸の後に EVA を行い、EMU は EVA の間ずっと正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | VC-LRQ-EVA-21 | LRQ-EVA-21 | D（実証） | 根拠あり | STS-108 では乗員がキャビンを 10.2 psi へ減圧し、EVA で乗員がエアロックを出るまで 10.2 psia に保った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=30）STS-54 では圧力制御系が飛行3日目の 10.2 psia への減圧を支援した。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18） |
-| VC-LRQ-EVA-22 | LRQ-EVA-22 | I（検査） | 根拠なし | （根拠なし）EMU の搭載替えとダクトの取外しの時機の実績は、Mission Report に見つからなかった。 |
-| VC-LRQ-EVA-23 | LRQ-EVA-23 | A（解析） | 根拠なし | （根拠なし）カフ区分 1〜4 の減圧症の症状が出た飛行は取り込んだ Mission Report に無く、NASA の DCS の証拠報告（bm_pb_dcsevid）にも個別の発生記録が見つからなかった。 |
-| VC-LRQ-EVA-24 | LRQ-EVA-24 | A（解析） | 根拠なし | （根拠なし）計画外 EVA の時機の承認の記録は取り込んだ Mission Report に無い（STS-54 の計画 EVA は MET 3 日 20 時間 49 分の開始で、計画 EVA の 72 時間の制約は L2 の REQ-EVA-08 の領域）。 |
-| VC-LRQ-EVA-25 | LRQ-EVA-25 | I（検査） | 根拠なし | （根拠なし）工具・安全テザーの運用記録は Mission Report に見つからなかった（STS-92 の減圧弁の蓋のテザーは機器側の記述）。 |
-| VC-LRQ-EVA-26 | LRQ-EVA-26 | I（検査） | 根拠なし | （根拠なし）EVA 付属品の収納場所の検査記録は Mission Report に見つからなかった。 |
+| VC-LRQ-EVA-22 | LRQ-EVA-22 | I（検査） | 根拠なし | （根拠なし）ms_sts129 p25 の「EMU exchange」と STS-104 の EMU の移送は ISS とオービタの間の機材の移動で、エアロックとミッドデッキの EMU の入れ替え（30 分）や SCU の O2 弁の閉鎖、ダクトの取外し時機を述べる記録ではない。検査（I）の記録も無い。 |
+| VC-LRQ-EVA-23 | LRQ-EVA-23 | A（解析） | 根拠なし | （根拠なし）カフ区分 1〜4 の減圧症が出た飛行は無く、ヒットしたのは STS-97 p11 の「EV2 の EMU のカフチェックリストが破れた」という装備の損傷だけ（手首の帯にカフチェックリストが付くことの傍証だが、区分別の処置を確かめた記録ではない）。解析の結果も無い。 |
+| VC-LRQ-EVA-24 | LRQ-EVA-24 | A（解析） | 根拠なし | （根拠なし）計画外 EVA を MET 72 時間より前に行った承認や、帰還日に EVA を行わなかったことを解析で確かめた記録は無い。計画 EVA の開始が MET 3 日以降であることは分かるが、これは計画 EVA の制約（L2）の領域で、本要求の計画外 EVA の承認ではない。 |
+| VC-LRQ-EVA-25 | LRQ-EVA-25 | I（検査） | 根拠なし | （根拠なし）STS-76 p43 は共通の安全テザーと腰テザーが満足に働いたと記すが、これは飛行中の性能の記述で、飛行後の検査（I）の記録ではない。工具のテザー常時結合を確かめた記録は無く、STS-126 は SARJ の工具バッグ（crewlock bag）がテザーから外れて船外に失われた記録で、要求を満たさなかった側の記録である。 |
+| VC-LRQ-EVA-26 | LRQ-EVA-26 | I（検査） | 根拠なし | （根拠なし）EVA 付属品の収納場所（Volume H）やエアロック収納袋の取出しを検査した記録は Mission Report に無い。SCOM は設計の記述である。 |
 | VC-LRQ-EVA-27 | LRQ-EVA-27 | D（実証） | 根拠あり | STS-114 の EVA 2 では左舷 TSA の4個のラッチの1個が開かなかったが、PGT で EVA 用の手動オーバーライドボルトを緩めてラッチカバーを回し、扉を閉じてボルトを締め直した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=16） |
 | VC-LRQ-EVA-28 | LRQ-EVA-28 | T（試験） | 根拠あり | STS-114 の EVA 2 では乗員が PGT で手動オーバーライドボルトを緩めて左舷 TSA のラッチカバーを回した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=16） |
-| VC-LRQ-EVA-29 | LRQ-EVA-29 | A（解析） | 根拠なし | （根拠なし）MWS の使用と PLSS の衝撃の認定試験の記録は Mission Report に見つからなかった。 |
+| VC-LRQ-EVA-29 | LRQ-EVA-29 | A（解析） | 根拠なし | （根拠なし）MWS の使用や、MFR・PAD に過大な荷重をかけない範囲の確認、PLSS の 400 lb（直径 2 インチの球・2 ft/s）の衝撃の認定試験・解析を述べる記録は無い。認定の値は飛行規則の記述だけである。 |
 | VC-LRQ-GNC-01 | LRQ-GNC-01 | D（実証） | 根拠あり | STS-125 では打上げ時に ASA 1 の電源が失われ、チャネル1の全舵面がバイパスされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=9）同ミッションの再突入は、軌道離脱噴射から接地まで FCS 1 チャネルが無電源のまま正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=53） |
-| VC-LRQ-GNC-02 | LRQ-GNC-02 | T（試験） | 根拠なし | （根拠なし）STS-1〜4・54・59・114・122・125 の Mission Report を探したが、エレボンの主系統から待機系統への切替しきい値を実測した記述は無かった。 |
+| VC-LRQ-GNC-02 | LRQ-GNC-02 | T（試験） | 根拠なし | （根拠なし）STS-129 p47 は全エレボンのアクチュエータの切替弁の構成が飛行前に確認されたと記し、各報告は二次側の差圧が均等化のしきい値内だったと記すが、主系統圧が約 1,200〜1,500 psia に下がって第1・第2待機系統へ切り替わった記録、あるいはそのしきい値を測った記録は無い。 |
 | VC-LRQ-GNC-03 | LRQ-GNC-03 | D（実証） | 根拠あり | STS-125 の打上げで ASA 1 の電源喪失によりチャネル1の全舵面がバイパスされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
 | VC-LRQ-GNC-04 | LRQ-GNC-04 | T（試験） | 根拠あり | STS-114 の上昇中、SRB の推力方向制御器・MPS の推力方向制御器・舵面のアクチュエータは、通常のドライバ電流で指令どおりに位置決めされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
 | VC-LRQ-GNC-05 | LRQ-GNC-05 | D（実証） | 根拠あり | STS-1 の再突入では、マッハ5のロール反転を自動で始めて 2 秒後に RHC をデテントにして CSS に移し、残りを手動で飛ばした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=43） |
 | VC-LRQ-GNC-06 | LRQ-GNC-06 | T（試験） | 根拠あり | STS-114 の FCS の評価は、DDU と操縦装置の動作が正常で、RHC と THC が使われて正常なチャネルの追従を示したと記す。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
-| VC-LRQ-GNC-07 | LRQ-GNC-07 | D（実証） | 根拠なし | （根拠なし）STS-1〜4 と STS-114・122・125 の Mission Report を探したが、SBTC・RPTA・ボディフラップスイッチの手動操作を個別に評価した記述は見つからなかった。 |
+| VC-LRQ-GNC-07 | LRQ-GNC-07 | D（実証） | 根拠なし | （根拠なし）ボディフラップの手動操作（STS-35・46 の manual body flap maneuver は空力試験の PTI の一部）、スピードブレーキの手動循環（STS-2 p37）はあるが、要求の主な内容である SBTC の 2 機能・RPTA を滑空中は使わず接地後の前輪操向にだけ使うこと・ボディフラップスイッチの位置決めの目的を、個別に働かせて確かめた記録ではない。SBTC の語は検索 0 件。 |
 | VC-LRQ-GNC-08 | LRQ-GNC-08 | T（試験） | 根拠あり | STS-114 では4台のオービタ RGA の出力が互いに正常に追従し、SMRD の脱落は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
 | VC-LRQ-GNC-09 | LRQ-GNC-09 | T（試験） | 根拠あり | STS-2 の上昇・再突入の全データで、レートと加速度のチャネル間の差は故障検出のしきい値を十分に下回った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=41） |
 | VC-LRQ-GNC-10 | LRQ-GNC-10 | T（試験） | 根拠あり | STS-114 では OMS TVC の File IX の要求が満たされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=52） |
@@ -833,134 +833,134 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 | VC-LRQ-GNC-18 | LRQ-GNC-18 | D（実証） | 根拠あり | STS-122 の飛行では −Y が航法星を 705 回捕捉して 495 回逃し、−Z は 76 回捕捉して 23 回逃した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=56） |
 | VC-LRQ-GNC-19 | LRQ-GNC-19 | D（実証） | 根拠あり | STS-1 の恒星による整列の検証（FTO 173-07）は、IMU のトルク角が妥当で互いに無相関であり、整列の精度は期待より良いと示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=44） |
 | VC-LRQ-GNC-20 | LRQ-GNC-20 | D（実証） | 根拠あり | STS-2 の再突入では3台の TACAN がすべて方位と距離でロックした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=40）STS-135 では約 146,000 ft の高度で GPS ベクトルの取込みと同時に TACAN を取り込み、PASS と BFS の航法の残差が大きく減った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=46） |
-| VC-LRQ-GNC-21 | LRQ-GNC-21 | T（試験） | 根拠なし | （根拠なし）STS-122・STS-135 などの Mission Report は GPS の取込みの結果だけを記し、受信機の台数別の選択フィルタや 18 秒の打切りを確かめた記述は無い。 |
+| VC-LRQ-GNC-21 | LRQ-GNC-21 | T（試験） | 根拠なし | （根拠なし）各報告は GPS（単一系統 MAGR）の性能が正常だったと記すだけで、受信機が3台・2台・1台・0台のときの選択フィルタの動作や、有効データから 18 秒の打切りを確かめた記述は無い（飛行したのは受信機1台の構成）。 |
 | VC-LRQ-GNC-22 | LRQ-GNC-22 | T（試験） | 根拠あり | STS-114 ではプローブがマッハ約4.7で展開し、展開時間は仕様内（15秒未満）だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=52）STS-114 では ADTA の FCS 点検で16個の変換器の出力がすべて正常に応答した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=52） |
 | VC-LRQ-GNC-23 | LRQ-GNC-23 | D（実証） | 根拠あり | STS-2 では MSBLS が約 16,500 ft で初めてデータを得て満足に動作し、2台の電波高度計は約 5100 ft でロックした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=41） |
 | VC-LRQ-GNC-24 | LRQ-GNC-24 | A（解析） | 根拠あり | STS-2 では機上の RM のしきい値は 0.5° の限度の内側にあった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=40） |
-| VC-LRQ-GNC-25 | LRQ-GNC-25 | A（解析） | 根拠なし | （根拠なし）STS-1〜4・114・122・125 の Mission Report を探したが、RM のジレンマを宣言して地上レーダと比べた事例の記述は無かった。 |
+| VC-LRQ-GNC-25 | LRQ-GNC-25 | A（解析） | 根拠なし | （根拠なし）ADTA・RM の dilemma は「発生しなかった」という記述（STS-115〜120 など）と STS-28 の WOW の dilemma だけで、RM が宣言したジレンマの IMU・TACAN・ADTA・MLS の故障を地上レーダとの比較で特定した事例は無い。 |
 | VC-LRQ-GNC-26 | LRQ-GNC-26 | D（実証） | 根拠あり | STS-125 では ASA 1 の電源喪失でチャネル1が切られたまま、再突入は FCS 1 チャネルを使わずに正常に飛んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=53） |
-| VC-LRQ-GNC-27 | LRQ-GNC-27 | I（検査） | 根拠なし | （根拠なし）Mission Report 群（STS-1〜4・114・122・125）には、PASS の FDIR が最初の故障で終わることや乗員の選択フィルタ管理を確かめた記述が無かった。 |
-| VC-LRQ-MECH-01 | LRQ-MECH-01 | I（検査） | 根拠なし | （根拠なし）STS-1〜4・8・35・54・59・65・108 ほかの Mission Report にトルクリミッタの点検・作動の記述が無い。 |
-| VC-LRQ-MECH-02 | LRQ-MECH-02 | T（試験） | 根拠なし | （根拠なし）Mission Report にある MA73C の遮断器の記述（bq_va_sts102）は遮断器の再投入の異常で、MCA への給電の検証にならない。 |
-| VC-LRQ-MECH-03 | LRQ-MECH-03 | T（試験） | 根拠なし | （根拠なし）3経路それぞれの使用を分けて述べる Mission Report の記述が見つからない（sts1〜4・59・108 を探した）。 |
+| VC-LRQ-GNC-27 | LRQ-GNC-27 | I（検査） | 根拠なし | （根拠なし）FDIR の語は STS-112 p17（TRRJ のモータ）にしか無く、PASS の RGA・AA・舵面の FDIR が最初の故障で終わること、BFS の選択フィルタを乗員が管理することを検査した記録は無い。 |
+| VC-LRQ-MECH-01 | LRQ-MECH-01 | I（検査） | 根拠あり | STS-3 の飛行試験問題報告は、ペイロードベイドアの後部隔壁ラッチのアクチュエータ（PDU）の飛行後の試験・解析・検査で、トルクリミッタが適正な限界で滑ったと記す。ET 扉のセンタラインラッチ以外の電動アクチュエータがトルクリミッタを持つことを、実機の検査で確かめた記録の1つである。検査の記録は PLBD の後部隔壁ラッチのアクチュエータ1台で、全アクチュエータと ET 扉のセンタラインラッチの除外は確かめていない。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=112） |
+| VC-LRQ-MECH-02 | LRQ-MECH-02 | T（試験） | 根拠なし | （根拠なし）Rev. CB で Mission Report 133冊（STS-1〜135）などを探し直した。MA73C の遮断器から MCA への給電は、STS-107・STS-73・STS-64 の故障や遅延の記録を通して間接に分かるだけで、正常に給電されたことを直接記す報告が無い。 |
+| VC-LRQ-MECH-03 | LRQ-MECH-03 | T（試験） | 根拠なし | （根拠なし）STS-115 p83 は PLBD の開で手動モードを使い、STS-57 p8 は地上からのコマンドでベント扉 5 を駆動したが、GPC・DPS の項目入力・ハードワイヤのスイッチの3経路を分けて示す記述ではなく、3経路それぞれの使用を確かめた記録は無い。 |
 | VC-LRQ-MECH-04 | LRQ-MECH-04 | T（試験） | 根拠あり | STS-108 の軌道上でペイロードベイドアのモータは2モータ時間で扉を開いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=9）STS-108 の再突入でドアの閉とラッチの動作はすべて2モータ時間で終わり、エアデータプローブの展開も2モータの限度 14秒を満たすと推定された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=14） |
 | VC-LRQ-MECH-05 | LRQ-MECH-05 | D（実証） | 根拠あり | STS-54 でドラッグシュートは計画どおり展開し、展開から22.8秒後に投棄され、回収した全ハードウェアに異常は無かった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=21） |
 | VC-LRQ-MECH-06 | LRQ-MECH-06 | D（実証） | 根拠あり | STS-65 でドラッグシュートは主脚接地の約8秒後、前脚接地の10秒前に展開し、展開の24.6秒後に対地速度 52.9 kt で投棄された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-MECH-07 | LRQ-MECH-07 | D（実証） | 根拠あり | STS-35 の着陸・減速系は正常で、前脚接地の11.6秒後に制動を始め、4つの車輪のブレーキエネルギーがそれぞれ記録された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=18） |
-| VC-LRQ-MECH-08 | LRQ-MECH-08 | D（実証） | 根拠なし | （根拠なし）STS-1〜4・35・54・65・108 は前輪操向を使った記録が無いか（STS-2 は不使用）、DTO の完了の記述だけで、機長・操縦手の別の確認が無い。 |
-| VC-LRQ-MECH-09 | LRQ-MECH-09 | D（実証） | 根拠なし | （根拠なし）STS-2 の Mission Report に着陸時の火工品の制御器の記述（PIC armed）があるが前後が欠け、2段の順序の検証として読めない。 |
+| VC-LRQ-MECH-08 | LRQ-MECH-08 | D（実証） | 根拠なし | （根拠なし）前輪操向を使った記録（STS-28・30・34・40 の DTO 517 など）はあるが、機長と操縦手のどちらのペダルの指令に応じたかを分けて記した報告は無い（STS-67 p38 は機長が手動でノーズダウンしたと記す程度）。SCOM は機長側と操縦手側のラダーペダルが機械的につながると記すため、別々の確認記録は残りにくい。 |
+| VC-LRQ-MECH-09 | LRQ-MECH-09 | D（実証） | 根拠なし | （根拠なし）STS-2 p34 は着陸脚の PIC が armed だったと記す（前後が欠ける）が、ARM ボタンの後に DN ボタンで展開弁を開く 2 段の順序を確かめた記録ではない。STS-112 の PIC は地上の別の PIC（ET の火工品）の記述である。 |
 | VC-LRQ-MECH-10 | LRQ-MECH-10 | D（実証） | 根拠あり | STS-1 で前脚の展開補助のスラスタが、着陸の直前に前脚と扉の展開を助けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=74） |
-| VC-LRQ-MECH-11 | LRQ-MECH-11 | T（試験） | 根拠なし | （根拠なし）火工品によるアップロック解除を実際に使った飛行の記録は無く、Mission Report にあるのは前脚展開補助のスラスタ（別の機器）だけである。 |
-| VC-LRQ-MECH-12 | LRQ-MECH-12 | I（検査） | 根拠なし | （根拠なし）設計の制約で、飛行・試験の記録に当たる文が Mission Report に無い。 |
+| VC-LRQ-MECH-11 | LRQ-MECH-11 | T（試験） | 根拠なし | （根拠なし）「uplock hooks released」は通常の油圧による展開の記述（STS-47・46）で、油圧系1の圧力が無いときに指令の1秒後に火工品が自動でフックを外した記録ではない。この機能を飛行で使った事例は無く、地上の試験の報告も手元に無い。 |
+| VC-LRQ-MECH-12 | LRQ-MECH-12 | I（検査） | 根拠なし | （根拠なし）脚を飛行中に引き込めないことを確かめた検査・試験の記録は無い（設計の制約）。飛行中に脚の格納を試みた事例も無い。 |
 | VC-LRQ-MECH-13 | LRQ-MECH-13 | A（解析） | 根拠あり | STS-1 で前脚の接地速度はピッチ角速度から 5.7 ft/sec と計算され、設計要求の 11.0 ft/sec を下回り、主脚の接地条件も設計要求を十分に下回った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=64） |
-| VC-LRQ-MECH-14 | LRQ-MECH-14 | A（解析） | 根拠なし | （根拠なし）飛行規則（fr）の MMACS の Go/No-Go は規則の記述であり、飛行・試験の記録ではない。 |
+| VC-LRQ-MECH-14 | LRQ-MECH-14 | A（解析） | 根拠なし | （根拠なし）PLBD 駆動モータ2基・ラッチ駆動モータ2基を扱う基準の解析の結果を記した資料は無い。fr の根拠欄は規則の記述で、解析の結果の値を示していない。 |
 | VC-LRQ-MECH-15 | LRQ-MECH-15 | D（実証） | 根拠あり | STS-114 で右舷のドアの開の指示は2モータの最長の駆動時間の内に開位置へ移り、閉系統2の指示だけが約21秒長く点灯して異常（IFA）として扱われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=10）STS-59 の再突入前に、両方のペイロードベイドアとすべてのラッチが2モータ時間で閉じられた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=8） |
 | VC-LRQ-MECH-16 | LRQ-MECH-16 | D（実証） | 根拠あり | STS-2 でベント扉は軌道離脱の1時間前まで開いたままで、その時点で左の前部胴体と後部胴体・OMSポッドの扉を除いて閉じられた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=62） |
-| VC-LRQ-MECH-17 | LRQ-MECH-17 | A（解析） | 根拠なし | （根拠なし）項目入力による ET 扉の閉を実際に使った飛行の記録は無い（sts1〜4・8・59 の記述はいずれも通常の閉）。 |
-| VC-LRQ-MECH-18 | LRQ-MECH-18 | I（検査） | 根拠なし | （根拠なし）Mission Report にドアの区分や寸法の記述が無い。 |
-| VC-LRQ-MECH-19 | LRQ-MECH-19 | I（検査） | 根拠なし | （根拠なし）Mission Report にヒンジの点検・荷重の記述が無い。 |
+| VC-LRQ-MECH-17 | LRQ-MECH-17 | A（解析） | 根拠なし | （根拠なし）ET 扉の閉の項目入力を使った記録は無い。STS-118 p56 は扉の閉表示が出なかったが ready-to-latch 表示とアップロックラッチで通常どおり閉じたと記す。使用条件（手動の閉が不成功、AOA など）を解析した結果も無い。 |
+| VC-LRQ-MECH-18 | LRQ-MECH-18 | I（検査） | 根拠なし | （根拠なし）ドアの区分や長さを検査した記録は無い。検査に当たるのは製造の寸法検査で、手元の資料に無い。 |
+| VC-LRQ-MECH-19 | LRQ-MECH-19 | I（検査） | 根拠なし | （根拠なし）STS-1 p234 は飛行後の検査・試験でドア蝶番7・9が最高温度を超えなかったと記すが、蝶番の数（13）や固定5・浮動8の構成を確かめた記録ではない。STS-51 p35 は蝶番が損傷していなかったと記す（デブリの見分け）が、構成の記述ではない。 |
 | VC-LRQ-MECH-20 | LRQ-MECH-20 | T（試験） | 根拠あり | STS-1 のペイロードベイドアの開閉は2モータで確認され、運用は満足で異常は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=68）STS-108 の軌道上でドアは2モータ時間で開いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
 | VC-LRQ-MECH-21 | LRQ-MECH-21 | T（試験） | 根拠あり | STS-1 の飛行試験で、センタラインのラッチの開閉の駆動時間（2モータ）が組ごとに記録された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=69）STS-108 の再突入で、ドアの閉とラッチの動作はすべて2モータ時間で終わった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=14） |
-| VC-LRQ-MECH-22 | LRQ-MECH-22 | I（検査） | 根拠なし | （根拠なし）Mission Report にフックとローラの構成の記述が無い。 |
-| VC-LRQ-MECH-23 | LRQ-MECH-23 | I（検査） | 根拠なし | （根拠なし）STS-104 のベント扉8・9は閉の表示の異常の記述で、シールの検証ではない。ほかに構成を述べる記述が無い。 |
-| VC-LRQ-MECH-24 | LRQ-MECH-24 | T（試験） | 根拠なし | （根拠なし）STS-2 のパージ流量の記述（打上げ前・着陸後）はあるが、中間位置の使用は述べていない。 |
+| VC-LRQ-MECH-22 | LRQ-MECH-22 | I（検査） | 根拠なし | （根拠なし）センタラインのフックとローラの構成の記述は 0 件。検査の記録も無い。 |
+| VC-LRQ-MECH-23 | LRQ-MECH-23 | I（検査） | 根拠なし | （根拠なし）ベント扉の圧力シール・熱シールや専用アクチュエータの構成を検査した記録は無い。STS-73・106 のベント扉 8/9 は電力や位置表示の異常の記述で、構成の検査ではない。 |
+| VC-LRQ-MECH-24 | LRQ-MECH-24 | T（試験） | 根拠あり | STS-4 の報告は、着陸後に乗員がベント扉を着陸後のパージ位置の構成に指令し、着陸後のパージが接地の34分後に始まったと記し、STS-106 の報告は、右舷側のベント扉が着陸後にパージ位置に置かれたと記す。ベント扉がパージのための中間位置を持ち、飛行で指令して使われたことを示す記録である。要求のうち、パージ位置を持つ扉の範囲（一部の扉）は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=47）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-106%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
 | VC-LRQ-MECH-25 | LRQ-MECH-25 | D（実証） | 根拠あり | STS-2 でベント扉は T-37.6 秒に全開の指令を受け、T-10.17 秒までに全開となり、計画の T-4 秒の判定より十分に早かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=62） |
 | VC-LRQ-MECH-26 | LRQ-MECH-26 | T（試験） | 根拠あり | STS-2 でET扉の各機構の動作時間の合計は 31.81 秒で、2モータ運転の仕様時間 36 秒を満たし、ET扉は正常に動いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=63）STS-1 でET扉の閉に必要な機能は、設計上の許容時間の内に動作した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=68） |
 | VC-LRQ-MECH-27 | LRQ-MECH-27 | D（実証） | 根拠あり | STS-2 でET扉の閉は、センタラインラッチの収納の指令で始まり、その44秒後に完了した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=63） |
-| VC-LRQ-MPS-01 | LRQ-MPS-01 | T（試験） | 根拠なし | （根拠なし）STS-1〜4・65・108・114・122・125・135 の Mission Report を探したが、制御器の更新周期やDCU A/B の制御権を直接確かめた記録は無い（性能が正常だったという記述のみ）。 |
-| VC-LRQ-MPS-02 | LRQ-MPS-02 | A（解析） | 根拠なし | （根拠なし）Mission Report と SODB に、制御器の交流電圧低下の試験・飛行実績は載っていない。 |
+| VC-LRQ-MPS-01 | LRQ-MPS-01 | T（試験） | 根拠なし | （根拠なし）STS-99 の報告は MECO 後に SSME 1 の DCU チャネル B の故障識別（FID）が出たと記すが、原因は制御器への2つの電源スイッチを同時に切らなかったことで、A 制御・B 待機の権限や 20 ミリ秒の更新周期を測った記録ではない。性能が正常だったという記述だけで、周期や制御権の記録は見つからなかった。 |
+| VC-LRQ-MPS-02 | LRQ-MPS-02 | A（解析） | 根拠なし | （根拠なし）制御器の交流電圧低下（100 Vrms を 500 ms 超下回る）での切替・停止の解析や試験の結果は、Mission Report にも fr の根拠の欄にも見つからなかった。STS-124 の制御器電源の温度計測の異常は電圧低下の検証ではない。 |
 | VC-LRQ-MPS-03 | LRQ-MPS-03 | D（実証） | 根拠あり | STS-125 では始動準備からダンプまで全エンジンで車両データテーブルに故障識別子（FID）が報告されなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-MPS-04 | LRQ-MPS-04 | A（解析） | 根拠あり | STS-108 では点火確認の限界とメインステージのレッドラインの余裕がともに満足で、始動・停止の過渡の要求がすべて満たされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
 | VC-LRQ-MPS-05 | LRQ-MPS-05 | D（実証） | 根拠あり | STS-135 ではLO2・LH2の充填排出弁がすべて正常に動作し、LH2の予加圧の回数は7回でLCCの基準（14回以上で違反）内だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=35） |
-| VC-LRQ-MPS-06 | LRQ-MPS-06 | T（試験） | 根拠なし | （根拠なし）STS-1〜4・35・54・65・125・135 の Mission Report を探したが、LH2バックアップダンプ弁の開閉時刻を示す記録は無い。 |
+| VC-LRQ-MPS-06 | LRQ-MPS-06 | T（試験） | 根拠なし | （根拠なし）STS-2 の報告は MECO の10秒後から RTLS 弁で水素マニホールドを30秒だけ排出する手順を試し、逃がし弁は最後の10〜15秒しか作動しなかったと記すが、要求の2分間とは異なる初期の手順で、バックアップダンプ弁を2分開けた記録ではない。STS-104 の報告は MECO 後に LH2 マニホールド圧が 43 psia まで上がってから RTLS ダンプ弁が開いたと記すが、MECO+10秒・2分間という時刻や時間の記録ではない。 |
 | VC-LRQ-MPS-07 | LRQ-MPS-07 | D（実証） | 根拠あり | STS-125 ではダンプの運用データが正常で、全エンジンについて始動準備からダンプまで故障識別子が出なかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-MPS-08 | LRQ-MPS-08 | D（実証） | 根拠あり | STS-65 では真空不活性化の後にLH2マニホールド圧が最大17 psiaまで上がり、ダンプと真空不活性化の間の5分の待ちでは固体水素を昇華させるのに足りなかったと評価された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=28） |
-| VC-LRQ-MPS-09 | LRQ-MPS-09 | A（解析） | 根拠なし | （根拠なし）RTLS アボートは飛行していないため記録が無く、再突入のマニホールド加圧弁の開時刻を示す記録も Mission Report に見つからなかった。 |
+| VC-LRQ-MPS-09 | LRQ-MPS-09 | A（解析） | 根拠なし | （根拠なし）RTLS アボートは飛行しておらず、MM 602 のダンプの記録は無い。再突入のマニホールド加圧は STS-74 などが『満足に行われた（ヘリウム 59.3 lbm）』と記すが、VREL 5,300 fps で弁が開いた時刻の記録ではなく、また本要求の解析（A）の結果でもない。 |
 | VC-LRQ-MPS-10 | LRQ-MPS-10 | T（試験） | 根拠あり | STS-1 ではMPSの加圧系とヘリウム系が推進薬の充填中に満足に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=9） |
 | VC-LRQ-MPS-11 | LRQ-MPS-11 | D（実証） | 根拠あり | STS-1 ではエンジン2系統の過大な漏れのため、再突入の構成を変え、エンジン2系統の調圧器を含む冗長な経路を使わず空圧系統の調圧器だけでヘリウムを流した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=14） |
 | VC-LRQ-MPS-12 | LRQ-MPS-12 | D（実証） | 根拠あり | STS-65 の再突入では、SSME 1・2・3のヘリウム供給A脚とB脚の遮断弁と空圧系統の遮断弁を開く構成が使われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=28） |
 | VC-LRQ-MPS-13 | LRQ-MPS-13 | D（実証） | 根拠あり | STS-108 の再突入のヘリウム使用量は61.7 lbmで、許容の要求内だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=24）STS-65 の650秒の再突入パージのヘリウム使用量は59.37 lbmで、OV-102の要求（55.7±1.1 lb）を上回り飛行中問題 STS-65-V-09 として記録された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-65%20Space%20Shuttle%20Mission%20Report.pdf#page=28） |
-| VC-LRQ-MPS-14 | LRQ-MPS-14 | D（実証） | 根拠なし | （根拠なし）実際のSSME停止を伴う飛行は STS-51-F（Challenger）のみで、手元の Mission Report にはその記録が無く、リミット操作の実績を示す一次資料を取り込んでいない。 |
-| VC-LRQ-MPS-15 | LRQ-MPS-15 | D（実証） | 根拠なし | （根拠なし）油圧・電気的ロックアップやデータ経路故障が実際に起きた飛行は手元の Mission Report に無く、検証の記録が見つからない。 |
-| VC-LRQ-MPS-16 | LRQ-MPS-16 | D（実証） | 根拠なし | （根拠なし）AC BUS SNSR スイッチの操作を要した飛行は手元の Mission Report に記録が無い。 |
-| VC-LRQ-MPS-17 | LRQ-MPS-17 | D（実証） | 根拠なし | （根拠なし）ヘリウム漏れのためエンジンの隔離や相互接続を行った飛行の記録は手元の Mission Report に無い（STS-1 の漏れは再突入の構成変更のみ）。 |
+| VC-LRQ-MPS-14 | LRQ-MPS-14 | D（実証） | 根拠なし | （根拠なし）STS-51-F の報告は SSME 1 の高圧ターボポンプ温度センサがレッドラインを超えて早期停止したあと、SSME 3 の1個のセンサが高温を示したため残る2基の自動停止を『抑止した』と記す。これはリミット停止の抑止を実際に使った記録だが、センサ故障の疑いでの例外処置であり、要求の『1基停止でスイッチを ENABLE、AUTO の順に操作して再び有効にする』手順や、2基停止でMECOまで抑止したままにする手順を確かめた記録ではない。 |
+| VC-LRQ-MPS-15 | LRQ-MPS-15 | D（実証） | 根拠なし | （根拠なし）油圧・電気的ロックアップで最低出力より上に固着したエンジンの手動停止や、データ経路故障の背後での停止押しボタンの操作を記した Mission Report は見つからなかった。lockup の語は OMS の調圧器や APU の記述ばかりで、SSME のロックアップではない。 |
+| VC-LRQ-MPS-16 | LRQ-MPS-16 | D（実証） | 根拠なし | （根拠なし）AC BUS SNSR スイッチを OFF にした記録は Mission Report に無い（語の検索で 0 件）。STS-51-F の SSME 停止はセンサの故障によるが、このスイッチの操作の記述は無い。 |
+| VC-LRQ-MPS-17 | LRQ-MPS-17 | D（実証） | 根拠なし | （根拠なし）STS-126 は MPS の空圧ヘリウムの圧力低下が上昇中に約 140 psi（通常は約 20 psi）と記すが、エンジン系統ではなく空圧系統の漏れで、隔離手順も相互接続も行わず通常の再突入の構成とした記録であり、本要求の隔離・相互接続の処置を確かめた記録ではない。エンジン系統のヘリウム漏れで隔離や相互接続を行った飛行は見つからなかった。 |
 | VC-LRQ-MPS-18 | LRQ-MPS-18 | A（解析） | 根拠あり | STS-135 では加圧の性能が正常で流量制御弁が適切に働き、エンジン入口のNPSPの要求が飛行中ずっと満たされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=35） |
-| VC-LRQ-MPS-19 | LRQ-MPS-19 | I（検査） | 根拠なし | （根拠なし）弁の型式を検査・試験した記録は手元の Mission Report には無く、IOA の FMEA 票は抽出テキストが語ごとに改行されていて照合語を確かめられない。 |
+| VC-LRQ-MPS-19 | LRQ-MPS-19 | I（検査） | 根拠なし | （根拠なし）弁の型式（空圧・電気、タイプ1）やプリバルブのスイッチを飛行後に検査した記録は Mission Report に無い。プリバルブの動作を記す報告（STS-126 の LH2 プリバルブ閉の表示喪失など）はあるが、型式の検査ではない。 |
 | VC-LRQ-MPS-20 | LRQ-MPS-20 | A（解析） | 根拠あり | STS-125 では3個のGH2流量制御弁がそれぞれ18・24・29回作動して正常で、GO2の固定オリフィス加圧系は予測どおりだった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=38） |
 | VC-LRQ-MPS-21 | LRQ-MPS-21 | T（試験） | 根拠あり | STS-125 ではGO2の固定オリフィス加圧系が予測どおりに働き、エンジンとMPSのパラメータから再構成したアレージ圧がETのアレージ圧の計測とよく一致した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=38） |
 | VC-LRQ-MPS-22 | LRQ-MPS-22 | T（試験） | 根拠あり | STS-122 では最初の2回の打上げ試行でLH2のECOセンサ回路が充填中に湿の状態で故障し、LH2の低液位停止の保護を確保するため4個すべての機能するECOセンサを打上げの条件とした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
 | VC-LRQ-MPS-23 | LRQ-MPS-23 | T（試験） | 根拠あり | STS-125 では最大動圧の絞りを72%の1段で行い、比推力は104.5%の出力で452.01秒だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-MPS-24 | LRQ-MPS-24 | T（試験） | 根拠あり | STS-125 では高圧酸化剤ターボポンプと高圧燃料ターボポンプの温度が運転を通じて仕様内だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-MPS-25 | LRQ-MPS-25 | T（試験） | 根拠あり | STS-108 では始動と停止の過渡の要求がすべて満たされ、エンジンの始動・メインステージ・停止の性能が予測どおりだった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
-| VC-LRQ-MPS-26 | LRQ-MPS-26 | T（試験） | 根拠なし | （根拠なし）中間シールパージ圧の低下による停止は飛行していないため、Mission Report に記録が無い。 |
-| VC-LRQ-MPS-27 | LRQ-MPS-27 | I（検査） | 根拠なし | （根拠なし）系統割当を直接示す飛行記録は Mission Report に無く、設計図書の検査記録は公開資料にない。 |
+| VC-LRQ-MPS-26 | LRQ-MPS-26 | T（試験） | 根拠なし | （根拠なし）STS-124・STS-64・STS-65 などの報告は HPOTP 中間シールのパージ圧の推移が正常範囲内だったと記すが、運転限界（159 psia）を下回って制御器が自動停止した記録や、その限界での停止を試験した記録は無い。パージ圧の正常な推移は停止機能を確かめた記録ではない。 |
+| VC-LRQ-MPS-27 | LRQ-MPS-27 | I（検査） | 根拠なし | （根拠なし）各エンジンの油圧系統割当（中央1・左2・右3、アクチュエータの主/副）を検査した記録は無い。STS-106 は APU 3 の TVC 遮断弁3を開いて右 SSME を再配置したと記すが、運転の記録で、割当の検査ではない。 |
 | VC-LRQ-MPS-28 | LRQ-MPS-28 | T（試験） | 根拠あり | STS-2 では上昇中にMPSがすべての絞りと首振りの指令に応答した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=7） |
-| VC-LRQ-MPS-29 | LRQ-MPS-29 | A（解析） | 根拠なし | （根拠なし）油圧ロックアップが起きた飛行は手元の Mission Report に無い。 |
-| VC-LRQ-MPS-30 | LRQ-MPS-30 | D（実証） | 根拠なし | （根拠なし）Mission Report にはエンジン格納位置への首振りの時刻や遮断弁の操作を示す記述が見つからなかった。 |
-| VC-LRQ-OMS-01 | LRQ-OMS-01 | A（解析） | 根拠なし | （根拠なし）STS-1・2・3・114・122・125・135 の Mission Report の噴射表を見たが、最短噴射や噴射間の休止を要求値と照らした記述は無く、噴射時間が最短2秒に近い例も見つからなかった。 |
+| VC-LRQ-MPS-29 | LRQ-MPS-29 | A（解析） | 根拠なし | （根拠なし）5個のエンジン弁を油圧的に隔離する油圧ロックアップが働いた記録や、その解析の結果は見つからなかった。STS-76 は上昇後に油圧系をエンジンから隔離したため主酸化剤弁が開かずダンプができなかったと記すが、制御器の想定外位置の検知による油圧ロックアップではない。 |
+| VC-LRQ-MPS-30 | LRQ-MPS-30 | D（実証） | 根拠あり | STS-1 の報告は、MPS ダンプのあと主エンジンをダンプ位置から再突入の格納位置へ首振りさせたことを記す（CBD001）。STS-107 の報告は、SSME を格納するために TVC 遮断弁を開いて油圧を与え、格納の間の APU の性能が正常だったことを記す（CBD002）。軌道上は TVC 遮断弁を閉じておき、ダンプ後の格納のときに開くという要求の流れが、飛行で実際に働いたことを示す。要求のうち、軌道上のスイッチ CLOSE と、軌道離脱準備での ATVC の再通電は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=39）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-107%20Space%20Shuttle%20Mission%20Report.pdf#page=23） |
+| VC-LRQ-OMS-01 | LRQ-OMS-01 | A（解析） | 根拠なし | （根拠なし）SODB は最低高度 70,000 ft と最小休止時間を制約として示すだけで、解析の結果ではない。Mission Report の噴射表は点火・噴射時間・速度変化を示すが、最短2秒や休止 240 秒を要求値と照らした記述は無い。 |
 | VC-LRQ-OMS-02 | LRQ-OMS-02 | T（試験） | 根拠あり | STS-1 のOMS-1で右ポッドの酸化剤入口圧が6.5 psi下がり、燃焼室圧と燃料噴射器温度もそれに対応して下がった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=15） |
-| VC-LRQ-OMS-03 | LRQ-OMS-03 | T（試験） | 根拠なし | （根拠なし）Mission Report にはGN2の調圧やアキュムレータの飛行中の測定値を載せた記述が見つからなかった。IOA の FMEA 票（OMS-322・330）は抽出テキストが語ごとに改行されていて照合語を確かめられない。 |
-| VC-LRQ-OMS-04 | LRQ-OMS-04 | A（解析） | 根拠なし | （根拠なし）エンジン故障を冗長管理で検知した飛行は手元の Mission Report に無い。 |
-| VC-LRQ-OMS-05 | LRQ-OMS-05 | D（実証） | 根拠なし | （根拠なし）Mission Report に、圧力弁A・Bの開閉順序や2秒の間隔を確かめた記録は見つからなかった。 |
-| VC-LRQ-OMS-06 | LRQ-OMS-06 | T（試験） | 根拠なし | （根拠なし）二次調圧器や逃がし弁が作動した飛行は手元の Mission Report に無い。 |
+| VC-LRQ-OMS-03 | LRQ-OMS-03 | T（試験） | 根拠なし | （根拠なし）STS-101 は左 OMS の GN2 調圧器の圧力が起動・パージ中に 295〜297 psia まで下がって FDA 限界 299 psia を下回り、その後 312 psia に戻ったと記す。要求の作動圧 315〜360 psig と単位（psia と psig）も範囲も合わず、調圧とアキュムレータ（19 立方インチ）の働きを確かめた記録とは認められない。 |
+| VC-LRQ-OMS-04 | LRQ-OMS-04 | A（解析） | 根拠なし | （根拠なし）fr A6-3C の根拠の欄は 260°F の限界の選び方と計測誤差 8 psi を説明するが、PASS/BFS の比較方式まで含めた解析の結果は示さない。冗長管理で OMS エンジンの故障を検知した飛行は Mission Report に見つからなかった。 |
+| VC-LRQ-OMS-05 | LRQ-OMS-05 | D（実証） | 根拠なし | （根拠なし）STS-26 は OMS の噴射を少なくとも1個のヘリウム隔離弁を手動位置にして行ったと記すが、圧力弁 A・B の開閉順序や2秒の間隔を確かめた記録ではない。 |
+| VC-LRQ-OMS-06 | LRQ-OMS-06 | T（試験） | 根拠なし | （根拠なし）STS-80 は左 OMS ポッドの A 脚の再加圧で一次調圧器がロックアップして約 255 psia になったと記すが、一次調圧器の範囲（266 psia 未満）の話で、二次調圧器（259〜269 psig）・逃がし弁・破裂板が作動した記録ではない。 |
 | VC-LRQ-OMS-07 | LRQ-OMS-07 | T（試験） | 根拠あり | STS-1 のOMS-1では、離昇時のアレージ圧が高かったため、調圧器が閉鎖圧を超えている間の最初の25秒がタンクのブローダウンモードで行われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=15） |
-| VC-LRQ-OMS-08 | LRQ-OMS-08 | I（検査） | 根拠なし | （根拠なし）蒸気隔離弁と逆止弁組立は IOA の FMEA 票（OMS-119・121・127）で評価されているが、抽出テキストが語ごとに改行されていて照合語を確かめられず、飛行の記録も見つからなかった。 |
+| VC-LRQ-OMS-08 | LRQ-OMS-08 | I（検査） | 根拠なし | （根拠なし）STS-26 は蒸気隔離弁が指令で開き、噴射中のタンク圧が予想どおりだったと記すが、これは運転の記録で、弁の構成（酸化剤側のみ・逆止弁4個直並列・フィルタ）を飛行後に検査した記録ではない。検査（I）の記録は見つからなかった。 |
 | VC-LRQ-OMS-09 | LRQ-OMS-09 | D（実証） | 根拠あり | STS-125 では速度変化が7.3 ft/sと9.4 ft/sの小さな噴射を右エンジンまたは左エンジンの1基で行い、大きな速度変化の噴射（OMS-4）を2基で行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=43） |
-| VC-LRQ-OMS-10 | LRQ-OMS-10 | D（実証） | 根拠なし | （根拠なし）Mission Report の噴射表は点火時刻・噴射時間・速度変化を示すが、EXEC操作やMMの制約を確かめた記述は無い。 |
-| VC-LRQ-OMS-11 | LRQ-OMS-11 | D（実証） | 根拠なし | （根拠なし）Mission Report にはヘリウム・N2タンク圧の噴射前の確認値を載せた記述が見つからなかった。 |
-| VC-LRQ-OMS-12 | LRQ-OMS-12 | D（実証） | 根拠なし | （根拠なし）噴射中のダウンリストの速度や故障フラグへの対応を確かめた記録は手元の Mission Report に無い。 |
-| VC-LRQ-OMS-13 | LRQ-OMS-13 | D（実証） | 根拠なし | （根拠なし）沈降噴射を要したOMS再始動の記録は手元の Mission Report に無い。 |
+| VC-LRQ-OMS-10 | LRQ-OMS-10 | D（実証） | 根拠なし | （根拠なし）Mission Report の噴射表は点火時刻・噴射時間・速度変化を示すが、MM の制約や EXEC キー操作（点火15秒前）を記した記述は見つからなかった。 |
+| VC-LRQ-OMS-11 | LRQ-OMS-11 | D（実証） | 根拠なし | （根拠なし）STS-32・STS-61 はヘリウムタンク圧の計測の不具合を記すが、噴射前に 1,500 psia・564 psia を超えることを確かめた記録ではない。噴射前の確認値を記した報告は見つからなかった。 |
+| VC-LRQ-OMS-12 | LRQ-OMS-12 | D（実証） | 根拠なし | （根拠なし）44.8 kbps は fr A6-103 の規則とその根拠の記述で、OMS 噴射中にこれを使った飛行の記録は見つからなかった（44.8 は噴射時間などの数値としてしか現れない）。噴射シーケンスの停止指令も記録が無い。 |
+| VC-LRQ-OMS-13 | LRQ-OMS-13 | D（実証） | 根拠なし | （根拠なし）沈降噴射（RCS +X 15秒）は fr A6-102 の規則の記述で、これを OMS 再始動の前に行った飛行の記録は見つからなかった（settling burn は MPS の沈降噴射や計量計の記述にしか現れない）。 |
 | VC-LRQ-OMS-14 | LRQ-OMS-14 | I（検査） | 根拠あり | STS-122 のOMS搭載量は左ポッドが酸化剤7,051 lbm・燃料4,265 lbm、右ポッドが酸化剤7,050 lbm・燃料4,260 lbmで、トータライザの読みは期待値とよく一致した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=45） |
 | VC-LRQ-OMS-15 | LRQ-OMS-15 | T（試験） | 根拠あり | STS-114 では電源の再投入後にトータライザの出力が無作為な値となり、OMSアシストの14秒後にプローブから正しい値に更新された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=41）STS-1 ではOMSの推進薬量の計測が設計の要求どおりに働かず、OMS-1の始めの15秒間の計測の停止期間の後も燃料量の指示が不規則だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=15） |
-| VC-LRQ-OMS-16 | LRQ-OMS-16 | D（実証） | 根拠なし | （根拠なし）タンク隔離弁の動作を確かめた記録は手元の Mission Report に無い（STS-2・3 のクロスフィード弁のトークバック不具合はタンク隔離弁ではない）。 |
+| VC-LRQ-OMS-16 | LRQ-OMS-16 | D（実証） | 根拠なし | （根拠なし）STS-41D の報告は右 OMS の燃料タンク隔離弁の開表示などでマイクロスイッチの異常が5件あったと記すが、これは表示の不具合で、弁の動作・電力遮断・トークバックの3位置が正しく働いた記録ではない。STS-36 の記録は RCS のタンク隔離弁であり OMS ではない。 |
 | VC-LRQ-OMS-17 | LRQ-OMS-17 | T（試験） | 根拠あり | STS-122 ではクロスフィード配管のゾーン3（左内側）のヒータ温度が軌道上で約10時間ほぼ一定だった後、残りの期間は通常どおりに作動を繰り返した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
-| VC-LRQ-OMS-18 | LRQ-OMS-18 | D（実証） | 根拠なし | （根拠なし）ヒータのスイッチ構成を示す記述は Mission Report に見つからなかった。 |
-| VC-LRQ-OMS-19 | LRQ-OMS-19 | D（実証） | 根拠なし | （根拠なし）MAL 11.3 のヒータ切替えを実施した飛行の記録は手元の Mission Report に無い。 |
+| VC-LRQ-OMS-18 | LRQ-OMS-18 | D（実証） | 根拠なし | （根拠なし）STS-105 は OMS クロスフィード配管のヒータを系統 B から系統 A へ切り替えたと記し、軌道上で片系のみを入れる運用に近いが、上昇中のポッドヒータ全断、突入のための着席時からのポッドヒータ断、配管ヒータ A・B 両方の投入という主な内容の記録は見つからなかった。 |
+| VC-LRQ-OMS-19 | LRQ-OMS-19 | D（実証） | 根拠あり | STS-100 の報告は、左 OMS ポッドのヒータを系統 A から系統 B へ切り替えて、戻したときに温度が前の値に戻ったことを記し（CBD003）、ポッドの A・B を同時には使わず片方ずつ切り替えて使うことを示す。STS-105 の報告は、クロスフィード配管の温度低下のときに乗員がヒータを系統 B から系統 A へ切り替え、切替え後の動作が正常だったことを記し（CBD004）、ヒータの回路を切り替えて処置する手順が飛行で働いたことを示す。要求のうち、MAL 11.3・SPEC 89・A14 の手順名と、配管ヒータ A・B の同時投入は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-100%20Space%20Shuttle%20Mission%20Report.pdf#page=36）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-105%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
 | VC-LRQ-OMS-20 | LRQ-OMS-20 | D（実証） | 根拠あり | STS-114 では左上部Yウェブの構造温度センサが不規則な指示を出して直接の確認ができなくなったが、隣の外側のセンサから通常のヒータの作動を確認できた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=10） |
-| VC-LRQ-OMS-21 | LRQ-OMS-21 | A（解析） | 根拠なし | （根拠なし）STS-1〜3・114・122・125 の Mission Report に、ジンバルの指向方向を重心と照らした記述は無い。 |
+| VC-LRQ-OMS-21 | LRQ-OMS-21 | A（解析） | 根拠なし | （根拠なし）OMS エンジンの推力を重心に向けるジンバル指向や、1基噴射時の RCS ロール制御を解析した結果、または飛行で確かめた記録は見つからなかった。 |
 | VC-LRQ-OMS-22 | LRQ-OMS-22 | D（実証） | 根拠あり | STS-1 では右OMSのピッチ・ジンバルの一次駆動系の故障フラグが出たが、二次（待機）系のジンバル試験は満足に終わった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=44）STS-1 のOMS-3（右エンジンのみ）は一次系で問題なく終わった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=45） |
 | VC-LRQ-OMS-23 | LRQ-OMS-23 | T（試験） | 根拠あり | STS-1 では右OMSのピッチ・ジンバルの故障フラグが出て、これは一次駆動系の故障と判断された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=44） |
-| VC-LRQ-OMS-24 | LRQ-OMS-24 | A（解析） | 根拠なし | （根拠なし）上昇中にOMSのTVCの動きを検知した飛行は手元の Mission Report に無い。 |
+| VC-LRQ-OMS-24 | LRQ-OMS-24 | A（解析） | 根拠なし | （根拠なし）fr A6-101 の根拠の欄は、損傷したベルを使う危険と中止ダンプなしの影響を述べるが、解析の結果の値は示さず、参照する System Brief は取り込んでいない。上昇中に OMS の TVC の動きを検知した飛行の記録も見つからなかった。 |
 | VC-LRQ-OMS-25 | LRQ-OMS-25 | D（実証） | 根拠あり | STS-2 ではOMS－RCSインタコネクトが左右のポッドから1回ずつ使われたが、左OMSのB脚のクロスフィード弁の閉位置表示が故障して弁のモータに電力が加わり続けた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=17） |
-| VC-LRQ-OMS-26 | LRQ-OMS-26 | A（解析） | 根拠なし | （根拠なし）クロスフィード配管の圧力による故障判定を行った飛行は手元の Mission Report に無い。 |
-| VC-LRQ-OMS-27 | LRQ-OMS-27 | A（解析） | 根拠なし | （根拠なし）上昇アボートでインタコネクトを組んだ飛行は無く、SODB の制約を飛行で確かめた記録も見つからなかった。 |
+| VC-LRQ-OMS-26 | LRQ-OMS-26 | A（解析） | 根拠あり | 運用飛行規則 A6-61 の根拠の欄は、クロスフィード配管の圧力変換器には大きな計測誤差（34 psia）があるため、接続時には RCS マニホールドの圧力を圧力の確認に使うと述べ、解析により 10 個のマニホールドの圧力で配管の圧力を許容範囲まで戻せることを示したと記す（CBD005）。軌道上で RCS マニホールドの圧力により配管の状態を確かめてから加圧するという、要求の主な内容の解析の根拠である。故障判定の値（酸化剤 49 psia・燃料 35 psia）は同じ頁の規則の表で、解析の結果としては示されない。解析の本体は取り込んでいない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1199） |
+| VC-LRQ-OMS-27 | LRQ-OMS-27 | A（解析） | 根拠なし | （根拠なし）SODB は上昇アボート・OMS 噴射中・軌道上に限るという制約を述べるだけで、解析の結果ではない。上昇アボートでインタコネクトを組んだ飛行は無い。 |
 | VC-LRQ-OMS-28 | LRQ-OMS-28 | D（実証） | 根拠あり | STS-3 ではOMS－RCSインタコネクトが計9回使われ、RCSへ供給した推進薬は左ポッドから1188 lbm、右ポッドから1117 lbmと計算された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=12） |
-| VC-LRQ-OMS-29 | LRQ-OMS-29 | D（実証） | 根拠なし | （根拠なし）混合クロスフィードを実施した飛行は手元の Mission Report に無い。 |
+| VC-LRQ-OMS-29 | LRQ-OMS-29 | D（実証） | 根拠なし | （根拠なし）クロスフィードの記述は配管ヒータ・圧力・RCS インタコネクトの運用ばかりで、推進薬が故障したときの混合クロスフィード（OMS SSR-1 のメモリ書込み）を行った飛行の記録は見つからなかった。 |
 | VC-LRQ-PLS-01 | LRQ-PLS-01 | T（試験） | 根拠あり | STS-3 の冷却試験では、RMS のヒータが温度を規定の運用範囲に保てたが、デューティ比は予測の 20% でなく約 50% だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87） |
 | VC-LRQ-PLS-02 | LRQ-PLS-02 | D（実証） | 根拠あり | STS-125 では軌道上初期化で左右の MPM を展開して RMS の肩ブレースを解除し、約 43 分で RMS の点検を終えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=65） |
-| VC-LRQ-PLS-03 | LRQ-PLS-03 | I（検査） | 根拠なし | （根拠なし）STS-2・3・4 と STS-114・122・125・135 の Mission Report を探したが、アームの重量やブームの剛性を実測した記述は無かった（設計の記述だけ）。 |
+| VC-LRQ-PLS-03 | LRQ-PLS-03 | I（検査） | 根拠なし | （根拠なし）アームの質量（905 lb）・系全体（994 lb）・ブームの剛性を、実測や飛行後の検査で確かめた記録は Mission Report に無い。 |
 | VC-LRQ-PLS-04 | LRQ-PLS-04 | D（実証） | 根拠あり | STS-122 では SRMS の OBSS 検査の性能が全体を通して正常で、終了後は SRMS をブレーキを入れた状態で pre-cradle 位置に駐機した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
 | VC-LRQ-PLS-05 | LRQ-PLS-05 | T（試験） | 根拠あり | STS-3 の FTO 352-02 は手動・自動の両モードで把持と固定を行い、手首ロール誤差 9°（限界 10°）の把持と固定に成功した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87） |
-| VC-LRQ-PLS-06 | LRQ-PLS-06 | T（試験） | 根拠なし | （根拠なし）STS-2〜4 と STS-114・122・125・135 の Mission Report を探したが、飛行中に safing が作動した記録や、通信喪失での試験の記述は無かった。 |
+| VC-LRQ-PLS-06 | LRQ-PLS-06 | T（試験） | 根拠なし | （根拠なし）MCIU は STS-100 のプリンタ通信（TCS）の不具合でしか現れず、SAFING スイッチ AUTO での safing の作動や、SM GPC との通信喪失で safing を始めたことを確かめた記録は見つからなかった。 |
 | VC-LRQ-PLS-07 | LRQ-PLS-07 | D（実証） | 根拠あり | STS-3 の FTO 352-02 は、手動と自動の両モードでの把持・固定を行い完了した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87） |
 | VC-LRQ-PLS-08 | LRQ-PLS-08 | D（実証） | 根拠あり | STS-122 では SRMS が OBSS を取り出して機体の表面検査を行い、SRMS と OBSS の性能は検査の全体を通して正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
 | VC-LRQ-PLS-09 | LRQ-PLS-09 | T（試験） | 根拠あり | STS-3 の FTO 355-02 では、肘ピッチ関節が機械的ストップの 1.2° 手前（粗い速度）で止まり、肩ヨー関節も 2.43° 手前（微速）で止まった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=88） |
-| VC-LRQ-PLS-10 | LRQ-PLS-10 | I（検査） | 根拠なし | （根拠なし）Mission Report には RMS の警告灯の個々の作動や点灯の検査の記述が見つからなかった（STS-3 にエンコーダ点検の誤警報の記録はあるが、灯の機能の検証ではない）。 |
+| VC-LRQ-PLS-10 | LRQ-PLS-10 | I（検査） | 根拠なし | （根拠なし）RMS 専用の警告灯（赤5・黄5）の構成を飛行後に検査した記録や、灯の機能を確かめた記録は見つからなかった。 |
 | VC-LRQ-PLS-11 | LRQ-PLS-11 | D（実証） | 根拠あり | STS-114 の OBSS の右舷 MPM への収納では、すべての受け準備の表示と MPM のハードウェアが正常に動いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
 | VC-LRQ-PLS-12 | LRQ-PLS-12 | T（試験） | 根拠あり | STS-114 では左舷の MPM を 2 モータの時間で展開し、STS-2 では MPM の作動時間が 2 モータの予測時間内だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=11） |
 | VC-LRQ-PLS-13 | LRQ-PLS-13 | T（試験） | 根拠あり | STS-2 では MRL の作動時間が 2 モータの予測時間内で、すべてのマイクロスイッチの表示が適切な時機に得られた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=67） |
-| VC-LRQ-PLS-14 | LRQ-PLS-14 | T（試験） | 根拠なし | （根拠なし）STS-2〜4 と STS-114・122・125・135 の Mission Report を探したが、RMS・OBSS を実際に投棄した飛行や、軌道上の投棄系の作動試験の記述は無かった（地上の試験は未取り込み）。 |
+| VC-LRQ-PLS-14 | LRQ-PLS-14 | T（試験） | 根拠なし | （根拠なし）RMS・OBSS を投棄した飛行は無く、軌道上の投棄系の作動試験を記した報告も無い。地上の試験の報告は取り込んでいない。 |
 | VC-LRQ-PLS-15 | LRQ-PLS-15 | T（試験） | 根拠あり | STS-114 では ODS の電源を入れて約 4 分 42 秒でリングの伸長を正常に終え、ドッキングの準備が整った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
 | VC-LRQ-PLS-16 | LRQ-PLS-16 | D（実証） | 根拠あり | STS-114 では ISS を捕獲したあと、リングの引込みが予定どおりに進み、12 対のフックが正常に閉じた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
 | VC-LRQ-PLS-17 | LRQ-PLS-17 | D（実証） | 根拠あり | STS-122 では全てのフックとラッチが異常なく駆動されてアンドッキングが済んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=21）STS-135 のアンドッキングは駆動時間約 2 分 15 秒で、フック群 1・2 は正常に動いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=16） |
 | VC-LRQ-PLS-18 | LRQ-PLS-18 | T（試験） | 根拠あり | STS-122 のアンドッキングでは、機構の電力を入れてから切るまでが 1 時間 18 分 19 秒で、2 時間の制約内に収まった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=21） |
-| VC-LRQ-PLS-19 | LRQ-PLS-19 | D（実証） | 根拠なし | （根拠なし）STS-108・114・122・135 の Mission Report を探したが、火工品によるフックの分離やボルトを外す EVA を行った記録は無かった（STS-108 の EVA は ISS 側のシールの異物の除去）。 |
+| VC-LRQ-PLS-19 | LRQ-PLS-19 | D（実証） | 根拠なし | （根拠なし）火工品ボルトの語は ET の GUCP の切離しにしか現れず、ODS のフック分離用の火工品ボルトや、EVA で 96 本のボルトを外した記録は見つからなかった。 |
 | VC-LRQ-PLS-20 | LRQ-PLS-20 | D（実証） | 根拠あり | STS-135 の RMS の軌道上初期化は MET 約 2 時間 46 分に始まり、左右の MPM の展開と肩ブレースの解除を行った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=50） |
-| VC-LRQ-PLS-21 | LRQ-PLS-21 | A（解析） | 根拠なし | （根拠なし）RMS・ペイロードを投棄した飛行は無く、取り込み済みの Mission Report にも投棄の解析の記述が見つからなかった。 |
+| VC-LRQ-PLS-21 | LRQ-PLS-21 | A（解析） | 根拠なし | （根拠なし）fr A12-182 の根拠の欄は『自由物体の数を減らして再接触を避けたい』という設計の理由で、解析の結果ではない。RMS とペイロードを投棄した飛行も無い。 |
 | VC-LRQ-PLS-22 | LRQ-PLS-22 | D（実証） | 根拠あり | STS-135 では PRLA 3 の A 系マイクロスイッチが OPEN を示さなかったが、B 系が OPEN を示し、A 系モータが 1 モータの時間だけ動いたので、ラッチが開いたと確信できた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
 | VC-LRQ-PLS-23 | LRQ-PLS-23 | D（実証） | 根拠あり | STS-3 では手首のカメラが飛行前に失われたが、ほかの視野があれば手首のカメラなしでも把持を実行できることが示された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87） |
-| VC-LRQ-PLS-24 | LRQ-PLS-24 | I（検査） | 根拠なし | （根拠なし）Mission Report にはブリッジ金具の個数や材質を点検した記述が無かった（ペイロードごとの設計・搭載の資料は取り込んでいない）。 |
-| VC-LRQ-PLS-25 | LRQ-PLS-25 | I（検査） | 根拠なし | （根拠なし）Mission Report は PRLA の作動の記録（STS-135 の解放表示の不具合など）は載せるが、ラッチの構成（主・安定・キールの数や動き）を点検した記述は無かった。 |
+| VC-LRQ-PLS-24 | LRQ-PLS-24 | I（検査） | 根拠なし | （根拠なし）ブリッジ金具の個数（縦通材13・キール12）や材質（チタン・アルミニウム）を点検した記録は Mission Report に無い。 |
+| VC-LRQ-PLS-25 | LRQ-PLS-25 | I（検査） | 根拠なし | （根拠なし）STS-120 は PRLA 4 のラッチ表示の遅れ、STS-80 はキールラッチの表示の不具合、STS-131 は前方 PRLA のばね付きの動きを記すが、いずれも表示や動きの所見で、ラッチの構成（主2・安定1〜2・キールの ±2.75 in）を検査した記録ではない。 |
 | VC-LRQ-PLS-26 | LRQ-PLS-26 | T（試験） | 根拠あり | STS-135 では PRLA の A 系マイクロスイッチが OPEN を示さなかったが、A 系モータは 1 モータの時間だけ動き、B 系は OPEN を示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=12） |
 | VC-LRQ-PLS-27 | LRQ-PLS-27 | D（実証） | 根拠あり | STS-3 の FTO 352-01 では、PDP の展開と収納を 3 回難なく行い、各回は 10 分未満だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=87） |
-| VC-LRQ-RCS-01 | LRQ-RCS-01 | A（解析） | 根拠なし | （根拠なし）STS-1〜4・108・114・122・125・135 の Mission Report の RCS 節を探したが、最大ブローダウンの量に触れた記録は無かった。 |
-| VC-LRQ-RCS-02 | LRQ-RCS-02 | T（試験） | 根拠なし | （根拠なし）Mission Report には逃し弁の作動記録が無く、部品の認定試験の記録は取り込み済みの資料に無かった。 |
+| VC-LRQ-RCS-01 | LRQ-RCS-01 | A（解析） | 根拠なし | （根拠なし）最大ブローダウンの量（前部 22%・後部 24%）の解析の結果は、Mission Report・運用飛行規則・SODB のどこにも見つからなかった。blowdown が当たるのは OMS の最大ブローダウン（OMS の規則 A6-201 など）と ABS のアンモニアの枯渇で、RCS の量ではない。 |
+| VC-LRQ-RCS-02 | LRQ-RCS-02 | T（試験） | 根拠なし | （根拠なし）RCS のヘリウム逃し弁の作動や、バースト膜の破裂圧・逃し弁の開閉圧を測った試験の記録は見つからなかった。mal に burst disk の語はあるが、別の系の記述で、RCS 逃し弁の試験結果ではない。 |
 | VC-LRQ-RCS-03 | LRQ-RCS-03 | D（実証） | 根拠あり | STS-1 では後部ポッドの調圧を A 経路で行い、軌道離脱噴射の前に両方の調圧経路を再び開いて、RCS は各ポッドの独立運転・クロスフィード・OMS タンクとの連結の全モードで正常に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=17） |
-| VC-LRQ-RCS-04 | LRQ-RCS-04 | A（解析） | 根拠なし | （根拠なし）取り込み済みの Mission Report に、RCS ヘリウムタンクの喪失判定やブローダウン運転の適用の記録は無かった。 |
-| VC-LRQ-RCS-05 | LRQ-RCS-05 | I（検査） | 根拠なし | （根拠なし）Mission Report にはヒータの出力やゾーン数を確かめた記録が無く、機器の検査記録は取り込み済みの資料に無かった。 |
+| VC-LRQ-RCS-04 | LRQ-RCS-04 | A（解析） | 根拠なし | （根拠なし）A6-1 の根拠の欄は、400 psia では 4 噴射器の流量で推進薬タンク圧が 245 psia を下回ると SODB の制約を引いて記すが、O3 のロータリスイッチの監視と、調圧器の経路の切り分けにブローダウン運転を使わない判断（A6-58 は「適切でない」との判断のみ）の記録は無い。主な内容の 3 点のうち、喪失判定のしきい値の由来だけが分かり、残りを確かめた記録は見つからないので根拠なしのままにする。 |
+| VC-LRQ-RCS-05 | LRQ-RCS-05 | I（検査） | 根拠なし | （根拠なし）噴射器ヒータの出力（20 W・30 W・10 W）や後部ポッドの 9 ゾーンの構成を検査した記録は見つからなかった。heater zones は STS-107 や STS-109 の別の系の記述である。 |
 | VC-LRQ-RCS-06 | LRQ-RCS-06 | T（試験） | 根拠あり | STS-2 では、バーニア F5R がバーニアヒータ試験の間に 127°F まで下がった以外、すべての噴射器が最小のヒータ設定値以上を飛行中保った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=19） |
-| VC-LRQ-RCS-07 | LRQ-RCS-07 | A（解析） | 根拠なし | （根拠なし）Mission Report にはヒータの入切の規則（A6-251C・A6-253・A6-254）に触れた記録が無かった。 |
-| VC-LRQ-RCS-08 | LRQ-RCS-08 | A（解析） | 根拠なし | （根拠なし）STS-114 ではバーニア R5R のヒータの ON 故障が見つかったが、主噴射器のヒータ OFF 故障の処置を実施した記録は取り込み済みの資料に無かった。 |
+| VC-LRQ-RCS-07 | LRQ-RCS-07 | A（解析） | 根拠なし | （根拠なし）A6-251C・A6-253・A6-254 の根拠の欄は、電力の節約、パッチの過熱による剥がれの懸念、SM が動かないときの知らされない故障の防止といった設計上の理由であり、解析の結果の値を示していない。STS-128 は突入に向けて OMS・RCS のヒータを構成したと記すが、運用の記録で解析ではない。 |
+| VC-LRQ-RCS-08 | LRQ-RCS-08 | A（解析） | 根拠あり | 主噴射器のヒータが OFF に故障した場合の処置について、運用飛行規則 A6-257 の根拠の欄は下限 42(47) °F を熱数学モデルの解析データから導き、162 (157) °F 超では噴射しないと定める。飛行では STS-87 で主噴射器 R2D のヒータが OFF に故障し、特別な姿勢と定期的な噴射で噴射器温度を 40 °F 超に保ち（45〜50 °F）、姿勢を 5 案評価して選び、その後の噴射が弁の作動限界 157 °F を超えなかった。STS-87 の下限は 40 °F 超で、要求の 42(47) °F と同じ値ではない。優先度の変更の実施記録は無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1240）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-87%20Space%20Shuttle%20Mission%20Report.pdf#page=33）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-87%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
 | VC-LRQ-RCS-09 | LRQ-RCS-09 | D（実証） | 根拠あり | STS-2 は、70°F 以上の推進薬を突入に確保して高度 70,000 ft 以下の ZOT を避けるため、82°F の推進薬をタンクに搭載した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=19）STS-1 の突入では、主 RCS 噴射器の高度 70,000 ft 以下の噴射が10回あり、明らかな ZOT は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=21） |
 | VC-LRQ-RCS-10 | LRQ-RCS-10 | D（実証） | 根拠あり | STS-122 の飛行日 13 では 38基の噴射器のすべてが 1 パルス 0.240 秒以上で噴射され、すべて満足に噴射した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=22）STS-125 のホットファイアでも 38基の RCS 噴射器のすべてが少なくとも1回噴射した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=24） |
 | VC-LRQ-RCS-11 | LRQ-RCS-11 | D（実証） | 根拠あり | STS-125 ではバーニア R5R の燃焼室圧が低く、乗員の就寝中に選択解除したが、残る5基のバーニアで姿勢制御を保った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=13） |
@@ -968,103 +968,103 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 | VC-LRQ-RCS-13 | LRQ-RCS-13 | A（解析） | 根拠あり | STS-3 では、主噴射器 L2U で 100 秒の連続噴射の熱試験が成功した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=16） |
 | VC-LRQ-RCS-14 | LRQ-RCS-14 | D（実証） | 根拠あり | STS-114 の上昇では、ET 分離は 3 秒・10 噴射器の並進で行われ、その前に SRB 分離の排気を窓から遠ざけるウィンドウ保護の噴射もあった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-RCS-15 | LRQ-RCS-15 | D（実証） | 根拠あり | STS-1 の飛行は、推進薬を節約するため大部分をバーニアで飛んだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=17） |
-| VC-LRQ-RCS-16 | LRQ-RCS-16 | A（解析） | 根拠なし | （根拠なし）Mission Report には再加圧の手順（A6-61）を実施した記録が無く、手順の検証記録は取り込み済みの資料に無かった。 |
-| VC-LRQ-RCS-17 | LRQ-RCS-17 | A（解析） | 根拠なし | （根拠なし）検知機能を失った飛行の記録は無く、Mission Report では個々の噴射器の fail-off と選択解除（STS-108・125）だけが見つかった。 |
-| VC-LRQ-RCS-18 | LRQ-RCS-18 | A（解析） | 根拠なし | （根拠なし）STS-114 の Mission Report は搭載量・PASS の残量（1873.9 lb）・消費量を示すが、後部 RCS だけの突入の予約量との比較は載っていなかった。 |
-| VC-LRQ-RCS-19 | LRQ-RCS-19 | T（試験） | 根拠なし | （根拠なし）Mission Report にタンク隔離弁の作動を評価した記述が無く、弁の認定試験の記録は取り込み済みの資料に無かった。 |
-| VC-LRQ-RCS-20 | LRQ-RCS-20 | T（試験） | 根拠なし | （根拠なし）Mission Report にはマニホールド隔離弁の位置やスイッチの動作の記録が無く、弁の試験記録も取り込み済みの資料に無かった。 |
+| VC-LRQ-RCS-16 | LRQ-RCS-16 | A（解析） | 根拠あり | 再加圧のしきい値 130 psia について、運用飛行規則 A6-61 の根拠の欄は、WSTF の試験でマニホールド圧が 50 psia 未満から再加圧すると噴射器の弁が跳ねたこと、130 psia は 50 の圧力と 50 の余裕と 30 の計装誤差の和であること、130 psia 超なら制限が無いことを記す。要求のうち、系統を閉じる・開く順序と、段階的な再加圧を実施した飛行の記録は、無い。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1196） |
+| VC-LRQ-RCS-17 | LRQ-RCS-17 | A（解析） | 根拠なし | （根拠なし）A6-156 の根拠の欄は、軌道・並進 DAP が 1 方向・1 ポッドあたり 1 基を要するという設計の記述と、危険を許容する判断の説明で、解析の結果の値は無い。Mission Report には個々の噴射器の fail-off と選択解除の記録（STS-108・125）はあるが、RM の検知機能を失った場合の運用の記録は見つからない。 |
+| VC-LRQ-RCS-18 | LRQ-RCS-18 | A（解析） | 根拠あり | 突入（EI〜マッハ 1）の後部 RCS の予約量 1175/1375 lb について、運用飛行規則 A6-305 の根拠の欄は、この値が STS-1〜89 の再構成した飛行時の大気を使ったモンテカルロの解析で WRAP DAP の 99.5 パーセントを守る値として選ばれたと記す。解析の本体（A/E Flight Techniques #150）は公開されていない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1262） |
+| VC-LRQ-RCS-19 | LRQ-RCS-19 | T（試験） | 根拠なし | （根拠なし）タンク隔離弁の対の数や電動機制御組立が給電を断つ動作を確かめた記録は見つからなかった。STS-67 は左 RCS 3/4/5 のタンク隔離弁 A を 1〜2 秒しか閉位置に置かず、閉の表示が 6 分半後になった運用の記録で、構成の試験ではない。 |
+| VC-LRQ-RCS-20 | LRQ-RCS-20 | T（試験） | 根拠なし | （根拠なし）マニホールド隔離弁の 1〜4 番（交流電動弁・GPC 位置は OPS 2・8）と 5 番（ラッチ弁・ばね戻り）の構成を確かめた記録は見つからなかった。STS-85 は 5 番の隔離弁の開の離散信号の喪失を記すが、故障の記録で、構成の確認ではない。 |
 | VC-LRQ-RCS-21 | LRQ-RCS-21 | D（実証） | 根拠あり | STS-1 では、RCS が各後部ポッドの独立運転、後部ポッド間のクロスフィード、各 OMS タンクとの連結の全設計モードで正常に働き、主噴射器の運転とバーニアの運転の両方で運用された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=17） |
 | VC-LRQ-RCS-22 | LRQ-RCS-22 | A（解析） | 根拠あり | STS-114 の RCS の搭載量は酸化剤 4395.6 lb・燃料 2749.3 lb で、PASS が計算した残量は 1873.9 lb、消費量は 5271.0 lb（OMS からの 515.8 lb を含む）だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
-| VC-LRQ-RCS-23 | LRQ-RCS-23 | T（試験） | 根拠なし | （根拠なし）Mission Report には指令 A・B の二重化を確かめた記述が無く、ソフトウェアの検証記録は取り込み済みの資料に無かった。 |
+| VC-LRQ-RCS-23 | LRQ-RCS-23 | T（試験） | 根拠なし | （根拠なし）DAP の噴射器選択論理が 38 個の噴射器の指令を出し、RJD への指令 A・B を作ることを確かめた記録は見つからなかった。RJD の語は多数当たるが、個々の RJD の故障（STS-73 の R5R・R5D など）の記述で、二重指令の確認ではない。 |
 | VC-LRQ-RCS-24 | LRQ-RCS-24 | A（解析） | 根拠あり | STS-108 の上昇では、主噴射器 R4U が fail-off になったが RJD の出力は正常で、燃焼室圧は 15.8 psia までしか上がらず、パイロット弁だけの流れが最も疑われる原因とされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=8） |
-| VC-LRQ-RCS-25 | LRQ-RCS-25 | A（解析） | 根拠なし | （根拠なし）Mission Report には就寝中の RJD 電源の運用（A6-151）やバーニア喪失の手順の実施記録が無かった。 |
+| VC-LRQ-RCS-25 | LRQ-RCS-25 | A（解析） | 根拠なし | （根拠なし）A6-151 の根拠の欄は「RJD の試験で故障率は 100 億時間に 1 回」と記し、要求の値と合うが、主な内容である就寝中の電源の運用（電源を切る・ロジック電源の故障のときは入れたままにする・バーニア喪失の手順で OFF）の解析や実施の記録ではなく、故障率の算出の根拠も公開されていない。就寝中の RJD の運用を実施した Mission Report の記録は見つからないので根拠なしのままにする。 |
 | VC-LRQ-RCS-26 | LRQ-RCS-26 | T（試験） | 根拠あり | STS-108 では主噴射器 F3F が最初の 0.080 秒の噴射で燃焼室圧が最大 6.4 psia にとどまり、RM が最小のしきい値（約 26 psia）に3周期で届かなかったとして噴射器を選択解除した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
-| VC-LRQ-RCS-27 | LRQ-RCS-27 | T（試験） | 根拠なし | （根拠なし）取り込み済みの Mission Report に fail-on の検知や自動閉の作動した記録は無かった（STS-1〜4・108・114・122・125・135 を探した）。 |
+| VC-LRQ-RCS-27 | LRQ-RCS-27 | T（試験） | 根拠なし | （根拠なし）fail-on の検知（3 周期）と OPS 2 での自動閉を確かめた飛行の記録は見つからなかった。STS-1 は RM が fail-off の噴射器を検知したと記すが fail-on の検知ではない。ヒータの failed on の記述は噴射器ヒータの話である。 |
 | VC-LRQ-RCS-28 | LRQ-RCS-28 | T（試験） | 根拠あり | STS-3 では、突入インタフェースの約5分後に噴射器 L2U と R4U が、燃料の漏れ検知器が限界を下回ったとして選択解除された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=16） |
-| VC-LRQ-RCS-29 | LRQ-RCS-29 | T（試験） | 根拠なし | （根拠なし）Mission Report にジレンマ・電源故障の通報やマニホールドの自動除外の記録は無かった。 |
-| VC-LRQ-RCS-30 | LRQ-RCS-30 | T（試験） | 根拠なし | （根拠なし）BFS を結合した飛行は無く、RM の状態の引き継ぎを確かめた記録も取り込み済みの Mission Report に無かった。 |
-| VC-LRQ-STR-01 | LRQ-STR-01 | A（解析） | 根拠なし | （根拠なし）Mission Report の推力構造の記述（STS-6 の MECO の推力構造の変形）は断片的な抽出で、SSME の支持の検証として読めない。 |
-| VC-LRQ-STR-02 | LRQ-STR-02 | I（検査） | 根拠なし | （根拠なし）Mission Report にトラス部材の数や材質の記述が無い。 |
+| VC-LRQ-RCS-29 | LRQ-RCS-29 | T（試験） | 根拠あり | RM がマニホールド弁の状態の離散信号からジレンマ（RCS RM DLMA）を検知することについて、STS-85 は右 RCS 酸化剤マニホールド 5 の隔離弁の開の離散信号が 1 から 0 に変わった 3 秒後に RM の故障メッセージ RM DLMA MANF が出たと記し、STS-106 は RM が前部 RCS マニホールド 2 のジレンマを通報し、電源を入れ直した噴射器がその後満足に働いたと記す。要求のうち、4つの離散信号の評価、電源故障（RCS PWR FAIL）の通報、閉になったマニホールドの噴射器を可用表から外す動作は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-85%20Space%20Shuttle%20Mission%20Report.pdf#page=10）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-106%20Space%20Shuttle%20Mission%20Report.pdf#page=22） |
+| VC-LRQ-RCS-30 | LRQ-RCS-30 | T（試験） | 根拠なし | （根拠なし）BFS を結合して RM の状態が消去される動作や、BFS が fail-off と fail-on だけを通報する動作を確かめた記録は見つからなかった。BFS の語が当たるのは航法性能やソフトウェアの再起動（STS-119・STS-64）の記述で、RCS の RM と無関係である。 |
+| VC-LRQ-STR-01 | LRQ-STR-01 | A（解析） | 根拠なし | （根拠なし）内部の推力構造が上部で上の SSME を、下部で下の 2 基を支えることを示す解析や検査の記録は見つからなかった。STS-6 の推力構造の変形の記述は、MECO 時の変形の観測で、SSME の支持の検証にならない。 |
+| VC-LRQ-STR-02 | LRQ-STR-02 | I（検査） | 根拠なし | （根拠なし）28 本のチタンのトラス部材や鍛造品の検査の記録は見つからなかった。語自体が Mission Report に現れない。 |
 | VC-LRQ-STR-03 | LRQ-STR-03 | T（試験） | 根拠あり | STS-2 でオービタ/ETの後部の構造結合は正常に分離し、後部結合孔の栓はオービタのボルト孔を塞いだ。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=63）STS-1 でオービタ/ETの構造結合の前部のせん断ボルトと後部の脆性ナットが働き、ETから分離した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=74） |
-| VC-LRQ-STR-04 | LRQ-STR-04 | A（解析） | 根拠なし | （根拠なし）ポッドの音響・温度の実測値を述べる記述が Mission Report に見つからない（STS-1 のポッドの剥離は加熱による損傷で、要求を満たした記録ではない）。 |
+| VC-LRQ-STR-04 | LRQ-STR-04 | A（解析） | 根拠なし | （根拠なし）ポッドが 162 dB の音響と −170〜+135 °F の温度に耐える解析や試験の記録は見つからなかった。STS-1 のポッドの剥離は加熱による損傷の記録で、耐えた記録ではない。 |
 | VC-LRQ-STR-05 | LRQ-STR-05 | A（解析） | 根拠あり | STS-1 の飛行の応答データの評価で、飛行で測った歪みが設計の歪みを超えた箇所は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=62） |
 | VC-LRQ-STR-06 | LRQ-STR-06 | D（実証） | 根拠あり | STS-1 の飛行で、搭乗・脱出ハッチを含む機械系が機能した（エアロックのハッチ A・B は動作させなかった）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=64） |
 | VC-LRQ-STR-07 | LRQ-STR-07 | T（試験） | 根拠あり | STS-54 では窒素の消費が 1.8 lbm/日（通常 4.5 lbm/日）と、客室圧の漏れが飛行を通して異常に小さかった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=18） |
-| VC-LRQ-STR-08 | LRQ-STR-08 | I（検査） | 根拠なし | （根拠なし）Mission Report に取付点の数の記述が無い（STS-8 の DTO 0321 は乗員室構造のたわみの調査の題名だけで、結果の記述が無い）。 |
-| VC-LRQ-STR-09 | LRQ-STR-09 | I（検査） | 根拠なし | （根拠なし）Mission Report に前方の窓の枚数の記述が無い。 |
+| VC-LRQ-STR-08 | LRQ-STR-08 | I（検査） | 根拠なし | （根拠なし）乗員室を 4 つの取付点で支える構造の検査の記録は見つからなかった。STS-8 の DTO 0321 は題名だけで結果が無い。 |
+| VC-LRQ-STR-09 | LRQ-STR-09 | I（検査） | 根拠なし | （根拠なし）前方の窓が 6 枚で、それぞれ 3 枚の板ガラスから成ることを検査した記録は見つからなかった。STS-117・120 は windshield windows 1〜6 を取り外して調べたと記すが、枚数・層の構成の確認ではない。 |
 | VC-LRQ-STR-10 | LRQ-STR-10 | T（試験） | 根拠あり | STS-1 で外側の窓ガラスには膜が付いたが、内側のガラスは飛行を通して曇らず、窓の乾燥系が満足に働いたことを示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=64） |
-| VC-LRQ-STR-11 | LRQ-STR-11 | I（検査） | 根拠なし | （根拠なし）Mission Report に前胴の材質・フレーム間隔の記述が無い。 |
-| VC-LRQ-STR-12 | LRQ-STR-12 | I（検査） | 根拠なし | （根拠なし）Mission Report のノーズキャップの記述（STS-135 の膨張シールの SiC 損傷）は損傷の記録で、要求を満たした記録ではない。 |
+| VC-LRQ-STR-11 | LRQ-STR-11 | I（検査） | 根拠なし | （根拠なし）前胴の材質（2024 アルミ合金）と主フレームの間隔（30〜36 in）の検査の記録は見つからなかった。これらの語は Mission Report に現れない。 |
+| VC-LRQ-STR-12 | LRQ-STR-12 | I（検査） | 根拠なし | （根拠なし）ノーズキャップが RCC の再使用 TPS で、構造との境に熱障壁を持つことを検査した記録は見つからなかった。STS-117 は着陸後に膨張シールの欠けと極超高速衝突痕を、STS-115 は膨張シールの 0.9 × 0.3 in の欠けを記すが、損傷の記録であり、熱障壁の確認ではない。STS-56 の報告は RCC ノーズキャップの性能が正常と記すが、飛行中の性能で検査ではない。 |
 | VC-LRQ-STR-13 | LRQ-STR-13 | T（試験） | 根拠あり | STS-2 の分離後の点検で、前部の構造結合は要求どおりに働いたことが確かめられた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=63）STS-1 でオービタ/ETの結合の前部のせん断ボルトが働いてETから分離した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=74） |
-| VC-LRQ-STR-14 | LRQ-STR-14 | I（検査） | 根拠なし | （根拠なし）Mission Report に前胴とペイロードベイの仕切りの記述が無い。 |
-| VC-LRQ-STR-15 | LRQ-STR-15 | I（検査） | 根拠なし | （根拠なし）Mission Report に主フレームの数の記述が無い。 |
+| VC-LRQ-STR-14 | LRQ-STR-14 | I（検査） | 根拠なし | （根拠なし）前胴とペイロードベイを Xo = 582 の柔軟な膜で仕切る構成を検査した記録は見つからなかった。 |
+| VC-LRQ-STR-15 | LRQ-STR-15 | I（検査） | 根拠なし | （根拠なし）中胴の 12 の主フレーム組立の検査の記録は見つからなかった。main frame の語は Mission Report に現れない。 |
 | VC-LRQ-STR-16 | LRQ-STR-16 | A（解析） | 根拠あり | STS-1 の着陸で、主脚の接地条件はペイロードの設計要求を十分に下回り、ペイロードベイの加速度も設計要求を十分に下回った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=64） |
-| VC-LRQ-STR-17 | LRQ-STR-17 | I（検査） | 根拠なし | （根拠なし）Mission Report に取付けの基盤としての記述が無い（RMS などの運用の記述は取付けの検証ではない）。 |
+| VC-LRQ-STR-17 | LRQ-STR-17 | I（検査） | 根拠なし | （根拠なし）シルの縦通材が RMS・Ku 帯アンテナ・ペイロードベイドアの作動系の取付けの基盤となることの検査の記録は見つからなかった。RMS や Ku 帯の運用の記述は取付けの検証ではない。 |
 | VC-LRQ-STR-18 | LRQ-STR-18 | A（解析） | 根拠あり | STS-1 の再突入の歪みの測定から、中胴の下面のスキンの安全率は、機動と着陸で X 位置 891 が 1.4、X 位置 1055 が約 2.0 と求められた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=63） |
 | VC-LRQ-STR-19 | LRQ-STR-19 | A（解析） | 根拠あり | STS-1 の構造温度データから降下の熱勾配が評価され、最大の熱勾配は TAEM の後に生じ、予測より温度は低いが熱勾配は大きかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=63）STS-2 の熱応力の解析で、X 位置 891 の下面のスキンの熱応力のピークは Y 位置 85 付近に移った。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=59） |
-| VC-LRQ-STR-20 | LRQ-STR-20 | A（解析） | 根拠なし | （根拠なし）熱ペインの欠けによる RTLS アボートの記録は無く、Mission Report にある窓の損傷（STS-7 の風防の0.2 in の窪み）は圧力・熱ペインの故障の判定に至っていない。 |
-| VC-LRQ-STR-21 | LRQ-STR-21 | A（解析） | 根拠なし | （根拠なし）飛行規則の記述であり、飛行・試験の記録に当たる文が Mission Report に無い。 |
-| VC-LRQ-STR-22 | LRQ-STR-22 | D（実証） | 根拠なし | （根拠なし）Mission Report に覆いの開閉の記述が無い。 |
-| VC-LRQ-STR-23 | LRQ-STR-23 | A（解析） | 根拠なし | （根拠なし）飛行規則の記述であり、実時間の熱解析を省いた飛行の記録が Mission Report に無い。 |
-| VC-LRQ-STR-24 | LRQ-STR-24 | I（検査） | 根拠なし | （根拠なし）Mission Report に桁の構造の記述が無い。 |
+| VC-LRQ-STR-20 | LRQ-STR-20 | A（解析） | 根拠なし | （根拠なし）A10-381 の根拠の欄は、熱ペインの故障の仕組みと RTLS の再突入環境の穏やかさを述べる判断で、解析の結果の値は無い（A/E FTP #68 を引くのみ）。STS-120・123・126 は熱ペインの MMOD の傷を評価して突入可と判断したが、これは故障の判定（破片の欠け）と RTLS の判断を確かめた記録ではない。 |
+| VC-LRQ-STR-21 | LRQ-STR-21 | A（解析） | 根拠なし | （根拠なし）A10-382 の根拠の欄は、与圧の冗長を要する理由（熱ペインは与圧の冗長にならない）の説明で、解析の結果は無い。窓の圧力ペイン・冗長ペインの故障を扱った Mission Report の記録は見つからなかった。 |
+| VC-LRQ-STR-22 | LRQ-STR-22 | D（実証） | 根拠なし | （根拠なし）A10-361 は Spacelab の viewport（VP）の規則である。STS-9 は Spacelab の viewport の外側の覆いの掛け金と回転機構が支障なく働いたと記すが、使わないときに閉じておいた記録ではない。ノード・ラボの窓の覆いは ISS の窓で、別の機器である。 |
+| VC-LRQ-STR-23 | LRQ-STR-23 | A（解析） | 根拠なし | （根拠なし）A2-110 は実時間の熱解析を省く条件を定める規則で、解析の結果の値を示す根拠の欄は無い。実時間の熱解析を省いて軌道離脱の準備をした飛行の記録も見つからなかった。 |
+| VC-LRQ-STR-24 | LRQ-STR-24 | I（検査） | 根拠なし | （根拠なし）翼の 4 本の主桁が波形のアルミニウムで造られることを検査した記録は見つからなかった。wing spar の語は STS-107 の事故の記述（CAIB）で現れるが、構造の確認ではない。 |
 | VC-LRQ-STR-25 | LRQ-STR-25 | T（試験） | 根拠あり | STS-1 の飛行で、エレボンの加速度は設計の限度の内で、舵面にフラッタやバズの兆しは無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=62） |
 | VC-LRQ-STR-26 | LRQ-STR-26 | A（解析） | 根拠あり | STS-4 の再突入で、揚力面と舵面にフラッタの兆しは無く、最大の加速度は設計の限度の内で、STS-1〜3 とほぼ同じだった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=45） |
 | VC-LRQ-STR-27 | LRQ-STR-27 | D（実証） | 根拠あり | STS-1 の再突入でスピードブレーキは滑らかに展開した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=44） |
 | VC-LRQ-STR-28 | LRQ-STR-28 | A（解析） | 根拠あり | STS-1 で垂直尾翼の先端の加速度は 6.7 g で、設計の限度の内だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=62） |
-| VC-LRQ-TPS-01 | LRQ-TPS-01 | I（検査） | 根拠なし | （根拠なし）STS-130・STS-135 などの Mission Report の TPS の節は衝撃痕とタイル損傷の評価を記すが、隙間寸法と接着の構成を確かめた記述が見つからなかった。 |
-| VC-LRQ-TPS-02 | LRQ-TPS-02 | I（検査） | 根拠なし | （根拠なし）探した Mission Report と NASA Facts には、タイルの密度の区分を確かめた記録が見つからなかった（飛行後の損傷評価だけである）。 |
+| VC-LRQ-TPS-01 | LRQ-TPS-01 | I（検査） | 根拠なし | （根拠なし）ギャップフィラーの突出（STS-100・104 の約 0.5 インチ）や SIP の語は飛行後の損傷・突出の記述で、タイル間の隙間 0.028〜0.2 inch、Nomex フェルトとシリコーン接着の構成を検査した記録ではない。 |
+| VC-LRQ-TPS-02 | LRQ-TPS-02 | I（検査） | 根拠なし | （根拠なし）AFRSI の語は損傷・補修の記述に出るだけで、LI-900・LI-2200・FRCI-12 の嵩密度（9・22・12 lb/ft3）を調べた検査の記録は無い。 |
 | VC-LRQ-TPS-03 | LRQ-TPS-03 | I（検査） | 根拠あり | STS-130 では、RCC の飛行評価で RCC は満足な状態であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=59） |
 | VC-LRQ-TPS-04 | LRQ-TPS-04 | I（検査） | 根拠あり | STS-122 では、OMS ポッドのブランケットのめくれを飛行中に撮像検査し、DAT の勧告を管理チームが承認して、残りの TPS の項目を再突入に向けて承認した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=62） |
 | VC-LRQ-TPS-05 | LRQ-TPS-05 | D（実証） | 根拠あり | STS-130 では、ペイロードベイドアが MET 00/01:31:58 に開かれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=10）STS-125 では、ペイロードベイドアが MET 00/01:38:05 に開かれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=10）STS-135 では、ペイロードベイドアが MET 00/01:34:16 に開かれた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
-| VC-LRQ-TPS-06 | LRQ-TPS-06 | D（実証） | 根拠なし | （根拠なし）探した Mission Report にはペイロードベイドアの閉鎖の時刻の記述はあるが、TIG-4:00 の冷却姿勢と TIG-2:55 のラジエータバイパスの時刻を確かめた記述が見つからなかった。 |
+| VC-LRQ-TPS-06 | LRQ-TPS-06 | D（実証） | 根拠なし | （根拠なし）STS-92 は第3日の軌道離脱準備で、ラジエータのバイパスと FES の点検を 298:16:50 に行い（TIG は 298:19:52:00 なので TIG-3:02）、ペイロードベイドアを 298:17:01:00 に閉じて固定した（TIG-2:51）。順序は一致するが、TIG-2:55 と TIG-2:40 の時刻とは数分ずれ、TIG-4:00 の冷却姿勢の完了時刻は記録に無い。STS-104 も扉の固定と TIG の時刻はあるが、バイパス点検の時刻が無い。 |
 | VC-LRQ-TPS-07 | LRQ-TPS-07 | T（試験） | 根拠あり | STS-3 では、尾部太陽向きと機首太陽向きの姿勢で温度を所要の範囲に保ち、ヒータのデューティ比は予測より小さかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=5） |
-| VC-LRQ-TPS-08 | LRQ-TPS-08 | I（検査） | 根拠なし | （根拠なし）探した Mission Report と SCOM には、ブランケットの構成（層数・排気穴）を確かめた記録が見つからなかった。 |
+| VC-LRQ-TPS-08 | LRQ-TPS-08 | I（検査） | 根拠なし | （根拠なし）MLI の語は ISS の機材や補修の記述で、オービタの断熱ブランケットの密度 2 lb/ft3、反射膜 16 層、排気穴 13,500 個/ft2 を検査した記録は無い。 |
 | VC-LRQ-TPS-09 | LRQ-TPS-09 | T（試験） | 根拠あり | STS-102 では、燃料電池の水リリーフ・水配管・パージのヒータ系の熱性能が正常で、A 系をカウントダウンから軌道上 5.7 日まで使い、その後 B 系に切り替えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=29） |
-| VC-LRQ-TPS-10 | LRQ-TPS-10 | T（試験） | 根拠なし | （根拠なし）探した Mission Report には、OMS ポッドのヒータの動作の記述はあるが、クロスフィード配管の区画ごとの制御温度と過熱防止サーモスタットを確かめた記述が見つからなかった。 |
+| VC-LRQ-TPS-10 | LRQ-TPS-10 | T（試験） | 根拠なし | （根拠なし）STS-105 p22 は左 OMS の低点ドレンラインの温度が加熱の入り温度 63 °F を下回り、41 °F でクロスフィードのヒータを B から A に切り替えて正常に戻ったと記し、STS-109 p11 はクロスフィードのヒータゾーン 1〜4 の応答を記す。クロスフィード配管が 11 区画で、A・B を並列に加熱して 55〜75 °F に保つこと、過熱防止サーモスタットの動作を確かめた記録は無い。 |
 | VC-LRQ-TPS-11 | LRQ-TPS-11 | D（実証） | 根拠あり | STS-1 では、ベントドアをパージ位置から全開へ指令し、最後のドアが打上げの 6.3 秒前に開いて、T-4 秒の全ドア開の基準を満たした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=66） |
 | VC-LRQ-TPS-12 | LRQ-TPS-12 | D（実証） | 根拠あり | STS-125 では、再突入準備から再突入界面（EI）の前後までのベントドアの再配置が正常であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=56）STS-125 では、着陸後の滑走路上でのベントドアの再配置が正常であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=57） |
-| VC-LRQ-ET-01 | LRQ-ET-01 | I（検査） | 根拠なし | （根拠なし）CAIB 報告書（bt_caib p50）は構造の記述のみで、検査・試験の実績が無い。飛行後の ET は回収されず、Mission Report にも構造の検査記録が無い。 |
+| VC-LRQ-ET-01 | LRQ-ET-01 | I（検査） | 根拠なし | （根拠なし）インタタンクの記録は、飛行前の氷霜・パージ・ヒーター、飛行後の写真に写ったフォームの divot などで、8枚のパネル・両端のフランジ・縦継手の構造を検査した記録ではない。CAIB p50 の構造の記述は設計の再掲で、検査の記録として使えない。 |
 | VC-LRQ-ET-02 | LRQ-ET-02 | T（試験） | 根拠あり | STS-122 では ET のインタタンクに有意な酸素・水素濃度は検出されず、パージとヒータの運転は適正だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=35）STS-54 ではインタタンクのパージヒータと温度制御系が正常に作動し、この区域で危険ガスの違反は無かった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10） |
-| VC-LRQ-ET-03 | LRQ-ET-03 | A（解析） | 根拠なし | （根拠なし）RTF 作業部会報告（bu_rtftg_final2005 p36・p48）はベント増加で剥離が「減ると期待される」と述べるのみで、ベントの効果を確かめた飛行の記録が無い。 |
-| VC-LRQ-ET-04 | LRQ-ET-04 | A（解析） | 根拠なし | （根拠なし）前部結合の荷重分配を飛行で確かめた記録は、取り込んだ Mission Report・Rogers 報告・CAIB 報告に無い（Rogers p60 の荷重表は後部の支柱）。 |
-| VC-LRQ-ET-05 | LRQ-ET-05 | I（検査） | 根拠なし | （根拠なし）寸法・重量の測定記録は取り込んだ資料に無い（CAIB p50 に長さ22.5 ft の記述があるが設計値の再掲）。 |
+| VC-LRQ-ET-03 | LRQ-ET-03 | A（解析） | 根拠なし | （根拠なし）CAIB p129 は、推力パネルのフォームに通気孔を設けたのは剥離の原因の誤解によるもので、サンディングと通気で剥離は以前の水準に戻っただけと記し、STS-103 p31 は通気の効果を「予備の指標」と述べるにとどまる（予備の解析は認めない）。STS-105 p33 は通気の導入後で最多の損傷数を記し、STS-130 p36 はインタタンクのフォーム剥離が圧力の許容質量を超えたと記す。いずれもフォーム内の圧力上昇が抑えられたことを示す解析・計測ではなく、根拠なしのままとする。 |
+| VC-LRQ-ET-04 | LRQ-ET-04 | A（解析） | 根拠なし | （根拠なし）前部 SRB/ET 結合の荷重が LO2/LH2 タンクへ分配されることを扱った解析の記録は無い。最も近い STS-114 p27 は前部結合のボルトキャッチャーを SRB 分離時の荷重能力の余裕不足のため変更した記述で、推力ビームと金具による荷重分配の解析ではない。CAIB p50 は構造の記述だけである。 |
+| VC-LRQ-ET-05 | LRQ-ET-05 | I（検査） | 根拠なし | （根拠なし）インタタンクの長さ 270 in・直径 331 in・重量 12,100 lb を測った記録は無い。Mission Report が書く ET の重量は軽量タンクなどの型式名にとどまり、CAIB p50 の長さ 22.5 ft は設計値の再掲である。 |
 | VC-LRQ-ET-06 | LRQ-ET-06 | D（実証） | 根拠あり | STS-8 ではアレージ圧が要求される制御帯の内に保たれ、予備加圧は計画どおりに行われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=9）STS-54 ではLO2・LH2の全タンクのアレージ圧が充填・加圧・飛行を通じて許容の範囲にあった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10） |
-| VC-LRQ-ET-07 | LRQ-ET-07 | T（試験） | 根拠なし | （根拠なし）渦防止バッフルの効果（残液量）を示す飛行の記録は、取り込んだ Mission Report に無い。MECO 時の推進薬残量の記述は SSME の節にも見つからなかった。 |
+| VC-LRQ-ET-07 | LRQ-ET-07 | T（試験） | 根拠なし | （根拠なし）STS-78 p20 は LH2 の ECO センサが MECO の約 2.3 秒後に乾き、MECO 時の LH2 残量が 2,799 lbm（予測より 790 lbm 少なく、通常は 3,000〜5,000 lbm）だったと記すが、これは残量の評価で、渦防止バッフル・サイフォン出口・17 in 供給管の機能を確かめた試験ではない。類似の事象として根拠にしない。 |
 | VC-LRQ-ET-08 | LRQ-ET-08 | A（解析） | 根拠あり | Rogers 報告は、最初の7飛行と51-L のET/SRB後部支柱の離昇時の荷重を、支柱の設計荷重と比較して示している。（出典: https://ntrs.nasa.gov/api/citations/19860015255/downloads/19860015255.pdf#page=60） |
-| VC-LRQ-ET-09 | LRQ-ET-09 | I（検査） | 根拠なし | （根拠なし）タンクの寸法・容積・乾燥重量を測った記録は取り込んだ資料に無い（CAIB p50 に液体水素 385,265 gallon の記述があるが設計値の再掲）。 |
-| VC-LRQ-ET-10 | LRQ-ET-10 | I（検査） | 根拠なし | （根拠なし）LO2タンクの寸法・重量の測定記録は取り込んだ資料に無い。 |
-| VC-LRQ-ET-11 | LRQ-ET-11 | T（試験） | 根拠なし | （根拠なし）揺動・渦防止装置の効果を示す飛行の記録は、Mission Report の ET の節（STS-8・35・54・114・122・125・135）に無い。 |
-| VC-LRQ-ET-12 | LRQ-ET-12 | T（試験） | 根拠なし | （根拠なし）供給管の経路を確かめた記録は取り込んだ資料に無い（ET の節は流量でなく「ET の目標をすべて満たした」と述べる程度）。 |
-| VC-LRQ-ET-13 | LRQ-ET-13 | I（検査） | 根拠なし | （根拠なし）避雷針の機能を確かめた飛行の記録は無い。STS-135 p8 は射点近くの落雷を述べるが、ノーズコーンの避雷針の効果は述べていない。 |
+| VC-LRQ-ET-09 | LRQ-ET-09 | I（検査） | 根拠なし | （根拠なし）LH2 タンクの寸法・容積・乾燥重量を測った記録は無い。CAIB p50 の液体水素の量は設計値の再掲で、5つのリングフレームや楕円ドームを検査した飛行後の記録も回収されない ET には無い。 |
+| VC-LRQ-ET-10 | LRQ-ET-10 | I（検査） | 根拠なし | （根拠なし）LO2 タンクの直径 331 in・長さ 592 in・空虚重量 12,000 lb を測った記録は無い。LO2 タンクの記述は TPS（フォーム）の外観の写真の評価で、タンク構造（ゴア・パネル・リングコード）の検査ではない。 |
+| VC-LRQ-ET-11 | LRQ-ET-11 | T（試験） | 根拠なし | （根拠なし）LO2 の残量は STS-92 p20 が約 7,700 lbm、STS-101 p23 が約 6,400 lbm、STS-106 p20 が約 6,500 lbm（予想より低い）と記す。STS-78 p21 は LO2 の過剰が 3,899 lbm と記す。いずれも残量の評価で、揺動防止・渦防止の装置が気体の巻き込みと液の動きを抑えたことを確かめた試験でなく、類似の事象として根拠にしない。 |
+| VC-LRQ-ET-12 | LRQ-ET-12 | T（試験） | 根拠なし | （根拠なし）17 in 供給管の経路（インタタンクを通って右後部のアンビリカルへ）を確かめた記録は無い。STS-92 p20 の「エンジン入口の NPSP の要求は飛行中満たされた」は推進系全体の評価で、供給管の経路や直径を確かめた試験ではない。ET の節は「ET の目標をすべて満たした」と述べるだけである。 |
+| VC-LRQ-ET-13 | LRQ-ET-13 | I（検査） | 根拠なし | （根拠なし）STS-115 p26 は射点が落雷を受け、雷はカテナリー・ワイヤー系に落ちたと記し、ET のノーズコーンの避雷針に落ちた記録ではない。STS-78 p39 の雷の接触ストリップ欠落はアンビリカル板の記述で、ノーズコーンの形状による抗力・加熱の低減や避雷針の機能を検査した記録も無い。 |
 | VC-LRQ-ET-14 | LRQ-ET-14 | T（試験） | 根拠あり | STS-54 では ET の加圧系がエンジン始動から飛行を通じて正常に機能し、LO2アレージ圧の最小は 13.1 psid だった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10）STS-114 では加圧系が飛行を通じて正常に機能し、スランプ中の LO2 アレージ圧の最小は 13.9 psid だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=31）STS-35 では加圧系が正常に機能し、スランプ中の LO2 アレージ圧の最小は 14.7 psid だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
-| VC-LRQ-ET-15 | LRQ-ET-15 | A（解析） | 根拠なし | （根拠なし）分離の抑止が働いた飛行の記録が無い（取り込んだ全ての Mission Report で ET の分離は nominal）。 |
-| VC-LRQ-ET-16 | LRQ-ET-16 | A（解析） | 根拠なし | （根拠なし）RTLS と切離し弁の閉鎖不確定を飛行で経験した記録が無い（RTLS は未実施）。 |
-| VC-LRQ-ET-17 | LRQ-ET-17 | D（実証） | 根拠なし | （根拠なし）STS-1 は ET が tumble せず（sts1 p35）、のちの飛行はタンブル系を無効にして飛んだ（STS-35 p9「The ET tumble system was inactive」・STS-54 p11「with tumble valve disabled」・STS-65 p25「tumble valve was disabled」）。要求を満たした実績は無い。 |
+| VC-LRQ-ET-15 | LRQ-ET-15 | A（解析） | 根拠なし | （根拠なし）SEP INH を出して分離を抑止した飛行の Mission Report の記録は無い。fr p1048（規則 A5-106）の根拠の欄は、ET 分離の約1秒の抑止が起きることがあると AEFTP の議事録を挙げて述べるだけで、解析の値ではない。fr p1103 の根拠（切離し弁の故障）は要求の後半に近いが遅延の理由で、0.7 deg/s の閾値を導いた解析は SCOM の記述以外に見つからない。 |
+| VC-LRQ-ET-16 | LRQ-ET-16 | A（解析） | 根拠なし | （根拠なし）fr p1103 の根拠の欄は、開弁の ET/オービタ間の推力（>10,000 lbf）が6分後に 1,800 lbf 未満になる、RTLS の分離ソフトウェアは6秒のベントを許す、と SODB を参照して書くが、MECO＋6分の遅延は規則の公称の項（A5-202 の A）の理由で、RTLS の自動分離の項は再接触の危険を受け入れると記すだけである。要求は両方を合わせており、解析の本体は SODB で手元に無く、RTLS は未実施のため、根拠なしのままとする。 |
+| VC-LRQ-ET-17 | LRQ-ET-17 | D（実証） | 根拠あり | STS-29 の Mission Report は、ET の分離とタンブルの開始が計画どおりに起き、ET のタンブルがレーダーで確認されたと記し、STS-41B の Mission Report もタンブルが確認され、落下点が区域内だったと記す。タンブル系を作動させて ET を回転させた実運用の記録である。要求のうち、LO2 タンク前部の 2 in の弁の値は、記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-29%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=8）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-41B%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=8）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=35） |
 | VC-LRQ-ET-18 | LRQ-ET-18 | D（実証） | 根拠あり | STS-8 では ET の分離と再突入は予測どおりで、落下は予測した落下区域の内にあった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=9）STS-125 では ET の分離は nominal で、落下は予測した落下区域の内にあった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37）STS-114 では ET の分離は nominal で、再突入・分解の位置は予測落下点の 15 nmi 手前だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=32） |
 | VC-LRQ-ET-19 | LRQ-ET-19 | T（試験） | 根拠あり | STS-125 では射場安全系の閉ループ試験が秒読み中に計画どおり行われ、S&A 装置は作動し、抑止は適切な時機に解除された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37）STS-35 でも射場安全系の閉ループ試験が秒読み中に計画どおり完了した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=9） |
-| VC-LRQ-ET-20 | LRQ-ET-20 | I（検査） | 根拠なし | （根拠なし）フォームの剥離は STS-107 ほか多数の飛行で起き（bu_rtftg_final2005 p36 は全ての剥離の原因は特定されていないと述べる）、胴の発泡材がデブリを出さない実績は示せない。 |
+| VC-LRQ-ET-20 | LRQ-ET-20 | I（検査） | 根拠なし | （根拠なし）ET の胴の発泡材が CPR-488 であったことを検査した記録は無い。STS-47 p10 は旧型の二色 TPS（CPR-488 を BX-250 の上に吹付け）の ET で原因不明の約16 in の divot が出たと記し、STS-94 p44 は NCFI 24-124 を LO2 タンクの胴とオジャイブに初めて使った飛行と記し、CAIB p51 は LO2・LH2 タンクの大部分に NCFI 24-124 を使うと記す。後の ET は CPR-488 でなく、要求の材料と食い違う。 |
 | VC-LRQ-ET-21 | LRQ-ET-21 | I（検査） | 根拠あり | 帰還飛行の作業部会報告は、フォームの認証は主に施工と設計を確かめることで得たと述べている。（出典: https://ntrs.nasa.gov/api/citations/20050201800/downloads/20050201800.pdf#page=36） |
 | VC-LRQ-ET-22 | LRQ-ET-22 | T（試験） | 根拠あり | 前部ポッド金具の設計・閉じ込め・ヒータは ET の設計認証審査で審査され、その検証に熱試験が含まれた。（出典: https://ntrs.nasa.gov/api/citations/20050201800/downloads/20050201800.pdf#page=36） |
 | VC-LRQ-ET-23 | LRQ-ET-23 | D（実証） | 根拠あり | STS-35 では ET の胴に氷や霜は無く、氷霜の観察はすべて規定により許容された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=9）STS-54 では1月の環境として典型的な氷霜が ET に見られた。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10） |
-| VC-LRQ-ET-24 | LRQ-ET-24 | I（検査） | 根拠なし | （根拠なし）TPS 重量の測定記録は取り込んだ資料に無い（STS-8 p9 は氷霜が waived area にとどまったと述べるが重量でない）。 |
-| VC-LRQ-ET-25 | LRQ-ET-25 | T（試験） | 根拠なし | （根拠なし）STS-35 は ET/オービタの切離し部付近で異常に高い水素濃度が検出され打上げが延期された（sts35 p3）。この要求を満たした実績としては使えない。 |
+| VC-LRQ-ET-24 | LRQ-ET-24 | I（検査） | 根拠なし | （根拠なし）ET の TPS 重量 4,823 lb を測った記録は無い。Mission Report の質量の記述は、剥離したフォームの個々の質量（lbm 単位）と NSTS 60559 の許容質量との比較で、TPS 全体の重量でない。 |
+| VC-LRQ-ET-25 | LRQ-ET-25 | T（試験） | 根拠なし | （根拠なし）後部アンビリカルで液体・気体・電気信号・電力を伝えたことを直接確かめた記録は無い。STS-69 p34 は ET/オービタの分離装置と保持シャッターの正常な動作で、移送の試験でない。STS-35 p3 の水素濃度の上昇、STS-119 p88 の水素の検知器（アンビリカル）の 60,000 ppm 超（LCC の限界は 40,000 ppm）、STS-104 p21 の LH2 の T-0 センサの漏れの指示は、要求を満たさなかった側の記録である。 |
 | VC-LRQ-ET-26 | LRQ-ET-26 | T（試験） | 根拠あり | STS-1 では左アンビリカルの切離し系1Bの火工品が作動しなかったが、系Aが切離しを完了した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=35）STS-59 の飛行後点検では、ET/オービタ分離装置は EO-2 を除き正常に作動していた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-59%20Space%20Shuttle%20Mission%20Report.pdf#page=30） |
-| VC-LRQ-ET-27 | LRQ-ET-27 | I（検査） | 根拠なし | （根拠なし）アンビリカル弁の数と再循環の使い方を確かめた記録は取り込んだ資料に無い（STS-135 p33 は GUCP の水素濃度が有意でなかったことのみ）。 |
+| VC-LRQ-ET-27 | LRQ-ET-27 | I（検査） | 根拠なし | （根拠なし）5つの推進薬アンビリカル弁（LO2 2・LH2 3）の数と、LH2 の中間径のアンビリカルを予冷の再循環だけに使うことを検査した記録は無い。STS-109 p18・STS-89 p8 は LH2 の4 in 再循環の切離しが分離で閉じたことを記す（弁の数や使い方でなく、後者は予備の機械閉鎖で閉じた）。 |
 | VC-LRQ-ET-28 | LRQ-ET-28 | T（試験） | 根拠あり | STS-122 では ET の電気機器と計装が満足に作動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=35）STS-135 でも ET の電気機器と計装が満足に作動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=33） |
 | VC-LRQ-ET-29 | LRQ-ET-29 | T（試験） | 根拠あり | STS-114 の第1回打上げは LH2 ECO センサが乾きの指令に濡れの表示を返したため中止となり、4つのセンサが作動することを打上げの条件とする点検が働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=27）STS-122 の打上げは LH2 ECO 系の異常で2回中止となり、その後の飛行では液面・ECO センサが設計どおりに作動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=32）STS-125 では液面・ECO センサが設計どおりに作動した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-SRB-01 | LRQ-SRB-01 | D（実証） | 根拠あり | STS-54 では SRB 分離の指令（125.96 秒）が、燃焼圧 50 psia の分離の合図（左 120.60・右 120.00 秒）と作用時間の終了の後に出た。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=9）STS-54 では両方の SRB が T-zero＋125.96 秒に ET から分離された。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10） |
-| VC-LRQ-SRB-02 | LRQ-SRB-02 | A（解析） | 根拠なし | （根拠なし）分離時の SRB 推力が 100,000 lb 未満だったことを示す数値の記録は取り込んだ Mission Report に無い（STS-54 p9 は減衰時間・作用時間の表のみ）。 |
+| VC-LRQ-SRB-02 | LRQ-SRB-02 | A（解析） | 根拠なし | （根拠なし）分離時の SRB 推力が 100,000 lb 未満であることを示す数値の記録は見つからなかった。STS-124 は SRM の推力で誘起された姿勢の角速度を分離後に制御すると記すが、推力の値ではない。ATVC の中立化は STS-133 の ATVC 故障の記述に当たるのみ。 |
 | VC-LRQ-SRB-03 | LRQ-SRB-03 | T（試験） | 根拠あり | STS-35 では分離モータはすべて燃焼を終え、分離ボルトはすべて切断された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=8）STS-114 は BSM の点火器を、点火時の BSM の性能の乱れをなくすよう改めた最初の飛行で、SRB の分離は nominal（121.80 秒）だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=27） |
 | VC-LRQ-SRB-04 | LRQ-SRB-04 | T（試験） | 根拠あり | STS-35 では分離ボルトはすべて切断され、SRB は ET から分離した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-35%20Space%20Shuttle%20Mission%20Report.pdf#page=8）STS-114 は前部結合のボルトキャッチャの荷重余裕と NSI 圧力カートリッジの抜け止めを改めた最初の飛行だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=27） |
-| VC-LRQ-SRB-05 | LRQ-SRB-05 | A（解析） | 根拠なし | （根拠なし）CAIB 報告書（bt_caib p223）によれば、複数の結合リングの引張強度が最小要求を下回ることが試験で示された。要求を満たした記録は無い。 |
-| VC-LRQ-SRB-06 | LRQ-SRB-06 | T（試験） | 根拠なし | （根拠なし）IEA と MDM の性能を個別に示した飛行の記録は、取り込んだ Mission Report に無い（STS-54・114・122・125・135 は SRB 系全体が期待どおりと述べるのみ）。 |
-| VC-LRQ-SRB-07 | LRQ-SRB-07 | I（検査） | 根拠なし | （根拠なし）SRGA の使用回数を管理した記録や、飛行での中間値選択の動作を示す記録は取り込んだ資料に無い。 |
+| VC-LRQ-SRB-05 | LRQ-SRB-05 | A（解析） | 根拠なし | （根拠なし）結合リングの安全率 1.4 の解析の結果は見つからなかった。CAIB 報告書は、複数の結合リングの引張強度が最小要求を下回ることが試験で示されたと記し、要求を満たしていない記録がある。 |
+| VC-LRQ-SRB-06 | LRQ-SRB-06 | T（試験） | 根拠なし | （根拠なし）SRB の IEA 2 基・各 IEA の MDM を個別に確かめた記録は見つからなかった。SRB 系全体が期待どおりという報告のみ。 |
+| VC-LRQ-SRB-07 | LRQ-SRB-07 | I（検査） | 根拠なし | （根拠なし）SRGA の中間値選択と 1 飛行しか使わない管理を検査した記録は見つからなかった。STS-127 などは 4 つの ORGA と 4 つの SRGA の出力が追従したと記すが、中間値選択や使用回数の確認ではない。 |
 | VC-LRQ-SRB-08 | LRQ-SRB-08 | D（実証） | 根拠あり | STS-125 では、計画どおり SRB の S&A 装置が安全にされ、SRB の系統の電源が SRB 分離の前に切られた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-LRQ-SRB-09 | LRQ-SRB-09 | T（試験） | 根拠あり | STS-125 では閉ループ試験が秒読み中に計画どおり行われ、S&A 装置は作動し、抑止は適切な時機に解除された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37）STS-54 でも閉ループ試験が秒読み中に計画どおり完了した。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=11） |
 | VC-LRQ-SRB-10 | LRQ-SRB-10 | D（実証） | 根拠あり | STS-125 ではオービタの離昇時の横加速度を解析し、保持スタッドの引っ掛かり（hang-up）は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=36）STS-135 でも保持ポストのスタッドの引っ掛かりは無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=32）STS-108 でも SRB の保持スタッドの引っ掛かりは起きなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=45） |
 | VC-LRQ-SRB-11 | LRQ-SRB-11 | T（試験） | 根拠あり | STS-112 の打上げ後の検討で、A系のPICが放電していなかったことが判明した。この単一の故障のもとで STS-112 は打上げられた。（出典: https://ntrs.nasa.gov/api/citations/20030066167/downloads/20030066167.pdf#page=222） |
-| VC-LRQ-SRB-12 | LRQ-SRB-12 | T（試験） | 根拠なし | （根拠なし）PIC の低電圧による保留が働いた飛行の記録は取り込んだ資料に無い（CAIB p222 の STS-112 は PIC が放電しなかった異常で、保留は働いていない）。 |
-| VC-LRQ-SRB-13 | LRQ-SRB-13 | T（試験） | 根拠なし | （根拠なし）PIC の充電電圧を示す飛行の記録は無い。 |
+| VC-LRQ-SRB-12 | LRQ-SRB-12 | T（試験） | 根拠なし | （根拠なし）最後の 16 秒に PIC の低電圧を監視して打上げを保留する動作が働いた記録は見つからなかった。STS-112 は PIC が正しく arm されたが電圧が徐々に低下し、holddown post の NSI の Fire 1 指令が来なかった異常を記す。保留が働いた記録ではない。 |
+| VC-LRQ-SRB-13 | LRQ-SRB-13 | T（試験） | 根拠なし | （根拠なし）STS-9 は SRB の点火用 PIC 4 個が正常に充電されて発火したと記すが、40 V（最小 20 V）の値は無く、要求の値と比べられない。arm・fire 1・fire 2 の三信号がそろったときだけ発火することを確かめた記録も見つからなかった。STS-112 は PIC の arm は正常だったが Fire 1 指令が届かず NSI が不発となった。 |
 | VC-LRQ-SRB-14 | LRQ-SRB-14 | D（実証） | 根拠あり | STS-1 ではSRBとSSMEの推力立上げと保持ボルトの解放の時機は、荷重解析で用いた許容の内にあった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=118） |
 | VC-LRQ-SRB-15 | LRQ-SRB-15 | T（試験） | 根拠あり | STS-54 の点火の間隔は予測も実績も 0.232 秒だった。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=9）STS-122 の点火の間隔の予測値は 0.232 秒で、最大の点火立上げ率の予測は 90.8 psia/10 ms だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=34） |
 | VC-LRQ-SRB-16 | LRQ-SRB-16 | T（試験） | 根拠あり | STS-122 の RSRM はウェブ時間・作用時間とも仕様の限度の内で、nominal だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=33） |
@@ -1074,12 +1074,12 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 | VC-LRQ-SRB-20 | LRQ-SRB-20 | T（試験） | 根拠あり | STS-54 では HPU の始動指令（13:13:59:02 台）が SRB の点火指令（13:13:59:29.989）の約 27〜28 秒前に出た（本書の計算）。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=31） |
 | VC-LRQ-SRB-21 | LRQ-SRB-21 | T（試験） | 根拠あり | STS-125 では SRB の TVC が指令どおりに位置決めされ、駆動電流は正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=52） |
 | VC-LRQ-SRB-22 | LRQ-SRB-22 | D（実証） | 根拠あり | STS-1 では SRB を含む推力方向制御系の作動は上昇中通常で、アクチュエータの変位はロール・ピッチ操作の時を除き 3 deg を超えなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=36）STS-125 では SRB の TVC が指令どおりに位置決めされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=52） |
-| VC-LRQ-SRB-23 | LRQ-SRB-23 | T（試験） | 根拠なし | （根拠なし）サーボ弁の多数決・切離しが働いた飛行の記録は取り込んだ Mission Report・Rogers 報告に無い。 |
-| VC-LRQ-SRB-24 | LRQ-SRB-24 | I（検査） | 根拠なし | （根拠なし）HPU の20回再使用を確かめた記録は取り込んだ資料に無い。STS-135 p32 は RSRB の HPU の軸受浸漬30日の要求に違反して放棄（waiver）を受けた記録で、再使用の実績ではない。 |
+| VC-LRQ-SRB-23 | LRQ-SRB-23 | T（試験） | 根拠なし | （根拠なし）SRB のアクチュエータの 4 つのサーボ弁の多数決と切離しが働いた記録は見つからなかった。当たった servovalve の記述（STS-59・78・87・115）はオービタの空力舵面（ASA・速度ブレーキ・ラダー）のものである。 |
+| VC-LRQ-SRB-24 | LRQ-SRB-24 | I（検査） | 根拠なし | （根拠なし）APU/HPU と油圧系が 20 回のミッションに再使用できることの検査の記録は見つからなかった。STS-135 p32 は HPU の放棄（waiver）を受けた記録で、再使用の実績ではない。 |
 | VC-LRQ-SRB-25 | LRQ-SRB-25 | D（実証） | 根拠あり | STS-54 では減速系は設計どおり機能し、両 SRB が降下中に観察され、回収された。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10）STS-125 でも回収域からの報告は、減速系が設計どおり機能したことを示した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=36） |
 | VC-LRQ-SRB-26 | LRQ-SRB-26 | D（実証） | 根拠あり | STS-114 では回収船が両方の SRB とフラスタムを発見して確保した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=27） |
 | VC-LRQ-SRB-27 | LRQ-SRB-27 | D（実証） | 根拠あり | STS-122 では左 SRB の主傘3本のうち1本が開かず、着水速度は公称 75 ft/s に対し約 92 ft/s となったが、後部スカートの構造と内部の部品に大きな損傷は無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-122%20Space%20Shuttle%20Mission%20Report.pdf#page=32） |
-| VC-LRQ-SRB-28 | LRQ-SRB-28 | D（実証） | 根拠なし | （根拠なし）STS-35 では右 SRB の主傘が着水時に切り離されなかった（sts35 p8）。要求を満たした記録として使えない。 |
+| VC-LRQ-SRB-28 | LRQ-SRB-28 | D（実証） | 根拠なし | （根拠なし）Rev. CB で Mission Report 133冊（STS-1〜135）などを探し直した。SWAR の作動は STS-100・STS-105 で 48個とも確かめられたが、STS-101 では 1個が海水に触れても吊り索を放さず、報告は調査の継続中とするだけで原因と是正の記録が無い。反する記録が未解決のまま併存する。 |
 | VC-LRQ-SRB-29 | LRQ-SRB-29 | D（実証） | 根拠あり | STS-54 では両 SRB が回収され、KSC へ返されて分解と再整備に回された。（出典: https://ntrs.nasa.gov/api/citations/19940009462/downloads/19940009462.pdf#page=10）STS-135 でも両 SRB が分離・回収され、KSC へ返されて点検された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=32） |
 
 ## 22. 機能ブロックとの対応
@@ -1226,7 +1226,11 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 
 > **注記** 検証の根拠には、その要求の値そのものを確かめた記録ではなく、その機能が飛行で公称に働いたという Mission Report の記述で支えたものがある。根拠の強さは要求ごとに違う（本書の判断）。
 
-> **注記** 検証の根拠が見つからなかった要求は 217件で、理由は検証の表に書いた。
+> **注記** 検証の根拠が見つからなかった要求は 204件で、理由は検証の表に書いた。
+
+> **注記** 検証の根拠の調査（Rev. CB）：検証の根拠が無かった 217件を、取り込んだ Mission Report 133冊（STS-1〜135）・運用飛行規則の根拠の欄などで探し直し、13件（APU-02・APU-09・DPS-06・MECH-01・MECH-24・MPS-30・OMS-19・OMS-26・RCS-08・RCS-16・RCS-18・RCS-29・ET-17）を根拠あり（pass）にした。残る 204件は、構成・寸法・設計値の検査や認定試験の記録が公開されていないもの、起きていない故障や使われていない機能の記録が無いもの、運用飛行規則の根拠の欄が設計上の理由を述べるだけで解析の結果の値を示さないものが大半で、理由を各行で具体的に改めた。根拠ありの基準は本書の判断である：要求の主な機能について、検証方法に合う記録（飛行の運転・計測、規則の根拠の欄の解析、飛行後の検査）が働いたことを示し、反する記録が未解決のまま残らないものとした。一部の項目の記録が無いときは、各行の検証の根拠の末尾にその旨を書いた。故障や遅延を通した間接の記録だけのもの（LRQ-MECH-02）と、要求を満たさなかった記録が未解決のまま併存するもの（LRQ-SRB-28：STS-101 で SWAR 1個が吊り索を放さず、報告は調査の継続中とする）は、根拠なしのままにした。
+
+> **注記** 満たさなかった記録のある根拠あり：LRQ-APU-09（STS-62 で配管の燃料の凍結により逃がしが働かない期間があった。原因は打上げ前の雨水で、ヒータを切り替えて解凍した後は正常）、LRQ-ET-17（STS-1 は ET がタンブルしなかった。STS-29・STS-41B 以降は確認）、LRQ-MECH-24（STS-106 の左舷扉8・9のマイクロスイッチと STS-38 の右舷扉1・2でパージ位置に止まらなかった。着陸後で運用への影響はなかった）。いずれも原因が外的か、是正・冗長で吸収されたとみて pass のままにしたのは本書の判断である。調べた範囲で、資料の値が要求と食い違う記録は LRQ-SRB-05（CAIB p223：結合リングの引張強度が最小要求を下回る試験結果）と LRQ-ET-20（後の ET の TPS の材料が要求と違う）にある。どちらも根拠なしのままにして理由に書いた。fail の判定は作っていない（今後の課題）。
 
 ## 26. 参考文献
 
@@ -1836,9 +1840,29 @@ L3 の要求 457件の検証ケースと、検証の根拠を示す（根拠あ�
 604. NSTS-37452 STS-125 Mission Report（2010） Flight Control System（PDF p52） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=52
 605. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
 606. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
+607. STS-120 Space Shuttle Mission Report（JSC、102頁、486,685 バイト） （PDF p42） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-120%20Space%20Shuttle%20Mission%20Report.pdf#page=42
+608. STS-114 Mission Report STS-114 油圧（PDF p46） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=46
+609. STS-62 Space Shuttle Mission Report（1994、59頁、4,338,007 バイト） （PDF p7） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-62%20Space%20Shuttle%20Mission%20Report.pdf#page=7
+610. STS-62 Space Shuttle Mission Report（1994、59頁、4,338,007 バイト） （PDF p24） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-62%20Space%20Shuttle%20Mission%20Report.pdf#page=24
+611. STS-34 National Space Transportation System Mission Report（JSC、25頁、1,797,889 バイト） （PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-34%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=5
+612. STS-34 National Space Transportation System Mission Report（JSC、25頁、1,797,889 バイト） （PDF p15） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-34%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=15
+613. STS-29 National Space Transportation System Mission Report（JSC、32頁、2,121,209 バイト） （PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-29%20National%20Space%20Transportation%20System%20Mission%20Report.pdf#page=8
+614. STS-41B National Space Transportation Systems Program Mission Report（JSC、39頁、2,184,553 バイト） （PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-41B%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=8
+615. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p112） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=112
+616. STS-4 Orbiter Mission Report （PDF p47） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-4%20Orbiter%20Mission%20Report.pdf#page=47
+617. STS-106 Space Shuttle Mission Report（JSC、58頁、3,814,173 バイト） （PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-106%20Space%20Shuttle%20Mission%20Report.pdf#page=34
+618. STS-107 Space Shuttle Mission Report（JSC、42頁、324,246 バイト） （PDF p23） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-107%20Space%20Shuttle%20Mission%20Report.pdf#page=23
+619. STS-100 Space Shuttle Mission Report（JSC、63頁、4,665,231 バイト） （PDF p36） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-100%20Space%20Shuttle%20Mission%20Report.pdf#page=36
+620. STS-105 Space Shuttle Mission Report（JSC、52頁、3,819,756 バイト） （PDF p13） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-105%20Space%20Shuttle%20Mission%20Report.pdf#page=13
+621. NSTS-37418 STS-87 Space Shuttle Mission Report（NASA JSC、1998年2月、69頁、4,506,095 バイト。OCR のテキスト層） （PDF p33） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-87%20Space%20Shuttle%20Mission%20Report.pdf#page=33
+622. NSTS-37418 STS-87 Space Shuttle Mission Report（NASA JSC、1998年2月、69頁、4,506,095 バイト。OCR のテキスト層） （PDF p34） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-87%20Space%20Shuttle%20Mission%20Report.pdf#page=34
+623. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1262） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1262
+624. STS-85 Space Shuttle Mission Report（JSC、59頁、4,127,755 バイト） （PDF p10） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-85%20Space%20Shuttle%20Mission%20Report.pdf#page=10
+625. STS-106 Space Shuttle Mission Report（JSC、58頁、3,814,173 バイト） （PDF p22） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-106%20Space%20Shuttle%20Mission%20Report.pdf#page=22
 
 ## 27. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-12 | 初版作成（17系の L3 の要求 457件、検証の根拠あり 240件・根拠なし 217件、図225・226、SysML v2 テキスト） |
+| Rev. A | 2026-10-15 | 検証の根拠の調査で 13件を根拠ありに改め、残る根拠なしの理由を具体的に改めた（根拠あり 253件・根拠なし 204件）（Rev. CB） |

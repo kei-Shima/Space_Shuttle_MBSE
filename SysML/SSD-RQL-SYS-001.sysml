@@ -18,7 +18,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 循環ポンプは APU 制御器が対応する APU の運転指令を出すと自動的に切り離されること、APU が止まっているときは MPS/TVC 隔離弁とブレーキ隔離弁の操作に要る 100 psid 以上の圧力を循環ポンプで与えること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "操作に要する差圧 100 psid 以上"; phases = "PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'LRQ-APU-03'> LRQ_APU_03 {
             subject s : Parts::Part;
@@ -60,7 +60,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 燃料タンク隔離弁は電磁弁とし、両弁を閉じた後の熱の戻りで下流の圧力がタンク圧力より 40〜200 psi 高くなると逆方向に逃がし、弁の温度を弁ごとに2点（APU ごとに4点）計測すること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "逆流の逃がし 40〜200 psi 高、温度計測 弁ごとに2点"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
         requirement <'LRQ-APU-10'> LRQ_APU_10 {
             subject s : Parts::Part;
@@ -726,7 +726,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* FC MDM は通常ポート1で動作し、ポート1が故障したときは乗員がポート2を選び、ストリングの2台の MDM を同時に切り替えること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "ポート 2（ストリングの MDM 2 台を同時に切替）"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'LRQ-DPS-07'> LRQ_DPS_07 {
             subject s : Parts::Part;
@@ -1332,7 +1332,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 電動アクチュエータ（PDU）は、ET扉のセンタラインラッチを除き、モータの出力軸にトルクリミッタを持つこと。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "トルクリミッタ付き（ET扉のセンタラインラッチを除く）"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::inspect; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::inspect; status = "根拠あり"; }
         }
         requirement <'LRQ-MECH-02'> LRQ_MECH_02 {
             subject s : Parts::Part;
@@ -1470,7 +1470,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* ベント扉の一部は、地上のパージのための中間位置を持つこと。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "中間位置：一部の扉"; phases = "PH-1（打上げ前）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
         requirement <'LRQ-MECH-25'> LRQ_MECH_25 {
             subject s : Parts::Part;
@@ -1671,7 +1671,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 軌道上ではHYDRAULICS MPS/TVC ISOL VLV SYS 1〜3スイッチをCLOSEにして遮断弁下流の油圧漏れから守り、MPSダンプの後に再突入の格納位置へ首振りさせ、軌道離脱準備でATVCに再び通電してずれたノズルをその位置へ戻すこと。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "軌道上 CLOSE、離脱準備でATVC再通電"; phases = "PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
     }
     package <'LRQ-OMS'> LRQ_OMS {
@@ -1788,7 +1788,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* ポッドのヒータはA・Bのパッチが重ねて貼られているため同時には使わず、クロスフィード配管のヒータはA・B回路を1本に巻いているため両方を同時に入れられるようにし、故障処置手順（MAL 11.3）はSPEC 89やBFS THERMAL表示の限界外れに対してA14でもう一方のヒータ・サーモスタット回路へ切り替えて切り分けること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "ポッド：A/B同時使用禁止、配管：同時可"; phases = "PH-1（打上げ前）・PH-2（上昇）・PH-3（軌道）・PH-6（再突入）・PH-7（着陸後）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'LRQ-OMS-20'> LRQ_OMS_20 {
             subject s : Parts::Part;
@@ -1830,7 +1830,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* RCSタンクはOMSエンジンが必要とする流量を支えられないので後部RCSからOMSへ推進薬を送らず、クロスフィード配管の圧力変換器は計測誤差（34 psia）が大きいため、軌道上ではRCSマニホールドの圧力でクロスフィード配管の状態を確かめてからタンクから再加圧し、酸化剤49 psia・燃料35 psia未満なら配管を故障とすること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "誤差 34 psia、故障判定 酸化剤 49 psia・燃料 35 psia 未満"; phases = "PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'LRQ-OMS-27'> LRQ_OMS_27 {
             subject s : Parts::Part;
@@ -2064,7 +2064,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 主噴射器のヒータが OFF に故障した場合は、手動の噴射・優先度の変更・姿勢の変更で噴射器温度を 42（47）°F 超に保ち、噴射器温度が 162（157）°F を超えている間は原則として噴射しないこと。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "下限 42（47）°F、噴射禁止 162（157）°F 超"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'LRQ-RCS-09'> LRQ_RCS_09 {
             subject s : Parts::Part;
@@ -2112,7 +2112,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 系統を閉じるときはマニホールドからヘリウムタンクへ向かって、開くときはヘリウムタンクからマニホールドへ向かって操作し、両方のマニホールド圧が 130 psia 超なら隔離弁で直接再加圧し、130 psia 未満なら弁のバウンスと ZOT を避ける段階的な手順を使うこと。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "再加圧のしきい値 130 psia"; phases = "PH-2（上昇）・PH-3（軌道）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'LRQ-RCS-17'> LRQ_RCS_17 {
             subject s : Parts::Part;
@@ -2124,7 +2124,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 突入（EI〜マッハ1）には、重心位置に応じて後部 RCS の推進薬 1,175 lb か 1,375 lb を予約すること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "予約 1,175 lb または 1,375 lb"; phases = "PH-3（軌道）・PH-4（離脱準備）・PH-6（再突入）"; }
-            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::analyze; status = "根拠あり"; }
         }
         requirement <'LRQ-RCS-19'> LRQ_RCS_19 {
             subject s : Parts::Part;
@@ -2190,7 +2190,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* RM はマニホールド弁の状態を4つのマイクロスイッチ離散信号（OX OP・OX CL・FU OP・FU CL）から独自に評価し、閉になったマニホールドの噴射器を可用表から外し、ジレンマ（RCS RM DLMA）と電源故障（RCS PWR FAIL）を検知すること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "離散信号 4（OX OP・OX CL・FU OP・FU CL）"; phases = "PH-3（軌道）"; }
-            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
         requirement <'LRQ-RCS-30'> LRQ_RCS_30 {
             subject s : Parts::Part;
@@ -2547,7 +2547,7 @@ package SSD_RQL_SYS_001 {
             subject s : Parts::Part;
             doc /* 分離の直前にオービタの信号でタンブル系を作動させ、LO2タンク前部の2 inの弁を開いて残りのガスを噴き出し、ETを回転させること。 */
             @RequirementInfo { document = "SSD-RQL-SYS-001"; valueText = "弁 2 in"; phases = "PH-2（上昇）"; }
-            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::demo; status = "根拠あり"; }
         }
         requirement <'LRQ-ET-18'> LRQ_ET_18 {
             subject s : Parts::Part;
@@ -8601,7 +8601,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_apu_02 : Verification::VC_LRQ_APU_02 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.apu.cir;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_apu_03 : Verification::VC_LRQ_APU_03 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.apu.cir;
@@ -8629,7 +8629,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_apu_09 : Verification::VC_LRQ_APU_09 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.apu.ful;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_apu_10 : Verification::VC_LRQ_APU_10 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.apu.ful;
@@ -9065,7 +9065,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_dps_06 : Verification::VC_LRQ_DPS_06 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.dps.bus;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_dps_07 : Verification::VC_LRQ_DPS_07 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.dps.bus;
@@ -9461,7 +9461,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_mech_01 : Verification::VC_LRQ_MECH_01 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.mech.act;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_mech_02 : Verification::VC_LRQ_MECH_02 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.mech.act;
@@ -9553,7 +9553,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_mech_24 : Verification::VC_LRQ_MECH_24 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.mech.vnt;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_mech_25 : Verification::VC_LRQ_MECH_25 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.mech.vnt;
@@ -9685,7 +9685,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_mps_30 : Verification::VC_LRQ_MPS_30 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.mps.tvc;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_oms_01 : Verification::VC_LRQ_OMS_01 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.oms.eng;
@@ -9761,7 +9761,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_oms_19 : Verification::VC_LRQ_OMS_19 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.oms.thm;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_oms_20 : Verification::VC_LRQ_OMS_20 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.oms.thm;
@@ -9789,7 +9789,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_oms_26 : Verification::VC_LRQ_OMS_26 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.oms.xfd;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_oms_27 : Verification::VC_LRQ_OMS_27 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.oms.xfd;
@@ -9941,7 +9941,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_rcs_08 : Verification::VC_LRQ_RCS_08 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.htr;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_rcs_09 : Verification::VC_LRQ_RCS_09 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.htr;
@@ -9973,7 +9973,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_rcs_16 : Verification::VC_LRQ_RCS_16 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.ops;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_rcs_17 : Verification::VC_LRQ_RCS_17 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.ops;
@@ -9981,7 +9981,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_rcs_18 : Verification::VC_LRQ_RCS_18 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.ops;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_rcs_19 : Verification::VC_LRQ_RCS_19 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.prp;
@@ -10025,7 +10025,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_rcs_29 : Verification::VC_LRQ_RCS_29 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.rm;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_rcs_30 : Verification::VC_LRQ_RCS_30 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.rcs.rm;
@@ -10257,7 +10257,7 @@ package SSD_RQL_SYS_001 {
         }
         verification vc_lrq_et_17 : Verification::VC_LRQ_ET_17 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.et.sep;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_lrq_et_18 : Verification::VC_LRQ_ET_18 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.et.sep;

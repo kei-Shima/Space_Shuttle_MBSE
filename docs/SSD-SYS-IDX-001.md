@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. CA／2026-10-15　状態：検討用（公開資料に基づく）
+版・日付：Rev. CB／2026-10-15　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -548,8 +548,8 @@
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. C |
 | [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. H |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. C |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AP |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AN |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AQ |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AO |
 | [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. N |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
@@ -564,10 +564,10 @@
 | [SSD-RQM-SYS-001](SSD-RQM-SYS-001.md) | 要求モデル定義書（導出・充足・検証方法） | Rev. I |
 | [SSD-RQF-SYS-001](SSD-RQF-SYS-001.md) | 要求の形式化定義書（属性・制約・値による判定） | Rev. B |
 | [SSD-VER-SYS-001](SSD-VER-SYS-001.md) | 検証定義書（検証ケース・検証マトリクス） | Rev. K |
-| [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. C |
-| [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | 初版（Rev. -） |
-| [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | 初版（Rev. -） |
-| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. P |
+| [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. D |
+| [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | Rev. A |
+| [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | Rev. A |
+| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. Q |
 | [SSD-REQ-CW-001](SSD-REQ-CW-001.md) | 警告・警報（C/W）要求書（L2） | Rev. B |
 | [SSD-REQ-CREW-001](SSD-REQ-CREW-001.md) | 乗員系（CREW）要求書（L2） | Rev. D |
 | [SSD-REQ-EVA-001](SSD-REQ-EVA-001.md) | 船外活動（EVA/EMU）要求書（L2） | Rev. C |
@@ -593,7 +593,7 @@
 | [SSD-PAR-ORB-001](SSD-PAR-ORB-001.md) | パラメトリック定義書（消耗品・電力・排熱の収支） | Rev. H |
 | [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. C |
 | [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) | 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） | 初版（Rev. -） |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | 初版（Rev. -） |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. A |
 | [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. H |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. E |
@@ -707,3 +707,4 @@
 | Rev. BY | 2026-10-12 | ECLSS 以外の系の故障モードとして、オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 と図227〜229 を追加し、SysML v2 テキスト SysML/SSD-FMX-ORB-001.sysml で示した（13系・52ブロックの機能の故障モード 173件。原因・影響・検知・処置と、ハザード解析の原因への対応）。トレースを数え直し（機能ブロックの故障解析は 163/206、GAP-07 は 43件）、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 48件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（121分類）を確かめた。関係する文書に参照を注記 |
 | Rev. BZ | 2026-10-12 | 上昇・再突入の時間変化のモデルとして、上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 と図230〜232 を追加し、SysML v2 テキスト SysML/SSD-TRJ-ORB-001.sysml で示した（パラメータ 17件、式 8件、シナリオ 4件。上昇の質量と推力加速度：3 g の絞りの開始 453.5 s・MECO の上限 524.7 s、再突入の時刻表の点ごとの動圧・減速度・加熱率の相対値。実績との比較 11件、要求・飛行規則の限界との照合 9件）。STS-1 の運用飛行プロファイル（JSC-14483 Vol. III）を取り込んだ。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた。関係する文書に参照を注記 |
 | Rev. CA | 2026-10-15 | 英語の略称の正式名称がどこにも無かったため、略語表 SSD-ACR-SYS-001 を追加した（386行。第一の出典は運用飛行規則 Vol. A の付録A、付録A に無い語・意味が違う語は資料の本文による）。文書番号の符号と文書内の ID の接頭辞の意味も示した。図・SysML・要求の値は変えていない。SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |
+| Rev. CB | 2026-10-15 | 検証の根拠が無かった L3 の要求・インタフェース要求 231件（SSD-RQL-SYS-001 の 217件・SSD-RQL-ECL-001 の 10件・SSD-IRQ-SYS-001 の 4件）を、取り込んだ Mission Report 133冊などで探し直した。16件を根拠ありにし（L3 は根拠あり 253件・根拠なし 204件、ECLSS の L3 は 95件・10件のまま、インタフェース要求は 58件・1件）、残りは理由を具体的に改めた。トレースを数え直し（GAP-01 は 215件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた。ibiblio の Mission Report 120冊を取り込んだ（STS-5〜7・9・26〜34・36〜40・41B〜D・41G・41・42〜53・55〜58 ほか、同じ報告を別の名前で入れていない） |

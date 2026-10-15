@@ -169,13 +169,13 @@ package SSD_IRQ_SYS_001 {
             subject s : Parts::Part;
             doc /* DPS は LPS との間で、GPC 5台と GSE/LPS を結ぶ双方向のシリアルディジタルの打上げデータバス2本（LF1・LA1 のポートは自動切替）により、データ・指令を伝えること。 */
             @RequirementInfo { document = "SSD-IRQ-SYS-001"; valueText = "双方向データバス2本、ポートは自動切替"; phases = "PH-1（打上げ前）"; }
-            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
         requirement <'IRQ-ORB-18'> IRQ_ORB_18 {
             subject s : Parts::Part;
             doc /* DPS は SRB へ、データ・指令を打上げデータバス経由で、SRB の MDM 4台（LL1・LL2・LR1・LR2）に各 SRB 2台の構成で伝えること。 */
             @RequirementInfo { document = "SSD-IRQ-SYS-001"; valueText = "SRB MDM 4台（LL1・LL2・LR1・LR2）"; phases = "PH-1（打上げ前）・PH-2（上昇）"; }
-            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
         requirement <'IRQ-ORB-19'> IRQ_ORB_19 {
             subject s : Parts::Part;
@@ -343,7 +343,7 @@ package SSD_IRQ_SYS_001 {
             subject s : Parts::Part;
             doc /* CT は EVA へ UHF の音声・データを 417.1 または 414.2 MHz の TDMA 5スロットで、低出力約 80 mW で伝え、主・予備の無線機（EVA STRING 1/2）を持つこと。 */
             @RequirementInfo { document = "SSD-IRQ-SYS-001"; valueText = "417.1 または 414.2 MHz、TDMA 5スロット、低出力約 80 mW、主・予備の無線機（EVA STRING 1/2）"; phases = "PH-5（EVA）"; }
-            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠なし"; }
+            @VerificationIntent { method = VerificationMethodKind::test; status = "根拠あり"; }
         }
         requirement <'IRQ-ORB-47'> IRQ_ORB_47 {
             subject s : Parts::Part;
@@ -1437,11 +1437,11 @@ package SSD_IRQ_SYS_001 {
         }
         verification vc_irq_orb_17 : Verification::VC_IRQ_ORB_17 {
             subject :>> s = SSD_BLK_SYS_001::context.sts;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_irq_orb_18 : Verification::VC_IRQ_ORB_18 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_irq_orb_19 : Verification::VC_IRQ_ORB_19 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.eclss;
@@ -1553,7 +1553,7 @@ package SSD_IRQ_SYS_001 {
         }
         verification vc_irq_orb_46 : Verification::VC_IRQ_ORB_46 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.ct;
-            return :>> verdict = VerdictKind::inconclusive;
+            return :>> verdict = VerdictKind::pass;
         }
         verification vc_irq_orb_47 : Verification::VC_IRQ_ORB_47 {
             subject :>> s = SSD_BLK_SYS_001::context.sts.orb.pls;

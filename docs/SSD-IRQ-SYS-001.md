@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-IRQ-SYS-001 |
 | 表題 | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） |
-| 版・日付 | 初版（Rev. -）／2026-10-11 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図212 インタフェース要求の一覧（上位の IF）・図213 上位の要求からインタフェース要求への導出 |
@@ -177,7 +177,7 @@
 
 ## 6. 検証
 
-インタフェース要求 59件の検証ケースと、検証の根拠を示す（根拠あり 55件・根拠なし 4件）。
+インタフェース要求 59件の検証ケースと、検証の根拠を示す（根拠あり 58件・根拠なし 1件）。
 
 | 検証ケース | 要求 | 検証方法 | 状態 | 検証の根拠 |
 |---|---|---|---|---|
@@ -207,8 +207,8 @@
 | VC-IRQ-ORB-14 | IRQ-ORB-14 | T（試験） | 根拠あり | STS-1 ではオービタの母線電圧がすべて設計限界の内側に保たれ、電力の分配・制御系は良好に働いた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=35）STS-114 の EPDC 系は全フェーズで公称に働き、燃料電池の電圧・電流と必須母線の電圧を含む項目の解析で異常が無かった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=48） |
 | VC-IRQ-ORB-15 | IRQ-ORB-15 | T（試験） | 根拠あり | STS-114 では、エンジン入口の正味吸込み圧力（NPSP）の要求が飛行を通じて満たされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=33）STS-114 の ET の評価は、推進薬の充填と飛行運用に関する ET の目的と要求がすべて満たされたとした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=31） |
 | VC-IRQ-ORB-16 | IRQ-ORB-16 | T（試験） | 根拠あり | STS-114 では S帯系統1を約24時間運用して File IX の要求（24±4時間）を満たした。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=53）STS-8 の通信の評価に、TDRSS による Orbiter Ku帯の支援は優良だったと記されている。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=19） |
-| VC-IRQ-ORB-17 | IRQ-ORB-17 | T（試験） | 根拠なし | （根拠なし）STS-1〜4・8・108・114・122・125・135 の Mission Report を探したが、打上げデータバスの動作を評価した記録は無く、運用飛行規則（fr）と SCOM に設計・規則の記述があるだけだった。 |
-| VC-IRQ-ORB-18 | IRQ-ORB-18 | T（試験） | 根拠なし | （根拠なし）Mission Report（STS-1〜4・8・108・114・122・125・135）に SRB 用 MDM の動作の評価は無く、SODB と SCOM に設計の記述があるだけだった。 |
+| VC-IRQ-ORB-17 | IRQ-ORB-17 | T（試験） | 根拠あり | STS-105 の Mission Report は、打上げの約3秒前に PASS の GPC 4台が打上げデータバスで2回の入出力エラーを検知し、飛行ソフトウェアが要求どおりに応答して、3回目のエラーを受けた時点で GPC が LDB 1 から LDB 2 へ切り替わったと記す。2本の打上げデータバスと GPC の自動切替が打上げ前の運用で働いた記録である。切り替わったのは GPC 側のバスで、2本が双方向であることと GPC 5台の接続は、この記録から確かめられない。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-105%20Space%20Shuttle%20Mission%20Report.pdf#page=8） |
+| VC-IRQ-ORB-18 | IRQ-ORB-18 | T（試験） | 根拠あり | STS-129 の飛行不具合の記録は、GPC が LDB 2 を通じて左 SRB の MDM LL2 へ非重要データを要求する通信で、打上げ時に一過性の入出力エラーが1回出たが、その後 SRB の入出力は SRB 分離まで公称に動作したと記す。DPS が打上げデータバス経由で SRB の MDM と通信した飛行の記録である。記録が名指すのは MDM LL2 だけで、4台（LL1・LL2・LR1・LR2）の構成は確かめていない。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-129%20Space%20Shuttle%20Mission%20Report.pdf#page=90） |
 | VC-IRQ-ORB-19 | IRQ-ORB-19 | T（試験） | 根拠あり | STS-125 では煙検知の自己点検が完了し、煙検知の A・B 両方のセンサ回路が点検の要求に合格した。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=49） |
 | VC-IRQ-ORB-20 | IRQ-ORB-20 | T（試験） | 根拠あり | STS-114 では燃料電池のパージが約38、118、206、299、322時間 MET に5回行われ、パージ用ヒータ系の熱性能は公称だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=44） |
 | VC-IRQ-ORB-21 | IRQ-ORB-21 | T（試験） | 根拠あり | STS-114 の上昇では、MPS の TVC が指令どおりに位置決めされ、駆動器電流は正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=51） |
@@ -218,7 +218,7 @@
 | VC-IRQ-ORB-25 | IRQ-ORB-25 | D（実証） | 根拠あり | STS-114 では ET の分離が公称で、MECO は予想の許容範囲に収まった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=32）STS-125 でも ET の分離が公称で、MECO は予定どおりに起きた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
 | VC-IRQ-ORB-26 | IRQ-ORB-26 | D（実証） | 根拠あり | STS-114 では SRB の分離が121.80 sec で公称だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=27） |
 | VC-IRQ-ORB-27 | IRQ-ORB-27 | T（試験） | 根拠あり | STS-125 では ET の電気機器と計装がすべて満足に動作し、パージとヒータの運転が適切に監視・実施された。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=37） |
-| VC-IRQ-ORB-28 | IRQ-ORB-28 | T（試験） | 根拠なし | （根拠なし）Mission Report（STS-1〜4・8・108・114・122・125・135）の SRB の節は、分離前の SRB 系の電源断を書くだけで、オービタ母線から SRB 母線 A・B・C への給電の評価は無かった。 |
+| VC-IRQ-ORB-28 | IRQ-ORB-28 | T（試験） | 根拠なし | （根拠なし）Rev. CB で Mission Report 133冊（STS-1〜135）などを探し直した。オービタから SRB への給電は STS-9（仕様内）と STS-82（31.12 V）で確かめられたが、STS-69 の打上げ試行で右 SRB の B 母線の地上測定が 32.04 V と要求の上限 32 V を超え（免除された）、記録が混在する。3系統の構成とバックアップの記録も無い。 |
 | VC-IRQ-ORB-29 | IRQ-ORB-29 | D（実証） | 根拠あり | STS-108 では2回の充填で LCC の違反が無く、液体水素の充填は全工程で正常だった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=23）STS-114 では ET の推進薬充填に関する目的と要求が第2回の秒読みで満たされた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=31） |
 | VC-IRQ-ORB-30 | IRQ-ORB-30 | D（実証） | 根拠あり | STS-114 では PRSD の5組のタンクが搭載され、最初の打上げ試行に備えた搭載も行われた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf#page=43） |
 | VC-IRQ-ORB-31 | IRQ-ORB-31 | T（試験） | 根拠あり | STS-1 では地上電源の負荷が T-20分の保持の間に燃料電池へ移され、完全な内部電力への移行は T-3分30秒に地上発射シーケンサが自動で行った（移行の時刻は特性表の T-50秒と異なる）。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=34） |
@@ -236,7 +236,7 @@
 | VC-IRQ-ORB-43 | IRQ-ORB-43 | D（実証） | 根拠あり | STS-1 の上昇中、乗員の耳栓は MASTER ALARM の音だけを通したため、クラクソンは聞こえなかった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=232） |
 | VC-IRQ-ORB-44 | IRQ-ORB-44 | D（実証） | 根拠あり | STS-1 の飲料水の貯蔵系は飛行中正常で、飲用ステーションへの飲料水は冷やされ、乗員に受け入れられた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=58） |
 | VC-IRQ-ORB-45 | IRQ-ORB-45 | D（実証） | 根拠あり | STS-125 では EMU の点検を問題なく終えた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=13）STS-125 の EVA 2 は、2着の EMU が電力を電池へ切り替えて始まった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf#page=17） |
-| VC-IRQ-ORB-46 | IRQ-ORB-46 | T（試験） | 根拠なし | （根拠なし）STS-1〜4・114・122・125・135 の Mission Report を探したが、EVA 中の 417.1／414.2 MHz の無線そのものの評価の記述は見つからなかった（STS-2 は EVA/ATC UHF の機上機器の評価のみ、STS-122 の SSOR は ISS との空間通信の記述）。 |
+| VC-IRQ-ORB-46 | IRQ-ORB-46 | T（試験） | 根拠あり | STS-100 の Mission Report は、宇宙間通信系が最初の EVA を支え、EVA の間じゅう公称の通信が保たれたと記し、STS-108 の報告は、SSOR 1 から SSOR 2 へ切り替えて雑音を解消したあと、EVA 中は通信の問題が無く、乗員が通信の質の高さを述べたと記す。主・予備の無線機の切替を含め、EVA の通信が働いた飛行の記録である。417.1／414.2 MHz・TDMA 5スロット・約 80 mW の値は記録に無い。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-100%20Space%20Shuttle%20Mission%20Report.pdf#page=10）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=36）（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-117%20Space%20Shuttle%20Mission%20Report.pdf#page=70） |
 | VC-IRQ-ORB-47 | IRQ-ORB-47 | I（検査） | 根拠あり | STS-3 では RMS 位置決め機構が正常に働き、台座と連結部の位置合わせとロックは飛行後の検査で確認され、動作時間は2モータの予測の範囲内であった。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=50） |
 | VC-IRQ-ORB-48 | IRQ-ORB-48 | T（試験） | 根拠あり | STS-3 では、MCIU が腕の選択信号を電源投入から1秒遅らせる設計が低温の RMS の起動で間に合わず、手首ピッチのエンコーダ検査の誤警報が出た。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=125） |
 | VC-IRQ-ORB-49 | IRQ-ORB-49 | T（試験） | 根拠あり | STS-3 の CCTV は地上と乗員の指令で制御され、地上へ良質の映像を実時間と再生で送ったが、RMS の手首カメラとペイロードベイカメラ C で部品故障による短絡が起きた。（出典: https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=28） |
@@ -249,12 +249,12 @@ IF の種別ごとの、インタフェース要求の数と検証の状態を�
 |---|---|---|---|
 | 推進薬・流体 | 11 | 11 | 0 |
 | 構造・荷重 | 6 | 6 | 0 |
-| データ・指令 | 25 | 23 | 2 |
-| RF（無線） | 3 | 2 | 1 |
+| データ・指令 | 25 | 25 | 0 |
+| RF（無線） | 3 | 3 | 0 |
 | 油圧 | 3 | 3 | 0 |
 | 熱 | 7 | 7 | 0 |
 | 電力（28 | 4 | 3 | 1 |
-| 計 | 59 | 55 | 4 |
+| 計 | 59 | 58 | 1 |
 
 ## 8. 図
 
@@ -276,13 +276,9 @@ IF の種別ごとの、インタフェース要求の数と検証の状態を�
 
 > **注記** 検証の根拠には、IF そのものの計測の記録ではなく、その IF を含む系が飛行で公称に働いたという Mission Report の記述や、不具合の記録（IF が働いていたことを間接に示すもの）で支えたものがある。特性値そのものを確かめた記録ではないので、根拠の強さは要求ごとに違う（本書の判断）。
 
-> **注記** 検証の根拠が見つからなかった要求：IRQ-ORB-17（IF-ORB-17）。STS-1〜4・8・108・114・122・125・135 の Mission Report を探したが、打上げデータバスの動作を評価した記録は無く、運用飛行規則（fr）と SCOM に設計・規則の記述があるだけだった。
+> **注記** 検証の根拠が見つからなかった要求：IRQ-ORB-28（IF-ORB-28）。Rev. CB で Mission Report 133冊（STS-1〜135）などを探し直した。オービタから SRB への給電は STS-9（仕様内）と STS-82（31.12 V）で確かめられたが、STS-69 の打上げ試行で右 SRB の B 母線の地上測定が 32.04 V と要求の上限 32 V を超え（免除された）、記録が混在する。3系統の構成とバックアップの記録も無い。
 
-> **注記** 検証の根拠が見つからなかった要求：IRQ-ORB-18（IF-ORB-18）。Mission Report（STS-1〜4・8・108・114・122・125・135）に SRB 用 MDM の動作の評価は無く、SODB と SCOM に設計の記述があるだけだった。
-
-> **注記** 検証の根拠が見つからなかった要求：IRQ-ORB-28（IF-ORB-28）。Mission Report（STS-1〜4・8・108・114・122・125・135）の SRB の節は、分離前の SRB 系の電源断を書くだけで、オービタ母線から SRB 母線 A・B・C への給電の評価は無かった。
-
-> **注記** 検証の根拠が見つからなかった要求：IRQ-ORB-46（IF-ORB-46）。STS-1〜4・114・122・125・135 の Mission Report を探したが、EVA 中の 417.1／414.2 MHz の無線そのものの評価の記述は見つからなかった（STS-2 は EVA/ATC UHF の機上機器の評価のみ、STS-122 の SSOR は ISS との空間通信の記述）。
+> **注記** 検証の根拠の調査（Rev. CB）：検証の根拠が無かった 4件を Mission Report 133冊で探し直し、3件（IRQ-ORB-17・IRQ-ORB-18・IRQ-ORB-46）を根拠あり（pass）にした。基準は SSD-RQL-SYS-001 の注記と同じ（要求の主な機能が働いた記録があり、反する記録が未解決で併存しない）。一部の項目の記録が無いときは各行の検証の根拠の末尾に書いた。満たさなかった記録のある根拠あり：IRQ-ORB-18（STS-129 の打上げ時に LDB 2 の MDM LL2 との通信で一過性の入出力エラーが1回。T-0 アンビリカルの切離しの短い雑音で、その後は SRB 分離まで公称）、IRQ-ORB-46（STS-117 で SSOR の主ストリングがフレーム同期の異常で失われ、乗員がストリング 2 へ切り替えて EVA を行った。冗長で吸収されたとみたのは本書の判断）。IRQ-ORB-28 は、STS-9・STS-82 では仕様内だったが、STS-69 の打上げ試行で右 SRB の B 母線の地上測定が 32.04 V と要求の上限 32 V を超えた（免除された）ので、記録が混在するとして根拠なしのままにした。
 
 ## 11. 参考文献
 
@@ -453,9 +449,15 @@ IF の種別ごとの、インタフェース要求の数と検証の状態を�
 165. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） STS-3 Mission Report 2.3 CCTV（PDF p28） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=28
 166. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
 167. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
+168. STS-105 Space Shuttle Mission Report（JSC、52頁、3,819,756 バイト） （PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-105%20Space%20Shuttle%20Mission%20Report.pdf#page=8
+169. STS-129 Space Shuttle Mission Report（JSC、105頁、969,886 バイト） （PDF p90） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-129%20Space%20Shuttle%20Mission%20Report.pdf#page=90
+170. STS-100 Space Shuttle Mission Report（JSC、63頁、4,665,231 バイト） （PDF p10） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-100%20Space%20Shuttle%20Mission%20Report.pdf#page=10
+171. STS-108 Mission Report （PDF p36） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=36
+172. STS-117 Space Shuttle Mission Report（JSC、106頁、501,835 バイト） （PDF p70） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-117%20Space%20Shuttle%20Mission%20Report.pdf#page=70
 
 ## 12. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-11 | 初版作成（インタフェース要求 59件：IF-SYS 10件・IF-ORB 49件、検証の根拠あり 55件・根拠なし 4件、図212・213、SysML v2 テキスト） |
+| Rev. A | 2026-10-15 | 検証の根拠の調査で 3件を根拠ありに改めた（根拠あり 58件・根拠なし 1件）（Rev. CB） |

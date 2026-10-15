@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. AP／2026-10-15 |
+| 版・日付 | Rev. AQ／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -54,7 +54,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 33 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2488 | 105 | 0 | 0 |
 | 34 | SysML/SSD-IRQ-SYS-001.sysml | インタフェース要求（上位の IF）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 1571 | 59 | 0 | 0 |
 | 35 | SysML/SSD-RQL-SYS-001.sysml | 下位要求（L3：ECLSS 以外の17系）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 10427 | 457 | 0 | 0 |
-| 36 | SysML/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-GNC-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 813 | 6 | 0 | 0 |
+| 36 | SysML/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-GNC-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 797 | 6 | 0 | 0 |
 | 37 | SysML/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007 | 349 | 46 | 0 | 0 |
 | 38 | SysML/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
 | 39 | SysML/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
@@ -346,3 +346,4 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. AN | 2026-10-12 | 読み込むパッケージに Rev. BY の SSD-FMX-ORB-001 を加えた、文書とモデルの一致を 121分類にした（Rev. BY） |
 | Rev. AO | 2026-10-12 | 読み込むパッケージに Rev. BZ の SSD-TRJ-ORB-001 を加えた、文書とモデルの一致を 125分類にした（Rev. BZ） |
 | Rev. AP | 2026-10-15 | Rev. CA の SSD-ACR-SYS-001（略語表）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CA） |
+| Rev. AQ | 2026-10-15 | Rev. CB（検証の根拠の調査）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CB） |
