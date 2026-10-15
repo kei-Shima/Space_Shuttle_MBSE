@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. CC／2026-10-15　状態：検討用（公開資料に基づく）
+版・日付：Rev. CD／2026-10-15　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -236,6 +236,11 @@
 - [図230 上昇の質量と推力加速度の時間変化](../html/SSD-SYS-ARC-001_p230_trj_ascent.svg)
 - [図231 再突入の高度・速度と動圧・減速度の時間変化](../html/SSD-SYS-ARC-001_p231_trj_entry.svg)
 - [図232 上昇・再突入のモデルと実績・限界の比較](../html/SSD-SYS-ARC-001_p232_trj_compare.svg)
+- [図233 ECLSS 電力（ARS 系の機器）内部ブロック図](../html/SSD-SYS-ARC-001_p233_ibd_eclss_pwra.svg)
+- [図234 ECLSS 電力（ARS 以外の機器）内部ブロック図](../html/SSD-SYS-ARC-001_p234_ibd_eclss_pwrb.svg)
+- [図235 ARS の補い 内部ブロック図](../html/SSD-SYS-ARC-001_p235_ibd_ars_extra.svg)
+- [図236 エアロック支援系 内部ブロック図](../html/SSD-SYS-ARC-001_p236_ibd_als.svg)
+- [図237 煙検知・消火ほか 内部ブロック図](../html/SSD-SYS-ARC-001_p237_ibd_fds.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -546,10 +551,10 @@
 | [SSD-ETS-SYS-001](SSD-ETS-SYS-001.md) | ET・SRB・TPS の内部ブロック・状態定義書（推進薬の供給と分離、SRB の燃焼と回収、熱防護の熱の流れ、飛行中の TPS の点検） | Rev. A |
 | [SSD-UC-ORB-001](SSD-UC-ORB-001.md) | 運用シナリオ・ユースケース定義書（ユースケース・ランデブー・秒読み・ペイロード放出・アボート） | Rev. A |
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. C |
-| [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. H |
+| [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. I |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. C |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AR |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AP |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AS |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AQ |
 | [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. N |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
@@ -567,7 +572,7 @@
 | [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. D |
 | [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | Rev. A |
 | [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | Rev. A |
-| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. R |
+| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. S |
 | [SSD-REQ-CW-001](SSD-REQ-CW-001.md) | 警告・警報（C/W）要求書（L2） | Rev. B |
 | [SSD-REQ-CREW-001](SSD-REQ-CREW-001.md) | 乗員系（CREW）要求書（L2） | Rev. D |
 | [SSD-REQ-EVA-001](SSD-REQ-EVA-001.md) | 船外活動（EVA/EMU）要求書（L2） | Rev. C |
@@ -593,7 +598,7 @@
 | [SSD-PAR-ORB-001](SSD-PAR-ORB-001.md) | パラメトリック定義書（消耗品・電力・排熱の収支） | Rev. H |
 | [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. C |
 | [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) | 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） | 初版（Rev. -） |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. B |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. C |
 | [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. H |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. E |
@@ -709,3 +714,4 @@
 | Rev. CA | 2026-10-15 | 英語の略称の正式名称がどこにも無かったため、略語表 SSD-ACR-SYS-001 を追加した（386行。第一の出典は運用飛行規則 Vol. A の付録A、付録A に無い語・意味が違う語は資料の本文による）。文書番号の符号と文書内の ID の接頭辞の意味も示した。図・SysML・要求の値は変えていない。SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |
 | Rev. CB | 2026-10-15 | 検証の根拠が無かった L3 の要求・インタフェース要求 231件（SSD-RQL-SYS-001 の 217件・SSD-RQL-ECL-001 の 10件・SSD-IRQ-SYS-001 の 4件）を、取り込んだ Mission Report 133冊などで探し直した。16件を根拠ありにし（L3 は根拠あり 253件・根拠なし 204件、ECLSS の L3 は 95件・10件のまま、インタフェース要求は 58件・1件）、残りは理由を具体的に改めた。トレースを数え直し（GAP-01 は 215件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた。ibiblio の Mission Report 120冊を取り込んだ（STS-5〜7・9・26〜34・36〜40・41B〜D・41G・41・42〜53・55〜58 ほか、同じ報告を別の名前で入れていない） |
 | Rev. CC | 2026-10-15 | 故障解析の対応が無かった ECLSS の機能ブロック 43件（GAP-07）を埋めた。機器のあるブロック 27件に機能の故障モード 66件、監視のブロック 2件（AVB-MON・RCRS-MON）に計装の故障の故障モード 2件を足し（計 68件。資料に書かれた故障 62件・本書の判断 6件）、運用管理（OPS）・監視（MON）のブロック 14件は機器の故障モードが当てはまらないと判断して、トレースの切れ目の分類 GAP-12 に区分した。ECLSS の故障モード定義書 SSD-FMX-ECL-001 と図176・SysML v2 テキストを改め、トレースを数え直し（GAP-07 は 0件・GAP-12 は 14件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた。ECLSS の地上冷却系の LLIS 資料（KSC）を取り込んだ |
+| Rev. CD | 2026-10-15 | ECLSS の IF のうち物理の流れ（流体・熱・電力）が通っていなかった 75件に、内部ブロック図 5件（機器 82件・流れ 95件）で機器どうしの流れを付けた。下位 IF の流れを詳しくしている上位 IF 57件には、その流れから上位 IF への詳細化を足した。内部ブロック・流れ定義書 SSD-IBD-ORB-001 と SysML v2 テキストを作り直し、トレースを数え直し（GAP-05 は 107件・GAP-08 は 8件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |

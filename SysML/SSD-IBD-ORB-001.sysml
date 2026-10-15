@@ -1,7 +1,7 @@
 // SysML v2 テキスト：内部ブロック図（機器の接続と、流れる物・量と単位）
 // SSD-IBD-ORB-001 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） の表から生成（lib/build_docs_au.py・lib/ibdmodel2.py・rev_an/andata.py・rev_au/audata.py）。値の根拠の頁は SSD-IBD-ORB-001 にある。
 package SSD_IBD_ORB_001 {
-    doc /* SSD-IBD-ORB-001 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位）。図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162 と同じ部品・ポート・流れ・値。機器は構造モデル（SSD-BLK-SYS-001）の機能ブロックの部品の中に置き、流れは IF を詳しくする（#refinement）。 */
+    doc /* SSD-IBD-ORB-001 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位）。図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162・図233・図234・図235・図236・図237 と同じ部品・ポート・流れ・値。機器は構造モデル（SSD-BLK-SYS-001）の機能ブロックの部品の中に置き、流れは IF を詳しくする（#refinement）。 */
     private import SSD_BLK_SYS_001::*;
     private import ModelingMetadata::*;
     private import ScalarValues::*;
@@ -329,6 +329,7 @@ package SSD_IBD_ORB_001 {
         attribute dewPoint : ThermodynamicTemperatureValue[0..*] { doc /* 温度（資料の単位 °F） */ }
         attribute relativeHumidity : Real[0..*] { doc /* 数値（資料の単位 %） */ }
         attribute ppCO2 : Real[0..*] { doc /* 数値（資料の単位 mmHg） */ }
+        attribute differentialPressure : Real[0..*] { doc /* 数値（資料の単位 inH2O） */ }
     }
     port def CabinAirPort :> FluidPort { out item :>> fluid : CabinAir; }
     item def EquipmentCoolingAir :> Fluid {
@@ -477,6 +478,78 @@ package SSD_IBD_ORB_001 {
         doc /* 給水・廃水系の計測（タンク量・圧力・ダンプ管とノズルの温度、SPEC 66／BFS THERMAL）（データ・指令） */
     }
     port def WaterSystemTelemetryPort :> DataPort { out item :>> dataCommand : WaterSystemTelemetry; }
+    item def ArsSignalAcPower :> ElectricPower {
+        doc /* コントローラ・信号調整器への交流電力（1つの相、パネル L4 の1個の遮断器から）（電力） */
+        attribute voltage : ElectricPotentialDifferenceValue[0..*] { doc /* 電圧（資料の単位 V） */ }
+    }
+    port def ArsSignalAcPowerPort :> PowerPort { out item :>> electricPower : ArsSignalAcPower; }
+    item def ArsSensorExcitation :> ElectricPower {
+        doc /* 信号調整器が計測機器（トランスデューサ・速度センサ）へ供給する励起電力（電力） */
+    }
+    port def ArsSensorExcitationPort :> PowerPort { out item :>> electricPower : ArsSensorExcitation; }
+    item def EclssFanAc3Phase :> ElectricPower {
+        doc /* ECLSS のファン・分離器への三相交流電力（パネル MA73C の遮断器から）（電力） */
+        attribute voltage : ElectricPotentialDifferenceValue[0..*] { doc /* 電圧（資料の単位 V） */ }
+    }
+    port def EclssFanAc3PhasePort :> PowerPort { out item :>> electricPower : EclssFanAc3Phase; }
+    item def EmuAirlockPower :> ElectricPower {
+        doc /* EMU へ給電するエアロックの電力（パネル AW18H の電源・バッテリ充電器から）（電力） */
+        attribute voltage : ElectricPotentialDifferenceValue[0..*] { doc /* 電圧（資料の単位 V） */ }
+        attribute current : ElectricCurrentValue[0..*] { doc /* 電流（資料の単位 A） */ }
+    }
+    port def EmuAirlockPowerPort :> PowerPort { out item :>> electricPower : EmuAirlockPower; }
+    item def FireSuppressionFirePower :> ElectricPower {
+        doc /* 消火剤ボトルの PIC を作動させる電力（AGENT DISCH 押しボタンの後、1秒の遅れ）（電力） */
+        attribute voltage : ElectricPotentialDifferenceValue[0..*] { doc /* 電圧（資料の単位 V） */ }
+    }
+    port def FireSuppressionFirePowerPort :> PowerPort { out item :>> electricPower : FireSuppressionFirePower; }
+    item def RcrsBedAir :> Fluid {
+        doc /* RCRS のベッドを通る空気・ベッドから抜く空気（吸着中のベッドへの送気、再生ベッドの ullage-save と均圧）（推進薬・流体） */
+        attribute massFlowRate : MassFlowRateValue[0..*] { doc /* 質量流量（資料の単位 lb/h） */ }
+        attribute pressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psia） */ }
+    }
+    port def RcrsBedAirPort :> FluidPort { out item :>> fluid : RcrsBedAir; }
+    item def CanisterExchangeLoad :> StructuralLoad {
+        doc /* キャニスタの交換（予備を収納区画から取り出して使用位置へ装着する物の移動）（構造・荷重） */
+        attribute mass : MassValue[0..*] { doc /* 質量（資料の単位 lb） */ }
+    }
+    port def CanisterExchangeLoadPort :> LoadPort { out item :>> structuralLoad : CanisterExchangeLoad; }
+    item def AirlockAtmosphere :> Fluid {
+        doc /* エアロックの雰囲気（均圧・減圧で乗員室・船外との間を移る空気）（推進薬・流体） */
+        attribute pressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psia） */ }
+        attribute differentialPressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psid） */ }
+        attribute massFlowRate : MassFlowRateValue[0..*] { doc /* 質量流量（資料の単位 lb/h） */ }
+    }
+    port def AirlockAtmospherePort :> FluidPort { out item :>> fluid : AirlockAtmosphere; }
+    item def EmuServiceOxygen :> Fluid {
+        doc /* SCU を通して EMU へ送る高圧 O2（PLSS の一次 O2 系の充填）（推進薬・流体） */
+        attribute pressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psig） */ }
+    }
+    port def EmuServiceOxygenPort :> FluidPort { out item :>> fluid : EmuServiceOxygen; }
+    item def LcvgCoolantWater :> Fluid {
+        doc /* LCVG の冷却水（EMU ごとの閉ループ、エアロックを出入りする）（推進薬・流体） */
+        attribute massFlowRate : MassFlowRateValue[0..*] { doc /* 質量流量（資料の単位 lb/h） */ }
+        attribute pressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psig） */ }
+        attribute temperature : ThermodynamicTemperatureValue[0..*] { doc /* 温度（資料の単位 °F） */ }
+    }
+    port def LcvgCoolantWaterPort :> FluidPort { out item :>> fluid : LcvgCoolantWater; }
+    item def AirlockMonitorData :> DataCommand {
+        doc /* エアロックの計測値（圧力・差圧・LCG 供給圧・配管と構造の温度。SPEC 177・SM 66 へ）（データ・指令） */
+        attribute pressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psia） */ }
+        attribute differentialPressure : PressureValue[0..*] { doc /* 圧力（資料の単位 psid） */ }
+        attribute temperature : ThermodynamicTemperatureValue[0..*] { doc /* 温度（資料の単位 °F） */ }
+    }
+    port def AirlockMonitorDataPort :> DataPort { out item :>> dataCommand : AirlockMonitorData; }
+    item def AirlockLineHeat :> Heat {
+        doc /* エアロックの配管・構造ヒータの熱（配管・外殻へ移る熱）（熱） */
+        attribute temperature : ThermodynamicTemperatureValue[0..*] { doc /* 温度（資料の単位 °F） */ }
+    }
+    port def AirlockLineHeatPort :> HeatPort { out item :>> heat : AirlockLineHeat; }
+    item def HalonAgent :> Fluid {
+        doc /* Halon 1301 消火剤（固定ボトルと携帯消火器から、アビオニクスベイと乗員室へ放出する）（推進薬・流体） */
+        attribute concentration : Real[0..*] { doc /* 数値（資料の単位 %） */ }
+    }
+    port def HalonAgentPort :> FluidPort { out item :>> fluid : HalonAgent; }
     // ---- 図112 EPS 発電・配電 内部ブロック図：機器
     part def <'EQ-EPS-01'> O2Tank :> SSD_ALC_SYS_001::Physical::PHY_EPS_02 {
         doc /* 酸素タンク（O2 TK 1〜5）（機能ブロック SSD-FD-EPS-PRSD-001、機器 PHY-EPS-02） */
@@ -3769,6 +3842,919 @@ package SSD_IBD_ORB_001 {
         flow <'FL-WTR-39'> fl_wtr_39 of WaterTankN2 from h2o.prs.waterTankN2Manifold.o_FL_WTR_39.fluid to b_FL_WTR_39.fluid;
         flow <'FL-WTR-40'> fl_wtr_40 of WaterSystemTelemetry from h2o.wst.wasteWaterTank.o_FL_WTR_40.dataCommand to b_FL_WTR_40.dataCommand;
     }
+    // ---- 図233 ECLSS 電力（ARS 系の機器）内部ブロック図：機器
+    part def <'EQ-PWRA-01'> PwraRcrsControllers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS のコントローラ1・2（AC1＋MN A、AC3＋MN C）（機能ブロック SSD-FD-ARS-RCRS-CTL-001、機器 PHY-ECLSS-13） */
+        port i_FL_PWRA_01 : ~Dc28VPort;
+        port i_FL_PWRA_02 : ~ArsSignalAcPowerPort;
+    }
+    part def <'EQ-PWRA-02'> PwraRcrsCommonSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS の共通計装センサ（CO2 分圧・真空圧・フィルタ差圧・入口温度）（機能ブロック SSD-FD-ARS-RCRS-MON-001、機器 PHY-ECLSS-13） */
+        port i_FL_PWRA_03 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRA-03'> PwraImuFans :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_15 {
+        doc /* IMU ファン A・B・C（各 AC1・AC2・AC3 の三相交流）（機能ブロック SSD-FD-ARS-IMU-FAN-001、機器 PHY-ECLSS-15） */
+        port i_FL_PWRA_04 : ~ArsFanAcPowerPort;
+    }
+    part def <'EQ-PWRA-04'> PwraImuFanSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_15 {
+        doc /* IMU ファンの信号調整器（AC3 の B 相）（機能ブロック SSD-FD-ARS-IMU-FAN-001、機器 PHY-ECLSS-15） */
+        port i_FL_PWRA_05 : ~ArsSignalAcPowerPort;
+        port o_FL_PWRA_06 : ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-05'> PwraImuFanSpeedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_15 {
+        doc /* IMU ファンの回転数センサ（A・B・C）（機能ブロック SSD-FD-ARS-IMU-FAN-001、機器 PHY-ECLSS-15） */
+        port i_FL_PWRA_06 : ~ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-06'> PwraHumiditySeparators :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
+        doc /* 湿分分離器 A・B（AC1・AC2 の三相交流）（機能ブロック SSD-FD-ARS-THC-SEP-001、機器 PHY-ECLSS-12） */
+        port i_FL_PWRA_07 : ~ArsFanAcPowerPort;
+    }
+    part def <'EQ-PWRA-07'> PwraHumSepSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
+        doc /* 湿分分離器の信号調整器（AC3 の A 相）（機能ブロック SSD-FD-ARS-THC-SEP-001、機器 PHY-ECLSS-12） */
+        port i_FL_PWRA_08 : ~ArsSignalAcPowerPort;
+        port o_FL_PWRA_09 : ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-08'> PwraHumSepSpeedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
+        doc /* 湿分分離器の速度センサ（A・B）（機能ブロック SSD-FD-ARS-THC-SEP-001、機器 PHY-ECLSS-12） */
+        port i_FL_PWRA_09 : ~ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-09'> PwraCabinTempControllers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
+        doc /* キャビン温度コントローラ1・2（AC2・AC1 の A 相）（機能ブロック SSD-FD-ARS-THC-TCV-001、機器 PHY-ECLSS-12） */
+        port i_FL_PWRA_10 : ~ArsSignalAcPowerPort;
+    }
+    part def <'EQ-PWRA-10'> PwraCabinAirSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* CABIN AIR 信号調整器（AC1 の B 相）（機能ブロック SSD-FD-CO2-MON-001、機器 PHY-ECLSS-13） */
+        port i_FL_PWRA_11 : ~ArsSignalAcPowerPort;
+        port o_FL_PWRA_12 : ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-11'> PwraPpco2Transducer :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* CO2 分圧（PPCO2）トランスデューサ（機能ブロック SSD-FD-CO2-MON-001、機器 PHY-ECLSS-13） */
+        port i_FL_PWRA_12 : ~ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-12'> PwraAvBaySigConds :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* アビオニクスベイ1・2・3の信号調整器（AC3・AC1・AC2 の B 相）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+        port i_FL_PWRA_13 : ~ArsSignalAcPowerPort;
+        port o_FL_PWRA_14 : ArsSensorExcitationPort;
+    }
+    part def <'EQ-PWRA-13'> PwraAvBaySensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* アビオニクスベイの温度センサとファン差圧センサ（各ベイ2個）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+        port i_FL_PWRA_14 : ~ArsSensorExcitationPort;
+    }
+    // ---- 図233 ECLSS 電力（ARS 系の機器）内部ブロック図：接続（EclssPwraInterconnection は ECLSS を特化）
+    part def EclssPwraInterconnection :> ECLSS {
+        doc /* ECLSS の機器への電力（ARS 系）の内部ブロック図（図233）。基の機能ブロック SSD-FD-ECLSS-001。 */
+        part redefines ars {
+            part redefines rcrs {
+                part redefines ctl {
+                    part pwraRcrsControllers[2] : PwraRcrsControllers;
+                }
+                part redefines mon {
+                    part pwraRcrsCommonSensors[4] : PwraRcrsCommonSensors;
+                }
+            }
+            part redefines imu {
+                part redefines fan {
+                    part pwraImuFans[3] : PwraImuFans;
+                    part pwraImuFanSigCond : PwraImuFanSigCond;
+                    part pwraImuFanSpeedSensors[3] : PwraImuFanSpeedSensors;
+                }
+            }
+            part redefines thc {
+                part redefines sep {
+                    part pwraHumiditySeparators[2] : PwraHumiditySeparators;
+                    part pwraHumSepSigCond : PwraHumSepSigCond;
+                    part pwraHumSepSpeedSensors[2] : PwraHumSepSpeedSensors;
+                }
+                part redefines tcv {
+                    part pwraCabinTempControllers[2] : PwraCabinTempControllers;
+                }
+            }
+            part redefines co2 {
+                part redefines mon {
+                    part pwraCabinAirSigCond : PwraCabinAirSigCond;
+                    part pwraPpco2Transducer : PwraPpco2Transducer;
+                }
+            }
+            part redefines avb {
+                part redefines mon {
+                    part pwraAvBaySigConds[3] : PwraAvBaySigConds;
+                    part pwraAvBaySensors[6] : PwraAvBaySensors;
+                }
+            }
+        }
+        port b_FL_PWRA_01 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRA-03（EPS の主直流母線（MN A・MN B・MN C、パネル ML86B:E の遮断器とパネル MO51F のスイッチ経由）） */ }
+        port b_FL_PWRA_02 : ~ArsSignalAcPowerPort { doc /* 枠の外の相手 EB-PWRA-01（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 1）） */ }
+        port b_FL_PWRA_03 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRA-03（EPS の主直流母線（MN A・MN B・MN C、パネル ML86B:E の遮断器とパネル MO51F のスイッチ経由）） */ }
+        port b_FL_PWRA_04 : ~ArsFanAcPowerPort { doc /* 枠の外の相手 EB-PWRA-01（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 1）） */ }
+        port b_FL_PWRA_05 : ~ArsSignalAcPowerPort { doc /* 枠の外の相手 EB-PWRA-01（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 1）） */ }
+        port b_FL_PWRA_07 : ~ArsFanAcPowerPort { doc /* 枠の外の相手 EB-PWRA-01（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 1）） */ }
+        port b_FL_PWRA_08 : ~ArsSignalAcPowerPort { doc /* 枠の外の相手 EB-PWRA-02（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 2）） */ }
+        port b_FL_PWRA_10 : ~ArsSignalAcPowerPort { doc /* 枠の外の相手 EB-PWRA-02（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 2）） */ }
+        port b_FL_PWRA_11 : ~ArsSignalAcPowerPort { doc /* 枠の外の相手 EB-PWRA-02（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 2）） */ }
+        port b_FL_PWRA_13 : ~ArsSignalAcPowerPort { doc /* 枠の外の相手 EB-PWRA-02（EPS の交流母線（AC1・AC2・AC3、パネル L4 の遮断器とパネル L1 のスイッチ経由）（その 2）） */ }
+        flow <'FL-PWRA-01'> fl_pwra_01 of Dc28V from b_FL_PWRA_01.electricPower to ars.rcrs.ctl.pwraRcrsControllers.i_FL_PWRA_01.electricPower;
+        flow <'FL-PWRA-02'> fl_pwra_02 of ArsSignalAcPower from b_FL_PWRA_02.electricPower to ars.rcrs.ctl.pwraRcrsControllers.i_FL_PWRA_02.electricPower;
+        flow <'FL-PWRA-03'> fl_pwra_03 of Dc28V from b_FL_PWRA_03.electricPower to ars.rcrs.mon.pwraRcrsCommonSensors.i_FL_PWRA_03.electricPower;
+        flow <'FL-PWRA-04'> fl_pwra_04 of ArsFanAcPower from b_FL_PWRA_04.electricPower to ars.imu.fan.pwraImuFans.i_FL_PWRA_04.electricPower;
+        flow <'FL-PWRA-05'> fl_pwra_05 of ArsSignalAcPower from b_FL_PWRA_05.electricPower to ars.imu.fan.pwraImuFanSigCond.i_FL_PWRA_05.electricPower;
+        flow <'FL-PWRA-06'> fl_pwra_06 of ArsSensorExcitation from ars.imu.fan.pwraImuFanSigCond.o_FL_PWRA_06.electricPower to ars.imu.fan.pwraImuFanSpeedSensors.i_FL_PWRA_06.electricPower;
+        flow <'FL-PWRA-07'> fl_pwra_07 of ArsFanAcPower from b_FL_PWRA_07.electricPower to ars.thc.sep.pwraHumiditySeparators.i_FL_PWRA_07.electricPower;
+        flow <'FL-PWRA-08'> fl_pwra_08 of ArsSignalAcPower from b_FL_PWRA_08.electricPower to ars.thc.sep.pwraHumSepSigCond.i_FL_PWRA_08.electricPower;
+        flow <'FL-PWRA-09'> fl_pwra_09 of ArsSensorExcitation from ars.thc.sep.pwraHumSepSigCond.o_FL_PWRA_09.electricPower to ars.thc.sep.pwraHumSepSpeedSensors.i_FL_PWRA_09.electricPower;
+        flow <'FL-PWRA-10'> fl_pwra_10 of ArsSignalAcPower from b_FL_PWRA_10.electricPower to ars.thc.tcv.pwraCabinTempControllers.i_FL_PWRA_10.electricPower;
+        flow <'FL-PWRA-11'> fl_pwra_11 of ArsSignalAcPower from b_FL_PWRA_11.electricPower to ars.co2.mon.pwraCabinAirSigCond.i_FL_PWRA_11.electricPower;
+        flow <'FL-PWRA-12'> fl_pwra_12 of ArsSensorExcitation from ars.co2.mon.pwraCabinAirSigCond.o_FL_PWRA_12.electricPower to ars.co2.mon.pwraPpco2Transducer.i_FL_PWRA_12.electricPower;
+        flow <'FL-PWRA-13'> fl_pwra_13 of ArsSignalAcPower from b_FL_PWRA_13.electricPower to ars.avb.mon.pwraAvBaySigConds.i_FL_PWRA_13.electricPower;
+        flow <'FL-PWRA-14'> fl_pwra_14 of ArsSensorExcitation from ars.avb.mon.pwraAvBaySigConds.o_FL_PWRA_14.electricPower to ars.avb.mon.pwraAvBaySensors.i_FL_PWRA_14.electricPower;
+    }
+    // ---- 図234 ECLSS 電力（ARS 以外の機器）内部ブロック図：機器
+    part def <'EQ-PWRB-01'> PwrbEmuPowerCharger :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* パネル AW18H の EMU 電源・バッテリ充電器（EMU 1・2、主母線 A・B 選択）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-EVA-02） */
+        port i_FL_PWRB_01 : ~Dc28VPort;
+        port o_FL_PWRB_02 : EmuAirlockPowerPort;
+    }
+    part def <'EQ-PWRB-02'> PwrbAirlockWaterLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 外部エアロックの水配管ヒータ（区域1・2、MNA・MNB・MNC の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port i_FL_PWRB_03 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-03'> PwrbAirlockStructureHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 外部エアロックの構造ヒータ（区域1〜3、MNA・MNB の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port i_FL_PWRB_04 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-04'> PwrbVestibuleHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 外部エアロックのベスティビュールヒータ（区域1〜3、MNA・MNB の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port i_FL_PWRB_05 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-05'> PwrbAirlockBoosterFans :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* エアロックのブースタファン A・B（パネル MO13Q の ARLK FAN A・B スイッチで運転）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-EVA-02） */
+        port i_FL_PWRB_06 : ~EclssFanAc3PhasePort;
+    }
+    part def <'EQ-PWRB-06'> PwrbSupplyWaterMotorValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_24 {
+        doc /* 給水・廃水系の電動弁（パネル R11・ML31C のスイッチで操作、タンク入口・出口・ダンプ隔離・B 給水隔離など）（機能ブロック SSD-FD-ECL-H2O-SPL-001、機器 PHY-ECLSS-24） */
+        port i_FL_PWRB_07 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-07'> PwrbDumpLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_25 {
+        doc /* 給水・廃水ダンプ配管ヒータ（A・B、サーモスタット制御）（機能ブロック SSD-FD-ECL-H2O-DMP-001、機器 PHY-ECLSS-25） */
+        port i_FL_PWRB_08 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-08'> PwrbDumpNozzleHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_25 {
+        doc /* 給水・廃水ダンプノズルヒータとダンプ弁（SUPPLY H2O DUMP VLV ENABLE/NOZ HTR スイッチ）（機能ブロック SSD-FD-ECL-H2O-DMP-001、機器 PHY-ECLSS-25） */
+        port i_FL_PWRB_09 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-09'> PwrbFanSeparatorMotors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_27 {
+        doc /* WCS ファンセパレータ（1・2、三相交流のファン）（機能ブロック SSD-FD-ECL-WCS-FSP-001、機器 PHY-ECLSS-27） */
+        port i_FL_PWRB_10 : ~EclssFanAc3PhasePort;
+        port i_FL_PWRB_12 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-10'> PwrbWcsController :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_27 {
+        doc /* WCS コントローラ（ファンセパレータの選択・リミットスイッチ・リレー、制御用の直流）（機能ブロック SSD-FD-ECL-WCS-FSP-001、機器 PHY-ECLSS-27） */
+        port i_FL_PWRB_11 : ~Dc28VPort;
+        port o_FL_PWRB_12 : Dc28VPort;
+    }
+    part def <'EQ-PWRB-11'> PwrbVacuumVentIsolValve :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_28 {
+        doc /* 真空ベント隔離弁（オリフィス付き、ML31C の BUS SELECT で MNA・MNB から給電）（機能ブロック SSD-FD-ECL-WCS-VAC-001、機器 PHY-ECLSS-28） */
+        port i_FL_PWRB_13 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-12'> PwrbVacuumVentHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_28 {
+        doc /* 真空ベント管ヒータ（A・B）とノズルヒータ（機能ブロック SSD-FD-ECL-WCS-VAC-001、機器 PHY-ECLSS-28） */
+        port i_FL_PWRB_14 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-13'> PwrbO2CrossoverValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_18 {
+        doc /* O2 クロスオーバ弁（系統1・2、L2 の O2 XOVR スイッチで操作）（機能ブロック SSD-FD-ECL-PCS-O2S-001、機器 PHY-ECLSS-18） */
+        port i_FL_PWRB_15 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-14'> PwrbN2SupplyValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_19 {
+        doc /* N2 供給弁・N2 レギュレータ入口弁（モータ駆動、系統1・2）（機能ブロック SSD-FD-ECL-PCS-N2S-001、機器 PHY-ECLSS-19） */
+        port i_FL_PWRB_16 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-15'> PwrbCabinReliefVentValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_21 {
+        doc /* キャビン逃し・ベント弁（CABIN RELIEF A・B、CABIN VENT・VENT ISOL）（機能ブロック SSD-FD-ECL-PCS-RLF-001、機器 PHY-ECLSS-21） */
+        port i_FL_PWRB_17 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-16'> PwrbCabinDpdtPpo2cSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_22 {
+        doc /* 乗員室の dP/dT センサと PPO2 センサ C（電源は MNB PPO2 C CAB dP/dT 遮断器）（機能ブロック SSD-FD-ECL-PCS-MON-001、機器 PHY-ECLSS-22） */
+        port i_FL_PWRB_18 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-17'> PwrbSmokeDetectors :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* 煙検知器（フライトデッキ左右、ベイ1A〜3B、キャビン）（機能ブロック SSD-FD-ECL-FDS-DET-001、機器 PHY-CW-05） */
+        port i_FL_PWRB_19 : ~Dc28VPort;
+    }
+    part def <'EQ-PWRB-18'> PwrbAgentDischargeButton :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* AGENT DISCH 押しボタン（ガード付き、ARM 後に電力が加わり、1秒の時間遅れ）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-CW-05） */
+        port i_FL_PWRB_21 : ~Dc28VPort;
+        port o_FL_PWRB_22 : FireSuppressionFirePowerPort;
+    }
+    part def <'EQ-PWRB-19'> PwrbBottlePic :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* 消火剤ボトルの PIC（火工品起爆制御器、ベイ1・2・3A）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-CW-05） */
+        port i_FL_PWRB_20 : ~Dc28VPort;
+        port i_FL_PWRB_22 : ~FireSuppressionFirePowerPort;
+    }
+    // ---- 図234 ECLSS 電力（ARS 以外の機器）内部ブロック図：接続（EclssPwrbInterconnection は ECLSS を特化）
+    part def EclssPwrbInterconnection :> ECLSS {
+        doc /* ECLSS の機器への電力（ARS 以外）の内部ブロック図（図234）。基の機能ブロック SSD-FD-ECLSS-001。 */
+        part redefines als {
+            part redefines scu {
+                part pwrbEmuPowerCharger[2] : PwrbEmuPowerCharger;
+            }
+            part redefines htr {
+                part pwrbAirlockWaterLineHeaters : PwrbAirlockWaterLineHeaters;
+                part pwrbAirlockStructureHeaters : PwrbAirlockStructureHeaters;
+                part pwrbVestibuleHeaters : PwrbVestibuleHeaters;
+            }
+            part redefines vnt {
+                part pwrbAirlockBoosterFans[2] : PwrbAirlockBoosterFans;
+            }
+        }
+        part redefines h2o {
+            part redefines spl {
+                part pwrbSupplyWaterMotorValves : PwrbSupplyWaterMotorValves;
+            }
+            part redefines dmp {
+                part pwrbDumpLineHeaters[2] : PwrbDumpLineHeaters;
+                part pwrbDumpNozzleHeaters[2] : PwrbDumpNozzleHeaters;
+            }
+        }
+        part redefines wcs {
+            part redefines fsp {
+                part pwrbFanSeparatorMotors[2] : PwrbFanSeparatorMotors;
+                part pwrbWcsController : PwrbWcsController;
+            }
+            part redefines vac {
+                part pwrbVacuumVentIsolValve : PwrbVacuumVentIsolValve;
+                part pwrbVacuumVentHeaters : PwrbVacuumVentHeaters;
+            }
+        }
+        part redefines pcs {
+            part redefines o2s {
+                part pwrbO2CrossoverValves[2] : PwrbO2CrossoverValves;
+            }
+            part redefines n2s {
+                part pwrbN2SupplyValves[2] : PwrbN2SupplyValves;
+            }
+            part redefines rlf {
+                part pwrbCabinReliefVentValves : PwrbCabinReliefVentValves;
+            }
+            part redefines mon {
+                part pwrbCabinDpdtPpo2cSensors[2] : PwrbCabinDpdtPpo2cSensors;
+            }
+        }
+        part redefines fds {
+            part redefines det {
+                part pwrbSmokeDetectors[9] : PwrbSmokeDetectors;
+            }
+            part redefines fix {
+                part pwrbAgentDischargeButton : PwrbAgentDischargeButton;
+                part pwrbBottlePic[3] : PwrbBottlePic;
+            }
+        }
+        port b_FL_PWRB_01 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-01（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 1）） */ }
+        port b_FL_PWRB_02 : EmuAirlockPowerPort { doc /* 枠の外の相手 EB-PWRB-05（EMU 1・2（SCU 経由で電力を受ける。EMU 入力電圧と EMU のバッテリ）） */ }
+        port b_FL_PWRB_03 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-01（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 1）） */ }
+        port b_FL_PWRB_04 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-01（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 1）） */ }
+        port b_FL_PWRB_05 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-01（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 1）） */ }
+        port b_FL_PWRB_06 : ~EclssFanAc3PhasePort { doc /* 枠の外の相手 EB-PWRB-04（EPS の交流母線 AC1・AC2（遮断器パネル MA73C の三相交流）） */ }
+        port b_FL_PWRB_07 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-01（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 1）） */ }
+        port b_FL_PWRB_08 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-01（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 1）） */ }
+        port b_FL_PWRB_09 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-02（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 2）） */ }
+        port b_FL_PWRB_10 : ~EclssFanAc3PhasePort { doc /* 枠の外の相手 EB-PWRB-04（EPS の交流母線 AC1・AC2（遮断器パネル MA73C の三相交流）） */ }
+        port b_FL_PWRB_11 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-02（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 2）） */ }
+        port b_FL_PWRB_13 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-02（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 2）） */ }
+        port b_FL_PWRB_14 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-02（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 2）） */ }
+        port b_FL_PWRB_15 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-02（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 2）） */ }
+        port b_FL_PWRB_16 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-02（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 2）） */ }
+        port b_FL_PWRB_17 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-03（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 3）） */ }
+        port b_FL_PWRB_18 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-03（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 3）） */ }
+        port b_FL_PWRB_19 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-03（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 3）） */ }
+        port b_FL_PWRB_20 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-03（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 3）） */ }
+        port b_FL_PWRB_21 : ~Dc28VPort { doc /* 枠の外の相手 EB-PWRB-03（EPS の主直流母線 A・B・C（パネル O14・O15・O16・ML86B・ML31C などの直流の遮断器）（その 3）） */ }
+        flow <'FL-PWRB-01'> fl_pwrb_01 of Dc28V from b_FL_PWRB_01.electricPower to als.scu.pwrbEmuPowerCharger.i_FL_PWRB_01.electricPower;
+        flow <'FL-PWRB-02'> fl_pwrb_02 from als.scu.pwrbEmuPowerCharger.o_FL_PWRB_02.electricPower to b_FL_PWRB_02.electricPower {
+            item :>> payload : EmuAirlockPower {
+                attribute voltageMin :> voltage = 18.0 [V] { doc /* 電圧 18〜20 V */ }
+                attribute voltageMax :> voltage = 20.0 [V] { doc /* 電圧 18〜20 V */ }
+            }
+        }
+        flow <'FL-PWRB-03'> fl_pwrb_03 of Dc28V from b_FL_PWRB_03.electricPower to als.htr.pwrbAirlockWaterLineHeaters.i_FL_PWRB_03.electricPower;
+        flow <'FL-PWRB-04'> fl_pwrb_04 of Dc28V from b_FL_PWRB_04.electricPower to als.htr.pwrbAirlockStructureHeaters.i_FL_PWRB_04.electricPower;
+        flow <'FL-PWRB-05'> fl_pwrb_05 of Dc28V from b_FL_PWRB_05.electricPower to als.htr.pwrbVestibuleHeaters.i_FL_PWRB_05.electricPower;
+        flow <'FL-PWRB-06'> fl_pwrb_06 of EclssFanAc3Phase from b_FL_PWRB_06.electricPower to als.vnt.pwrbAirlockBoosterFans.i_FL_PWRB_06.electricPower;
+        flow <'FL-PWRB-07'> fl_pwrb_07 of Dc28V from b_FL_PWRB_07.electricPower to h2o.spl.pwrbSupplyWaterMotorValves.i_FL_PWRB_07.electricPower;
+        flow <'FL-PWRB-08'> fl_pwrb_08 of Dc28V from b_FL_PWRB_08.electricPower to h2o.dmp.pwrbDumpLineHeaters.i_FL_PWRB_08.electricPower;
+        flow <'FL-PWRB-09'> fl_pwrb_09 of Dc28V from b_FL_PWRB_09.electricPower to h2o.dmp.pwrbDumpNozzleHeaters.i_FL_PWRB_09.electricPower;
+        flow <'FL-PWRB-10'> fl_pwrb_10 of EclssFanAc3Phase from b_FL_PWRB_10.electricPower to wcs.fsp.pwrbFanSeparatorMotors.i_FL_PWRB_10.electricPower;
+        flow <'FL-PWRB-11'> fl_pwrb_11 of Dc28V from b_FL_PWRB_11.electricPower to wcs.fsp.pwrbWcsController.i_FL_PWRB_11.electricPower;
+        flow <'FL-PWRB-12'> fl_pwrb_12 of Dc28V from wcs.fsp.pwrbWcsController.o_FL_PWRB_12.electricPower to wcs.fsp.pwrbFanSeparatorMotors.i_FL_PWRB_12.electricPower;
+        flow <'FL-PWRB-13'> fl_pwrb_13 of Dc28V from b_FL_PWRB_13.electricPower to wcs.vac.pwrbVacuumVentIsolValve.i_FL_PWRB_13.electricPower;
+        flow <'FL-PWRB-14'> fl_pwrb_14 of Dc28V from b_FL_PWRB_14.electricPower to wcs.vac.pwrbVacuumVentHeaters.i_FL_PWRB_14.electricPower;
+        flow <'FL-PWRB-15'> fl_pwrb_15 of Dc28V from b_FL_PWRB_15.electricPower to pcs.o2s.pwrbO2CrossoverValves.i_FL_PWRB_15.electricPower;
+        flow <'FL-PWRB-16'> fl_pwrb_16 of Dc28V from b_FL_PWRB_16.electricPower to pcs.n2s.pwrbN2SupplyValves.i_FL_PWRB_16.electricPower;
+        flow <'FL-PWRB-17'> fl_pwrb_17 of Dc28V from b_FL_PWRB_17.electricPower to pcs.rlf.pwrbCabinReliefVentValves.i_FL_PWRB_17.electricPower;
+        flow <'FL-PWRB-18'> fl_pwrb_18 of Dc28V from b_FL_PWRB_18.electricPower to pcs.mon.pwrbCabinDpdtPpo2cSensors.i_FL_PWRB_18.electricPower;
+        flow <'FL-PWRB-19'> fl_pwrb_19 of Dc28V from b_FL_PWRB_19.electricPower to fds.det.pwrbSmokeDetectors.i_FL_PWRB_19.electricPower;
+        flow <'FL-PWRB-20'> fl_pwrb_20 of Dc28V from b_FL_PWRB_20.electricPower to fds.fix.pwrbBottlePic.i_FL_PWRB_20.electricPower;
+        flow <'FL-PWRB-21'> fl_pwrb_21 of Dc28V from b_FL_PWRB_21.electricPower to fds.fix.pwrbAgentDischargeButton.i_FL_PWRB_21.electricPower;
+        flow <'FL-PWRB-22'> fl_pwrb_22 of FireSuppressionFirePower from fds.fix.pwrbAgentDischargeButton.o_FL_PWRB_22.electricPower to fds.fix.pwrbBottlePic.i_FL_PWRB_22.electricPower;
+    }
+    // ---- 図235 ARS の補い 内部ブロック図：機器
+    part def <'EQ-AIRX-01'> AirBayAirPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* ベイの空気経路（ベイの床から空冷機器の間を通りファン入口の 300 ミクロンフィルタまで。ベイ1・2・3A）（機能ブロック SSD-FD-ARS-AVB-CIR-001、機器 PHY-ECLSS-14） */
+        port i_FL_AIRX_01 : ~AvionicsHeatPort;
+        port i_FL_AIRX_02 : ~AvionicsHeatPort;
+        port o_FL_AIRX_03 : EquipmentCoolingAirPort;
+    }
+    part def <'EQ-AIRX-02'> AirBayFanAssy :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* ベイファンと出口の逆止弁（各ベイ2台、A・B）（機能ブロック SSD-FD-ARS-AVB-FAN-001、機器 PHY-ECLSS-14） */
+        port i_FL_AIRX_03 : ~EquipmentCoolingAirPort;
+        port o_FL_AIRX_04 : EquipmentCoolingAirPort;
+    }
+    part def <'EQ-AIRX-03'> AirBayAirWaterHx :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* ベイの空気/水熱交換器（ベイ1・2・3A）（機能ブロック SSD-FD-ARS-AVB-HX-001、機器 PHY-ECLSS-14） */
+        port o_FL_AIRX_05 : EquipmentCoolingAirPort;
+    }
+    part def <'EQ-AIRX-04'> AirBayFanDpSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* ベイのファン差圧センサ（各ベイ1。ファンの運転の確認に使う）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+        port i_FL_AIRX_04 : ~EquipmentCoolingAirPort;
+    }
+    part def <'EQ-AIRX-05'> AirBayTempSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* ベイの温度センサ（ミッドデッキ床下のファンプレナム、ベイの空気/水熱交換器の近く）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+        port i_FL_AIRX_05 : ~EquipmentCoolingAirPort;
+    }
+    part def <'EQ-AIRX-06'> AirCabinFanAssy :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
+        doc /* キャビンファン A・B（ファン前後に差圧の測定点、出口に逆止弁）（機能ブロック SSD-FD-CAC-FAN-001、機器 PHY-ECLSS-01） */
+        port o_FL_AIRX_06 : CabinAirPort;
+    }
+    part def <'EQ-AIRX-07'> AirCanisterOrifice :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
+        doc /* LiOH キャニスタの分流オリフィス（ダクト内、2つのスロットへ各 120 lb/hr に配分）（機能ブロック SSD-FD-CO2-ABS-001、機器 PHY-ECLSS-11） */
+        port o_FL_AIRX_07 : CabinAirPort;
+    }
+    part def <'EQ-AIRX-08'> AirInUseCanisters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
+        doc /* 装着中の LiOH／活性炭キャニスタ（2つのスロット、使用位置 MD54G）（機能ブロック SSD-FD-CO2-CAN-001、機器 PHY-ECLSS-01） */
+        port i_FL_AIRX_07 : ~CabinAirPort;
+        port i_FL_AIRX_08 : ~CanisterExchangeLoadPort;
+    }
+    part def <'EQ-AIRX-09'> AirSpareCanisters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
+        doc /* 予備の LiOH／活性炭キャニスタ（床下の収納区画 MD52M）（機能ブロック SSD-FD-CO2-STW-001、機器 PHY-ECLSS-01） */
+        port o_FL_AIRX_08 : CanisterExchangeLoadPort;
+    }
+    part def <'EQ-AIRX-10'> AirRcrsFanAssy :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS ファン・流量制御弁・入口フィルタ/ミューフラの組立（機能ブロック SSD-FD-ARS-RCRS-FAN-001、機器 PHY-ECLSS-13） */
+        port o_FL_AIRX_09 : RcrsBedAirPort;
+        port o_FL_AIRX_12 : CabinAirPort;
+    }
+    part def <'EQ-AIRX-11'> AirRcrsBeds :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS のベッド A・B と真空サイクル弁（空気ポペット・真空ポペット）（機能ブロック SSD-FD-ARS-RCRS-BED-001、機器 PHY-ECLSS-13） */
+        port i_FL_AIRX_09 : ~RcrsBedAirPort;
+        port o_FL_AIRX_10 : RcrsBedAirPort;
+        port o_FL_AIRX_13 : RcrsBedAirPort;
+        port o_FL_AIRX_14 : RcrsBedAirPort;
+    }
+    part def <'EQ-AIRX-12'> AirRcrsPevModule :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS の均圧弁モジュール（PEV 1〜6）（機能ブロック SSD-FD-ARS-RCRS-BED-001、機器 PHY-ECLSS-13） */
+        port i_FL_AIRX_10 : ~RcrsBedAirPort;
+        port o_FL_AIRX_11 : RcrsBedAirPort;
+    }
+    part def <'EQ-AIRX-13'> AirRcrsUllageCompressor :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* ullage-save 圧縮機（再生に入るベッドの空気を吸い出す）（機能ブロック SSD-FD-ARS-RCRS-USC-001、機器 PHY-ECLSS-13） */
+        port i_FL_AIRX_11 : ~RcrsBedAirPort;
+    }
+    part def <'EQ-AIRX-14'> AirRcrsBedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS のベッド圧力センサとベッド差圧センサ（制御器1・2ごと）（機能ブロック SSD-FD-ARS-RCRS-MON-001、機器 PHY-ECLSS-13） */
+        port i_FL_AIRX_13 : ~RcrsBedAirPort;
+    }
+    part def <'EQ-AIRX-15'> AirRcrsCommonSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
+        doc /* RCRS の共通計装のセンサ（CO2 分圧・真空圧力・フィルタ差圧・空気入口温度）（機能ブロック SSD-FD-ARS-RCRS-MON-001、機器 PHY-ECLSS-13） */
+        port i_FL_AIRX_12 : ~CabinAirPort;
+        port i_FL_AIRX_14 : ~RcrsBedAirPort;
+    }
+    part def <'EQ-AIRX-16'> AirCabinHxAssy :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
+        doc /* キャビン熱交換器の出口（空気/水熱交換器と出口の空気温度センサの取付け位置）（機能ブロック SSD-FD-ARS-THC-HX-001、機器 PHY-ECLSS-01） */
+        port o_FL_AIRX_15 : CabinAirPort;
+    }
+    part def <'EQ-AIRX-17'> AirWclColdSideHxs :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_17 {
+        doc /* 水冷却ループの冷側の熱交換器の水側（液冷服熱交換器・ギャレー水チラー・キャビン熱交換器・IMU 熱交換器）（機能ブロック SSD-FD-ARS-WCL-CLD-001、機器 PHY-ECLSS-17） */
+        port o_FL_AIRX_16 : ArsCoolantWaterPort;
+    }
+    part def <'EQ-AIRX-18'> AirWclPumpPackage :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
+        doc /* 水ポンプパッケージ（ポンプ・アキュムレータ・出口の圧力と温度のセンサ）（機能ブロック SSD-FD-ARS-WCL-PMP-001、機器 PHY-ECLSS-01） */
+        port i_FL_AIRX_16 : ~ArsCoolantWaterPort;
+    }
+    part def <'EQ-AIRX-19'> AirWclInterchangerPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_04 {
+        doc /* Freon/水インターチェンジャの水の経路（インターチェンジャ側とバイパス側、流量・出口温度の測定点）（機能ブロック SSD-FD-ARS-WCL-ICH-001、機器 PHY-ECLSS-04） */
+        port o_FL_AIRX_17 : ArsCoolantWaterPort;
+    }
+    // ---- 図235 ARS の補い 内部ブロック図：接続（EclssAirxInterconnection は ECLSS を特化）
+    part def EclssAirxInterconnection :> ECLSS {
+        doc /* ARS の補い（アビオニクスベイ・IMU・キャビン空気・水冷却ループ・RCRS・CO2）の内部ブロック図（図235）。基の機能ブロック SSD-FD-ECLSS-001。 */
+        part redefines ars {
+            part redefines avb {
+                part redefines cir {
+                    part airBayAirPath[3] : AirBayAirPath;
+                }
+                part redefines fan {
+                    part airBayFanAssy[6] : AirBayFanAssy;
+                }
+                part redefines hx {
+                    part airBayAirWaterHx[3] : AirBayAirWaterHx;
+                }
+                part redefines mon {
+                    part airBayFanDpSensors[3] : AirBayFanDpSensors;
+                    part airBayTempSensors[3] : AirBayTempSensors;
+                }
+            }
+            part redefines cac {
+                part redefines fan {
+                    part airCabinFanAssy[2] : AirCabinFanAssy;
+                }
+            }
+            part redefines co2 {
+                part redefines abs {
+                    part airCanisterOrifice : AirCanisterOrifice;
+                }
+                part redefines can {
+                    part airInUseCanisters[2] : AirInUseCanisters;
+                }
+                part redefines stw {
+                    part airSpareCanisters : AirSpareCanisters;
+                }
+            }
+            part redefines rcrs {
+                part redefines fan {
+                    part airRcrsFanAssy : AirRcrsFanAssy;
+                }
+                part redefines bed {
+                    part airRcrsBeds[2] : AirRcrsBeds;
+                    part airRcrsPevModule : AirRcrsPevModule;
+                }
+                part redefines usc {
+                    part airRcrsUllageCompressor : AirRcrsUllageCompressor;
+                }
+                part redefines mon {
+                    part airRcrsBedSensors : AirRcrsBedSensors;
+                    part airRcrsCommonSensors : AirRcrsCommonSensors;
+                }
+            }
+            part redefines thc {
+                part redefines hx {
+                    part airCabinHxAssy : AirCabinHxAssy;
+                }
+            }
+            part redefines wcl {
+                part redefines cld {
+                    part airWclColdSideHxs : AirWclColdSideHxs;
+                }
+                part redefines pmp {
+                    part airWclPumpPackage[2] : AirWclPumpPackage;
+                }
+                part redefines ich {
+                    part airWclInterchangerPath[2] : AirWclInterchangerPath;
+                }
+            }
+        }
+        port b_FL_AIRX_01 : ~AvionicsHeatPort { doc /* 枠の外の相手 EB-AIRX-01（EPS の前方アビオニクスベイ1〜3のインバータ分配組立（空冷される電力機器）） */ }
+        port b_FL_AIRX_02 : ~AvionicsHeatPort { doc /* 枠の外の相手 EB-AIRX-02（GN&C の TACAN と MLS（ベイ内、ベイファンで冷却される航法機器）） */ }
+        port b_FL_AIRX_06 : CabinAirPort { doc /* 枠の外の相手 EB-AIRX-03（キャビンファン差圧の監視（CABIN AIR 信号調整器・SM 表示・C/W）） */ }
+        port b_FL_AIRX_15 : CabinAirPort { doc /* 枠の外の相手 EB-AIRX-04（キャビン熱交換器出口温度の監視（AIR TEMP メータ・SM 表示・C/W）） */ }
+        port b_FL_AIRX_17 : ArsCoolantWaterPort { doc /* 枠の外の相手 EB-AIRX-05（水ループの計測・警報（インターチェンジャ流量・出口温度のセンサと信号調整器）） */ }
+        flow <'FL-AIRX-01'> fl_airx_01 of AvionicsHeat from b_FL_AIRX_01.heat to ars.avb.cir.airBayAirPath.i_FL_AIRX_01.heat;
+        flow <'FL-AIRX-02'> fl_airx_02 of AvionicsHeat from b_FL_AIRX_02.heat to ars.avb.cir.airBayAirPath.i_FL_AIRX_02.heat;
+        flow <'FL-AIRX-03'> fl_airx_03 of EquipmentCoolingAir from ars.avb.cir.airBayAirPath.o_FL_AIRX_03.fluid to ars.avb.fan.airBayFanAssy.i_FL_AIRX_03.fluid;
+        flow <'FL-AIRX-04'> fl_airx_04 of EquipmentCoolingAir from ars.avb.fan.airBayFanAssy.o_FL_AIRX_04.fluid to ars.avb.mon.airBayFanDpSensors.i_FL_AIRX_04.fluid;
+        flow <'FL-AIRX-05'> fl_airx_05 of EquipmentCoolingAir from ars.avb.hx.airBayAirWaterHx.o_FL_AIRX_05.fluid to ars.avb.mon.airBayTempSensors.i_FL_AIRX_05.fluid;
+        flow <'FL-AIRX-06'> fl_airx_06 from ars.cac.fan.airCabinFanAssy.o_FL_AIRX_06.fluid to b_FL_AIRX_06.fluid {
+            item :>> payload : CabinAir {
+                attribute differentialPressureMin :> differentialPressure = 4.2 { doc /* 数値 4.2〜6.8 inH2O */ }
+                attribute differentialPressureMax :> differentialPressure = 6.8 { doc /* 数値 4.2〜6.8 inH2O */ }
+            }
+        }
+        flow <'FL-AIRX-07'> fl_airx_07 from ars.co2.abs.airCanisterOrifice.o_FL_AIRX_07.fluid to ars.co2.can.airInUseCanisters.i_FL_AIRX_07.fluid {
+            item :>> payload : CabinAir {
+                attribute massFlowRateNominal :> massFlowRate = 120 ['lb/h'] { doc /* 質量流量 120 lb/h */ }
+            }
+        }
+        flow <'FL-AIRX-08'> fl_airx_08 of CanisterExchangeLoad from ars.co2.stw.airSpareCanisters.o_FL_AIRX_08.structuralLoad to ars.co2.can.airInUseCanisters.i_FL_AIRX_08.structuralLoad;
+        flow <'FL-AIRX-09'> fl_airx_09 from ars.rcrs.fan.airRcrsFanAssy.o_FL_AIRX_09.fluid to ars.rcrs.bed.airRcrsBeds.i_FL_AIRX_09.fluid {
+            item :>> payload : RcrsBedAir {
+                attribute massFlowRate1Nominal :> massFlowRate = 72 ['lb/h'] { doc /* 質量流量 72 lb/h */ }
+                attribute massFlowRate2Nominal :> massFlowRate = 110 ['lb/h'] { doc /* 質量流量 110 lb/h */ }
+            }
+        }
+        flow <'FL-AIRX-10'> fl_airx_10 of RcrsBedAir from ars.rcrs.bed.airRcrsBeds.o_FL_AIRX_10.fluid to ars.rcrs.bed.airRcrsPevModule.i_FL_AIRX_10.fluid;
+        flow <'FL-AIRX-11'> fl_airx_11 from ars.rcrs.bed.airRcrsPevModule.o_FL_AIRX_11.fluid to ars.rcrs.usc.airRcrsUllageCompressor.i_FL_AIRX_11.fluid {
+            item :>> payload : RcrsBedAir {
+                attribute pressure1Nominal :> pressure = 14.7 ['lbf/in²'] { doc /* 圧力 14.7 psia（絶対圧） */ }
+                attribute pressure2Nominal :> pressure = 3 ['lbf/in²'] { doc /* 圧力 3 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-AIRX-12'> fl_airx_12 of CabinAir from ars.rcrs.fan.airRcrsFanAssy.o_FL_AIRX_12.fluid to ars.rcrs.mon.airRcrsCommonSensors.i_FL_AIRX_12.fluid;
+        flow <'FL-AIRX-13'> fl_airx_13 of RcrsBedAir from ars.rcrs.bed.airRcrsBeds.o_FL_AIRX_13.fluid to ars.rcrs.mon.airRcrsBedSensors.i_FL_AIRX_13.fluid;
+        flow <'FL-AIRX-14'> fl_airx_14 of RcrsBedAir from ars.rcrs.bed.airRcrsBeds.o_FL_AIRX_14.fluid to ars.rcrs.mon.airRcrsCommonSensors.i_FL_AIRX_14.fluid;
+        flow <'FL-AIRX-15'> fl_airx_15 of CabinAir from ars.thc.hx.airCabinHxAssy.o_FL_AIRX_15.fluid to b_FL_AIRX_15.fluid;
+        flow <'FL-AIRX-16'> fl_airx_16 of ArsCoolantWater from ars.wcl.cld.airWclColdSideHxs.o_FL_AIRX_16.fluid to ars.wcl.pmp.airWclPumpPackage.i_FL_AIRX_16.fluid;
+        flow <'FL-AIRX-17'> fl_airx_17 of ArsCoolantWater from ars.wcl.ich.airWclInterchangerPath.o_FL_AIRX_17.fluid to b_FL_AIRX_17.fluid;
+    }
+    // ---- 図236 エアロック支援系 内部ブロック図：機器
+    part def <'EQ-ALSX-01'> AlsAirlockVolume :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 外部エアロックの区画（エアロックとトンネルエクステンション、ハッチ3枚）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_02 : ~AirlockAtmospherePort;
+        port o_FL_ALSX_04 : AirlockAtmospherePort;
+        port o_FL_ALSX_07 : AirlockAtmospherePort;
+        port o_FL_ALSX_08 : AirlockAtmospherePort;
+        port i_FL_ALSX_14 : ~AirlockLineHeatPort;
+        port i_FL_ALSX_17 : ~CabinAirPort;
+    }
+    part def <'EQ-ALSX-02'> AlsHatchEqualizationValves :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* ハッチの均圧弁（各ハッチに2個、キャップと OFF・NORM・EMER の3位置スイッチ）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_01 : ~AirlockAtmospherePort;
+        port o_FL_ALSX_02 : AirlockAtmospherePort;
+    }
+    part def <'EQ-ALSX-03'> AlsDepressValve :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* エアロック減圧弁（パネル AW82B の CLOSED・5・0 の3位置スイッチ）と減圧ラインのキャップ・T字管（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_03 : ~AirlockAtmospherePort;
+        port i_FL_ALSX_04 : ~AirlockAtmospherePort;
+        port o_FL_ALSX_05 : AirlockAtmospherePort;
+    }
+    part def <'EQ-ALSX-04'> AlsVestibuleDepressValves :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* ベスティビュール減圧弁・隔離弁（パネル A6L の VENT SYS 1・2）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+        port o_FL_ALSX_06 : AirlockAtmospherePort;
+    }
+    part def <'EQ-ALSX-05'> AlsBoosterFans :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
+        doc /* ブースタファン（2台、1台ずつ使用）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-11） */
+        port i_FL_ALSX_15 : ~CabinAirPort;
+        port o_FL_ALSX_16 : CabinAirPort;
+    }
+    part def <'EQ-ALSX-06'> AlsAirlockDucting :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
+        doc /* エアロックのダクトとハローダクト（乗員が手で張るダクト、ドッキング窓の曇り止め、ISS・モジュールへの送気を含む）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-11） */
+        port i_FL_ALSX_16 : ~CabinAirPort;
+        port o_FL_ALSX_17 : CabinAirPort;
+    }
+    part def <'EQ-ALSX-07'> AlsMiddeckFloorFitting :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
+        doc /* ミッドデッキ床の継手（ARS のダクトとエアロックのダクトの接続部）（機能ブロック SSD-FD-CAC-DCT-001、機器 PHY-ECLSS-11） */
+        port o_FL_ALSX_15 : CabinAirPort;
+    }
+    part def <'EQ-ALSX-08'> AlsWaterLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 水配管ヒータ（6本の配管の各配管に3系統、1系統ずつ使用）とサーモスタット（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port o_FL_ALSX_10 : AirlockLineHeatPort;
+        port o_FL_ALSX_12 : AirlockLineHeatPort;
+        port o_FL_ALSX_13 : AirlockLineHeatPort;
+    }
+    part def <'EQ-ALSX-09'> AlsStructuralPatchHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 構造パッチヒータ（エアロック外殻の3区域、二重冗長）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port o_FL_ALSX_11 : AirlockLineHeatPort;
+        port o_FL_ALSX_14 : AirlockLineHeatPort;
+    }
+    part def <'EQ-ALSX-10'> AlsLcgLines :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* LCG 供給・戻り配管（EMU ごとに1組、与圧区画の外を通る）（機能ブロック SSD-FD-ECL-ALS-LCG-001、機器 PHY-EVA-02） */
+        port o_FL_ALSX_09 : LcvgCoolantWaterPort;
+        port i_FL_ALSX_12 : ~AirlockLineHeatPort;
+        port o_FL_ALSX_24 : LcvgCoolantWaterPort;
+        port i_FL_ALSX_25 : ~LcvgCoolantWaterPort;
+    }
+    part def <'EQ-ALSX-11'> AlsServicingCoolingUmbilical :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* サービス・冷却アンビリカル（SCU：水ホース3本・高圧 O2 ホース・電線・水圧調整器）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_18 : ~EmuServiceOxygenPort;
+        port o_FL_ALSX_19 : EmuServiceOxygenPort;
+        port i_FL_ALSX_20 : ~PotableWaterPort;
+        port o_FL_ALSX_21 : PotableWaterPort;
+        port i_FL_ALSX_22 : ~WasteWaterPort;
+        port o_FL_ALSX_23 : WasteWaterPort;
+    }
+    part def <'EQ-ALSX-12'> AlsEmuO2SupplyLine :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* EMU 用 O2 配管と EMU O2 隔離弁（エアロックを通る 900 psi の O2 管）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-EVA-02） */
+        port o_FL_ALSX_18 : EmuServiceOxygenPort;
+    }
+    part def <'EQ-ALSX-13'> AlsEmuWaterLines :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* EMU 給水・廃水の配管（供給水のフィルタ・逆止弁・給水遮断弁と廃水戻りライン）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_13 : ~AirlockLineHeatPort;
+        port o_FL_ALSX_20 : PotableWaterPort;
+        port i_FL_ALSX_23 : ~WasteWaterPort;
+    }
+    part def <'EQ-ALSX-14'> AlsAirlockPressureTransducers :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* エアロック圧力トランスデューサ（EXT A/L PRESS、エアロック・ベスティビュール間差圧）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_07 : ~AirlockAtmospherePort;
+        port o_FL_ALSX_26 : AirlockMonitorDataPort;
+    }
+    part def <'EQ-ALSX-15'> AlsHatchDeltaPGauges :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* ハッチ差圧計（各ハッチの両側の計器）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_08 : ~AirlockAtmospherePort;
+        port o_FL_ALSX_27 : AirlockMonitorDataPort;
+    }
+    part def <'EQ-ALSX-16'> AlsLcgPressureTransducers :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* LCG 供給圧トランスデューサ（EV1・EV2、V64P0170A・V64P0171A）と水移送圧（機能ブロック SSD-FD-ECL-ALS-LCG-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_09 : ~LcvgCoolantWaterPort;
+        port o_FL_ALSX_28 : AirlockMonitorDataPort;
+    }
+    part def <'EQ-ALSX-17'> AlsLineTempTransducers :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 水配管の温度トランスデューサ（区域1・2に2個ずつ）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_10 : ~AirlockLineHeatPort;
+        port o_FL_ALSX_29 : AirlockMonitorDataPort;
+    }
+    part def <'EQ-ALSX-18'> AlsStructTempSensors :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* 構造温度センサ（隔壁・構造・外部のセンサ）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+        port i_FL_ALSX_11 : ~AirlockLineHeatPort;
+        port o_FL_ALSX_30 : AirlockMonitorDataPort;
+    }
+    // ---- 図236 エアロック支援系 内部ブロック図：接続（EclssAlsxInterconnection は ECLSS を特化）
+    part def EclssAlsxInterconnection :> ECLSS {
+        doc /* エアロック支援系の内部ブロック図（図236）。基の機能ブロック SSD-FD-ECLSS-001。 */
+        part redefines als {
+            part redefines dep {
+                part alsAirlockVolume : AlsAirlockVolume;
+                part alsHatchEqualizationValves[6] : AlsHatchEqualizationValves;
+                part alsDepressValve : AlsDepressValve;
+                part alsVestibuleDepressValves[2] : AlsVestibuleDepressValves;
+                part alsAirlockPressureTransducers[2] : AlsAirlockPressureTransducers;
+                part alsHatchDeltaPGauges[6] : AlsHatchDeltaPGauges;
+            }
+            part redefines vnt {
+                part alsBoosterFans[2] : AlsBoosterFans;
+                part alsAirlockDucting : AlsAirlockDucting;
+            }
+            part redefines htr {
+                part alsWaterLineHeaters[18] : AlsWaterLineHeaters;
+                part alsStructuralPatchHeaters[3] : AlsStructuralPatchHeaters;
+                part alsLineTempTransducers[4] : AlsLineTempTransducers;
+                part alsStructTempSensors : AlsStructTempSensors;
+            }
+            part redefines lcg {
+                part alsLcgLines[4] : AlsLcgLines;
+                part alsLcgPressureTransducers[2] : AlsLcgPressureTransducers;
+            }
+            part redefines scu {
+                part alsServicingCoolingUmbilical[2] : AlsServicingCoolingUmbilical;
+                part alsEmuO2SupplyLine : AlsEmuO2SupplyLine;
+                part alsEmuWaterLines : AlsEmuWaterLines;
+            }
+        }
+        part redefines ars {
+            part redefines cac {
+                part redefines dct {
+                    part alsMiddeckFloorFitting : AlsMiddeckFloorFitting;
+                }
+            }
+        }
+        port b_FL_ALSX_01 : ~AirlockAtmospherePort { doc /* 枠の外の相手 EB-ALSX-01（乗員室（ミッドデッキ、14.7 psia の大気）） */ }
+        port b_FL_ALSX_03 : ~AirlockAtmospherePort { doc /* 枠の外の相手 EB-ALSX-01（乗員室（ミッドデッキ、14.7 psia の大気）） */ }
+        port b_FL_ALSX_05 : AirlockAtmospherePort { doc /* 枠の外の相手 EB-ALSX-02（宇宙空間（真空、減圧ラインはペイロードベイの T 字管へ開く）） */ }
+        port b_FL_ALSX_06 : AirlockAtmospherePort { doc /* 枠の外の相手 EB-ALSX-02（宇宙空間（真空、減圧ラインはペイロードベイの T 字管へ開く）） */ }
+        port b_FL_ALSX_19 : EmuServiceOxygenPort { doc /* 枠の外の相手 EB-ALSX-04（EMU（船外活動ユニット：PLSS の O2 系・給水タンク・LCVG・液体輸送系）） */ }
+        port b_FL_ALSX_21 : PotableWaterPort { doc /* 枠の外の相手 EB-ALSX-04（EMU（船外活動ユニット：PLSS の O2 系・給水タンク・LCVG・液体輸送系）） */ }
+        port b_FL_ALSX_22 : ~WasteWaterPort { doc /* 枠の外の相手 EB-ALSX-04（EMU（船外活動ユニット：PLSS の O2 系・給水タンク・LCVG・液体輸送系）） */ }
+        port b_FL_ALSX_24 : LcvgCoolantWaterPort { doc /* 枠の外の相手 EB-ALSX-04（EMU（船外活動ユニット：PLSS の O2 系・給水タンク・LCVG・液体輸送系）） */ }
+        port b_FL_ALSX_25 : ~LcvgCoolantWaterPort { doc /* 枠の外の相手 EB-ALSX-04（EMU（船外活動ユニット：PLSS の O2 系・給水タンク・LCVG・液体輸送系）） */ }
+        port b_FL_ALSX_26 : AirlockMonitorDataPort { doc /* 枠の外の相手 EB-ALSX-03（計測・表示（SPEC 177・SM 66・OI MDM 経由の SM 表示、乗員の読む計器）） */ }
+        port b_FL_ALSX_27 : AirlockMonitorDataPort { doc /* 枠の外の相手 EB-ALSX-03（計測・表示（SPEC 177・SM 66・OI MDM 経由の SM 表示、乗員の読む計器）） */ }
+        port b_FL_ALSX_28 : AirlockMonitorDataPort { doc /* 枠の外の相手 EB-ALSX-03（計測・表示（SPEC 177・SM 66・OI MDM 経由の SM 表示、乗員の読む計器）） */ }
+        port b_FL_ALSX_29 : AirlockMonitorDataPort { doc /* 枠の外の相手 EB-ALSX-03（計測・表示（SPEC 177・SM 66・OI MDM 経由の SM 表示、乗員の読む計器）） */ }
+        port b_FL_ALSX_30 : AirlockMonitorDataPort { doc /* 枠の外の相手 EB-ALSX-03（計測・表示（SPEC 177・SM 66・OI MDM 経由の SM 表示、乗員の読む計器）） */ }
+        flow <'FL-ALSX-01'> fl_alsx_01 from b_FL_ALSX_01.fluid to als.dep.alsHatchEqualizationValves.i_FL_ALSX_01.fluid {
+            item :>> payload : AirlockAtmosphere {
+                attribute massFlowRate1Nominal :> massFlowRate = 240 ['lb/h'] { doc /* 質量流量 240 lb/h */ }
+                attribute massFlowRate2Nominal :> massFlowRate = 1278 ['lb/h'] { doc /* 質量流量 1,278 lb/h */ }
+                attribute differentialPressureNominal :> differentialPressure = 14.5 ['lbf/in²'] { doc /* 圧力 14.5 psid（差圧） */ }
+            }
+        }
+        flow <'FL-ALSX-02'> fl_alsx_02 of AirlockAtmosphere from als.dep.alsHatchEqualizationValves.o_FL_ALSX_02.fluid to als.dep.alsAirlockVolume.i_FL_ALSX_02.fluid;
+        flow <'FL-ALSX-03'> fl_alsx_03 from b_FL_ALSX_03.fluid to als.dep.alsDepressValve.i_FL_ALSX_03.fluid {
+            item :>> payload : AirlockAtmosphere {
+                attribute pressureNominal :> pressure = 10.2 ['lbf/in²'] { doc /* 圧力 10.2 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-ALSX-04'> fl_alsx_04 from als.dep.alsAirlockVolume.o_FL_ALSX_04.fluid to als.dep.alsDepressValve.i_FL_ALSX_04.fluid {
+            item :>> payload : AirlockAtmosphere {
+                attribute pressure1Nominal :> pressure = 5 ['lbf/in²'] { doc /* 圧力 5 psia（絶対圧） */ }
+                attribute pressure2Nominal :> pressure = 0 ['lbf/in²'] { doc /* 圧力 0 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-ALSX-05'> fl_alsx_05 of AirlockAtmosphere from als.dep.alsDepressValve.o_FL_ALSX_05.fluid to b_FL_ALSX_05.fluid;
+        flow <'FL-ALSX-06'> fl_alsx_06 of AirlockAtmosphere from als.dep.alsVestibuleDepressValves.o_FL_ALSX_06.fluid to b_FL_ALSX_06.fluid;
+        flow <'FL-ALSX-07'> fl_alsx_07 from als.dep.alsAirlockVolume.o_FL_ALSX_07.fluid to als.dep.alsAirlockPressureTransducers.i_FL_ALSX_07.fluid {
+            item :>> payload : AirlockAtmosphere {
+                attribute pressureMin :> pressure = 0 ['lbf/in²'] { doc /* 圧力 0〜20 psia（絶対圧） */ }
+                attribute pressureMax :> pressure = 20 ['lbf/in²'] { doc /* 圧力 0〜20 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-ALSX-08'> fl_alsx_08 of AirlockAtmosphere from als.dep.alsAirlockVolume.o_FL_ALSX_08.fluid to als.dep.alsHatchDeltaPGauges.i_FL_ALSX_08.fluid;
+        flow <'FL-ALSX-09'> fl_alsx_09 from als.lcg.alsLcgLines.o_FL_ALSX_09.fluid to als.lcg.alsLcgPressureTransducers.i_FL_ALSX_09.fluid {
+            item :>> payload : LcvgCoolantWater {
+                attribute pressureMin :> pressure = 0 ['lbf/in²'] { doc /* 圧力 0〜40 psig（ゲージ圧） */ }
+                attribute pressureMax :> pressure = 40 ['lbf/in²'] { doc /* 圧力 0〜40 psig（ゲージ圧） */ }
+            }
+        }
+        flow <'FL-ALSX-10'> fl_alsx_10 of AirlockLineHeat from als.htr.alsWaterLineHeaters.o_FL_ALSX_10.heat to als.htr.alsLineTempTransducers.i_FL_ALSX_10.heat;
+        flow <'FL-ALSX-11'> fl_alsx_11 of AirlockLineHeat from als.htr.alsStructuralPatchHeaters.o_FL_ALSX_11.heat to als.htr.alsStructTempSensors.i_FL_ALSX_11.heat;
+        flow <'FL-ALSX-12'> fl_alsx_12 of AirlockLineHeat from als.htr.alsWaterLineHeaters.o_FL_ALSX_12.heat to als.lcg.alsLcgLines.i_FL_ALSX_12.heat;
+        flow <'FL-ALSX-13'> fl_alsx_13 of AirlockLineHeat from als.htr.alsWaterLineHeaters.o_FL_ALSX_13.heat to als.scu.alsEmuWaterLines.i_FL_ALSX_13.heat;
+        flow <'FL-ALSX-14'> fl_alsx_14 of AirlockLineHeat from als.htr.alsStructuralPatchHeaters.o_FL_ALSX_14.heat to als.dep.alsAirlockVolume.i_FL_ALSX_14.heat;
+        flow <'FL-ALSX-15'> fl_alsx_15 of CabinAir from ars.cac.dct.alsMiddeckFloorFitting.o_FL_ALSX_15.fluid to als.vnt.alsBoosterFans.i_FL_ALSX_15.fluid;
+        flow <'FL-ALSX-16'> fl_alsx_16 from als.vnt.alsBoosterFans.o_FL_ALSX_16.fluid to als.vnt.alsAirlockDucting.i_FL_ALSX_16.fluid {
+            item :>> payload : CabinAir {
+                attribute massFlowRateMin :> massFlowRate = 541 ['lb/h'] { doc /* 質量流量 541〜767 lb/h */ }
+                attribute massFlowRateMax :> massFlowRate = 767 ['lb/h'] { doc /* 質量流量 541〜767 lb/h */ }
+            }
+        }
+        flow <'FL-ALSX-17'> fl_alsx_17 of CabinAir from als.vnt.alsAirlockDucting.o_FL_ALSX_17.fluid to als.dep.alsAirlockVolume.i_FL_ALSX_17.fluid;
+        flow <'FL-ALSX-18'> fl_alsx_18 from als.scu.alsEmuO2SupplyLine.o_FL_ALSX_18.fluid to als.scu.alsServicingCoolingUmbilical.i_FL_ALSX_18.fluid {
+            item :>> payload : EmuServiceOxygen {
+                attribute pressureNominal :> pressure = 900 ['lbf/in²'] { doc /* 圧力 900 psig（ゲージ圧） */ }
+            }
+        }
+        flow <'FL-ALSX-19'> fl_alsx_19 from als.scu.alsServicingCoolingUmbilical.o_FL_ALSX_19.fluid to b_FL_ALSX_19.fluid {
+            item :>> payload : EmuServiceOxygen {
+                attribute pressureNominal :> pressure = 850 ['lbf/in²'] { doc /* 圧力 850 psig（800〜900 psig）（ゲージ圧） */ }
+                attribute pressureMin :> pressure = 800 ['lbf/in²'] { doc /* 圧力 850 psig（800〜900 psig）（ゲージ圧） */ }
+                attribute pressureMax :> pressure = 900 ['lbf/in²'] { doc /* 圧力 850 psig（800〜900 psig）（ゲージ圧） */ }
+            }
+        }
+        flow <'FL-ALSX-20'> fl_alsx_20 of PotableWater from als.scu.alsEmuWaterLines.o_FL_ALSX_20.fluid to als.scu.alsServicingCoolingUmbilical.i_FL_ALSX_20.fluid;
+        flow <'FL-ALSX-21'> fl_alsx_21 of PotableWater from als.scu.alsServicingCoolingUmbilical.o_FL_ALSX_21.fluid to b_FL_ALSX_21.fluid;
+        flow <'FL-ALSX-22'> fl_alsx_22 of WasteWater from b_FL_ALSX_22.fluid to als.scu.alsServicingCoolingUmbilical.i_FL_ALSX_22.fluid;
+        flow <'FL-ALSX-23'> fl_alsx_23 of WasteWater from als.scu.alsServicingCoolingUmbilical.o_FL_ALSX_23.fluid to als.scu.alsEmuWaterLines.i_FL_ALSX_23.fluid;
+        flow <'FL-ALSX-24'> fl_alsx_24 from als.lcg.alsLcgLines.o_FL_ALSX_24.fluid to b_FL_ALSX_24.fluid {
+            item :>> payload : LcvgCoolantWater {
+                attribute massFlowRateNominal :> massFlowRate = 240 ['lb/h'] { doc /* 質量流量 240 lb/h */ }
+            }
+        }
+        flow <'FL-ALSX-25'> fl_alsx_25 of LcvgCoolantWater from b_FL_ALSX_25.fluid to als.lcg.alsLcgLines.i_FL_ALSX_25.fluid;
+        flow <'FL-ALSX-26'> fl_alsx_26 from als.dep.alsAirlockPressureTransducers.o_FL_ALSX_26.dataCommand to b_FL_ALSX_26.dataCommand {
+            item :>> payload : AirlockMonitorData {
+                attribute pressureMin :> pressure = 0 ['lbf/in²'] { doc /* 圧力 0〜20 psia（絶対圧） */ }
+                attribute pressureMax :> pressure = 20 ['lbf/in²'] { doc /* 圧力 0〜20 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-ALSX-27'> fl_alsx_27 of AirlockMonitorData from als.dep.alsHatchDeltaPGauges.o_FL_ALSX_27.dataCommand to b_FL_ALSX_27.dataCommand;
+        flow <'FL-ALSX-28'> fl_alsx_28 from als.lcg.alsLcgPressureTransducers.o_FL_ALSX_28.dataCommand to b_FL_ALSX_28.dataCommand {
+            item :>> payload : AirlockMonitorData {
+                attribute pressureMin :> pressure = 0 ['lbf/in²'] { doc /* 圧力 0〜40 psig（ゲージ圧） */ }
+                attribute pressureMax :> pressure = 40 ['lbf/in²'] { doc /* 圧力 0〜40 psig（ゲージ圧） */ }
+            }
+        }
+        flow <'FL-ALSX-29'> fl_alsx_29 of AirlockMonitorData from als.htr.alsLineTempTransducers.o_FL_ALSX_29.dataCommand to b_FL_ALSX_29.dataCommand;
+        flow <'FL-ALSX-30'> fl_alsx_30 of AirlockMonitorData from als.htr.alsStructTempSensors.o_FL_ALSX_30.dataCommand to b_FL_ALSX_30.dataCommand;
+    }
+    // ---- 図237 煙検知・消火ほか 内部ブロック図：機器
+    part def <'EQ-FDSX-01'> FdsReturnDuctSamplePoints :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
+        doc /* フライトデッキの左・右還気ダクトの感知器取付部（還流空気の取り出し）（機能ブロック SSD-FD-CAC-RTN-001、機器 PHY-ECLSS-11） */
+        port o_FL_FDSX_01 : CabinAirPort;
+        port o_FL_FDSX_02 : CabinAirPort;
+    }
+    part def <'EQ-FDSX-02'> FdsCabinFanPlenum :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
+        doc /* キャビンファン・プレナム出口（ミッドデッキ床下の ECLSS ベイ）の感知器取付部（機能ブロック SSD-FD-CAC-FAN-001、機器 PHY-ECLSS-11） */
+        port o_FL_FDSX_03 : CabinAirPort;
+    }
+    part def <'EQ-FDSX-03'> FdsAvBayAirPaths :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
+        doc /* アビオニクスベイ内の循環空気経路（ベイ1・2・3A、各ベイのファンが循環）（機能ブロック SSD-FD-ARS-AVB-CIR-001、機器 PHY-ECLSS-14） */
+        port o_FL_FDSX_04 : EquipmentCoolingAirPort;
+        port o_FL_FDSX_05 : EquipmentCoolingAirPort;
+        port i_FL_FDSX_06 : ~HalonAgentPort;
+        port i_FL_FDSX_07 : ~HalonAgentPort;
+    }
+    part def <'EQ-FDSX-04'> FdsSmokeDetectorsGroupA :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* A 群の煙感知器（キャビンファン出口・左還気ダクト・ベイ1・2・3A）（機能ブロック SSD-FD-ECL-FDS-DET-001、機器 PHY-CW-05） */
+        port i_FL_FDSX_01 : ~CabinAirPort;
+        port i_FL_FDSX_03 : ~CabinAirPort;
+        port i_FL_FDSX_04 : ~EquipmentCoolingAirPort;
+    }
+    part def <'EQ-FDSX-05'> FdsSmokeDetectorsGroupB :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* B 群の煙感知器（右還気ダクト・ベイ1・2・3A）（機能ブロック SSD-FD-ECL-FDS-DET-001、機器 PHY-CW-05） */
+        port i_FL_FDSX_02 : ~CabinAirPort;
+        port i_FL_FDSX_05 : ~EquipmentCoolingAirPort;
+    }
+    part def <'EQ-FDSX-06'> FdsHalonFixedBottles :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* 固定の Halon 消火ボトル（ベイ1・2・3A に各1本、火工弁つき）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-CW-05） */
+        port o_FL_FDSX_06 : HalonAgentPort;
+    }
+    part def <'EQ-FDSX-07'> FdsPortableExtinguishers :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
+        doc /* 携帯消火器（乗員室に3本：中甲板2・操縦室1）（機能ブロック SSD-FD-ECL-FDS-PFE-001、機器 PHY-CW-05） */
+        port o_FL_FDSX_07 : HalonAgentPort;
+        port o_FL_FDSX_08 : HalonAgentPort;
+    }
+    part def <'EQ-FDSX-08'> FdsWcsVacuumVentLine :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_28 {
+        doc /* WCS の真空ベント管とウェットトラッシュ区画のベント（真空ベント隔離弁のオリフィス付き）（機能ブロック SSD-FD-ECL-WCS-VAC-001、機器 PHY-ECLSS-28） */
+        port i_FL_FDSX_09 : ~CabinAirPort;
+    }
+    part def <'EQ-FDSX-09'> FdsPcsO2RegulatorFlowPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_18 {
+        doc /* PCS の O2 レギュレータと出口配管（系統1・2、流量・レギュレータ圧の計測点）（機能ブロック SSD-FD-ECL-PCS-O2S-001、機器 PHY-ECLSS-18） */
+        port o_FL_FDSX_10 : CabinO2Port;
+    }
+    part def <'EQ-FDSX-10'> FdsPcsO2MonitorSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_22 {
+        doc /* PCS の O2 流量・O2 レギュレータ圧の計測（系統1・2のトランスデューサ）（機能ブロック SSD-FD-ECL-PCS-MON-001、機器 PHY-ECLSS-22） */
+        port i_FL_FDSX_10 : ~CabinO2Port;
+    }
+    part def <'EQ-FDSX-11'> FdsPcsN2RegulatorFlowPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_19 {
+        doc /* PCS の N2 レギュレータと出口配管（系統1・2、流量・レギュレータ圧の計測点）（機能ブロック SSD-FD-ECL-PCS-N2S-001、機器 PHY-ECLSS-19） */
+        port o_FL_FDSX_11 : CabinN2Port;
+    }
+    part def <'EQ-FDSX-12'> FdsPcsN2MonitorSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_22 {
+        doc /* PCS の N2 流量・N2 レギュレータ圧・水タンク N2 圧・N2 量の計測（機能ブロック SSD-FD-ECL-PCS-MON-001、機器 PHY-ECLSS-22） */
+        port i_FL_FDSX_11 : ~CabinN2Port;
+        port i_FL_FDSX_12 : ~CabinN2Port;
+    }
+    part def <'EQ-FDSX-13'> FdsPcsWaterTankN2Regulators :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_19 {
+        doc /* 水タンク N2 レギュレータ（系統1・2、水タンク加圧用の窒素の調圧）（機能ブロック SSD-FD-ECL-PCS-N2S-001、機器 PHY-ECLSS-19） */
+        port o_FL_FDSX_12 : CabinN2Port;
+    }
+    // ---- 図237 煙検知・消火ほか 内部ブロック図：接続（EclssFdsxInterconnection は ECLSS を特化）
+    part def EclssFdsxInterconnection :> ECLSS {
+        doc /* 煙検知・消火ほかの内部ブロック図（図237）。基の機能ブロック SSD-FD-ECLSS-001。 */
+        part redefines ars {
+            part redefines cac {
+                part redefines rtn {
+                    part fdsReturnDuctSamplePoints[2] : FdsReturnDuctSamplePoints;
+                }
+                part redefines fan {
+                    part fdsCabinFanPlenum : FdsCabinFanPlenum;
+                }
+            }
+            part redefines avb {
+                part redefines cir {
+                    part fdsAvBayAirPaths[3] : FdsAvBayAirPaths;
+                }
+            }
+        }
+        part redefines fds {
+            part redefines det {
+                part fdsSmokeDetectorsGroupA[5] : FdsSmokeDetectorsGroupA;
+                part fdsSmokeDetectorsGroupB[4] : FdsSmokeDetectorsGroupB;
+            }
+            part redefines fix {
+                part fdsHalonFixedBottles[3] : FdsHalonFixedBottles;
+            }
+            part redefines pfe {
+                part fdsPortableExtinguishers[3] : FdsPortableExtinguishers;
+            }
+        }
+        part redefines wcs {
+            part redefines vac {
+                part fdsWcsVacuumVentLine : FdsWcsVacuumVentLine;
+            }
+        }
+        part redefines pcs {
+            part redefines o2s {
+                part fdsPcsO2RegulatorFlowPath[2] : FdsPcsO2RegulatorFlowPath;
+            }
+            part redefines mon {
+                part fdsPcsO2MonitorSensors : FdsPcsO2MonitorSensors;
+                part fdsPcsN2MonitorSensors : FdsPcsN2MonitorSensors;
+            }
+            part redefines n2s {
+                part fdsPcsN2RegulatorFlowPath[2] : FdsPcsN2RegulatorFlowPath;
+                part fdsPcsWaterTankN2Regulators[2] : FdsPcsWaterTankN2Regulators;
+            }
+        }
+        port b_FL_FDSX_08 : HalonAgentPort { doc /* 枠の外の相手 EB-FDSX-01（乗員室（開放空間と計器盤内、アビオニクスベイを含む。消火剤と空気の出入り）） */ }
+        port b_FL_FDSX_09 : ~CabinAirPort { doc /* 枠の外の相手 EB-FDSX-01（乗員室（開放空間と計器盤内、アビオニクスベイを含む。消火剤と空気の出入り）） */ }
+        flow <'FL-FDSX-01'> fl_fdsx_01 of CabinAir from ars.cac.rtn.fdsReturnDuctSamplePoints.o_FL_FDSX_01.fluid to fds.det.fdsSmokeDetectorsGroupA.i_FL_FDSX_01.fluid;
+        flow <'FL-FDSX-02'> fl_fdsx_02 of CabinAir from ars.cac.rtn.fdsReturnDuctSamplePoints.o_FL_FDSX_02.fluid to fds.det.fdsSmokeDetectorsGroupB.i_FL_FDSX_02.fluid;
+        flow <'FL-FDSX-03'> fl_fdsx_03 of CabinAir from ars.cac.fan.fdsCabinFanPlenum.o_FL_FDSX_03.fluid to fds.det.fdsSmokeDetectorsGroupA.i_FL_FDSX_03.fluid;
+        flow <'FL-FDSX-04'> fl_fdsx_04 of EquipmentCoolingAir from ars.avb.cir.fdsAvBayAirPaths.o_FL_FDSX_04.fluid to fds.det.fdsSmokeDetectorsGroupA.i_FL_FDSX_04.fluid;
+        flow <'FL-FDSX-05'> fl_fdsx_05 of EquipmentCoolingAir from ars.avb.cir.fdsAvBayAirPaths.o_FL_FDSX_05.fluid to fds.det.fdsSmokeDetectorsGroupB.i_FL_FDSX_05.fluid;
+        flow <'FL-FDSX-06'> fl_fdsx_06 from fds.fix.fdsHalonFixedBottles.o_FL_FDSX_06.fluid to ars.avb.cir.fdsAvBayAirPaths.i_FL_FDSX_06.fluid {
+            item :>> payload : HalonAgent {
+                attribute concentration1Min :> concentration = 7.5 { doc /* 数値 7.5〜9.5 % */ }
+                attribute concentration1Max :> concentration = 9.5 { doc /* 数値 7.5〜9.5 % */ }
+                attribute concentration2Min :> concentration = 4 { doc /* 数値 4〜5 % */ }
+                attribute concentration2Max :> concentration = 5 { doc /* 数値 4〜5 % */ }
+            }
+        }
+        flow <'FL-FDSX-07'> fl_fdsx_07 from fds.pfe.fdsPortableExtinguishers.o_FL_FDSX_07.fluid to ars.avb.cir.fdsAvBayAirPaths.i_FL_FDSX_07.fluid {
+            item :>> payload : HalonAgent {
+                attribute concentrationMin :> concentration = 6 { doc /* 数値 6〜7 % */ }
+                attribute concentrationMax :> concentration = 7 { doc /* 数値 6〜7 % */ }
+            }
+        }
+        flow <'FL-FDSX-08'> fl_fdsx_08 from fds.pfe.fdsPortableExtinguishers.o_FL_FDSX_08.fluid to b_FL_FDSX_08.fluid {
+            item :>> payload : HalonAgent {
+                attribute concentrationMax :> concentration = 1 { doc /* 数値 最大 1 % */ }
+            }
+        }
+        flow <'FL-FDSX-09'> fl_fdsx_09 from b_FL_FDSX_09.fluid to wcs.vac.fdsWcsVacuumVentLine.i_FL_FDSX_09.fluid {
+            item :>> payload : CabinAir {
+                attribute massFlowRate1Nominal :> massFlowRate = 0.125 ['lb/h'] { doc /* 質量流量 0.125 lb/h */ }
+                attribute massFlowRate2Nominal :> massFlowRate = 3.0 ['lb/h'] { doc /* 質量流量 3 lb/h（2.75〜3.25 lb/h） */ }
+                attribute massFlowRate2Min :> massFlowRate = 2.75 ['lb/h'] { doc /* 質量流量 3 lb/h（2.75〜3.25 lb/h） */ }
+                attribute massFlowRate2Max :> massFlowRate = 3.25 ['lb/h'] { doc /* 質量流量 3 lb/h（2.75〜3.25 lb/h） */ }
+            }
+        }
+        flow <'FL-FDSX-10'> fl_fdsx_10 from pcs.o2s.fdsPcsO2RegulatorFlowPath.o_FL_FDSX_10.fluid to pcs.mon.fdsPcsO2MonitorSensors.i_FL_FDSX_10.fluid {
+            item :>> payload : CabinO2 {
+                attribute massFlowRateMax :> massFlowRate = 5 ['lb/h'] { doc /* 質量流量 最大 5 lb/h */ }
+                attribute pressureNominal :> pressure = 100 ['lbf/in²'] { doc /* 圧力 100 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-FDSX-11'> fl_fdsx_11 from pcs.n2s.fdsPcsN2RegulatorFlowPath.o_FL_FDSX_11.fluid to pcs.mon.fdsPcsN2MonitorSensors.i_FL_FDSX_11.fluid {
+            item :>> payload : CabinN2 {
+                attribute massFlowRateMax :> massFlowRate = 5 ['lb/h'] { doc /* 質量流量 最大 5 lb/h */ }
+                attribute pressureNominal :> pressure = 200 ['lbf/in²'] { doc /* 圧力 200 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-FDSX-12'> fl_fdsx_12 from pcs.n2s.fdsPcsWaterTankN2Regulators.o_FL_FDSX_12.fluid to pcs.mon.fdsPcsN2MonitorSensors.i_FL_FDSX_12.fluid {
+            item :>> payload : CabinN2 {
+                attribute pressureMin :> pressure = 15.5 ['lbf/in²'] { doc /* 圧力 15.5〜17 psig（ゲージ圧） */ }
+                attribute pressureMax :> pressure = 17.0 ['lbf/in²'] { doc /* 圧力 15.5〜17 psig（ゲージ圧） */ }
+                attribute massFlowRateMax :> massFlowRate = 1 ['lb/h'] { doc /* 質量流量 最大 1 lb/h */ }
+            }
+        }
+    }
     // ---- 流れ → IF（詳細化）
     package FlowRefinement {
         #refinement dependency <'FL-EPS-01>IF-EPS-01'> from EpsInterconnection::fl_eps_01 to SSD_BLK_SYS_001::MissionContext::IF_EPS_01;
@@ -3780,10 +4766,12 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-EPS-09>IF-EPS-03'> from EpsInterconnection::fl_eps_09 to SSD_BLK_SYS_001::EPS::IF_EPS_03;
         #refinement dependency <'FL-EPS-10>IF-EPS-03'> from EpsInterconnection::fl_eps_10 to SSD_BLK_SYS_001::EPS::IF_EPS_03;
         #refinement dependency <'FL-EPS-11>IF-EPS-04'> from EpsInterconnection::fl_eps_11 to SSD_BLK_SYS_001::ORB::IF_EPS_04;
+        #refinement dependency <'FL-EPS-11>IF-ECL-01'> from EpsInterconnection::fl_eps_11 to SSD_BLK_SYS_001::ORB::IF_ECL_01;
         #refinement dependency <'FL-EPS-12>IF-EPS-05'> from EpsInterconnection::fl_eps_12 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-13>IF-EPS-05'> from EpsInterconnection::fl_eps_13 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-14>IF-EPS-05'> from EpsInterconnection::fl_eps_14 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-15>IF-EPS-06'> from EpsInterconnection::fl_eps_15 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
+        #refinement dependency <'FL-EPS-15>IF-ECL-10'> from EpsInterconnection::fl_eps_15 to SSD_BLK_SYS_001::ORB::IF_ECL_10;
         #refinement dependency <'FL-EPS-16>IF-EPS-06'> from EpsInterconnection::fl_eps_16 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-EPS-17>IF-EPS-06'> from EpsInterconnection::fl_eps_17 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-EPS-18>IF-EPS-07'> from EpsInterconnection::fl_eps_18 to SSD_BLK_SYS_001::ORB::IF_EPS_07;
@@ -3818,20 +4806,26 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-ATCS-19>IF-TCS-07'> from AtcsInterconnection::fl_atcs_19 to SSD_BLK_SYS_001::ECL_ATCS::IF_TCS_07;
         #refinement dependency <'FL-ATCS-20>IF-TCS-07'> from AtcsInterconnection::fl_atcs_20 to SSD_BLK_SYS_001::ECL_ATCS::IF_TCS_07;
         #refinement dependency <'FL-ATCS-21>IF-EPS-07'> from AtcsInterconnection::fl_atcs_21 to SSD_BLK_SYS_001::ORB::IF_EPS_07;
+        #refinement dependency <'FL-ATCS-21>IF-ECL-09'> from AtcsInterconnection::fl_atcs_21 to SSD_BLK_SYS_001::ORB::IF_ECL_09;
         #refinement dependency <'FL-ATCS-22>IF-TCS-02'> from AtcsInterconnection::fl_atcs_22 to SSD_BLK_SYS_001::ORB::IF_TCS_02;
         #refinement dependency <'FL-ATCS-23>IF-TCS-03'> from AtcsInterconnection::fl_atcs_23 to SSD_BLK_SYS_001::ORB::IF_TCS_03;
         #refinement dependency <'FL-ATCS-24>IF-TCS-12'> from AtcsInterconnection::fl_atcs_24 to SSD_BLK_SYS_001::MissionContext::IF_TCS_12;
+        #refinement dependency <'FL-ATCS-24>IF-ECL-21'> from AtcsInterconnection::fl_atcs_24 to SSD_BLK_SYS_001::MissionContext::IF_ECL_21;
         #refinement dependency <'FL-ATCS-25>IF-TCS-15'> from AtcsInterconnection::fl_atcs_25 to SSD_BLK_SYS_001::MissionContext::IF_TCS_15;
+        #refinement dependency <'FL-ATCS-25>IF-ECL-34'> from AtcsInterconnection::fl_atcs_25 to SSD_BLK_SYS_001::MissionContext::IF_ECL_34;
         #refinement dependency <'FL-ATCS-27>IF-TCS-14'> from AtcsInterconnection::fl_atcs_27 to SSD_BLK_SYS_001::MissionContext::IF_TCS_14;
         #refinement dependency <'FL-ATCS-28>IF-TCS-16'> from AtcsInterconnection::fl_atcs_28 to SSD_BLK_SYS_001::ECLSS::IF_TCS_16;
+        #refinement dependency <'FL-ATCS-28>IF-ECL-12'> from AtcsInterconnection::fl_atcs_28 to SSD_BLK_SYS_001::ECLSS::IF_ECL_12;
         #refinement dependency <'FL-ATCS-29>IF-TCS-16'> from AtcsInterconnection::fl_atcs_29 to SSD_BLK_SYS_001::ECLSS::IF_TCS_16;
         #refinement dependency <'FL-ATCS-30>IF-TCS-13'> from AtcsInterconnection::fl_atcs_30 to SSD_BLK_SYS_001::MissionContext::IF_TCS_13;
         #refinement dependency <'FL-ATCS-31>IF-TCS-13'> from AtcsInterconnection::fl_atcs_31 to SSD_BLK_SYS_001::MissionContext::IF_TCS_13;
         #refinement dependency <'FL-ATCS-32>IF-TCS-04'> from AtcsInterconnection::fl_atcs_32 to SSD_BLK_SYS_001::ECLSS::IF_TCS_04;
+        #refinement dependency <'FL-ATCS-32>IF-ECL-24'> from AtcsInterconnection::fl_atcs_32 to SSD_BLK_SYS_001::ECLSS::IF_ECL_24;
         #refinement dependency <'FL-ATCS-33>IF-TCS-01'> from AtcsInterconnection::fl_atcs_33 to SSD_BLK_SYS_001::ECLSS::IF_TCS_01;
         #refinement dependency <'FL-ATCS-34>IF-TCS-06'> from AtcsInterconnection::fl_atcs_34 to SSD_BLK_SYS_001::MissionContext::IF_TCS_06;
         #refinement dependency <'FL-ATCS-35>IF-TCS-05'> from AtcsInterconnection::fl_atcs_35 to SSD_BLK_SYS_001::ORB::IF_TCS_05;
         #refinement dependency <'FL-ATCS-36>IF-TCS-18'> from AtcsInterconnection::fl_atcs_36 to SSD_BLK_SYS_001::ORB::IF_TCS_18;
+        #refinement dependency <'FL-ATCS-36>IF-ECL-28'> from AtcsInterconnection::fl_atcs_36 to SSD_BLK_SYS_001::ORB::IF_ECL_28;
         #refinement dependency <'FL-ATCS-37>IF-TCS-19'> from AtcsInterconnection::fl_atcs_37 to SSD_BLK_SYS_001::ORB::IF_TCS_19;
         #refinement dependency <'FL-ATCS-38>IF-TCS-21'> from AtcsInterconnection::fl_atcs_38 to SSD_BLK_SYS_001::ORB::IF_TCS_21;
         #refinement dependency <'FL-MPS-01>IF-MPS-01'> from MpsInterconnection::fl_mps_01 to SSD_BLK_SYS_001::SpaceTransportationSystem::IF_MPS_01;
@@ -3918,6 +4912,8 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-APU-17>IF-APU-07'> from ApuHydInterconnection::fl_apu_17 to SSD_BLK_SYS_001::APU::IF_APU_07;
         #refinement dependency <'FL-APU-18>IF-APU-08'> from ApuHydInterconnection::fl_apu_18 to SSD_BLK_SYS_001::APU::IF_APU_08;
         #refinement dependency <'FL-APU-20>IF-TCS-03'> from ApuHydInterconnection::fl_apu_20 to SSD_BLK_SYS_001::ORB::IF_TCS_03;
+        #refinement dependency <'FL-APU-20>IF-ECL-11'> from ApuHydInterconnection::fl_apu_20 to SSD_BLK_SYS_001::ORB::IF_ECL_11;
+        #refinement dependency <'FL-APU-20>IF-ORB-12'> from ApuHydInterconnection::fl_apu_20 to SSD_BLK_SYS_001::ORB::IF_ORB_12;
         #refinement dependency <'FL-APU-22>IF-APU-09'> from ApuHydInterconnection::fl_apu_22 to SSD_BLK_SYS_001::ORB::IF_APU_09;
         #refinement dependency <'FL-APU-23>IF-APU-09'> from ApuHydInterconnection::fl_apu_23 to SSD_BLK_SYS_001::ORB::IF_APU_09;
         #refinement dependency <'FL-APU-24>IF-APU-10'> from ApuHydInterconnection::fl_apu_24 to SSD_BLK_SYS_001::ORB::IF_APU_10;
@@ -3991,10 +4987,15 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-CT-42>IF-CT-20'> from CtRfInterconnection::fl_ct_42 to SSD_BLK_SYS_001::CT::IF_CT_20;
         #refinement dependency <'FL-CT-43>IF-CT-25'> from CtRfInterconnection::fl_ct_43 to SSD_BLK_SYS_001::ORB::IF_CT_25;
         #refinement dependency <'FL-ARSA-01>IF-CAC-01'> from ArsAirInterconnection::fl_arsa_01 to SSD_BLK_SYS_001::ECLSS::IF_CAC_01;
+        #refinement dependency <'FL-ARSA-01>IF-ARS-09'> from ArsAirInterconnection::fl_arsa_01 to SSD_BLK_SYS_001::ECLSS::IF_ARS_09;
+        #refinement dependency <'FL-ARSA-01>IF-ECL-05'> from ArsAirInterconnection::fl_arsa_01 to SSD_BLK_SYS_001::ECLSS::IF_ECL_05;
         #refinement dependency <'FL-ARSA-02>IF-CAC-05'> from ArsAirInterconnection::fl_arsa_02 to SSD_BLK_SYS_001::ORB::IF_CAC_05;
+        #refinement dependency <'FL-ARSA-02>IF-ARS-39'> from ArsAirInterconnection::fl_arsa_02 to SSD_BLK_SYS_001::ORB::IF_ARS_39;
+        #refinement dependency <'FL-ARSA-02>IF-ORB-13'> from ArsAirInterconnection::fl_arsa_02 to SSD_BLK_SYS_001::ORB::IF_ORB_13;
         #refinement dependency <'FL-ARSA-03>IF-CAC-02'> from ArsAirInterconnection::fl_arsa_03 to SSD_BLK_SYS_001::ARS_CAC::IF_CAC_02;
         #refinement dependency <'FL-ARSA-04>IF-CAC-06'> from ArsAirInterconnection::fl_arsa_04 to SSD_BLK_SYS_001::ARS_CAC::IF_CAC_06;
         #refinement dependency <'FL-ARSA-05>IF-CO2-01'> from ArsAirInterconnection::fl_arsa_05 to SSD_BLK_SYS_001::ECL_ARS::IF_CO2_01;
+        #refinement dependency <'FL-ARSA-05>IF-ARS-01'> from ArsAirInterconnection::fl_arsa_05 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_01;
         #refinement dependency <'FL-ARSA-06>IF-CO2-01'> from ArsAirInterconnection::fl_arsa_06 to SSD_BLK_SYS_001::ECL_ARS::IF_CO2_01;
         #refinement dependency <'FL-ARSA-07>IF-CO2-03'> from ArsAirInterconnection::fl_arsa_07 to SSD_BLK_SYS_001::ARS_CO2::IF_CO2_03;
         #refinement dependency <'FL-ARSA-08>IF-CAC-13'> from ArsAirInterconnection::fl_arsa_08 to SSD_BLK_SYS_001::ECL_ARS::IF_CAC_13;
@@ -4002,24 +5003,42 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-ARSA-11>IF-THC-02'> from ArsAirInterconnection::fl_arsa_11 to SSD_BLK_SYS_001::ARS_THC::IF_THC_02;
         #refinement dependency <'FL-ARSA-12>IF-THC-04'> from ArsAirInterconnection::fl_arsa_12 to SSD_BLK_SYS_001::ARS_THC::IF_THC_04;
         #refinement dependency <'FL-ARSA-13>IF-THC-05'> from ArsAirInterconnection::fl_arsa_13 to SSD_BLK_SYS_001::ECLSS::IF_THC_05;
+        #refinement dependency <'FL-ARSA-13>IF-ARS-12'> from ArsAirInterconnection::fl_arsa_13 to SSD_BLK_SYS_001::ECLSS::IF_ARS_12;
+        #refinement dependency <'FL-ARSA-13>IF-ECL-07'> from ArsAirInterconnection::fl_arsa_13 to SSD_BLK_SYS_001::ECLSS::IF_ECL_07;
         #refinement dependency <'FL-ARSA-14>IF-THC-06'> from ArsAirInterconnection::fl_arsa_14 to SSD_BLK_SYS_001::ECLSS::IF_THC_06;
+        #refinement dependency <'FL-ARSA-14>IF-ARS-10'> from ArsAirInterconnection::fl_arsa_14 to SSD_BLK_SYS_001::ECLSS::IF_ARS_10;
         #refinement dependency <'FL-ARSA-15>IF-CO2-05'> from ArsAirInterconnection::fl_arsa_15 to SSD_BLK_SYS_001::ECL_ARS::IF_CO2_05;
+        #refinement dependency <'FL-ARSA-15>IF-ARS-05'> from ArsAirInterconnection::fl_arsa_15 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_05;
         #refinement dependency <'FL-ARSA-16>IF-CO2-05'> from ArsAirInterconnection::fl_arsa_16 to SSD_BLK_SYS_001::ECL_ARS::IF_CO2_05;
         #refinement dependency <'FL-ARSA-17>IF-THC-07'> from ArsAirInterconnection::fl_arsa_17 to SSD_BLK_SYS_001::ECLSS::IF_THC_07;
         #refinement dependency <'FL-ARSA-18>IF-THC-03'> from ArsAirInterconnection::fl_arsa_18 to SSD_BLK_SYS_001::ECL_ARS::IF_THC_03;
         #refinement dependency <'FL-ARSA-19>IF-THC-11'> from ArsAirInterconnection::fl_arsa_19 to SSD_BLK_SYS_001::ORB::IF_THC_11;
+        #refinement dependency <'FL-ARSA-19>IF-ARS-27'> from ArsAirInterconnection::fl_arsa_19 to SSD_BLK_SYS_001::ORB::IF_ARS_27;
+        #refinement dependency <'FL-ARSA-19>IF-ECL-29'> from ArsAirInterconnection::fl_arsa_19 to SSD_BLK_SYS_001::ORB::IF_ECL_29;
+        #refinement dependency <'FL-ARSA-19>IF-ORB-19'> from ArsAirInterconnection::fl_arsa_19 to SSD_BLK_SYS_001::ORB::IF_ORB_19;
         #refinement dependency <'FL-ARSA-20>IF-CO2-06'> from ArsAirInterconnection::fl_arsa_20 to SSD_BLK_SYS_001::ORB::IF_CO2_06;
+        #refinement dependency <'FL-ARSA-20>IF-ARS-37'> from ArsAirInterconnection::fl_arsa_20 to SSD_BLK_SYS_001::ORB::IF_ARS_37;
         #refinement dependency <'FL-ARSA-21>IF-CAC-09'> from ArsAirInterconnection::fl_arsa_21 to SSD_BLK_SYS_001::ORB::IF_CAC_09;
+        #refinement dependency <'FL-ARSA-21>IF-ARS-32'> from ArsAirInterconnection::fl_arsa_21 to SSD_BLK_SYS_001::ORB::IF_ARS_32;
+        #refinement dependency <'FL-ARSA-21>IF-ECL-39'> from ArsAirInterconnection::fl_arsa_21 to SSD_BLK_SYS_001::ORB::IF_ECL_39;
         #refinement dependency <'FL-ARSA-22>IF-CAC-03'> from ArsAirInterconnection::fl_arsa_22 to SSD_BLK_SYS_001::ECL_ARS::IF_CAC_03;
+        #refinement dependency <'FL-ARSA-22>IF-ARS-02'> from ArsAirInterconnection::fl_arsa_22 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_02;
         #refinement dependency <'FL-ARSA-23>IF-RCRS-02'> from ArsAirInterconnection::fl_arsa_23 to SSD_BLK_SYS_001::ECL_ARS::IF_RCRS_02;
+        #refinement dependency <'FL-ARSA-23>IF-ARS-04'> from ArsAirInterconnection::fl_arsa_23 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_04;
         #refinement dependency <'FL-ARSA-24>IF-RCRS-03'> from ArsAirInterconnection::fl_arsa_24 to SSD_BLK_SYS_001::ECLSS::IF_RCRS_03;
+        #refinement dependency <'FL-ARSA-24>IF-ARS-16'> from ArsAirInterconnection::fl_arsa_24 to SSD_BLK_SYS_001::MissionContext::IF_ARS_16;
         #refinement dependency <'FL-ARSA-25>IF-AVB-02'> from ArsAirInterconnection::fl_arsa_25 to SSD_BLK_SYS_001::ORB::IF_AVB_02;
+        #refinement dependency <'FL-ARSA-25>IF-ARS-17'> from ArsAirInterconnection::fl_arsa_25 to SSD_BLK_SYS_001::ORB::IF_ARS_17;
         #refinement dependency <'FL-ARSA-26>IF-AVB-05'> from ArsAirInterconnection::fl_arsa_26 to SSD_BLK_SYS_001::ARS_AVB::IF_AVB_05;
         #refinement dependency <'FL-ARSA-27>IF-AVB-09'> from ArsAirInterconnection::fl_arsa_27 to SSD_BLK_SYS_001::ARS_AVB::IF_AVB_09;
         #refinement dependency <'FL-ARSA-28>IF-AVB-10'> from ArsAirInterconnection::fl_arsa_28 to SSD_BLK_SYS_001::ECL_ARS::IF_AVB_10;
         #refinement dependency <'FL-ARSA-29>IF-AVB-07'> from ArsAirInterconnection::fl_arsa_29 to SSD_BLK_SYS_001::ORB::IF_AVB_07;
+        #refinement dependency <'FL-ARSA-29>IF-ARS-34'> from ArsAirInterconnection::fl_arsa_29 to SSD_BLK_SYS_001::ORB::IF_ARS_34;
         #refinement dependency <'FL-ARSA-30>IF-IMU-01'> from ArsAirInterconnection::fl_arsa_30 to SSD_BLK_SYS_001::ECLSS::IF_IMU_01;
+        #refinement dependency <'FL-ARSA-30>IF-ARS-11'> from ArsAirInterconnection::fl_arsa_30 to SSD_BLK_SYS_001::ECLSS::IF_ARS_11;
         #refinement dependency <'FL-ARSA-31>IF-IMU-02'> from ArsAirInterconnection::fl_arsa_31 to SSD_BLK_SYS_001::ORB::IF_IMU_02;
+        #refinement dependency <'FL-ARSA-31>IF-ARS-19'> from ArsAirInterconnection::fl_arsa_31 to SSD_BLK_SYS_001::ORB::IF_ARS_19;
+        #refinement dependency <'FL-ARSA-31>IF-ORB-34'> from ArsAirInterconnection::fl_arsa_31 to SSD_BLK_SYS_001::ORB::IF_ORB_34;
         #refinement dependency <'FL-ARSA-32>IF-IMU-03'> from ArsAirInterconnection::fl_arsa_32 to SSD_BLK_SYS_001::ARS_IMU::IF_IMU_03;
         #refinement dependency <'FL-ARSA-33>IF-IMU-04'> from ArsAirInterconnection::fl_arsa_33 to SSD_BLK_SYS_001::ARS_IMU::IF_IMU_04;
         #refinement dependency <'FL-ARSA-34>IF-IMU-09'> from ArsAirInterconnection::fl_arsa_34 to SSD_BLK_SYS_001::ECLSS::IF_IMU_09;
@@ -4036,6 +5055,7 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-ARSW-12>IF-WCL-02'> from ArsWaterInterconnection::fl_arsw_12 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_02;
         #refinement dependency <'FL-ARSW-13>IF-WCL-02'> from ArsWaterInterconnection::fl_arsw_13 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_02;
         #refinement dependency <'FL-ARSW-14>IF-WCL-20'> from ArsWaterInterconnection::fl_arsw_14 to SSD_BLK_SYS_001::ECLSS::IF_WCL_20;
+        #refinement dependency <'FL-ARSW-14>IF-ECL-06'> from ArsWaterInterconnection::fl_arsw_14 to SSD_BLK_SYS_001::ECLSS::IF_ECL_06;
         #refinement dependency <'FL-ARSW-15>IF-WCL-03'> from ArsWaterInterconnection::fl_arsw_15 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_03;
         #refinement dependency <'FL-ARSW-17>IF-ARS-06'> from ArsWaterInterconnection::fl_arsw_17 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_06;
         #refinement dependency <'FL-ARSW-18>IF-ARS-08'> from ArsWaterInterconnection::fl_arsw_18 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_08;
@@ -4047,26 +5067,40 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-ARSW-24>IF-IMU-04'> from ArsWaterInterconnection::fl_arsw_24 to SSD_BLK_SYS_001::ARS_IMU::IF_IMU_04;
         #refinement dependency <'FL-ARSW-25>IF-ARS-03'> from ArsWaterInterconnection::fl_arsw_25 to SSD_BLK_SYS_001::ECL_ARS::IF_ARS_03;
         #refinement dependency <'FL-ARSW-26>IF-WCL-17'> from ArsWaterInterconnection::fl_arsw_26 to SSD_BLK_SYS_001::ORB::IF_WCL_17;
+        #refinement dependency <'FL-ARSW-26>IF-ARS-20'> from ArsWaterInterconnection::fl_arsw_26 to SSD_BLK_SYS_001::ORB::IF_ARS_20;
         #refinement dependency <'FL-ARSW-27>IF-WCL-17'> from ArsWaterInterconnection::fl_arsw_27 to SSD_BLK_SYS_001::ORB::IF_WCL_17;
         #refinement dependency <'FL-ARSW-28>IF-WCL-18'> from ArsWaterInterconnection::fl_arsw_28 to SSD_BLK_SYS_001::ORB::IF_WCL_18;
+        #refinement dependency <'FL-ARSW-28>IF-ARS-21'> from ArsWaterInterconnection::fl_arsw_28 to SSD_BLK_SYS_001::ORB::IF_ARS_21;
+        #refinement dependency <'FL-ARSW-28>IF-ECL-33'> from ArsWaterInterconnection::fl_arsw_28 to SSD_BLK_SYS_001::ORB::IF_ECL_33;
+        #refinement dependency <'FL-ARSW-28>IF-ORB-35'> from ArsWaterInterconnection::fl_arsw_28 to SSD_BLK_SYS_001::ORB::IF_ORB_35;
         #refinement dependency <'FL-ARSW-29>IF-ARS-42'> from ArsWaterInterconnection::fl_arsw_29 to SSD_BLK_SYS_001::ORB::IF_ARS_42;
         #refinement dependency <'FL-ARSW-30>IF-WCL-19'> from ArsWaterInterconnection::fl_arsw_30 to SSD_BLK_SYS_001::ECLSS::IF_WCL_19;
+        #refinement dependency <'FL-ARSW-30>IF-ARS-24'> from ArsWaterInterconnection::fl_arsw_30 to SSD_BLK_SYS_001::ECLSS::IF_ARS_24;
         #refinement dependency <'FL-ARSW-31>IF-WCL-21'> from ArsWaterInterconnection::fl_arsw_31 to SSD_BLK_SYS_001::ECLSS::IF_WCL_21;
+        #refinement dependency <'FL-ARSW-31>IF-ARS-22'> from ArsWaterInterconnection::fl_arsw_31 to SSD_BLK_SYS_001::ECLSS::IF_ARS_22;
+        #refinement dependency <'FL-ARSW-31>IF-ECL-15'> from ArsWaterInterconnection::fl_arsw_31 to SSD_BLK_SYS_001::ECLSS::IF_ECL_15;
         #refinement dependency <'FL-ARSW-32>IF-WCL-22'> from ArsWaterInterconnection::fl_arsw_32 to SSD_BLK_SYS_001::ECLSS::IF_WCL_22;
+        #refinement dependency <'FL-ARSW-32>IF-ARS-23'> from ArsWaterInterconnection::fl_arsw_32 to SSD_BLK_SYS_001::ECLSS::IF_ARS_23;
         #refinement dependency <'FL-ARSW-33>IF-WCL-12'> from ArsWaterInterconnection::fl_arsw_33 to SSD_BLK_SYS_001::ORB::IF_WCL_12;
+        #refinement dependency <'FL-ARSW-33>IF-ARS-36'> from ArsWaterInterconnection::fl_arsw_33 to SSD_BLK_SYS_001::ORB::IF_ARS_36;
         #refinement dependency <'FL-ARSW-34>IF-WCL-13'> from ArsWaterInterconnection::fl_arsw_34 to SSD_BLK_SYS_001::ORB::IF_WCL_13;
         #refinement dependency <'FL-ARSW-35>IF-WCL-15'> from ArsWaterInterconnection::fl_arsw_35 to SSD_BLK_SYS_001::ORB::IF_WCL_15;
+        #refinement dependency <'FL-ARSW-35>IF-ARS-30'> from ArsWaterInterconnection::fl_arsw_35 to SSD_BLK_SYS_001::ORB::IF_ARS_30;
         #refinement dependency <'FL-ARSW-36>IF-WCL-16'> from ArsWaterInterconnection::fl_arsw_36 to SSD_BLK_SYS_001::ORB::IF_WCL_16;
+        #refinement dependency <'FL-ARSW-36>IF-ARS-31'> from ArsWaterInterconnection::fl_arsw_36 to SSD_BLK_SYS_001::ORB::IF_ARS_31;
         #refinement dependency <'FL-PCS-01>IF-EPS-04'> from PcsInterconnection::fl_pcs_01 to SSD_BLK_SYS_001::ORB::IF_EPS_04;
         #refinement dependency <'FL-PCS-03>IF-TCS-04'> from PcsInterconnection::fl_pcs_03 to SSD_BLK_SYS_001::ECLSS::IF_TCS_04;
         #refinement dependency <'FL-PCS-06>IF-PCS-04'> from PcsInterconnection::fl_pcs_06 to SSD_BLK_SYS_001::ECLSS::IF_PCS_04;
+        #refinement dependency <'FL-PCS-06>IF-ECL-02'> from PcsInterconnection::fl_pcs_06 to SSD_BLK_SYS_001::ECLSS::IF_ECL_02;
         #refinement dependency <'FL-PCS-08>IF-PCS-04'> from PcsInterconnection::fl_pcs_08 to SSD_BLK_SYS_001::ECLSS::IF_PCS_04;
         #refinement dependency <'FL-PCS-10>IF-PCS-04'> from PcsInterconnection::fl_pcs_10 to SSD_BLK_SYS_001::ECLSS::IF_PCS_04;
         #refinement dependency <'FL-PCS-11>IF-PCS-05'> from PcsInterconnection::fl_pcs_11 to SSD_BLK_SYS_001::ECLSS::IF_PCS_05;
+        #refinement dependency <'FL-PCS-11>IF-ECL-04'> from PcsInterconnection::fl_pcs_11 to SSD_BLK_SYS_001::ECLSS::IF_ECL_04;
         #refinement dependency <'FL-PCS-13>IF-PCS-01'> from PcsInterconnection::fl_pcs_13 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_01;
         #refinement dependency <'FL-PCS-15>IF-PCS-09'> from PcsInterconnection::fl_pcs_15 to SSD_BLK_SYS_001::ECLSS::IF_PCS_09;
         #refinement dependency <'FL-PCS-17>IF-PCS-02'> from PcsInterconnection::fl_pcs_17 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_02;
         #refinement dependency <'FL-PCS-20>IF-PCS-06'> from PcsInterconnection::fl_pcs_20 to SSD_BLK_SYS_001::ECLSS::IF_PCS_06;
+        #refinement dependency <'FL-PCS-20>IF-ECL-03'> from PcsInterconnection::fl_pcs_20 to SSD_BLK_SYS_001::ECLSS::IF_ECL_03;
         #refinement dependency <'FL-PCS-21>IF-PCS-23'> from PcsInterconnection::fl_pcs_21 to SSD_BLK_SYS_001::ORB::IF_PCS_23;
         #refinement dependency <'FL-PCS-24>IF-PCS-03'> from PcsInterconnection::fl_pcs_24 to SSD_BLK_SYS_001::ECLSS::IF_PCS_03;
         #refinement dependency <'FL-PCS-25>IF-PCS-03'> from PcsInterconnection::fl_pcs_25 to SSD_BLK_SYS_001::ECLSS::IF_PCS_03;
@@ -4079,33 +5113,41 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-PCS-32>IF-PCS-10'> from PcsInterconnection::fl_pcs_32 to SSD_BLK_SYS_001::ECLSS::IF_PCS_10;
         #refinement dependency <'FL-PCS-33>IF-PCS-13'> from PcsInterconnection::fl_pcs_33 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_13;
         #refinement dependency <'FL-PCS-35>IF-PCS-14'> from PcsInterconnection::fl_pcs_35 to SSD_BLK_SYS_001::ORB::IF_PCS_14;
+        #refinement dependency <'FL-PCS-35>IF-ECL-36'> from PcsInterconnection::fl_pcs_35 to SSD_BLK_SYS_001::ORB::IF_ECL_36;
         #refinement dependency <'FL-PCS-36>IF-PCS-18'> from PcsInterconnection::fl_pcs_36 to SSD_BLK_SYS_001::ORB::IF_PCS_18;
+        #refinement dependency <'FL-PCS-36>IF-ECL-42'> from PcsInterconnection::fl_pcs_36 to SSD_BLK_SYS_001::ORB::IF_ECL_42;
         #refinement dependency <'FL-WTR-01>IF-EPS-06'> from WaterWasteInterconnection::fl_wtr_01 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-WTR-02>IF-EPS-06'> from WaterWasteInterconnection::fl_wtr_02 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-WTR-04>IF-H2O-01'> from WaterWasteInterconnection::fl_wtr_04 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_01;
         #refinement dependency <'FL-WTR-05>IF-H2O-01'> from WaterWasteInterconnection::fl_wtr_05 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_01;
         #refinement dependency <'FL-WTR-06>IF-H2O-01'> from WaterWasteInterconnection::fl_wtr_06 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_01;
         #refinement dependency <'FL-WTR-07>IF-H2O-02'> from WaterWasteInterconnection::fl_wtr_07 to SSD_BLK_SYS_001::ECLSS::IF_H2O_02;
+        #refinement dependency <'FL-WTR-07>IF-ECL-22'> from WaterWasteInterconnection::fl_wtr_07 to SSD_BLK_SYS_001::MissionContext::IF_ECL_22;
         #refinement dependency <'FL-WTR-08>IF-H2O-03'> from WaterWasteInterconnection::fl_wtr_08 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_03;
         #refinement dependency <'FL-WTR-09>IF-WCL-22'> from WaterWasteInterconnection::fl_wtr_09 to SSD_BLK_SYS_001::ECLSS::IF_WCL_22;
         #refinement dependency <'FL-WTR-10>IF-ORB-44'> from WaterWasteInterconnection::fl_wtr_10 to SSD_BLK_SYS_001::ORB::IF_ORB_44;
         #refinement dependency <'FL-WTR-13>IF-TCS-16'> from WaterWasteInterconnection::fl_wtr_13 to SSD_BLK_SYS_001::ECLSS::IF_TCS_16;
         #refinement dependency <'FL-WTR-14>IF-ALS-03'> from WaterWasteInterconnection::fl_wtr_14 to SSD_BLK_SYS_001::ECLSS::IF_ALS_03;
+        #refinement dependency <'FL-WTR-14>IF-ECL-13'> from WaterWasteInterconnection::fl_wtr_14 to SSD_BLK_SYS_001::ECLSS::IF_ECL_13;
         #refinement dependency <'FL-WTR-15>IF-H2O-04'> from WaterWasteInterconnection::fl_wtr_15 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_04;
         #refinement dependency <'FL-WTR-16>IF-H2O-10'> from WaterWasteInterconnection::fl_wtr_16 to SSD_BLK_SYS_001::MissionContext::IF_H2O_10;
         #refinement dependency <'FL-WTR-20>IF-THC-05'> from WaterWasteInterconnection::fl_wtr_20 to SSD_BLK_SYS_001::ECLSS::IF_THC_05;
         #refinement dependency <'FL-WTR-21>IF-H2O-08'> from WaterWasteInterconnection::fl_wtr_21 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_08;
         #refinement dependency <'FL-WTR-22>IF-H2O-10'> from WaterWasteInterconnection::fl_wtr_22 to SSD_BLK_SYS_001::MissionContext::IF_H2O_10;
         #refinement dependency <'FL-WTR-23>IF-WCS-01'> from WaterWasteInterconnection::fl_wtr_23 to SSD_BLK_SYS_001::ECLSS::IF_WCS_01;
+        #refinement dependency <'FL-WTR-23>IF-ECL-31'> from WaterWasteInterconnection::fl_wtr_23 to SSD_BLK_SYS_001::ECLSS::IF_ECL_31;
         #refinement dependency <'FL-WTR-24>IF-WCS-02'> from WaterWasteInterconnection::fl_wtr_24 to SSD_BLK_SYS_001::ECLSS::IF_WCS_02;
         #refinement dependency <'FL-WTR-25>IF-WCS-03'> from WaterWasteInterconnection::fl_wtr_25 to SSD_BLK_SYS_001::ECL_WCS::IF_WCS_03;
         #refinement dependency <'FL-WTR-26>IF-WCS-04'> from WaterWasteInterconnection::fl_wtr_26 to SSD_BLK_SYS_001::ECL_WCS::IF_WCS_04;
         #refinement dependency <'FL-WTR-27>IF-H2O-07'> from WaterWasteInterconnection::fl_wtr_27 to SSD_BLK_SYS_001::ECLSS::IF_H2O_07;
+        #refinement dependency <'FL-WTR-27>IF-ECL-14'> from WaterWasteInterconnection::fl_wtr_27 to SSD_BLK_SYS_001::ECLSS::IF_ECL_14;
         #refinement dependency <'FL-WTR-29>IF-WCS-06'> from WaterWasteInterconnection::fl_wtr_29 to SSD_BLK_SYS_001::ECLSS::IF_WCS_06;
         #refinement dependency <'FL-WTR-30>IF-ALS-04'> from WaterWasteInterconnection::fl_wtr_30 to SSD_BLK_SYS_001::ECLSS::IF_ALS_04;
+        #refinement dependency <'FL-WTR-30>IF-ECL-26'> from WaterWasteInterconnection::fl_wtr_30 to SSD_BLK_SYS_001::ECLSS::IF_ECL_26;
         #refinement dependency <'FL-WTR-31>IF-H2O-15'> from WaterWasteInterconnection::fl_wtr_31 to SSD_BLK_SYS_001::ECLSS::IF_H2O_15;
         #refinement dependency <'FL-WTR-32>IF-WCS-05'> from WaterWasteInterconnection::fl_wtr_32 to SSD_BLK_SYS_001::ECL_WCS::IF_WCS_05;
         #refinement dependency <'FL-WTR-33>IF-WCS-09'> from WaterWasteInterconnection::fl_wtr_33 to SSD_BLK_SYS_001::MissionContext::IF_WCS_09;
+        #refinement dependency <'FL-WTR-33>IF-ECL-23'> from WaterWasteInterconnection::fl_wtr_33 to SSD_BLK_SYS_001::MissionContext::IF_ECL_23;
         #refinement dependency <'FL-WTR-34>IF-WCS-08'> from WaterWasteInterconnection::fl_wtr_34 to SSD_BLK_SYS_001::ECLSS::IF_WCS_08;
         #refinement dependency <'FL-WTR-35>IF-PCS-06'> from WaterWasteInterconnection::fl_wtr_35 to SSD_BLK_SYS_001::ECLSS::IF_PCS_06;
         #refinement dependency <'FL-WTR-36>IF-H2O-13'> from WaterWasteInterconnection::fl_wtr_36 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_13;
@@ -4113,5 +5155,127 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-WTR-38>IF-H2O-14'> from WaterWasteInterconnection::fl_wtr_38 to SSD_BLK_SYS_001::ECL_H2O::IF_H2O_14;
         #refinement dependency <'FL-WTR-39>IF-H2O-16'> from WaterWasteInterconnection::fl_wtr_39 to SSD_BLK_SYS_001::ECLSS::IF_H2O_16;
         #refinement dependency <'FL-WTR-40>IF-H2O-09'> from WaterWasteInterconnection::fl_wtr_40 to SSD_BLK_SYS_001::ORB::IF_H2O_09;
+        #refinement dependency <'FL-WTR-40>IF-ECL-35'> from WaterWasteInterconnection::fl_wtr_40 to SSD_BLK_SYS_001::ORB::IF_ECL_35;
+        #refinement dependency <'FL-PWRA-01>IF-ARS-33'> from EclssPwraInterconnection::fl_pwra_01 to SSD_BLK_SYS_001::ORB::IF_ARS_33;
+        #refinement dependency <'FL-PWRA-01>IF-RCRS-12'> from EclssPwraInterconnection::fl_pwra_01 to SSD_BLK_SYS_001::ORB::IF_RCRS_12;
+        #refinement dependency <'FL-PWRA-02>IF-RCRS-12'> from EclssPwraInterconnection::fl_pwra_02 to SSD_BLK_SYS_001::ORB::IF_RCRS_12;
+        #refinement dependency <'FL-PWRA-03>IF-ARS-33'> from EclssPwraInterconnection::fl_pwra_03 to SSD_BLK_SYS_001::ORB::IF_ARS_33;
+        #refinement dependency <'FL-PWRA-03>IF-RCRS-13'> from EclssPwraInterconnection::fl_pwra_03 to SSD_BLK_SYS_001::ORB::IF_RCRS_13;
+        #refinement dependency <'FL-PWRA-04>IF-ARS-35'> from EclssPwraInterconnection::fl_pwra_04 to SSD_BLK_SYS_001::ORB::IF_ARS_35;
+        #refinement dependency <'FL-PWRA-04>IF-IMU-06'> from EclssPwraInterconnection::fl_pwra_04 to SSD_BLK_SYS_001::ORB::IF_IMU_06;
+        #refinement dependency <'FL-PWRA-05>IF-ARS-35'> from EclssPwraInterconnection::fl_pwra_05 to SSD_BLK_SYS_001::ORB::IF_ARS_35;
+        #refinement dependency <'FL-PWRA-07>IF-ARS-40'> from EclssPwraInterconnection::fl_pwra_07 to SSD_BLK_SYS_001::ORB::IF_ARS_40;
+        #refinement dependency <'FL-PWRA-07>IF-THC-17'> from EclssPwraInterconnection::fl_pwra_07 to SSD_BLK_SYS_001::ORB::IF_THC_17;
+        #refinement dependency <'FL-PWRA-08>IF-THC-17'> from EclssPwraInterconnection::fl_pwra_08 to SSD_BLK_SYS_001::ORB::IF_THC_17;
+        #refinement dependency <'FL-PWRA-10>IF-ARS-40'> from EclssPwraInterconnection::fl_pwra_10 to SSD_BLK_SYS_001::ORB::IF_ARS_40;
+        #refinement dependency <'FL-PWRA-10>IF-THC-16'> from EclssPwraInterconnection::fl_pwra_10 to SSD_BLK_SYS_001::ORB::IF_THC_16;
+        #refinement dependency <'FL-PWRA-11>IF-ARS-38'> from EclssPwraInterconnection::fl_pwra_11 to SSD_BLK_SYS_001::ORB::IF_ARS_38;
+        #refinement dependency <'FL-PWRA-11>IF-CO2-07'> from EclssPwraInterconnection::fl_pwra_11 to SSD_BLK_SYS_001::ORB::IF_CO2_07;
+        #refinement dependency <'FL-PWRA-13>IF-AVB-15'> from EclssPwraInterconnection::fl_pwra_13 to SSD_BLK_SYS_001::ORB::IF_AVB_15;
+        #refinement dependency <'FL-PWRB-01>IF-ALS-05'> from EclssPwrbInterconnection::fl_pwrb_01 to SSD_BLK_SYS_001::ORB::IF_ALS_05;
+        #refinement dependency <'FL-PWRB-01>IF-ECL-16'> from EclssPwrbInterconnection::fl_pwrb_01 to SSD_BLK_SYS_001::ORB::IF_ECL_16;
+        #refinement dependency <'FL-PWRB-02>IF-ALS-05'> from EclssPwrbInterconnection::fl_pwrb_02 to SSD_BLK_SYS_001::ORB::IF_ALS_05;
+        #refinement dependency <'FL-PWRB-02>IF-ECL-16'> from EclssPwrbInterconnection::fl_pwrb_02 to SSD_BLK_SYS_001::ORB::IF_ECL_16;
+        #refinement dependency <'FL-PWRB-03>IF-ALS-08'> from EclssPwrbInterconnection::fl_pwrb_03 to SSD_BLK_SYS_001::ORB::IF_ALS_08;
+        #refinement dependency <'FL-PWRB-03>IF-ECL-16'> from EclssPwrbInterconnection::fl_pwrb_03 to SSD_BLK_SYS_001::ORB::IF_ECL_16;
+        #refinement dependency <'FL-PWRB-04>IF-ALS-08'> from EclssPwrbInterconnection::fl_pwrb_04 to SSD_BLK_SYS_001::ORB::IF_ALS_08;
+        #refinement dependency <'FL-PWRB-04>IF-ECL-16'> from EclssPwrbInterconnection::fl_pwrb_04 to SSD_BLK_SYS_001::ORB::IF_ECL_16;
+        #refinement dependency <'FL-PWRB-05>IF-ALS-08'> from EclssPwrbInterconnection::fl_pwrb_05 to SSD_BLK_SYS_001::ORB::IF_ALS_08;
+        #refinement dependency <'FL-PWRB-05>IF-ECL-16'> from EclssPwrbInterconnection::fl_pwrb_05 to SSD_BLK_SYS_001::ORB::IF_ECL_16;
+        #refinement dependency <'FL-PWRB-06>IF-ALS-09'> from EclssPwrbInterconnection::fl_pwrb_06 to SSD_BLK_SYS_001::ORB::IF_ALS_09;
+        #refinement dependency <'FL-PWRB-06>IF-ECL-16'> from EclssPwrbInterconnection::fl_pwrb_06 to SSD_BLK_SYS_001::ORB::IF_ECL_16;
+        #refinement dependency <'FL-PWRB-07>IF-H2O-06'> from EclssPwrbInterconnection::fl_pwrb_07 to SSD_BLK_SYS_001::ORB::IF_H2O_06;
+        #refinement dependency <'FL-PWRB-07>IF-ECL-41'> from EclssPwrbInterconnection::fl_pwrb_07 to SSD_BLK_SYS_001::ORB::IF_ECL_41;
+        #refinement dependency <'FL-PWRB-08>IF-H2O-11'> from EclssPwrbInterconnection::fl_pwrb_08 to SSD_BLK_SYS_001::ORB::IF_H2O_11;
+        #refinement dependency <'FL-PWRB-08>IF-ECL-41'> from EclssPwrbInterconnection::fl_pwrb_08 to SSD_BLK_SYS_001::ORB::IF_ECL_41;
+        #refinement dependency <'FL-PWRB-09>IF-H2O-11'> from EclssPwrbInterconnection::fl_pwrb_09 to SSD_BLK_SYS_001::ORB::IF_H2O_11;
+        #refinement dependency <'FL-PWRB-09>IF-ECL-41'> from EclssPwrbInterconnection::fl_pwrb_09 to SSD_BLK_SYS_001::ORB::IF_ECL_41;
+        #refinement dependency <'FL-PWRB-10>IF-WCS-10'> from EclssPwrbInterconnection::fl_pwrb_10 to SSD_BLK_SYS_001::ORB::IF_WCS_10;
+        #refinement dependency <'FL-PWRB-10>IF-ECL-43'> from EclssPwrbInterconnection::fl_pwrb_10 to SSD_BLK_SYS_001::ORB::IF_ECL_43;
+        #refinement dependency <'FL-PWRB-11>IF-WCS-10'> from EclssPwrbInterconnection::fl_pwrb_11 to SSD_BLK_SYS_001::ORB::IF_WCS_10;
+        #refinement dependency <'FL-PWRB-11>IF-ECL-43'> from EclssPwrbInterconnection::fl_pwrb_11 to SSD_BLK_SYS_001::ORB::IF_ECL_43;
+        #refinement dependency <'FL-PWRB-13>IF-WCS-11'> from EclssPwrbInterconnection::fl_pwrb_13 to SSD_BLK_SYS_001::ORB::IF_WCS_11;
+        #refinement dependency <'FL-PWRB-13>IF-ECL-43'> from EclssPwrbInterconnection::fl_pwrb_13 to SSD_BLK_SYS_001::ORB::IF_ECL_43;
+        #refinement dependency <'FL-PWRB-14>IF-WCS-11'> from EclssPwrbInterconnection::fl_pwrb_14 to SSD_BLK_SYS_001::ORB::IF_WCS_11;
+        #refinement dependency <'FL-PWRB-14>IF-ECL-43'> from EclssPwrbInterconnection::fl_pwrb_14 to SSD_BLK_SYS_001::ORB::IF_ECL_43;
+        #refinement dependency <'FL-PWRB-15>IF-PCS-19'> from EclssPwrbInterconnection::fl_pwrb_15 to SSD_BLK_SYS_001::ORB::IF_PCS_19;
+        #refinement dependency <'FL-PWRB-16>IF-PCS-20'> from EclssPwrbInterconnection::fl_pwrb_16 to SSD_BLK_SYS_001::ORB::IF_PCS_20;
+        #refinement dependency <'FL-PWRB-17>IF-PCS-21'> from EclssPwrbInterconnection::fl_pwrb_17 to SSD_BLK_SYS_001::ORB::IF_PCS_21;
+        #refinement dependency <'FL-PWRB-18>IF-PCS-22'> from EclssPwrbInterconnection::fl_pwrb_18 to SSD_BLK_SYS_001::ORB::IF_PCS_22;
+        #refinement dependency <'FL-PWRB-19>IF-FDS-04'> from EclssPwrbInterconnection::fl_pwrb_19 to SSD_BLK_SYS_001::ORB::IF_FDS_04;
+        #refinement dependency <'FL-PWRB-19>IF-ECL-40'> from EclssPwrbInterconnection::fl_pwrb_19 to SSD_BLK_SYS_001::ORB::IF_ECL_40;
+        #refinement dependency <'FL-PWRB-20>IF-FDS-10'> from EclssPwrbInterconnection::fl_pwrb_20 to SSD_BLK_SYS_001::ORB::IF_FDS_10;
+        #refinement dependency <'FL-PWRB-20>IF-ECL-40'> from EclssPwrbInterconnection::fl_pwrb_20 to SSD_BLK_SYS_001::ORB::IF_ECL_40;
+        #refinement dependency <'FL-PWRB-21>IF-FDS-10'> from EclssPwrbInterconnection::fl_pwrb_21 to SSD_BLK_SYS_001::ORB::IF_FDS_10;
+        #refinement dependency <'FL-AIRX-01>IF-ARS-18'> from EclssAirxInterconnection::fl_airx_01 to SSD_BLK_SYS_001::ORB::IF_ARS_18;
+        #refinement dependency <'FL-AIRX-01>IF-AVB-03'> from EclssAirxInterconnection::fl_airx_01 to SSD_BLK_SYS_001::ORB::IF_AVB_03;
+        #refinement dependency <'FL-AIRX-02>IF-ARS-41'> from EclssAirxInterconnection::fl_airx_02 to SSD_BLK_SYS_001::ORB::IF_ARS_41;
+        #refinement dependency <'FL-AIRX-02>IF-AVB-04'> from EclssAirxInterconnection::fl_airx_02 to SSD_BLK_SYS_001::ORB::IF_AVB_04;
+        #refinement dependency <'FL-AIRX-03>IF-AVB-01'> from EclssAirxInterconnection::fl_airx_03 to SSD_BLK_SYS_001::ARS_AVB::IF_AVB_01;
+        #refinement dependency <'FL-AIRX-04>IF-AVB-06'> from EclssAirxInterconnection::fl_airx_04 to SSD_BLK_SYS_001::ARS_AVB::IF_AVB_06;
+        #refinement dependency <'FL-AIRX-05>IF-AVB-11'> from EclssAirxInterconnection::fl_airx_05 to SSD_BLK_SYS_001::ARS_AVB::IF_AVB_11;
+        #refinement dependency <'FL-AIRX-06>IF-CAC-07'> from EclssAirxInterconnection::fl_airx_06 to SSD_BLK_SYS_001::ARS_CAC::IF_CAC_07;
+        #refinement dependency <'FL-AIRX-07>IF-CO2-02'> from EclssAirxInterconnection::fl_airx_07 to SSD_BLK_SYS_001::ARS_CO2::IF_CO2_02;
+        #refinement dependency <'FL-AIRX-08>IF-CO2-04'> from EclssAirxInterconnection::fl_airx_08 to SSD_BLK_SYS_001::ARS_CO2::IF_CO2_04;
+        #refinement dependency <'FL-AIRX-09>IF-RCRS-01'> from EclssAirxInterconnection::fl_airx_09 to SSD_BLK_SYS_001::ARS_RCRS::IF_RCRS_01;
+        #refinement dependency <'FL-AIRX-11>IF-RCRS-04'> from EclssAirxInterconnection::fl_airx_11 to SSD_BLK_SYS_001::ARS_RCRS::IF_RCRS_04;
+        #refinement dependency <'FL-AIRX-12>IF-RCRS-07'> from EclssAirxInterconnection::fl_airx_12 to SSD_BLK_SYS_001::ARS_RCRS::IF_RCRS_07;
+        #refinement dependency <'FL-AIRX-13>IF-RCRS-08'> from EclssAirxInterconnection::fl_airx_13 to SSD_BLK_SYS_001::ARS_RCRS::IF_RCRS_08;
+        #refinement dependency <'FL-AIRX-14>IF-RCRS-08'> from EclssAirxInterconnection::fl_airx_14 to SSD_BLK_SYS_001::ARS_RCRS::IF_RCRS_08;
+        #refinement dependency <'FL-AIRX-15>IF-THC-08'> from EclssAirxInterconnection::fl_airx_15 to SSD_BLK_SYS_001::ARS_THC::IF_THC_08;
+        #refinement dependency <'FL-AIRX-16>IF-WCL-04'> from EclssAirxInterconnection::fl_airx_16 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_04;
+        #refinement dependency <'FL-AIRX-17>IF-WCL-08'> from EclssAirxInterconnection::fl_airx_17 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_08;
+        #refinement dependency <'FL-ALSX-01>IF-ALS-01'> from EclssAlsxInterconnection::fl_alsx_01 to SSD_BLK_SYS_001::ECLSS::IF_ALS_01;
+        #refinement dependency <'FL-ALSX-01>IF-ECL-17'> from EclssAlsxInterconnection::fl_alsx_01 to SSD_BLK_SYS_001::ECLSS::IF_ECL_17;
+        #refinement dependency <'FL-ALSX-03>IF-ALS-01'> from EclssAlsxInterconnection::fl_alsx_03 to SSD_BLK_SYS_001::ECLSS::IF_ALS_01;
+        #refinement dependency <'FL-ALSX-03>IF-ECL-17'> from EclssAlsxInterconnection::fl_alsx_03 to SSD_BLK_SYS_001::ECLSS::IF_ECL_17;
+        #refinement dependency <'FL-ALSX-05>IF-ALS-02'> from EclssAlsxInterconnection::fl_alsx_05 to SSD_BLK_SYS_001::MissionContext::IF_ALS_02;
+        #refinement dependency <'FL-ALSX-05>IF-ECL-30'> from EclssAlsxInterconnection::fl_alsx_05 to SSD_BLK_SYS_001::MissionContext::IF_ECL_30;
+        #refinement dependency <'FL-ALSX-06>IF-ALS-02'> from EclssAlsxInterconnection::fl_alsx_06 to SSD_BLK_SYS_001::MissionContext::IF_ALS_02;
+        #refinement dependency <'FL-ALSX-12>IF-ALS-14'> from EclssAlsxInterconnection::fl_alsx_12 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_14;
+        #refinement dependency <'FL-ALSX-13>IF-ALS-15'> from EclssAlsxInterconnection::fl_alsx_13 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_15;
+        #refinement dependency <'FL-ALSX-14>IF-ALS-16'> from EclssAlsxInterconnection::fl_alsx_14 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_16;
+        #refinement dependency <'FL-ALSX-15>IF-ARS-13'> from EclssAlsxInterconnection::fl_alsx_15 to SSD_BLK_SYS_001::ECLSS::IF_ARS_13;
+        #refinement dependency <'FL-ALSX-15>IF-CAC-14'> from EclssAlsxInterconnection::fl_alsx_15 to SSD_BLK_SYS_001::ECLSS::IF_CAC_14;
+        #refinement dependency <'FL-ALSX-15>IF-ECL-27'> from EclssAlsxInterconnection::fl_alsx_15 to SSD_BLK_SYS_001::ECLSS::IF_ECL_27;
+        #refinement dependency <'FL-ALSX-17>IF-ALS-17'> from EclssAlsxInterconnection::fl_alsx_17 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_17;
+        #refinement dependency <'FL-ALSX-19>IF-ALS-06'> from EclssAlsxInterconnection::fl_alsx_19 to SSD_BLK_SYS_001::ORB::IF_ALS_06;
+        #refinement dependency <'FL-ALSX-19>IF-ECL-20'> from EclssAlsxInterconnection::fl_alsx_19 to SSD_BLK_SYS_001::ORB::IF_ECL_20;
+        #refinement dependency <'FL-ALSX-19>IF-ORB-45'> from EclssAlsxInterconnection::fl_alsx_19 to SSD_BLK_SYS_001::ORB::IF_ORB_45;
+        #refinement dependency <'FL-ALSX-21>IF-ALS-06'> from EclssAlsxInterconnection::fl_alsx_21 to SSD_BLK_SYS_001::ORB::IF_ALS_06;
+        #refinement dependency <'FL-ALSX-21>IF-ECL-20'> from EclssAlsxInterconnection::fl_alsx_21 to SSD_BLK_SYS_001::ORB::IF_ECL_20;
+        #refinement dependency <'FL-ALSX-21>IF-ORB-45'> from EclssAlsxInterconnection::fl_alsx_21 to SSD_BLK_SYS_001::ORB::IF_ORB_45;
+        #refinement dependency <'FL-ALSX-22>IF-ALS-06'> from EclssAlsxInterconnection::fl_alsx_22 to SSD_BLK_SYS_001::ORB::IF_ALS_06;
+        #refinement dependency <'FL-ALSX-22>IF-ECL-20'> from EclssAlsxInterconnection::fl_alsx_22 to SSD_BLK_SYS_001::ORB::IF_ECL_20;
+        #refinement dependency <'FL-ALSX-22>IF-ORB-45'> from EclssAlsxInterconnection::fl_alsx_22 to SSD_BLK_SYS_001::ORB::IF_ORB_45;
+        #refinement dependency <'FL-ALSX-24>IF-ALS-07'> from EclssAlsxInterconnection::fl_alsx_24 to SSD_BLK_SYS_001::ORB::IF_ALS_07;
+        #refinement dependency <'FL-ALSX-24>IF-ECL-20'> from EclssAlsxInterconnection::fl_alsx_24 to SSD_BLK_SYS_001::ORB::IF_ECL_20;
+        #refinement dependency <'FL-ALSX-25>IF-ALS-07'> from EclssAlsxInterconnection::fl_alsx_25 to SSD_BLK_SYS_001::ORB::IF_ALS_07;
+        #refinement dependency <'FL-ALSX-25>IF-ECL-20'> from EclssAlsxInterconnection::fl_alsx_25 to SSD_BLK_SYS_001::ORB::IF_ECL_20;
+        #refinement dependency <'FL-ALSX-26>IF-ALS-11'> from EclssAlsxInterconnection::fl_alsx_26 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_11;
+        #refinement dependency <'FL-ALSX-27>IF-ALS-11'> from EclssAlsxInterconnection::fl_alsx_27 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_11;
+        #refinement dependency <'FL-ALSX-28>IF-ALS-12'> from EclssAlsxInterconnection::fl_alsx_28 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_12;
+        #refinement dependency <'FL-ALSX-29>IF-ALS-13'> from EclssAlsxInterconnection::fl_alsx_29 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_13;
+        #refinement dependency <'FL-ALSX-30>IF-ALS-13'> from EclssAlsxInterconnection::fl_alsx_30 to SSD_BLK_SYS_001::ECL_ALS::IF_ALS_13;
+        #refinement dependency <'FL-FDSX-01>IF-ARS-14'> from EclssFdsxInterconnection::fl_fdsx_01 to SSD_BLK_SYS_001::ECLSS::IF_ARS_14;
+        #refinement dependency <'FL-FDSX-01>IF-CAC-04'> from EclssFdsxInterconnection::fl_fdsx_01 to SSD_BLK_SYS_001::ECLSS::IF_CAC_04;
+        #refinement dependency <'FL-FDSX-02>IF-ARS-14'> from EclssFdsxInterconnection::fl_fdsx_02 to SSD_BLK_SYS_001::ECLSS::IF_ARS_14;
+        #refinement dependency <'FL-FDSX-02>IF-CAC-04'> from EclssFdsxInterconnection::fl_fdsx_02 to SSD_BLK_SYS_001::ECLSS::IF_CAC_04;
+        #refinement dependency <'FL-FDSX-03>IF-ARS-14'> from EclssFdsxInterconnection::fl_fdsx_03 to SSD_BLK_SYS_001::ECLSS::IF_ARS_14;
+        #refinement dependency <'FL-FDSX-03>IF-CAC-08'> from EclssFdsxInterconnection::fl_fdsx_03 to SSD_BLK_SYS_001::ECLSS::IF_CAC_08;
+        #refinement dependency <'FL-FDSX-04>IF-ARS-15'> from EclssFdsxInterconnection::fl_fdsx_04 to SSD_BLK_SYS_001::ECLSS::IF_ARS_15;
+        #refinement dependency <'FL-FDSX-04>IF-FDS-01'> from EclssFdsxInterconnection::fl_fdsx_04 to SSD_BLK_SYS_001::ECLSS::IF_FDS_01;
+        #refinement dependency <'FL-FDSX-05>IF-ARS-15'> from EclssFdsxInterconnection::fl_fdsx_05 to SSD_BLK_SYS_001::ECLSS::IF_ARS_15;
+        #refinement dependency <'FL-FDSX-05>IF-FDS-01'> from EclssFdsxInterconnection::fl_fdsx_05 to SSD_BLK_SYS_001::ECLSS::IF_FDS_01;
+        #refinement dependency <'FL-FDSX-06>IF-ARS-15'> from EclssFdsxInterconnection::fl_fdsx_06 to SSD_BLK_SYS_001::ECLSS::IF_ARS_15;
+        #refinement dependency <'FL-FDSX-06>IF-FDS-08'> from EclssFdsxInterconnection::fl_fdsx_06 to SSD_BLK_SYS_001::ECLSS::IF_FDS_08;
+        #refinement dependency <'FL-FDSX-07>IF-ARS-15'> from EclssFdsxInterconnection::fl_fdsx_07 to SSD_BLK_SYS_001::ECLSS::IF_ARS_15;
+        #refinement dependency <'FL-FDSX-07>IF-FDS-11'> from EclssFdsxInterconnection::fl_fdsx_07 to SSD_BLK_SYS_001::ECLSS::IF_FDS_11;
+        #refinement dependency <'FL-FDSX-08>IF-ECL-19'> from EclssFdsxInterconnection::fl_fdsx_08 to SSD_BLK_SYS_001::ECLSS::IF_ECL_19;
+        #refinement dependency <'FL-FDSX-08>IF-FDS-12'> from EclssFdsxInterconnection::fl_fdsx_08 to SSD_BLK_SYS_001::ECLSS::IF_FDS_12;
+        #refinement dependency <'FL-FDSX-09>IF-WCS-07'> from EclssFdsxInterconnection::fl_fdsx_09 to SSD_BLK_SYS_001::ECLSS::IF_WCS_07;
+        #refinement dependency <'FL-FDSX-10>IF-PCS-11'> from EclssFdsxInterconnection::fl_fdsx_10 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_11;
+        #refinement dependency <'FL-FDSX-11>IF-PCS-12'> from EclssFdsxInterconnection::fl_fdsx_11 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_12;
+        #refinement dependency <'FL-FDSX-12>IF-PCS-12'> from EclssFdsxInterconnection::fl_fdsx_12 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_12;
     }
 }

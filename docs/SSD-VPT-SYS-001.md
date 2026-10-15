@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-VPT-SYS-001 |
 | 表題 | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） |
-| 版・日付 | Rev. AP／2026-10-15 |
+| 版・日付 | Rev. AQ／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図111 ビューポイントと関係者の行列 |
 
 ## 1. 目的
 
-本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 232件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
+本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 237件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
 
 ## 2. 書き方
 
@@ -69,7 +69,7 @@
 | ID | ビューポイント | 関心事 | 関係者 | 標準のビュー定義 | 晒すパッケージ | 主な定義書 | ビュー（図） |
 |---|---|---|---|---|---|---|---|
 | VP-01 | 構成 | CN-01 | SH-SE・SH-DES | GeneralView（asTreeDiagram） | SSD_BLK_SYS_001 | SSD-FD-*・SSD-BLK-SYS-001 | 34（図1・図2・図3・図6・図8・図12・図14・図16・図18・図20・図22・図24・図26・図28・図30・図32・図34・図36・図46・図48・図50・図52・図54・図56・図58・図60・図62・図64・図66・図68・図70・図72・図74・図89） |
-| VP-02 | インタフェース | CN-02 | SH-DES・SH-SE・SH-LPS | InterconnectionView（asInterconnectionDiagram） | SSD_BLK_SYS_001・SSD_IBD_ORB_001・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008 | SSD-ICD-ORB-001・SSD-BLK-SYS-001・SSD-IBD-ORB-001・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008 | 26（図38・図41・図42・図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162・図179・図180・図191・図192・図200・図201・図202・図214・図215・図216・図217・図218） |
+| VP-02 | インタフェース | CN-02 | SH-DES・SH-SE・SH-LPS | InterconnectionView（asInterconnectionDiagram） | SSD_BLK_SYS_001・SSD_IBD_ORB_001・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008 | SSD-ICD-ORB-001・SSD-BLK-SYS-001・SSD-IBD-ORB-001・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008 | 31（図38・図41・図42・図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162・図179・図180・図191・図192・図200・図201・図202・図214・図215・図216・図217・図218・図233・図234・図235・図236・図237） |
 | VP-03 | 要求・検証 | CN-03・CN-04 | SH-SE・SH-VER | GridView（asElementTable） | SSD_RQM_SYS_001・SSD_VER_SYS_001・SSD_RQF_SYS_001・SSD_FLT_ORB_001・SSD_HSI_SYS_001・SSD_RQL_ECL_001・SSD_IRQ_SYS_001・SSD_RQL_SYS_001 | SSD-REQ-*・SSD-RQM-SYS-001・SSD-VER-SYS-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 11（図90・図110・図124・図125・図133・図166・図167・図212・図213・図225・図226） |
 | VP-04 | 運用 | CN-05 | SH-OPS・SH-CREW・SH-LPS・SH-PL | GeneralView（asTreeDiagram） | SSD_UC_ORB_001・SSD_BEH_ORB_001・SSD_BEH_ORB_003・SSD_BEH_ORB_004 | SSD-OPS-PHASE-001・SSD-UC-ORB-001・SSD-BEH-ORB-001・003・004 | 13（図39・図40・図76・図77・図83・図84・図85・図87・図93・図94・図95・図96・図97） |
 | VP-05 | 系の振る舞い | CN-05 | SH-DES・SH-OPS | StateTransitionView（asTreeDiagram） | SSD_BEH_ORB_005・SSD_BEH_ORB_006・SSD_BEH_ORB_007・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008 | SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008 | 37（図98・図99・図100・図101・図102・図103・図136・図137・図138・図139・図140・図141・図142・図168・図169・図170・図171・図172・図173・図174・図175・図181・図182・図193・図194・図195・図196・図198・図199・図203・図204・図219・図220・図221・図222・図223・図224） |
@@ -84,7 +84,7 @@
 
 ## 6. ビュー（図）
 
-図 232件のビューポイントを示す。
+図 237件のビューポイントを示す。
 
 | 図 | 表題 | ビューポイント | SysML |
 |---|---|---|---|
@@ -320,6 +320,11 @@
 | 図230 | 上昇の質量と推力加速度の時間変化 | VP-07 | fig230 |
 | 図231 | 再突入の高度・速度と動圧・減速度の時間変化 | VP-07 | fig231 |
 | 図232 | 上昇・再突入のモデルと実績・限界の比較 | VP-07 | fig232 |
+| 図233 | ECLSS 電力（ARS 系の機器）内部ブロック図 | VP-02 | fig233 |
+| 図234 | ECLSS 電力（ARS 以外の機器）内部ブロック図 | VP-02 | fig234 |
+| 図235 | ARS の補い 内部ブロック図 | VP-02 | fig235 |
+| 図236 | エアロック支援系 内部ブロック図 | VP-02 | fig236 |
+| 図237 | 煙検知・消火ほか 内部ブロック図 | VP-02 | fig237 |
 
 ## 7. 表記の規約
 
@@ -339,7 +344,7 @@
 | VF-・MK- | VF-<2桁>・MK-<2桁> | 機体の特徴・ミッションキット | VF-05 | 31 |
 | MS-・MC-・DV-・DE- | MS-・MC-・DV-・DE-<2桁> | 質量特性・Δv の値と式 | DV-04 | 60 |
 | VP-・CN-・SH- | VP-<2桁>・CN-<2桁>・SH-<略号> | ビューポイント・関心事・関係者 | VP-01 | 44 |
-| EQ-・EB-・FL-・FI- | EQ-・EB-・FL-<図>-<2桁>・FI-<2桁> | 内部ブロック図の部品・相手・流れ・流れる物 | FL-EPS-03 | 1887 |
+| EQ-・EB-・FL-・FI- | EQ-・EB-・FL-<図>-<2桁>・FI-<2桁> | 内部ブロック図の部品・相手・流れ・流れる物 | FL-EPS-03 | 2095 |
 | TR-・GAP-・IMP- | TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁> | トレースの関係・切れ目・影響分析 | GAP-06-01 | 141 |
 | CW-・EM-・DT-・RS-・BU- | CW-・EM-・DT-・RS-・BU-<2桁> | C/W の警報・検知する故障・処置・警報の区分 | CW-05 | 155 |
 | HZ-・HC-・HM- | HZ-・HC-・HM-<2桁> | ハザード・原因・管理策 | HZ-01 | 134 |
@@ -379,7 +384,7 @@
 
 ## 9. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 232件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 237件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -442,3 +447,4 @@
 | Rev. AN | 2026-10-15 | 略語表 SSD-ACR-SYS-001 を加えたので、表記の規約に ACR-<3桁> を加えた（Rev. CA） |
 | Rev. AO | 2026-10-15 | 検証の根拠の調査（Rev. CB）に合わせて文書とビューを確かめ直した（Rev. CB） |
 | Rev. AP | 2026-10-15 | ECLSS の機能の故障モードの追加（Rev. CC）に合わせて文書とビューを確かめ直した（Rev. CC） |
+| Rev. AQ | 2026-10-15 | ECLSS の内部ブロック図（Rev. CD）に合わせて文書とビューを確かめ直した（Rev. CD） |

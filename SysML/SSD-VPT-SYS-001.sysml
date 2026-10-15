@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（232件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（237件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -2291,6 +2291,51 @@ package SSD_VPT_SYS_001 {
         expose SSD_PRF_ORB_001::*;
         expose SSD_TRJ_ORB_001::*;
     }
+    view <'図233'> fig233 : InterfacesView {
+        doc /* 図233 ECLSS 電力（ARS 系の機器）内部ブロック図（頁 p233-ibd-eclss-pwra） */
+        expose SSD_BLK_SYS_001::*;
+        expose SSD_IBD_ORB_001::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+    }
+    view <'図234'> fig234 : InterfacesView {
+        doc /* 図234 ECLSS 電力（ARS 以外の機器）内部ブロック図（頁 p234-ibd-eclss-pwrb） */
+        expose SSD_BLK_SYS_001::*;
+        expose SSD_IBD_ORB_001::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+    }
+    view <'図235'> fig235 : InterfacesView {
+        doc /* 図235 ARS の補い 内部ブロック図（頁 p235-ibd-ars-extra） */
+        expose SSD_BLK_SYS_001::*;
+        expose SSD_IBD_ORB_001::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+    }
+    view <'図236'> fig236 : InterfacesView {
+        doc /* 図236 エアロック支援系 内部ブロック図（頁 p236-ibd-als） */
+        expose SSD_BLK_SYS_001::*;
+        expose SSD_IBD_ORB_001::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+    }
+    view <'図237'> fig237 : InterfacesView {
+        doc /* 図237 煙検知・消火ほか 内部ブロック図（頁 p237-ibd-fds） */
+        expose SSD_BLK_SYS_001::*;
+        expose SSD_IBD_ORB_001::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+    }
     // ---- 表記の規約
     package Conventions {
         doc /* 文書の表の ID の形と、出典・文書番号の書き方 */
@@ -2309,7 +2354,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "VF-・MK-"; form = "VF-<2桁>・MK-<2桁>"; meaning = "機体の特徴・ミッションキット"; example = "VF-05"; count = 31; }
         @IdConvention { prefix = "MS-・MC-・DV-・DE-"; form = "MS-・MC-・DV-・DE-<2桁>"; meaning = "質量特性・Δv の値と式"; example = "DV-04"; count = 60; }
         @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 44; }
-        @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 1887; }
+        @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 2095; }
         @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 141; }
         @IdConvention { prefix = "CW-・EM-・DT-・RS-・BU-"; form = "CW-・EM-・DT-・RS-・BU-<2桁>"; meaning = "C/W の警報・検知する故障・処置・警報の区分"; example = "CW-05"; count = 155; }
         @IdConvention { prefix = "HZ-・HC-・HM-"; form = "HZ-・HC-・HM-<2桁>"; meaning = "ハザード・原因・管理策"; example = "HZ-01"; count = 134; }

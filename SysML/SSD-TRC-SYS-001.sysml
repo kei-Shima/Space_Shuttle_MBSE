@@ -23,10 +23,10 @@ package SSD_TRC_SYS_001 {
     metadata <'TR-11'> tr_11 : TraceRelation { relation = "actpart"; fromKind = "ACT"; toKind = "BLK"; count = 51; }
     metadata <'TR-12'> tr_12 : TraceRelation { relation = "msg"; fromKind = "MSG"; toKind = "IF"; count = 48; }
     metadata <'TR-13'> tr_13 : TraceRelation { relation = "sm"; fromKind = "SM"; toKind = "BLK"; count = 28; }
-    metadata <'TR-14'> tr_14 : TraceRelation { relation = "flow"; fromKind = "FL"; toKind = "IF"; count = 598; }
-    metadata <'TR-15'> tr_15 : TraceRelation { relation = "flowpart"; fromKind = "FL"; toKind = "EQ"; count = 895; }
-    metadata <'TR-16'> tr_16 : TraceRelation { relation = "eq"; fromKind = "EQ"; toKind = "PHY"; count = 297; }
-    metadata <'TR-17'> tr_17 : TraceRelation { relation = "eqblk"; fromKind = "EQ"; toKind = "BLK"; count = 297; }
+    metadata <'TR-14'> tr_14 : TraceRelation { relation = "flow"; fromKind = "FL"; toKind = "IF"; count = 776; }
+    metadata <'TR-15'> tr_15 : TraceRelation { relation = "flowpart"; fromKind = "FL"; toKind = "EQ"; count = 1034; }
+    metadata <'TR-16'> tr_16 : TraceRelation { relation = "eq"; fromKind = "EQ"; toKind = "PHY"; count = 379; }
+    metadata <'TR-17'> tr_17 : TraceRelation { relation = "eqblk"; fromKind = "EQ"; toKind = "BLK"; count = 379; }
     metadata <'TR-18'> tr_18 : TraceRelation { relation = "icd"; fromKind = "ICD"; toKind = "IF"; count = 59; }
     // ---- 系ごとの網羅（系の part def に付ける）
     metadata <'COV-APU-C1'> cov_APU_C1 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C1"; covered = 43; total = 43; }
@@ -79,10 +79,10 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-ECLSS-C3'> cov_ECLSS_C3 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C3"; covered = 114; total = 124; }
     metadata <'COV-ECLSS-C4'> cov_ECLSS_C4 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C4"; covered = 945; total = 945; }
     metadata <'COV-ECLSS-C5'> cov_ECLSS_C5 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C5"; covered = 9; total = 298; }
-    metadata <'COV-ECLSS-C6'> cov_ECLSS_C6 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C6"; covered = 109; total = 298; }
+    metadata <'COV-ECLSS-C6'> cov_ECLSS_C6 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C6"; covered = 241; total = 298; }
     metadata <'COV-ECLSS-C7'> cov_ECLSS_C7 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C7"; covered = 28; total = 28; }
     metadata <'COV-ECLSS-C8'> cov_ECLSS_C8 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C8"; covered = 87; total = 87; }
-    metadata <'COV-ECLSS-C9'> cov_ECLSS_C9 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C9"; covered = 68; total = 87; }
+    metadata <'COV-ECLSS-C9'> cov_ECLSS_C9 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C9"; covered = 80; total = 87; }
     metadata <'COV-EPS-C1'> cov_EPS_C1 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C1"; covered = 47; total = 47; }
     metadata <'COV-EPS-C2'> cov_EPS_C2 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C2"; covered = 47; total = 47; }
     metadata <'COV-EPS-C3'> cov_EPS_C3 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C3"; covered = 36; total = 47; }
@@ -100,7 +100,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-EVA-C6'> cov_EVA_C6 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C6"; covered = 3; total = 15; }
     metadata <'COV-EVA-C7'> cov_EVA_C7 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C7"; covered = 3; total = 3; }
     metadata <'COV-EVA-C8'> cov_EVA_C8 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C8"; covered = 7; total = 7; }
-    metadata <'COV-EVA-C9'> cov_EVA_C9 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C9"; covered = 6; total = 7; }
+    metadata <'COV-EVA-C9'> cov_EVA_C9 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C9"; covered = 7; total = 7; }
     metadata <'COV-GNC-C1'> cov_GNC_C1 : CoverageMetric about SSD_BLK_SYS_001::GNC { metric = "C1"; covered = 45; total = 45; }
     metadata <'COV-GNC-C2'> cov_GNC_C2 : CoverageMetric about SSD_BLK_SYS_001::GNC { metric = "C2"; covered = 45; total = 45; }
     metadata <'COV-GNC-C3'> cov_GNC_C3 : CoverageMetric about SSD_BLK_SYS_001::GNC { metric = "C3"; covered = 40; total = 45; }
@@ -196,13 +196,13 @@ package SSD_TRC_SYS_001 {
     metadata <'GAP-02'> gap_02 : TraceGapCategory { title = "要求なしで妥当と判断した機能行"; judgment = "判断済み"; count = 138; }
     metadata <'GAP-03'> gap_03 : TraceGapCategory { title = "トレースの対象外の機能行"; judgment = "範囲外"; count = 10; }
     metadata <'GAP-04'> gap_04 : TraceGapCategory { title = "要求の割付先でない IF"; judgment = "方針"; count = 519; }
-    metadata <'GAP-05'> gap_05 : TraceGapCategory { title = "振る舞い・流れが通らない IF"; judgment = "範囲外"; count = 239; }
+    metadata <'GAP-05'> gap_05 : TraceGapCategory { title = "振る舞い・流れが通らない IF"; judgment = "範囲外"; count = 107; }
     metadata <'GAP-06'> gap_06 : TraceGapCategory { title = "要求につながらない機器"; judgment = "未処理"; count = 0; }
     metadata <'GAP-07'> gap_07 : TraceGapCategory { title = "故障解析の対応が無い機能ブロック"; judgment = "範囲外"; count = 0; }
-    metadata <'GAP-08'> gap_08 : TraceGapCategory { title = "振る舞いに現れない機能ブロック"; judgment = "範囲外"; count = 21; }
+    metadata <'GAP-08'> gap_08 : TraceGapCategory { title = "振る舞いに現れない機能ブロック"; judgment = "範囲外"; count = 8; }
     metadata <'GAP-09'> gap_09 : TraceGapCategory { title = "既存の IF が無い流れ"; judgment = "未処理"; count = 0; }
     metadata <'GAP-10'> gap_10 : TraceGapCategory { title = "機器配分表に行が無い内部ブロック図の機器"; judgment = "未処理"; count = 0; }
-    metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 133; }
+    metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 151; }
     metadata <'GAP-12'> gap_12 : TraceGapCategory { title = "故障モードが当てはまらないと判断した機能ブロック"; judgment = "判断済み"; count = 14; }
     metadata <'GAP-01-01'> gap_01_01 : TraceGap about SSD_IRQ_SYS_001::Results::vc_irq_orb_28 { category = "GAP-01"; judgment = "判断済み"; }
     metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_RQL_SYS_001::Results::vc_lrq_apu_03 { category = "GAP-01"; judgment = "判断済み"; }
@@ -451,6 +451,7 @@ package SSD_TRC_SYS_001 {
         expose SSD_IBD_ORB_001::EpsInterconnection::fl_eps_42;
         expose SSD_BLK_SYS_001::EPS;
         expose SSD_BLK_SYS_001::EPS_FCP;
+        expose SSD_BLK_SYS_001::ORB::IF_ECL_10;
         expose SSD_BLK_SYS_001::EPS::IF_EPS_03;
         expose SSD_BLK_SYS_001::EPS::IF_EPS_05;
         expose SSD_BLK_SYS_001::ORB::IF_EPS_06;
@@ -517,8 +518,10 @@ package SSD_TRC_SYS_001 {
     view <'IMP-02'> imp_02 : ImpactView {
         doc /* フレオン冷却ループのポンプパッケージ・インターチェンジャの変更。起点 PHY-ECLSS-04 */
         expose SSD_ALC_SYS_001::Physical::PHY_ECLSS_04;
+        expose SSD_IBD_ORB_001::AirWclInterchangerPath;
         expose SSD_IBD_ORB_001::FreonPumpPackage;
         expose SSD_IBD_ORB_001::FreonWaterInterchanger;
+        expose SSD_IBD_ORB_001::EclssAirxInterconnection::fl_airx_17;
         expose SSD_IBD_ORB_001::AtcsInterconnection::fl_atcs_01;
         expose SSD_IBD_ORB_001::AtcsInterconnection::fl_atcs_02;
         expose SSD_IBD_ORB_001::AtcsInterconnection::fl_atcs_16;
@@ -527,18 +530,23 @@ package SSD_TRC_SYS_001 {
         expose SSD_IBD_ORB_001::AtcsInterconnection::fl_atcs_20;
         expose SSD_IBD_ORB_001::AtcsInterconnection::fl_atcs_33;
         expose SSD_IBD_ORB_001::AtcsInterconnection::fl_atcs_38;
+        expose SSD_BLK_SYS_001::ARS_WCL_ICH;
         expose SSD_BLK_SYS_001::ECLSS;
         expose SSD_BLK_SYS_001::TCS_FCL;
         expose SSD_BLK_SYS_001::TCS_HX;
         expose SSD_BLK_SYS_001::ECLSS::IF_TCS_01;
         expose SSD_BLK_SYS_001::ECL_ATCS::IF_TCS_07;
         expose SSD_BLK_SYS_001::ORB::IF_TCS_21;
+        expose SSD_BLK_SYS_001::ARS_WCL::IF_WCL_08;
+        expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_34;
+        expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_39;
         expose SSD_RQL_ECL_001::REQ_ATCS::REQ_ATCS_01;
         expose SSD_RQL_ECL_001::REQ_ATCS::REQ_ATCS_02;
         expose SSD_RQL_ECL_001::REQ_ATCS::REQ_ATCS_03;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_01;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_08;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_09;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_07;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_08;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_09;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_05;
@@ -546,10 +554,13 @@ package SSD_TRC_SYS_001 {
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_10;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_14;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_15;
+        expose SSD_RQL_ECL_001::Results::vc_req_ars_34;
+        expose SSD_RQL_ECL_001::Results::vc_req_ars_39;
         expose SSD_RQL_ECL_001::Results::vc_req_atcs_01;
         expose SSD_RQL_ECL_001::Results::vc_req_atcs_02;
         expose SSD_RQL_ECL_001::Results::vc_req_atcs_03;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_01;
+        expose SSD_VER_SYS_001::Results::vc_req_eclss_07;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_08;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_09;
         expose SSD_VER_SYS_001::Results::vc_req_sys_05;
@@ -668,11 +679,21 @@ package SSD_TRC_SYS_001 {
     view <'IMP-05'> imp_05 : ImpactView {
         doc /* ARS 床下機器（キャビンファン・熱交換器・LiOH キャニスタ）の変更。起点 PHY-ECLSS-01 */
         expose SSD_ALC_SYS_001::Physical::PHY_ECLSS_01;
+        expose SSD_IBD_ORB_001::AirCabinFanAssy;
+        expose SSD_IBD_ORB_001::AirInUseCanisters;
+        expose SSD_IBD_ORB_001::AirSpareCanisters;
+        expose SSD_IBD_ORB_001::AirCabinHxAssy;
+        expose SSD_IBD_ORB_001::AirWclPumpPackage;
         expose SSD_IBD_ORB_001::CabinFans;
         expose SSD_IBD_ORB_001::LioHCanisters;
         expose SSD_IBD_ORB_001::CabinHeatExchanger;
         expose SSD_IBD_ORB_001::WaterPumpPackage;
         expose SSD_IBD_ORB_001::CabinHxWaterSide;
+        expose SSD_IBD_ORB_001::EclssAirxInterconnection::fl_airx_06;
+        expose SSD_IBD_ORB_001::EclssAirxInterconnection::fl_airx_07;
+        expose SSD_IBD_ORB_001::EclssAirxInterconnection::fl_airx_08;
+        expose SSD_IBD_ORB_001::EclssAirxInterconnection::fl_airx_15;
+        expose SSD_IBD_ORB_001::EclssAirxInterconnection::fl_airx_16;
         expose SSD_IBD_ORB_001::ArsAirInterconnection::fl_arsa_03;
         expose SSD_IBD_ORB_001::ArsAirInterconnection::fl_arsa_04;
         expose SSD_IBD_ORB_001::ArsAirInterconnection::fl_arsa_05;
@@ -698,27 +719,48 @@ package SSD_TRC_SYS_001 {
         expose SSD_BLK_SYS_001::ARS_CAC;
         expose SSD_BLK_SYS_001::ARS_CO2;
         expose SSD_BLK_SYS_001::ARS_THC;
+        expose SSD_BLK_SYS_001::ARS_THC_HX;
         expose SSD_BLK_SYS_001::ARS_WCL;
+        expose SSD_BLK_SYS_001::ARS_WCL_PMP;
+        expose SSD_BLK_SYS_001::CAC_FAN;
+        expose SSD_BLK_SYS_001::CO2_CAN;
+        expose SSD_BLK_SYS_001::CO2_STW;
         expose SSD_BLK_SYS_001::ECLSS;
+        expose SSD_BLK_SYS_001::ECL_ARS::IF_ARS_01;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_ARS_03;
+        expose SSD_BLK_SYS_001::ECL_ARS::IF_ARS_05;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_ARS_06;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_ARS_07;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_ARS_08;
+        expose SSD_BLK_SYS_001::ORB::IF_ARS_27;
+        expose SSD_BLK_SYS_001::ORB::IF_ARS_30;
+        expose SSD_BLK_SYS_001::ORB::IF_ARS_31;
+        expose SSD_BLK_SYS_001::ORB::IF_ARS_32;
+        expose SSD_BLK_SYS_001::ORB::IF_ARS_36;
         expose SSD_BLK_SYS_001::ARS_CAC::IF_CAC_02;
         expose SSD_BLK_SYS_001::ARS_CAC::IF_CAC_06;
+        expose SSD_BLK_SYS_001::ARS_CAC::IF_CAC_07;
         expose SSD_BLK_SYS_001::ORB::IF_CAC_09;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_CO2_01;
+        expose SSD_BLK_SYS_001::ARS_CO2::IF_CO2_02;
+        expose SSD_BLK_SYS_001::ARS_CO2::IF_CO2_04;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_CO2_05;
+        expose SSD_BLK_SYS_001::ORB::IF_ECL_29;
+        expose SSD_BLK_SYS_001::ORB::IF_ECL_39;
+        expose SSD_BLK_SYS_001::ORB::IF_ORB_19;
         expose SSD_BLK_SYS_001::ARS_THC::IF_THC_01;
         expose SSD_BLK_SYS_001::ARS_THC::IF_THC_02;
         expose SSD_BLK_SYS_001::ECL_ARS::IF_THC_03;
         expose SSD_BLK_SYS_001::ARS_THC::IF_THC_04;
+        expose SSD_BLK_SYS_001::ARS_THC::IF_THC_08;
         expose SSD_BLK_SYS_001::ORB::IF_THC_11;
         expose SSD_BLK_SYS_001::ARS_WCL::IF_WCL_01;
+        expose SSD_BLK_SYS_001::ARS_WCL::IF_WCL_04;
         expose SSD_BLK_SYS_001::ARS_WCL::IF_WCL_05;
         expose SSD_BLK_SYS_001::ORB::IF_WCL_12;
         expose SSD_BLK_SYS_001::ORB::IF_WCL_15;
         expose SSD_BLK_SYS_001::ORB::IF_WCL_16;
+        expose SSD_IRQ_SYS_001::InterfaceRequirements::IRQ_ORB_19;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_01;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_02;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_03;
@@ -726,6 +768,7 @@ package SSD_TRC_SYS_001 {
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_05;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_06;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_08;
+        expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_09;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_10;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_11;
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_12;
@@ -744,13 +787,18 @@ package SSD_TRC_SYS_001 {
         expose SSD_RQL_ECL_001::REQ_ARS::REQ_ARS_39;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_01;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_06;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_07;
+        expose SSD_RQM_SYS_001::REQ_DPS::REQ_DPS_07;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_05;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_06;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_07;
         expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_09;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_11;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_06;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_07;
+        expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_10;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_13;
+        expose SSD_IRQ_SYS_001::Results::vc_irq_orb_19;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_01;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_02;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_03;
@@ -758,6 +806,7 @@ package SSD_TRC_SYS_001 {
         expose SSD_RQL_ECL_001::Results::vc_req_ars_05;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_06;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_08;
+        expose SSD_RQL_ECL_001::Results::vc_req_ars_09;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_10;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_11;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_12;
@@ -774,13 +823,16 @@ package SSD_TRC_SYS_001 {
         expose SSD_RQL_ECL_001::Results::vc_req_ars_37;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_38;
         expose SSD_RQL_ECL_001::Results::vc_req_ars_39;
+        expose SSD_VER_SYS_001::Results::vc_req_dps_07;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_01;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_05;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_06;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_07;
         expose SSD_VER_SYS_001::Results::vc_req_eclss_09;
+        expose SSD_VER_SYS_001::Results::vc_req_eclss_11;
         expose SSD_VER_SYS_001::Results::vc_req_sys_06;
         expose SSD_VER_SYS_001::Results::vc_req_sys_07;
+        expose SSD_VER_SYS_001::Results::vc_req_sys_10;
         expose SSD_VER_SYS_001::Results::vc_req_sys_13;
         expose SSD_BEH_ORB_002::FireResponse::AC_FR_05;
         expose SSD_BEH_ORB_007::LiohChangeout::AC_LO_01;
