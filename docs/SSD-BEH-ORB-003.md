@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-003 |
 | 表題 | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） |
-| 版・日付 | Rev. D／2026-10-12 |
+| 版・日付 | Rev. E／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BEH-ORB-001 |
-| 関連図 | SSD-SYS-ARC-001 図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図 |
+| 関連図 | SSD-SYS-ARC-001 図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図・図238 ARS 空気系の運転と監視 シーケンス図・図239 RCRS と水冷却ループの運転と監視 シーケンス図・図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図・図241 煙検知と消火 シーケンス図・図242 キャビン温湿度の制御と監視 シーケンス図 |
 
 ## 1. 目的
 
-複数の系・乗員・地上が順にやり取りする場面をシーケンス図で示す。図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図 のメッセージは、系どうしのやり取りでは上位・下位の IF の ID に結び付け、IF 一覧が実際の動きで使われていることを示す。同じライフラインとメッセージを SysML v2 のテキスト（SysML/SSD-BEH-ORB-003.sysml）でも示す。
+複数の系・乗員・地上が順にやり取りする場面をシーケンス図で示す。図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図・図238 ARS 空気系の運転と監視 シーケンス図・図239 RCRS と水冷却ループの運転と監視 シーケンス図・図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図・図241 煙検知と消火 シーケンス図・図242 キャビン温湿度の制御と監視 シーケンス図 のメッセージは、系どうしのやり取りでは上位・下位の IF の ID に結び付け、IF 一覧が実際の動きで使われていることを示す。同じライフラインとメッセージを SysML v2 のテキスト（SysML/SSD-BEH-ORB-003.sysml）でも示す。
 
 ## 2. 書き方
 
@@ -143,17 +143,223 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | CM-11 | — | 計測とテレメトリ（ダウンリンク） | C&T：S帯 PM（トランスポンダ・NSP） → 追跡・通信網（TDRS・地上局） | リターンリンク（192 kbps：音声2チャネルとテレメトリ 128 kbps） | IF-CT-01 | CM_11（ReturnLink） | フォワードリンクの高データレートは72 kbps（A/G音声2チャネル各32 kbpsとコマンド8 kbps）、リターンリンクの高データレートは192 kbps（A/G音声2チャネル各32 kbpsとテレメトリ128 kbps）で、2-way測距はTDRSを経由しては働かない。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/162） |
 | CM-12 | — | 計測とテレメトリ（ダウンリンク） | 追跡・通信網（TDRS・地上局） → 地上（MCC） | テレメトリ・音声を MCC へ | — | CM_12（GroundTelemetry） | S帯PM系は、地上局またはTDRSを経由してオービタと地上の間の双方向通信を行い、コマンド、音声、テレメトリ、トーン測距、2-wayドップラ追跡の5つの機能のチャネルを持つ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/160） |
 
-## 9. IF との対応
+## 9. 図238 のライフライン
 
-メッセージが通る IF 17件と、その IF を使うメッセージを示す。
+図238 ARS 空気系の運転と監視 シーケンス図（ARS 空気系の運転と監視）のライフライン 11件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| COPS | キャビンファン運用管理 | SSD-FD-CAC-OPS-001 | cacFanOps |
+| CFAN | キャビンファン | SSD-FD-CAC-FAN-001 | cacFan |
+| CMON | キャビン空気の監視・表示 | SSD-FD-CAC-MON-001 | cacMon |
+| AOPS | ベイ冷却運用管理 | SSD-FD-ARS-AVB-OPS-001 | avbOps |
+| AFAN | ベイファン | SSD-FD-ARS-AVB-FAN-001 | avbFan |
+| AMON | ベイ冷却の監視・表示 | SSD-FD-ARS-AVB-MON-001 | avbMon |
+| IOPS | IMU ファン運用管理 | SSD-FD-ARS-IMU-OPS-001 | imuOps |
+| IFAN | IMU ファン | SSD-FD-ARS-IMU-FAN-001 | imuFan |
+| IMON | IMU ファン監視・表示 | SSD-FD-ARS-IMU-MON-001 | imuMon |
+| DPS | DPS・アビオニクス | SSD-FD-DPS-001 | dps |
+
+## 10. 図238 のメッセージ
+
+図238 ARS 空気系の運転と監視 シーケンス図のメッセージ 15件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| QA-01 | — | 運転の選択 | 乗員 → キャビンファン運用管理 | パネル L1 の CABIN FAN A・B スイッチで、運転するキャビンファンを選んで起動・停止する。 | スイッチ | QA_01（CabinFanSwitchSelect） | ECLSS 制御の表では、パネル L1 の CABIN FAN A/B スイッチがキャビンファンに給電し、IMU FANS A-B-C スイッチが IMU ファンに給電し、AV BAY 1/2/3 FANS A-B スイッチがアビオニクスベイの空気を循環させる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QA-02 | — | 運転の選択 | キャビンファン運用管理 → キャビンファン | 運用規則に従って選んだキャビンファンを起動・停止する指令を渡す。 | IF-CAC-10 | QA_02（CabinFanRunCommand） | ECLSS 制御の表では、パネル L1 の CABIN FAN A/B スイッチがキャビンファンに給電し、IMU FANS A-B-C スイッチが IMU ファンに給電し、AV BAY 1/2/3 FANS A-B スイッチがアビオニクスベイの空気を循環させる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QA-03 | — | 運転の選択 | 乗員 → ベイ冷却運用管理 | パネル L1 の AV BAY 1・2・3 FAN A・B スイッチで、各ベイの運転するファンを選ぶ。 | スイッチ | QA_03（BayFanSwitchSelect） | 各 IMU ファンはパネル L1 の IMU FAN スイッチで制御され、ON の位置で対応するファンが回り、OFF の位置で止まる。アビオニクスベイのファンは AV BAY 1・2・3 FAN A・B スイッチで制御される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376） |
+| QA-04 | — | 運転の選択 | ベイ冷却運用管理 → ベイファン | 運用規則に従って選んだベイファンを入切りする指令を渡す。打上げ時には各ベイの1台のファンが運転済みである。 | IF-AVB-08 | QA_04（BayFanRunCommand） | ECLSS 制御の表では、パネル L1 の CABIN FAN A/B スイッチがキャビンファンに給電し、IMU FANS A-B-C スイッチが IMU ファンに給電し、AV BAY 1/2/3 FANS A-B スイッチがアビオニクスベイの空気を循環させる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90）乗員の搭乗時に、ARS はすでに上昇用に整えてあり、キャビンファン1台・IMU ファン1台・各アビオニクスベイのファン1台が運転している。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/404） |
+| QA-05 | — | 運転の選択 | 乗員 → IMU ファン運用管理 | パネル L1 の IMU FAN A・B・C スイッチで、運転する IMU ファンを選ぶ。 | スイッチ | QA_05（ImuFanSwitchSelect） | 各 IMU ファンはパネル L1 の IMU FAN スイッチで制御され、ON の位置で対応するファンが回り、OFF の位置で止まる。アビオニクスベイのファンは AV BAY 1・2・3 FAN A・B スイッチで制御される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376） |
+| QA-06 | — | 運転の選択 | IMU ファン運用管理 → IMU ファン | 運用規則と故障処置手順に従って選んだ IMU ファンを入切する指令を渡す。ON でファンが回り、OFF で止まる。 | IF-IMU-07 | QA_06（ImuFanRunCommand） | 各 IMU ファンはパネル L1 の IMU FAN スイッチで制御され、ON の位置で対応するファンが回り、OFF の位置で止まる。アビオニクスベイのファンは AV BAY 1・2・3 FAN A・B スイッチで制御される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376）ECLSS 制御の表では、パネル L1 の CABIN FAN A/B スイッチがキャビンファンに給電し、IMU FANS A-B-C スイッチが IMU ファンに給電し、AV BAY 1/2/3 FANS A-B スイッチがアビオニクスベイの空気を循環させる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QA-07 | — | 監視と表示 | IMU ファン → IMU ファン監視・表示 | IMU FAN 信号調整器が給電する回転数センサの出力と、ΔP センサの差圧を渡す。 | IF-IMU-05 | QA_07（ImuFanSpeedDpData） | IMU FAN 信号調整器は、IMU ファンが正常に回っているかを確かめる回転数センサに給電し、IMU ファンの差圧センサは H2O BYP LOOP 1 SNSR 信号調整器が給電する。ARS のデータは OPS 2(4) では PASS SM SPEC 66 と PASS SM SYS SUMM 1、OPS 1・3 では BFS SM SYS SUMM 1 に表示される。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74） |
+| QA-08 | — | 監視と表示 | キャビン空気の監視・表示 → DPS・アビオニクス | キャビンファン差圧を、主 C&W のハードウェアチャネル 74（AV BAY/CABIN AIR 灯）と SM の表示へ送る。 | IF-CAC-12・IF-ARS-25 | QA_08（CabinFanDpSignal） | 主 C&W の AV BAY/CABIN AIR 灯は、キャビンファン差圧・Av Bay 1〜3 の空気出口温度・キャビン熱交換器の空気温度が限界外のときに点灯し、ハードウェアチャネルは 74・84・94・104・114 である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/133）IMU FAN 信号調整器は、IMU ファンが正常に回っているかを確かめる回転数センサに給電し、IMU ファンの差圧センサは H2O BYP LOOP 1 SNSR 信号調整器が給電する。ARS のデータは OPS 2(4) では PASS SM SPEC 66 と PASS SM SYS SUMM 1、OPS 1・3 では BFS SM SYS SUMM 1 に表示される。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74） |
+| QA-09 | — | 監視と表示 | ベイ冷却の監視・表示 → DPS・アビオニクス | ファン下流の温度センサのデータを、AIR TEMP 計器と主 C&W のハードウェアチャネル 84・94・104 へ送る。ベイ温度は SM SYS SUMM 2 と SPEC 66 ENVIRONMENT にも出る。 | IF-AVB-13・IF-ARS-28 | QA_09（BayAirTempSignal） | 主 C&W の AV BAY/CABIN AIR 灯は、キャビンファン差圧・Av Bay 1〜3 の空気出口温度・キャビン熱交換器の空気温度が限界外のときに点灯し、ハードウェアチャネルは 74・84・94・104・114 である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/133）アビオニクスベイのファン下流の温度センサのデータは AIR TEMP 計器に直接送られ、SM SYS SUMM 2 と SPEC 66 ENVIRONMENT の表示でも見られる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/788） |
+| QA-10 | — | 監視と表示 | ベイ冷却の監視・表示 → DPS・アビオニクス | ファン差圧を SM SYS SUMM 2（DISP 79）に表示し、SPEC 66 の限界外で SM 警報を出す。 | IF-AVB-14 | QA_10（BayFanDpDisplay） | SM SYS SUMM 2（DISP 79）の表示には、AV BAY 1〜3 の項目とファンの差圧の項目がある。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=80）C&W の FDA 表では、AV BAY FAN ΔP は SPEC 66 で、SM アラートの下限 2.5・上限 4.3（改良型ファンは 4.5・7.8）である。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=96） |
+| QA-11 | — | 監視と表示 | IMU ファン監視・表示 → DPS・アビオニクス | IMU ファンの状態（運転中の「*」・回転数低下の「↓」）を、SM OPS 2 の PASS ENVIRONMENT（DISP 66）と SM SYS SUMM 1（DISP 78）に表示し、限界外で S66 IMU FAN DP・S66 IMU FN SPD の SM アラートを出す。IMU ファン差圧は BFS の SM SYS SUMM 1 にも出る。 | IF-IMU-10・IF-ARS-29 | QA_11（ImuFanStatusDisplay） | IMU ファンの状態は、PASS ENVIRONMENT（DISP 66）と PASS・BFS の SM SYS SUMM 1（DISP 78）に出る。運転中のファンには「*」が付き、回転数が限界より下がると「↓」が出る。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/IMU%20Workbook.pdf#page=25）IMU ファンの故障処置手順は、SM アラートのメッセージ S66 IMU FAN DP と S66 IMU FN SPD A(B,C) から始まり、ΔP が失われたときは回転数センサの「↓」を監視する。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=264）BFS SM SYS SUMM 1（DISP 78）の ECLSS の項目に、キャビンファンの差圧（FAN DP）と IMU ファンの差圧（IMU FAN DP）が出る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359） |
+| QA-12 | — | 監視と表示 | DPS・アビオニクス → 乗員 | SM の表示と、主 C&W の AV BAY/CABIN AIR 灯・SM アラートを、乗員に見せる。 | 表示・警報灯 | QA_12（AirLoopAlertAnnunciation） | 主 C&W の AV BAY/CABIN AIR 灯は、キャビンファン差圧・Av Bay 1〜3 の空気出口温度・キャビン熱交換器の空気温度が限界外のときに点灯し、ハードウェアチャネルは 74・84・94・104・114 である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/133）IMU ファンの故障処置手順は、SM アラートのメッセージ S66 IMU FAN DP と S66 IMU FN SPD A(B,C) から始まり、ΔP が失われたときは回転数センサの「↓」を監視する。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=264） |
+| QA-13 | — | 喪失の判断 | キャビン空気の監視・表示 → キャビンファン運用管理 | 差圧の表示と警報を、キャビンファンの喪失判定（A17-101）と切替・点検の判断に使うために渡す。 | IF-CAC-11 | QA_13（CabinFanLossBasis） | フライトルール A17-101 は、キャビンファンの差圧が限界外で、乗員が空気流の喪失を検知したときに、キャビンファンの喪失とみなす。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1929） |
+| QA-14 | — | 喪失の判断 | ベイ冷却の監視・表示 → ベイ冷却運用管理 | ベイ温度とファン差圧の表示・警報を、ファンの喪失判定（A17-103）と切替・処置の判断に使うために渡す。 | IF-AVB-12 | QA_14（BayFanLossBasis） | フライトルール A17-103 は、アビオニクスベイのファンの差圧が 2.5 inches H2O 未満または 4.3 inches H2O 超のときに、そのファンの喪失とみなす。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1931） |
+| QA-15 | — | 喪失の判断 | IMU ファン監視・表示 → IMU ファン運用管理 | ΔP と回転数の表示・SM アラートを、IMU ファンの喪失判定（A17-104）とファンの切替の判断に使うために渡す。ΔP が失われたときは回転数センサの「↓」で故障を監視する。 | IF-IMU-12 | QA_15（ImuFanLossBasis） | フライトルール A17-104 は、IMU ファンの差圧が限界外のとき、または選んだファンの回転数が異常なときに、IMU ファンの喪失とみなす。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1933）IMU ファンの故障処置手順は、SM アラートのメッセージ S66 IMU FAN DP と S66 IMU FN SPD A(B,C) から始まり、ΔP が失われたときは回転数センサの「↓」を監視する。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=264） |
+
+## 11. 図239 のライフライン
+
+図239 RCRS と水冷却ループの運転と監視 シーケンス図（RCRS と水冷却ループの運転と監視）のライフライン 11件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| ROPS | RCRS 運用管理 | SSD-FD-ARS-RCRS-OPS-001 | rcrsOps |
+| RCTL | RCRS 制御器 | SSD-FD-ARS-RCRS-CTL-001 | rcrsCtl |
+| RBED | RCRS ベッド | SSD-FD-ARS-RCRS-BED-001 | rcrsBed |
+| RUSC | RCRS 空気回収・均圧 | SSD-FD-ARS-RCRS-USC-001 | rcrsUsc |
+| RMON | RCRS 計装・表示 | SSD-FD-ARS-RCRS-MON-001 | rcrsMon |
+| DPS | DPS（SM 表示） | SSD-FD-DPS-001 | dps |
+| WOPS | 水ループ運用管理 | SSD-FD-ARS-WCL-OPS-001 | wclOps |
+| WPMP | ポンプパッケージ | SSD-FD-ARS-WCL-PMP-001 | wclPmp |
+| WICH | インターチェンジャ・バイパス | SSD-FD-ARS-WCL-ICH-001 | wclIch |
+| WMON | 水ループ監視 | SSD-FD-ARS-WCL-MON-001 | wclMon |
+
+## 12. 図239 のメッセージ
+
+図239 RCRS と水冷却ループの運転と監視 シーケンス図のメッセージ 14件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| QB-01 | — | RCRS の運転の選択 | 乗員 → RCRS 運用管理 | 乗員がパネル MO51F のモードスイッチ（OPER/STBY）と電源スイッチを操作する | パネル MO51F（スイッチ） | QB_01（RcrsSwitchInput） | RCRS の制御スイッチはパネル MO51F にあり、制御器ごとのモードスイッチ（OPER で運転の手順を始め、STBY で待機にして止める）と電源スイッチで操作する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=224） |
+| QB-02 | — | RCRS の運転の選択 | RCRS 運用管理 → RCRS 制御器 | 運用規則と故障処置に従って制御器を起動・停止し、故障時は他方の制御器に切り替える | IF-RCRS-14 | QB_02（RcrsControllerSelect） | RCRS の制御スイッチはパネル MO51F にあり、制御器ごとのモードスイッチ（OPER で運転の手順を始め、STBY で待機にして止める）と電源スイッチで操作する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=224）一方の制御器だけの故障では、他方の制御器（SYS 2(1)）で通常の運転を続ける。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=331） |
+| QB-03 | — | RCRS の工程の制御 | RCRS 制御器 → RCRS ベッド | 作動中の制御器が真空サイクル弁のアクチュエータ A・B を回し、ベッドの空気ポペットと真空ポペットを開閉して吸着と再生を切り替える | IF-RCRS-05 | QB_03（VacuumCycleValveDrive） | アクチュエータ A は回ってベッド A の空気ポペットとベッド B の真空ポペットを開き、ベッド A を空気流に、ベッド B を真空に開く。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=219）作動中の制御器の制御論理が、各構成品と計装に出力信号と電力を供給する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=218） |
+| QB-04 | — | RCRS の工程の制御 | RCRS 制御器 → RCRS 空気回収・均圧 | 作動中の制御器が工程に応じて均圧弁を開閉し、ullage-save 圧縮機を動かす | IF-RCRS-06 | QB_04（PressureEqualizeCommand） | 6個の均圧弁はそれぞれ2つのコイルを持ち、2台の制御器が1つずつ受け持つので、コイルや制御器を1つ失っても系は失われない。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=217）ullage-save 圧縮機は起動の30秒後に、排気中のベッドの圧力が圧縮機サイクル開始時の2/3未満かを確かめ、確かめに失敗すると制御器を入れ直すか他方を選ぶまで止められる。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=229） |
+| QB-05 | — | RCRS の工程の制御 | RCRS 計装・表示 → RCRS 制御器 | ベッド圧力・ベッド差圧などの計測値を作動中の制御器に入力し、故障検知に使わせる | IF-RCRS-09 | QB_05（BedSensorInput） | 制御器は、故障検知のために計装からの入力も受ける。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=218）RCRS の自動停止の論理は、ベッド圧力・ベッド差圧・圧縮機の回転数と弁位置の表示が許容できないとき RCRS を停止する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1937） |
+| QB-06 | — | RCRS の表示と喪失の判断 | RCRS 計装・表示 → DPS（SM 表示） | RCRS の計測値（FILTER ΔP、PPCO2、TEMP、BED A・B PRESS、ΔP、VAC PRESS）を SM に送り、SPEC 66 ENVIRONMENT の右下に表示させる | IF-RCRS-10・IF-ARS-26 | QB_06（RcrsMeasurementDisplay） | RCRS の情報は SPEC 66 ENVIRONMENT の右下に表示される。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=228）共通計装の値は系の評価のためにダウンリンクされるだけで、制御には使わない。SPEC 66 の SM 表示は OPS 2・4 で使える。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=227）RCRS の運転の状況は、OPS 2 の SPEC 66 ENVIRONMENT で乗員が確かめる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371） |
+| QB-07 | — | RCRS の表示と喪失の判断 | RCRS 制御器 → DPS（SM 表示） | 制御器の状態を SPEC 66 に示し、故障で停止すると故障ディスクリートのテレメトリを6秒間「1」にして、SM メッセージ S66 CO2 RL SYS を出させる | IF-RCRS-11・IF-ARS-26 | QB_07（RcrsControllerFault） | 故障検知の論理が故障を見つけると RCRS を停止し、パネル MO51F の該当制御器の故障灯を点け、故障ディスクリートのテレメトリを6秒間「1」にしてから「0」に戻す。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=228）SM メッセージ S66 CO2 RL SYS は、RCRS の制御器が故障したとき、または故障検知の論理が2つのベッドのどちらかで誤った圧力を検知したときに出る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=229） |
+| QB-08 | — | RCRS の表示と喪失の判断 | DPS（SM 表示） → 乗員 | SPEC 66 の表示と SM メッセージを乗員に示す | SM 表示 | QB_08（RcrsDisplayToCrew） | 共通計装の値は系の評価のためにダウンリンクされるだけで、制御には使わない。SPEC 66 の SM 表示は OPS 2・4 で使える。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=227）SM メッセージ S66 CO2 RL SYS は、RCRS の制御器が故障したとき、または故障検知の論理が2つのベッドのどちらかで誤った圧力を検知したときに出る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=229） |
+| QB-09 | — | RCRS の表示と喪失の判断 | RCRS 計装・表示 → RCRS 運用管理 | PPCO2 と RCRS の表示・SM メッセージを、RCRS の喪失判定と故障処置の判断に使わせる | IF-RCRS-15 | QB_09（RcrsLossJudgement） | RCRS の喪失は、PPCO2 を 7.6 mmHg 未満に保てないとき、または PPCO2 の把握ができないときと判定する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1937） |
+| QB-10 | — | 水ループの運転の選択 | 乗員 → 水ループ運用管理 | 乗員がパネル L1 の H2O PUMP LOOP スイッチと BYPASS MODE スイッチを操作する | パネル L1（スイッチ） | QB_10（WaterLoopSwitchInput） | パネル L1 の H2O PUMP LOOP 1 の A/B スイッチでループ 1 のポンプ A・B を選び、H2O PUMP LOOP 1・2 の GPC/OFF/ON スイッチでポンプを動かす・止める。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90）パネル L1 の LOOP 1・2 BYPASS MODE スイッチで AUTO か MAN を選び、MAN のときは BYPASS MAN の INCR/DECR スイッチで水バイパス弁の位置を制御する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QB-11 | — | 水ループの運転の選択 | 水ループ運用管理 → ポンプパッケージ | H2O PUMP LOOP 1 の A/B 選択と GPC/OFF/ON スイッチで、運転するポンプを選び起動・停止する | IF-WCL-09 | QB_11（WaterPumpSelect） | パネル L1 の H2O PUMP LOOP 1 の A/B スイッチでループ 1 のポンプ A・B を選び、H2O PUMP LOOP 1・2 の GPC/OFF/ON スイッチでポンプを動かす・止める。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QB-12 | — | 水ループの運転の選択 | 水ループ運用管理 → インターチェンジャ・バイパス | LOOP 1・2 BYPASS MODE スイッチで自動・手動を選び、手動では MAN INCR/DECR スイッチでバイパス弁の位置を調整する | IF-WCL-10 | QB_12（BypassModeCommand） | パネル L1 の LOOP 1・2 BYPASS MODE スイッチで AUTO か MAN を選び、MAN のときは BYPASS MAN の INCR/DECR スイッチで水バイパス弁の位置を制御する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QB-13 | — | 水ループの温度制御と監視 | ポンプパッケージ → インターチェンジャ・バイパス | 自動モードでは、バイパス制御器がポンプ出口温度を設定値 63.0 ± 2.5°F と比べてバイパス弁を開閉する | IF-WCL-06 | QB_13（PumpOutletTemperature） | AUTO のとき、水のバイパス制御器とバイパス弁が、ポンプ出口温度の設定値 63.0 ± 2.5°F を保つようにバイパス水量を自動で制御する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/379） |
+| QB-14 | — | 水ループの温度制御と監視 | 水ループ監視 → 水ループ運用管理 | ポンプ出口圧・アキュムレータ量・インターチェンジャ流量・ポンプ出口温度などを、ARS 水ループの喪失判定とループ切替の判断に使わせる | IF-WCL-11 | QB_14（WaterLoopLossJudgement） | ARS 水ループの喪失は、アキュムレータ量が 0 になる、インターチェンジャ流量を保てない、ポンプ出口温度を保てないなどの場合と判定する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2059） |
+
+## 13. 図240 のライフライン
+
+図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図（与圧・給水・廃棄物・エアロックの運転と表示）のライフライン 12件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| POPS | 与圧運用管理 | SSD-FD-ECL-PCS-OPS-001 | pcsOps |
+| PMNF | 与圧系のマニホールド・弁構成 | SSD-FD-ECL-PCS-MNF-001 | pcsMnf |
+| PO2S | O2 供給（与圧） | SSD-FD-ECL-PCS-O2S-001 | pcsO2s |
+| PMON | 与圧の監視 | SSD-FD-ECL-PCS-MON-001 | pcsMon |
+| WCSO | WCS 運用管理 | SSD-FD-ECL-WCS-OPS-001 | wcsOps |
+| WFSP | ファンセパレータ | SSD-FD-ECL-WCS-FSP-001 | wcsFsp |
+| WCMD | コモード操作 | SSD-FD-ECL-WCS-CMD-001 | wcsCmd |
+| WVAC | 真空ベント | SSD-FD-ECL-WCS-VAC-001 | wcsVac |
+| H2O | 給水・廃水系 | SSD-FD-ECL-H2O-001 | h2oSys |
+| ALSM | エアロック計測 | SSD-FD-ECL-ALS-MON-001 | alsMon |
+| DPS | DPS（SM 表示・警報） | SSD-FD-DPS-001 | dps |
+
+## 14. 図240 のメッセージ
+
+図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図のメッセージ 14件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| QC-01 | — | 与圧の構成と監視 | 与圧運用管理 → 与圧系のマニホールド・弁構成 | 選んだ系統のキャビンレギュレータ入口弁と O2 レギュレータ入口弁の開、O2/N2 制御弁の AUTO（軌道上）、または全閉と PCS 1 だけ開（上昇・再突入）を渡す | IF-PCS-16 | QC_01（PressureValveConfig） | 軌道上の PCS は、選んだ系統の14.7 psia キャビンレギュレータ入口弁と O2 レギュレータ入口弁を開き、O2/N2 制御弁を AUTO にする。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=47）通常の PCS の弁の構成は、上昇・再突入では両系統の14.7 psia キャビンレギュレータ入口弁と O2 レギュレータ入口弁を閉じ、PCS 1 の O2/N2 制御弁を開、PCS 2 を閉とする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1964） |
+| QC-02 | — | 与圧の構成と監視 | 与圧運用管理 → O2 供給（与圧） | PPO2 が3.20 psia 未満なら就寝前の O2 ブリードオリフィスの取り付け、帰還日の取り外しと、直接 O2 弁の使い方を渡す | IF-PCS-17 | QC_02（O2BleedOrificeCommand） | PPO2 が3.20 psia 未満なら飛行1日目の就寝前に O2 ブリードオリフィスを LEH のクイックディスコネクトに取り付け、帰還日の軌道離脱準備で外す。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1971）直接 O2 弁の流れは、10.2 psia のキャビンの維持といくつかの故障への対処に使う。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=33） |
+| QC-03 | — | 与圧の構成と監視 | 与圧の監視 → 与圧運用管理 | 14.7 psia に換算した等価の dP/dT を渡し、緊急中止・AOA の判定に使わせる | IF-PCS-15 | QC_03（EquivalentDpDt） | 上昇中の隔離できない漏れが0.15 psia/min を超えれば緊急中止、0.02〜0.15 psia/min なら AOA 中止とし、dP/dT は14.7 psia のキャビン圧に換算した等価の値である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1955） |
+| QC-04 | — | 与圧の構成と監視 | 与圧運用管理 → 乗員 | 漏れの判定（0.15 psia/min 超は緊急中止、0.02〜0.15 は AOA 中止）の結果を伝え、処置を促す | — | QC_04（CabinLeakJudgment） | 上昇中の隔離できない漏れが0.15 psia/min を超えれば緊急中止、0.02〜0.15 psia/min なら AOA 中止とし、dP/dT は14.7 psia のキャビン圧に換算した等価の値である。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1955） |
+| QC-05 | — | 給水・廃水の表示 | 給水・廃水系 → DPS（SM 表示・警報） | 給水タンク量 A〜D と給水圧を、軌道上は PASS SM の SPEC 66、上昇・再突入は BFS の THERMAL 表示へ送る | IF-H2O-05 | QC_05（SupplyWaterDisplayData） | 給水系の情報は、軌道上は PASS SM の SPEC 66、上昇・再突入では BFS の THERMAL 表示で見る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=158）SPEC 66 の ENVIRONMENT 表示は、給水タンク量 A〜D と給水圧、給水・廃水のダンプ配管温度とノズル温度、真空ベントノズル温度の欄を持つ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=160） |
+| QC-06 | — | 給水・廃水の表示 | 給水・廃水系 → DPS（SM 表示・警報） | 給水・廃水のダンプ配管温度とノズル温度 A・B を SPEC 66 へ送り、45°F未満・125°F超・250°F超で SM アラートを出させる | IF-H2O-12 | QC_06（DumpTempData） | SPEC 66 の ENVIRONMENT 表示は、給水タンク量 A〜D と給水圧、給水・廃水のダンプ配管温度とノズル温度、真空ベントノズル温度の欄を持つ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=160）ダンプ配管温度が45°F未満か125°F超、またはノズル温度が250°F超になると、SM アラートが出る。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=325） |
+| QC-07 | — | 廃棄物収集の操作 | 乗員 → WCS 運用管理 | FAN SEP 選択スイッチでファンセパレータを選び、MODE スイッチを操作する | — | QC_07（FanSepSelection） | FAN SEP 選択スイッチで使うファンセパレータを選び、MODE スイッチが AUTO のときは選んだ分離器のオートクレードルのマイクロスイッチが働く。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758） |
+| QC-08 | — | 廃棄物収集の操作 | WCS 運用管理 → ファンセパレータ | 選んだファンセパレータを指令する（MODE が AUTO なら小便器のホースを外すと起動、リミットスイッチ故障時はバイパススイッチで交流を供給） | IF-WCS-13 | QC_08（FanSeparatorCommand） | FAN SEP 選択スイッチで使うファンセパレータを選び、MODE スイッチが AUTO のときは選んだ分離器のオートクレードルのマイクロスイッチが働く。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758）リミットスイッチが故障したときは、バイパススイッチで対応するリレーに直流を与えて分離器に交流を供給する。真空ベント隔離弁はパネル ML31C の WASTE H2O VACUUM VENT ISOL VLV CONTROL スイッチで制御する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760） |
+| QC-09 | — | 廃棄物収集の操作 | 乗員 → WCS 運用管理 | MODE スイッチを OFF から動かし、COMMODE/MANUAL/EMU にする | — | QC_09（ModeSwitchSelection） | COMMODE CONTROL ハンドルは MODE スイッチを OFF から動かすまで操作できず、機械的に連動している。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=474）MODE スイッチを COMMODE/MANUAL/EMU にしないと、COMMODE CONTROL ハンドルを前へ押せない。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/759） |
+| QC-10 | — | 廃棄物収集の操作 | WCS 運用管理 → コモード操作 | MODE スイッチの位置を渡し、OFF の間は COMMODE CONTROL ハンドルを動かせないよう連動させる | IF-WCS-14 | QC_10（CommodeInterlockCommand） | COMMODE CONTROL ハンドルは MODE スイッチを OFF から動かすまで操作できず、機械的に連動している。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=474）MODE スイッチを COMMODE/MANUAL/EMU にしないと、COMMODE CONTROL ハンドルを前へ押せない。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/759） |
+| QC-11 | — | 廃棄物収集の操作 | 乗員 → WCS 運用管理 | VACUUM VALVE のスイッチを操作する（軌道上は通常開、打上げ・再突入は閉） | — | QC_11（VacuumValveSwitch） | WCS の VACUUM VALVE は便器への真空ベント管を開閉し、軌道上は通常開き、打上げ・再突入では閉じる。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=468） |
+| QC-12 | — | 廃棄物収集の操作 | WCS 運用管理 → 真空ベント | 便器への真空ベント管を開閉する指令を渡す。真空ベント隔離弁は ML31C のスイッチで開閉する | IF-WCS-15 | QC_12（VacuumVentCommand） | WCS の VACUUM VALVE は便器への真空ベント管を開閉し、軌道上は通常開き、打上げ・再突入では閉じる。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=468）リミットスイッチが故障したときは、バイパススイッチで対応するリレーに直流を与えて分離器に交流を供給する。真空ベント隔離弁はパネル ML31C の WASTE H2O VACUUM VENT ISOL VLV CONTROL スイッチで制御する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760） |
+| QC-13 | — | 真空ベントとエアロックの表示 | 真空ベント → DPS（SM 表示・警報） | 真空ベントノズル温度（VAC VT NOZ T）を SM の DISP 66 ENVIRONMENT へ送る。非常時は廃棄物収集器の圧力が1 psia 未満で5分続けば便器を再開できる | IF-WCS-12・IF-ECL-37 | QC_13（VacVentNozzleTemp） | 真空ベントノズル温度（VAC VT NOZ T）とエアロック圧力（AIRLK P）は、SM の DISP 66 ENVIRONMENT に表示される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359）廃棄物収集器の圧力は MCC が確認し、非常時の真空ベント運用では1 psia 未満が5分続けば便器の使用を再開できる。（出典: https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=481） |
+| QC-14 | — | 真空ベントとエアロックの表示 | エアロック計測 → DPS（SM 表示・警報） | エアロックの雰囲気、ベスティビュール減圧弁、水配管、構造ヒータの計測値を SM OPS 2 の SPEC 177 EXTERNAL AIRLOCK へ、エアロック圧力を DISP 66 へも送る | IF-ALS-10・IF-ECL-38 | QC_14（AirlockMeasurements） | EXTERNAL AIRLOCK 表示（DISP 177）は SM OPS 2 だけで使え、エアロックの雰囲気、ベスティビュール減圧弁、水配管、構造ヒータの情報を示す。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=189）真空ベントノズル温度（VAC VT NOZ T）とエアロック圧力（AIRLK P）は、SM の DISP 66 ENVIRONMENT に表示される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359） |
+
+## 15. 図241 のライフライン
+
+図241 煙検知と消火 シーケンス図（煙検知と消火）のライフライン 6件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| DET | 煙感知器 | SSD-FD-ECL-FDS-DET-001 | smokeDetector |
+| ALM | 煙警報 | SSD-FD-ECL-FDS-ALM-001 | smokeAlarm |
+| DPS | DPS・アビオニクス | SSD-FD-DPS-001 | dpsAvionics |
+| OPS | 火災対応・運用管理 | SSD-FD-ECL-FDS-OPS-001 | fireOps |
+| FIX | 遠隔消火（ベイ） | SSD-FD-ECL-FDS-FIX-001 | bayFireExt |
+| PFE | 携帯消火器・消火ポート | SSD-FD-ECL-FDS-PFE-001 | portableExt |
+
+## 16. 図241 のメッセージ
+
+図241 煙検知と消火 シーケンス図のメッセージ 8件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| QD-01 | — | 検知と警報 | 煙感知器 → 煙警報 | 煙感知器が警報条件を満たし、トリップ信号を出して、パネル L1 の該当する SMOKE DETECTION 灯を点灯させる。 | IF-FDS-02 | QD_01（SmokeTripSignal） | 煙感知器が警報条件を満たすとトリップ信号が出て、パネル L1 の該当する赤の SMOKE DETECTION 灯が点灯する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/118） |
+| QD-02 | — | 検知と警報 | 煙感知器 → DPS・アビオニクス | 各感知器の濃度のアナログ出力を GPC へ送り、SM SYS SUMM 1 に表示させる（2.0 mg/m3 でバックアップ C&W が警報を出す）。 | IF-FDS-03・IF-ECL-18 | QD_02（SmokeConcentrationData） | 煙濃度は SM SYS SUMM 1（SPEC 78）に表示され、2.0 mg/m3 でバックアップ C&W の警報が出る。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=28） |
+| QD-03 | — | 検知と警報 | 煙警報 → DPS・アビオニクス | 煙警報で C&W のサイレンを鳴らし、4つの MASTER ALARM 表示を点灯させる。 | IF-FDS-06 | QD_03（SmokeAlarmAnnunciation） | 煙検知系は C&W のサイレンを鳴らし、パネル F2・F4・A7・MO52J の4つの MASTER ALARM 表示を点灯させる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/114） |
+| QD-04 | — | 確認と感知器の試験 | 煙警報 → 火災対応・運用管理 | SMOKE DETECTION 灯・サイレンと DPS 表示の濃度を渡し、乗員が火災の位置を特定して実際の火災かを確かめる。 | IF-FDS-07 | QD_04（FireIndicationCue） | 消火の操作では、乗員が火災の表示を見て位置を特定し、煙・火災の表示が本物かを確かめる。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=38） |
+| QD-05 | — | 確認と感知器の試験 | 煙警報 → 煙感知器 | SENSOR RESET で感知器の論理回路をリセットし、CIRCUIT TEST で感知器に 28 V を加えて灯と時間遅れを試験する。 | IF-FDS-05 | QD_05（SensorResetTestCommand） | SENSOR RESET は感知器の論理回路をリセットし、CIRCUIT TEST は 28 V を感知器に加えて灯と20秒の時間遅れを試験する。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=39） |
+| QD-06 | — | 消火 | 火災対応・運用管理 → 遠隔消火（ベイ） | ベイの火災を確認したら、そのベイの Halon ボトルを放出し、ベイファンを止める。 | IF-FDS-13 | QD_06（BayHalonDischargeCommand） | ベイの火災では、そのベイの Halon ボトルを放出しベイファンを止め、乗員室の火災ではキャビンファンを止めて携帯の Halon ボトルを消火ポートへ放出する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1923） |
+| QD-07 | — | 消火 | 火災対応・運用管理 → 携帯消火器・消火ポート | 乗員室の火災では、火元を特定して確かめたうえで、キャビンファンを止めヘルメットを着け、携帯の Halon ボトルを消火ポートへ放出する。 | IF-FDS-14 | QD_07（CabinHalonDischargeAction） | ベイの火災では、そのベイの Halon ボトルを放出しベイファンを止め、乗員室の火災ではキャビンファンを止めて携帯の Halon ボトルを消火ポートへ放出する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1923）乗員室の火災では、Halon ボトルの放出の前に、乗員が火元を特定して火災の存在を確かめる必要がある。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1915） |
+| QD-08 | — | テレメトリ | 遠隔消火（ベイ） → DPS・アビオニクス | 煙検知系と遠隔消火系の各種パラメータをテレメトリへ送る（MCC は空ボトルは分かるが、放出の時刻は分からない）。 | IF-FDS-09 | QD_08（FdsTelemetryParameters） | 煙検知系と遠隔消火系の各種パラメータはテレメトリへ送られる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/123）MCC の空ボトルの表示からは、漏れの始まりや放出の時刻は分からない。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1928） |
+
+## 17. 図242 のライフライン
+
+図242 キャビン温湿度の制御と監視 シーケンス図（キャビン温湿度の制御と監視）のライフライン 6件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| OPS | 温湿度運用管理 | SSD-FD-ARS-THC-OPS-001 | thcOps |
+| MON | 温湿度監視 | SSD-FD-ARS-THC-MON-001 | thcMon |
+| TCV | 温度制御弁・給気混合 | SSD-FD-ARS-THC-TCV-001 | thcTcv |
+| SEP | 湿度分離器・凝縮水排出 | SSD-FD-ARS-THC-SEP-001 | thcSep |
+| DPS | DPS・アビオニクス | SSD-FD-DPS-001 | dps |
+
+## 18. 図242 のメッセージ
+
+図242 キャビン温湿度の制御と監視 シーケンス図のメッセージ 10件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| QE-01 | — | 運転の選択 | 乗員 → 温湿度運用管理 | パネル L1 の CABIN TEMP CNTRL スイッチでコントローラを選び、CABIN TEMP ロータリスイッチで温度を選ぶ | スイッチ | QE_01（CabinTempSwitchInput） | パネル L1 の HUMIDITY SEP スイッチは湿度分離器の電源を入切りし、CABIN TEMP CNTRL スイッチは 2 台の温度コントローラの一方を選ぶ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QE-02 | — | 運転の選択 | 温湿度運用管理 → 温度制御弁・給気混合 | 選んだコントローラと温度を温度制御弁の制御へ渡す | IF-THC-14（選択） | QE_02（CabinTempSelection） | パネル L1 の HUMIDITY SEP スイッチは湿度分離器の電源を入切りし、CABIN TEMP CNTRL スイッチは 2 台の温度コントローラの一方を選ぶ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QE-03 | — | 運転の選択 | 乗員 → 温湿度運用管理 | パネル L1 の HUMIDITY SEP A・B スイッチ（ON–OFF）を操作する | スイッチ | QE_03（HumiditySepSwitchInput） | パネル L1 の HUMIDITY SEP スイッチは湿度分離器の電源を入切りし、CABIN TEMP CNTRL スイッチは 2 台の温度コントローラの一方を選ぶ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QE-04 | — | 運転の選択 | 温湿度運用管理 → 湿度分離器・凝縮水排出 | 湿度分離器 A・B の電源を個別に入切りする | IF-THC-15 | QE_04（HumiditySepPowerCommand） | パネル L1 の HUMIDITY SEP スイッチは湿度分離器の電源を入切りし、CABIN TEMP CNTRL スイッチは 2 台の温度コントローラの一方を選ぶ。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90） |
+| QE-05 | — | 制御と検知 | 温湿度監視 → 温度制御弁・給気混合 | 有効なコントローラが給気ダクトと還流ダクトの温度を検知し、選ばれた温度に制御する | IF-THC-10 | QE_05（DuctTempControlData） | 有効な温度コントローラは、給気ダクトと還流ダクトの温度を検知し、乗員が選んだ温度に制御する。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-12770,%20Vol.3%20-%20Shuttle%20Flight%20Operations%20Manual,%20Environmental%20Control%20and%20Life%20Support%20Systems%20(ECLSS)%20(1979-03-03).pdf#page=35）SCOM の系統図は、キャビン温度セレクタ、ダクト温度センサ、温度制御弁を示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370） |
+| QE-06 | — | 制御と検知 | 湿度分離器・凝縮水排出 → 温湿度監視 | 回転数センサの信号で、湿度分離器が正常に回っているかを検知する | IF-THC-09 | QE_06（SeparatorSpeedSignal） | HUM SEP 信号調整器が回転数センサに給電し、湿度分離器が正常に運転しているかを検知する。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74） |
+| QE-07 | — | 表示と警報 | 温湿度監視 → DPS・アビオニクス | 湿度分離器 A・B の運転状態（HUMID SEP）とキャビン温度（CABIN T）を SM へ送り、SPEC 66 ENVIRONMENT に表示する | IF-THC-12 | QE_07（EnvironmentDisplayData） | 湿度分離器の運転状態（HUMID SEP）とキャビン温度（CABIN T）は、ENVIRONMENT 表示に出る。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=81） |
+| QE-08 | — | 表示と警報 | DPS・アビオニクス → 乗員 | 運転中の分離器の回転数が下がると、SM の警報「S66 HUMID SEP A(B)」を出す | 表示・操作部 | QE_08（HumidSepAlert） | SM の警報「S66 HUMID SEP A(B)」は、湿度分離器の故障処置の入口になる。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=285） |
+| QE-09 | — | 喪失の判断と処置 | 温湿度監視 → 温湿度運用管理 | 熱交換器出口温度・キャビン温度・分離器の運転状態の表示と警報を、キャビン大気制御の喪失判定（A17-102）と故障処置に使う | IF-THC-13 | QE_09（AtmosphereLossJudgementData） | キャビン温度を 95 度（90 度）F 未満に保てないとき、キャビン大気制御は喪失とみなされる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1930） |
+| QE-10 | — | 喪失の判断と処置 | 温湿度運用管理 → 温度制御弁・給気混合 | コントローラで弁を制御できない場合は、MD44F で弁アームを4つの固定穴の一つにピン止めする | IF-THC-14（手動） | QE_10（ManualBypassValvePin） | コントローラで単一のバイパス弁を制御できないとき、乗員は MD44F で弁アームを固定穴の一つにピン止めする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/375） |
+
+## 19. IF との対応
+
+メッセージが通る IF 70件と、その IF を使うメッセージを示す。
 
 | 所有文書 | IF | メッセージ |
 |---|---|---|
+| SSD-FD-ECL-ALS-MON-001 | IF-ALS-10 | QC-14 |
+| SSD-FD-ARS-CAC-001 | IF-ARS-25 | QA-08 |
+| SSD-FD-ARS-RCRS-001 | IF-ARS-26 | QB-06・QB-07 |
+| SSD-FD-ARS-AVB-001 | IF-ARS-28 | QA-09 |
+| SSD-FD-ARS-IMU-001 | IF-ARS-29 | QA-11 |
+| SSD-FD-ARS-AVB-OPS-001 | IF-AVB-08 | QA-04 |
+| SSD-FD-ARS-AVB-MON-001 | IF-AVB-12 | QA-14 |
+| SSD-FD-ARS-AVB-MON-001 | IF-AVB-13 | QA-09 |
+| SSD-FD-ARS-AVB-MON-001 | IF-AVB-14 | QA-10 |
+| SSD-FD-CAC-OPS-001 | IF-CAC-10 | QA-02 |
+| SSD-FD-CAC-MON-001 | IF-CAC-11 | QA-13 |
+| SSD-FD-CAC-MON-001 | IF-CAC-12 | QA-08 |
 | SSD-FD-CT-SBD-001 | IF-CT-01 | CM-02・CM-11 |
 | SSD-FD-CT-SBD-001 | IF-CT-05 | CM-03 |
 | SSD-FD-CT-INST-001 | IF-CT-06 | CM-08 |
 | SSD-FD-CT-OPS-001 | IF-CT-07 | CM-05 |
 | SSD-FD-CT-INST-001 | IF-CT-14 | CM-09 |
+| SSD-FD-ECL-FDS-001 | IF-ECL-18 | QD-02 |
+| SSD-FD-ECL-WCS-001 | IF-ECL-37 | QC-13 |
+| SSD-FD-ECL-ALS-001 | IF-ECL-38 | QC-14 |
+| SSD-FD-ECL-FDS-DET-001 | IF-FDS-02 | QD-01 |
+| SSD-FD-ECL-FDS-DET-001 | IF-FDS-03 | QD-02 |
+| SSD-FD-ECL-FDS-ALM-001 | IF-FDS-05 | QD-05 |
+| SSD-FD-ECL-FDS-ALM-001 | IF-FDS-06 | QD-03 |
+| SSD-FD-ECL-FDS-ALM-001 | IF-FDS-07 | QD-04 |
+| SSD-FD-ECL-FDS-FIX-001 | IF-FDS-09 | QD-08 |
+| SSD-FD-ECL-FDS-OPS-001 | IF-FDS-13 | QD-06 |
+| SSD-FD-ECL-FDS-OPS-001 | IF-FDS-14 | QD-07 |
+| SSD-FD-ECL-H2O-SPL-001 | IF-H2O-05 | QC-05 |
+| SSD-FD-ECL-H2O-DMP-001 | IF-H2O-12 | QC-06 |
+| SSD-FD-ARS-IMU-FAN-001 | IF-IMU-05 | QA-07 |
+| SSD-FD-ARS-IMU-OPS-001 | IF-IMU-07 | QA-06 |
+| SSD-FD-ARS-IMU-MON-001 | IF-IMU-10 | QA-11 |
+| SSD-FD-ARS-IMU-MON-001 | IF-IMU-12 | QA-15 |
 | SSD-FD-CT-001 | IF-ORB-01 | DO-06 |
 | SSD-FD-GNC-001 | IF-ORB-04 | DO-12・AS-17 |
 | SSD-FD-DPS-001 | IF-ORB-06 | AS-07・AS-10・AS-12・AS-13・AS-15 |
@@ -166,12 +372,36 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | SSD-FD-EXT-001 | IF-ORB-29 | AS-04 |
 | SSD-FD-EXT-001 | IF-ORB-31 | AS-05 |
 | SSD-FD-DPS-001 | IF-ORB-40 | DO-04・DO-09・DO-21・CM-04 |
+| SSD-FD-ECL-PCS-MON-001 | IF-PCS-15 | QC-03 |
+| SSD-FD-ECL-PCS-OPS-001 | IF-PCS-16 | QC-01 |
+| SSD-FD-ECL-PCS-OPS-001 | IF-PCS-17 | QC-02 |
+| SSD-FD-ARS-RCRS-CTL-001 | IF-RCRS-05 | QB-03 |
+| SSD-FD-ARS-RCRS-CTL-001 | IF-RCRS-06 | QB-04 |
+| SSD-FD-ARS-RCRS-MON-001 | IF-RCRS-09 | QB-05 |
+| SSD-FD-ARS-RCRS-MON-001 | IF-RCRS-10 | QB-06 |
+| SSD-FD-ARS-RCRS-CTL-001 | IF-RCRS-11 | QB-07 |
+| SSD-FD-ARS-RCRS-OPS-001 | IF-RCRS-14 | QB-02 |
+| SSD-FD-ARS-RCRS-MON-001 | IF-RCRS-15 | QB-09 |
+| SSD-FD-ARS-THC-SEP-001 | IF-THC-09 | QE-06 |
+| SSD-FD-ARS-THC-MON-001 | IF-THC-10 | QE-05 |
+| SSD-FD-ARS-THC-MON-001 | IF-THC-12 | QE-07 |
+| SSD-FD-ARS-THC-MON-001 | IF-THC-13 | QE-09 |
+| SSD-FD-ARS-THC-OPS-001 | IF-THC-14 | QE-02・QE-10 |
+| SSD-FD-ARS-THC-OPS-001 | IF-THC-15 | QE-04 |
+| SSD-FD-ARS-WCL-PMP-001 | IF-WCL-06 | QB-13 |
+| SSD-FD-ARS-WCL-OPS-001 | IF-WCL-09 | QB-11 |
+| SSD-FD-ARS-WCL-OPS-001 | IF-WCL-10 | QB-12 |
+| SSD-FD-ARS-WCL-MON-001 | IF-WCL-11 | QB-14 |
+| SSD-FD-ECL-WCS-VAC-001 | IF-WCS-12 | QC-13 |
+| SSD-FD-ECL-WCS-OPS-001 | IF-WCS-13 | QC-08 |
+| SSD-FD-ECL-WCS-OPS-001 | IF-WCS-14 | QC-10 |
+| SSD-FD-ECL-WCS-OPS-001 | IF-WCS-15 | QC-12 |
 
-## 10. SysML v2 テキスト
+## 20. SysML v2 テキスト
 
-同じライフラインとメッセージを SysML v2 のテキスト [SysML/SSD-BEH-ORB-003.sysml](../SysML/SSD-BEH-ORB-003.sysml) に示す。シーケンスの occurrence def 3件、メッセージ 56件と、その順序（first … then）から成る。本書の表と同じデータから作り、SysML v2 の文法による構文の検査を通し、Rev. AG で OMG SysML v2 Pilot Implementation 0.62.0 により、ほかのモデルと一緒に読み込んで名前の解決・型の検査を行い、誤り 0件・警告 0件を確かめた（SSD-MDL-SYS-001）。alt の枠（アボートの選択）はテキストには書かず、図76 の状態遷移に任せた。
+同じライフラインとメッセージを SysML v2 のテキスト [SysML/SSD-BEH-ORB-003.sysml](../SysML/SSD-BEH-ORB-003.sysml) に示す。シーケンスの occurrence def 8件、メッセージ 117件と、その順序（first … then）から成る。本書の表と同じデータから作り、SysML v2 の文法による構文の検査を通し、Rev. AG で OMG SysML v2 Pilot Implementation 0.62.0 により、ほかのモデルと一緒に読み込んで名前の解決・型の検査を行い、誤り 0件・警告 0件を確かめた（SSD-MDL-SYS-001）。alt の枠（アボートの選択）はテキストには書かず、図76 の状態遷移に任せた。
 
-## 11. 注記（出典間の相違・構成変更）
+## 21. 注記（出典間の相違・構成変更）
 
 > **注記** 図83・図84 の時刻は SCOM の標準の時刻表の目安で、飛行によって変わる。乗員から系への矢印は、表示・操作部やスイッチによる操作で、IF の行ではない。
 
@@ -185,7 +415,9 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 
 > **注記** 上昇・軌道離脱〜着陸の時間変化のモデル（シーケンスは本書の図83・84）は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
 
-## 12. 参考文献
+> **注記** 本書の判断（Rev. CE）：ECLSS のシーケンス図 5件（図238・図239・図240・図241・図242）は、データ・指令の IF（運転の指令・計測値の表示・警報）に、メッセージの『経路・IF』の欄で IF を結び付けた。運転の選択・表示・警報の判断は、運用飛行規則・故障処置手順・訓練マニュアルの記述による。時刻は書かない。IF を載せないメッセージ（スイッチ・SM 表示・警報灯）は乗員と DPS の間の操作・表示で、QC-04（漏れの判定の結果を乗員に伝える）は資料に直接の手順が無く、判定の流れとして置いた（本書の判断）。
+
+## 22. 参考文献
 
 1. Shuttle Crew Operations Manual 5.4 Entry（USA007587 Rev. A CPN-1、PDF p841） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/841
 2. Shuttle Crew Operations Manual 2.17 Mechanical Systems（USA007587 Rev. A CPN-1、PDF p619） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/619
@@ -217,6 +449,62 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 28. Shuttle Crew Operations Manual 2.4 Communications（USA007587 Rev. A CPN-1、PDF p167） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/167
 29. Shuttle Crew Operations Manual 2.4 Communications（USA007587 Rev. A CPN-1、PDF p196） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/196
 30. Shuttle Crew Operations Manual 2.4 Communications（USA007587 Rev. A CPN-1、PDF p197） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/197
+31. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 表3-6 ECLSS controls (ARS)（PDF p90） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=90
+32. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p376） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376
+33. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Operations（PDF p404） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/404
+34. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.5節 ARS Instrumentation and Displays（PDF p74） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74
+35. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.2節 AV BAY/CABIN AIR（PDF p133） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/133
+36. Shuttle Crew Operations Manual 4.1 Instrument Markings（USA007587 Rev. A CPN-1、PDF p788） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/788
+37. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.5.1節 図3-18 SM SYS SUMM 2（PDF p80） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=80
+38. USA006019 Rev. A（C&W 21002） Caution and Warning（訓練マニュアル、2008年） 表7-2 C&W FDA table（PDF p96） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=96
+39. USA004488 Rev. B（IMU 21002） Inertial Measurement Unit Workbook（訓練ワークブック、2006年） 2.10節 Thermal Controls（ファンの状態表示）（PDF p25） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/IMU%20Workbook.pdf#page=25
+40. JSC-48027 Rev. F Malfunction Procedures（MAL）6.1d CABIN IMU（PDF p264） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=264
+41. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p359） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359
+42. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-101 ATMOSPHERE REVITALIZATION SYSTEM (ARS) AIR LOSS DEFINITIONS（PDF p1929） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1929
+43. Space Shuttle Operational Flight Rules Vol. A – All Flights A17-103 Loss of Avionics Bay Fan（NSTS-12820 PCN-1、PDF p1931） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1931
+44. Space Shuttle Operational Flight Rules Vol. A – All Flights A17-104 IMU Fan（NSTS-12820 PCN-1、PDF p1933） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1933
+45. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.2.3（ステート12）・C.3 Controls（PDF p224） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=224
+46. JSC-48027 Rev. F Malfunction Procedures（MAL） ECLS 6.8a（続き）（PDF p331） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=331
+47. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.2.3 Operations（図C-5・Startup）（PDF p219） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=219
+48. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.2.2〜C.2.3 RCRS Hardware・Operations（PDF p218） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=218
+49. USA006020 Rev. B ECLSS 21002 訓練マニュアル （PDF p217） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=217
+50. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.5 Fault Detection・C.6 Fault Messages（PDF p229） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=229
+51. Space Shuttle Operational Flight Rules Vol. A – All Flights A17-106 Regenerative CO2 Removal System (RCRS) Loss Definition（NSTS-12820 PCN-1、PDF p1937） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1937
+52. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.4（表C-2 SPEC 66）・C.5 Fault Detection（PDF p228） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=228
+53. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.4 Instrumentation and Displays（表C-1）（PDF p227） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=227
+54. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p371） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371
+55. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Water Coolant Loop System（PDF p379） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/379
+56. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A18-101 ARS Water Loop（C項）（PDF p2059） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2059
+57. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.7.1〜2.7.2節 Ascent・Orbit（PDF p47） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=47
+58. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-251 Normal PCS Configuration（PDF p1964） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1964
+59. NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） （PDF p1971） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1971
+60. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 2.5節 Pressure Control System Controls（PDF p33） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=33
+61. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-201 Cabin Pressure Integrity（PDF p1955） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1955
+62. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 5.6節 Supply and Wastewater System Instrumentation/Displays（PDF p158） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=158
+63. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 図5-13 SPEC 66 ENVIRONMENT（PDF p160） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=160
+64. JSC-48027 Rev. F Malfunction Procedures（MAL） ECLS 6.5c WASTE H2O PRESS・DMP LN T・NOZ T（PDF p325） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=325
+65. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Operations（PDF p758） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758
+66. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Vacuum Vent System・Alternative Waste Collection（PDF p760） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/760
+67. JSC-12770 Vol. 12 Basic Rev. B Shuttle Flight Operations Manual – Crew Systems（1987年） 3.17.4.1〜3.17.4.2節 Commode Interlocks・Waste Production Quantities（PDF p474） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=474
+68. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Waste Management System（EMU water drain mode）（PDF p759） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/759
+69. JSC-12770 Vol. 12 Basic Rev. B Shuttle Flight Operations Manual – Crew Systems（1987年） 表3.17-1 WCS display and control functions（VACUUM VALVE）（PDF p468） — https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=468
+70. JSC-48025 Rev. F PCN-13 In-Flight Maintenance (IFM) Checklist W-56a Interconnect Vacuum Vent and Waste Water Dump Systems（PDF p481） — https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=481
+71. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 6.8.3節 CRT Displays（PDF p189） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=189
+72. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p118） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/118
+73. USA006019 Rev. A（C&W 21002） Caution and Warning（訓練マニュアル、2008年） 3.3.2.4〜3.3.2.5節 Performance Monitoring・Troubleshooting False Alarms（PDF p28） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=28
+74. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p114） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/114
+75. USA006019 Rev. A（C&W 21002） Caution and Warning（訓練マニュアル、2008年） 3.3.4.1節 Panel L1（PDF p38） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=38
+76. USA006019 Rev. A（C&W 21002） Caution and Warning（訓練マニュアル、2008年） 表3-1 Displays and controls（Panel L1）（PDF p39） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=39
+77. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-53 Fire and Post-Fire Actions（PDF p1923） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1923
+78. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-1 Fire/Post-Fire Definitions（PDF p1915） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1915
+79. Shuttle Crew Operations Manual 2.2 Caution and Warning System（USA007587 Rev. A CPN-1、PDF p123） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/123
+80. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-54 Management Following Halon Discharge without Fire Confirmation（PDF p1928） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1928
+81. JSC-12770 Vol.3 Shuttle Flight Operations Manual, ECLSS（1979） （PDF p35） — https://www.ibiblio.org/apollo/Shuttle/JSC-12770,%20Vol.3%20-%20Shuttle%20Flight%20Operations%20Manual,%20Environmental%20Control%20and%20Life%20Support%20Systems%20(ECLSS)%20(1979-03-03).pdf#page=35
+82. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p370） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370
+83. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.5.1節 図3-19 SPEC 66 ENVIRONMENT（PDF p81） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=81
+84. JSC-48027 Rev. F Malfunction Procedures（MAL） ECLS 6.2j HUMID SEP（PDF p285） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=285
+85. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-102 CABIN ATMOSPHERIC CONTROL（PDF p1930） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1930
+86. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p375） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/375
 
 ## 13. 変更履歴
 
@@ -227,3 +515,4 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | Rev. B | 2026-10-03 | SysML v2 テキストの検査の記述を改めた（Pilot による名前の解決・型の検査、モデル統合・検査定義書 SSD-MDL-SYS-001）（Rev. AG） |
 | Rev. C | 2026-10-07 | 乗員の作業分析・機能の分担定義書 SSD-TSK-ORB-001 への参照を注記（Rev. BA） |
 | Rev. D | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |
+| Rev. E | 2026-10-16 | ECLSS のシーケンス図 5件（図238〜図242：メッセージ 61件、IF 53件）を足した（Rev. CE） |

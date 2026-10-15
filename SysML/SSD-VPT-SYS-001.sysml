@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（237件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（242件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -2335,6 +2335,41 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+    }
+    view <'図238'> fig238 : OperationsView {
+        doc /* 図238 ARS 空気系の運転と監視 シーケンス図（頁 p238-seq-ars-air） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図239'> fig239 : OperationsView {
+        doc /* 図239 RCRS と水冷却ループの運転と監視 シーケンス図（頁 p239-seq-rcrs-wcl） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図240'> fig240 : OperationsView {
+        doc /* 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図（頁 p240-seq-pcs-h2o） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図241'> fig241 : OperationsView {
+        doc /* 図241 煙検知と消火 シーケンス図（頁 p241-seq-fire） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図242'> fig242 : OperationsView {
+        doc /* 図242 キャビン温湿度の制御と監視 シーケンス図（頁 p242-seq-thc） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
     }
     // ---- 表記の規約
     package Conventions {

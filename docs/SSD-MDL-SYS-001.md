@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. AS／2026-10-15 |
+| 版・日付 | Rev. AT／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -22,7 +22,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 1 | SysML/SSD-BEH-ORB-001.sysml | 状態遷移（ミッションフェーズ・飛行継続判断） | — | 124 | 29 | 0 | 0 |
 | 2 | SysML/SSD-PAR-ORB-001.sysml | パラメトリック（消耗品・電力・排熱） | — | 277 | 19 | 0 | 0 |
 | 3 | SysML/SSD-BEH-ORB-002.sysml | 故障処置の活動 | — | 104 | 3 | 0 | 0 |
-| 4 | SysML/SSD-BEH-ORB-003.sysml | シーケンス（軌道離脱〜着陸・上昇・指令とテレメトリ） | — | 199 | 57 | 0 | 0 |
+| 4 | SysML/SSD-BEH-ORB-003.sysml | シーケンス（軌道離脱〜着陸・上昇・指令とテレメトリ） | — | 438 | 123 | 0 | 0 |
 | 5 | SysML/SSD-BEH-ORB-004.sysml | 運用・非常時の活動 | — | 93 | 3 | 0 | 0 |
 | 6 | SysML/SSD-BLK-SYS-001.sysml | 構造（ブロック・ポート・インタフェース） | — | 3023 | 252 | 0 | 0 |
 | 7 | SysML/SSD-RQM-SYS-001.sysml | 要求（導出・充足・検証方法） | SSD-BLK-SYS-001 | 2653 | 2 | 0 | 0 |
@@ -66,8 +66,8 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 45 | SysML/SSD-HAB-ORB-001.sysml | 居住性と医療（機能・乗員の1日・ユースケース） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 250 | 37 | 0 | 0 |
 | 46 | SysML/SSD-EGR-ORB-001.sysml | 容積・動線・緊急脱出 | SSD-RQM-SYS-001 | 58 | 14 | 0 | 0 |
 | 47 | SysML/SSD-HVM-SYS-001.sysml | 人間系の評価方法とビューポイント | SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-VPT-SYS-001 | 90 | 18 | 0 | 0 |
-| 48 | SysML/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-BEH-ORB-008・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001 | 2391 | 60 | 0 | 0 |
-| 49 | SysML/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 111 | 1 | 0 | 0 |
+| 48 | SysML/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-BEH-ORB-008・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001 | 2426 | 60 | 0 | 0 |
+| 49 | SysML/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 169 | 1 | 0 | 0 |
 
 ## 3. 統合の関係
 
@@ -78,7 +78,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | IntegratedOrbiter | SSD_BLK_SYS_001::ORB と SSD_BEH_ORB_001::Orbiter の両方を特化（part def） | 1 |
 | integratedContext | 構造モデルの context の orb を IntegratedOrbiter に置き換えた部品 | 1 |
 | RequirementRefinement | パラメトリックの要求定義 → 要求モデルの同じ ID の要求（#refinement） | 11 |
-| MessageAllocation | シーケンス図のメッセージ → それを運ぶ構造モデルの IF（allocate） | 27 |
+| MessageAllocation | シーケンス図のメッセージ → それを運ぶ構造モデルの IF（allocate） | 80 |
 
 ## 4. 要求の詳細化
 
@@ -100,7 +100,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 
 ## 5. メッセージの割付
 
-シーケンス図のメッセージのうち IF の ID を持つもの（27件、1つのメッセージに IF が2つあるものを含む）を、構造モデルの IF に割り付けた。
+シーケンス図のメッセージのうち IF の ID を持つもの（80件、1つのメッセージに IF が2つあるものを含む）を、構造モデルの IF に割り付けた。
 
 | シーケンス図 | メッセージ | 内容 | IF | IF（SysML の道筋） |
 |---|---|---|---|---|
@@ -131,6 +131,59 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 図85 指令・テレメトリ経路 シーケンス図 | CM-08 | GPC のダウンリストを PCMMU へ | IF-CT-06 | context.sts.orb.IF_CT_06 |
 | 図85 指令・テレメトリ経路 シーケンス図 | CM-09 | 形式化したテレメトリを NSP へ | IF-CT-14 | context.sts.orb.ct.IF_CT_14 |
 | 図85 指令・テレメトリ経路 シーケンス図 | CM-11 | リターンリンク（192 kbps：音声2チャネルとテレメトリ 128 kbps） | IF-CT-01 | context.IF_CT_01 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-02 | 運用規則に従って選んだキャビンファンを起動・停止する指令を渡す。 | IF-CAC-10 | context.sts.orb.eclss.ars.cac.IF_CAC_10 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-04 | 運用規則に従って選んだベイファンを入切りする指令を渡す。打上げ時には各ベイの1台のファンが運転済みである。 | IF-AVB-08 | context.sts.orb.eclss.ars.avb.IF_AVB_08 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-06 | 運用規則と故障処置手順に従って選んだ IMU ファンを入切する指令を渡す。ON でファンが回り、OFF で止まる。 | IF-IMU-07 | context.sts.orb.eclss.ars.imu.IF_IMU_07 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-07 | IMU FAN 信号調整器が給電する回転数センサの出力と、ΔP センサの差圧を渡す。 | IF-IMU-05 | context.sts.orb.eclss.ars.imu.IF_IMU_05 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-08 | キャビンファン差圧を、主 C&W のハードウェアチャネル 74（AV BAY/CABIN AIR 灯）と SM の表示へ送る。 | IF-CAC-12 | context.sts.orb.IF_CAC_12 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-08 | キャビンファン差圧を、主 C&W のハードウェアチャネル 74（AV BAY/CABIN AIR 灯）と SM の表示へ送る。 | IF-ARS-25 | context.sts.orb.IF_ARS_25 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-09 | ファン下流の温度センサのデータを、AIR TEMP 計器と主 C&W のハードウェアチャネル 84・94・104 へ送る。ベイ温度は SM SYS SUMM 2 と SPEC 66 ENVIRONMENT にも出る。 | IF-AVB-13 | context.sts.orb.IF_AVB_13 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-09 | ファン下流の温度センサのデータを、AIR TEMP 計器と主 C&W のハードウェアチャネル 84・94・104 へ送る。ベイ温度は SM SYS SUMM 2 と SPEC 66 ENVIRONMENT にも出る。 | IF-ARS-28 | context.sts.orb.IF_ARS_28 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-10 | ファン差圧を SM SYS SUMM 2（DISP 79）に表示し、SPEC 66 の限界外で SM 警報を出す。 | IF-AVB-14 | context.sts.orb.IF_AVB_14 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-11 | IMU ファンの状態（運転中の「*」・回転数低下の「↓」）を、SM OPS 2 の PASS ENVIRONMENT（DISP 66）と SM SYS SUMM 1（DISP 78）に表示し、限界外で S66 IMU FAN DP・S66 IMU FN SPD の SM アラートを出す。IMU ファン差圧は BFS の SM SYS SUMM 1 にも出る。 | IF-IMU-10 | context.sts.orb.IF_IMU_10 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-11 | IMU ファンの状態（運転中の「*」・回転数低下の「↓」）を、SM OPS 2 の PASS ENVIRONMENT（DISP 66）と SM SYS SUMM 1（DISP 78）に表示し、限界外で S66 IMU FAN DP・S66 IMU FN SPD の SM アラートを出す。IMU ファン差圧は BFS の SM SYS SUMM 1 にも出る。 | IF-ARS-29 | context.sts.orb.IF_ARS_29 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-13 | 差圧の表示と警報を、キャビンファンの喪失判定（A17-101）と切替・点検の判断に使うために渡す。 | IF-CAC-11 | context.sts.orb.eclss.ars.cac.IF_CAC_11 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-14 | ベイ温度とファン差圧の表示・警報を、ファンの喪失判定（A17-103）と切替・処置の判断に使うために渡す。 | IF-AVB-12 | context.sts.orb.eclss.ars.avb.IF_AVB_12 |
+| 図238 ARS 空気系の運転と監視 シーケンス図 | QA-15 | ΔP と回転数の表示・SM アラートを、IMU ファンの喪失判定（A17-104）とファンの切替の判断に使うために渡す。ΔP が失われたときは回転数センサの「↓」で故障を監視する。 | IF-IMU-12 | context.sts.orb.eclss.ars.imu.IF_IMU_12 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-02 | 運用規則と故障処置に従って制御器を起動・停止し、故障時は他方の制御器に切り替える | IF-RCRS-14 | context.sts.orb.eclss.ars.rcrs.IF_RCRS_14 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-03 | 作動中の制御器が真空サイクル弁のアクチュエータ A・B を回し、ベッドの空気ポペットと真空ポペットを開閉して吸着と再生を切り替える | IF-RCRS-05 | context.sts.orb.eclss.ars.rcrs.IF_RCRS_05 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-04 | 作動中の制御器が工程に応じて均圧弁を開閉し、ullage-save 圧縮機を動かす | IF-RCRS-06 | context.sts.orb.eclss.ars.rcrs.IF_RCRS_06 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-05 | ベッド圧力・ベッド差圧などの計測値を作動中の制御器に入力し、故障検知に使わせる | IF-RCRS-09 | context.sts.orb.eclss.ars.rcrs.IF_RCRS_09 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-06 | RCRS の計測値（FILTER ΔP、PPCO2、TEMP、BED A・B PRESS、ΔP、VAC PRESS）を SM に送り、SPEC 66 ENVIRONMENT の右下に表示させる | IF-RCRS-10 | context.sts.orb.IF_RCRS_10 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-06 | RCRS の計測値（FILTER ΔP、PPCO2、TEMP、BED A・B PRESS、ΔP、VAC PRESS）を SM に送り、SPEC 66 ENVIRONMENT の右下に表示させる | IF-ARS-26 | context.sts.orb.IF_ARS_26 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-07 | 制御器の状態を SPEC 66 に示し、故障で停止すると故障ディスクリートのテレメトリを6秒間「1」にして、SM メッセージ S66 CO2 RL SYS を出させる | IF-RCRS-11 | context.sts.orb.IF_RCRS_11 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-07 | 制御器の状態を SPEC 66 に示し、故障で停止すると故障ディスクリートのテレメトリを6秒間「1」にして、SM メッセージ S66 CO2 RL SYS を出させる | IF-ARS-26 | context.sts.orb.IF_ARS_26 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-09 | PPCO2 と RCRS の表示・SM メッセージを、RCRS の喪失判定と故障処置の判断に使わせる | IF-RCRS-15 | context.sts.orb.eclss.ars.rcrs.IF_RCRS_15 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-11 | H2O PUMP LOOP 1 の A/B 選択と GPC/OFF/ON スイッチで、運転するポンプを選び起動・停止する | IF-WCL-09 | context.sts.orb.eclss.ars.wcl.IF_WCL_09 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-12 | LOOP 1・2 BYPASS MODE スイッチで自動・手動を選び、手動では MAN INCR/DECR スイッチでバイパス弁の位置を調整する | IF-WCL-10 | context.sts.orb.eclss.ars.wcl.IF_WCL_10 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-13 | 自動モードでは、バイパス制御器がポンプ出口温度を設定値 63.0 ± 2.5°F と比べてバイパス弁を開閉する | IF-WCL-06 | context.sts.orb.eclss.ars.wcl.IF_WCL_06 |
+| 図239 RCRS と水冷却ループの運転と監視 シーケンス図 | QB-14 | ポンプ出口圧・アキュムレータ量・インターチェンジャ流量・ポンプ出口温度などを、ARS 水ループの喪失判定とループ切替の判断に使わせる | IF-WCL-11 | context.sts.orb.eclss.ars.wcl.IF_WCL_11 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-01 | 選んだ系統のキャビンレギュレータ入口弁と O2 レギュレータ入口弁の開、O2/N2 制御弁の AUTO（軌道上）、または全閉と PCS 1 だけ開（上昇・再突入）を渡す | IF-PCS-16 | context.sts.orb.eclss.pcs.IF_PCS_16 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-02 | PPO2 が3.20 psia 未満なら就寝前の O2 ブリードオリフィスの取り付け、帰還日の取り外しと、直接 O2 弁の使い方を渡す | IF-PCS-17 | context.sts.orb.eclss.pcs.IF_PCS_17 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-03 | 14.7 psia に換算した等価の dP/dT を渡し、緊急中止・AOA の判定に使わせる | IF-PCS-15 | context.sts.orb.eclss.pcs.IF_PCS_15 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-08 | 選んだファンセパレータを指令する（MODE が AUTO なら小便器のホースを外すと起動、リミットスイッチ故障時はバイパススイッチで交流を供給） | IF-WCS-13 | context.sts.orb.eclss.wcs.IF_WCS_13 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-10 | MODE スイッチの位置を渡し、OFF の間は COMMODE CONTROL ハンドルを動かせないよう連動させる | IF-WCS-14 | context.sts.orb.eclss.wcs.IF_WCS_14 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-12 | 便器への真空ベント管を開閉する指令を渡す。真空ベント隔離弁は ML31C のスイッチで開閉する | IF-WCS-15 | context.sts.orb.eclss.wcs.IF_WCS_15 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-13 | 真空ベントノズル温度（VAC VT NOZ T）を SM の DISP 66 ENVIRONMENT へ送る。非常時は廃棄物収集器の圧力が1 psia 未満で5分続けば便器を再開できる | IF-WCS-12 | context.sts.orb.IF_WCS_12 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-13 | 真空ベントノズル温度（VAC VT NOZ T）を SM の DISP 66 ENVIRONMENT へ送る。非常時は廃棄物収集器の圧力が1 psia 未満で5分続けば便器を再開できる | IF-ECL-37 | context.sts.orb.IF_ECL_37 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-14 | エアロックの雰囲気、ベスティビュール減圧弁、水配管、構造ヒータの計測値を SM OPS 2 の SPEC 177 EXTERNAL AIRLOCK へ、エアロック圧力を DISP 66 へも送る | IF-ALS-10 | context.sts.orb.IF_ALS_10 |
+| 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図 | QC-14 | エアロックの雰囲気、ベスティビュール減圧弁、水配管、構造ヒータの計測値を SM OPS 2 の SPEC 177 EXTERNAL AIRLOCK へ、エアロック圧力を DISP 66 へも送る | IF-ECL-38 | context.sts.orb.IF_ECL_38 |
+| 図241 煙検知と消火 シーケンス図 | QD-01 | 煙感知器が警報条件を満たし、トリップ信号を出して、パネル L1 の該当する SMOKE DETECTION 灯を点灯させる。 | IF-FDS-02 | context.sts.orb.eclss.fds.IF_FDS_02 |
+| 図241 煙検知と消火 シーケンス図 | QD-02 | 各感知器の濃度のアナログ出力を GPC へ送り、SM SYS SUMM 1 に表示させる（2.0 mg/m3 でバックアップ C&W が警報を出す）。 | IF-FDS-03 | context.sts.orb.IF_FDS_03 |
+| 図241 煙検知と消火 シーケンス図 | QD-02 | 各感知器の濃度のアナログ出力を GPC へ送り、SM SYS SUMM 1 に表示させる（2.0 mg/m3 でバックアップ C&W が警報を出す）。 | IF-ECL-18 | context.sts.orb.IF_ECL_18 |
+| 図241 煙検知と消火 シーケンス図 | QD-03 | 煙警報で C&W のサイレンを鳴らし、4つの MASTER ALARM 表示を点灯させる。 | IF-FDS-06 | context.sts.orb.IF_FDS_06 |
+| 図241 煙検知と消火 シーケンス図 | QD-04 | SMOKE DETECTION 灯・サイレンと DPS 表示の濃度を渡し、乗員が火災の位置を特定して実際の火災かを確かめる。 | IF-FDS-07 | context.sts.orb.eclss.fds.IF_FDS_07 |
+| 図241 煙検知と消火 シーケンス図 | QD-05 | SENSOR RESET で感知器の論理回路をリセットし、CIRCUIT TEST で感知器に 28 V を加えて灯と時間遅れを試験する。 | IF-FDS-05 | context.sts.orb.eclss.fds.IF_FDS_05 |
+| 図241 煙検知と消火 シーケンス図 | QD-06 | ベイの火災を確認したら、そのベイの Halon ボトルを放出し、ベイファンを止める。 | IF-FDS-13 | context.sts.orb.eclss.fds.IF_FDS_13 |
+| 図241 煙検知と消火 シーケンス図 | QD-07 | 乗員室の火災では、火元を特定して確かめたうえで、キャビンファンを止めヘルメットを着け、携帯の Halon ボトルを消火ポートへ放出する。 | IF-FDS-14 | context.sts.orb.eclss.fds.IF_FDS_14 |
+| 図241 煙検知と消火 シーケンス図 | QD-08 | 煙検知系と遠隔消火系の各種パラメータをテレメトリへ送る（MCC は空ボトルは分かるが、放出の時刻は分からない）。 | IF-FDS-09 | context.sts.orb.IF_FDS_09 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-02 | 選んだコントローラと温度を温度制御弁の制御へ渡す | IF-THC-14 | context.sts.orb.eclss.ars.thc.IF_THC_14 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-04 | 湿度分離器 A・B の電源を個別に入切りする | IF-THC-15 | context.sts.orb.eclss.ars.thc.IF_THC_15 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-05 | 有効なコントローラが給気ダクトと還流ダクトの温度を検知し、選ばれた温度に制御する | IF-THC-10 | context.sts.orb.eclss.ars.thc.IF_THC_10 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-06 | 回転数センサの信号で、湿度分離器が正常に回っているかを検知する | IF-THC-09 | context.sts.orb.eclss.ars.thc.IF_THC_09 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-07 | 湿度分離器 A・B の運転状態（HUMID SEP）とキャビン温度（CABIN T）を SM へ送り、SPEC 66 ENVIRONMENT に表示する | IF-THC-12 | context.sts.orb.IF_THC_12 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-09 | 熱交換器出口温度・キャビン温度・分離器の運転状態の表示と警報を、キャビン大気制御の喪失判定（A17-102）と故障処置に使う | IF-THC-13 | context.sts.orb.eclss.ars.thc.IF_THC_13 |
+| 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-10 | コントローラで弁を制御できない場合は、MD44F で弁アームを4つの固定穴の一つにピン止めする | IF-THC-14 | context.sts.orb.eclss.ars.thc.IF_THC_14 |
 
 ## 6. 文書とモデルの一致
 
@@ -150,7 +203,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 状態 | SSD-BEH-ORB-001 の状態の表 | SSD-BEH-ORB-001 の state | 25 | 25 | 一致 |
 | 遷移 | SSD-BEH-ORB-001 の遷移の表 | SSD-BEH-ORB-001 の transition | 34 | 34 | 一致 |
 | 活動図の行動 | SSD-BEH-ORB-002・004 の節点の表（行動） | action（行動） | 44 | 44 | 一致 |
-| メッセージ | SSD-BEH-ORB-003 のメッセージの表 | SSD-BEH-ORB-003 の message | 56 | 56 | 一致 |
+| メッセージ | SSD-BEH-ORB-003 のメッセージの表 | SSD-BEH-ORB-003 の message | 117 | 117 | 一致 |
 | パラメトリックの要求 | SSD-PAR-ORB-001 の要求との関係の表 | SSD-PAR-ORB-001 の requirement def | 11 | 11 | 一致 |
 | ユースケース | SSD-UC-ORB-001 のユースケースの表 | SSD-UC-ORB-001 の use case def | 12 | 12 | 一致 |
 | シナリオのメッセージ | SSD-UC-ORB-001 のメッセージの表 | SSD-UC-ORB-001 の message | 34 | 34 | 一致 |
@@ -161,7 +214,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | ミッションキット | SSD-VAR-ORB-001 のミッションキットの表 | SSD-VAR-ORB-001 の MissionKit の part def | 13 | 13 | 一致 |
 | 検証ケース | 要求書の要求の表 | SSD-VER-SYS-001 の verification def | 212 | 212 | 一致 |
 | ビューポイント | SSD-VPT-SYS-001 のビューポイントの表 | SSD-VPT-SYS-001 の viewpoint def | 13 | 13 | 一致 |
-| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 237 | 237 | 一致 |
+| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 242 | 242 | 一致 |
 | 流れる物 | SSD-IBD-ORB-001 の流れる物の表 | SSD-IBD-ORB-001 の item def | 96 | 96 | 一致 |
 | 内部ブロック図の部品 | SSD-IBD-ORB-001 の部品の表 | SSD-IBD-ORB-001 の機器の part def | 284 | 284 | 一致 |
 | 内部ブロック図の流れ | SSD-IBD-ORB-001 の流れの表 | SSD-IBD-ORB-001 の flow | 525 | 525 | 一致 |
@@ -349,3 +402,4 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. AQ | 2026-10-15 | Rev. CB（検証の根拠の調査）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CB） |
 | Rev. AR | 2026-10-15 | Rev. CC（ECLSS の機能の故障モードの追加）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CC） |
 | Rev. AS | 2026-10-15 | Rev. CD（ECLSS の IF の流れ）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CD） |
+| Rev. AT | 2026-10-16 | Rev. CE（ECLSS のシーケンス図）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CE） |
