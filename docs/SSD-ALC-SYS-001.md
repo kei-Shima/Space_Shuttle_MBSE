@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ALC-SYS-001 |
 | 表題 | 割付定義書（機能・機器・区画・振る舞い） |
-| 版・日付 | Rev. C／2026-10-08 |
+| 版・日付 | Rev. D／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図91 割付行列（系 × 区画） |
@@ -257,7 +257,7 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | AVB3A | 前方アビオニクスベイ3A | orbiterLayout.avb3a | 5 |
 | AVB3B | 前方アビオニクスベイ3B | orbiterLayout.avb3b | 2 |
 | AVBF | 前方アビオニクスベイ（複数） | orbiterLayout.avbf | 9 |
-| AIRLOCK | エアロック | orbiterLayout.airlock | 4 |
+| AIRLOCK | エアロック | orbiterLayout.airlock | 9 |
 | FWD | 前部胴体（乗員室の外） | orbiterLayout.fwd | 6 |
 | FRCS | 前部 RCS モジュール | orbiterLayout.frcs | 2 |
 | PLB | ペイロードベイ | orbiterLayout.plb | 8 |
@@ -267,11 +267,11 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | POD | OMS/RCS ポッド | orbiterLayout.pod | 7 |
 | WING | 主翼 | orbiterLayout.wing | 3 |
 | VT | 垂直尾翼 | orbiterLayout.vt | 2 |
-| MULTI | 複数区画に分散 | orbiterLayout.multi | 24 |
+| MULTI | 複数区画に分散 | orbiterLayout.multi | 30 |
 
 ## 5. 機器の配置と割付（物理）
 
-機器 120件の区画・多重度と、機器に割り付けた系の部品・機能を示す（allocate 459件：系の部品 → 機器 120件、機能 → 機器 339件）。多重度は数量の欄が整数だけのときに付けた。
+機器 131件の区画・多重度と、機器に割り付けた系の部品・機能を示す（allocate 506件：系の部品 → 機器 131件、機能 → 機器 375件）。多重度は数量の欄が整数だけのときに付けた。
 
 | 機器 | 名称 | 区画 | 多重度 | 系の部品 | 機能 |
 |---|---|---|---|---|---|
@@ -340,6 +340,17 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | PHY-ECLSS-26 | 非常用の水の器具と水タンクの加圧の弁（非常用クロスタイの QD と移送ホース・CWC・H2O タンク N2 マニホールドの弁） | MD | — | context.sts.orb.eclss | F-ECL-H2O-08・F-ECL-H2O-09 |
 | PHY-ECLSS-27 | 廃棄物収集系（小便器・便器・ファンセパレータ・臭気・細菌フィルタ） | MD | — | context.sts.orb.eclss | F-ECL-WCS-01・F-ECL-WCS-02・F-ECL-WCS-03・F-ECL-WCS-04 |
 | PHY-ECLSS-28 | WCS の真空ベント系（WCS 真空弁・真空ベント QD・真空ベント隔離弁・ベント管とノズル） | MULTI | — | context.sts.orb.eclss | F-ECL-WCS-03・F-ECL-WCS-06・F-ECL-WCS-08 |
+| PHY-ECLSS-29 | ARS の計装の信号調整器（IMU FAN・HUM SEP・CABIN AIR・AV BAY 1/2/3・H2O BYP LOOP 1/2 SNSR） | MULTI | — | context.sts.orb.eclss | F-ECL-ARS-01・F-ECL-ARS-02・F-ECL-ARS-03 |
+| PHY-ECLSS-30 | ARS の計装のセンサ（IMU ファンの回転数・湿分分離器の速度・アビオニクスベイの温度とファン差圧・キャビン熱交換器出口温度・水ループのインターチェンジャ流量/出口温度とポンプパッケージの計装） | MULTI | — | context.sts.orb.eclss | F-ECL-ARS-01・F-ECL-ARS-02・F-ECL-ARS-03 |
+| PHY-ECLSS-31 | 消火設備（固定の Halon 消火ボトルと PIC・AGENT DISCH 押しボタン・携帯消火器） | MULTI | — | context.sts.orb.eclss | F-ECL-FDS-01・F-ECL-FDS-04・F-ECL-FDS-05・F-ECL-FDS-06 |
+| PHY-ECLSS-32 | WCS のコントローラと真空ベント管ヒータ（WCS コントローラ・真空ベント管ヒータ A/B・ノズルヒータ） | MULTI | — | context.sts.orb.eclss | F-ECL-WCS-01・F-ECL-WCS-03・F-ECL-WCS-06・F-ECL-WCS-08 |
+| PHY-ECLSS-33 | 給水・廃水系の電動弁（タンク入口・出口・ダンプ隔離・B 給水隔離などの弁） | MULTI | — | context.sts.orb.eclss | F-ECL-H2O-01・F-ECL-H2O-02・F-ECL-H2O-03・F-ECL-H2O-06 |
+| PHY-ECLSS-34 | 空気経路の付帯機器（アビオニクスベイの空気経路と 300 ミクロンフィルタ・キャビンファン・プレナム出口） | MULTI | — | context.sts.orb.eclss | F-ECL-ARS-02・F-ECL-ARS-03・F-ECL-ARS-04・F-ECL-ARS-05 |
+| PHY-ECLSS-35 | エアロックの均圧・減圧の弁（ハッチ均圧弁・エアロック減圧弁と減圧ライン・ベスティビュール減圧弁/隔離弁） | AIRLOCK | — | context.sts.orb.eclss | F-ECL-ALS-01・F-ECL-ALS-02・F-ECL-ALS-04・F-ECL-ALS-05 |
+| PHY-ECLSS-36 | エアロックのヒータと温度センサ（水配管ヒータ・構造ヒータ・ベスティビュールヒータ・構造パッチヒータ・水配管の温度トランスデューサ・構造温度センサ） | AIRLOCK | — | context.sts.orb.eclss | F-ECL-ALS-10 |
+| PHY-ECLSS-37 | エアロックの通風機器（ブースタファン A/B・エアロックのダクトとハローダクト） | AIRLOCK | — | context.sts.orb.eclss | F-ECL-ALS-09 |
+| PHY-ECLSS-38 | EMU 支援の配管（LCG 供給・戻り配管・EMU 用 O2 配管と隔離弁・EMU 給水・廃水の配管） | AIRLOCK | — | context.sts.orb.eclss | F-ECL-ALS-01・F-ECL-ALS-03・F-ECL-ALS-09・F-ECL-ALS-10 |
+| PHY-ECLSS-39 | エアロックの圧力計測（圧力・差圧トランスデューサ・ハッチ差圧計・LCG 供給圧トランスデューサ） | AIRLOCK | — | context.sts.orb.eclss | F-ECL-ALS-01・F-ECL-ALS-02・F-ECL-ALS-04・F-ECL-ALS-05 |
 | PHY-APU-01 | APU（補助動力装置、改良型IAPU） | AFT | [3] | context.sts.orb.apu | F-APU-TRB-02・F-APU-TRB-04・F-APU-CTL-01・F-APU-CTL-02・F-APU-CTL-07・F-APU-CTL-10 |
 | PHY-APU-02 | APU燃料タンク（ヒドラジンタンク） | AFT | [3] | context.sts.orb.apu | F-APU-FUL-01・F-APU-FUL-02・F-APU-FUL-03・F-APU-FUL-06 |
 | PHY-APU-03 | WSB（水噴霧ボイラ） | AFT | [3] | context.sts.orb.apu | F-APU-01・F-APU-03 |
@@ -398,7 +409,7 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 
 ## 6. 振る舞いの割付
 
-活動図の行動 44件（うち機能の欄が無く割り付けないもの 2件）とシーケンス図の生存線 22件（うち乗員 2件は割り付けない）を、構造モデルの部品に割り付けた（allocate 71件）。行動に機能が複数あり、機能の部品が違うときは、それぞれに割り付けた。
+活動図の行動 44件（うち機能の欄が無く割り付けないもの 2件）とシーケンス図の生存線 68件（うち乗員 6件は割り付けない）を、構造モデルの部品に割り付けた（allocate 113件）。行動に機能が複数あり、機能の部品が違うときは、それぞれに割り付けた。
 
 | 定義書 | 行動・生存線 | 内容 | 機能 | 部品（SysML の道筋） |
 |---|---|---|---|---|
@@ -468,6 +479,52 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | SSD-BEH-ORB-003 | CommandTelemetryPath::GPC | DPS：FF・PF MDM と GPC | — | context.sts.orb.dps |
 | SSD-BEH-ORB-003 | CommandTelemetryPath::SYS | 各系（例：機械系の MCA） | — | context.sts.orb.mech.act |
 | SSD-BEH-ORB-003 | CommandTelemetryPath::INST | C&T：計装（DSC・OI MDM・PCMMU・SSR） | — | context.sts.orb.ct.inst |
+| SSD-BEH-ORB-003 | ArsAirOperations::CREW | 乗員 | — | —（乗員は構造モデルの部品でないので割り付けない（運用シナリオのアクタ）） |
+| SSD-BEH-ORB-003 | ArsAirOperations::COPS | キャビンファン運用管理 | — | context.sts.orb.eclss.ars.cac.ops |
+| SSD-BEH-ORB-003 | ArsAirOperations::CFAN | キャビンファン | — | context.sts.orb.eclss.ars.cac.fan |
+| SSD-BEH-ORB-003 | ArsAirOperations::CMON | キャビン空気の監視・表示 | — | context.sts.orb.eclss.ars.cac.mon |
+| SSD-BEH-ORB-003 | ArsAirOperations::AOPS | ベイ冷却運用管理 | — | context.sts.orb.eclss.ars.avb.ops |
+| SSD-BEH-ORB-003 | ArsAirOperations::AFAN | ベイファン | — | context.sts.orb.eclss.ars.avb.fan |
+| SSD-BEH-ORB-003 | ArsAirOperations::AMON | ベイ冷却の監視・表示 | — | context.sts.orb.eclss.ars.avb.mon |
+| SSD-BEH-ORB-003 | ArsAirOperations::IOPS | IMU ファン運用管理 | — | context.sts.orb.eclss.ars.imu.ops |
+| SSD-BEH-ORB-003 | ArsAirOperations::IFAN | IMU ファン | — | context.sts.orb.eclss.ars.imu.fan |
+| SSD-BEH-ORB-003 | ArsAirOperations::IMON | IMU ファン監視・表示 | — | context.sts.orb.eclss.ars.imu.mon |
+| SSD-BEH-ORB-003 | ArsAirOperations::DPS | DPS・アビオニクス | — | context.sts.orb.dps |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::CREW | 乗員 | — | —（乗員は構造モデルの部品でないので割り付けない（運用シナリオのアクタ）） |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::ROPS | RCRS 運用管理 | — | context.sts.orb.eclss.ars.rcrs.ops |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::RCTL | RCRS 制御器 | — | context.sts.orb.eclss.ars.rcrs.ctl |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::RBED | RCRS ベッド | — | context.sts.orb.eclss.ars.rcrs.bed |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::RUSC | RCRS 空気回収・均圧 | — | context.sts.orb.eclss.ars.rcrs.usc |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::RMON | RCRS 計装・表示 | — | context.sts.orb.eclss.ars.rcrs.mon |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::DPS | DPS（SM 表示） | — | context.sts.orb.dps |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::WOPS | 水ループ運用管理 | — | context.sts.orb.eclss.ars.wcl.ops |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::WPMP | ポンプパッケージ | — | context.sts.orb.eclss.ars.wcl.pmp |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::WICH | インターチェンジャ・バイパス | — | context.sts.orb.eclss.ars.wcl.ich |
+| SSD-BEH-ORB-003 | RcrsWaterLoopOperations::WMON | 水ループ監視 | — | context.sts.orb.eclss.ars.wcl.mon |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::CREW | 乗員 | — | —（乗員は構造モデルの部品でないので割り付けない（運用シナリオのアクタ）） |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::POPS | 与圧運用管理 | — | context.sts.orb.eclss.pcs.ops |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::PMNF | 与圧系のマニホールド・弁構成 | — | context.sts.orb.eclss.pcs.mnf |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::PO2S | O2 供給（与圧） | — | context.sts.orb.eclss.pcs.o2s |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::PMON | 与圧の監視 | — | context.sts.orb.eclss.pcs.mon |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::WCSO | WCS 運用管理 | — | context.sts.orb.eclss.wcs.ops |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::WFSP | ファンセパレータ | — | context.sts.orb.eclss.wcs.fsp |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::WCMD | コモード操作 | — | context.sts.orb.eclss.wcs.cmd |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::WVAC | 真空ベント | — | context.sts.orb.eclss.wcs.vac |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::H2O | 給水・廃水系 | — | context.sts.orb.eclss.h2o |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::ALSM | エアロック計測 | — | context.sts.orb.eclss.als.mon |
+| SSD-BEH-ORB-003 | PressureWaterWasteOperations::DPS | DPS（SM 表示・警報） | — | context.sts.orb.dps |
+| SSD-BEH-ORB-003 | SmokeDetectionAndSuppression::DET | 煙感知器 | — | context.sts.orb.eclss.fds.det |
+| SSD-BEH-ORB-003 | SmokeDetectionAndSuppression::ALM | 煙警報 | — | context.sts.orb.eclss.fds.alm |
+| SSD-BEH-ORB-003 | SmokeDetectionAndSuppression::DPS | DPS・アビオニクス | — | context.sts.orb.dps |
+| SSD-BEH-ORB-003 | SmokeDetectionAndSuppression::OPS | 火災対応・運用管理 | — | context.sts.orb.eclss.fds.ops |
+| SSD-BEH-ORB-003 | SmokeDetectionAndSuppression::FIX | 遠隔消火（ベイ） | — | context.sts.orb.eclss.fds.fix |
+| SSD-BEH-ORB-003 | SmokeDetectionAndSuppression::PFE | 携帯消火器・消火ポート | — | context.sts.orb.eclss.fds.pfe |
+| SSD-BEH-ORB-003 | CabinTempHumidityControl::CREW | 乗員 | — | —（乗員は構造モデルの部品でないので割り付けない（運用シナリオのアクタ）） |
+| SSD-BEH-ORB-003 | CabinTempHumidityControl::OPS | 温湿度運用管理 | — | context.sts.orb.eclss.ars.thc.ops |
+| SSD-BEH-ORB-003 | CabinTempHumidityControl::MON | 温湿度監視 | — | context.sts.orb.eclss.ars.thc.mon |
+| SSD-BEH-ORB-003 | CabinTempHumidityControl::TCV | 温度制御弁・給気混合 | — | context.sts.orb.eclss.ars.thc.tcv |
+| SSD-BEH-ORB-003 | CabinTempHumidityControl::SEP | 湿度分離器・凝縮水排出 | — | context.sts.orb.eclss.ars.thc.sep |
+| SSD-BEH-ORB-003 | CabinTempHumidityControl::DPS | DPS・アビオニクス | — | context.sts.orb.dps |
 
 ## 7. 割付行列の図
 
@@ -475,7 +532,7 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 
 ## 8. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-ALC-SYS-001.sysml](../SysML/SSD-ALC-SYS-001.sysml) に示す。機能の action 2075件、機器の part def 120件、区画 19件の物理配置、allocate 2605件（論理 2075・物理 459・振る舞い 71）から成り、構造モデル（SysML/SSD-BLK-SYS-001.sysml）と振る舞いのモデル（SysML/SSD-BEH-ORB-002〜004.sysml）を読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-ALC-SYS-001.sysml](../SysML/SSD-ALC-SYS-001.sysml) に示す。機能の action 2075件、機器の part def 131件、区画 19件の物理配置、allocate 2694件（論理 2075・物理 506・振る舞い 113）から成り、構造モデル（SysML/SSD-BLK-SYS-001.sysml）と振る舞いのモデル（SysML/SSD-BEH-ORB-002〜004.sysml）を読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 9. 注記（出典間の相違・構成変更）
 
@@ -500,3 +557,4 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | Rev. A | 2026-10-03 | トレース網羅・影響分析書 SSD-TRC-SYS-001 への参照を注記（Rev. AO） |
 | Rev. B | 2026-10-04 | 機器配分表の行の追加（18件）と、機器の割付の下位の機能行への移し（41件）に合わせて作り直した（Rev. AU） |
 | Rev. C | 2026-10-08 | 機器配分表の行の追加（18件、ECLSS の内部ブロック図の機器）に合わせて作り直した（Rev. BI） |
+| Rev. D | 2026-10-16 | 機器配分表の行の追加（11件、ECLSS の機器（エアロック支援を含む））に合わせて作り直した（Rev. CF） |

@@ -149,6 +149,12 @@ package SSD_FMX_ECL_001 {
         #cause occurrence <'FMX-TCS-20'> fmx_tcs_20 : SSD_FMM_ORB_001::FailureMode { doc /* 放熱器パネル出口温度の低下によるフレオン中の水分の氷結（劣化） */ attribute :>> itemName = "放熱器パネル出口温度の低下によるフレオン中の水分の氷結"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
         #cause occurrence <'FMX-RCRS-13'> fmx_rcrs_13 : SSD_FMM_ORB_001::FailureMode { doc /* RCRS の CO2 分圧の指示が低くずれて不安定になる（STS-78）（劣化） */ attribute :>> itemName = "RCRS の CO2 分圧の指示が低くずれて不安定になる（STS-78）"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
         #cause occurrence <'FMX-AVB-05'> fmx_avb_05 : SSD_FMM_ORB_001::FailureMode { doc /* Av Bay 信号調整器の故障によるベイ温度・ファン差圧の指示の喪失（喪失） */ attribute :>> itemName = "Av Bay 信号調整器の故障によるベイ温度・ファン差圧の指示の喪失"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
+        #cause occurrence <'FMX-IMU-05'> fmx_imu_05 : SSD_FMM_ORB_001::FailureMode { doc /* IMU FAN の信号調整器の喪失による IMU ファン A・B・C の回転数センサの正常表示の喪失（喪失） */ attribute :>> itemName = "IMU FAN の信号調整器の喪失による IMU ファン A・B・C の回転数センサの正常表示の喪失"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
+        #cause occurrence <'FMX-IMU-06'> fmx_imu_06 : SSD_FMM_ORB_001::FailureMode { doc /* IMU ファン差圧（ΔP）センサの高い側へのずれによる飛行規則の限界の超過（STS-125）（劣化） */ attribute :>> itemName = "IMU ファン差圧（ΔP）センサの高い側へのずれによる飛行規則の限界の超過（STS-125）"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
+        #cause occurrence <'FMX-THC-03'> fmx_thc_03 : SSD_FMM_ORB_001::FailureMode { doc /* 湿分分離器の速度センサの信号調整器の故障による速度表示の誤り（誤作動） */ attribute :>> itemName = "湿分分離器の速度センサの信号調整器の故障による速度表示の誤り"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
+        #cause occurrence <'FMX-THC-04'> fmx_thc_04 : SSD_FMM_ORB_001::FailureMode { doc /* キャビン温度コントローラ1の信号調整器の故障による熱交換器出口温度・キャビン温度の低い表示（誤作動） */ attribute :>> itemName = "キャビン温度コントローラ1の信号調整器の故障による熱交換器出口温度・キャビン温度の低い表示"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
+        #cause occurrence <'FMX-WCL-01'> fmx_wcl_01 : SSD_FMM_ORB_001::FailureMode { doc /* バイパス制御器の喪失による水ループの計装（ポンプ出口圧・アキュムレータ量）の喪失（喪失） */ attribute :>> itemName = "バイパス制御器の喪失による水ループの計装（ポンプ出口圧・アキュムレータ量）の喪失"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
+        #cause occurrence <'FMX-WCL-02'> fmx_wcl_02 : SSD_FMM_ORB_001::FailureMode { doc /* ポンプ出口圧トランスデューサのずれによる SM アラートの誤発報（誤作動） */ attribute :>> itemName = "ポンプ出口圧トランスデューサのずれによる SM アラートの誤発報"; attribute :>> sourceTable = "SSD-FMX-ECL-001"; }
         #causation connection <'FMX-PCS-01>HC-05'> fmx_pcs_01_hc_05 connect fmx_pcs_01 to SSD_HAZ_ORB_001::HazardModel::hc05;
         #causation connection <'FMX-PCS-02>HC-03'> fmx_pcs_02_hc_03 connect fmx_pcs_02 to SSD_HAZ_ORB_001::HazardModel::hc03;
         #causation connection <'FMX-PCS-02>HC-05'> fmx_pcs_02_hc_05 connect fmx_pcs_02 to SSD_HAZ_ORB_001::HazardModel::hc05;
@@ -344,6 +350,12 @@ package SSD_FMX_ECL_001 {
     #Involves dependency <'FMX-TCS-20>SSD-FD-TCS-RAD-001'> from FunctionalFailureModes::fmx_tcs_20 to SSD_BLK_SYS_001::TCS_RAD;
     #Involves dependency <'FMX-RCRS-13>SSD-FD-ARS-RCRS-MON-001'> from FunctionalFailureModes::fmx_rcrs_13 to SSD_BLK_SYS_001::ARS_RCRS_MON;
     #Involves dependency <'FMX-AVB-05>SSD-FD-ARS-AVB-MON-001'> from FunctionalFailureModes::fmx_avb_05 to SSD_BLK_SYS_001::ARS_AVB_MON;
+    #Involves dependency <'FMX-IMU-05>SSD-FD-ARS-IMU-MON-001'> from FunctionalFailureModes::fmx_imu_05 to SSD_BLK_SYS_001::ARS_IMU_MON;
+    #Involves dependency <'FMX-IMU-06>SSD-FD-ARS-IMU-MON-001'> from FunctionalFailureModes::fmx_imu_06 to SSD_BLK_SYS_001::ARS_IMU_MON;
+    #Involves dependency <'FMX-THC-03>SSD-FD-ARS-THC-MON-001'> from FunctionalFailureModes::fmx_thc_03 to SSD_BLK_SYS_001::ARS_THC_MON;
+    #Involves dependency <'FMX-THC-04>SSD-FD-ARS-THC-MON-001'> from FunctionalFailureModes::fmx_thc_04 to SSD_BLK_SYS_001::ARS_THC_MON;
+    #Involves dependency <'FMX-WCL-01>SSD-FD-ARS-WCL-MON-001'> from FunctionalFailureModes::fmx_wcl_01 to SSD_BLK_SYS_001::ARS_WCL_MON;
+    #Involves dependency <'FMX-WCL-02>SSD-FD-ARS-WCL-MON-001'> from FunctionalFailureModes::fmx_wcl_02 to SSD_BLK_SYS_001::ARS_WCL_MON;
     // ---- 故障の木（事象＝Boolean の属性、ゲート＝and／or の式、頂上事象＝top）
     part def FaultTreeX1 {
         doc /* FTX-1 乗員室の圧力の喪失（8 psia 未満） */

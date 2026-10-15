@@ -4,7 +4,7 @@
 
 - ブラウザで見る：<https://kei-shima.github.io/Space_Shuttle_MBSE/>（GitHub Pages。図書一覧から図と説明書へ進めます）
 - English: [README.en.md](README.en.md)
-- 版：Rev. CE（2026-10-16）
+- 版：Rev. CF（2026-10-16）
 - 中身：図 242枚（draw.io、SVG・PNG）、説明書 331件（HTML と Markdown）、SysML v2 テキスト 49件
 - 図書一覧：[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md)
 - 英語の略称の正式名称：[docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)（略語表）

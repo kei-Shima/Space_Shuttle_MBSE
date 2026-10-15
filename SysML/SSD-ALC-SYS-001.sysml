@@ -2565,6 +2565,17 @@ package SSD_ALC_SYS_001 {
         part def <'PHY-ECLSS-26'> PHY_ECLSS_26 { doc /* 非常用の水の器具と水タンクの加圧の弁（非常用クロスタイの QD と移送ホース・CWC・H2O タンク N2 マニホールドの弁）（数量：クロスタイ 1式・CWC（飛行ごと）・N2 マニホールド 1式、環境制御・生命維持（ECLSS）） */ }
         part def <'PHY-ECLSS-27'> PHY_ECLSS_27 { doc /* 廃棄物収集系（小便器・便器・ファンセパレータ・臭気・細菌フィルタ）（数量：小便器 1・便器 1・ファンセパレータ 2・フィルタ 1（予備1）、環境制御・生命維持（ECLSS）） */ }
         part def <'PHY-ECLSS-28'> PHY_ECLSS_28 { doc /* WCS の真空ベント系（WCS 真空弁・真空ベント QD・真空ベント隔離弁・ベント管とノズル）（数量：1式、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-29'> PHY_ECLSS_29 { doc /* ARS の計装の信号調整器（IMU FAN・HUM SEP・CABIN AIR・AV BAY 1/2/3・H2O BYP LOOP 1/2 SNSR）（数量：IMU FAN 1・HUM SEP 1・CABIN AIR 1・AV BAY 3（各ベイ1）・H2O BYP LOOP SNSR 2（ループごと1）、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-30'> PHY_ECLSS_30 { doc /* ARS の計装のセンサ（IMU ファンの回転数・湿分分離器の速度・アビオニクスベイの温度とファン差圧・キャビン熱交換器出口温度・水ループのインターチェンジャ流量/出口温度とポンプパッケージの計装）（数量：IMU ファン回転数 3・湿分分離器速度 2・ベイ温度 3・ベイ差圧 3・熱交換器出口温度 1・インターチェンジャ（流量・出口温度）2 組・ポンプパッケージ計装 2 組（ループごと）、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-31'> PHY_ECLSS_31 { doc /* 消火設備（固定の Halon 消火ボトルと PIC・AGENT DISCH 押しボタン・携帯消火器）（数量：固定ボトル 3（ベイ1・2・3A に各1）・PIC 3・AGENT DISCH 押しボタン 1（ガード付き）・携帯消火器 3（中甲板2・操縦室1）、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-32'> PHY_ECLSS_32 { doc /* WCS のコントローラと真空ベント管ヒータ（WCS コントローラ・真空ベント管ヒータ A/B・ノズルヒータ）（数量：コントローラ 1・管ヒータ 2（A・B）・ノズルヒータ 1 式、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-33'> PHY_ECLSS_33 { doc /* 給水・廃水系の電動弁（タンク入口・出口・ダンプ隔離・B 給水隔離などの弁）（数量：1式（個数は資料に無い）、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-34'> PHY_ECLSS_34 { doc /* 空気経路の付帯機器（アビオニクスベイの空気経路と 300 ミクロンフィルタ・キャビンファン・プレナム出口）（数量：ベイの空気経路 3（ベイ1・2・3A）・プレナム 1、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-35'> PHY_ECLSS_35 { doc /* エアロックの均圧・減圧の弁（ハッチ均圧弁・エアロック減圧弁と減圧ライン・ベスティビュール減圧弁/隔離弁）（数量：ハッチ均圧弁 6（3ハッチに各2）・エアロック減圧弁 1・ベスティビュール減圧弁/隔離弁 2、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-36'> PHY_ECLSS_36 { doc /* エアロックのヒータと温度センサ（水配管ヒータ・構造ヒータ・ベスティビュールヒータ・構造パッチヒータ・水配管の温度トランスデューサ・構造温度センサ）（数量：水配管ヒータ（6本×3系統）・構造ヒータ（区域1〜3）・ベスティビュールヒータ（区域1〜3）・構造パッチヒータ 3 区域・温度トランスデューサ 4・構造温度センサ 1 式、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-37'> PHY_ECLSS_37 { doc /* エアロックの通風機器（ブースタファン A/B・エアロックのダクトとハローダクト）（数量：ブースタファン 2（A・B。1台ずつ使用）・ダクト 1式、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-38'> PHY_ECLSS_38 { doc /* EMU 支援の配管（LCG 供給・戻り配管・EMU 用 O2 配管と隔離弁・EMU 給水・廃水の配管）（数量：LCG 配管 4（EMU 2着×供給・戻り）・O2 配管と隔離弁 1式・給水・廃水配管 1式、環境制御・生命維持（ECLSS）） */ }
+        part def <'PHY-ECLSS-39'> PHY_ECLSS_39 { doc /* エアロックの圧力計測（圧力・差圧トランスデューサ・ハッチ差圧計・LCG 供給圧トランスデューサ）（数量：圧力トランスデューサ 2・ハッチ差圧計 6（3ハッチ×両側）・LCG 供給圧トランスデューサ 2、環境制御・生命維持（ECLSS）） */ }
         part def <'PHY-APU-01'> PHY_APU_01 { doc /* APU（補助動力装置、改良型IAPU）（数量：3、補助動力・油圧（APU/HYD）） */ }
         part def <'PHY-APU-02'> PHY_APU_02 { doc /* APU燃料タンク（ヒドラジンタンク）（数量：3（各APUに1）、補助動力・油圧（APU/HYD）） */ }
         part def <'PHY-APU-03'> PHY_APU_03 { doc /* WSB（水噴霧ボイラ）（数量：3（APU・油圧系統ごとに1）、補助動力・油圧（APU/HYD）） */ }
@@ -2684,6 +2695,11 @@ package SSD_ALC_SYS_001 {
             part <'AIRLOCK'> airlock : Compartment {
                 doc /* エアロック */
                 part phy_ct_11 : PHY_CT_11;
+                part phy_eclss_35 : PHY_ECLSS_35;
+                part phy_eclss_36 : PHY_ECLSS_36;
+                part phy_eclss_37 : PHY_ECLSS_37;
+                part phy_eclss_38 : PHY_ECLSS_38;
+                part phy_eclss_39 : PHY_ECLSS_39;
                 part phy_pls_05 : PHY_PLS_05;
                 part phy_eva_01 : PHY_EVA_01;
                 part phy_eva_02 : PHY_EVA_02;
@@ -2786,6 +2802,12 @@ package SSD_ALC_SYS_001 {
                 part phy_eclss_22 : PHY_ECLSS_22;
                 part phy_eclss_25 : PHY_ECLSS_25;
                 part phy_eclss_28 : PHY_ECLSS_28;
+                part phy_eclss_29 : PHY_ECLSS_29;
+                part phy_eclss_30 : PHY_ECLSS_30;
+                part phy_eclss_31 : PHY_ECLSS_31;
+                part phy_eclss_32 : PHY_ECLSS_32;
+                part phy_eclss_33 : PHY_ECLSS_33;
+                part phy_eclss_34 : PHY_ECLSS_34;
                 part phy_apu_07 : PHY_APU_07;
                 part phy_mps_05 : PHY_MPS_05[10];
                 part phy_tps_03 : PHY_TPS_03;
@@ -5134,6 +5156,53 @@ package SSD_ALC_SYS_001 {
         allocate Functions::FN_ECL_WCS::F_ECL_WCS_03 to Physical::orbiterLayout.multi.phy_eclss_28;
         allocate Functions::FN_ECL_WCS::F_ECL_WCS_06 to Physical::orbiterLayout.multi.phy_eclss_28;
         allocate Functions::FN_ECL_WCS::F_ECL_WCS_08 to Physical::orbiterLayout.multi.phy_eclss_28;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.multi.phy_eclss_29;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_01 to Physical::orbiterLayout.multi.phy_eclss_29;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_02 to Physical::orbiterLayout.multi.phy_eclss_29;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_03 to Physical::orbiterLayout.multi.phy_eclss_29;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.multi.phy_eclss_30;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_01 to Physical::orbiterLayout.multi.phy_eclss_30;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_02 to Physical::orbiterLayout.multi.phy_eclss_30;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_03 to Physical::orbiterLayout.multi.phy_eclss_30;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.multi.phy_eclss_31;
+        allocate Functions::FN_ECL_FDS::F_ECL_FDS_01 to Physical::orbiterLayout.multi.phy_eclss_31;
+        allocate Functions::FN_ECL_FDS::F_ECL_FDS_04 to Physical::orbiterLayout.multi.phy_eclss_31;
+        allocate Functions::FN_ECL_FDS::F_ECL_FDS_05 to Physical::orbiterLayout.multi.phy_eclss_31;
+        allocate Functions::FN_ECL_FDS::F_ECL_FDS_06 to Physical::orbiterLayout.multi.phy_eclss_31;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.multi.phy_eclss_32;
+        allocate Functions::FN_ECL_WCS::F_ECL_WCS_01 to Physical::orbiterLayout.multi.phy_eclss_32;
+        allocate Functions::FN_ECL_WCS::F_ECL_WCS_03 to Physical::orbiterLayout.multi.phy_eclss_32;
+        allocate Functions::FN_ECL_WCS::F_ECL_WCS_06 to Physical::orbiterLayout.multi.phy_eclss_32;
+        allocate Functions::FN_ECL_WCS::F_ECL_WCS_08 to Physical::orbiterLayout.multi.phy_eclss_32;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.multi.phy_eclss_33;
+        allocate Functions::FN_ECL_H2O::F_ECL_H2O_01 to Physical::orbiterLayout.multi.phy_eclss_33;
+        allocate Functions::FN_ECL_H2O::F_ECL_H2O_02 to Physical::orbiterLayout.multi.phy_eclss_33;
+        allocate Functions::FN_ECL_H2O::F_ECL_H2O_03 to Physical::orbiterLayout.multi.phy_eclss_33;
+        allocate Functions::FN_ECL_H2O::F_ECL_H2O_06 to Physical::orbiterLayout.multi.phy_eclss_33;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.multi.phy_eclss_34;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_02 to Physical::orbiterLayout.multi.phy_eclss_34;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_03 to Physical::orbiterLayout.multi.phy_eclss_34;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_04 to Physical::orbiterLayout.multi.phy_eclss_34;
+        allocate Functions::FN_ECL_ARS::F_ECL_ARS_05 to Physical::orbiterLayout.multi.phy_eclss_34;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.airlock.phy_eclss_35;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_01 to Physical::orbiterLayout.airlock.phy_eclss_35;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_02 to Physical::orbiterLayout.airlock.phy_eclss_35;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_04 to Physical::orbiterLayout.airlock.phy_eclss_35;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_05 to Physical::orbiterLayout.airlock.phy_eclss_35;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.airlock.phy_eclss_36;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_10 to Physical::orbiterLayout.airlock.phy_eclss_36;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.airlock.phy_eclss_37;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_09 to Physical::orbiterLayout.airlock.phy_eclss_37;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.airlock.phy_eclss_38;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_01 to Physical::orbiterLayout.airlock.phy_eclss_38;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_03 to Physical::orbiterLayout.airlock.phy_eclss_38;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_09 to Physical::orbiterLayout.airlock.phy_eclss_38;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_10 to Physical::orbiterLayout.airlock.phy_eclss_38;
+        allocate context.sts.orb.eclss to Physical::orbiterLayout.airlock.phy_eclss_39;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_01 to Physical::orbiterLayout.airlock.phy_eclss_39;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_02 to Physical::orbiterLayout.airlock.phy_eclss_39;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_04 to Physical::orbiterLayout.airlock.phy_eclss_39;
+        allocate Functions::FN_ECL_ALS::F_ECL_ALS_05 to Physical::orbiterLayout.airlock.phy_eclss_39;
         allocate context.sts.orb.apu to Physical::orbiterLayout.aft.phy_apu_01;
         allocate Functions::FN_APU_TRB::F_APU_TRB_02 to Physical::orbiterLayout.aft.phy_apu_01;
         allocate Functions::FN_APU_TRB::F_APU_TRB_04 to Physical::orbiterLayout.aft.phy_apu_01;
@@ -5352,6 +5421,11 @@ package SSD_ALC_SYS_001 {
         occurrence deorbitToLanding : SSD_BEH_ORB_003::DeorbitToLanding;
         occurrence ascent : SSD_BEH_ORB_003::Ascent;
         occurrence commandTelemetryPath : SSD_BEH_ORB_003::CommandTelemetryPath;
+        occurrence arsAirOperations : SSD_BEH_ORB_003::ArsAirOperations;
+        occurrence rcrsWaterLoopOperations : SSD_BEH_ORB_003::RcrsWaterLoopOperations;
+        occurrence pressureWaterWasteOperations : SSD_BEH_ORB_003::PressureWaterWasteOperations;
+        occurrence smokeDetectionAndSuppression : SSD_BEH_ORB_003::SmokeDetectionAndSuppression;
+        occurrence cabinTempHumidityControl : SSD_BEH_ORB_003::CabinTempHumidityControl;
         allocate mpsHeliumLeakResponse.AC_HE_01 to context.sts.orb.mps.ops;
         allocate mpsHeliumLeakResponse.AC_HE_02 to context.sts.orb.mps.ops;
         allocate mpsHeliumLeakResponse.AC_HE_02 to context.sts.orb.mps.he;
@@ -5423,5 +5497,47 @@ package SSD_ALC_SYS_001 {
         allocate commandTelemetryPath.gpc to context.sts.orb.dps;
         allocate commandTelemetryPath.system to context.sts.orb.mech.act;
         allocate commandTelemetryPath.inst to context.sts.orb.ct.inst;
+        allocate arsAirOperations.cacFanOps to context.sts.orb.eclss.ars.cac.ops;
+        allocate arsAirOperations.cacFan to context.sts.orb.eclss.ars.cac.fan;
+        allocate arsAirOperations.cacMon to context.sts.orb.eclss.ars.cac.mon;
+        allocate arsAirOperations.avbOps to context.sts.orb.eclss.ars.avb.ops;
+        allocate arsAirOperations.avbFan to context.sts.orb.eclss.ars.avb.fan;
+        allocate arsAirOperations.avbMon to context.sts.orb.eclss.ars.avb.mon;
+        allocate arsAirOperations.imuOps to context.sts.orb.eclss.ars.imu.ops;
+        allocate arsAirOperations.imuFan to context.sts.orb.eclss.ars.imu.fan;
+        allocate arsAirOperations.imuMon to context.sts.orb.eclss.ars.imu.mon;
+        allocate arsAirOperations.dps to context.sts.orb.dps;
+        allocate rcrsWaterLoopOperations.rcrsOps to context.sts.orb.eclss.ars.rcrs.ops;
+        allocate rcrsWaterLoopOperations.rcrsCtl to context.sts.orb.eclss.ars.rcrs.ctl;
+        allocate rcrsWaterLoopOperations.rcrsBed to context.sts.orb.eclss.ars.rcrs.bed;
+        allocate rcrsWaterLoopOperations.rcrsUsc to context.sts.orb.eclss.ars.rcrs.usc;
+        allocate rcrsWaterLoopOperations.rcrsMon to context.sts.orb.eclss.ars.rcrs.mon;
+        allocate rcrsWaterLoopOperations.dps to context.sts.orb.dps;
+        allocate rcrsWaterLoopOperations.wclOps to context.sts.orb.eclss.ars.wcl.ops;
+        allocate rcrsWaterLoopOperations.wclPmp to context.sts.orb.eclss.ars.wcl.pmp;
+        allocate rcrsWaterLoopOperations.wclIch to context.sts.orb.eclss.ars.wcl.ich;
+        allocate rcrsWaterLoopOperations.wclMon to context.sts.orb.eclss.ars.wcl.mon;
+        allocate pressureWaterWasteOperations.pcsOps to context.sts.orb.eclss.pcs.ops;
+        allocate pressureWaterWasteOperations.pcsMnf to context.sts.orb.eclss.pcs.mnf;
+        allocate pressureWaterWasteOperations.pcsO2s to context.sts.orb.eclss.pcs.o2s;
+        allocate pressureWaterWasteOperations.pcsMon to context.sts.orb.eclss.pcs.mon;
+        allocate pressureWaterWasteOperations.wcsOps to context.sts.orb.eclss.wcs.ops;
+        allocate pressureWaterWasteOperations.wcsFsp to context.sts.orb.eclss.wcs.fsp;
+        allocate pressureWaterWasteOperations.wcsCmd to context.sts.orb.eclss.wcs.cmd;
+        allocate pressureWaterWasteOperations.wcsVac to context.sts.orb.eclss.wcs.vac;
+        allocate pressureWaterWasteOperations.h2oSys to context.sts.orb.eclss.h2o;
+        allocate pressureWaterWasteOperations.alsMon to context.sts.orb.eclss.als.mon;
+        allocate pressureWaterWasteOperations.dps to context.sts.orb.dps;
+        allocate smokeDetectionAndSuppression.smokeDetector to context.sts.orb.eclss.fds.det;
+        allocate smokeDetectionAndSuppression.smokeAlarm to context.sts.orb.eclss.fds.alm;
+        allocate smokeDetectionAndSuppression.dpsAvionics to context.sts.orb.dps;
+        allocate smokeDetectionAndSuppression.fireOps to context.sts.orb.eclss.fds.ops;
+        allocate smokeDetectionAndSuppression.bayFireExt to context.sts.orb.eclss.fds.fix;
+        allocate smokeDetectionAndSuppression.portableExt to context.sts.orb.eclss.fds.pfe;
+        allocate cabinTempHumidityControl.thcOps to context.sts.orb.eclss.ars.thc.ops;
+        allocate cabinTempHumidityControl.thcMon to context.sts.orb.eclss.ars.thc.mon;
+        allocate cabinTempHumidityControl.thcTcv to context.sts.orb.eclss.ars.thc.tcv;
+        allocate cabinTempHumidityControl.thcSep to context.sts.orb.eclss.ars.thc.sep;
+        allocate cabinTempHumidityControl.dps to context.sts.orb.dps;
     }
 }

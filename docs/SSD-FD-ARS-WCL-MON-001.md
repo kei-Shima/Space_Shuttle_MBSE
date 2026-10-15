@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-WCL-MON-001 |
 | 表題 | ループ計測・警報（MON）機能説明書 |
-| 版・日付 | Rev. A／2026-10-15 |
+| 版・日付 | Rev. B／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-WCL-001 |
 | 関連図 | SSD-SYS-ARC-001 図36 水冷却ループ 機能構成 |
@@ -64,7 +64,9 @@
 
 > **注記** 流量センサの直流電源（H2O BYP LOOP 1・2 SNSR、MN A・MN B）はEPS段ではIF-EPS-11（直流の配電）に当たるが、ARS段に水冷却ループの直流電源のIFがないため、IF-WCL-14をIF-ARS-36（上位IF-EPS-12、交流）の下位とした（SSD-FD-ARS-RCRS-001のIF-ARS-33と同じ扱い）。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=93）
 
-> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+> **注記** Rev. CF で、信号調整器・センサを持つブロックに改めた（Rev. CC では機器を持たないと判断済みに区分していた）。
+
+> **注記** 機能の故障モード 2件（FMX-WCL-01・FMX-WCL-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CF）。
 
 ## 6. 参考文献
 
@@ -93,3 +95,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
 | Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |
+| Rev. B | 2026-10-16 | 機器を持つブロックに改め、機能の故障モードを足した（FMX-WCL-01・FMX-WCL-02）（Rev. CF） |

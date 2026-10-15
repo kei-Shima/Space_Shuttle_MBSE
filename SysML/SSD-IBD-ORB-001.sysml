@@ -3856,34 +3856,34 @@ package SSD_IBD_ORB_001 {
         doc /* IMU ファン A・B・C（各 AC1・AC2・AC3 の三相交流）（機能ブロック SSD-FD-ARS-IMU-FAN-001、機器 PHY-ECLSS-15） */
         port i_FL_PWRA_04 : ~ArsFanAcPowerPort;
     }
-    part def <'EQ-PWRA-04'> PwraImuFanSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_15 {
-        doc /* IMU ファンの信号調整器（AC3 の B 相）（機能ブロック SSD-FD-ARS-IMU-FAN-001、機器 PHY-ECLSS-15） */
+    part def <'EQ-PWRA-04'> PwraImuFanSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_29 {
+        doc /* IMU ファンの信号調整器（AC3 の B 相）（機能ブロック SSD-FD-ARS-IMU-MON-001、機器 PHY-ECLSS-29） */
         port i_FL_PWRA_05 : ~ArsSignalAcPowerPort;
         port o_FL_PWRA_06 : ArsSensorExcitationPort;
     }
-    part def <'EQ-PWRA-05'> PwraImuFanSpeedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_15 {
-        doc /* IMU ファンの回転数センサ（A・B・C）（機能ブロック SSD-FD-ARS-IMU-FAN-001、機器 PHY-ECLSS-15） */
+    part def <'EQ-PWRA-05'> PwraImuFanSpeedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* IMU ファンの回転数センサ（A・B・C）（機能ブロック SSD-FD-ARS-IMU-MON-001、機器 PHY-ECLSS-30） */
         port i_FL_PWRA_06 : ~ArsSensorExcitationPort;
     }
     part def <'EQ-PWRA-06'> PwraHumiditySeparators :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
         doc /* 湿分分離器 A・B（AC1・AC2 の三相交流）（機能ブロック SSD-FD-ARS-THC-SEP-001、機器 PHY-ECLSS-12） */
         port i_FL_PWRA_07 : ~ArsFanAcPowerPort;
     }
-    part def <'EQ-PWRA-07'> PwraHumSepSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
-        doc /* 湿分分離器の信号調整器（AC3 の A 相）（機能ブロック SSD-FD-ARS-THC-SEP-001、機器 PHY-ECLSS-12） */
+    part def <'EQ-PWRA-07'> PwraHumSepSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_29 {
+        doc /* 湿分分離器の信号調整器（AC3 の A 相）（機能ブロック SSD-FD-ARS-THC-MON-001、機器 PHY-ECLSS-29） */
         port i_FL_PWRA_08 : ~ArsSignalAcPowerPort;
         port o_FL_PWRA_09 : ArsSensorExcitationPort;
     }
-    part def <'EQ-PWRA-08'> PwraHumSepSpeedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
-        doc /* 湿分分離器の速度センサ（A・B）（機能ブロック SSD-FD-ARS-THC-SEP-001、機器 PHY-ECLSS-12） */
+    part def <'EQ-PWRA-08'> PwraHumSepSpeedSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* 湿分分離器の速度センサ（A・B）（機能ブロック SSD-FD-ARS-THC-MON-001、機器 PHY-ECLSS-30） */
         port i_FL_PWRA_09 : ~ArsSensorExcitationPort;
     }
     part def <'EQ-PWRA-09'> PwraCabinTempControllers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_12 {
         doc /* キャビン温度コントローラ1・2（AC2・AC1 の A 相）（機能ブロック SSD-FD-ARS-THC-TCV-001、機器 PHY-ECLSS-12） */
         port i_FL_PWRA_10 : ~ArsSignalAcPowerPort;
     }
-    part def <'EQ-PWRA-10'> PwraCabinAirSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_13 {
-        doc /* CABIN AIR 信号調整器（AC1 の B 相）（機能ブロック SSD-FD-CO2-MON-001、機器 PHY-ECLSS-13） */
+    part def <'EQ-PWRA-10'> PwraCabinAirSigCond :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_29 {
+        doc /* CABIN AIR 信号調整器（AC1 の B 相）（機能ブロック SSD-FD-CO2-MON-001、機器 PHY-ECLSS-29） */
         port i_FL_PWRA_11 : ~ArsSignalAcPowerPort;
         port o_FL_PWRA_12 : ArsSensorExcitationPort;
     }
@@ -3891,13 +3891,13 @@ package SSD_IBD_ORB_001 {
         doc /* CO2 分圧（PPCO2）トランスデューサ（機能ブロック SSD-FD-CO2-MON-001、機器 PHY-ECLSS-13） */
         port i_FL_PWRA_12 : ~ArsSensorExcitationPort;
     }
-    part def <'EQ-PWRA-12'> PwraAvBaySigConds :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
-        doc /* アビオニクスベイ1・2・3の信号調整器（AC3・AC1・AC2 の B 相）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+    part def <'EQ-PWRA-12'> PwraAvBaySigConds :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_29 {
+        doc /* アビオニクスベイ1・2・3の信号調整器（AC3・AC1・AC2 の B 相）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-29） */
         port i_FL_PWRA_13 : ~ArsSignalAcPowerPort;
         port o_FL_PWRA_14 : ArsSensorExcitationPort;
     }
-    part def <'EQ-PWRA-13'> PwraAvBaySensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
-        doc /* アビオニクスベイの温度センサとファン差圧センサ（各ベイ2個）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+    part def <'EQ-PWRA-13'> PwraAvBaySensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* アビオニクスベイの温度センサとファン差圧センサ（各ベイ2個）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-30） */
         port i_FL_PWRA_14 : ~ArsSensorExcitationPort;
     }
     // ---- 図233 ECLSS 電力（ARS 系の機器）内部ブロック図：接続（EclssPwraInterconnection は ECLSS を特化）
@@ -3915,6 +3915,8 @@ package SSD_IBD_ORB_001 {
             part redefines imu {
                 part redefines fan {
                     part pwraImuFans[3] : PwraImuFans;
+                }
+                part redefines mon {
                     part pwraImuFanSigCond : PwraImuFanSigCond;
                     part pwraImuFanSpeedSensors[3] : PwraImuFanSpeedSensors;
                 }
@@ -3922,6 +3924,8 @@ package SSD_IBD_ORB_001 {
             part redefines thc {
                 part redefines sep {
                     part pwraHumiditySeparators[2] : PwraHumiditySeparators;
+                }
+                part redefines mon {
                     part pwraHumSepSigCond : PwraHumSepSigCond;
                     part pwraHumSepSpeedSensors[2] : PwraHumSepSpeedSensors;
                 }
@@ -3956,11 +3960,11 @@ package SSD_IBD_ORB_001 {
         flow <'FL-PWRA-02'> fl_pwra_02 of ArsSignalAcPower from b_FL_PWRA_02.electricPower to ars.rcrs.ctl.pwraRcrsControllers.i_FL_PWRA_02.electricPower;
         flow <'FL-PWRA-03'> fl_pwra_03 of Dc28V from b_FL_PWRA_03.electricPower to ars.rcrs.mon.pwraRcrsCommonSensors.i_FL_PWRA_03.electricPower;
         flow <'FL-PWRA-04'> fl_pwra_04 of ArsFanAcPower from b_FL_PWRA_04.electricPower to ars.imu.fan.pwraImuFans.i_FL_PWRA_04.electricPower;
-        flow <'FL-PWRA-05'> fl_pwra_05 of ArsSignalAcPower from b_FL_PWRA_05.electricPower to ars.imu.fan.pwraImuFanSigCond.i_FL_PWRA_05.electricPower;
-        flow <'FL-PWRA-06'> fl_pwra_06 of ArsSensorExcitation from ars.imu.fan.pwraImuFanSigCond.o_FL_PWRA_06.electricPower to ars.imu.fan.pwraImuFanSpeedSensors.i_FL_PWRA_06.electricPower;
+        flow <'FL-PWRA-05'> fl_pwra_05 of ArsSignalAcPower from b_FL_PWRA_05.electricPower to ars.imu.mon.pwraImuFanSigCond.i_FL_PWRA_05.electricPower;
+        flow <'FL-PWRA-06'> fl_pwra_06 of ArsSensorExcitation from ars.imu.mon.pwraImuFanSigCond.o_FL_PWRA_06.electricPower to ars.imu.mon.pwraImuFanSpeedSensors.i_FL_PWRA_06.electricPower;
         flow <'FL-PWRA-07'> fl_pwra_07 of ArsFanAcPower from b_FL_PWRA_07.electricPower to ars.thc.sep.pwraHumiditySeparators.i_FL_PWRA_07.electricPower;
-        flow <'FL-PWRA-08'> fl_pwra_08 of ArsSignalAcPower from b_FL_PWRA_08.electricPower to ars.thc.sep.pwraHumSepSigCond.i_FL_PWRA_08.electricPower;
-        flow <'FL-PWRA-09'> fl_pwra_09 of ArsSensorExcitation from ars.thc.sep.pwraHumSepSigCond.o_FL_PWRA_09.electricPower to ars.thc.sep.pwraHumSepSpeedSensors.i_FL_PWRA_09.electricPower;
+        flow <'FL-PWRA-08'> fl_pwra_08 of ArsSignalAcPower from b_FL_PWRA_08.electricPower to ars.thc.mon.pwraHumSepSigCond.i_FL_PWRA_08.electricPower;
+        flow <'FL-PWRA-09'> fl_pwra_09 of ArsSensorExcitation from ars.thc.mon.pwraHumSepSigCond.o_FL_PWRA_09.electricPower to ars.thc.mon.pwraHumSepSpeedSensors.i_FL_PWRA_09.electricPower;
         flow <'FL-PWRA-10'> fl_pwra_10 of ArsSignalAcPower from b_FL_PWRA_10.electricPower to ars.thc.tcv.pwraCabinTempControllers.i_FL_PWRA_10.electricPower;
         flow <'FL-PWRA-11'> fl_pwra_11 of ArsSignalAcPower from b_FL_PWRA_11.electricPower to ars.co2.mon.pwraCabinAirSigCond.i_FL_PWRA_11.electricPower;
         flow <'FL-PWRA-12'> fl_pwra_12 of ArsSensorExcitation from ars.co2.mon.pwraCabinAirSigCond.o_FL_PWRA_12.electricPower to ars.co2.mon.pwraPpco2Transducer.i_FL_PWRA_12.electricPower;
@@ -3973,24 +3977,24 @@ package SSD_IBD_ORB_001 {
         port i_FL_PWRB_01 : ~Dc28VPort;
         port o_FL_PWRB_02 : EmuAirlockPowerPort;
     }
-    part def <'EQ-PWRB-02'> PwrbAirlockWaterLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 外部エアロックの水配管ヒータ（区域1・2、MNA・MNB・MNC の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-PWRB-02'> PwrbAirlockWaterLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 外部エアロックの水配管ヒータ（区域1・2、MNA・MNB・MNC の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port i_FL_PWRB_03 : ~Dc28VPort;
     }
-    part def <'EQ-PWRB-03'> PwrbAirlockStructureHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 外部エアロックの構造ヒータ（区域1〜3、MNA・MNB の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-PWRB-03'> PwrbAirlockStructureHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 外部エアロックの構造ヒータ（区域1〜3、MNA・MNB の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port i_FL_PWRB_04 : ~Dc28VPort;
     }
-    part def <'EQ-PWRB-04'> PwrbVestibuleHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 外部エアロックのベスティビュールヒータ（区域1〜3、MNA・MNB の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-PWRB-04'> PwrbVestibuleHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 外部エアロックのベスティビュールヒータ（区域1〜3、MNA・MNB の系統）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port i_FL_PWRB_05 : ~Dc28VPort;
     }
-    part def <'EQ-PWRB-05'> PwrbAirlockBoosterFans :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* エアロックのブースタファン A・B（パネル MO13Q の ARLK FAN A・B スイッチで運転）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-EVA-02） */
+    part def <'EQ-PWRB-05'> PwrbAirlockBoosterFans :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_37 {
+        doc /* エアロックのブースタファン A・B（パネル MO13Q の ARLK FAN A・B スイッチで運転）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-37） */
         port i_FL_PWRB_06 : ~EclssFanAc3PhasePort;
     }
-    part def <'EQ-PWRB-06'> PwrbSupplyWaterMotorValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_24 {
-        doc /* 給水・廃水系の電動弁（パネル R11・ML31C のスイッチで操作、タンク入口・出口・ダンプ隔離・B 給水隔離など）（機能ブロック SSD-FD-ECL-H2O-SPL-001、機器 PHY-ECLSS-24） */
+    part def <'EQ-PWRB-06'> PwrbSupplyWaterMotorValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_33 {
+        doc /* 給水・廃水系の電動弁（パネル R11・ML31C のスイッチで操作、タンク入口・出口・ダンプ隔離・B 給水隔離など）（機能ブロック SSD-FD-ECL-H2O-SPL-001、機器 PHY-ECLSS-33） */
         port i_FL_PWRB_07 : ~Dc28VPort;
     }
     part def <'EQ-PWRB-07'> PwrbDumpLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_25 {
@@ -4006,8 +4010,8 @@ package SSD_IBD_ORB_001 {
         port i_FL_PWRB_10 : ~EclssFanAc3PhasePort;
         port i_FL_PWRB_12 : ~Dc28VPort;
     }
-    part def <'EQ-PWRB-10'> PwrbWcsController :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_27 {
-        doc /* WCS コントローラ（ファンセパレータの選択・リミットスイッチ・リレー、制御用の直流）（機能ブロック SSD-FD-ECL-WCS-FSP-001、機器 PHY-ECLSS-27） */
+    part def <'EQ-PWRB-10'> PwrbWcsController :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_32 {
+        doc /* WCS コントローラ（ファンセパレータの選択・リミットスイッチ・リレー、制御用の直流）（機能ブロック SSD-FD-ECL-WCS-FSP-001、機器 PHY-ECLSS-32） */
         port i_FL_PWRB_11 : ~Dc28VPort;
         port o_FL_PWRB_12 : Dc28VPort;
     }
@@ -4015,8 +4019,8 @@ package SSD_IBD_ORB_001 {
         doc /* 真空ベント隔離弁（オリフィス付き、ML31C の BUS SELECT で MNA・MNB から給電）（機能ブロック SSD-FD-ECL-WCS-VAC-001、機器 PHY-ECLSS-28） */
         port i_FL_PWRB_13 : ~Dc28VPort;
     }
-    part def <'EQ-PWRB-12'> PwrbVacuumVentHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_28 {
-        doc /* 真空ベント管ヒータ（A・B）とノズルヒータ（機能ブロック SSD-FD-ECL-WCS-VAC-001、機器 PHY-ECLSS-28） */
+    part def <'EQ-PWRB-12'> PwrbVacuumVentHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_32 {
+        doc /* 真空ベント管ヒータ（A・B）とノズルヒータ（機能ブロック SSD-FD-ECL-WCS-VAC-001、機器 PHY-ECLSS-32） */
         port i_FL_PWRB_14 : ~Dc28VPort;
     }
     part def <'EQ-PWRB-13'> PwrbO2CrossoverValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_18 {
@@ -4039,13 +4043,13 @@ package SSD_IBD_ORB_001 {
         doc /* 煙検知器（フライトデッキ左右、ベイ1A〜3B、キャビン）（機能ブロック SSD-FD-ECL-FDS-DET-001、機器 PHY-CW-05） */
         port i_FL_PWRB_19 : ~Dc28VPort;
     }
-    part def <'EQ-PWRB-18'> PwrbAgentDischargeButton :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
-        doc /* AGENT DISCH 押しボタン（ガード付き、ARM 後に電力が加わり、1秒の時間遅れ）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-CW-05） */
+    part def <'EQ-PWRB-18'> PwrbAgentDischargeButton :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_31 {
+        doc /* AGENT DISCH 押しボタン（ガード付き、ARM 後に電力が加わり、1秒の時間遅れ）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-ECLSS-31） */
         port i_FL_PWRB_21 : ~Dc28VPort;
         port o_FL_PWRB_22 : FireSuppressionFirePowerPort;
     }
-    part def <'EQ-PWRB-19'> PwrbBottlePic :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
-        doc /* 消火剤ボトルの PIC（火工品起爆制御器、ベイ1・2・3A）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-CW-05） */
+    part def <'EQ-PWRB-19'> PwrbBottlePic :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_31 {
+        doc /* 消火剤ボトルの PIC（火工品起爆制御器、ベイ1・2・3A）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-ECLSS-31） */
         port i_FL_PWRB_20 : ~Dc28VPort;
         port i_FL_PWRB_22 : ~FireSuppressionFirePowerPort;
     }
@@ -4156,8 +4160,8 @@ package SSD_IBD_ORB_001 {
         flow <'FL-PWRB-22'> fl_pwrb_22 of FireSuppressionFirePower from fds.fix.pwrbAgentDischargeButton.o_FL_PWRB_22.electricPower to fds.fix.pwrbBottlePic.i_FL_PWRB_22.electricPower;
     }
     // ---- 図235 ARS の補い 内部ブロック図：機器
-    part def <'EQ-AIRX-01'> AirBayAirPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
-        doc /* ベイの空気経路（ベイの床から空冷機器の間を通りファン入口の 300 ミクロンフィルタまで。ベイ1・2・3A）（機能ブロック SSD-FD-ARS-AVB-CIR-001、機器 PHY-ECLSS-14） */
+    part def <'EQ-AIRX-01'> AirBayAirPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_34 {
+        doc /* ベイの空気経路（ベイの床から空冷機器の間を通りファン入口の 300 ミクロンフィルタまで。ベイ1・2・3A）（機能ブロック SSD-FD-ARS-AVB-CIR-001、機器 PHY-ECLSS-34） */
         port i_FL_AIRX_01 : ~AvionicsHeatPort;
         port i_FL_AIRX_02 : ~AvionicsHeatPort;
         port o_FL_AIRX_03 : EquipmentCoolingAirPort;
@@ -4171,12 +4175,12 @@ package SSD_IBD_ORB_001 {
         doc /* ベイの空気/水熱交換器（ベイ1・2・3A）（機能ブロック SSD-FD-ARS-AVB-HX-001、機器 PHY-ECLSS-14） */
         port o_FL_AIRX_05 : EquipmentCoolingAirPort;
     }
-    part def <'EQ-AIRX-04'> AirBayFanDpSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
-        doc /* ベイのファン差圧センサ（各ベイ1。ファンの運転の確認に使う）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+    part def <'EQ-AIRX-04'> AirBayFanDpSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* ベイのファン差圧センサ（各ベイ1。ファンの運転の確認に使う）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-30） */
         port i_FL_AIRX_04 : ~EquipmentCoolingAirPort;
     }
-    part def <'EQ-AIRX-05'> AirBayTempSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
-        doc /* ベイの温度センサ（ミッドデッキ床下のファンプレナム、ベイの空気/水熱交換器の近く）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-14） */
+    part def <'EQ-AIRX-05'> AirBayTempSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* ベイの温度センサ（ミッドデッキ床下のファンプレナム、ベイの空気/水熱交換器の近く）（機能ブロック SSD-FD-ARS-AVB-MON-001、機器 PHY-ECLSS-30） */
         port i_FL_AIRX_05 : ~EquipmentCoolingAirPort;
     }
     part def <'EQ-AIRX-06'> AirCabinFanAssy :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
@@ -4227,7 +4231,7 @@ package SSD_IBD_ORB_001 {
         port i_FL_AIRX_14 : ~RcrsBedAirPort;
     }
     part def <'EQ-AIRX-16'> AirCabinHxAssy :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
-        doc /* キャビン熱交換器の出口（空気/水熱交換器と出口の空気温度センサの取付け位置）（機能ブロック SSD-FD-ARS-THC-HX-001、機器 PHY-ECLSS-01） */
+        doc /* キャビン熱交換器の出口（空気/水熱交換器）（機能ブロック SSD-FD-ARS-THC-HX-001、機器 PHY-ECLSS-01） */
         port o_FL_AIRX_15 : CabinAirPort;
     }
     part def <'EQ-AIRX-17'> AirWclColdSideHxs :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_17 {
@@ -4235,12 +4239,31 @@ package SSD_IBD_ORB_001 {
         port o_FL_AIRX_16 : ArsCoolantWaterPort;
     }
     part def <'EQ-AIRX-18'> AirWclPumpPackage :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_01 {
-        doc /* 水ポンプパッケージ（ポンプ・アキュムレータ・出口の圧力と温度のセンサ）（機能ブロック SSD-FD-ARS-WCL-PMP-001、機器 PHY-ECLSS-01） */
+        doc /* 水ポンプパッケージ（ポンプ・アキュムレータ）（機能ブロック SSD-FD-ARS-WCL-PMP-001、機器 PHY-ECLSS-01） */
         port i_FL_AIRX_16 : ~ArsCoolantWaterPort;
+        port o_FL_AIRX_18 : ArsCoolantWaterPort;
     }
     part def <'EQ-AIRX-19'> AirWclInterchangerPath :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_04 {
         doc /* Freon/水インターチェンジャの水の経路（インターチェンジャ側とバイパス側、流量・出口温度の測定点）（機能ブロック SSD-FD-ARS-WCL-ICH-001、機器 PHY-ECLSS-04） */
         port o_FL_AIRX_17 : ArsCoolantWaterPort;
+    }
+    part def <'EQ-AIRX-20'> AirCabinHxOutTempSensor :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* キャビン熱交換器出口の空気温度センサ（AIR TEMP メータ・SM 表示・C/W へ送る）（機能ブロック SSD-FD-ARS-THC-MON-001、機器 PHY-ECLSS-30） */
+        port i_FL_AIRX_15 : ~CabinAirPort;
+    }
+    part def <'EQ-AIRX-21'> AirWclBypSnsrSigConds :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_29 {
+        doc /* H2O BYP LOOP 1・2 SNSR の信号調整器（MN A のパネル O14・MN B のパネル O15 の遮断器から）（機能ブロック SSD-FD-ARS-WCL-MON-001、機器 PHY-ECLSS-29） */
+        port i_FL_AIRX_19 : ~Dc28VPort;
+        port o_FL_AIRX_20 : ArsSensorExcitationPort;
+    }
+    part def <'EQ-AIRX-22'> AirWclInterchangerSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* インターチェンジャの流量センサと出口温度センサ（ループ1・2）（機能ブロック SSD-FD-ARS-WCL-MON-001、機器 PHY-ECLSS-30） */
+        port i_FL_AIRX_17 : ~ArsCoolantWaterPort;
+        port i_FL_AIRX_20 : ~ArsSensorExcitationPort;
+    }
+    part def <'EQ-AIRX-23'> AirWclPumpPackageSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_30 {
+        doc /* 水ポンプパッケージの計装センサ（アキュムレータ量・ポンプ出口圧・出口温度・ポンプ差圧、ループ1・2）（機能ブロック SSD-FD-ARS-WCL-MON-001、機器 PHY-ECLSS-30） */
+        port i_FL_AIRX_18 : ~ArsCoolantWaterPort;
     }
     // ---- 図235 ARS の補い 内部ブロック図：接続（EclssAirxInterconnection は ECLSS を特化）
     part def EclssAirxInterconnection :> ECLSS {
@@ -4297,6 +4320,9 @@ package SSD_IBD_ORB_001 {
                 part redefines hx {
                     part airCabinHxAssy : AirCabinHxAssy;
                 }
+                part redefines mon {
+                    part airCabinHxOutTempSensor : AirCabinHxOutTempSensor;
+                }
             }
             part redefines wcl {
                 part redefines cld {
@@ -4308,13 +4334,17 @@ package SSD_IBD_ORB_001 {
                 part redefines ich {
                     part airWclInterchangerPath[2] : AirWclInterchangerPath;
                 }
+                part redefines mon {
+                    part airWclBypSnsrSigConds[2] : AirWclBypSnsrSigConds;
+                    part airWclInterchangerSensors[2] : AirWclInterchangerSensors;
+                    part airWclPumpPackageSensors[2] : AirWclPumpPackageSensors;
+                }
             }
         }
         port b_FL_AIRX_01 : ~AvionicsHeatPort { doc /* 枠の外の相手 EB-AIRX-01（EPS の前方アビオニクスベイ1〜3のインバータ分配組立（空冷される電力機器）） */ }
         port b_FL_AIRX_02 : ~AvionicsHeatPort { doc /* 枠の外の相手 EB-AIRX-02（GN&C の TACAN と MLS（ベイ内、ベイファンで冷却される航法機器）） */ }
         port b_FL_AIRX_06 : CabinAirPort { doc /* 枠の外の相手 EB-AIRX-03（キャビンファン差圧の監視（CABIN AIR 信号調整器・SM 表示・C/W）） */ }
-        port b_FL_AIRX_15 : CabinAirPort { doc /* 枠の外の相手 EB-AIRX-04（キャビン熱交換器出口温度の監視（AIR TEMP メータ・SM 表示・C/W）） */ }
-        port b_FL_AIRX_17 : ArsCoolantWaterPort { doc /* 枠の外の相手 EB-AIRX-05（水ループの計測・警報（インターチェンジャ流量・出口温度のセンサと信号調整器）） */ }
+        port b_FL_AIRX_19 : ~Dc28VPort { doc /* 枠の外の相手 EB-AIRX-04（EPS の主直流母線（MN A・MN B、パネル O14・O15 の遮断器 H2O BYP LOOP 1・2 SNSR 経由）） */ }
         flow <'FL-AIRX-01'> fl_airx_01 of AvionicsHeat from b_FL_AIRX_01.heat to ars.avb.cir.airBayAirPath.i_FL_AIRX_01.heat;
         flow <'FL-AIRX-02'> fl_airx_02 of AvionicsHeat from b_FL_AIRX_02.heat to ars.avb.cir.airBayAirPath.i_FL_AIRX_02.heat;
         flow <'FL-AIRX-03'> fl_airx_03 of EquipmentCoolingAir from ars.avb.cir.airBayAirPath.o_FL_AIRX_03.fluid to ars.avb.fan.airBayFanAssy.i_FL_AIRX_03.fluid;
@@ -4348,9 +4378,12 @@ package SSD_IBD_ORB_001 {
         flow <'FL-AIRX-12'> fl_airx_12 of CabinAir from ars.rcrs.fan.airRcrsFanAssy.o_FL_AIRX_12.fluid to ars.rcrs.mon.airRcrsCommonSensors.i_FL_AIRX_12.fluid;
         flow <'FL-AIRX-13'> fl_airx_13 of RcrsBedAir from ars.rcrs.bed.airRcrsBeds.o_FL_AIRX_13.fluid to ars.rcrs.mon.airRcrsBedSensors.i_FL_AIRX_13.fluid;
         flow <'FL-AIRX-14'> fl_airx_14 of RcrsBedAir from ars.rcrs.bed.airRcrsBeds.o_FL_AIRX_14.fluid to ars.rcrs.mon.airRcrsCommonSensors.i_FL_AIRX_14.fluid;
-        flow <'FL-AIRX-15'> fl_airx_15 of CabinAir from ars.thc.hx.airCabinHxAssy.o_FL_AIRX_15.fluid to b_FL_AIRX_15.fluid;
+        flow <'FL-AIRX-15'> fl_airx_15 of CabinAir from ars.thc.hx.airCabinHxAssy.o_FL_AIRX_15.fluid to ars.thc.mon.airCabinHxOutTempSensor.i_FL_AIRX_15.fluid;
         flow <'FL-AIRX-16'> fl_airx_16 of ArsCoolantWater from ars.wcl.cld.airWclColdSideHxs.o_FL_AIRX_16.fluid to ars.wcl.pmp.airWclPumpPackage.i_FL_AIRX_16.fluid;
-        flow <'FL-AIRX-17'> fl_airx_17 of ArsCoolantWater from ars.wcl.ich.airWclInterchangerPath.o_FL_AIRX_17.fluid to b_FL_AIRX_17.fluid;
+        flow <'FL-AIRX-17'> fl_airx_17 of ArsCoolantWater from ars.wcl.ich.airWclInterchangerPath.o_FL_AIRX_17.fluid to ars.wcl.mon.airWclInterchangerSensors.i_FL_AIRX_17.fluid;
+        flow <'FL-AIRX-18'> fl_airx_18 of ArsCoolantWater from ars.wcl.pmp.airWclPumpPackage.o_FL_AIRX_18.fluid to ars.wcl.mon.airWclPumpPackageSensors.i_FL_AIRX_18.fluid;
+        flow <'FL-AIRX-19'> fl_airx_19 of Dc28V from b_FL_AIRX_19.electricPower to ars.wcl.mon.airWclBypSnsrSigConds.i_FL_AIRX_19.electricPower;
+        flow <'FL-AIRX-20'> fl_airx_20 of ArsSensorExcitation from ars.wcl.mon.airWclBypSnsrSigConds.o_FL_AIRX_20.electricPower to ars.wcl.mon.airWclInterchangerSensors.i_FL_AIRX_20.electricPower;
     }
     // ---- 図236 エアロック支援系 内部ブロック図：機器
     part def <'EQ-ALSX-01'> AlsAirlockVolume :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
@@ -4362,28 +4395,28 @@ package SSD_IBD_ORB_001 {
         port i_FL_ALSX_14 : ~AirlockLineHeatPort;
         port i_FL_ALSX_17 : ~CabinAirPort;
     }
-    part def <'EQ-ALSX-02'> AlsHatchEqualizationValves :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* ハッチの均圧弁（各ハッチに2個、キャップと OFF・NORM・EMER の3位置スイッチ）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-02'> AlsHatchEqualizationValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_35 {
+        doc /* ハッチの均圧弁（各ハッチに2個、キャップと OFF・NORM・EMER の3位置スイッチ）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-ECLSS-35） */
         port i_FL_ALSX_01 : ~AirlockAtmospherePort;
         port o_FL_ALSX_02 : AirlockAtmospherePort;
     }
-    part def <'EQ-ALSX-03'> AlsDepressValve :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* エアロック減圧弁（パネル AW82B の CLOSED・5・0 の3位置スイッチ）と減圧ラインのキャップ・T字管（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-03'> AlsDepressValve :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_35 {
+        doc /* エアロック減圧弁（パネル AW82B の CLOSED・5・0 の3位置スイッチ）と減圧ラインのキャップ・T字管（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-ECLSS-35） */
         port i_FL_ALSX_03 : ~AirlockAtmospherePort;
         port i_FL_ALSX_04 : ~AirlockAtmospherePort;
         port o_FL_ALSX_05 : AirlockAtmospherePort;
     }
-    part def <'EQ-ALSX-04'> AlsVestibuleDepressValves :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* ベスティビュール減圧弁・隔離弁（パネル A6L の VENT SYS 1・2）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-04'> AlsVestibuleDepressValves :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_35 {
+        doc /* ベスティビュール減圧弁・隔離弁（パネル A6L の VENT SYS 1・2）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-ECLSS-35） */
         port o_FL_ALSX_06 : AirlockAtmospherePort;
     }
-    part def <'EQ-ALSX-05'> AlsBoosterFans :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
-        doc /* ブースタファン（2台、1台ずつ使用）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-11） */
+    part def <'EQ-ALSX-05'> AlsBoosterFans :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_37 {
+        doc /* ブースタファン（2台、1台ずつ使用）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-37） */
         port i_FL_ALSX_15 : ~CabinAirPort;
         port o_FL_ALSX_16 : CabinAirPort;
     }
-    part def <'EQ-ALSX-06'> AlsAirlockDucting :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
-        doc /* エアロックのダクトとハローダクト（乗員が手で張るダクト、ドッキング窓の曇り止め、ISS・モジュールへの送気を含む）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-11） */
+    part def <'EQ-ALSX-06'> AlsAirlockDucting :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_37 {
+        doc /* エアロックのダクトとハローダクト（乗員が手で張るダクト、ドッキング窓の曇り止め、ISS・モジュールへの送気を含む）（機能ブロック SSD-FD-ECL-ALS-VNT-001、機器 PHY-ECLSS-37） */
         port i_FL_ALSX_16 : ~CabinAirPort;
         port o_FL_ALSX_17 : CabinAirPort;
     }
@@ -4391,19 +4424,19 @@ package SSD_IBD_ORB_001 {
         doc /* ミッドデッキ床の継手（ARS のダクトとエアロックのダクトの接続部）（機能ブロック SSD-FD-CAC-DCT-001、機器 PHY-ECLSS-11） */
         port o_FL_ALSX_15 : CabinAirPort;
     }
-    part def <'EQ-ALSX-08'> AlsWaterLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 水配管ヒータ（6本の配管の各配管に3系統、1系統ずつ使用）とサーモスタット（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-08'> AlsWaterLineHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 水配管ヒータ（6本の配管の各配管に3系統、1系統ずつ使用）とサーモスタット（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port o_FL_ALSX_10 : AirlockLineHeatPort;
         port o_FL_ALSX_12 : AirlockLineHeatPort;
         port o_FL_ALSX_13 : AirlockLineHeatPort;
     }
-    part def <'EQ-ALSX-09'> AlsStructuralPatchHeaters :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 構造パッチヒータ（エアロック外殻の3区域、二重冗長）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-09'> AlsStructuralPatchHeaters :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 構造パッチヒータ（エアロック外殻の3区域、二重冗長）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port o_FL_ALSX_11 : AirlockLineHeatPort;
         port o_FL_ALSX_14 : AirlockLineHeatPort;
     }
-    part def <'EQ-ALSX-10'> AlsLcgLines :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* LCG 供給・戻り配管（EMU ごとに1組、与圧区画の外を通る）（機能ブロック SSD-FD-ECL-ALS-LCG-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-10'> AlsLcgLines :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_38 {
+        doc /* LCG 供給・戻り配管（EMU ごとに1組、与圧区画の外を通る）（機能ブロック SSD-FD-ECL-ALS-LCG-001、機器 PHY-ECLSS-38） */
         port o_FL_ALSX_09 : LcvgCoolantWaterPort;
         port i_FL_ALSX_12 : ~AirlockLineHeatPort;
         port o_FL_ALSX_24 : LcvgCoolantWaterPort;
@@ -4418,38 +4451,38 @@ package SSD_IBD_ORB_001 {
         port i_FL_ALSX_22 : ~WasteWaterPort;
         port o_FL_ALSX_23 : WasteWaterPort;
     }
-    part def <'EQ-ALSX-12'> AlsEmuO2SupplyLine :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* EMU 用 O2 配管と EMU O2 隔離弁（エアロックを通る 900 psi の O2 管）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-12'> AlsEmuO2SupplyLine :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_38 {
+        doc /* EMU 用 O2 配管と EMU O2 隔離弁（エアロックを通る 900 psi の O2 管）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-ECLSS-38） */
         port o_FL_ALSX_18 : EmuServiceOxygenPort;
     }
-    part def <'EQ-ALSX-13'> AlsEmuWaterLines :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* EMU 給水・廃水の配管（供給水のフィルタ・逆止弁・給水遮断弁と廃水戻りライン）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-13'> AlsEmuWaterLines :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_38 {
+        doc /* EMU 給水・廃水の配管（供給水のフィルタ・逆止弁・給水遮断弁と廃水戻りライン）（機能ブロック SSD-FD-ECL-ALS-SCU-001、機器 PHY-ECLSS-38） */
         port i_FL_ALSX_13 : ~AirlockLineHeatPort;
         port o_FL_ALSX_20 : PotableWaterPort;
         port i_FL_ALSX_23 : ~WasteWaterPort;
     }
-    part def <'EQ-ALSX-14'> AlsAirlockPressureTransducers :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* エアロック圧力トランスデューサ（EXT A/L PRESS、エアロック・ベスティビュール間差圧）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-14'> AlsAirlockPressureTransducers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_39 {
+        doc /* エアロック圧力トランスデューサ（EXT A/L PRESS、エアロック・ベスティビュール間差圧）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-ECLSS-39） */
         port i_FL_ALSX_07 : ~AirlockAtmospherePort;
         port o_FL_ALSX_26 : AirlockMonitorDataPort;
     }
-    part def <'EQ-ALSX-15'> AlsHatchDeltaPGauges :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* ハッチ差圧計（各ハッチの両側の計器）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-15'> AlsHatchDeltaPGauges :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_39 {
+        doc /* ハッチ差圧計（各ハッチの両側の計器）（機能ブロック SSD-FD-ECL-ALS-DEP-001、機器 PHY-ECLSS-39） */
         port i_FL_ALSX_08 : ~AirlockAtmospherePort;
         port o_FL_ALSX_27 : AirlockMonitorDataPort;
     }
-    part def <'EQ-ALSX-16'> AlsLcgPressureTransducers :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* LCG 供給圧トランスデューサ（EV1・EV2、V64P0170A・V64P0171A）と水移送圧（機能ブロック SSD-FD-ECL-ALS-LCG-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-16'> AlsLcgPressureTransducers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_39 {
+        doc /* LCG 供給圧トランスデューサ（EV1・EV2、V64P0170A・V64P0171A）と水移送圧（機能ブロック SSD-FD-ECL-ALS-LCG-001、機器 PHY-ECLSS-39） */
         port i_FL_ALSX_09 : ~LcvgCoolantWaterPort;
         port o_FL_ALSX_28 : AirlockMonitorDataPort;
     }
-    part def <'EQ-ALSX-17'> AlsLineTempTransducers :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 水配管の温度トランスデューサ（区域1・2に2個ずつ）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-17'> AlsLineTempTransducers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 水配管の温度トランスデューサ（区域1・2に2個ずつ）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port i_FL_ALSX_10 : ~AirlockLineHeatPort;
         port o_FL_ALSX_29 : AirlockMonitorDataPort;
     }
-    part def <'EQ-ALSX-18'> AlsStructTempSensors :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
-        doc /* 構造温度センサ（隔壁・構造・外部のセンサ）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-EVA-02） */
+    part def <'EQ-ALSX-18'> AlsStructTempSensors :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_36 {
+        doc /* 構造温度センサ（隔壁・構造・外部のセンサ）（機能ブロック SSD-FD-ECL-ALS-HTR-001、機器 PHY-ECLSS-36） */
         port i_FL_ALSX_11 : ~AirlockLineHeatPort;
         port o_FL_ALSX_30 : AirlockMonitorDataPort;
     }
@@ -4597,8 +4630,8 @@ package SSD_IBD_ORB_001 {
         port o_FL_FDSX_01 : CabinAirPort;
         port o_FL_FDSX_02 : CabinAirPort;
     }
-    part def <'EQ-FDSX-02'> FdsCabinFanPlenum :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
-        doc /* キャビンファン・プレナム出口（ミッドデッキ床下の ECLSS ベイ）の感知器取付部（機能ブロック SSD-FD-CAC-FAN-001、機器 PHY-ECLSS-11） */
+    part def <'EQ-FDSX-02'> FdsCabinFanPlenum :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_34 {
+        doc /* キャビンファン・プレナム出口（ミッドデッキ床下の ECLSS ベイ）の感知器取付部（機能ブロック SSD-FD-CAC-FAN-001、機器 PHY-ECLSS-34） */
         port o_FL_FDSX_03 : CabinAirPort;
     }
     part def <'EQ-FDSX-03'> FdsAvBayAirPaths :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_14 {
@@ -4619,12 +4652,12 @@ package SSD_IBD_ORB_001 {
         port i_FL_FDSX_02 : ~CabinAirPort;
         port i_FL_FDSX_05 : ~EquipmentCoolingAirPort;
     }
-    part def <'EQ-FDSX-06'> FdsHalonFixedBottles :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
-        doc /* 固定の Halon 消火ボトル（ベイ1・2・3A に各1本、火工弁つき）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-CW-05） */
+    part def <'EQ-FDSX-06'> FdsHalonFixedBottles :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_31 {
+        doc /* 固定の Halon 消火ボトル（ベイ1・2・3A に各1本、火工弁つき）（機能ブロック SSD-FD-ECL-FDS-FIX-001、機器 PHY-ECLSS-31） */
         port o_FL_FDSX_06 : HalonAgentPort;
     }
-    part def <'EQ-FDSX-07'> FdsPortableExtinguishers :> SSD_ALC_SYS_001::Physical::PHY_CW_05 {
-        doc /* 携帯消火器（乗員室に3本：中甲板2・操縦室1）（機能ブロック SSD-FD-ECL-FDS-PFE-001、機器 PHY-CW-05） */
+    part def <'EQ-FDSX-07'> FdsPortableExtinguishers :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_31 {
+        doc /* 携帯消火器（乗員室に3本：中甲板2・操縦室1）（機能ブロック SSD-FD-ECL-FDS-PFE-001、機器 PHY-ECLSS-31） */
         port o_FL_FDSX_07 : HalonAgentPort;
         port o_FL_FDSX_08 : HalonAgentPort;
     }
@@ -5164,9 +5197,10 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-PWRA-04>IF-ARS-35'> from EclssPwraInterconnection::fl_pwra_04 to SSD_BLK_SYS_001::ORB::IF_ARS_35;
         #refinement dependency <'FL-PWRA-04>IF-IMU-06'> from EclssPwraInterconnection::fl_pwra_04 to SSD_BLK_SYS_001::ORB::IF_IMU_06;
         #refinement dependency <'FL-PWRA-05>IF-ARS-35'> from EclssPwraInterconnection::fl_pwra_05 to SSD_BLK_SYS_001::ORB::IF_ARS_35;
+        #refinement dependency <'FL-PWRA-05>IF-IMU-11'> from EclssPwraInterconnection::fl_pwra_05 to SSD_BLK_SYS_001::ORB::IF_IMU_11;
         #refinement dependency <'FL-PWRA-07>IF-ARS-40'> from EclssPwraInterconnection::fl_pwra_07 to SSD_BLK_SYS_001::ORB::IF_ARS_40;
         #refinement dependency <'FL-PWRA-07>IF-THC-17'> from EclssPwraInterconnection::fl_pwra_07 to SSD_BLK_SYS_001::ORB::IF_THC_17;
-        #refinement dependency <'FL-PWRA-08>IF-THC-17'> from EclssPwraInterconnection::fl_pwra_08 to SSD_BLK_SYS_001::ORB::IF_THC_17;
+        #refinement dependency <'FL-PWRA-08>IF-THC-18'> from EclssPwraInterconnection::fl_pwra_08 to SSD_BLK_SYS_001::ORB::IF_THC_18;
         #refinement dependency <'FL-PWRA-10>IF-ARS-40'> from EclssPwraInterconnection::fl_pwra_10 to SSD_BLK_SYS_001::ORB::IF_ARS_40;
         #refinement dependency <'FL-PWRA-10>IF-THC-16'> from EclssPwraInterconnection::fl_pwra_10 to SSD_BLK_SYS_001::ORB::IF_THC_16;
         #refinement dependency <'FL-PWRA-11>IF-ARS-38'> from EclssPwraInterconnection::fl_pwra_11 to SSD_BLK_SYS_001::ORB::IF_ARS_38;
@@ -5225,6 +5259,8 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-AIRX-15>IF-THC-08'> from EclssAirxInterconnection::fl_airx_15 to SSD_BLK_SYS_001::ARS_THC::IF_THC_08;
         #refinement dependency <'FL-AIRX-16>IF-WCL-04'> from EclssAirxInterconnection::fl_airx_16 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_04;
         #refinement dependency <'FL-AIRX-17>IF-WCL-08'> from EclssAirxInterconnection::fl_airx_17 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_08;
+        #refinement dependency <'FL-AIRX-18>IF-WCL-07'> from EclssAirxInterconnection::fl_airx_18 to SSD_BLK_SYS_001::ARS_WCL::IF_WCL_07;
+        #refinement dependency <'FL-AIRX-19>IF-WCL-14'> from EclssAirxInterconnection::fl_airx_19 to SSD_BLK_SYS_001::ORB::IF_WCL_14;
         #refinement dependency <'FL-ALSX-01>IF-ALS-01'> from EclssAlsxInterconnection::fl_alsx_01 to SSD_BLK_SYS_001::ECLSS::IF_ALS_01;
         #refinement dependency <'FL-ALSX-01>IF-ECL-17'> from EclssAlsxInterconnection::fl_alsx_01 to SSD_BLK_SYS_001::ECLSS::IF_ECL_17;
         #refinement dependency <'FL-ALSX-03>IF-ALS-01'> from EclssAlsxInterconnection::fl_alsx_03 to SSD_BLK_SYS_001::ECLSS::IF_ALS_01;
