@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-IMU-001 |
 | 表題 | IMU空冷（IMU）機能説明書 |
-| 版・日付 | Rev. C／2026-10-01 |
+| 版・日付 | Rev. D／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -79,6 +79,8 @@
 
 > **注記** F-ARS-IMU-07の喪失の限界のうち括弧内の値（3.94・4.71 in H2O）は、括弧外の値から計測精度（0.238 in H2O）を内側へ差し引いた値に一致する（SSD-FD-ARS-IMU-MON-001の検証メモ）。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1933）
 
+> **注記** 機能の故障モード 2件（FMX-IMU-01・FMX-IMU-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p376） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376
@@ -102,3 +104,4 @@
 | Rev. A | 2026-09-30 | 下位機能説明書（5件）と図34・図35への展開を追加し、停止時間の上限（F-ARS-IMU-10）と冷却空気の流路の回復（F-ARS-IMU-11）の機能を追加、IF-ARS-08・11・19・29・35に下位IF（IF-IMU）を付記、注記・検証メモ（下位IFの分け方、ΔPセンサの直流電源、熱交換器の位置、上昇中の断電対象、限界値の括弧内の値）を追加 |
 | Rev. B | 2026-09-30 | IF-ARS-19 に上位 IF-ECL-32 を付記（Rev. I） |
 | Rev. C | 2026-10-01 | IF-ARS-35 の上位を IF-ECL-39 に付け替え、IF-ARS-29 の上位を IF-ECL-29 に付け替え（Rev. M） |
+| Rev. D | 2026-10-15 | 機能の故障モードを足した（FMX-IMU-01・FMX-IMU-02）（Rev. CC） |

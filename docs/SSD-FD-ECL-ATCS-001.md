@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-ATCS-001 |
 | 表題 | 能動熱制御系（ATCS）機能説明書 |
-| 版・日付 | Rev. I／2026-10-11 |
+| 版・日付 | Rev. J／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -89,6 +89,8 @@
 
 > **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は上昇・再突入はFES、高度約100,000 ft以下はアンモニアボイラで排熱するとしていたが、SCOM（OI-33）は再突入のV = 12k（高度約175,000 ft）から放熱器のコールドソークを使い、アンモニアボイラはコールドソークが尽きた後に使うとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/405）
 
+> **注記** 機能の故障モード 2件（FMX-TCS-01・FMX-TCS-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -118,3 +120,4 @@
 | Rev. G | 2026-10-03 | 内部ブロック・流れ定義書 SSD-IBD-ORB-001 への参照を注記（Rev. AN） |
 | Rev. H | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. I | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（10文。うち本文を改めた3文に注記）（Rev. BR） |
+| Rev. J | 2026-10-15 | 機能の故障モードを足した（FMX-TCS-01・FMX-TCS-02）（Rev. CC） |

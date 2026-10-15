@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-ALS-001 |
 | 表題 | エアロック支援系（ALS）機能説明書 |
-| 版・日付 | Rev. K／2026-10-11 |
+| 版・日付 | Rev. L／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -100,6 +100,8 @@
 
 > **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は乗員室を14.7 psiaから12.5 psiaを経て10.2 psiaへ減圧するとしていたが、SCOM（OI-33）は12.5 psiaを経る段階を挙げず、乗員室を14.7 psiから10.2 psiへ減圧するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/460）
 
+> **注記** 機能の故障モード 2件（FMX-ALS-06・FMX-ALS-07）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Airlock Support（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html
@@ -136,3 +138,4 @@
 | Rev. I | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
 | Rev. J | 2026-10-09 | EMU の構造・内部ブロック・状態定義書 SSD-EMU-EVA-001 への参照を注記（Rev. BM） |
 | Rev. K | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（14文。うち本文を改めた3文に注記）（Rev. BR） |
+| Rev. L | 2026-10-15 | 機能の故障モードを足した（FMX-ALS-06・FMX-ALS-07）（Rev. CC） |

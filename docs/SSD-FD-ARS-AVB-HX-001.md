@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-AVB-HX-001 |
 | 表題 | ベイ熱交換器（HX）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-AVB-001 |
 | 関連図 | SSD-SYS-ARC-001 図32 アビオニクスベイ空冷 機能構成 |
@@ -56,6 +56,8 @@
 
 > **注記** 検証メモ：1979年の飛行運用マニュアル（PDF p37）は、水冷却ループのベイ1の経路がハッチを、ベイ2の経路がキャビンの窓を熱調整するとする。訓練マニュアル（3.3.3節）とSCOM（PDF p378）はベイ2の経路が窓の熱調整を行うとし、ハッチには触れない。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-12770,%20Vol.3%20-%20Shuttle%20Flight%20Operations%20Manual,%20Environmental%20Control%20and%20Life%20Support%20Systems%20(ECLSS)%20(1979-03-03).pdf#page=37）
 
+> **注記** 機能の故障モード 2件（FMX-AVB-03・FMX-AVB-04）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.2.7節 Avionics Bay Fans（PDF p65） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=65
@@ -76,3 +78,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-AVB-03・FMX-AVB-04）（Rev. CC） |

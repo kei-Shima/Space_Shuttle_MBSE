@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-RCRS-CTL-001 |
 | 表題 | 制御器・運転シーケンス（CTL）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-RCRS-001 |
 | 関連図 | SSD-SYS-ARC-001 図28 再生式CO2除去装置 機能構成 |
@@ -60,6 +60,8 @@
 
 > **注記** 検証メモ：故障処置手順6.8aの「11分ごとに2分6秒ベッドを隔離する」という注記は、訓練マニュアルの吸着の工程10分54秒と半周期13分の差（2分6秒）に当たり、両資料は整合する。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=332）
 
+> **注記** 機能の故障モード 3件（FMX-RCRS-06・FMX-RCRS-07・FMX-RCRS-08）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.2.2〜C.2.3 RCRS Hardware・Operations（PDF p218） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=218
@@ -81,3 +83,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-RCRS-06・FMX-RCRS-07・FMX-RCRS-08）（Rev. CC） |

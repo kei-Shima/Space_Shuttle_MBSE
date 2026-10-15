@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CO2-STW-001 |
 | 表題 | 予備キャニスタ収納・交換管理（STW）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-28 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-CO2-001 |
 | 関連図 | SSD-SYS-ARC-001 図14 CO2・CO除去 機能構成 |
@@ -69,6 +69,8 @@
 
 > **注記** 検証メモ：1979年の飛行運用マニュアルは、CO2分圧が5.0 mmHgに達したとき、または乗員4名ならおよそ12時間ごとにキャニスタを交換するとしていたが、運用飛行規則A17-151C（2002年）は就寝前後または7.6（6.1）mmHg以上で交換すると定める。本書は運用飛行規則の値を用いた。（出典: https://www.ibiblio.org/apollo/Shuttle/JSC-12770,%20Vol.3%20-%20Shuttle%20Flight%20Operations%20Manual,%20Environmental%20Control%20and%20Life%20Support%20Systems%20(ECLSS)%20(1979-03-03).pdf#page=35）
 
+> **注記** 機能の故障モード 3件（FMX-CO2-20・FMX-CO2-21・FMX-CO2-22）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.2.2節 LiOH Canisters（PDF p59） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=59
@@ -91,3 +93,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-28 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-CO2-20・FMX-CO2-21・FMX-CO2-22）（Rev. CC） |

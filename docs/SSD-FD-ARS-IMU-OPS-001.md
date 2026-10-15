@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-IMU-OPS-001 |
 | 表題 | ファン運用管理（OPS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-IMU-001 |
 | 関連図 | SSD-SYS-ARC-001 図34 IMU空冷 機能構成 |
@@ -62,6 +62,8 @@ IMUファンの上昇・軌道上の構成、喪失判定と切替、停止時�
 
 > **注記** IMUを起動する手順（GNC SSR-1）では、IMUの電源を入れるときに使えるIMUファンをONにする。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=680）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.6.1節 Ascent（PDF p85） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=85
@@ -89,3 +91,4 @@ IMUファンの上昇・軌道上の構成、喪失判定と切替、停止時�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CO2-ATCO-001 |
 | 表題 | 常温触媒酸化器（ATCO）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-28 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-CO2-001 |
 | 関連図 | SSD-SYS-ARC-001 図14 CO2・CO除去 機能構成 |
@@ -55,6 +55,8 @@
 
 > **注記** 検証メモ：運用飛行規則（A13-152C、A15-203）はATCOを「ATCOキャニスタ」としてLiOHキャニスタのスロットに装着すると記すが、SCOMと訓練マニュアルはATCOをキャビン熱交換器出口の常設装置とし、IFMチェックリストの配置図も熱交換器の近くに示す。本書は常設装置を扱い、キャニスタ型はSSD-FD-CO2-CAN-001で派生型として扱った。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1798）
 
+> **注記** 機能の故障モード 1件（FMX-CO2-05）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Cabin Air Humidity Control（ATCO）（PDF p376） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376
@@ -74,3 +76,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-28 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-CO2-05）（Rev. CC） |

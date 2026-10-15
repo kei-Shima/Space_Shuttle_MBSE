@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-ALS-MON-001 |
 | 表題 | 計測・表示（MON）機能説明書 |
-| 版・日付 | Rev. A／2026-10-01 |
+| 版・日付 | Rev. B／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ALS-001 |
 | 関連図 | SSD-SYS-ARC-001 図24 エアロック支援系 機能構成 |
@@ -56,6 +56,8 @@
 
 > **注記** 乗員室圧力の計器の説明（SCOM 4.1節）も、CRTのENVIRONMENT表示のエアロック圧力を予備に使えるとする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/790）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 6.8節 Airlock Instrumentation and Displays（PDF p187） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=187
@@ -78,3 +80,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
 | Rev. A | 2026-10-01 | IF-ALS-10 の上位を IF-ECL-38 に付け替え（Rev. M） |
+| Rev. B | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

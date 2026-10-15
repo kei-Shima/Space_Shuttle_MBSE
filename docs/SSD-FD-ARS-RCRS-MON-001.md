@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-RCRS-MON-001 |
 | 表題 | 計装・表示（MON）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-RCRS-001 |
 | 関連図 | SSD-SYS-ARC-001 図28 再生式CO2除去装置 機能構成 |
@@ -58,6 +58,8 @@ RCRSのベッド圧力・ベッド差圧と、CO2分圧・真空圧力・フィ�
 
 > **注記** SCOMのENVIRONMENT表示（DISP 66）の図にも、CO2 CNTLR 1・2、FILTER ΔP、PPCO2、TEMP、BED A PRESS・B PRESS、ΔP、VAC PRESSの欄がある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359）
 
+> **注記** 機能の故障モード 1件（FMX-RCRS-13）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.4 Instrumentation and Displays（表C-1）（PDF p227） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=227
@@ -77,3 +79,4 @@ RCRSのベッド圧力・ベッド差圧と、CO2分圧・真空圧力・フィ�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-RCRS-13）（Rev. CC） |

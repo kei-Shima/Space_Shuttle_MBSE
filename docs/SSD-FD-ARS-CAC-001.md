@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-CAC-001 |
 | 表題 | キャビン空気循環（CAC）機能説明書 |
-| 版・日付 | Rev. C／2026-10-01 |
+| 版・日付 | Rev. D／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -81,6 +81,8 @@
 
 > **注記** 下位の展開（図16）では、IF-ARS-01の下位を図14のIF-CO2-01のまま用い（同じ物理IF）、IF-ARS-14は煙感知器の位置に応じて還流・ろ過（IF-CAC-04）とキャビンファン（IF-CAC-08）の2つの下位IFに分けた。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/118）
 
+> **注記** 機能の故障モード 2件（FMX-CAC-01・FMX-CAC-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p369） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/369
@@ -107,3 +109,4 @@
 | Rev. A | 2026-09-28 | IF-ARS-01に下位IF（IF-CO2-01）を付記 |
 | Rev. B | 2026-09-28 | 下位機能説明書（5件）と図16・図17への展開を追加し、機器の強制空冷の機能（F-ARS-CAC-11）とIF-ARS-39を追加、IF-ARS-02・03・09・13・14・25・32・39に下位IF（IF-CAC）を付記、注記を追加 |
 | Rev. C | 2026-10-01 | IF-ARS-32 の上位を IF-ECL-39 に付け替え、IF-ARS-25 の上位を IF-ECL-29 に付け替え（Rev. M） |
+| Rev. D | 2026-10-15 | 機能の故障モードを足した（FMX-CAC-01・FMX-CAC-02）（Rev. CC） |

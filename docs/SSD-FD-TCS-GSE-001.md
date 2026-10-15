@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-GSE-001 |
 | 表題 | GSE熱交換器・地上冷却（GSE）機能説明書 |
-| 版・日付 | Rev. D／2026-10-01 |
+| 版・日付 | Rev. E／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ATCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -41,7 +41,11 @@
 | TC-26 | NSTS-12820 Vol. A（PCN-1） | Space Shuttle Operational Flight Rules Vol. A – All Flights | 着陸後に地上冷却を失った場合の処置（A16-51：GSE冷却カート）と冷却の延長（A16-52）を規定する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1895） |
 | TC-27 | USA007587 Rev. A（CPN-1） | Shuttle Crew Operations Manual（SCOM） | 2.9節のATCS：打上げ前・着陸後の冷却に使うGSE熱交換器がフレオンループの流路にあることを示す。着陸後のGSE地上冷却装置の接続は1.1節（p36）にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382） |
 
-## 5. 参考文献
+## 5. 注記（出典間の相違・構成変更）
+
+> **注記** 機能の故障モード 3件（FMX-TCS-09・FMX-TCS-10・FMX-TCS-11）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
+## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
 2. NASA LLIS – ECLSS Ground Coolant Systems（教訓文書） — https://llis.nasa.gov/llis_lib/pdf/1045995main_ECLSSGroundCoolantSystemLL.pdf
@@ -49,7 +53,7 @@
 4. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p392） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/392
 5. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Active Thermal Control System（Freon Loops）（PDF p382） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/382
 
-## 6. 変更履歴
+## 7. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
@@ -58,3 +62,4 @@
 | Rev. B | 2026-09-26 | 関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加 |
 | Rev. C | 2026-09-30 | IF-TCS-15 に上位 IF-ECL-34 を付記（Rev. I） |
 | Rev. D | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（2文）（Rev. Q） |
+| Rev. E | 2026-10-15 | 機能の故障モードを足した（FMX-TCS-09・FMX-TCS-10・FMX-TCS-11）（Rev. CC） |

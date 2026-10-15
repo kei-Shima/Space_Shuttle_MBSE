@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-THC-001 |
 | 表題 | キャビン温湿度制御（THC）機能説明書 |
-| 版・日付 | Rev. C／2026-10-01 |
+| 版・日付 | Rev. D／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -86,6 +86,8 @@
 
 > **注記** 検証メモ：ARS段のIF-ARS-25（キャビン空気循環→DPS）はAV BAY/CABIN AIR灯の入力としてキャビン熱交換器の空気温度（チャネル114）を含む。下位の展開では、この温度の入力を温度センサの出力としてIF-ARS-27の下位（IF-THC-11）に置いた。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/133）
 
+> **注記** 機能の故障モード 2件（FMX-THC-01・FMX-THC-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p374） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/374
@@ -111,3 +113,4 @@
 | Rev. A | 2026-09-28 | IF-ARS-05に下位IF（IF-CO2-05）を付記 |
 | Rev. B | 2026-09-30 | 下位機能説明書（5件）と図30・図31への展開を追加し、湿度分離器の作動監視の機能（F-ARS-THC-11）と電源のIF（IF-ARS-40）を追加、IF-ARS-03・04・06・10・12・27に下位IF（IF-CAC-13・IF-RCRS-02・IF-THC）を付記、注記・検証メモを追加 |
 | Rev. C | 2026-10-01 | IF-ARS-40 の上位を IF-ECL-39 に付け替え、IF-ARS-27 の上位を IF-ECL-29 に付け替え（Rev. M） |
+| Rev. D | 2026-10-15 | 機能の故障モードを足した（FMX-THC-01・FMX-THC-02）（Rev. CC） |

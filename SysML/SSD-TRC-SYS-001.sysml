@@ -17,7 +17,7 @@ package SSD_TRC_SYS_001 {
     metadata <'TR-05'> tr_05 : TraceRelation { relation = "end"; fromKind = "IF"; toKind = "BLK"; count = 1175; }
     metadata <'TR-06'> tr_06 : TraceRelation { relation = "alloc"; fromKind = "PHY"; toKind = "F・BLK"; count = 459; }
     metadata <'TR-07'> tr_07 : TraceRelation { relation = "place"; fromKind = "PHY"; toKind = "CMP"; count = 120; }
-    metadata <'TR-08'> tr_08 : TraceRelation { relation = "fmea"; fromKind = "FM"; toKind = "F・IF"; count = 2036; }
+    metadata <'TR-08'> tr_08 : TraceRelation { relation = "fmea"; fromKind = "FM"; toKind = "F・IF"; count = 2104; }
     metadata <'TR-09'> tr_09 : TraceRelation { relation = "rule"; fromKind = "RULE"; toKind = "BLK"; count = 83; }
     metadata <'TR-10'> tr_10 : TraceRelation { relation = "act"; fromKind = "ACT"; toKind = "F"; count = 211; }
     metadata <'TR-11'> tr_11 : TraceRelation { relation = "actpart"; fromKind = "ACT"; toKind = "BLK"; count = 51; }
@@ -81,7 +81,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-ECLSS-C5'> cov_ECLSS_C5 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C5"; covered = 9; total = 298; }
     metadata <'COV-ECLSS-C6'> cov_ECLSS_C6 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C6"; covered = 109; total = 298; }
     metadata <'COV-ECLSS-C7'> cov_ECLSS_C7 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C7"; covered = 28; total = 28; }
-    metadata <'COV-ECLSS-C8'> cov_ECLSS_C8 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C8"; covered = 44; total = 87; }
+    metadata <'COV-ECLSS-C8'> cov_ECLSS_C8 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C8"; covered = 87; total = 87; }
     metadata <'COV-ECLSS-C9'> cov_ECLSS_C9 : CoverageMetric about SSD_BLK_SYS_001::ECLSS { metric = "C9"; covered = 68; total = 87; }
     metadata <'COV-EPS-C1'> cov_EPS_C1 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C1"; covered = 47; total = 47; }
     metadata <'COV-EPS-C2'> cov_EPS_C2 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C2"; covered = 47; total = 47; }
@@ -198,11 +198,12 @@ package SSD_TRC_SYS_001 {
     metadata <'GAP-04'> gap_04 : TraceGapCategory { title = "要求の割付先でない IF"; judgment = "方針"; count = 519; }
     metadata <'GAP-05'> gap_05 : TraceGapCategory { title = "振る舞い・流れが通らない IF"; judgment = "範囲外"; count = 239; }
     metadata <'GAP-06'> gap_06 : TraceGapCategory { title = "要求につながらない機器"; judgment = "未処理"; count = 0; }
-    metadata <'GAP-07'> gap_07 : TraceGapCategory { title = "故障解析の対応が無い機能ブロック"; judgment = "範囲外"; count = 43; }
+    metadata <'GAP-07'> gap_07 : TraceGapCategory { title = "故障解析の対応が無い機能ブロック"; judgment = "範囲外"; count = 0; }
     metadata <'GAP-08'> gap_08 : TraceGapCategory { title = "振る舞いに現れない機能ブロック"; judgment = "範囲外"; count = 21; }
     metadata <'GAP-09'> gap_09 : TraceGapCategory { title = "既存の IF が無い流れ"; judgment = "未処理"; count = 0; }
     metadata <'GAP-10'> gap_10 : TraceGapCategory { title = "機器配分表に行が無い内部ブロック図の機器"; judgment = "未処理"; count = 0; }
     metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 133; }
+    metadata <'GAP-12'> gap_12 : TraceGapCategory { title = "故障モードが当てはまらないと判断した機能ブロック"; judgment = "判断済み"; count = 14; }
     metadata <'GAP-01-01'> gap_01_01 : TraceGap about SSD_IRQ_SYS_001::Results::vc_irq_orb_28 { category = "GAP-01"; judgment = "判断済み"; }
     metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_RQL_SYS_001::Results::vc_lrq_apu_03 { category = "GAP-01"; judgment = "判断済み"; }
     metadata <'GAP-01-03'> gap_01_03 : TraceGap about SSD_RQL_SYS_001::Results::vc_lrq_apu_04 { category = "GAP-01"; judgment = "判断済み"; }

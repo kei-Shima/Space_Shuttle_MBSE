@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-RCRS-OPS-001 |
 | 表題 | RCRS運用管理（OPS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-RCRS-001 |
 | 関連図 | SSD-SYS-ARC-001 図28 再生式CO2除去装置 機能構成 |
@@ -58,6 +58,8 @@ RCRSの起動・停止の時期、減圧時・火災後・有害物質の漏れ�
 
 > **注記** 運用飛行規則A10-385は、満水のCWCを収める場所のうち「LIOH BOX WET TRASH」をRCRSを搭載したOV-102でだけ使えるとし（注[7]、PDF p1662〜1663）、IFMチェックリスト（W-10、PDF p434）もRCRSを搭載する飛行ではLiOH収納区画（MO52M）をCWCの収納に使えると注記する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1663）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-155 Regenerative CO2 Removal System (RCRS) Management（PDF p1950） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1950
@@ -79,3 +81,4 @@ RCRSの起動・停止の時期、減圧時・火災後・有害物質の漏れ�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

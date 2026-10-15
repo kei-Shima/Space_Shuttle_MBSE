@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-FDS-OPS-001 |
 | 表題 | 火災対応・運用管理（OPS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-FDS-001 |
 | 関連図 | SSD-SYS-ARC-001 図26 煙検知・消火系 機能構成 |
@@ -65,6 +65,8 @@
 
 > **注記** 検証メモ：Friedman（1991年、PDF p3）とFriedman（1993年、PDF p4）は、消火器を放出すれば直ちにミッションを終了して帰還するとするが、運用飛行規則A13-152（2002年）は、火災のない放出でベイへは72〜100時間、乗員室へは24〜48時間の暴露を目安とし、MCCと医師が実時間で判断するとする。本書は運用飛行規則に従った。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1795）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-1 Fire/Post-Fire Definitions（PDF p1915） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1915
@@ -90,3 +92,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

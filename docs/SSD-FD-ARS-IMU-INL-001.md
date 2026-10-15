@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-IMU-INL-001 |
 | 表題 | 吸込み・IMU通風（INL）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-IMU-001 |
 | 関連図 | SSD-SYS-ARC-001 図34 IMU空冷 機能構成 |
@@ -62,6 +62,8 @@
 
 > **注記** 検証メモ：吸込み側のフィルタを、SCOM（PDF p376）は300ミクロンフィルタ（単数）とし、IFMチェックリスト（4-5）とSTS-125報告はIMUごとの3枚のフィルタ（IMU #1・2・3）を示す。本書は300ミクロンフィルタを3枚のIMUフィルタと解した。ファン保護用の600ミクロンフィルタは1979年の飛行運用マニュアルだけに記される。（出典: https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=101）
 
+> **注記** 機能の故障モード 2件（FMX-IMU-03・FMX-IMU-04）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.2.8節 Inertial Measurement Unit Fans（PDF p66） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=66
@@ -85,3 +87,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-IMU-03・FMX-IMU-04）（Rev. CC） |

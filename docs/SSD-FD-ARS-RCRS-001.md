@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-RCRS-001 |
 | 表題 | 再生式CO2除去装置（RCRS）機能説明書 |
-| 版・日付 | Rev. B／2026-10-01 |
+| 版・日付 | Rev. C／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -84,6 +84,8 @@ OV-105の長期単独飛行向けに搭載できた再生式CO2除去装置（RC
 
 > **注記** IF-ARS-33の上位はIF-EPS-12（交流の配電）としているが、制御器と共通計装の直流電力（MN A・MN B・MN C、パネルML86B:Eの遮断器）はEPSの直流配電（IF-EPS-11）に当たる。本書では上位欄を変更していない。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=330）
 
+> **注記** 機能の故障モード 3件（FMX-RCRS-01・FMX-RCRS-02・FMX-RCRS-03）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p371） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/371
@@ -105,3 +107,4 @@ OV-105の長期単独飛行向けに搭載できた再生式CO2除去装置（RC
 | 初版（Rev. -） | 2026-09-26 | 初版作成（公開資料に基づく検討用） |
 | Rev. A | 2026-09-30 | 下位機能説明書（6件）と図28・図29への展開を追加し、空気回収の機能（F-ARS-RCRS-11）を追加、IF-ARS-02・04・16・26・33に下位IF（IF-CAC-03・IF-RCRS）を付記、注記・検証メモ（切替周期の相違の理由、搭載機体、直流電源の上位IF）を追加 |
 | Rev. B | 2026-10-01 | IF-ARS-33 の上位を IF-ECL-39 に付け替え、IF-ARS-26 の上位を IF-ECL-29 に付け替え（Rev. M） |
+| Rev. C | 2026-10-15 | 機能の故障モードを足した（FMX-RCRS-01・FMX-RCRS-02・FMX-RCRS-03）（Rev. CC） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-AVB-001 |
 | 表題 | アビオニクスベイ空冷（AVB）機能説明書 |
-| 版・日付 | Rev. C／2026-10-01 |
+| 版・日付 | Rev. D／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -78,6 +78,8 @@
 
 > **注記** 下位の展開（図32）では、IF-ARS-15の下位を図26（煙検知・消火系）のIF-FDS-01・08・11のまま用いた（同じ物理IF）。IF-ARS-34の下位にはファンの三相交流（IF-AVB-07）に加えて信号調整器のAC φB（IF-AVB-15）を置き、IF-ARS-28の下位は出口温度（IF-AVB-13）とファン差圧（IF-AVB-14）に分けた。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74）
 
+> **注記** 機能の故障モード 2件（FMX-AVB-01・FMX-AVB-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p376） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/376
@@ -102,3 +104,4 @@
 | Rev. A | 2026-09-30 | 下位機能説明書（5件）と図32・図33への展開を追加し、TACAN・MLSの強制空冷（F-ARS-AVB-11）と温度・差圧センサの信号調整器（F-ARS-AVB-12）を機能に追加、TACAN・MLSの強制空冷のIF（IF-ARS-41）を追加、IF-ARS-07・15・17・18・28・34に下位IFを付記、目的と注記を更新 |
 | Rev. B | 2026-09-30 | IF-ARS-41 に上位 IF-ECL-32 を付記、IF-ARS-18 に上位 IF-ECL-33 を付記（Rev. I） |
 | Rev. C | 2026-10-01 | IF-ARS-34 の上位を IF-ECL-39 に付け替え、IF-ARS-28 の上位を IF-ECL-29 に付け替え（Rev. M） |
+| Rev. D | 2026-10-15 | 機能の故障モードを足した（FMX-AVB-01・FMX-AVB-02）（Rev. CC） |

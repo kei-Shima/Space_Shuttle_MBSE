@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-FCL-001 |
 | 表題 | フレオン21冷却ループ（FCL）機能説明書 |
-| 版・日付 | Rev. D／2026-10-11 |
+| 版・日付 | Rev. E／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ATCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -57,6 +57,8 @@
 
 > **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は再突入で高度100,000 ftを下回ってから冷却するとしていたが、SCOM（OI-33）は再突入中の高度400,000 ft未満または着陸後の地上で冷却するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/391）
 
+> **注記** 機能の故障モード 3件（FMX-TCS-03・FMX-TCS-04・FMX-TCS-05）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -78,3 +80,4 @@
 | Rev. B | 2026-09-26 | 関連文書にTC-27（Shuttle Crew Operations Manual、USA007587 Rev. A CPN-1）を追加 |
 | Rev. C | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（2文。うち本文を改めた1文に注記）（Rev. Q） |
 | Rev. D | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（8文。うち本文を改めた4文に注記）（Rev. BR） |
+| Rev. E | 2026-10-15 | 機能の故障モードを足した（FMX-TCS-03・FMX-TCS-04・FMX-TCS-05）（Rev. CC） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-RCRS-FAN-001 |
 | 表題 | 吸気・送風・流量設定（FAN）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-RCRS-001 |
 | 関連図 | SSD-SYS-ARC-001 図28 再生式CO2除去装置 機能構成 |
@@ -50,6 +50,8 @@
 
 > **注記** 図28では、キャビン空気循環の還流・ろ過からの吸込みを図16のIF-CAC-03のまま示した（同じ物理IFのため新しい番号を作らない）。IF-CAC-03の上位IFはIF-ARS-02である。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=213）
 
+> **注記** 機能の故障モード 2件（FMX-RCRS-09・FMX-RCRS-10）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.1・C.2.1 EDO Modifications・Carbon Dioxide Removal（PDF p213） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=213
@@ -66,3 +68,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-RCRS-09・FMX-RCRS-10）（Rev. CC） |

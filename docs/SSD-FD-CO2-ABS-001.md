@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CO2-ABS-001 |
 | 表題 | 吸収器装着部（ABS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-28 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-CO2-001 |
 | 関連図 | SSD-SYS-ARC-001 図14 CO2・CO除去 機能構成 |
@@ -50,6 +50,8 @@
 
 > **注記** 図14では、キャニスタを通った空気が主流に戻る流れを独立のIFとして描いていない（図12のIF-ARS-01と同じ）。訓練マニュアルの図3-1では、2個のキャニスタとオリフィスが並列に並び、通過した空気は同じダクトでキャビン温度制御弁とキャビン熱交換器へ向かう。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=58）
 
+> **注記** 機能の故障モード 2件（FMX-CO2-03・FMX-CO2-04）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.2.2節 LiOH Canisters（PDF p59） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=59
@@ -68,3 +70,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-28 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-CO2-03・FMX-CO2-04）（Rev. CC） |

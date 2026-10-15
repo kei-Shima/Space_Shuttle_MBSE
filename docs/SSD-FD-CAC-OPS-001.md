@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-CAC-OPS-001 |
 | 表題 | ファン運用管理（OPS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-28 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-CAC-001 |
 | 関連図 | SSD-SYS-ARC-001 図16 キャビン空気循環 機能構成 |
@@ -55,6 +55,8 @@
 
 > **注記** 交流電力移送ケーブルの取付け（IFM A-5）は、交流母線を他の母線から1相3 Aまでで再給電する手順で、運用飛行規則A17-154の「電源を入れ替えるIFM」に当たる。（出典: https://www.ibiblio.org/apollo/Shuttle/In-Flight%20Maintenance/In-Flight%20Maintenance%20Checklist%20Rev%20F%20PCN-13.pdf#page=115）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-101 Cabin Fan（PDF p1929） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1929
@@ -78,3 +80,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-28 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

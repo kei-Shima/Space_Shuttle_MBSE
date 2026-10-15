@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-IMU-MON-001 |
 | 表題 | ファン監視・表示（MON）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-IMU-001 |
 | 関連図 | SSD-SYS-ARC-001 図34 IMU空冷 機能構成 |
@@ -57,6 +57,8 @@ IMUファンの差圧（ΔP）と回転数を計測し、SM表示（SM SYS SUMM 
 
 > **注記** IMUファンΔPセンサの電源（H2O BYP LOOP 1 SNSR）は水冷却ループ1のインターチェンジャ流量センサと共通で、この遮断器が開いている場合は戻す前にMCCに連絡する（MAL 6.1d）。（出典: https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=265）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.5節 ARS Instrumentation and Displays（PDF p74） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74
@@ -77,3 +79,4 @@ IMUファンの差圧（ΔP）と回転数を計測し、SM表示（SM SYS SUMM 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

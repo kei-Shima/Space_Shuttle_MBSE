@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-H2O-001 |
 | 表題 | 給水・廃水系（H2O）機能説明書 |
-| 版・日付 | Rev. J／2026-10-11 |
+| 版・日付 | Rev. K／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -94,6 +94,8 @@
 
 > **注記** 出典の更新（1988年版 → 新しい資料）：1988年版はタンクBへの冗長経路を主経路の凍結に備えるものとしていたが、SCOM（OI-33）は主経路の閉塞に備えるものとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eps.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/394）
 
+> **注記** 機能の故障モード 3件（FMX-H2O-08・FMX-H2O-09・FMX-H2O-10）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -131,3 +133,4 @@
 | Rev. H | 2026-10-08 | ECLSS 下位要求書 SSD-RQL-ECL-001 への参照を注記（Rev. BK） |
 | Rev. I | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記、ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
 | Rev. J | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（12文。うち本文を改めた3文に注記）（Rev. BR） |
+| Rev. K | 2026-10-15 | 機能の故障モードを足した（FMX-H2O-08・FMX-H2O-09・FMX-H2O-10）（Rev. CC） |

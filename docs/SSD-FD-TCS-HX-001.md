@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-TCS-HX-001 |
 | 表題 | 熱取得：熱交換器・コールドプレート網（HX）機能説明書 |
-| 版・日付 | Rev. F／2026-10-11 |
+| 版・日付 | Rev. G／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ATCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図8 熱制御 機能構成 |
@@ -58,6 +58,8 @@
 
 > **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は各燃料電池熱交換器で燃料電池の熱を受け取りECLSS酸素供給ラインのPRSD酸素を加温するとしていたが、ECLSS訓練マニュアル（USA006020 Rev. B）は燃料電池熱交換器で熱を受け取り酸素リストリクタでPCSの極低温酸素を加温するとする。（出典: https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html）（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=18）
 
+> **注記** 機能の故障モード 3件（FMX-TCS-12・FMX-TCS-13・FMX-TCS-14）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS（GlobalSecurity.org 転載） — https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html
@@ -83,3 +85,4 @@
 | Rev. D | 2026-09-30 | IF-EPS-14 に上位 IF-ORB-35 を付記（Rev. I） |
 | Rev. E | 2026-10-01 | 出典を乗員運用マニュアル（SCOM、OI-33）の頁に更新（5文。うち本文を改めた3文に注記）（Rev. Q） |
 | Rev. F | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（7文。うち本文を改めた1文に注記）（Rev. BR） |
+| Rev. G | 2026-10-15 | 機能の故障モードを足した（FMX-TCS-12・FMX-TCS-13・FMX-TCS-14）（Rev. CC） |

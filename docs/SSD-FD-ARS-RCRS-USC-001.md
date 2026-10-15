@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-RCRS-USC-001 |
 | 表題 | 空気回収・均圧（USC）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-RCRS-001 |
 | 関連図 | SSD-SYS-ARC-001 図28 再生式CO2除去装置 機能構成 |
@@ -49,6 +49,8 @@
 
 > **注記** PEV 1・4を開いてベッドを真空へ排気する流れ（起動時とステート6・12）は、図28では吸着・再生ベッドから船外へのIF（IF-RCRS-03）に含めた。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=219）
 
+> **注記** 機能の故障モード 2件（FMX-RCRS-11・FMX-RCRS-12）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 付録C.2.2 RCRS Hardware（続き）（PDF p217） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=217
@@ -66,3 +68,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-RCRS-11・FMX-RCRS-12）（Rev. CC） |

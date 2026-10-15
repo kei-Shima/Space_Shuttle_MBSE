@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-PCS-OPS-001 |
 | 表題 | 与圧運用管理（OPS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-PCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図18 圧力制御系 機能構成 |
@@ -71,6 +71,8 @@ PCSの系統の切替と飛行段階ごとの弁構成、ブリードオリフ�
 
 > **注記** SCOMは、飛行の初めに10.2 psiaへの減圧を予定する場合、消耗品を節約するためPCS 1の構成を10.2 psia運用が終わるまで遅らせることがあるとする（オービタのO2・N2でISSを再与圧・補給する飛行など）。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/404）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-251 Normal PCS Configuration（PDF p1964） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1964
@@ -97,3 +99,4 @@ PCSの系統の切替と飛行段階ごとの弁構成、ブリードオリフ�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

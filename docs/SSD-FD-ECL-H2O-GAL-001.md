@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-H2O-GAL-001 |
 | 表題 | 飲料水供給（GAL）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-H2O-001 |
 | 関連図 | SSD-SYS-ARC-001 図20 給水・廃水系 機能構成 |
@@ -61,6 +61,8 @@
 
 > **注記** 検証メモ：ギャレーの冷水の温度を、SCOM 2.12節は40〜60°F、1988年版マニュアル（SSD-H2O-REF-001のWA-10）は45〜55°Fとする。本書はSCOMの値を用いた。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/465）
 
+> **注記** 機能の故障モード 3件（FMX-H2O-11・FMX-H2O-12・FMX-H2O-13）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Contingency Crosstie・Galley Water Supply（PDF p400） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/400
@@ -84,3 +86,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-H2O-11・FMX-H2O-12・FMX-H2O-13）（Rev. CC） |

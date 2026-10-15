@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-WCS-OPS-001 |
 | 表題 | 制御・運用管理（OPS）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-WCS-001 |
 | 関連図 | SSD-SYS-ARC-001 図22 廃棄物収集系 機能構成 |
@@ -59,6 +59,8 @@ WCSの制御器（MODE・FAN SEP・バイパススイッチ、VACUUM VALVE）に
 
 > **注記** IOAのFMEA/CIL評価（1988年）は、別の故障が重なれば代替の収集手段が要りうるWCSの「off nominal」な故障を臨界度3/2Rとしたが、NASAのFMEAはミッションに必須でない故障としていた。（出典: https://ntrs.nasa.gov/api/citations/19900002467/downloads/19900002467.pdf#page=69）
 
+> **注記** 機器を持たず機器の故障モードが当てはまらないと判断し、[SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) の判断済みの機能ブロックに区分した（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.25節 Operations（PDF p758） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/758
@@ -81,3 +83,4 @@ WCSの制御器（MODE・FAN SEP・バイパススイッチ、VACUUM VALVE）に
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 故障解析の扱いを判断済みの機能ブロックに区分した（Rev. CC） |

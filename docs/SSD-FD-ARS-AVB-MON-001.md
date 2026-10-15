@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-AVB-MON-001 |
 | 表題 | 温度・差圧監視（MON）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ARS-AVB-001 |
 | 関連図 | SSD-SYS-ARC-001 図32 アビオニクスベイ空冷 機能構成 |
@@ -65,6 +65,8 @@
 
 > **注記** 信号調整器の電源（AC φB）は、ARSの段のIF-ARS-34（ベイファンの三相交流）の下位（IF-AVB-15）として示した。（出典: https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=92）
 
+> **注記** 機能の故障モード 1件（FMX-AVB-05）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. USA006020 Rev. B（ECLSS 21002） Environmental Control and Life Support System（訓練マニュアル） 3.5節 ARS Instrumentation and Displays（PDF p74） — https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=74
@@ -87,3 +89,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-AVB-05）（Rev. CC） |

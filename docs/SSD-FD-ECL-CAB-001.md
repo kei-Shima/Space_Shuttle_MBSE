@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-CAB-001 |
 | 表題 | 乗員室環境（制御対象）機能説明書 |
-| 版・日付 | Rev. D／2026-10-11 |
+| 版・日付 | Rev. E／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECLSS-001 |
 | 関連図 | SSD-SYS-ARC-001 図3 ECLSS 機能構成 |
@@ -40,6 +40,8 @@ ECLSSが制御する対象である乗員室の環境条件と、各機能との
 
 > **注記** 出典の更新（1988年版 → 新しい資料）：1988年版は乗員室の容積を2,300 ft³としていたが、SCOM（OI-33）は2,475 ft³とし、外部エアロックを合わせて約2,703 ft³とする。（出典: https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_eclss.html）（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/359）
 
+> **注記** 機能の故障モード 3件（FMX-CAB-01・FMX-CAB-02・FMX-CAB-03）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 5. 参考文献
 
 1. NASA Human Space Flight – Shuttle Reference: ECLSS Overview — https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/overview.html
@@ -67,3 +69,4 @@ ECLSSが制御する対象である乗員室の環境条件と、各機能との
 | Rev. B | 2026-10-01 | IF-ECL-17 の上位・下位を所有文書（SSD-FD-ECL-ALS-001）にそろえた、IF-ECL-05 の上位・下位を所有文書（SSD-FD-ECL-ARS-001）にそろえた、IF-ECL-02 の上位・下位を所有文書（SSD-FD-ECL-PCS-001）にそろえた、IF-ECL-19 の上位・下位を所有文書（SSD-FD-ECL-FDS-001）にそろえた、IF-ECL-31 の上位・下位を所有文書（SSD-FD-ECL-WCS-001）にそろえた（Rev. M） |
 | Rev. C | 2026-10-08 | 内部ブロック図の機能ブロックをまたぐ流れの IF IF-H2O-16 を足した（GAP-09 の解消）（Rev. BI） |
 | Rev. D | 2026-10-11 | 1988年版の出典を新しい資料（SCOM OI-33・ECLSS 訓練マニュアルなど）の頁に更新（4文。うち本文を改めた2文に注記）（Rev. BR） |
+| Rev. E | 2026-10-15 | 機能の故障モードを足した（FMX-CAB-01・FMX-CAB-02・FMX-CAB-03）（Rev. CC） |

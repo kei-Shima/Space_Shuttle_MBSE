@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ARS-CO2-001 |
 | 表題 | CO2・CO除去（LiOH・ATCO）機能説明書 |
-| 版・日付 | Rev. C／2026-10-09 |
+| 版・日付 | Rev. D／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-ARS-001 |
 | 関連図 | SSD-SYS-ARC-001 図12 ARS 機能構成 |
@@ -82,6 +82,8 @@
 
 > **注記** LiOH キャニスタの交換の活動（図173）は [SSD-BEH-ORB-007](SSD-BEH-ORB-007.md) に示す（SysML v2 テキスト：SysML/SSD-BEH-ORB-007.sysml）。
 
+> **注記** 機能の故障モード 2件（FMX-CO2-01・FMX-CO2-02）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 7. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p370） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370
@@ -106,3 +108,4 @@
 | Rev. A | 2026-09-28 | 下位機能説明書（5件）と図14・図15への展開を追加し、PPCO2計測の機能（F-ARS-CO2-11）とIF-ARS-37・38を追加、IF-ARS-01・05・37・38に下位IF（IF-CO2）を付記、検証メモ（ATCOの構成）と注記（PPCO2計測の割当て）を追加 |
 | Rev. B | 2026-10-01 | IF-ARS-38 の上位を IF-ECL-39 に付け替え、IF-ARS-37 の上位を IF-ECL-29 に付け替え（Rev. M） |
 | Rev. C | 2026-10-09 | ECLSS の状態遷移と活動定義書 SSD-BEH-ORB-007 への参照を注記（Rev. BL） |
+| Rev. D | 2026-10-15 | 機能の故障モードを足した（FMX-CO2-01・FMX-CO2-02）（Rev. CC） |

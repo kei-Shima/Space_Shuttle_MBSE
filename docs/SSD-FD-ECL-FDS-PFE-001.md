@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-ECL-FDS-PFE-001 |
 | 表題 | 携帯消火器・消火ポート（PFE）機能説明書 |
-| 版・日付 | 初版（Rev. -）／2026-09-30 |
+| 版・日付 | Rev. A／2026-10-15 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ECL-FDS-001 |
 | 関連図 | SSD-SYS-ARC-001 図26 煙検知・消火系 機能構成 |
@@ -57,6 +57,8 @@
 
 > **注記** 飛行運用マニュアルの操作表（表3.24-1）は、携帯消火器の手順を、遠隔操作の固定消火が不十分な場合またはベイ1・2・3以外の火災で使うとし、Spacelabの煙検知の表示・操作はパネルR7にあるとする。Spacelabは本モデルの機能ブロックに含めない。（出典: https://www.ibiblio.org/apollo/Shuttle/46635652-Shuttle-Flight-Operations-Manual-Vol-12-Crew-Systems.pdf#page=583）
 
+> **注記** 機能の故障モード 3件（FMX-FDS-07・FMX-FDS-08・FMX-FDS-09）を [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) に示す（Rev. CC）。
+
 ## 6. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.2節 Fire and Smoke Subsystem Control Circuit Breakers・携帯消火器（PDF p121） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/121
@@ -78,3 +80,4 @@
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-09-30 | 初版作成（公開資料に基づく検討用） |
+| Rev. A | 2026-10-15 | 機能の故障モードを足した（FMX-FDS-07・FMX-FDS-08・FMX-FDS-09）（Rev. CC） |
