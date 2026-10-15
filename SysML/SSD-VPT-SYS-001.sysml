@@ -2297,7 +2297,7 @@ package SSD_VPT_SYS_001 {
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 330; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 331; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -2341,5 +2341,6 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "LDGS-・LDGT-・VNTS-・VNTT-・CWSS-・CWST-・PRLS-・PRLT-・ESCS-・ESCT-"; form = "<名前>S-・<名前>T-<2桁>"; meaning = "MECH・C/W・PLS・CREW の状態・遷移"; example = "LDGT-03"; count = 179; }
         @IdConvention { prefix = "LRQ-・VC-LRQ-"; form = "LRQ-<系>-<2桁>・VC-LRQ-…"; meaning = "L3 の要求（ECLSS 以外の系）・その検証ケース"; example = "LRQ-GNC-01"; count = 914; }
         @IdConvention { prefix = "TRJ-P・TRJ-M・TRJ-S・TRJ-V・TRJ-E"; form = "TRJ-<P|M|S|V|E><2桁>"; meaning = "上昇・再突入のモデルのパラメータ・式・シナリオ・比較・照合"; example = "TRJ-S01"; count = 49; }
+        @IdConvention { prefix = "ACR-"; form = "ACR-<3桁>"; meaning = "略語表の行（略称と正式名称）"; example = "ACR-001"; count = 0; }
     }
 }

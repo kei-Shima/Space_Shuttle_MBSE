@@ -3,9 +3,10 @@
 A model-based systems engineering (MBSE) package that reconstructs the system design of the Space Shuttle from publicly available documents: diagrams, design documents, and SysML v2 models that are linked to each other.
 
 - **Browse online:** <https://kei-shima.github.io/Space_Shuttle_MBSE/>
-- Revision: Rev. BZ (2026-10-12)
-- Contents: 232 diagrams (draw.io, exported as SVG and PNG), 330 design documents (HTML and Markdown), 49 SysML v2 text files
+- Revision: Rev. CA (2026-10-15)
+- Contents: 232 diagrams (draw.io, exported as SVG and PNG), 331 design documents (HTML and Markdown), 49 SysML v2 text files
 - Japanese README (the primary one): [README.md](README.md)
+- Acronym list (English abbreviations and full names): [docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)
 
 This is a study built from public sources. It is not a NASA product and is not an official description of the vehicle.
 
@@ -28,7 +29,7 @@ Identifiers are language-neutral and are the same everywhere: document numbers (
 | Variants | Differences between Orbiter vehicles and flights, flight test results (STS-1, STS-3) |
 | Human systems | A row-by-row comparison with NASA-STD-3001 (crew health and human factors), task analysis, crew interfaces, habitability, and medical |
 
-The documents cite their public sources by URL, and mark the places where the package made its own judgment. [REFERENCES.md](REFERENCES.md) lists the 243 sources.
+The documents cite their public sources by URL, and mark the places where the package made its own judgment. [REFERENCES.md](REFERENCES.md) lists the 245 sources.
 
 ## Browse online
 
@@ -53,7 +54,7 @@ On github.com, HTML files are shown as source. To read on github.com instead, st
 | `html/index.html`, `html/index_*.html` | Document index | Browser |
 | `html/*.svg` | The 232 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
 | `html/preview/*.png` | PNG versions of the diagrams | Image viewer |
-| `html/docs/*.html` | The 330 documents | Browser |
+| `html/docs/*.html` | The 331 documents | Browser |
 | `docs/*.md` | Markdown version of the same documents | github.com, VS Code |
 | `SysML/*.sysml` | 49 SysML v2 text files | VS Code (see below) |
 | `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (232 pages) | draw.io |

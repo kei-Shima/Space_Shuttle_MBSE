@@ -4,9 +4,10 @@
 
 - ブラウザで見る：<https://kei-shima.github.io/Space_Shuttle_MBSE/>（GitHub Pages。図書一覧から図と説明書へ進めます）
 - English: [README.en.md](README.en.md)
-- 版：Rev. BZ（2026-10-12）
-- 中身：図 232枚（draw.io、SVG・PNG）、説明書 330件（HTML と Markdown）、SysML v2 テキスト 49件
+- 版：Rev. CA（2026-10-15）
+- 中身：図 232枚（draw.io、SVG・PNG）、説明書 331件（HTML と Markdown）、SysML v2 テキスト 49件
 - 図書一覧：[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md)
+- 英語の略称の正式名称：[docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)（略語表）
 - 参照した公開資料の一覧：[REFERENCES.md](REFERENCES.md)
 
 ## フォルダ構成
@@ -17,7 +18,7 @@
 | `html/index_*.html` | 図書一覧の内容ごとのページ（使い方・出典、図面、文書一覧、インタフェース一覧、注記、変更履歴） | ブラウザ（index.html から） |
 | `html/*.svg` | 図 232枚（SSD-SYS-ARC-001_p<番号>_<名前>.svg） | ブラウザ（index.html から） |
 | `html/preview/*.png` | 図の PNG（index_figures.html の縮小表示に使う） | 画像ビューア |
-| `html/docs/*.html` | 説明書 330件 | ブラウザ（index.html から） |
+| `html/docs/*.html` | 説明書 331件 | ブラウザ（index.html から） |
 | `docs/*.md` | 説明書の Markdown 原稿（html/docs と同じ内容） | GitHub の画面、VS Code |
 | `docs/SSD-SYS-IDX-001.md` | 図書一覧（図・文書・変更履歴の一覧） | GitHub の画面、VS Code |
 | `SysML/*.sysml` | SysML v2 テキスト 49件 | VS Code（下記の拡張機能） |

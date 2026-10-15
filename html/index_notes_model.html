@@ -77,8 +77,8 @@ summary{cursor:pointer;font-size:.9rem;color:var(--link)}
 <nav class="pages" aria-label="図書一覧のページ"><a href="index.html">図書一覧</a><a href="index_guide.html">使い方・出典</a><a href="index_figures.html">図面</a><a href="index_documents.html">文書一覧</a><a href="index_interfaces.html">インタフェース一覧</a><a href="index_notes.html">注記</a><a href="index_history.html">変更履歴</a></nav>
 <h2>5. 注記（出典間の相違・構成変更）</h2>
 <nav class="pages sub" aria-label="注記のページ"><a href="index_notes_vehicle.html">システム全体・推進</a><a href="index_notes_avionics.html">誘導制御・データ処理・通信・警報</a><a href="index_notes_power.html">電力・油圧・熱</a><a href="index_notes_crew.html">構造・機構・ペイロード・乗員・船外活動</a><a href="index_notes_eclss.html">環境制御・生命維持系（ECLSS）</a><a href="index_notes_ars.html">大気再生系（ARS）とその下位</a><a href="index_notes_ops.html">運用・振る舞い・要求・検証</a><a href="index_notes_model.html" aria-current="page">構成・資源・安全</a><a href="index_notes_hsi.html">人間系</a></nav>
-<ul class="toc"><li><a href="#g-arch">構成・インタフェース・物理配置・モデル管理</a><span class="n">186件</span></li><li><a href="#g-cfg">構成の違い（機体・飛行）</a><span class="n">24件</span></li><li><a href="#g-res">資源・マージン</a><span class="n">58件</span></li><li><a href="#g-saf">安全・故障</a><span class="n">159件</span></li></ul>
-<h3 id="g-arch">構成・インタフェース・物理配置・モデル管理<span class="n">10文書・186件</span><a class="more" href="index_documents.html#g-arch">文書一覧</a></h3>
+<ul class="toc"><li><a href="#g-arch">構成・インタフェース・物理配置・モデル管理</a><span class="n">188件</span></li><li><a href="#g-cfg">構成の違い（機体・飛行）</a><span class="n">24件</span></li><li><a href="#g-res">資源・マージン</a><span class="n">58件</span></li><li><a href="#g-saf">安全・故障</a><span class="n">159件</span></li></ul>
+<h3 id="g-arch">構成・インタフェース・物理配置・モデル管理<span class="n">11文書・188件</span><a class="more" href="index_documents.html#g-arch">文書一覧</a></h3>
 <!--[notes:arch]-->
 <div class='note'><b><a href='docs/SSD-EMU-EVA-001.html'>SSD-EMU-EVA-001</a></b>　EMU の機器は機能説明書・構造モデルの機能ブロックに増やさず、本書の構造（Emu）に置いた。機器配分表は EMU 全体の行（PHY-EVA-01）のままで、Emu がその特化である（本書の判断）。</div>
 <div class='note'><b><a href='docs/SSD-EMU-EVA-001.html'>SSD-EMU-EVA-001</a></b>　流れの値には、シャトルの時代の資料の値と、ISS の時代の EMU の論文の値がある。ISS の時代の値は流れの補足に書いて区別した。</div>
@@ -266,6 +266,8 @@ summary{cursor:pointer;font-size:.9rem;color:var(--link)}
 <div class='note'><b><a href='docs/SSD-PHY-ORB-001.html'>SSD-PHY-ORB-001</a></b>　PHY-GNC-01〜06 の機器の接続と流れ（図191・192）は <a href='docs/SSD-GNC-ORB-001.html'>SSD-GNC-ORB-001</a> に示す（SysML v2 テキスト：<a href='../SysML/SSD-GNC-ORB-001.sysml'>SysML/SSD-GNC-ORB-001.sysml</a>）。</div>
 <div class='note'><b><a href='docs/SSD-PHY-ORB-001.html'>SSD-PHY-ORB-001</a></b>　PHY-TPS-01〜05 の機器の熱の流れ（図202）は <a href='docs/SSD-ETS-SYS-001.html'>SSD-ETS-SYS-001</a> に示す（SysML v2 テキスト：<a href='../SysML/SSD-ETS-SYS-001.sysml'>SysML/SSD-ETS-SYS-001.sysml</a>）。</div>
 <div class='note'><b><a href='docs/SSD-PHY-ORB-001.html'>SSD-PHY-ORB-001</a></b>　MECH・C/W・PLS・STR・CREW の機器の接続と流れ（図214〜218）は <a href='docs/SSD-BEH-ORB-008.html'>SSD-BEH-ORB-008</a> に示す（SysML v2 テキスト：<a href='../SysML/SSD-BEH-ORB-008.sysml'>SysML/SSD-BEH-ORB-008.sysml</a>）。</div>
+<div class='note'><b><a href='docs/SSD-ACR-SYS-001.html'>SSD-ACR-SYS-001</a></b>　付録A の綴りが誤っているものは、そのまま写した。日本語名は、公開資料の訳ではなく本書の訳である。</div>
+<div class='note'><b><a href='docs/SSD-ACR-SYS-001.html'>SSD-ACR-SYS-001</a></b>　付録A は 2002年版の運用飛行規則の付録で、略称の意味は当時のものである。同じ略称が別の意味を持つ語（RCC＝強化カーボン・カーボン、HSI＝人間系の統合 など）は、本書の使い方で行を分けた。</div>
 <!--[/notes:arch]-->
 <h3 id="g-cfg">構成の違い（機体・飛行）<span class="n">3文書・24件</span><a class="more" href="index_documents.html#g-cfg">文書一覧</a></h3>
 <!--[notes:cfg]-->
