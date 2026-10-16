@@ -3,7 +3,7 @@
 A model-based systems engineering (MBSE) package that reconstructs the system design of the Space Shuttle from publicly available documents: diagrams, design documents, and SysML v2 models that are linked to each other.
 
 - **Browse online:** <https://kei-shima.github.io/Space_Shuttle_MBSE/>
-- Revision: Rev. CH (2026-10-16)
+- Revision: Rev. CI (2026-10-16)
 - Contents: 248 diagrams (draw.io, exported as SVG and PNG), 331 design documents (HTML and Markdown), 49 SysML v2 text files
 - Japanese README (the primary one): [README.md](README.md)
 - Acronym list (English abbreviations and full names): [docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)

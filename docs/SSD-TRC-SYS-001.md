@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-TRC-SYS-001 |
 | 表題 | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） |
-| 版・日付 | Rev. W／2026-10-16 |
+| 版・日付 | Rev. X／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図115 トレースの連鎖（要素の種類と関係）・図116 系ごとのトレース網羅・図117 変更の影響分析 |
@@ -113,7 +113,7 @@
 
 | ID | 切れ目 | 判断 | 件数 | 説明 |
 |---|---|---|---|---|
-| GAP-01 | 検証の判定が pass でない要求 | 判断済み | 215 | 検証の根拠が見つからない要求（判定 inconclusive）。理由は各要求書の検証の節と SSD-VER-SYS-001 にある。 |
+| GAP-01 | 検証の判定が pass でない要求 | 判断済み | 215 | 検証の根拠が見つからない要求（判定 inconclusive）。理由は各要求書の検証の節と SSD-VER-SYS-001 にある。区分は §7（Rev. CI）：区分1 記録の食い違い 7件、区分2 起きていない事象 55件、区分3 解析の結果なし 26件、区分4 関連記録のみ 49件、区分5 記録なし 78件。 |
 | GAP-02 | 要求なしで妥当と判断した機能行 | 判断済み | 138 | 系の全般の記述か、同じ下位機能の要求が受け持つ構成・運用の記述（各要求書の §5・§6）。 |
 | GAP-03 | トレースの対象外の機能行 | 範囲外 | 10 | 要求書のトレース表の対象でない文書の機能行。ECLSS の第2段より下は Rev. BK で ECLSS 下位要求書（SSD-RQL-ECL-001）の対象にした。残りは要求書のトレースの対象の外の文書（外部系 SSD-FD-EXT-001 とオービタの親 SSD-FD-ORB-001）の行。 |
 | GAP-04 | 要求の割付先でない IF | 方針 | 519 | 上位の IF（IF-SYS・IF-ORB）は Rev. BV でインタフェース要求書（SSD-IRQ-SYS-001）の要求の割付先にした。下位の IF（系の中の IF）は、要求を主に機能行に割り付けたため、IF そのものを割付先にした要求は少ない。下位の IF の要求は今後の課題。 |
@@ -126,227 +126,267 @@
 | GAP-11 | 機能ブロックの中の流れ（IF にしない） | 判断済み | 153 | 同じ機能ブロックの中の機器どうしの流れ。IF は機能ブロックの境界で定義するので、IF にしない（SSD-IBD-ORB-001 の IF との対応、Rev. AU）。 |
 | GAP-12 | 故障モードが当てはまらないと判断した機能ブロック | 判断済み | 11 | 運用管理（OPS）・監視（MON）のブロックは機器を持たず、機器の故障モードが当てはまらない。理由は SSD-FMX-ECL-001 の「判断済みの機能ブロック」にある。 |
 
+### GAP-01 の理由の区分（Rev. CI）
+
+検証の根拠が無い 215件（判定 inconclusive）の理由を、各要求書の理由の文を読んで 5つの区分に分けた（Rev. CI。区分は本書の判断で、状態と理由の文は変えていない）。上から順に見て、最初に当てはまった区分に入れる。区分1：満たさなかった側の記録、または要求の文・値と資料の値の食い違いが、理由の文に書いてある。区分2：要求が想定する事象の発生・機能の使用（飛行中の作動、運用での使用、故障の処置）の記録が無いと理由の文が述べる（「飛行は無い」「起きていない」と書いたものと、「した記録は見つからなかった」と書いたものを含む）。区分3：検証方法が A（解析）で、解析の結果・本体が公開資料に無い、または挙げた記録・根拠の欄が解析ではないと理由の文が述べる。区分4：理由の文が最初に挙げるのが、別の機器・故障・間接の関連する記録で、それが要求の機能・値・構成を確かめていない。区分5：それ以外で、検査・試験・計測の記録が見つからない（構成・寸法・設計値の検査や認定試験の記録が公開されていないものが多い）。区分2 と 3 の両方に当たるものは区分2 に入れる。
+
+区分ごとの件数を検証方法別に示す。
+
+| 区分 | 理由 | A 解析 | T 試験 | I 検査 | D 実証 | 計 |
+|---|---|---|---|---|---|---|
+| 区分1 | 記録が食い違う（満たさなかった記録、または要求の文・値と資料の食い違い） | 1 | 3 | 2 | 1 | 7 |
+| 区分2 | 起きていない事象・使われた記録の無い機能（事象の発生・機能の使用の記録が無い） | 27 | 9 | 1 | 18 | 55 |
+| 区分3 | 解析の結果が公開資料に無い（解析で確かめる要求） | 26 | 0 | 0 | 0 | 26 |
+| 区分4 | 関連記録はあるが、要求の機能・値・構成を確かめていない | 0 | 24 | 13 | 12 | 49 |
+| 区分5 | 検査・試験・計測・運用の記録が公開資料に無い | 0 | 34 | 44 | 0 | 78 |
+| 計 | — | 54 | 70 | 60 | 31 | 215 |
+
+系ごとの件数を区分別に示す。SSD-RQL-SYS-001 の 17系 204件、SSD-RQL-ECL-001（REQ-）10件、SSD-IRQ-SYS-001（IRQ-）1件。図225 は 17系の 204件を区分で割って示す。
+
+| 系 | 区分1 記録の食い違い | 区分2 起きていない事象 | 区分3 解析の結果なし | 区分4 関連記録のみ | 区分5 記録なし | 計 |
+|---|---|---|---|---|---|---|
+| APU | 1 | 4 | 1 | 1 | 3 | 10 |
+| CREW | 0 | 5 | 1 | 2 | 10 | 18 |
+| CT | 0 | 1 | 1 | 2 | 6 | 10 |
+| CW | 0 | 4 | 1 | 2 | 7 | 14 |
+| DPS | 0 | 5 | 3 | 2 | 6 | 16 |
+| EPS | 0 | 0 | 0 | 5 | 5 | 10 |
+| EVA | 1 | 4 | 4 | 3 | 4 | 16 |
+| GNC | 0 | 2 | 0 | 2 | 1 | 5 |
+| MECH | 0 | 3 | 1 | 5 | 3 | 12 |
+| MPS | 0 | 6 | 1 | 3 | 2 | 12 |
+| OMS | 0 | 6 | 3 | 7 | 0 | 16 |
+| PLS | 0 | 2 | 0 | 3 | 3 | 8 |
+| RCS | 0 | 2 | 3 | 0 | 7 | 12 |
+| STR | 0 | 1 | 4 | 1 | 9 | 15 |
+| TPS | 0 | 0 | 0 | 5 | 0 | 5 |
+| ET | 2 | 2 | 2 | 4 | 6 | 16 |
+| SRB | 2 | 2 | 1 | 2 | 2 | 9 |
+| ECLSS 下位（REQ-） | 0 | 6 | 0 | 0 | 4 | 10 |
+| インタフェース要求（IRQ-） | 1 | 0 | 0 | 0 | 0 | 1 |
+| 計 | 7 | 55 | 26 | 49 | 78 | 215 |
+
 ## 8. 切れ目の一覧
 
 分類 GAP-01・GAP-06・GAP-09・GAP-10 の要素 215件を示す（SysML では各要素に TraceGap の metadata を付けた）。ほかの分類は件数が多いので §8 に系ごとの件数で示す。
 
 | ID | 要素 | 種類 | 系 | 内容 |
 |---|---|---|---|---|
-| GAP-01-01 | VC-IRQ-ORB-28 | 検証ケース | — | IRQ-ORB-28 の検証（判定 inconclusive） |
-| GAP-01-02 | VC-LRQ-APU-03 | 検証ケース | — | LRQ-APU-03 の検証（判定 inconclusive） |
-| GAP-01-03 | VC-LRQ-APU-04 | 検証ケース | — | LRQ-APU-04 の検証（判定 inconclusive） |
-| GAP-01-04 | VC-LRQ-APU-06 | 検証ケース | — | LRQ-APU-06 の検証（判定 inconclusive） |
-| GAP-01-05 | VC-LRQ-APU-07 | 検証ケース | — | LRQ-APU-07 の検証（判定 inconclusive） |
-| GAP-01-06 | VC-LRQ-APU-08 | 検証ケース | — | LRQ-APU-08 の検証（判定 inconclusive） |
-| GAP-01-07 | VC-LRQ-APU-11 | 検証ケース | — | LRQ-APU-11 の検証（判定 inconclusive） |
-| GAP-01-08 | VC-LRQ-APU-13 | 検証ケース | — | LRQ-APU-13 の検証（判定 inconclusive） |
-| GAP-01-09 | VC-LRQ-APU-15 | 検証ケース | — | LRQ-APU-15 の検証（判定 inconclusive） |
-| GAP-01-10 | VC-LRQ-APU-21 | 検証ケース | — | LRQ-APU-21 の検証（判定 inconclusive） |
-| GAP-01-11 | VC-LRQ-APU-22 | 検証ケース | — | LRQ-APU-22 の検証（判定 inconclusive） |
-| GAP-01-12 | VC-LRQ-CREW-01 | 検証ケース | — | LRQ-CREW-01 の検証（判定 inconclusive） |
-| GAP-01-13 | VC-LRQ-CREW-02 | 検証ケース | — | LRQ-CREW-02 の検証（判定 inconclusive） |
-| GAP-01-14 | VC-LRQ-CREW-06 | 検証ケース | — | LRQ-CREW-06 の検証（判定 inconclusive） |
-| GAP-01-15 | VC-LRQ-CREW-07 | 検証ケース | — | LRQ-CREW-07 の検証（判定 inconclusive） |
-| GAP-01-16 | VC-LRQ-CREW-10 | 検証ケース | — | LRQ-CREW-10 の検証（判定 inconclusive） |
-| GAP-01-17 | VC-LRQ-CREW-12 | 検証ケース | — | LRQ-CREW-12 の検証（判定 inconclusive） |
-| GAP-01-18 | VC-LRQ-CREW-13 | 検証ケース | — | LRQ-CREW-13 の検証（判定 inconclusive） |
-| GAP-01-19 | VC-LRQ-CREW-16 | 検証ケース | — | LRQ-CREW-16 の検証（判定 inconclusive） |
-| GAP-01-20 | VC-LRQ-CREW-18 | 検証ケース | — | LRQ-CREW-18 の検証（判定 inconclusive） |
-| GAP-01-21 | VC-LRQ-CREW-21 | 検証ケース | — | LRQ-CREW-21 の検証（判定 inconclusive） |
-| GAP-01-22 | VC-LRQ-CREW-23 | 検証ケース | — | LRQ-CREW-23 の検証（判定 inconclusive） |
-| GAP-01-23 | VC-LRQ-CREW-24 | 検証ケース | — | LRQ-CREW-24 の検証（判定 inconclusive） |
-| GAP-01-24 | VC-LRQ-CREW-25 | 検証ケース | — | LRQ-CREW-25 の検証（判定 inconclusive） |
-| GAP-01-25 | VC-LRQ-CREW-26 | 検証ケース | — | LRQ-CREW-26 の検証（判定 inconclusive） |
-| GAP-01-26 | VC-LRQ-CREW-27 | 検証ケース | — | LRQ-CREW-27 の検証（判定 inconclusive） |
-| GAP-01-27 | VC-LRQ-CREW-28 | 検証ケース | — | LRQ-CREW-28 の検証（判定 inconclusive） |
-| GAP-01-28 | VC-LRQ-CREW-29 | 検証ケース | — | LRQ-CREW-29 の検証（判定 inconclusive） |
-| GAP-01-29 | VC-LRQ-CREW-30 | 検証ケース | — | LRQ-CREW-30 の検証（判定 inconclusive） |
-| GAP-01-30 | VC-LRQ-CT-01 | 検証ケース | — | LRQ-CT-01 の検証（判定 inconclusive） |
-| GAP-01-31 | VC-LRQ-CT-03 | 検証ケース | — | LRQ-CT-03 の検証（判定 inconclusive） |
-| GAP-01-32 | VC-LRQ-CT-04 | 検証ケース | — | LRQ-CT-04 の検証（判定 inconclusive） |
-| GAP-01-33 | VC-LRQ-CT-08 | 検証ケース | — | LRQ-CT-08 の検証（判定 inconclusive） |
-| GAP-01-34 | VC-LRQ-CT-12 | 検証ケース | — | LRQ-CT-12 の検証（判定 inconclusive） |
-| GAP-01-35 | VC-LRQ-CT-14 | 検証ケース | — | LRQ-CT-14 の検証（判定 inconclusive） |
-| GAP-01-36 | VC-LRQ-CT-15 | 検証ケース | — | LRQ-CT-15 の検証（判定 inconclusive） |
-| GAP-01-37 | VC-LRQ-CT-18 | 検証ケース | — | LRQ-CT-18 の検証（判定 inconclusive） |
-| GAP-01-38 | VC-LRQ-CT-20 | 検証ケース | — | LRQ-CT-20 の検証（判定 inconclusive） |
-| GAP-01-39 | VC-LRQ-CT-22 | 検証ケース | — | LRQ-CT-22 の検証（判定 inconclusive） |
-| GAP-01-40 | VC-LRQ-CW-01 | 検証ケース | — | LRQ-CW-01 の検証（判定 inconclusive） |
-| GAP-01-41 | VC-LRQ-CW-02 | 検証ケース | — | LRQ-CW-02 の検証（判定 inconclusive） |
-| GAP-01-42 | VC-LRQ-CW-04 | 検証ケース | — | LRQ-CW-04 の検証（判定 inconclusive） |
-| GAP-01-43 | VC-LRQ-CW-07 | 検証ケース | — | LRQ-CW-07 の検証（判定 inconclusive） |
-| GAP-01-44 | VC-LRQ-CW-08 | 検証ケース | — | LRQ-CW-08 の検証（判定 inconclusive） |
-| GAP-01-45 | VC-LRQ-CW-09 | 検証ケース | — | LRQ-CW-09 の検証（判定 inconclusive） |
-| GAP-01-46 | VC-LRQ-CW-11 | 検証ケース | — | LRQ-CW-11 の検証（判定 inconclusive） |
-| GAP-01-47 | VC-LRQ-CW-12 | 検証ケース | — | LRQ-CW-12 の検証（判定 inconclusive） |
-| GAP-01-48 | VC-LRQ-CW-13 | 検証ケース | — | LRQ-CW-13 の検証（判定 inconclusive） |
-| GAP-01-49 | VC-LRQ-CW-14 | 検証ケース | — | LRQ-CW-14 の検証（判定 inconclusive） |
-| GAP-01-50 | VC-LRQ-CW-16 | 検証ケース | — | LRQ-CW-16 の検証（判定 inconclusive） |
-| GAP-01-51 | VC-LRQ-CW-17 | 検証ケース | — | LRQ-CW-17 の検証（判定 inconclusive） |
-| GAP-01-52 | VC-LRQ-CW-18 | 検証ケース | — | LRQ-CW-18 の検証（判定 inconclusive） |
-| GAP-01-53 | VC-LRQ-CW-22 | 検証ケース | — | LRQ-CW-22 の検証（判定 inconclusive） |
-| GAP-01-54 | VC-LRQ-DPS-03 | 検証ケース | — | LRQ-DPS-03 の検証（判定 inconclusive） |
-| GAP-01-55 | VC-LRQ-DPS-04 | 検証ケース | — | LRQ-DPS-04 の検証（判定 inconclusive） |
-| GAP-01-56 | VC-LRQ-DPS-07 | 検証ケース | — | LRQ-DPS-07 の検証（判定 inconclusive） |
-| GAP-01-57 | VC-LRQ-DPS-08 | 検証ケース | — | LRQ-DPS-08 の検証（判定 inconclusive） |
-| GAP-01-58 | VC-LRQ-DPS-10 | 検証ケース | — | LRQ-DPS-10 の検証（判定 inconclusive） |
-| GAP-01-59 | VC-LRQ-DPS-13 | 検証ケース | — | LRQ-DPS-13 の検証（判定 inconclusive） |
-| GAP-01-60 | VC-LRQ-DPS-14 | 検証ケース | — | LRQ-DPS-14 の検証（判定 inconclusive） |
-| GAP-01-61 | VC-LRQ-DPS-15 | 検証ケース | — | LRQ-DPS-15 の検証（判定 inconclusive） |
-| GAP-01-62 | VC-LRQ-DPS-17 | 検証ケース | — | LRQ-DPS-17 の検証（判定 inconclusive） |
-| GAP-01-63 | VC-LRQ-DPS-18 | 検証ケース | — | LRQ-DPS-18 の検証（判定 inconclusive） |
-| GAP-01-64 | VC-LRQ-DPS-20 | 検証ケース | — | LRQ-DPS-20 の検証（判定 inconclusive） |
-| GAP-01-65 | VC-LRQ-DPS-22 | 検証ケース | — | LRQ-DPS-22 の検証（判定 inconclusive） |
-| GAP-01-66 | VC-LRQ-DPS-23 | 検証ケース | — | LRQ-DPS-23 の検証（判定 inconclusive） |
-| GAP-01-67 | VC-LRQ-DPS-25 | 検証ケース | — | LRQ-DPS-25 の検証（判定 inconclusive） |
-| GAP-01-68 | VC-LRQ-DPS-29 | 検証ケース | — | LRQ-DPS-29 の検証（判定 inconclusive） |
-| GAP-01-69 | VC-LRQ-DPS-30 | 検証ケース | — | LRQ-DPS-30 の検証（判定 inconclusive） |
-| GAP-01-70 | VC-LRQ-EPS-01 | 検証ケース | — | LRQ-EPS-01 の検証（判定 inconclusive） |
-| GAP-01-71 | VC-LRQ-EPS-02 | 検証ケース | — | LRQ-EPS-02 の検証（判定 inconclusive） |
-| GAP-01-72 | VC-LRQ-EPS-04 | 検証ケース | — | LRQ-EPS-04 の検証（判定 inconclusive） |
-| GAP-01-73 | VC-LRQ-EPS-08 | 検証ケース | — | LRQ-EPS-08 の検証（判定 inconclusive） |
-| GAP-01-74 | VC-LRQ-EPS-09 | 検証ケース | — | LRQ-EPS-09 の検証（判定 inconclusive） |
-| GAP-01-75 | VC-LRQ-EPS-10 | 検証ケース | — | LRQ-EPS-10 の検証（判定 inconclusive） |
-| GAP-01-76 | VC-LRQ-EPS-11 | 検証ケース | — | LRQ-EPS-11 の検証（判定 inconclusive） |
-| GAP-01-77 | VC-LRQ-EPS-12 | 検証ケース | — | LRQ-EPS-12 の検証（判定 inconclusive） |
-| GAP-01-78 | VC-LRQ-EPS-15 | 検証ケース | — | LRQ-EPS-15 の検証（判定 inconclusive） |
-| GAP-01-79 | VC-LRQ-EPS-18 | 検証ケース | — | LRQ-EPS-18 の検証（判定 inconclusive） |
-| GAP-01-80 | VC-LRQ-ET-01 | 検証ケース | — | LRQ-ET-01 の検証（判定 inconclusive） |
-| GAP-01-81 | VC-LRQ-ET-03 | 検証ケース | — | LRQ-ET-03 の検証（判定 inconclusive） |
-| GAP-01-82 | VC-LRQ-ET-04 | 検証ケース | — | LRQ-ET-04 の検証（判定 inconclusive） |
-| GAP-01-83 | VC-LRQ-ET-05 | 検証ケース | — | LRQ-ET-05 の検証（判定 inconclusive） |
-| GAP-01-84 | VC-LRQ-ET-07 | 検証ケース | — | LRQ-ET-07 の検証（判定 inconclusive） |
-| GAP-01-85 | VC-LRQ-ET-09 | 検証ケース | — | LRQ-ET-09 の検証（判定 inconclusive） |
-| GAP-01-86 | VC-LRQ-ET-10 | 検証ケース | — | LRQ-ET-10 の検証（判定 inconclusive） |
-| GAP-01-87 | VC-LRQ-ET-11 | 検証ケース | — | LRQ-ET-11 の検証（判定 inconclusive） |
-| GAP-01-88 | VC-LRQ-ET-12 | 検証ケース | — | LRQ-ET-12 の検証（判定 inconclusive） |
-| GAP-01-89 | VC-LRQ-ET-13 | 検証ケース | — | LRQ-ET-13 の検証（判定 inconclusive） |
-| GAP-01-90 | VC-LRQ-ET-15 | 検証ケース | — | LRQ-ET-15 の検証（判定 inconclusive） |
-| GAP-01-91 | VC-LRQ-ET-16 | 検証ケース | — | LRQ-ET-16 の検証（判定 inconclusive） |
-| GAP-01-92 | VC-LRQ-ET-20 | 検証ケース | — | LRQ-ET-20 の検証（判定 inconclusive） |
-| GAP-01-93 | VC-LRQ-ET-24 | 検証ケース | — | LRQ-ET-24 の検証（判定 inconclusive） |
-| GAP-01-94 | VC-LRQ-ET-25 | 検証ケース | — | LRQ-ET-25 の検証（判定 inconclusive） |
-| GAP-01-95 | VC-LRQ-ET-27 | 検証ケース | — | LRQ-ET-27 の検証（判定 inconclusive） |
-| GAP-01-96 | VC-LRQ-EVA-02 | 検証ケース | — | LRQ-EVA-02 の検証（判定 inconclusive） |
-| GAP-01-97 | VC-LRQ-EVA-04 | 検証ケース | — | LRQ-EVA-04 の検証（判定 inconclusive） |
-| GAP-01-98 | VC-LRQ-EVA-08 | 検証ケース | — | LRQ-EVA-08 の検証（判定 inconclusive） |
-| GAP-01-99 | VC-LRQ-EVA-10 | 検証ケース | — | LRQ-EVA-10 の検証（判定 inconclusive） |
-| GAP-01-100 | VC-LRQ-EVA-11 | 検証ケース | — | LRQ-EVA-11 の検証（判定 inconclusive） |
-| GAP-01-101 | VC-LRQ-EVA-12 | 検証ケース | — | LRQ-EVA-12 の検証（判定 inconclusive） |
-| GAP-01-102 | VC-LRQ-EVA-13 | 検証ケース | — | LRQ-EVA-13 の検証（判定 inconclusive） |
-| GAP-01-103 | VC-LRQ-EVA-15 | 検証ケース | — | LRQ-EVA-15 の検証（判定 inconclusive） |
-| GAP-01-104 | VC-LRQ-EVA-18 | 検証ケース | — | LRQ-EVA-18 の検証（判定 inconclusive） |
-| GAP-01-105 | VC-LRQ-EVA-19 | 検証ケース | — | LRQ-EVA-19 の検証（判定 inconclusive） |
-| GAP-01-106 | VC-LRQ-EVA-22 | 検証ケース | — | LRQ-EVA-22 の検証（判定 inconclusive） |
-| GAP-01-107 | VC-LRQ-EVA-23 | 検証ケース | — | LRQ-EVA-23 の検証（判定 inconclusive） |
-| GAP-01-108 | VC-LRQ-EVA-24 | 検証ケース | — | LRQ-EVA-24 の検証（判定 inconclusive） |
-| GAP-01-109 | VC-LRQ-EVA-25 | 検証ケース | — | LRQ-EVA-25 の検証（判定 inconclusive） |
-| GAP-01-110 | VC-LRQ-EVA-26 | 検証ケース | — | LRQ-EVA-26 の検証（判定 inconclusive） |
-| GAP-01-111 | VC-LRQ-EVA-29 | 検証ケース | — | LRQ-EVA-29 の検証（判定 inconclusive） |
-| GAP-01-112 | VC-LRQ-GNC-02 | 検証ケース | — | LRQ-GNC-02 の検証（判定 inconclusive） |
-| GAP-01-113 | VC-LRQ-GNC-07 | 検証ケース | — | LRQ-GNC-07 の検証（判定 inconclusive） |
-| GAP-01-114 | VC-LRQ-GNC-21 | 検証ケース | — | LRQ-GNC-21 の検証（判定 inconclusive） |
-| GAP-01-115 | VC-LRQ-GNC-25 | 検証ケース | — | LRQ-GNC-25 の検証（判定 inconclusive） |
-| GAP-01-116 | VC-LRQ-GNC-27 | 検証ケース | — | LRQ-GNC-27 の検証（判定 inconclusive） |
-| GAP-01-117 | VC-LRQ-MECH-02 | 検証ケース | — | LRQ-MECH-02 の検証（判定 inconclusive） |
-| GAP-01-118 | VC-LRQ-MECH-03 | 検証ケース | — | LRQ-MECH-03 の検証（判定 inconclusive） |
-| GAP-01-119 | VC-LRQ-MECH-08 | 検証ケース | — | LRQ-MECH-08 の検証（判定 inconclusive） |
-| GAP-01-120 | VC-LRQ-MECH-09 | 検証ケース | — | LRQ-MECH-09 の検証（判定 inconclusive） |
-| GAP-01-121 | VC-LRQ-MECH-11 | 検証ケース | — | LRQ-MECH-11 の検証（判定 inconclusive） |
-| GAP-01-122 | VC-LRQ-MECH-12 | 検証ケース | — | LRQ-MECH-12 の検証（判定 inconclusive） |
-| GAP-01-123 | VC-LRQ-MECH-14 | 検証ケース | — | LRQ-MECH-14 の検証（判定 inconclusive） |
-| GAP-01-124 | VC-LRQ-MECH-17 | 検証ケース | — | LRQ-MECH-17 の検証（判定 inconclusive） |
-| GAP-01-125 | VC-LRQ-MECH-18 | 検証ケース | — | LRQ-MECH-18 の検証（判定 inconclusive） |
-| GAP-01-126 | VC-LRQ-MECH-19 | 検証ケース | — | LRQ-MECH-19 の検証（判定 inconclusive） |
-| GAP-01-127 | VC-LRQ-MECH-22 | 検証ケース | — | LRQ-MECH-22 の検証（判定 inconclusive） |
-| GAP-01-128 | VC-LRQ-MECH-23 | 検証ケース | — | LRQ-MECH-23 の検証（判定 inconclusive） |
-| GAP-01-129 | VC-LRQ-MPS-01 | 検証ケース | — | LRQ-MPS-01 の検証（判定 inconclusive） |
-| GAP-01-130 | VC-LRQ-MPS-02 | 検証ケース | — | LRQ-MPS-02 の検証（判定 inconclusive） |
-| GAP-01-131 | VC-LRQ-MPS-06 | 検証ケース | — | LRQ-MPS-06 の検証（判定 inconclusive） |
-| GAP-01-132 | VC-LRQ-MPS-09 | 検証ケース | — | LRQ-MPS-09 の検証（判定 inconclusive） |
-| GAP-01-133 | VC-LRQ-MPS-14 | 検証ケース | — | LRQ-MPS-14 の検証（判定 inconclusive） |
-| GAP-01-134 | VC-LRQ-MPS-15 | 検証ケース | — | LRQ-MPS-15 の検証（判定 inconclusive） |
-| GAP-01-135 | VC-LRQ-MPS-16 | 検証ケース | — | LRQ-MPS-16 の検証（判定 inconclusive） |
-| GAP-01-136 | VC-LRQ-MPS-17 | 検証ケース | — | LRQ-MPS-17 の検証（判定 inconclusive） |
-| GAP-01-137 | VC-LRQ-MPS-19 | 検証ケース | — | LRQ-MPS-19 の検証（判定 inconclusive） |
-| GAP-01-138 | VC-LRQ-MPS-26 | 検証ケース | — | LRQ-MPS-26 の検証（判定 inconclusive） |
-| GAP-01-139 | VC-LRQ-MPS-27 | 検証ケース | — | LRQ-MPS-27 の検証（判定 inconclusive） |
-| GAP-01-140 | VC-LRQ-MPS-29 | 検証ケース | — | LRQ-MPS-29 の検証（判定 inconclusive） |
-| GAP-01-141 | VC-LRQ-OMS-01 | 検証ケース | — | LRQ-OMS-01 の検証（判定 inconclusive） |
-| GAP-01-142 | VC-LRQ-OMS-03 | 検証ケース | — | LRQ-OMS-03 の検証（判定 inconclusive） |
-| GAP-01-143 | VC-LRQ-OMS-04 | 検証ケース | — | LRQ-OMS-04 の検証（判定 inconclusive） |
-| GAP-01-144 | VC-LRQ-OMS-05 | 検証ケース | — | LRQ-OMS-05 の検証（判定 inconclusive） |
-| GAP-01-145 | VC-LRQ-OMS-06 | 検証ケース | — | LRQ-OMS-06 の検証（判定 inconclusive） |
-| GAP-01-146 | VC-LRQ-OMS-08 | 検証ケース | — | LRQ-OMS-08 の検証（判定 inconclusive） |
-| GAP-01-147 | VC-LRQ-OMS-10 | 検証ケース | — | LRQ-OMS-10 の検証（判定 inconclusive） |
-| GAP-01-148 | VC-LRQ-OMS-11 | 検証ケース | — | LRQ-OMS-11 の検証（判定 inconclusive） |
-| GAP-01-149 | VC-LRQ-OMS-12 | 検証ケース | — | LRQ-OMS-12 の検証（判定 inconclusive） |
-| GAP-01-150 | VC-LRQ-OMS-13 | 検証ケース | — | LRQ-OMS-13 の検証（判定 inconclusive） |
-| GAP-01-151 | VC-LRQ-OMS-16 | 検証ケース | — | LRQ-OMS-16 の検証（判定 inconclusive） |
-| GAP-01-152 | VC-LRQ-OMS-18 | 検証ケース | — | LRQ-OMS-18 の検証（判定 inconclusive） |
-| GAP-01-153 | VC-LRQ-OMS-21 | 検証ケース | — | LRQ-OMS-21 の検証（判定 inconclusive） |
-| GAP-01-154 | VC-LRQ-OMS-24 | 検証ケース | — | LRQ-OMS-24 の検証（判定 inconclusive） |
-| GAP-01-155 | VC-LRQ-OMS-27 | 検証ケース | — | LRQ-OMS-27 の検証（判定 inconclusive） |
-| GAP-01-156 | VC-LRQ-OMS-29 | 検証ケース | — | LRQ-OMS-29 の検証（判定 inconclusive） |
-| GAP-01-157 | VC-LRQ-PLS-03 | 検証ケース | — | LRQ-PLS-03 の検証（判定 inconclusive） |
-| GAP-01-158 | VC-LRQ-PLS-06 | 検証ケース | — | LRQ-PLS-06 の検証（判定 inconclusive） |
-| GAP-01-159 | VC-LRQ-PLS-10 | 検証ケース | — | LRQ-PLS-10 の検証（判定 inconclusive） |
-| GAP-01-160 | VC-LRQ-PLS-14 | 検証ケース | — | LRQ-PLS-14 の検証（判定 inconclusive） |
-| GAP-01-161 | VC-LRQ-PLS-19 | 検証ケース | — | LRQ-PLS-19 の検証（判定 inconclusive） |
-| GAP-01-162 | VC-LRQ-PLS-21 | 検証ケース | — | LRQ-PLS-21 の検証（判定 inconclusive） |
-| GAP-01-163 | VC-LRQ-PLS-24 | 検証ケース | — | LRQ-PLS-24 の検証（判定 inconclusive） |
-| GAP-01-164 | VC-LRQ-PLS-25 | 検証ケース | — | LRQ-PLS-25 の検証（判定 inconclusive） |
-| GAP-01-165 | VC-LRQ-RCS-01 | 検証ケース | — | LRQ-RCS-01 の検証（判定 inconclusive） |
-| GAP-01-166 | VC-LRQ-RCS-02 | 検証ケース | — | LRQ-RCS-02 の検証（判定 inconclusive） |
-| GAP-01-167 | VC-LRQ-RCS-04 | 検証ケース | — | LRQ-RCS-04 の検証（判定 inconclusive） |
-| GAP-01-168 | VC-LRQ-RCS-05 | 検証ケース | — | LRQ-RCS-05 の検証（判定 inconclusive） |
-| GAP-01-169 | VC-LRQ-RCS-07 | 検証ケース | — | LRQ-RCS-07 の検証（判定 inconclusive） |
-| GAP-01-170 | VC-LRQ-RCS-17 | 検証ケース | — | LRQ-RCS-17 の検証（判定 inconclusive） |
-| GAP-01-171 | VC-LRQ-RCS-19 | 検証ケース | — | LRQ-RCS-19 の検証（判定 inconclusive） |
-| GAP-01-172 | VC-LRQ-RCS-20 | 検証ケース | — | LRQ-RCS-20 の検証（判定 inconclusive） |
-| GAP-01-173 | VC-LRQ-RCS-23 | 検証ケース | — | LRQ-RCS-23 の検証（判定 inconclusive） |
-| GAP-01-174 | VC-LRQ-RCS-25 | 検証ケース | — | LRQ-RCS-25 の検証（判定 inconclusive） |
-| GAP-01-175 | VC-LRQ-RCS-27 | 検証ケース | — | LRQ-RCS-27 の検証（判定 inconclusive） |
-| GAP-01-176 | VC-LRQ-RCS-30 | 検証ケース | — | LRQ-RCS-30 の検証（判定 inconclusive） |
-| GAP-01-177 | VC-LRQ-SRB-02 | 検証ケース | — | LRQ-SRB-02 の検証（判定 inconclusive） |
-| GAP-01-178 | VC-LRQ-SRB-05 | 検証ケース | — | LRQ-SRB-05 の検証（判定 inconclusive） |
-| GAP-01-179 | VC-LRQ-SRB-06 | 検証ケース | — | LRQ-SRB-06 の検証（判定 inconclusive） |
-| GAP-01-180 | VC-LRQ-SRB-07 | 検証ケース | — | LRQ-SRB-07 の検証（判定 inconclusive） |
-| GAP-01-181 | VC-LRQ-SRB-12 | 検証ケース | — | LRQ-SRB-12 の検証（判定 inconclusive） |
-| GAP-01-182 | VC-LRQ-SRB-13 | 検証ケース | — | LRQ-SRB-13 の検証（判定 inconclusive） |
-| GAP-01-183 | VC-LRQ-SRB-23 | 検証ケース | — | LRQ-SRB-23 の検証（判定 inconclusive） |
-| GAP-01-184 | VC-LRQ-SRB-24 | 検証ケース | — | LRQ-SRB-24 の検証（判定 inconclusive） |
-| GAP-01-185 | VC-LRQ-SRB-28 | 検証ケース | — | LRQ-SRB-28 の検証（判定 inconclusive） |
-| GAP-01-186 | VC-LRQ-STR-01 | 検証ケース | — | LRQ-STR-01 の検証（判定 inconclusive） |
-| GAP-01-187 | VC-LRQ-STR-02 | 検証ケース | — | LRQ-STR-02 の検証（判定 inconclusive） |
-| GAP-01-188 | VC-LRQ-STR-04 | 検証ケース | — | LRQ-STR-04 の検証（判定 inconclusive） |
-| GAP-01-189 | VC-LRQ-STR-08 | 検証ケース | — | LRQ-STR-08 の検証（判定 inconclusive） |
-| GAP-01-190 | VC-LRQ-STR-09 | 検証ケース | — | LRQ-STR-09 の検証（判定 inconclusive） |
-| GAP-01-191 | VC-LRQ-STR-11 | 検証ケース | — | LRQ-STR-11 の検証（判定 inconclusive） |
-| GAP-01-192 | VC-LRQ-STR-12 | 検証ケース | — | LRQ-STR-12 の検証（判定 inconclusive） |
-| GAP-01-193 | VC-LRQ-STR-14 | 検証ケース | — | LRQ-STR-14 の検証（判定 inconclusive） |
-| GAP-01-194 | VC-LRQ-STR-15 | 検証ケース | — | LRQ-STR-15 の検証（判定 inconclusive） |
-| GAP-01-195 | VC-LRQ-STR-17 | 検証ケース | — | LRQ-STR-17 の検証（判定 inconclusive） |
-| GAP-01-196 | VC-LRQ-STR-20 | 検証ケース | — | LRQ-STR-20 の検証（判定 inconclusive） |
-| GAP-01-197 | VC-LRQ-STR-21 | 検証ケース | — | LRQ-STR-21 の検証（判定 inconclusive） |
-| GAP-01-198 | VC-LRQ-STR-22 | 検証ケース | — | LRQ-STR-22 の検証（判定 inconclusive） |
-| GAP-01-199 | VC-LRQ-STR-23 | 検証ケース | — | LRQ-STR-23 の検証（判定 inconclusive） |
-| GAP-01-200 | VC-LRQ-STR-24 | 検証ケース | — | LRQ-STR-24 の検証（判定 inconclusive） |
-| GAP-01-201 | VC-LRQ-TPS-01 | 検証ケース | — | LRQ-TPS-01 の検証（判定 inconclusive） |
-| GAP-01-202 | VC-LRQ-TPS-02 | 検証ケース | — | LRQ-TPS-02 の検証（判定 inconclusive） |
-| GAP-01-203 | VC-LRQ-TPS-06 | 検証ケース | — | LRQ-TPS-06 の検証（判定 inconclusive） |
-| GAP-01-204 | VC-LRQ-TPS-08 | 検証ケース | — | LRQ-TPS-08 の検証（判定 inconclusive） |
-| GAP-01-205 | VC-LRQ-TPS-10 | 検証ケース | — | LRQ-TPS-10 の検証（判定 inconclusive） |
-| GAP-01-206 | VC-REQ-ARS-08 | 検証ケース | — | REQ-ARS-08 の検証（判定 inconclusive） |
-| GAP-01-207 | VC-REQ-ARS-15 | 検証ケース | — | REQ-ARS-15 の検証（判定 inconclusive） |
-| GAP-01-208 | VC-REQ-ARS-17 | 検証ケース | — | REQ-ARS-17 の検証（判定 inconclusive） |
-| GAP-01-209 | VC-REQ-ARS-27 | 検証ケース | — | REQ-ARS-27 の検証（判定 inconclusive） |
-| GAP-01-210 | VC-REQ-ARS-41 | 検証ケース | — | REQ-ARS-41 の検証（判定 inconclusive） |
-| GAP-01-211 | VC-REQ-FDS-08 | 検証ケース | — | REQ-FDS-08 の検証（判定 inconclusive） |
-| GAP-01-212 | VC-REQ-PCS-08 | 検証ケース | — | REQ-PCS-08 の検証（判定 inconclusive） |
-| GAP-01-213 | VC-REQ-PCS-12 | 検証ケース | — | REQ-PCS-12 の検証（判定 inconclusive） |
-| GAP-01-214 | VC-REQ-WCS-08 | 検証ケース | — | REQ-WCS-08 の検証（判定 inconclusive） |
-| GAP-01-215 | VC-REQ-WCS-10 | 検証ケース | — | REQ-WCS-10 の検証（判定 inconclusive） |
+| GAP-01-01 | VC-IRQ-ORB-28 | 検証ケース | — | IRQ-ORB-28 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-02 | VC-LRQ-APU-03 | 検証ケース | — | LRQ-APU-03 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-03 | VC-LRQ-APU-04 | 検証ケース | — | LRQ-APU-04 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-04 | VC-LRQ-APU-06 | 検証ケース | — | LRQ-APU-06 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-05 | VC-LRQ-APU-07 | 検証ケース | — | LRQ-APU-07 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-06 | VC-LRQ-APU-08 | 検証ケース | — | LRQ-APU-08 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-07 | VC-LRQ-APU-11 | 検証ケース | — | LRQ-APU-11 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-08 | VC-LRQ-APU-13 | 検証ケース | — | LRQ-APU-13 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-09 | VC-LRQ-APU-15 | 検証ケース | — | LRQ-APU-15 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-10 | VC-LRQ-APU-21 | 検証ケース | — | LRQ-APU-21 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-11 | VC-LRQ-APU-22 | 検証ケース | — | LRQ-APU-22 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-12 | VC-LRQ-CREW-01 | 検証ケース | — | LRQ-CREW-01 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-13 | VC-LRQ-CREW-02 | 検証ケース | — | LRQ-CREW-02 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-14 | VC-LRQ-CREW-06 | 検証ケース | — | LRQ-CREW-06 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-15 | VC-LRQ-CREW-07 | 検証ケース | — | LRQ-CREW-07 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-16 | VC-LRQ-CREW-10 | 検証ケース | — | LRQ-CREW-10 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-17 | VC-LRQ-CREW-12 | 検証ケース | — | LRQ-CREW-12 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-18 | VC-LRQ-CREW-13 | 検証ケース | — | LRQ-CREW-13 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-19 | VC-LRQ-CREW-16 | 検証ケース | — | LRQ-CREW-16 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-20 | VC-LRQ-CREW-18 | 検証ケース | — | LRQ-CREW-18 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-21 | VC-LRQ-CREW-21 | 検証ケース | — | LRQ-CREW-21 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-22 | VC-LRQ-CREW-23 | 検証ケース | — | LRQ-CREW-23 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-23 | VC-LRQ-CREW-24 | 検証ケース | — | LRQ-CREW-24 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-24 | VC-LRQ-CREW-25 | 検証ケース | — | LRQ-CREW-25 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-25 | VC-LRQ-CREW-26 | 検証ケース | — | LRQ-CREW-26 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-26 | VC-LRQ-CREW-27 | 検証ケース | — | LRQ-CREW-27 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-27 | VC-LRQ-CREW-28 | 検証ケース | — | LRQ-CREW-28 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-28 | VC-LRQ-CREW-29 | 検証ケース | — | LRQ-CREW-29 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-29 | VC-LRQ-CREW-30 | 検証ケース | — | LRQ-CREW-30 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-30 | VC-LRQ-CT-01 | 検証ケース | — | LRQ-CT-01 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-31 | VC-LRQ-CT-03 | 検証ケース | — | LRQ-CT-03 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-32 | VC-LRQ-CT-04 | 検証ケース | — | LRQ-CT-04 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-33 | VC-LRQ-CT-08 | 検証ケース | — | LRQ-CT-08 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-34 | VC-LRQ-CT-12 | 検証ケース | — | LRQ-CT-12 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-35 | VC-LRQ-CT-14 | 検証ケース | — | LRQ-CT-14 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-36 | VC-LRQ-CT-15 | 検証ケース | — | LRQ-CT-15 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-37 | VC-LRQ-CT-18 | 検証ケース | — | LRQ-CT-18 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-38 | VC-LRQ-CT-20 | 検証ケース | — | LRQ-CT-20 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-39 | VC-LRQ-CT-22 | 検証ケース | — | LRQ-CT-22 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-40 | VC-LRQ-CW-01 | 検証ケース | — | LRQ-CW-01 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-41 | VC-LRQ-CW-02 | 検証ケース | — | LRQ-CW-02 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-42 | VC-LRQ-CW-04 | 検証ケース | — | LRQ-CW-04 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-43 | VC-LRQ-CW-07 | 検証ケース | — | LRQ-CW-07 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-44 | VC-LRQ-CW-08 | 検証ケース | — | LRQ-CW-08 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-45 | VC-LRQ-CW-09 | 検証ケース | — | LRQ-CW-09 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-46 | VC-LRQ-CW-11 | 検証ケース | — | LRQ-CW-11 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-47 | VC-LRQ-CW-12 | 検証ケース | — | LRQ-CW-12 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-48 | VC-LRQ-CW-13 | 検証ケース | — | LRQ-CW-13 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-49 | VC-LRQ-CW-14 | 検証ケース | — | LRQ-CW-14 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-50 | VC-LRQ-CW-16 | 検証ケース | — | LRQ-CW-16 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-51 | VC-LRQ-CW-17 | 検証ケース | — | LRQ-CW-17 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-52 | VC-LRQ-CW-18 | 検証ケース | — | LRQ-CW-18 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-53 | VC-LRQ-CW-22 | 検証ケース | — | LRQ-CW-22 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-54 | VC-LRQ-DPS-03 | 検証ケース | — | LRQ-DPS-03 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-55 | VC-LRQ-DPS-04 | 検証ケース | — | LRQ-DPS-04 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-56 | VC-LRQ-DPS-07 | 検証ケース | — | LRQ-DPS-07 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-57 | VC-LRQ-DPS-08 | 検証ケース | — | LRQ-DPS-08 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-58 | VC-LRQ-DPS-10 | 検証ケース | — | LRQ-DPS-10 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-59 | VC-LRQ-DPS-13 | 検証ケース | — | LRQ-DPS-13 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-60 | VC-LRQ-DPS-14 | 検証ケース | — | LRQ-DPS-14 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-61 | VC-LRQ-DPS-15 | 検証ケース | — | LRQ-DPS-15 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-62 | VC-LRQ-DPS-17 | 検証ケース | — | LRQ-DPS-17 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-63 | VC-LRQ-DPS-18 | 検証ケース | — | LRQ-DPS-18 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-64 | VC-LRQ-DPS-20 | 検証ケース | — | LRQ-DPS-20 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-65 | VC-LRQ-DPS-22 | 検証ケース | — | LRQ-DPS-22 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-66 | VC-LRQ-DPS-23 | 検証ケース | — | LRQ-DPS-23 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-67 | VC-LRQ-DPS-25 | 検証ケース | — | LRQ-DPS-25 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-68 | VC-LRQ-DPS-29 | 検証ケース | — | LRQ-DPS-29 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-69 | VC-LRQ-DPS-30 | 検証ケース | — | LRQ-DPS-30 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-70 | VC-LRQ-EPS-01 | 検証ケース | — | LRQ-EPS-01 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-71 | VC-LRQ-EPS-02 | 検証ケース | — | LRQ-EPS-02 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-72 | VC-LRQ-EPS-04 | 検証ケース | — | LRQ-EPS-04 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-73 | VC-LRQ-EPS-08 | 検証ケース | — | LRQ-EPS-08 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-74 | VC-LRQ-EPS-09 | 検証ケース | — | LRQ-EPS-09 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-75 | VC-LRQ-EPS-10 | 検証ケース | — | LRQ-EPS-10 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-76 | VC-LRQ-EPS-11 | 検証ケース | — | LRQ-EPS-11 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-77 | VC-LRQ-EPS-12 | 検証ケース | — | LRQ-EPS-12 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-78 | VC-LRQ-EPS-15 | 検証ケース | — | LRQ-EPS-15 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-79 | VC-LRQ-EPS-18 | 検証ケース | — | LRQ-EPS-18 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-80 | VC-LRQ-ET-01 | 検証ケース | — | LRQ-ET-01 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-81 | VC-LRQ-ET-03 | 検証ケース | — | LRQ-ET-03 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-82 | VC-LRQ-ET-04 | 検証ケース | — | LRQ-ET-04 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-83 | VC-LRQ-ET-05 | 検証ケース | — | LRQ-ET-05 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-84 | VC-LRQ-ET-07 | 検証ケース | — | LRQ-ET-07 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-85 | VC-LRQ-ET-09 | 検証ケース | — | LRQ-ET-09 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-86 | VC-LRQ-ET-10 | 検証ケース | — | LRQ-ET-10 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-87 | VC-LRQ-ET-11 | 検証ケース | — | LRQ-ET-11 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-88 | VC-LRQ-ET-12 | 検証ケース | — | LRQ-ET-12 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-89 | VC-LRQ-ET-13 | 検証ケース | — | LRQ-ET-13 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-90 | VC-LRQ-ET-15 | 検証ケース | — | LRQ-ET-15 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-91 | VC-LRQ-ET-16 | 検証ケース | — | LRQ-ET-16 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-92 | VC-LRQ-ET-20 | 検証ケース | — | LRQ-ET-20 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-93 | VC-LRQ-ET-24 | 検証ケース | — | LRQ-ET-24 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-94 | VC-LRQ-ET-25 | 検証ケース | — | LRQ-ET-25 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-95 | VC-LRQ-ET-27 | 検証ケース | — | LRQ-ET-27 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-96 | VC-LRQ-EVA-02 | 検証ケース | — | LRQ-EVA-02 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-97 | VC-LRQ-EVA-04 | 検証ケース | — | LRQ-EVA-04 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-98 | VC-LRQ-EVA-08 | 検証ケース | — | LRQ-EVA-08 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-99 | VC-LRQ-EVA-10 | 検証ケース | — | LRQ-EVA-10 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-100 | VC-LRQ-EVA-11 | 検証ケース | — | LRQ-EVA-11 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-101 | VC-LRQ-EVA-12 | 検証ケース | — | LRQ-EVA-12 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-102 | VC-LRQ-EVA-13 | 検証ケース | — | LRQ-EVA-13 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-103 | VC-LRQ-EVA-15 | 検証ケース | — | LRQ-EVA-15 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-104 | VC-LRQ-EVA-18 | 検証ケース | — | LRQ-EVA-18 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-105 | VC-LRQ-EVA-19 | 検証ケース | — | LRQ-EVA-19 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-106 | VC-LRQ-EVA-22 | 検証ケース | — | LRQ-EVA-22 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-107 | VC-LRQ-EVA-23 | 検証ケース | — | LRQ-EVA-23 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-108 | VC-LRQ-EVA-24 | 検証ケース | — | LRQ-EVA-24 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-109 | VC-LRQ-EVA-25 | 検証ケース | — | LRQ-EVA-25 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-110 | VC-LRQ-EVA-26 | 検証ケース | — | LRQ-EVA-26 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-111 | VC-LRQ-EVA-29 | 検証ケース | — | LRQ-EVA-29 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-112 | VC-LRQ-GNC-02 | 検証ケース | — | LRQ-GNC-02 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-113 | VC-LRQ-GNC-07 | 検証ケース | — | LRQ-GNC-07 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-114 | VC-LRQ-GNC-21 | 検証ケース | — | LRQ-GNC-21 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-115 | VC-LRQ-GNC-25 | 検証ケース | — | LRQ-GNC-25 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-116 | VC-LRQ-GNC-27 | 検証ケース | — | LRQ-GNC-27 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-117 | VC-LRQ-MECH-02 | 検証ケース | — | LRQ-MECH-02 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-118 | VC-LRQ-MECH-03 | 検証ケース | — | LRQ-MECH-03 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-119 | VC-LRQ-MECH-08 | 検証ケース | — | LRQ-MECH-08 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-120 | VC-LRQ-MECH-09 | 検証ケース | — | LRQ-MECH-09 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-121 | VC-LRQ-MECH-11 | 検証ケース | — | LRQ-MECH-11 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-122 | VC-LRQ-MECH-12 | 検証ケース | — | LRQ-MECH-12 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-123 | VC-LRQ-MECH-14 | 検証ケース | — | LRQ-MECH-14 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-124 | VC-LRQ-MECH-17 | 検証ケース | — | LRQ-MECH-17 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-125 | VC-LRQ-MECH-18 | 検証ケース | — | LRQ-MECH-18 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-126 | VC-LRQ-MECH-19 | 検証ケース | — | LRQ-MECH-19 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-127 | VC-LRQ-MECH-22 | 検証ケース | — | LRQ-MECH-22 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-128 | VC-LRQ-MECH-23 | 検証ケース | — | LRQ-MECH-23 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-129 | VC-LRQ-MPS-01 | 検証ケース | — | LRQ-MPS-01 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-130 | VC-LRQ-MPS-02 | 検証ケース | — | LRQ-MPS-02 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-131 | VC-LRQ-MPS-06 | 検証ケース | — | LRQ-MPS-06 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-132 | VC-LRQ-MPS-09 | 検証ケース | — | LRQ-MPS-09 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-133 | VC-LRQ-MPS-14 | 検証ケース | — | LRQ-MPS-14 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-134 | VC-LRQ-MPS-15 | 検証ケース | — | LRQ-MPS-15 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-135 | VC-LRQ-MPS-16 | 検証ケース | — | LRQ-MPS-16 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-136 | VC-LRQ-MPS-17 | 検証ケース | — | LRQ-MPS-17 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-137 | VC-LRQ-MPS-19 | 検証ケース | — | LRQ-MPS-19 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-138 | VC-LRQ-MPS-26 | 検証ケース | — | LRQ-MPS-26 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-139 | VC-LRQ-MPS-27 | 検証ケース | — | LRQ-MPS-27 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-140 | VC-LRQ-MPS-29 | 検証ケース | — | LRQ-MPS-29 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-141 | VC-LRQ-OMS-01 | 検証ケース | — | LRQ-OMS-01 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-142 | VC-LRQ-OMS-03 | 検証ケース | — | LRQ-OMS-03 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-143 | VC-LRQ-OMS-04 | 検証ケース | — | LRQ-OMS-04 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-144 | VC-LRQ-OMS-05 | 検証ケース | — | LRQ-OMS-05 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-145 | VC-LRQ-OMS-06 | 検証ケース | — | LRQ-OMS-06 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-146 | VC-LRQ-OMS-08 | 検証ケース | — | LRQ-OMS-08 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-147 | VC-LRQ-OMS-10 | 検証ケース | — | LRQ-OMS-10 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-148 | VC-LRQ-OMS-11 | 検証ケース | — | LRQ-OMS-11 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-149 | VC-LRQ-OMS-12 | 検証ケース | — | LRQ-OMS-12 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-150 | VC-LRQ-OMS-13 | 検証ケース | — | LRQ-OMS-13 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-151 | VC-LRQ-OMS-16 | 検証ケース | — | LRQ-OMS-16 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-152 | VC-LRQ-OMS-18 | 検証ケース | — | LRQ-OMS-18 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-153 | VC-LRQ-OMS-21 | 検証ケース | — | LRQ-OMS-21 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-154 | VC-LRQ-OMS-24 | 検証ケース | — | LRQ-OMS-24 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-155 | VC-LRQ-OMS-27 | 検証ケース | — | LRQ-OMS-27 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-156 | VC-LRQ-OMS-29 | 検証ケース | — | LRQ-OMS-29 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-157 | VC-LRQ-PLS-03 | 検証ケース | — | LRQ-PLS-03 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-158 | VC-LRQ-PLS-06 | 検証ケース | — | LRQ-PLS-06 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-159 | VC-LRQ-PLS-10 | 検証ケース | — | LRQ-PLS-10 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-160 | VC-LRQ-PLS-14 | 検証ケース | — | LRQ-PLS-14 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-161 | VC-LRQ-PLS-19 | 検証ケース | — | LRQ-PLS-19 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-162 | VC-LRQ-PLS-21 | 検証ケース | — | LRQ-PLS-21 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-163 | VC-LRQ-PLS-24 | 検証ケース | — | LRQ-PLS-24 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-164 | VC-LRQ-PLS-25 | 検証ケース | — | LRQ-PLS-25 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-165 | VC-LRQ-RCS-01 | 検証ケース | — | LRQ-RCS-01 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-166 | VC-LRQ-RCS-02 | 検証ケース | — | LRQ-RCS-02 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-167 | VC-LRQ-RCS-04 | 検証ケース | — | LRQ-RCS-04 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-168 | VC-LRQ-RCS-05 | 検証ケース | — | LRQ-RCS-05 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-169 | VC-LRQ-RCS-07 | 検証ケース | — | LRQ-RCS-07 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-170 | VC-LRQ-RCS-17 | 検証ケース | — | LRQ-RCS-17 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-171 | VC-LRQ-RCS-19 | 検証ケース | — | LRQ-RCS-19 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-172 | VC-LRQ-RCS-20 | 検証ケース | — | LRQ-RCS-20 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-173 | VC-LRQ-RCS-23 | 検証ケース | — | LRQ-RCS-23 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-174 | VC-LRQ-RCS-25 | 検証ケース | — | LRQ-RCS-25 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-175 | VC-LRQ-RCS-27 | 検証ケース | — | LRQ-RCS-27 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-176 | VC-LRQ-RCS-30 | 検証ケース | — | LRQ-RCS-30 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-177 | VC-LRQ-SRB-02 | 検証ケース | — | LRQ-SRB-02 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-178 | VC-LRQ-SRB-05 | 検証ケース | — | LRQ-SRB-05 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-179 | VC-LRQ-SRB-06 | 検証ケース | — | LRQ-SRB-06 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-180 | VC-LRQ-SRB-07 | 検証ケース | — | LRQ-SRB-07 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-181 | VC-LRQ-SRB-12 | 検証ケース | — | LRQ-SRB-12 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-182 | VC-LRQ-SRB-13 | 検証ケース | — | LRQ-SRB-13 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-183 | VC-LRQ-SRB-23 | 検証ケース | — | LRQ-SRB-23 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-184 | VC-LRQ-SRB-24 | 検証ケース | — | LRQ-SRB-24 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-185 | VC-LRQ-SRB-28 | 検証ケース | — | LRQ-SRB-28 の検証（判定 inconclusive。区分1 記録の食い違い） |
+| GAP-01-186 | VC-LRQ-STR-01 | 検証ケース | — | LRQ-STR-01 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-187 | VC-LRQ-STR-02 | 検証ケース | — | LRQ-STR-02 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-188 | VC-LRQ-STR-04 | 検証ケース | — | LRQ-STR-04 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-189 | VC-LRQ-STR-08 | 検証ケース | — | LRQ-STR-08 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-190 | VC-LRQ-STR-09 | 検証ケース | — | LRQ-STR-09 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-191 | VC-LRQ-STR-11 | 検証ケース | — | LRQ-STR-11 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-192 | VC-LRQ-STR-12 | 検証ケース | — | LRQ-STR-12 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-193 | VC-LRQ-STR-14 | 検証ケース | — | LRQ-STR-14 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-194 | VC-LRQ-STR-15 | 検証ケース | — | LRQ-STR-15 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-195 | VC-LRQ-STR-17 | 検証ケース | — | LRQ-STR-17 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-196 | VC-LRQ-STR-20 | 検証ケース | — | LRQ-STR-20 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-197 | VC-LRQ-STR-21 | 検証ケース | — | LRQ-STR-21 の検証（判定 inconclusive。区分3 解析の結果なし） |
+| GAP-01-198 | VC-LRQ-STR-22 | 検証ケース | — | LRQ-STR-22 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-199 | VC-LRQ-STR-23 | 検証ケース | — | LRQ-STR-23 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-200 | VC-LRQ-STR-24 | 検証ケース | — | LRQ-STR-24 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-201 | VC-LRQ-TPS-01 | 検証ケース | — | LRQ-TPS-01 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-202 | VC-LRQ-TPS-02 | 検証ケース | — | LRQ-TPS-02 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-203 | VC-LRQ-TPS-06 | 検証ケース | — | LRQ-TPS-06 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-204 | VC-LRQ-TPS-08 | 検証ケース | — | LRQ-TPS-08 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-205 | VC-LRQ-TPS-10 | 検証ケース | — | LRQ-TPS-10 の検証（判定 inconclusive。区分4 関連記録のみ） |
+| GAP-01-206 | VC-REQ-ARS-08 | 検証ケース | — | REQ-ARS-08 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-207 | VC-REQ-ARS-15 | 検証ケース | — | REQ-ARS-15 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-208 | VC-REQ-ARS-17 | 検証ケース | — | REQ-ARS-17 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-209 | VC-REQ-ARS-27 | 検証ケース | — | REQ-ARS-27 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-210 | VC-REQ-ARS-41 | 検証ケース | — | REQ-ARS-41 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-211 | VC-REQ-FDS-08 | 検証ケース | — | REQ-FDS-08 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-212 | VC-REQ-PCS-08 | 検証ケース | — | REQ-PCS-08 の検証（判定 inconclusive。区分5 記録なし） |
+| GAP-01-213 | VC-REQ-PCS-12 | 検証ケース | — | REQ-PCS-12 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-214 | VC-REQ-WCS-08 | 検証ケース | — | REQ-WCS-08 の検証（判定 inconclusive。区分2 起きていない事象） |
+| GAP-01-215 | VC-REQ-WCS-10 | 検証ケース | — | REQ-WCS-10 の検証（判定 inconclusive。区分2 起きていない事象） |
 
 ## 9. 系ごとの切れ目の件数
 
@@ -550,3 +590,4 @@ ARS 床下機器（キャビンファン・熱交換器・LiOH キャニスタ�
 | Rev. U | 2026-10-16 | 機器配分表の行 11件の追加と IMU・THC・WCL の監視ブロックの機器・故障モードを受けて、網羅と切れ目を数え直した（Rev. CF） |
 | Rev. V | 2026-10-16 | ECLSS 以外の IF の流れ（上位 IF の詳細化・内部ブロック図の追加・機器配分表の行の追加）を受けて、網羅と切れ目を数え直した（Rev. CG） |
 | Rev. W | 2026-10-16 | ECLSS 以外のシーケンスのメッセージ（IF 32件）を数え、網羅と切れ目を数え直した（Rev. CH）（Rev. CH） |
+| Rev. X | 2026-10-16 | 検証の根拠が無い要求 215件の理由を 5つの区分に分け、切れ目の一覧・内訳の表・SysML の TraceGapReason を足した（Rev. CI）（Rev. CI） |
