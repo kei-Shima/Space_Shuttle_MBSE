@@ -3,8 +3,8 @@
 A model-based systems engineering (MBSE) package that reconstructs the system design of the Space Shuttle from publicly available documents: diagrams, design documents, and SysML v2 models that are linked to each other.
 
 - **Browse online:** <https://kei-shima.github.io/Space_Shuttle_MBSE/>
-- Revision: Rev. CJ (2026-10-16)
-- Contents: 248 diagrams (draw.io, exported as SVG and PNG), 331 design documents (HTML and Markdown), 49 SysML v2 text files
+- Revision: Rev. CK (2026-10-16)
+- Contents: 251 diagrams (draw.io, exported as SVG and PNG), 332 design documents (HTML and Markdown), 50 SysML v2 text files
 - Japanese README (the primary one): [README.md](README.md)
 - Acronym list (English abbreviations and full names): [docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)
 
@@ -52,12 +52,12 @@ On github.com, HTML files are shown as source. To read on github.com instead, st
 | Path | Contents | Open with |
 |---|---|---|
 | `html/index.html`, `html/index_*.html` | Document index | Browser |
-| `html/*.svg` | The 248 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
+| `html/*.svg` | The 251 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
 | `html/preview/*.png` | PNG versions of the diagrams | Image viewer |
-| `html/docs/*.html` | The 331 documents | Browser |
+| `html/docs/*.html` | The 332 documents | Browser |
 | `docs/*.md` | Markdown version of the same documents | github.com, VS Code |
-| `SysML/*.sysml` | 49 SysML v2 text files | VS Code (see below) |
-| `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (248 pages) | draw.io |
+| `SysML/*.sysml` | 50 SysML v2 text files | VS Code (see below) |
+| `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (251 pages) | draw.io |
 | `REFERENCES.md` | List of the public sources cited | github.com, VS Code |
 | `LICENSE.md` | License text (CC BY 4.0) | github.com, VS Code |
 | `index.html`, `.nojekyll` | Redirect to `html/index.html` and a marker file, both for GitHub Pages | — |
@@ -91,7 +91,7 @@ The files in `SysML/` open with the VS Code extension **SysML v2.0 Language Supp
 
 ### Validation results
 
-The 49 files load in dependency order in the OMG reference implementation, SysML v2 Pilot Implementation 0.62.0, with 0 errors and 0 warnings.
+The 50 files load in dependency order in the OMG reference implementation, SysML v2 Pilot Implementation 0.62.0, with 0 errors and 0 warnings.
 
 The VS Code extension applies its own rules. With v0.55.0 it reports 0 errors and the warnings below. They come from limits of the extension, and the model does not need to change. `.vscode/settings.json` already turns off two style checks (`naming-convention` and `missing-doc`), because element names follow the document identifiers.
 
@@ -104,7 +104,7 @@ The VS Code extension applies its own rules. With v0.55.0 it reports 0 errors an
 
 ## Diagram source (draw.io)
 
-`Draw_io/SSD-SYS-ARC-001.drawio` opens in draw.io Desktop or in the VS Code extension Draw.io Integration (`hediet.vscode-drawio`). It has 248 pages and is about 20 MB, so it takes a while to open. Links inside the diagrams are relative to the exported SVG files in `html/`, so they do not work inside draw.io.
+`Draw_io/SSD-SYS-ARC-001.drawio` opens in draw.io Desktop or in the VS Code extension Draw.io Integration (`hediet.vscode-drawio`). It has 251 pages and is about 20 MB, so it takes a while to open. Links inside the diagrams are relative to the exported SVG files in `html/`, so they do not work inside draw.io.
 
 ## Revisions and tags
 

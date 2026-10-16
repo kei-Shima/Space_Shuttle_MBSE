@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-SYS-001 |
 | 表題 | システム要求書（L1） |
-| 版・日付 | Rev. N／2026-10-12 |
+| 版・日付 | Rev. O／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -142,6 +142,8 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 
 > **注記** 上昇の加速度・最大動圧、再突入の Nz・動圧・接地の速度・着陸重量の限界と、モデル・実績の照合は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
 
+> **注記** 飛行実績の測定指標（MOE・MOP・TPM）と、飛行ごとの閾値との比較（要求の値の飛行ごとの推移は本書）は [SSD-TPM-SYS-001](SSD-TPM-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-TPM-SYS-001.sysml）。
+
 ## 8. 参考文献
 
 1. Shuttle Crew Operations Manual 1.1 Overview（USA007587 Rev. A CPN-1、PDF p31） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31
@@ -220,3 +222,4 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | Rev. L | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |
 | Rev. M | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |
 | Rev. N | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |
+| Rev. O | 2026-10-16 | 飛行実績の測定指標定義書 SSD-TPM-SYS-001 への参照を注記（Rev. CK） |
