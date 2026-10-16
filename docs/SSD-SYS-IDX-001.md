@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. CK／2026-10-16　状態：検討用（公開資料に基づく）
+版・日付：Rev. CL／2026-10-17　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -255,6 +255,8 @@
 - [図249 MOE・MOP・TPM の階層と閾値](../html/SSD-SYS-ARC-001_p249_tpm_tree.svg)
 - [図250 TPM の飛行ごとの推移（着陸重量・APU の燃料・接地の対地速度）](../html/SSD-SYS-ARC-001_p250_tpm_trend.svg)
 - [図251 測定指標の取れた飛行数と判定](../html/SSD-SYS-ARC-001_p251_tpm_coverage.svg)
+- [図252 ECLSS の下位の IF のインタフェース要求の一覧](../html/SSD-SYS-ARC-001_p252_irq_ecl.svg)
+- [図253 ECLSS 以外の下位の IF のインタフェース要求の一覧](../html/SSD-SYS-ARC-001_p253_irq_low.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -286,6 +288,8 @@
 - SysML v2 テキスト：[SysML/SSD-FMX-ORB-001.sysml](../SysML/SSD-FMX-ORB-001.sysml)（オービタの系の機能の故障モード（ECLSS 以外）。SSD-FMX-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-TRJ-ORB-001.sysml](../SysML/SSD-TRJ-ORB-001.sysml)（上昇・再突入の時間変化モデル。SSD-TRJ-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-TPM-SYS-001.sysml](../SysML/SSD-TPM-SYS-001.sysml)（飛行実績の測定指標（MOE・MOP・TPM）。SSD-TPM-SYS-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-IRQ-ECL-001.sysml](../SysML/SSD-IRQ-ECL-001.sysml)（インタフェース要求書（ECLSS の下位の IF）。SSD-IRQ-ECL-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-IRQ-LOW-001.sysml](../SysML/SSD-IRQ-LOW-001.sysml)（インタフェース要求書（ECLSS 以外の下位の IF）。SSD-IRQ-LOW-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml)（ビューポイント・ビュー・表記の規約。SSD-VPT-SYS-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-IBD-ORB-001.sysml](../SysML/SSD-IBD-ORB-001.sysml)（内部ブロック図：機器の接続・流れる物・量と単位。SSD-IBD-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-TRC-SYS-001.sysml](../SysML/SSD-TRC-SYS-001.sysml)（トレース網羅・影響分析：関係・網羅・切れ目・影響のビュー。SSD-TRC-SYS-001 から生成）
@@ -568,9 +572,9 @@
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. C |
 | [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. K |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. E |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AZ |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AX |
-| [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. O |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. BA |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AY |
+| [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. P |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
 | [SSD-REQ-GNC-001](SSD-REQ-GNC-001.md) | 誘導・航法・制御（GN&C）要求書（L2） | Rev. B |
@@ -581,13 +585,15 @@
 | [SSD-REQ-APU-001](SSD-REQ-APU-001.md) | 補助動力・油圧（APU/HYD）要求書（L2） | Rev. C |
 | [SSD-REQ-CT-001](SSD-REQ-CT-001.md) | 通信・追跡（C&T）要求書（L2） | Rev. A |
 | [SSD-REQ-TPS-001](SSD-REQ-TPS-001.md) | 熱防護・熱制御（TPS）要求書（L2） | Rev. C |
-| [SSD-RQM-SYS-001](SSD-RQM-SYS-001.md) | 要求モデル定義書（導出・充足・検証方法） | Rev. I |
+| [SSD-RQM-SYS-001](SSD-RQM-SYS-001.md) | 要求モデル定義書（導出・充足・検証方法） | Rev. J |
 | [SSD-RQF-SYS-001](SSD-RQF-SYS-001.md) | 要求の形式化定義書（属性・制約・値による判定） | Rev. B |
 | [SSD-VER-SYS-001](SSD-VER-SYS-001.md) | 検証定義書（検証ケース・検証マトリクス） | Rev. K |
 | [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. D |
-| [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | Rev. A |
-| [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | Rev. A |
-| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. X |
+| [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | Rev. B |
+| [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | Rev. B |
+| [SSD-IRQ-LOW-001](SSD-IRQ-LOW-001.md) | インタフェース要求書（ECLSS 以外の下位の IF） | 初版（Rev. -） |
+| [SSD-IRQ-ECL-001](SSD-IRQ-ECL-001.md) | インタフェース要求書（ECLSS の下位の IF） | 初版（Rev. -） |
+| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. Y |
 | [SSD-REQ-CW-001](SSD-REQ-CW-001.md) | 警告・警報（C/W）要求書（L2） | Rev. B |
 | [SSD-REQ-CREW-001](SSD-REQ-CREW-001.md) | 乗員系（CREW）要求書（L2） | Rev. D |
 | [SSD-REQ-EVA-001](SSD-REQ-EVA-001.md) | 船外活動（EVA/EMU）要求書（L2） | Rev. C |
@@ -614,7 +620,7 @@
 | [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. C |
 | [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) | 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） | Rev. B |
 | [SSD-TPM-SYS-001](SSD-TPM-SYS-001.md) | 飛行実績の測定指標定義書（MOE・MOP・TPM の階層と、飛行ごとの TPM の推移） | 初版（Rev. -） |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. J |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. K |
 | [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. H |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. E |
@@ -738,3 +744,4 @@
 | Rev. CI | 2026-10-16 | 検証の根拠が無い要求 215件（GAP-01）の理由を、各要求書の理由の文を読んで 5つの区分に分けた（区分1 記録の食い違い 7件、区分2 起きていない事象 55件、区分3 解析の結果なし 26件、区分4 関連記録のみ 49件、区分5 記録なし 78件）。状態（根拠なし）と各要求書の理由の文は変えていない。トレース定義書 SSD-TRC-SYS-001 の切れ目の一覧の内容欄に区分を足し、§7 に区分×検証方法・系×区分の表を足し、SysML の TraceGapReason を足した。図225 の根拠なしの欄を区分で割った。SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（126分類）を確かめた |
 | Rev. CJ | 2026-10-16 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 を改版し、上昇の第1段（リフトオフ〜SRB 分離）に運動方程式を入れた。最大動圧 529 psf（49.6 s）、SRB 分離の高度 27.0 n.mi.・速度 3,908 ft/s・動圧 15.0 psf を計算し、資料の公称値と比べた（事前に許容を決めた 10件のうち 8件が範囲内、2件〈TRJ-V15・TRJ-V18〉が外れ）。抗力係数の形と迎角 0 は本書の仮定、初期操作のピッチ率は自由パラメータ 1つ。図230（下段）・図232 を作り直し、SRB の頭部圧の表を取り込んだ。再突入の運動方程式は、CL・CD の数値の表が見つからず見送った。SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（126分類）を確かめた |
 | Rev. CK | 2026-10-16 | 飛行実績の測定指標（MOE・MOP・TPM）として、飛行実績の測定指標定義書 SSD-TPM-SYS-001 と図249〜251 を追加し、SysML v2 テキスト SysML/SSD-TPM-SYS-001.sysml で示した（MOE 4・MOP 8・TPM 3件。STS-27 以降の Mission Report 86飛行の値を、打上げの日付の順に載せた。判定の窓の中 39件〔TPM-01 13・TPM-02 13・TPM-03 13〕のうち超過 2件）。本書の TPM は運用の飛行ごとの実測値を閾値と比べた推移で、開発段階の TPM ではない。トレースの外に置いた。SSD-TRJ-ORB-001 を Rev. B に改版した（再突入の見送りの文）。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 50件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（128分類）を確かめた。関係する文書に参照を注記 |
+| Rev. CL | 2026-10-17 | 下位の IF（系の中の IF-<系>-nn）519件のインタフェース要求として、インタフェース要求書 SSD-IRQ-ECL-001（ECLSS 289件）・SSD-IRQ-LOW-001（ECLSS 以外 230件）と図252・253を追加し、SysML v2 テキスト 2件で示した（要求 519件、検証の根拠あり 250件・根拠なし 269件、上位なし 101件）。IF の行の文と出典から起こし、新しい値は作っていない。トレースを数え直し（GAP-04 は 0件、GAP-01 は 484件）、根拠なしの区分を新しい要求に広げ、モデル全体の入口とビューポイントを改め、SysML v2 テキスト 52件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（134分類）を確かめた。関係する文書に参照を注記 |

@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（251件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（253件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -191,7 +191,7 @@ package SSD_VPT_SYS_001 {
         render Views::asInterconnectionDiagram;
     }
     viewpoint def <'VP-03'> RequirementsVerificationViewpoint {
-        doc /* 要求・検証の観点。主な定義書：SSD-REQ-*・SSD-RQM-SYS-001・SSD-VER-SYS-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 */
+        doc /* 要求・検証の観点。主な定義書：SSD-REQ-*・SSD-RQM-SYS-001・SSD-VER-SYS-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-IRQ-ECL-001・SSD-IRQ-LOW-001 */
         subject v : Views::View;
         frame concern cn03 : RequirementSatisfaction;
         frame concern cn04 : VerificationStatus;
@@ -770,6 +770,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図91'> fig091 : PhysicalView {
         doc /* 図91 割付行列（系 × 区画）（頁 p91-alloc-matrix） */
@@ -945,6 +947,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図111'> fig111 : ModelManagementView {
         doc /* 図111 ビューポイントと関係者の行列（頁 p111-viewpoints） */
@@ -1063,6 +1067,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図125'> fig125 : RequirementsVerificationView {
         doc /* 図125 要求の値による判定（頁 p125-req-evaluation） */
@@ -1074,6 +1080,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図126'> fig126 : SafetyFailureView {
         doc /* 図126 故障モードから見た安全の連鎖（頁 p126-fmm-chain） */
@@ -1153,6 +1161,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図134'> fig134 : ResourcesMarginsView {
         doc /* 図134 標準ミッションの消耗品の残量（設計）（頁 p134-profile-design） */
@@ -1571,6 +1581,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図167'> fig167 : RequirementsVerificationView {
         doc /* 図167 ECLSS 下位の機能行の網羅（要求の割付・判断）（頁 p167-rql-coverage） */
@@ -1582,6 +1594,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図168'> fig168 : SubsystemBehaviorView {
         doc /* 図168 ARS 状態遷移図（頁 p168-sm-ars） */
@@ -2099,6 +2113,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図213'> fig213 : RequirementsVerificationView {
         doc /* 図213 上位の要求からインタフェース要求への導出（頁 p213-irq-derivation） */
@@ -2110,6 +2126,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図214'> fig214 : InterfacesView {
         doc /* 図214 MECH 内部ブロック図（頁 p214-ibd-mech） */
@@ -2226,6 +2244,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図226'> fig226 : RequirementsVerificationView {
         doc /* 図226 機能ブロックごとの L3 の要求と機能行の対応（頁 p226-rql-sys-coverage） */
@@ -2237,6 +2257,8 @@ package SSD_VPT_SYS_001 {
         expose SSD_RQL_ECL_001::*;
         expose SSD_IRQ_SYS_001::*;
         expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
     }
     view <'図227'> fig227 : SafetyFailureView {
         doc /* 図227 機能の故障モード（GN&C・RCS・DPS・C/W）（頁 p227-fmx-orb-a） */
@@ -2449,13 +2471,39 @@ package SSD_VPT_SYS_001 {
         expose SSD_TRJ_ORB_001::*;
         expose SSD_TPM_SYS_001::*;
     }
+    view <'図252'> fig252 : RequirementsVerificationView {
+        doc /* 図252 ECLSS の下位の IF のインタフェース要求の一覧（頁 p252-irq-ecl） */
+        expose SSD_RQM_SYS_001::*;
+        expose SSD_VER_SYS_001::*;
+        expose SSD_RQF_SYS_001::*;
+        expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_RQL_ECL_001::*;
+        expose SSD_IRQ_SYS_001::*;
+        expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
+    }
+    view <'図253'> fig253 : RequirementsVerificationView {
+        doc /* 図253 ECLSS 以外の下位の IF のインタフェース要求の一覧（頁 p253-irq-low） */
+        expose SSD_RQM_SYS_001::*;
+        expose SSD_VER_SYS_001::*;
+        expose SSD_RQF_SYS_001::*;
+        expose SSD_FLT_ORB_001::*;
+        expose SSD_HSI_SYS_001::*;
+        expose SSD_RQL_ECL_001::*;
+        expose SSD_IRQ_SYS_001::*;
+        expose SSD_RQL_SYS_001::*;
+        expose SSD_IRQ_ECL_001::*;
+        expose SSD_IRQ_LOW_001::*;
+    }
     // ---- 表記の規約
     package Conventions {
         doc /* 文書の表の ID の形と、出典・文書番号の書き方 */
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 332; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 334; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -2468,7 +2516,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "MS-・MC-・DV-・DE-"; form = "MS-・MC-・DV-・DE-<2桁>"; meaning = "質量特性・Δv の値と式"; example = "DV-04"; count = 60; }
         @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 44; }
         @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 2138; }
-        @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 141; }
+        @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 142; }
         @IdConvention { prefix = "CW-・EM-・DT-・RS-・BU-"; form = "CW-・EM-・DT-・RS-・BU-<2桁>"; meaning = "C/W の警報・検知する故障・処置・警報の区分"; example = "CW-05"; count = 155; }
         @IdConvention { prefix = "HZ-・HC-・HM-"; form = "HZ-・HC-・HM-<2桁>"; meaning = "ハザード・原因・管理策"; example = "HZ-01"; count = 134; }
         @IdConvention { prefix = "AV-・SN-・AN-"; form = "AV-・SN-・AN-<2桁>"; meaning = "飛行の実績・スナップショット・異常"; example = "AV-05"; count = 59; }
@@ -2501,5 +2549,6 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "TRJ-P・TRJ-M・TRJ-S・TRJ-V・TRJ-E"; form = "TRJ-<P|M|S|V|E><2桁>"; meaning = "上昇・再突入のモデルのパラメータ・式・シナリオ・比較・照合"; example = "TRJ-S01"; count = 78; }
         @IdConvention { prefix = "ACR-"; form = "ACR-<3桁>"; meaning = "略語表の行（略称と正式名称）"; example = "ACR-001"; count = 0; }
         @IdConvention { prefix = "MOE・MOP・TPM"; form = "<MOE|MOP|TPM>-<2桁>"; meaning = "飛行実績の測定指標（MOE・MOP・TPM）"; example = "TPM-01"; count = 15; }
+        @IdConvention { prefix = "IRQ-（下位 IF）・VC-IRQ-（下位 IF）"; form = "IRQ-<IF の接頭辞>-<IF の番号>・VC-IRQ-…"; meaning = "下位の IF のインタフェース要求・その検証ケース"; example = "IRQ-APU-08"; count = 1038; }
     }
 }

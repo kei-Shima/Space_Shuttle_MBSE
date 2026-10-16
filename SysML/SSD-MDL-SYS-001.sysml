@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 49件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 51件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -38,6 +38,8 @@ package SSD_MDL_SYS_001 {
     public import SSD_RQL_ECL_001;   // SSD-RQL-ECL-001 ECLSS 下位要求（L3）
     public import SSD_IRQ_SYS_001;   // SSD-IRQ-SYS-001 インタフェース要求（上位の IF）と導出・充足・検証
     public import SSD_RQL_SYS_001;   // SSD-RQL-SYS-001 下位要求（L3：ECLSS 以外の17系）と導出・充足・検証
+    public import SSD_IRQ_ECL_001;   // SSD-IRQ-ECL-001 インタフェース要求（下位の IF）と導出・充足・検証（ECLSS）
+    public import SSD_IRQ_LOW_001;   // SSD-IRQ-LOW-001 インタフェース要求（下位の IF）と導出・充足・検証（ECLSS 以外）
     public import SSD_TRC_SYS_001;   // SSD-TRC-SYS-001 トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー）
     public import SSD_FDIR_ORB_001;   // SSD-FDIR-ORB-001 故障検知・処置（C/W の警報・監視・処置・状態遷移）
     public import SSD_HAZ_ORB_001;   // SSD-HAZ-ORB-001 ハザード解析（ハザード・原因・管理策・リスク）
