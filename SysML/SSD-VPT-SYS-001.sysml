@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（243件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（248件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -2379,6 +2379,41 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+    }
+    view <'図244'> fig244 : OperationsView {
+        doc /* 図244 APU・油圧の運転と監視 シーケンス図（頁 p244-seq-apu） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図245'> fig245 : OperationsView {
+        doc /* 図245 DPS の運用管理と MPS の乗員操作 シーケンス図（頁 p245-seq-dps-mps） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図246'> fig246 : OperationsView {
+        doc /* 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図（頁 p246-seq-eva） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図247'> fig247 : OperationsView {
+        doc /* 図247 OMS の乗員操作と表示 シーケンス図（頁 p247-seq-oms） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+    }
+    view <'図248'> fig248 : OperationsView {
+        doc /* 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図（頁 p248-seq-rcs） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
     }
     // ---- 表記の規約
     package Conventions {

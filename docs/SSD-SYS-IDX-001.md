@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. CG／2026-10-16　状態：検討用（公開資料に基づく）
+版・日付：Rev. CH／2026-10-16　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -247,6 +247,11 @@
 - [図241 煙検知と消火 シーケンス図](../html/SSD-SYS-ARC-001_p241_seq_fire.svg)
 - [図242 キャビン温湿度の制御と監視 シーケンス図](../html/SSD-SYS-ARC-001_p242_seq_thc.svg)
 - [図243 EVA 支援（エアロック・工具・マスク・電池充電） 内部ブロック図](../html/SSD-SYS-ARC-001_p243_ibd_eva.svg)
+- [図244 APU・油圧の運転と監視 シーケンス図](../html/SSD-SYS-ARC-001_p244_seq_apu.svg)
+- [図245 DPS の運用管理と MPS の乗員操作 シーケンス図](../html/SSD-SYS-ARC-001_p245_seq_dps_mps.svg)
+- [図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図](../html/SSD-SYS-ARC-001_p246_seq_eva.svg)
+- [図247 OMS の乗員操作と表示 シーケンス図](../html/SSD-SYS-ARC-001_p247_seq_oms.svg)
+- [図248 RCS の噴射器冗長管理と乗員操作 シーケンス図](../html/SSD-SYS-ARC-001_p248_seq_rcs.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -546,7 +551,7 @@
 | [SSD-OPS-PHASE-001](SSD-OPS-PHASE-001.md) | ミッションフェーズ・運用モード定義書 | Rev. I |
 | [SSD-BEH-ORB-001](SSD-BEH-ORB-001.md) | 状態遷移定義書（ミッションフェーズ・飛行継続判断） | Rev. D |
 | [SSD-BEH-ORB-002](SSD-BEH-ORB-002.md) | 故障処置の活動定義書（MPS ヘリウム漏れ・燃料電池の冷却喪失・火災） | Rev. C |
-| [SSD-BEH-ORB-003](SSD-BEH-ORB-003.md) | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） | Rev. E |
+| [SSD-BEH-ORB-003](SSD-BEH-ORB-003.md) | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） | Rev. F |
 | [SSD-BEH-ORB-004](SSD-BEH-ORB-004.md) | 運用・非常時の活動定義書（キャビン減圧・EVA・ペイロードベイドア閉鎖不能） | Rev. C |
 | [SSD-BEH-ORB-005](SSD-BEH-ORB-005.md) | 系の状態遷移定義書（GPC・燃料電池・APU・RMS・排熱） | Rev. D |
 | [SSD-BEH-ORB-006](SSD-BEH-ORB-006.md) | 系の状態遷移定義書その2（OMS・RCS・MPS・C&T・与圧系・ODS） | Rev. B |
@@ -559,8 +564,8 @@
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. C |
 | [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. K |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. E |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AV |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AT |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. AW |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. AU |
 | [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. N |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
@@ -578,7 +583,7 @@
 | [SSD-RQL-ECL-001](SSD-RQL-ECL-001.md) | ECLSS 下位要求書（L3：ARS・PCS・給水廃水・WCS・FDS・ALS・ATCS） | Rev. D |
 | [SSD-IRQ-SYS-001](SSD-IRQ-SYS-001.md) | インタフェース要求書（上位の IF：IF-SYS・IF-ORB） | Rev. A |
 | [SSD-RQL-SYS-001](SSD-RQL-SYS-001.md) | 下位要求書（L3：ECLSS 以外の17系の機能ブロック） | Rev. A |
-| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. V |
+| [SSD-TRC-SYS-001](SSD-TRC-SYS-001.md) | トレース網羅・影響分析書（連鎖の網羅・切れ目・変更の影響） | Rev. W |
 | [SSD-REQ-CW-001](SSD-REQ-CW-001.md) | 警告・警報（C/W）要求書（L2） | Rev. B |
 | [SSD-REQ-CREW-001](SSD-REQ-CREW-001.md) | 乗員系（CREW）要求書（L2） | Rev. D |
 | [SSD-REQ-EVA-001](SSD-REQ-EVA-001.md) | 船外活動（EVA/EMU）要求書（L2） | Rev. C |
@@ -604,7 +609,7 @@
 | [SSD-PAR-ORB-001](SSD-PAR-ORB-001.md) | パラメトリック定義書（消耗品・電力・排熱の収支） | Rev. H |
 | [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. C |
 | [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) | 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） | 初版（Rev. -） |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. F |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. G |
 | [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. H |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. E |
@@ -724,3 +729,4 @@
 | Rev. CE | 2026-10-16 | ECLSS のデータ・指令の IF（運転の指令・計測値の表示・警報）53件に、シーケンス図 5件（図238〜図242、メッセージ 61件）でメッセージを付けた。シーケンス定義書 SSD-BEH-ORB-003 と SysML v2 テキストを作り直し、トレースを数え直し（GAP-05 は 54件・GAP-08 は 1件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |
 | Rev. CF | 2026-10-16 | 機器配分表に行を 11件（PHY-ECLSS-29〜39：信号調整器・センサ・消火設備・WCS コントローラとヒータ・電動弁・空気経路の付帯機器・エアロックの弁/ヒータ/通風/EMU 配管/圧力計測）足し、Rev. CD で近い行に当てていた内部ブロック図の部品 37件をその行に当て直した。IMU-MON・THC-MON・WCL-MON は信号調整器・センサを持つブロックに改め（部品 8件、機能の故障モード 6件）、判断済みを 11件にして、IF-IMU-11・IF-THC-18・IF-WCL-07・IF-WCL-14 に内部ブロック図の流れを付けた。機器配分表・割付・内部ブロック・流れ定義書・故障モード定義書・トレースと SysML v2 テキストを作り直し（GAP-05 は 50件・GAP-12 は 11件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |
 | Rev. CG | 2026-10-16 | ECLSS 以外の IF の流れ（GAP-05）のうち、下位 IF に流れが既にある上位 IF 8件に上位 IF への詳細化を足し、物理の IF 10件に内部ブロック図の流れを付けた（EVA 支援の新しい図 1件、既存の C&T・OMS・RCS の図への追加）。機器配分表に行を 7件足した。内部ブロック・流れ定義書・機器配分表・割付・トレースと SysML v2 テキストを作り直し（GAP-05 は 32件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |
+| Rev. CH | 2026-10-16 | ECLSS 以外のデータ・指令の IF（運転の指令・計測値の表示・警報）32件に、シーケンス図 5件（図244〜図248、メッセージ 65件）でメッセージを付けた。シーケンス定義書 SSD-BEH-ORB-003 と SysML v2 テキストを作り直し、トレースを数え直し（GAP-05 は 0件・GAP-08 は 0件）、SysML v2 テキスト 49件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（125分類）を確かめた |

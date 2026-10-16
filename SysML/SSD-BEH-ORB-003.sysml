@@ -117,6 +117,71 @@ package SSD_BEH_ORB_003 {
     item def HumidSepAlert { doc /* 運転中の分離器の回転数が下がると、SM の警報「S66 HUMID SEP A(B)」を出す */ }
     item def AtmosphereLossJudgementData { doc /* 熱交換器出口温度・キャビン温度・分離器の運転状態の表示と警報を、キャビン大気制御の喪失判定（A17-102）と故障処置に使う */ }
     item def ManualBypassValvePin { doc /* コントローラで弁を制御できない場合は、MD44F で弁アームを4つの固定穴の一つにピン止めする */ }
+    item def FuelTkVlvSwitchSelect { doc /* パネル R2 の APU FUEL TK VLV 1・2・3 スイッチを OPEN にする。 */ }
+    item def FuelIsolationValveCommand { doc /* スイッチの位置に従って各 APU の2個の燃料タンク隔離弁を通電して開く指令を渡す。CLOSE か電力喪失では両弁が閉じる。 */ }
+    item def BoilerN2SwitchSelect { doc /* パネル R2 の BOILER N2 SUPPLY 1・2・3 スイッチで、各ボイラの窒素遮断弁を開く。 */ }
+    item def BoilerN2ShutoffCommand { doc /* 各ボイラの窒素遮断弁を開閉する指令を渡す。遮断弁は2つの独立したソレノイドで主・副どちらの制御器からも操作できる。 */ }
+    item def BoilerReadySignal { doc /* 制御器が有効で、窒素遮断弁が開、蒸気ベントのノズル温度が 130°F 超、作動油のバイパス弁が正しい位置のとき、R2 の APU/HYD READY TO START 表示へ準備完了の信号を渡す。 */ }
+    item def HydPumpPressLowSelect { doc /* APU の始動に先立って、パネル R2 の HYD MAIN PUMP PRESS スイッチを LOW にする。 */ }
+    item def PumpDepressurizeCommand { doc /* 減圧弁を通電して主ポンプの吐出圧を 500〜1,000 psi に下げる指令を渡す。 */ }
+    item def GasGenBedTempSignal { doc /* ガス発生器床の温度トランスデューサの信号を渡す。 */ }
+    item def GasGenHeaterControl { doc /* 比較器でガス発生器床ヒータを 360〜425°F に保つ制御を行う。 */ }
+    item def ApuOperateSwitchSelect { doc /* パネル R2 の APU OPERATE スイッチを START/RUN にし、APU AUTO SHUT DOWN スイッチを ENABLE（または INHIBIT）にする。 */ }
+    item def ApuStartAutoShutCommand { doc /* APU の始動の指令と、自動停止の機能の有効（ENABLE）・禁止（INHIBIT）の指令を渡す。制御器は始動を開始し、ガス発生器と燃料ポンプのヒータの電力を自動で断つ。 */ }
+    item def GearboxGn2ValveCommand { doc /* ギアボックス圧力が 5.2 psi 未満になると、潤滑油系の GN2 加圧弁を通電して開く指令を渡し、掃気と潤滑油ポンプの運転に必要な圧力を保つ。 */ }
+    item def HydPumpPressNormSelect { doc /* APU の始動後に、HYD MAIN PUMP PRESS スイッチを LOW から NORM にする。 */ }
+    item def PumpNormalPressCommand { doc /* 減圧弁の通電を切る指令を渡し、主ポンプの吐出圧を 2,900〜3,100 psi に上げる。 */ }
+    item def BoilerSensorTelemetry { doc /* 各ボイラの GN2 容器と水タンクの冗長な圧力・温度センサの値を制御器を通して SM GPC へ渡す。GPC は水タンクの量を計算して専用の MEDS 表示へ送り、水量・窒素タンク圧力・調圧器圧力・窒素タンク温度は軌道上で SM APU/HYD（DISP 86）表示の右側に出る。 */ }
+    item def FuelTkVlvCloseAfterShutdown { doc /* APU の自動停止の後は、再び開いた隔離弁が高温のガス発生器床へ燃料を流さないよう、APU FUEL TK VLV スイッチを CLOSE にする。 */ }
+    item def FuelIsolationValveCloseCommand { doc /* 燃料タンク隔離弁を閉じる指令を渡す。 */ }
+    item def GpcFailureDeclaration { doc /* 搭載と地上の監視で、冗長セットの故障・分裂、GPC 故障、データ経路の故障を宣言する材料を渡す。 */ }
+    item def GpcFailureRecoveryAction { doc /* 故障した GPC を、上昇・再突入では MODE スイッチで HALT にし、それ以外では電源を切り、軌道上では DPS を構成し直して回復を試みる。 */ }
+    item def MdmPortModeRecovery { doc /* MECO 後の FC・ペイロード MDM の故障に対し、DPS UTILITY 表示の項目入力でポートモードによる回復を試みる。 */ }
+    item def MdmPowerCycleReset { doc /* データ経路の故障の後に、MDM の電源を切って入れ直し、出力をリセットする。 */ }
+    item def GmtErrorUpdate { doc /* MTU と GPC の GMT の誤差が 100 ms を超えたら、15 ms の更新を行う。 */ }
+    item def MtuOscillatorSwitch { doc /* MTU の BITE ビット 4 が立って MCC が時刻差の増加を見た場合などに、MECO 後から HAC 進入までの間に発振器を手動で切り替える。 */ }
+    item def EngineShutdownPushbutton { doc /* パネル C3 の MAIN ENGINE SHUT DOWN 押しボタンを押す（両接点が健全であること）。 */ }
+    item def EngineManualShutdownCommand { doc /* エンジンを手動停止する指令を、主エンジン制御器へ渡す。 */ }
+    item def EngineStatusReport { doc /* 停止・停止後の段階やレッドライン超過、指令経路故障・ロックアップ・データ経路故障の状態を渡す。 */ }
+    item def EngineStatusLightAnnunciation { doc /* パネル F7 の MAIN ENGINE STATUS ライトを点灯させる。 */ }
+    item def HeSwitchSelect { doc /* パネル R2 の He ISOLATION A・B と He INTERCONNECT のスイッチを操作する。 */ }
+    item def HeIsolationValveCommand { doc /* 各エンジン系統の遮断弁を個別に、相互接続弁の組を 1 個のスイッチで操作する指令を渡す。 */ }
+    item def DumpSequenceSwitchSelect { doc /* MPS PRPLT DUMP SEQUENCE スイッチを START または STOP にする。 */ }
+    item def PropellantDumpCommand { doc /* ダンプの手動開始と、ET 分離の遅れの間の自動ダンプの停止の指令を渡す。自動の真空不活性化が十分でないときは、手動の真空不活性化も行う。 */ }
+    item def HydIsolSwitchSelect { doc /* パネル R4 の HYDRAULICS MPS/TVC ISOL VLV SYS 1〜3 スイッチを、軌道上では CLOSE にする。 */ }
+    item def TvcIsolationValveCommand { doc /* 遮断弁を閉じて下流の油圧漏れから守る指令を渡す。OPEN にすると弁が開く。 */ }
+    item def TvcIsolValveTalkback { doc /* スイッチの上のトークバックが、開で OP、閉で CL を示す。 */ }
+    item def PrebreatheScheduleData { doc /* キャビンを 10.2 psi にしてからの時間（12 時間・24 時間）に応じて、EMU 内の前呼吸を 1 時間 15 分・40 分とし、14.7 psi のままなら 4 時間とする基準を渡す。 */ }
+    item def DepressGoCheck { doc /* 前呼吸の時間が終わったら、減圧の GO を確かめる。 */ }
+    item def DepressStartCue { doc /* MCC の GO を確かめた後、DEPRESS/REPRESS のキューカードで減圧を始めるよう渡す。 */ }
+    item def CueCardConfigSelect { doc /* 減圧・再与圧は、エアロックの構成ごと（通常構成・トンネルアダプタ）の DEPRESS/REPRESS キューカードに従うよう渡す。漏れ点検の不合格時の手順は FAILED LEAK CHECK に載せる。 */ }
+    item def PostEvaHandoff { doc /* 再与圧でエアロックの気密を確かめて O2 ACT を切った後に POST EVA へ移るよう渡す。再与圧で DCS の症状が消えた場合は、MCC に確かめるまで EMU を脱がない。 */ }
+    item def DcsAbortJudgment { doc /* カフチェックリストで DCS の区分を判断した結果を渡す。カフ 4 では ABORT EVA として患者をエアロックへ連れ戻して単独で再与圧し、DCS の処置の手順へ移る。この手順は、カフ 4 への進行を防ぐために EVA を終えた後の処置を定める。 */ }
+    item def ContaminationRepressHold { doc /* EMU の汚染が疑われた場合は、エアロックを 5 psia まで再与圧した状態で保ち、検知管による汚染試験を行ってから再与圧を続けるよう渡す。汚染の除去では真空で 15 分保持した後に、エアロックを 5 psi まで再与圧する（REPRESS の手順 1〜8）。 */ }
+    item def OmsEngSwitchSelect { doc /* 各噴射の前に、パネル C3 の OMS ENG スイッチを ARM/PRESS にし、それ以外のときは OFF にしておく。 */ }
+    item def OmsEngGn2ValveCommand { doc /* ARM/PRESS で GN2 の圧力隔離弁を開く指令を渡す。制御弁1・2は、スイッチが ARM か ARM/PRESS で OMS ENG VLV スイッチが ON のときに計算機の指令で開く。 */ }
+    item def OmsHeSwitchSelect { doc /* パネル O8 の He PRESS/VAPOR ISOL スイッチ A・B を、手動の OPEN・CLOSE か、自動制御の GPC 位置にする。 */ }
+    item def OmsHeIsolationCommand { doc /* ヘリウム圧力弁と蒸気隔離弁を開閉する指令を渡す。A か B のどちらかが OPEN なら両方の蒸気隔離弁が開き、両方が CLOSE なら両方が閉じ、GPC 位置では噴射シーケンスが自動で制御する。 */ }
+    item def OmsCrossfeedSwitchSelect { doc /* パネル O8 の OMS CROSSFEED A・B スイッチで弁の組を選び、軌道上のインタコネクトは O7 の RCS スイッチとあわせて手動で組む。 */ }
+    item def OmsCrossfeedValveCommand { doc /* 燃料・酸化剤のクロスフィード弁の組を開閉する指令を渡す。GPC 位置のときは、A・B の弁の組がオービタの計算機の指令で自動的に開閉される。 */ }
+    item def OmsPropellantQuantityData { doc /* トータライザの全量と後室プローブの量を渡す。使用可能推進薬は計測量から残量を差し引いて定義される。 */ }
+    item def OmsQuantityDisplay { doc /* 全量をパネル O3 の RCS/OMS PRPLT QTY に、後室の量を GNC SYS SUMM 2 の OMS AFT QTY に出し、推進薬の予算とレッドラインの管理に使わせる。 */ }
+    item def OmsHeaterSwitchSelect { doc /* パネル A14 の RCS/OMS HTR スイッチで、左右ポッドと OMS クロスフィード配管のヒータの A・B 系統を選ぶ。 */ }
+    item def OmsHeaterStringCommand { doc /* 選んだヒータ系統へ切り替える指令を渡す。飛行中に少なくとも1回は冗長な系統（A か B）へ切り替える。 */ }
+    item def RcsValveSwitchSelect { doc /* パネル O7・O8 のスイッチで、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の開閉を選ぶ。 */ }
+    item def RcsPropellantValveOperation { doc /* 運用規則と手順に従い、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の操作を渡す。トークバックは対が開なら OP、閉なら CL、移動中や不一致ならバーバーポールを示す。 */ }
+    item def RcsHePressSwitchSelect { doc /* パネル O7・O8 の He PRESS A・B スイッチで、ヘリウム隔離弁を操作し、調圧器の故障では RCS REGULATOR RECONFIG の手順で加圧経路を切り替える。 */ }
+    item def RcsHeIsolationCommand { doc /* He PRESS A・B のスイッチ操作として、ヘリウム隔離弁の開閉と加圧経路の切替を渡す。 */ }
+    item def RcsHeaterSwitchSelect { doc /* パネル A14 のヒータスイッチで、ヒータ系（A・B）の選択と入切を行う。 */ }
+    item def RcsHeaterSelectCommand { doc /* 運用規則に従い、ヒータ系（A・B）の選択と入切を渡す。ヒータ系は飛行中に少なくとも一度は冗長側へ切り替える。 */ }
+    item def RcsPcDiscreteSignal { doc /* 燃焼室圧の離散信号を、実際に噴射したことの表示として渡す。RM は Pc 離散信号・CMD B・ドライバ出力離散信号を噴射器の故障の検知に使う。 */ }
+    item def RcsInjectorTempData { doc /* 各噴射器の燃料・酸化剤の噴射器温度を渡す。RM の限界を3周期続けて下回ると漏れ（fail-leak）と判定される。限界は主噴射器で酸化剤 30°F・燃料 20°F、OPS 2 のバーニアで 130°F である。 */ }
+    item def RcsManifoldValveStatus { doc /* マニホールド隔離弁の離散信号（弁の状態）を渡す。RM はマニホールドの状態を評価する。 */ }
+    item def RcsManifoldAutoCloseCommand { doc /* OPS 2・8 で fail-on が通報され、AUTO MANF CL が有効でスイッチが GPC 位置なら、GPC が該当するマニホールドを自動で閉じる指令を渡す。 */ }
+    item def RcsSpec23ItemEntry { doc /* SPEC 23 の項目入力で、噴射器の手動の選択解除・再選択、マニホールド状態の開・閉の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を行う。 */ }
+    item def RcsRmOverrideEntry { doc /* 噴射器の選択解除・再選択、マニホールド状態の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を渡す。 */ }
+    item def RcsHeliumPressureFault { doc /* ポッドのヘリウム圧（燃料か酸化剤）が 500 psi 未満になったことを、F(L,R) He P の故障メッセージとして渡す。 */ }
+    item def RcsHePAlertAnnunciation { doc /* F(L,R) He P の故障メッセージを乗員に見せる。乗員はポケットチェックリストの RCS LEAK ISOL の手順で対処する。 */ }
     occurrence def DeorbitToLanding {
         doc /* 図83 軌道離脱〜着陸 シーケンス図：軌道離脱の準備から着陸後まで（標準の EOM） */
         part crew { doc /* 乗員（CDR・PLT・MS） */ }
@@ -434,5 +499,185 @@ package SSD_BEH_ORB_003 {
         first QE_07 then QE_08;
         first QE_08 then QE_09;
         first QE_09 then QE_10;
+    }
+    occurrence def ApuHydOperations {
+        doc /* 図244 APU・油圧の運転と監視 シーケンス図：APU・油圧の運転と監視 */
+        part crew { doc /* 乗員 */ }
+        part apuOps { doc /* APU/HYD 運用管理 */ }
+        part apuFul { doc /* ヒドラジン燃料供給 */ }
+        part apuWsb { doc /* 水噴霧ボイラ */ }
+        part apuHyd { doc /* 主油圧ポンプ・供給 */ }
+        part apuCtl { doc /* APU 制御器 */ }
+        part apuTrb { doc /* タービン・ギアボックス */ }
+        part dpsFsw { doc /* DPS：飛行ソフトウェア */ }
+        message YA_01 of FuelTkVlvSwitchSelect from crew to apuOps { doc /* YA-01  パネル R2 の APU FUEL TK VLV 1・2・3 スイッチを OPEN にする。、スイッチ */ }
+        message YA_02 of FuelIsolationValveCommand from apuOps to apuFul { doc /* YA-02  スイッチの位置に従って各 APU の2個の燃料タンク隔離弁を通電して開く指令を渡す。CLOSE か電力喪失では両弁が閉じる。、IF-APU-03 */ }
+        message YA_03 of BoilerN2SwitchSelect from crew to apuOps { doc /* YA-03  パネル R2 の BOILER N2 SUPPLY 1・2・3 スイッチで、各ボイラの窒素遮断弁を開く。、スイッチ */ }
+        message YA_04 of BoilerN2ShutoffCommand from apuOps to apuWsb { doc /* YA-04  各ボイラの窒素遮断弁を開閉する指令を渡す。遮断弁は2つの独立したソレノイドで主・副どちらの制御器からも操作できる。、IF-APU-21 */ }
+        message YA_05 of BoilerReadySignal from apuWsb to apuOps { doc /* YA-05  制御器が有効で、窒素遮断弁が開、蒸気ベントのノズル温度が 130°F 超、作動油のバイパス弁が正しい位置のとき、R2 の APU/HYD READY TO START 表示へ準備完了の信号を渡す。、IF-APU-21 */ }
+        message YA_06 of HydPumpPressLowSelect from crew to apuOps { doc /* YA-06  APU の始動に先立って、パネル R2 の HYD MAIN PUMP PRESS スイッチを LOW にする。、スイッチ */ }
+        message YA_07 of PumpDepressurizeCommand from apuOps to apuHyd { doc /* YA-07  減圧弁を通電して主ポンプの吐出圧を 500〜1,000 psi に下げる指令を渡す。、IF-APU-20 */ }
+        message YA_08 of GasGenBedTempSignal from apuTrb to apuCtl { doc /* YA-08  ガス発生器床の温度トランスデューサの信号を渡す。、IF-APU-06 */ }
+        message YA_09 of GasGenHeaterControl from apuCtl to apuTrb { doc /* YA-09  比較器でガス発生器床ヒータを 360〜425°F に保つ制御を行う。、IF-APU-06 */ }
+        message YA_10 of ApuOperateSwitchSelect from crew to apuOps { doc /* YA-10  パネル R2 の APU OPERATE スイッチを START/RUN にし、APU AUTO SHUT DOWN スイッチを ENABLE（または INHIBIT）にする。、スイッチ */ }
+        message YA_11 of ApuStartAutoShutCommand from apuOps to apuCtl { doc /* YA-11  APU の始動の指令と、自動停止の機能の有効（ENABLE）・禁止（INHIBIT）の指令を渡す。制御器は始動を開始し、ガス発生器と燃料ポンプのヒータの電力を自動で断つ。、IF-APU-19 */ }
+        message YA_12 of GearboxGn2ValveCommand from apuCtl to apuTrb { doc /* YA-12  ギアボックス圧力が 5.2 psi 未満になると、潤滑油系の GN2 加圧弁を通電して開く指令を渡し、掃気と潤滑油ポンプの運転に必要な圧力を保つ。、IF-APU-06 */ }
+        message YA_13 of HydPumpPressNormSelect from crew to apuOps { doc /* YA-13  APU の始動後に、HYD MAIN PUMP PRESS スイッチを LOW から NORM にする。、スイッチ */ }
+        message YA_14 of PumpNormalPressCommand from apuOps to apuHyd { doc /* YA-14  減圧弁の通電を切る指令を渡し、主ポンプの吐出圧を 2,900〜3,100 psi に上げる。、IF-APU-20 */ }
+        message YA_15 of BoilerSensorTelemetry from apuWsb to dpsFsw { doc /* YA-15  各ボイラの GN2 容器と水タンクの冗長な圧力・温度センサの値を制御器を通して SM GPC へ渡す。GPC は水タンクの量を計算して専用の MEDS 表示へ送り、水量・窒素タンク圧力・調圧器圧力・窒素タンク温度は軌道上で SM APU/HYD（DISP 86）表示の右側に出る。、IF-APU-14 */ }
+        message YA_16 of FuelTkVlvCloseAfterShutdown from crew to apuOps { doc /* YA-16  APU の自動停止の後は、再び開いた隔離弁が高温のガス発生器床へ燃料を流さないよう、APU FUEL TK VLV スイッチを CLOSE にする。、スイッチ */ }
+        message YA_17 of FuelIsolationValveCloseCommand from apuOps to apuFul { doc /* YA-17  燃料タンク隔離弁を閉じる指令を渡す。、IF-APU-03 */ }
+        first YA_01 then YA_02;
+        first YA_02 then YA_03;
+        first YA_03 then YA_04;
+        first YA_04 then YA_05;
+        first YA_05 then YA_06;
+        first YA_06 then YA_07;
+        first YA_07 then YA_08;
+        first YA_08 then YA_09;
+        first YA_09 then YA_10;
+        first YA_10 then YA_11;
+        first YA_11 then YA_12;
+        first YA_12 then YA_13;
+        first YA_13 then YA_14;
+        first YA_14 then YA_15;
+        first YA_15 then YA_16;
+        first YA_16 then YA_17;
+    }
+    occurrence def DpsMpsOperations {
+        doc /* 図245 DPS の運用管理と MPS の乗員操作 シーケンス図：DPS の運用管理と MPS の乗員操作 */
+        part crew { doc /* 乗員 */ }
+        part dpsOps { doc /* DPS 運用管理 */ }
+        part dpsGpc { doc /* 汎用計算機・冗長セット */ }
+        part dpsBus { doc /* データバス網・MDM */ }
+        part dpsMtu { doc /* マスタタイミングユニット */ }
+        part mpsOps { doc /* MPS 運用管理 */ }
+        part mpsCtl { doc /* 主エンジン制御器 */ }
+        part mpsHe { doc /* ヘリウム・空圧 */ }
+        part mpsDmp { doc /* 充填・ダンプ・不活性化 */ }
+        part mpsTvc { doc /* 油圧・推力方向制御 */ }
+        message YB_01 of GpcFailureDeclaration from dpsGpc to dpsOps { doc /* YB-01  搭載と地上の監視で、冗長セットの故障・分裂、GPC 故障、データ経路の故障を宣言する材料を渡す。、IF-DPS-18 */ }
+        message YB_02 of GpcFailureRecoveryAction from dpsOps to dpsGpc { doc /* YB-02  故障した GPC を、上昇・再突入では MODE スイッチで HALT にし、それ以外では電源を切り、軌道上では DPS を構成し直して回復を試みる。、IF-DPS-18 */ }
+        message YB_03 of MdmPortModeRecovery from dpsOps to dpsBus { doc /* YB-03  MECO 後の FC・ペイロード MDM の故障に対し、DPS UTILITY 表示の項目入力でポートモードによる回復を試みる。、IF-DPS-19 */ }
+        message YB_04 of MdmPowerCycleReset from dpsOps to dpsBus { doc /* YB-04  データ経路の故障の後に、MDM の電源を切って入れ直し、出力をリセットする。、IF-DPS-19 */ }
+        message YB_05 of GmtErrorUpdate from dpsOps to dpsMtu { doc /* YB-05  MTU と GPC の GMT の誤差が 100 ms を超えたら、15 ms の更新を行う。、IF-DPS-20 */ }
+        message YB_06 of MtuOscillatorSwitch from dpsOps to dpsMtu { doc /* YB-06  MTU の BITE ビット 4 が立って MCC が時刻差の増加を見た場合などに、MECO 後から HAC 進入までの間に発振器を手動で切り替える。、IF-DPS-20 */ }
+        message YB_07 of EngineShutdownPushbutton from crew to mpsOps { doc /* YB-07  パネル C3 の MAIN ENGINE SHUT DOWN 押しボタンを押す（両接点が健全であること）。、押しボタン */ }
+        message YB_08 of EngineManualShutdownCommand from mpsOps to mpsCtl { doc /* YB-08  エンジンを手動停止する指令を、主エンジン制御器へ渡す。、IF-MPS-17 */ }
+        message YB_09 of EngineStatusReport from mpsCtl to mpsOps { doc /* YB-09  停止・停止後の段階やレッドライン超過、指令経路故障・ロックアップ・データ経路故障の状態を渡す。、IF-MPS-17 */ }
+        message YB_10 of EngineStatusLightAnnunciation from mpsOps to crew { doc /* YB-10  パネル F7 の MAIN ENGINE STATUS ライトを点灯させる。、表示灯 */ }
+        message YB_11 of HeSwitchSelect from crew to mpsOps { doc /* YB-11  パネル R2 の He ISOLATION A・B と He INTERCONNECT のスイッチを操作する。、スイッチ */ }
+        message YB_12 of HeIsolationValveCommand from mpsOps to mpsHe { doc /* YB-12  各エンジン系統の遮断弁を個別に、相互接続弁の組を 1 個のスイッチで操作する指令を渡す。、IF-MPS-18 */ }
+        message YB_13 of DumpSequenceSwitchSelect from crew to mpsOps { doc /* YB-13  MPS PRPLT DUMP SEQUENCE スイッチを START または STOP にする。、スイッチ */ }
+        message YB_14 of PropellantDumpCommand from mpsOps to mpsDmp { doc /* YB-14  ダンプの手動開始と、ET 分離の遅れの間の自動ダンプの停止の指令を渡す。自動の真空不活性化が十分でないときは、手動の真空不活性化も行う。、IF-MPS-19 */ }
+        message YB_15 of HydIsolSwitchSelect from crew to mpsOps { doc /* YB-15  パネル R4 の HYDRAULICS MPS/TVC ISOL VLV SYS 1〜3 スイッチを、軌道上では CLOSE にする。、スイッチ */ }
+        message YB_16 of TvcIsolationValveCommand from mpsOps to mpsTvc { doc /* YB-16  遮断弁を閉じて下流の油圧漏れから守る指令を渡す。OPEN にすると弁が開く。、IF-MPS-20 */ }
+        message YB_17 of TvcIsolValveTalkback from mpsTvc to crew { doc /* YB-17  スイッチの上のトークバックが、開で OP、閉で CL を示す。、トークバック */ }
+        first YB_01 then YB_02;
+        first YB_02 then YB_03;
+        first YB_03 then YB_04;
+        first YB_04 then YB_05;
+        first YB_05 then YB_06;
+        first YB_06 then YB_07;
+        first YB_07 then YB_08;
+        first YB_08 then YB_09;
+        first YB_09 then YB_10;
+        first YB_10 then YB_11;
+        first YB_11 then YB_12;
+        first YB_12 then YB_13;
+        first YB_13 then YB_14;
+        first YB_14 then YB_15;
+        first YB_15 then YB_16;
+        first YB_16 then YB_17;
+    }
+    occurrence def EvaProcedureFlow {
+        doc /* 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図：EVA の準備・減圧・再与圧・非常時の手順 */
+        part evaOps { doc /* 合図と運用管理 */ }
+        part evaChk { doc /* EMU 点検・準備 */ }
+        part evaDpr { doc /* 減圧・再与圧 */ }
+        part evaMnt { doc /* EVA 後の手入れ・再充填 */ }
+        part evaEmg { doc /* 非常時の手順 */ }
+        part mcc { doc /* 地上管制（MCC） */ }
+        message YC_01 of PrebreatheScheduleData from evaOps to evaChk { doc /* YC-01  キャビンを 10.2 psi にしてからの時間（12 時間・24 時間）に応じて、EMU 内の前呼吸を 1 時間 15 分・40 分とし、14.7 psi のままなら 4 時間とする基準を渡す。、IF-EVA-01 */ }
+        message YC_02 of DepressGoCheck from evaChk to mcc { doc /* YC-02  前呼吸の時間が終わったら、減圧の GO を確かめる。、手順（MCC 確認） */ }
+        message YC_03 of DepressStartCue from evaChk to evaDpr { doc /* YC-03  MCC の GO を確かめた後、DEPRESS/REPRESS のキューカードで減圧を始めるよう渡す。、IF-EVA-02 */ }
+        message YC_04 of CueCardConfigSelect from evaOps to evaDpr { doc /* YC-04  減圧・再与圧は、エアロックの構成ごと（通常構成・トンネルアダプタ）の DEPRESS/REPRESS キューカードに従うよう渡す。漏れ点検の不合格時の手順は FAILED LEAK CHECK に載せる。、IF-EVA-05 */ }
+        message YC_05 of PostEvaHandoff from evaDpr to evaMnt { doc /* YC-05  再与圧でエアロックの気密を確かめて O2 ACT を切った後に POST EVA へ移るよう渡す。再与圧で DCS の症状が消えた場合は、MCC に確かめるまで EMU を脱がない。、IF-EVA-06 */ }
+        message YC_06 of DcsAbortJudgment from evaOps to evaEmg { doc /* YC-06  カフチェックリストで DCS の区分を判断した結果を渡す。カフ 4 では ABORT EVA として患者をエアロックへ連れ戻して単独で再与圧し、DCS の処置の手順へ移る。この手順は、カフ 4 への進行を防ぐために EVA を終えた後の処置を定める。、IF-EVA-13 */ }
+        message YC_07 of ContaminationRepressHold from evaEmg to evaDpr { doc /* YC-07  EMU の汚染が疑われた場合は、エアロックを 5 psia まで再与圧した状態で保ち、検知管による汚染試験を行ってから再与圧を続けるよう渡す。汚染の除去では真空で 15 分保持した後に、エアロックを 5 psi まで再与圧する（REPRESS の手順 1〜8）。、IF-EVA-07 */ }
+        first YC_01 then YC_02;
+        first YC_02 then YC_03;
+        first YC_03 then YC_04;
+        first YC_04 then YC_05;
+        first YC_05 then YC_06;
+        first YC_06 then YC_07;
+    }
+    occurrence def OmsCrewOperations {
+        doc /* 図247 OMS の乗員操作と表示 シーケンス図：OMS の乗員操作と表示 */
+        part crew { doc /* 乗員 */ }
+        part omsOps { doc /* OMS 運用管理（規則・処置） */ }
+        part omsEng { doc /* OMS エンジン・GN2 系 */ }
+        part omsHe { doc /* OMS ヘリウム加圧 */ }
+        part omsXfd { doc /* OMS クロスフィード・RCS 連結 */ }
+        part omsPsd { doc /* OMS 推進薬貯蔵・分配 */ }
+        part omsThm { doc /* OMS 推進薬熱管理 */ }
+        message YD_01 of OmsEngSwitchSelect from crew to omsOps { doc /* YD-01  各噴射の前に、パネル C3 の OMS ENG スイッチを ARM/PRESS にし、それ以外のときは OFF にしておく。、スイッチ */ }
+        message YD_02 of OmsEngGn2ValveCommand from omsOps to omsEng { doc /* YD-02  ARM/PRESS で GN2 の圧力隔離弁を開く指令を渡す。制御弁1・2は、スイッチが ARM か ARM/PRESS で OMS ENG VLV スイッチが ON のときに計算機の指令で開く。、IF-OMS-06 */ }
+        message YD_03 of OmsHeSwitchSelect from crew to omsOps { doc /* YD-03  パネル O8 の He PRESS/VAPOR ISOL スイッチ A・B を、手動の OPEN・CLOSE か、自動制御の GPC 位置にする。、スイッチ */ }
+        message YD_04 of OmsHeIsolationCommand from omsOps to omsHe { doc /* YD-04  ヘリウム圧力弁と蒸気隔離弁を開閉する指令を渡す。A か B のどちらかが OPEN なら両方の蒸気隔離弁が開き、両方が CLOSE なら両方が閉じ、GPC 位置では噴射シーケンスが自動で制御する。、IF-OMS-07 */ }
+        message YD_05 of OmsCrossfeedSwitchSelect from crew to omsOps { doc /* YD-05  パネル O8 の OMS CROSSFEED A・B スイッチで弁の組を選び、軌道上のインタコネクトは O7 の RCS スイッチとあわせて手動で組む。、スイッチ */ }
+        message YD_06 of OmsCrossfeedValveCommand from omsOps to omsXfd { doc /* YD-06  燃料・酸化剤のクロスフィード弁の組を開閉する指令を渡す。GPC 位置のときは、A・B の弁の組がオービタの計算機の指令で自動的に開閉される。、IF-OMS-08 */ }
+        message YD_07 of OmsPropellantQuantityData from omsPsd to omsOps { doc /* YD-07  トータライザの全量と後室プローブの量を渡す。使用可能推進薬は計測量から残量を差し引いて定義される。、IF-OMS-09 */ }
+        message YD_08 of OmsQuantityDisplay from omsOps to crew { doc /* YD-08  全量をパネル O3 の RCS/OMS PRPLT QTY に、後室の量を GNC SYS SUMM 2 の OMS AFT QTY に出し、推進薬の予算とレッドラインの管理に使わせる。、表示 */ }
+        message YD_09 of OmsHeaterSwitchSelect from crew to omsOps { doc /* YD-09  パネル A14 の RCS/OMS HTR スイッチで、左右ポッドと OMS クロスフィード配管のヒータの A・B 系統を選ぶ。、スイッチ */ }
+        message YD_10 of OmsHeaterStringCommand from omsOps to omsThm { doc /* YD-10  選んだヒータ系統へ切り替える指令を渡す。飛行中に少なくとも1回は冗長な系統（A か B）へ切り替える。、IF-OMS-10 */ }
+        first YD_01 then YD_02;
+        first YD_02 then YD_03;
+        first YD_03 then YD_04;
+        first YD_04 then YD_05;
+        first YD_05 then YD_06;
+        first YD_06 then YD_07;
+        first YD_07 then YD_08;
+        first YD_08 then YD_09;
+        first YD_09 then YD_10;
+    }
+    occurrence def RcsRedundancyAndCrewOps {
+        doc /* 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図：RCS の噴射器冗長管理と乗員操作 */
+        part crew { doc /* 乗員 */ }
+        part rcsOps { doc /* RCS 運用管理 */ }
+        part rcsPrp { doc /* 推進薬貯蔵・分配 */ }
+        part rcsHep { doc /* ヘリウム加圧 */ }
+        part rcsHtr { doc /* 熱制御（ヒータ） */ }
+        part rcsRjd { doc /* 噴射器駆動回路 */ }
+        part rcsJet { doc /* 主・バーニア噴射器 */ }
+        part rcsRm { doc /* 噴射器冗長管理 */ }
+        part cwPri { doc /* 警報系（C/W） */ }
+        message YE_01 of RcsValveSwitchSelect from crew to rcsOps { doc /* YE-01  パネル O7・O8 のスイッチで、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の開閉を選ぶ。、スイッチ */ }
+        message YE_02 of RcsPropellantValveOperation from rcsOps to rcsPrp { doc /* YE-02  運用規則と手順に従い、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の操作を渡す。トークバックは対が開なら OP、閉なら CL、移動中や不一致ならバーバーポールを示す。、IF-RCS-16 */ }
+        message YE_03 of RcsHePressSwitchSelect from crew to rcsOps { doc /* YE-03  パネル O7・O8 の He PRESS A・B スイッチで、ヘリウム隔離弁を操作し、調圧器の故障では RCS REGULATOR RECONFIG の手順で加圧経路を切り替える。、スイッチ */ }
+        message YE_04 of RcsHeIsolationCommand from rcsOps to rcsHep { doc /* YE-04  He PRESS A・B のスイッチ操作として、ヘリウム隔離弁の開閉と加圧経路の切替を渡す。、IF-RCS-17 */ }
+        message YE_05 of RcsHeaterSwitchSelect from crew to rcsOps { doc /* YE-05  パネル A14 のヒータスイッチで、ヒータ系（A・B）の選択と入切を行う。、スイッチ */ }
+        message YE_06 of RcsHeaterSelectCommand from rcsOps to rcsHtr { doc /* YE-06  運用規則に従い、ヒータ系（A・B）の選択と入切を渡す。ヒータ系は飛行中に少なくとも一度は冗長側へ切り替える。、IF-RCS-19 */ }
+        message YE_07 of RcsPcDiscreteSignal from rcsRjd to rcsRm { doc /* YE-07  燃焼室圧の離散信号を、実際に噴射したことの表示として渡す。RM は Pc 離散信号・CMD B・ドライバ出力離散信号を噴射器の故障の検知に使う。、IF-RCS-04 */ }
+        message YE_08 of RcsInjectorTempData from rcsJet to rcsRm { doc /* YE-08  各噴射器の燃料・酸化剤の噴射器温度を渡す。RM の限界を3周期続けて下回ると漏れ（fail-leak）と判定される。限界は主噴射器で酸化剤 30°F・燃料 20°F、OPS 2 のバーニアで 130°F である。、IF-RCS-05 */ }
+        message YE_09 of RcsManifoldValveStatus from rcsPrp to rcsRm { doc /* YE-09  マニホールド隔離弁の離散信号（弁の状態）を渡す。RM はマニホールドの状態を評価する。、IF-RCS-06 */ }
+        message YE_10 of RcsManifoldAutoCloseCommand from rcsRm to rcsPrp { doc /* YE-10  OPS 2・8 で fail-on が通報され、AUTO MANF CL が有効でスイッチが GPC 位置なら、GPC が該当するマニホールドを自動で閉じる指令を渡す。、IF-RCS-06 */ }
+        message YE_11 of RcsSpec23ItemEntry from crew to rcsOps { doc /* YE-11  SPEC 23 の項目入力で、噴射器の手動の選択解除・再選択、マニホールド状態の開・閉の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を行う。、SPEC 23 の項目入力 */ }
+        message YE_12 of RcsRmOverrideEntry from rcsOps to rcsRm { doc /* YE-12  噴射器の選択解除・再選択、マニホールド状態の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を渡す。、IF-RCS-18 */ }
+        message YE_13 of RcsHeliumPressureFault from rcsHep to cwPri { doc /* YE-13  ポッドのヘリウム圧（燃料か酸化剤）が 500 psi 未満になったことを、F(L,R) He P の故障メッセージとして渡す。、IF-RCS-14 */ }
+        message YE_14 of RcsHePAlertAnnunciation from cwPri to crew { doc /* YE-14  F(L,R) He P の故障メッセージを乗員に見せる。乗員はポケットチェックリストの RCS LEAK ISOL の手順で対処する。、表示・警報 */ }
+        first YE_01 then YE_02;
+        first YE_02 then YE_03;
+        first YE_03 then YE_04;
+        first YE_04 then YE_05;
+        first YE_05 then YE_06;
+        first YE_06 then YE_07;
+        first YE_07 then YE_08;
+        first YE_08 then YE_09;
+        first YE_09 then YE_10;
+        first YE_10 then YE_11;
+        first YE_11 then YE_12;
+        first YE_12 then YE_13;
+        first YE_13 then YE_14;
     }
 }

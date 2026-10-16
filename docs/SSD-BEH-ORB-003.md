@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-003 |
 | 表題 | シーケンス定義書（軌道離脱〜着陸・上昇・指令とテレメトリの経路） |
-| 版・日付 | Rev. E／2026-10-16 |
+| 版・日付 | Rev. F／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BEH-ORB-001 |
-| 関連図 | SSD-SYS-ARC-001 図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図・図238 ARS 空気系の運転と監視 シーケンス図・図239 RCRS と水冷却ループの運転と監視 シーケンス図・図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図・図241 煙検知と消火 シーケンス図・図242 キャビン温湿度の制御と監視 シーケンス図 |
+| 関連図 | SSD-SYS-ARC-001 図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図・図238 ARS 空気系の運転と監視 シーケンス図・図239 RCRS と水冷却ループの運転と監視 シーケンス図・図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図・図241 煙検知と消火 シーケンス図・図242 キャビン温湿度の制御と監視 シーケンス図・図244 APU・油圧の運転と監視 シーケンス図・図245 DPS の運用管理と MPS の乗員操作 シーケンス図・図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図・図247 OMS の乗員操作と表示 シーケンス図・図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 |
 
 ## 1. 目的
 
-複数の系・乗員・地上が順にやり取りする場面をシーケンス図で示す。図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図・図238 ARS 空気系の運転と監視 シーケンス図・図239 RCRS と水冷却ループの運転と監視 シーケンス図・図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図・図241 煙検知と消火 シーケンス図・図242 キャビン温湿度の制御と監視 シーケンス図 のメッセージは、系どうしのやり取りでは上位・下位の IF の ID に結び付け、IF 一覧が実際の動きで使われていることを示す。同じライフラインとメッセージを SysML v2 のテキスト（SysML/SSD-BEH-ORB-003.sysml）でも示す。
+複数の系・乗員・地上が順にやり取りする場面をシーケンス図で示す。図83 軌道離脱〜着陸 シーケンス図・図84 上昇 シーケンス図・図85 指令・テレメトリ経路 シーケンス図・図238 ARS 空気系の運転と監視 シーケンス図・図239 RCRS と水冷却ループの運転と監視 シーケンス図・図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図・図241 煙検知と消火 シーケンス図・図242 キャビン温湿度の制御と監視 シーケンス図・図244 APU・油圧の運転と監視 シーケンス図・図245 DPS の運用管理と MPS の乗員操作 シーケンス図・図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図・図247 OMS の乗員操作と表示 シーケンス図・図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 のメッセージは、系どうしのやり取りでは上位・下位の IF の ID に結び付け、IF 一覧が実際の動きで使われていることを示す。同じライフラインとメッセージを SysML v2 のテキスト（SysML/SSD-BEH-ORB-003.sysml）でも示す。
 
 ## 2. 書き方
 
@@ -320,13 +320,194 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | QE-09 | — | 喪失の判断と処置 | 温湿度監視 → 温湿度運用管理 | 熱交換器出口温度・キャビン温度・分離器の運転状態の表示と警報を、キャビン大気制御の喪失判定（A17-102）と故障処置に使う | IF-THC-13 | QE_09（AtmosphereLossJudgementData） | キャビン温度を 95 度（90 度）F 未満に保てないとき、キャビン大気制御は喪失とみなされる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1930） |
 | QE-10 | — | 喪失の判断と処置 | 温湿度運用管理 → 温度制御弁・給気混合 | コントローラで弁を制御できない場合は、MD44F で弁アームを4つの固定穴の一つにピン止めする | IF-THC-14（手動） | QE_10（ManualBypassValvePin） | コントローラで単一のバイパス弁を制御できないとき、乗員は MD44F で弁アームを固定穴の一つにピン止めする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/375） |
 
-## 19. IF との対応
+## 19. 図244 のライフライン
 
-メッセージが通る IF 70件と、その IF を使うメッセージを示す。
+図244 APU・油圧の運転と監視 シーケンス図（APU・油圧の運転と監視）のライフライン 8件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| OPS | APU/HYD 運用管理 | SSD-FD-APU-OPS-001 | apuOps |
+| FUL | ヒドラジン燃料供給 | SSD-FD-APU-FUL-001 | apuFul |
+| WSB | 水噴霧ボイラ | SSD-FD-APU-WSB-001 | apuWsb |
+| HYD | 主油圧ポンプ・供給 | SSD-FD-APU-HYD-001 | apuHyd |
+| CTL | APU 制御器 | SSD-FD-APU-CTL-001 | apuCtl |
+| TRB | タービン・ギアボックス | SSD-FD-APU-TRB-001 | apuTrb |
+| FSW | DPS：飛行ソフトウェア | SSD-FD-DPS-FSW-001 | dpsFsw |
+
+## 20. 図244 のメッセージ
+
+図244 APU・油圧の運転と監視 シーケンス図のメッセージ 17件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| YA-01 | — | 始動前の準備 | 乗員 → APU/HYD 運用管理 | パネル R2 の APU FUEL TK VLV 1・2・3 スイッチを OPEN にする。 | スイッチ | YA_01（FuelTkVlvSwitchSelect） | パネル R2 の APU FUEL TK VLV 1・2・3 スイッチを OPEN にすると、各 APU の2個の燃料タンク隔離弁が通電して開き、CLOSE にするか電力を失うと両弁が閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/86） |
+| YA-02 | — | 始動前の準備 | APU/HYD 運用管理 → ヒドラジン燃料供給 | スイッチの位置に従って各 APU の2個の燃料タンク隔離弁を通電して開く指令を渡す。CLOSE か電力喪失では両弁が閉じる。 | IF-APU-03 | YA_02（FuelIsolationValveCommand） | パネル R2 の APU FUEL TK VLV 1・2・3 スイッチを OPEN にすると、各 APU の2個の燃料タンク隔離弁が通電して開き、CLOSE にするか電力を失うと両弁が閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/86） |
+| YA-03 | — | 始動前の準備 | 乗員 → APU/HYD 運用管理 | パネル R2 の BOILER N2 SUPPLY 1・2・3 スイッチで、各ボイラの窒素遮断弁を開く。 | スイッチ | YA_03（BoilerN2SwitchSelect） | パネル R2 の BOILER N2 SUPPLY 1・2・3 スイッチが各ボイラの窒素遮断弁を制御し、遮断弁は2つの独立したソレノイドコイルで主・副どちらの制御器からも操作できる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/96） |
+| YA-04 | — | 始動前の準備 | APU/HYD 運用管理 → 水噴霧ボイラ | 各ボイラの窒素遮断弁を開閉する指令を渡す。遮断弁は2つの独立したソレノイドで主・副どちらの制御器からも操作できる。 | IF-APU-21 | YA_04（BoilerN2ShutoffCommand） | パネル R2 の BOILER N2 SUPPLY 1・2・3 スイッチが各ボイラの窒素遮断弁を制御し、遮断弁は2つの独立したソレノイドコイルで主・副どちらの制御器からも操作できる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/96） |
+| YA-05 | — | 始動前の準備 | 水噴霧ボイラ → APU/HYD 運用管理 | 制御器が有効で、窒素遮断弁が開、蒸気ベントのノズル温度が 130°F 超、作動油のバイパス弁が正しい位置のとき、R2 の APU/HYD READY TO START 表示へ準備完了の信号を渡す。 | IF-APU-21 | YA_05（BoilerReadySignal） | ボイラの制御器が有効で、窒素遮断弁が開、蒸気ベントのノズル温度が 130°F 超、作動油のバイパス弁が正しい位置のとき、パネル R2 の APU/HYD READY TO START 表示へ準備完了の信号が送られる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/98） |
+| YA-06 | — | 始動前の準備 | 乗員 → APU/HYD 運用管理 | APU の始動に先立って、パネル R2 の HYD MAIN PUMP PRESS スイッチを LOW にする。 | スイッチ | YA_06（HydPumpPressLowSelect） | パネル R2 の HYD MAIN PUMP PRESS スイッチを LOW にすると減圧弁が通電して、主ポンプの吐出圧が 2,900〜3,100 psi から 500〜1,000 psi に下がり、APU の始動時のトルクの要求が減る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/99） |
+| YA-07 | — | 始動前の準備 | APU/HYD 運用管理 → 主油圧ポンプ・供給 | 減圧弁を通電して主ポンプの吐出圧を 500〜1,000 psi に下げる指令を渡す。 | IF-APU-20 | YA_07（PumpDepressurizeCommand） | パネル R2 の HYD MAIN PUMP PRESS スイッチを LOW にすると減圧弁が通電して、主ポンプの吐出圧が 2,900〜3,100 psi から 500〜1,000 psi に下がり、APU の始動時のトルクの要求が減る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/99） |
+| YA-08 | — | 始動前の準備 | タービン・ギアボックス → APU 制御器 | ガス発生器床の温度トランスデューサの信号を渡す。 | IF-APU-06 | YA_08（GasGenBedTempSignal） | ガス発生器床ヒータは、APU 制御器内の比較器が床温度トランスデューサの信号を受けて 360〜425°F に保ち、この温度範囲が効率のよい始動のための触媒反応を確保する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/94） |
+| YA-09 | — | 始動と制御 | APU 制御器 → タービン・ギアボックス | 比較器でガス発生器床ヒータを 360〜425°F に保つ制御を行う。 | IF-APU-06 | YA_09（GasGenHeaterControl） | ガス発生器床ヒータは、APU 制御器内の比較器が床温度トランスデューサの信号を受けて 360〜425°F に保ち、この温度範囲が効率のよい始動のための触媒反応を確保する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/94） |
+| YA-10 | — | 始動と制御 | 乗員 → APU/HYD 運用管理 | パネル R2 の APU OPERATE スイッチを START/RUN にし、APU AUTO SHUT DOWN スイッチを ENABLE（または INHIBIT）にする。 | スイッチ | YA_10（ApuOperateSwitchSelect） | パネル R2 の APU OPERATE 1・2・3 スイッチを START/RUN にすると、対応する APU 制御器が始動を開始し、ガス発生器と燃料ポンプのヒータの電力を自動で断つ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/89）パネル R2 の APU AUTO SHUT DOWN スイッチを ENABLE にすると制御器の自動停止の機能が有効になり、INHIBIT にすると自動停止が禁止される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/90） |
+| YA-11 | — | 始動と制御 | APU/HYD 運用管理 → APU 制御器 | APU の始動の指令と、自動停止の機能の有効（ENABLE）・禁止（INHIBIT）の指令を渡す。制御器は始動を開始し、ガス発生器と燃料ポンプのヒータの電力を自動で断つ。 | IF-APU-19 | YA_11（ApuStartAutoShutCommand） | パネル R2 の APU OPERATE 1・2・3 スイッチを START/RUN にすると、対応する APU 制御器が始動を開始し、ガス発生器と燃料ポンプのヒータの電力を自動で断つ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/89）パネル R2 の APU AUTO SHUT DOWN スイッチを ENABLE にすると制御器の自動停止の機能が有効になり、INHIBIT にすると自動停止が禁止される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/90） |
+| YA-12 | — | 始動と制御 | APU 制御器 → タービン・ギアボックス | ギアボックス圧力が 5.2 psi 未満になると、潤滑油系の GN2 加圧弁を通電して開く指令を渡し、掃気と潤滑油ポンプの運転に必要な圧力を保つ。 | IF-APU-06 | YA_12（GearboxGn2ValveCommand） | APU 制御器は、ギアボックス圧力が 5.2 psi 未満になると潤滑油系の GN2 加圧弁を通電して開き、掃気と潤滑油ポンプの運転に必要なギアボックス圧力を保つ。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/88） |
+| YA-13 | — | 始動と制御 | 乗員 → APU/HYD 運用管理 | APU の始動後に、HYD MAIN PUMP PRESS スイッチを LOW から NORM にする。 | スイッチ | YA_13（HydPumpPressNormSelect） | APU の始動後に HYD MAIN PUMP PRESS スイッチを LOW から NORM にすると減圧弁の通電が切れ、主ポンプの吐出圧が 500〜1,000 psi から 2,900〜3,100 psi に上がる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/100） |
+| YA-14 | — | 始動と制御 | APU/HYD 運用管理 → 主油圧ポンプ・供給 | 減圧弁の通電を切る指令を渡し、主ポンプの吐出圧を 2,900〜3,100 psi に上げる。 | IF-APU-20 | YA_14（PumpNormalPressCommand） | APU の始動後に HYD MAIN PUMP PRESS スイッチを LOW から NORM にすると減圧弁の通電が切れ、主ポンプの吐出圧が 500〜1,000 psi から 2,900〜3,100 psi に上がる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/100） |
+| YA-15 | — | 監視と停止後の処置 | 水噴霧ボイラ → DPS：飛行ソフトウェア | 各ボイラの GN2 容器と水タンクの冗長な圧力・温度センサの値を制御器を通して SM GPC へ渡す。GPC は水タンクの量を計算して専用の MEDS 表示へ送り、水量・窒素タンク圧力・調圧器圧力・窒素タンク温度は軌道上で SM APU/HYD（DISP 86）表示の右側に出る。 | IF-APU-14 | YA_15（BoilerSensorTelemetry） | 各ボイラの GN2 容器と水タンクの冗長な圧力・温度センサの値は制御器を通して SM GPC へ送られ、GPC が水タンクの量を計算して専用の MEDS 表示へ送る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/97）ボイラの水量・窒素タンク圧力・調圧器圧力・窒素タンク温度は、軌道上では SM APU/HYD（DISP 86）表示の右側に示される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/95） |
+| YA-16 | — | 監視と停止後の処置 | 乗員 → APU/HYD 運用管理 | APU の自動停止の後は、再び開いた隔離弁が高温のガス発生器床へ燃料を流さないよう、APU FUEL TK VLV スイッチを CLOSE にする。 | スイッチ | YA_16（FuelTkVlvCloseAfterShutdown） | APU の自動停止の後は、燃料タンク隔離弁が再び開いて高温のガス発生器床へ燃料が流れないよう、APU FUEL TK VLV スイッチを CLOSE にする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/89） |
+| YA-17 | — | 監視と停止後の処置 | APU/HYD 運用管理 → ヒドラジン燃料供給 | 燃料タンク隔離弁を閉じる指令を渡す。 | IF-APU-03 | YA_17（FuelIsolationValveCloseCommand） | APU の自動停止の後は、燃料タンク隔離弁が再び開いて高温のガス発生器床へ燃料が流れないよう、APU FUEL TK VLV スイッチを CLOSE にする。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/89）パネル R2 の APU FUEL TK VLV 1・2・3 スイッチを OPEN にすると、各 APU の2個の燃料タンク隔離弁が通電して開き、CLOSE にするか電力を失うと両弁が閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/86） |
+
+## 21. 図245 のライフライン
+
+図245 DPS の運用管理と MPS の乗員操作 シーケンス図（DPS の運用管理と MPS の乗員操作）のライフライン 10件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| DOPS | DPS 運用管理 | SSD-FD-DPS-OPS-001 | dpsOps |
+| GPC | 汎用計算機・冗長セット | SSD-FD-DPS-GPC-001 | dpsGpc |
+| BUS | データバス網・MDM | SSD-FD-DPS-BUS-001 | dpsBus |
+| MTU | マスタタイミングユニット | SSD-FD-DPS-MTU-001 | dpsMtu |
+| MOPS | MPS 運用管理 | SSD-FD-MPS-OPS-001 | mpsOps |
+| MCTL | 主エンジン制御器 | SSD-FD-MPS-CTL-001 | mpsCtl |
+| MHE | ヘリウム・空圧 | SSD-FD-MPS-HE-001 | mpsHe |
+| MDMP | 充填・ダンプ・不活性化 | SSD-FD-MPS-DMP-001 | mpsDmp |
+| MTVC | 油圧・推力方向制御 | SSD-FD-MPS-TVC-001 | mpsTvc |
+
+## 22. 図245 のメッセージ
+
+図245 DPS の運用管理と MPS の乗員操作 シーケンス図のメッセージ 17件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| YB-01 | — | DPS の故障と時刻の管理 | 汎用計算機・冗長セット → DPS 運用管理 | 搭載と地上の監視で、冗長セットの故障・分裂、GPC 故障、データ経路の故障を宣言する材料を渡す。 | IF-DPS-18 | YB_01（GpcFailureDeclaration） | DPS の故障は、搭載と地上の監視により、冗長セットの故障・分裂、GPC 故障、データ経路の故障として宣言する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1289） |
+| YB-02 | — | DPS の故障と時刻の管理 | DPS 運用管理 → 汎用計算機・冗長セット | 故障した GPC を、上昇・再突入では MODE スイッチで HALT にし、それ以外では電源を切り、軌道上では DPS を構成し直して回復を試みる。 | IF-DPS-18 | YB_02（GpcFailureRecoveryAction） | 故障した GPC は、上昇・再突入では MODE スイッチで HALT にし、それ以外では電源を切り、軌道上では DPS を構成し直して回復を試みる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1293） |
+| YB-03 | — | DPS の故障と時刻の管理 | DPS 運用管理 → データバス網・MDM | MECO 後の FC・ペイロード MDM の故障に対し、DPS UTILITY 表示の項目入力でポートモードによる回復を試みる。 | IF-DPS-19 | YB_03（MdmPortModeRecovery） | MECO 後の FC・ペイロード MDM の故障では、非普遍 I/O エラーの場合を除き、DPS UTILITY 表示の項目入力で、どの有効な OPS のどのメジャーモードでもポートモードによる回復を試みられる。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1328） |
+| YB-04 | — | DPS の故障と時刻の管理 | DPS 運用管理 → データバス網・MDM | データ経路の故障の後に、MDM の電源を切って入れ直し、出力をリセットする。 | IF-DPS-19 | YB_04（MdmPowerCycleReset） | データ経路の故障の後は、MDM の電源を切って入れ直して出力をリセットする。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1320） |
+| YB-05 | — | DPS の故障と時刻の管理 | DPS 運用管理 → マスタタイミングユニット | MTU と GPC の GMT の誤差が 100 ms を超えたら、15 ms の更新を行う。 | IF-DPS-20 | YB_05（GmtErrorUpdate） | MTU と GPC の GMT の誤差は、SPEC 2 TIME が使えるときは 100 ms 以下に保ち、誤差がその閾値を超えたら 15 ms の更新を行う。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1330） |
+| YB-06 | — | DPS の故障と時刻の管理 | DPS 運用管理 → マスタタイミングユニット | MTU の BITE ビット 4 が立って MCC が時刻差の増加を見た場合などに、MECO 後から HAC 進入までの間に発振器を手動で切り替える。 | IF-DPS-20 | YB_06（MtuOscillatorSwitch） | MTU の BITE ビット 4 が立って MCC が MTU の時刻差の増加を見た場合などは、MECO 後から HAC 進入までの間に発振器を手動で切り替える。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1331） |
+| YB-07 | — | MPS の乗員操作 | 乗員 → MPS 運用管理 | パネル C3 の MAIN ENGINE SHUT DOWN 押しボタンを押す（両接点が健全であること）。 | 押しボタン | YB_07（EngineShutdownPushbutton） | 乗員はパネル C3 の MAIN ENGINE SHUT DOWN 押しボタン（両接点が健全であること）でエンジンを手動停止する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/618） |
+| YB-08 | — | MPS の乗員操作 | MPS 運用管理 → 主エンジン制御器 | エンジンを手動停止する指令を、主エンジン制御器へ渡す。 | IF-MPS-17 | YB_08（EngineManualShutdownCommand） | 乗員はパネル C3 の MAIN ENGINE SHUT DOWN 押しボタン（両接点が健全であること）でエンジンを手動停止する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/618） |
+| YB-09 | — | MPS の乗員操作 | 主エンジン制御器 → MPS 運用管理 | 停止・停止後の段階やレッドライン超過、指令経路故障・ロックアップ・データ経路故障の状態を渡す。 | IF-MPS-17 | YB_09（EngineStatusReport） | パネル F7 の MAIN ENGINE STATUS ライトは、停止・停止後の段階かレッドライン超過で赤が点灯し、指令経路故障・油圧ロックアップ・電気的ロックアップ・データ経路故障でも点灯する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/602） |
+| YB-10 | — | MPS の乗員操作 | MPS 運用管理 → 乗員 | パネル F7 の MAIN ENGINE STATUS ライトを点灯させる。 | 表示灯 | YB_10（EngineStatusLightAnnunciation） | パネル F7 の MAIN ENGINE STATUS ライトは、停止・停止後の段階かレッドライン超過で赤が点灯し、指令経路故障・油圧ロックアップ・電気的ロックアップ・データ経路故障でも点灯する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/602） |
+| YB-11 | — | MPS の乗員操作 | 乗員 → MPS 運用管理 | パネル R2 の He ISOLATION A・B と He INTERCONNECT のスイッチを操作する。 | スイッチ | YB_11（HeSwitchSelect） | 乗員はパネル R2 の He ISOLATION A・B（LEFT・CTR・RIGHT）スイッチで各エンジン系統の遮断弁を個別に操作し、ヘリウム漏れの隔離手順を行う。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/598）He INTERCONNECT LEFT・CTR・RIGHT スイッチ（IN OPEN・GPC・OUT OPEN）は、各エンジン系統の相互接続弁の組を 1 個のスイッチで操作する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/599） |
+| YB-12 | — | MPS の乗員操作 | MPS 運用管理 → ヘリウム・空圧 | 各エンジン系統の遮断弁を個別に、相互接続弁の組を 1 個のスイッチで操作する指令を渡す。 | IF-MPS-18 | YB_12（HeIsolationValveCommand） | 乗員はパネル R2 の He ISOLATION A・B（LEFT・CTR・RIGHT）スイッチで各エンジン系統の遮断弁を個別に操作し、ヘリウム漏れの隔離手順を行う。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/598）He INTERCONNECT LEFT・CTR・RIGHT スイッチ（IN OPEN・GPC・OUT OPEN）は、各エンジン系統の相互接続弁の組を 1 個のスイッチで操作する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/599） |
+| YB-13 | — | MPS の乗員操作 | 乗員 → MPS 運用管理 | MPS PRPLT DUMP SEQUENCE スイッチを START または STOP にする。 | スイッチ | YB_13（DumpSequenceSwitchSelect） | 乗員は MPS PRPLT DUMP SEQUENCE スイッチの START でダンプを手動で始め、STOP で ET 分離の遅れの間の自動ダンプを止める。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/609） |
+| YB-14 | — | MPS の乗員操作 | MPS 運用管理 → 充填・ダンプ・不活性化 | ダンプの手動開始と、ET 分離の遅れの間の自動ダンプの停止の指令を渡す。自動の真空不活性化が十分でないときは、手動の真空不活性化も行う。 | IF-MPS-19 | YB_14（PropellantDumpCommand） | 乗員は MPS PRPLT DUMP SEQUENCE スイッチの START でダンプを手動で始め、STOP で ET 分離の遅れの間の自動ダンプを止める。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/609）自動の真空不活性化が十分でないときは、LO2 または LH2 の供給系統を手動で真空不活性化し、LO2 系統は LO2 FILL/DRAIN 弁から行う。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1031） |
+| YB-15 | — | MPS の乗員操作 | 乗員 → MPS 運用管理 | パネル R4 の HYDRAULICS MPS/TVC ISOL VLV SYS 1〜3 スイッチを、軌道上では CLOSE にする。 | スイッチ | YB_15（HydIsolSwitchSelect） | 乗員はパネル R4 の HYDRAULICS MPS/TVC ISOL VLV SYS 1〜3 スイッチを軌道上では CLOSE にし、遮断弁下流の油圧漏れから守る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/601） |
+| YB-16 | — | MPS の乗員操作 | MPS 運用管理 → 油圧・推力方向制御 | 遮断弁を閉じて下流の油圧漏れから守る指令を渡す。OPEN にすると弁が開く。 | IF-MPS-20 | YB_16（TvcIsolationValveCommand） | 乗員はパネル R4 の HYDRAULICS MPS/TVC ISOL VLV SYS 1〜3 スイッチを軌道上では CLOSE にし、遮断弁下流の油圧漏れから守る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/601）弁はスイッチを OPEN にすると開き、スイッチの上のトークバックが開で OP、閉で CL を示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/600） |
+| YB-17 | — | MPS の乗員操作 | 油圧・推力方向制御 → 乗員 | スイッチの上のトークバックが、開で OP、閉で CL を示す。 | トークバック | YB_17（TvcIsolValveTalkback） | 弁はスイッチを OPEN にすると開き、スイッチの上のトークバックが開で OP、閉で CL を示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/600） |
+
+## 23. 図246 のライフライン
+
+図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図（EVA の準備・減圧・再与圧・非常時の手順）のライフライン 6件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| EOPS | 合図と運用管理 | SSD-FD-EVA-OPS-001 | evaOps |
+| ECHK | EMU 点検・準備 | SSD-FD-EVA-CHK-001 | evaChk |
+| EDPR | 減圧・再与圧 | SSD-FD-EVA-DPR-001 | evaDpr |
+| EMNT | EVA 後の手入れ・再充填 | SSD-FD-EVA-MNT-001 | evaMnt |
+| EEMG | 非常時の手順 | SSD-FD-EVA-EMG-001 | evaEmg |
+| MCC | 地上管制（MCC） | — | mcc |
+
+## 24. 図246 のメッセージ
+
+図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図のメッセージ 7件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| YC-01 | — | 前呼吸と減圧 | 合図と運用管理 → EMU 点検・準備 | キャビンを 10.2 psi にしてからの時間（12 時間・24 時間）に応じて、EMU 内の前呼吸を 1 時間 15 分・40 分とし、14.7 psi のままなら 4 時間とする基準を渡す。 | IF-EVA-01 | YC_01（PrebreatheScheduleData） | EVA チェックリストの EMU 前呼吸の表では、キャビン圧 10.2 psi で 12 時間なら前呼吸は 1 時間 15 分、24 時間なら 40 分とし、14.7 psi のままなら 4 時間とする。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=88）SCOM の 10.2 psia キャビン方式の選択肢 1 は初期前呼吸 60 分・10.2 psia で 12 時間・最終前呼吸 75 分、選択肢 2 は 24 時間・最終前呼吸 40 分であり、スーツ内 4 時間の前呼吸の方式もある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/403） |
+| YC-02 | — | 前呼吸と減圧 | EMU 点検・準備 → 地上管制（MCC） | 前呼吸の時間が終わったら、減圧の GO を確かめる。 | 手順（MCC 確認） | YC_02（DepressGoCheck） | EVA チェックリストの手順 53 は、前呼吸の時間が終わったら MCC に DEPRESS/REPRESS（キューカード）の GO を確かめると定める。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=89） |
+| YC-03 | — | 前呼吸と減圧 | EMU 点検・準備 → 減圧・再与圧 | MCC の GO を確かめた後、DEPRESS/REPRESS のキューカードで減圧を始めるよう渡す。 | IF-EVA-02 | YC_03（DepressStartCue） | EVA チェックリストの手順 53 は、前呼吸の時間が終わったら MCC に DEPRESS/REPRESS（キューカード）の GO を確かめると定める。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=89） |
+| YC-04 | — | 前呼吸と減圧 | 合図と運用管理 → 減圧・再与圧 | 減圧・再与圧は、エアロックの構成ごと（通常構成・トンネルアダプタ）の DEPRESS/REPRESS キューカードに従うよう渡す。漏れ点検の不合格時の手順は FAILED LEAK CHECK に載せる。 | IF-EVA-05 | YC_04（CueCardConfigSelect） | EVA チェックリストのキューカードの一覧には、DEPRESS/REPRESS（通常構成）・DEPRESS/REPRESS（トンネルアダプタ）・FAILED LEAK CHECK の各キューカードがある。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=232） |
+| YC-05 | — | 再与圧と EVA 後 | 減圧・再与圧 → EVA 後の手入れ・再充填 | 再与圧でエアロックの気密を確かめて O2 ACT を切った後に POST EVA へ移るよう渡す。再与圧で DCS の症状が消えた場合は、MCC に確かめるまで EMU を脱がない。 | IF-EVA-06 | YC_05（PostEvaHandoff） | EVA 後の POST EVA の手順の警告は、再与圧中に DCS の症状が消えた場合は EMU を脱がず、PMC 経由で MCC に確かめると定め、手順 7 で O2 ACT を切る。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=114） |
+| YC-06 | — | 非常時の手順 | 合図と運用管理 → 非常時の手順 | カフチェックリストで DCS の区分を判断した結果を渡す。カフ 4 では ABORT EVA として患者をエアロックへ連れ戻して単独で再与圧し、DCS の処置の手順へ移る。この手順は、カフ 4 への進行を防ぐために EVA を終えた後の処置を定める。 | IF-EVA-13 | YC_06（DcsAbortJudgment） | EVA チェックリストの DCS の区分のカフ 4 は、中枢神経または心肺の重い症状であり、ABORT EVA として患者をエアロックへ連れ戻して単独で再与圧し、もう一人は PLB を安全にして EVA を終える。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=195）DCS の処置の手順では、カフ 4 への進行を防ぐために EVA を終える。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226） |
+| YC-07 | — | 非常時の手順 | 非常時の手順 → 減圧・再与圧 | EMU の汚染が疑われた場合は、エアロックを 5 psia まで再与圧した状態で保ち、検知管による汚染試験を行ってから再与圧を続けるよう渡す。汚染の除去では真空で 15 分保持した後に、エアロックを 5 psi まで再与圧する（REPRESS の手順 1〜8）。 | IF-EVA-07 | YC_07（ContaminationRepressHold） | フライトルール A15-203 によれば、EVA の後の検知管（Drager）試験は、エアロックの圧力を 5 psia にして行う。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1873）EVA チェックリストの汚染除去の流れでは、真空の保持時間（PET）が 15 分になったらエアロックを 5 psi まで再与圧し、REPRESS の手順 1〜8 を行う。（出典: https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=149） |
+
+## 25. 図247 のライフライン
+
+図247 OMS の乗員操作と表示 シーケンス図（OMS の乗員操作と表示）のライフライン 7件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| OOPS | OMS 運用管理（規則・処置） | SSD-FD-OMS-OPS-001 | omsOps |
+| EENG | OMS エンジン・GN2 系 | SSD-FD-OMS-ENG-001 | omsEng |
+| EHE | OMS ヘリウム加圧 | SSD-FD-OMS-HE-001 | omsHe |
+| EXFD | OMS クロスフィード・RCS 連結 | SSD-FD-OMS-XFD-001 | omsXfd |
+| EPSD | OMS 推進薬貯蔵・分配 | SSD-FD-OMS-PSD-001 | omsPsd |
+| ETHM | OMS 推進薬熱管理 | SSD-FD-OMS-THM-001 | omsThm |
+
+## 26. 図247 のメッセージ
+
+図247 OMS の乗員操作と表示 シーケンス図のメッセージ 10件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| YD-01 | — | 噴射前の準備 | 乗員 → OMS 運用管理（規則・処置） | 各噴射の前に、パネル C3 の OMS ENG スイッチを ARM/PRESS にし、それ以外のときは OFF にしておく。 | スイッチ | YD_01（OmsEngSwitchSelect） | OMS ENG LEFT・RIGHT スイッチ（パネル C3）を ARM/PRESS にすると窒素の圧力隔離弁が開く。乗員は各 OMS 噴射の前にこの位置にし、それ以外のときは OFF にしておく。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/647） |
+| YD-02 | — | 噴射前の準備 | OMS 運用管理（規則・処置） → OMS エンジン・GN2 系 | ARM/PRESS で GN2 の圧力隔離弁を開く指令を渡す。制御弁1・2は、スイッチが ARM か ARM/PRESS で OMS ENG VLV スイッチが ON のときに計算機の指令で開く。 | IF-OMS-06 | YD_02（OmsEngGn2ValveCommand） | OMS ENG LEFT・RIGHT スイッチ（パネル C3）を ARM/PRESS にすると窒素の圧力隔離弁が開く。乗員は各 OMS 噴射の前にこの位置にし、それ以外のときは OFF にしておく。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/647）GN2 の制御弁1・2は、C3 の OMS ENG スイッチが ARM か ARM/PRESS で、O14（左）・O16（右）の OMS ENG VLV スイッチが ON のときに、計算機の指令で開く。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/648） |
+| YD-03 | — | 噴射前の準備 | 乗員 → OMS 運用管理（規則・処置） | パネル O8 の He PRESS/VAPOR ISOL スイッチ A・B を、手動の OPEN・CLOSE か、自動制御の GPC 位置にする。 | スイッチ | YD_03（OmsHeSwitchSelect） | パネル O8 の LEFT・RIGHT OMS He PRESS/VAPOR ISOL スイッチは、ヘリウム圧力弁を手動の OPEN・CLOSE と自動制御の GPC 位置で操作し、GPC 位置では自動の噴射シーケンスが噴射の始めに弁を開き終わりに閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/650） |
+| YD-04 | — | 噴射前の準備 | OMS 運用管理（規則・処置） → OMS ヘリウム加圧 | ヘリウム圧力弁と蒸気隔離弁を開閉する指令を渡す。A か B のどちらかが OPEN なら両方の蒸気隔離弁が開き、両方が CLOSE なら両方が閉じ、GPC 位置では噴射シーケンスが自動で制御する。 | IF-OMS-07 | YD_04（OmsHeIsolationCommand） | パネル O8 の LEFT・RIGHT OMS He PRESS/VAPOR ISOL スイッチは、ヘリウム圧力弁を手動の OPEN・CLOSE と自動制御の GPC 位置で操作し、GPC 位置では自動の噴射シーケンスが噴射の始めに弁を開き終わりに閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/650）A か B のスイッチが OPEN の位置なら両方の蒸気隔離弁が開き、両方が CLOSE の位置なら両方が閉じ、GPC 位置では GPC が弁を自動で開閉する。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/651） |
+| YD-05 | — | 噴射前の準備 | 乗員 → OMS 運用管理（規則・処置） | パネル O8 の OMS CROSSFEED A・B スイッチで弁の組を選び、軌道上のインタコネクトは O7 の RCS スイッチとあわせて手動で組む。 | スイッチ | YD_05（OmsCrossfeedSwitchSelect） | パネル O8 の LEFT・RIGHT OMS CROSSFEED A・B スイッチは、ポッドの燃料・酸化剤のクロスフィード弁の組を操作し、GPC 位置のときは、オービタの計算機の指令で A または B の組が自動で開閉される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/656）軌道上の OMS-RCS インタコネクトは手動で組み、RCS の推進薬タンク隔離弁をパネル O7 のスイッチで閉じ、RCS のクロスフィード弁を開いてから OMS のクロスフィード弁を開く。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/656） |
+| YD-06 | — | 噴射前の準備 | OMS 運用管理（規則・処置） → OMS クロスフィード・RCS 連結 | 燃料・酸化剤のクロスフィード弁の組を開閉する指令を渡す。GPC 位置のときは、A・B の弁の組がオービタの計算機の指令で自動的に開閉される。 | IF-OMS-08 | YD_06（OmsCrossfeedValveCommand） | パネル O8 の LEFT・RIGHT OMS CROSSFEED A・B スイッチは、ポッドの燃料・酸化剤のクロスフィード弁の組を操作し、GPC 位置のときは、オービタの計算機の指令で A または B の組が自動で開閉される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/656） |
+| YD-07 | — | 推進薬量の監視 | OMS 推進薬貯蔵・分配 → OMS 運用管理（規則・処置） | トータライザの全量と後室プローブの量を渡す。使用可能推進薬は計測量から残量を差し引いて定義される。 | IF-OMS-09 | YD_07（OmsPropellantQuantityData） | トータライザの出力はパネル O3 の RCS/OMS PRPLT QTY の LED に表示され、GNC SYS SUMM 2 の表示には後室プローブの量（OMS AFT QTY）が出る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/653）フライトルール A6-301 は、OMS の使用可能推進薬を、計測した推進薬から残量を差し引いたものと定義する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1246） |
+| YD-08 | — | 推進薬量の監視 | OMS 運用管理（規則・処置） → 乗員 | 全量をパネル O3 の RCS/OMS PRPLT QTY に、後室の量を GNC SYS SUMM 2 の OMS AFT QTY に出し、推進薬の予算とレッドラインの管理に使わせる。 | 表示 | YD_08（OmsQuantityDisplay） | トータライザの出力はパネル O3 の RCS/OMS PRPLT QTY の LED に表示され、GNC SYS SUMM 2 の表示には後室プローブの量（OMS AFT QTY）が出る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/653）フライトルール A6-301 は、OMS の使用可能推進薬を、計測した推進薬から残量を差し引いたものと定義する。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1246） |
+| YD-09 | — | ヒータ系統の切替 | 乗員 → OMS 運用管理（規則・処置） | パネル A14 の RCS/OMS HTR スイッチで、左右ポッドと OMS クロスフィード配管のヒータの A・B 系統を選ぶ。 | スイッチ | YD_09（OmsHeaterSwitchSelect） | 軌道運用チェックリストのヒータ再構成では、パネル A14 の RCS/OMS HTR スイッチで、左右ポッドと OMS クロスフィード配管のヒータの A・B 系統を切り替える。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=179） |
+| YD-10 | — | ヒータ系統の切替 | OMS 運用管理（規則・処置） → OMS 推進薬熱管理 | 選んだヒータ系統へ切り替える指令を渡す。飛行中に少なくとも1回は冗長な系統（A か B）へ切り替える。 | IF-OMS-10 | YD_10（OmsHeaterStringCommand） | 軌道運用チェックリストのヒータ再構成では、パネル A14 の RCS/OMS HTR スイッチで、左右ポッドと OMS クロスフィード配管のヒータの A・B 系統を切り替える。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=179）フライトルール A6-251 は、ヒータを飛行中に少なくとも1回は冗長な系統（A か B）へ切り替えると定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1229） |
+
+## 27. 図248 のライフライン
+
+図248 RCS の噴射器冗長管理と乗員操作 シーケンス図（RCS の噴射器冗長管理と乗員操作）のライフライン 9件を示す。
+
+| ID | ライフライン | 文書 | SysML |
+|---|---|---|---|
+| CREW | 乗員 | — | crew |
+| OPS | RCS 運用管理 | SSD-FD-RCS-OPS-001 | rcsOps |
+| PRP | 推進薬貯蔵・分配 | SSD-FD-RCS-PRP-001 | rcsPrp |
+| HEP | ヘリウム加圧 | SSD-FD-RCS-HEP-001 | rcsHep |
+| HTR | 熱制御（ヒータ） | SSD-FD-RCS-HTR-001 | rcsHtr |
+| RJD | 噴射器駆動回路 | SSD-FD-RCS-RJD-001 | rcsRjd |
+| JET | 主・バーニア噴射器 | SSD-FD-RCS-JET-001 | rcsJet |
+| RM | 噴射器冗長管理 | SSD-FD-RCS-RM-001 | rcsRm |
+| CWP | 警報系（C/W） | SSD-FD-CW-PRI-001 | cwPri |
+
+## 28. 図248 のメッセージ
+
+図248 RCS の噴射器冗長管理と乗員操作 シーケンス図のメッセージ 14件を、上から順に示す。
+
+| ID | 時刻 | 区間 | 送り手 → 受け手 | 内容 | 経路・IF | SysML | 根拠 |
+|---|---|---|---|---|---|---|---|
+| YE-01 | — | 運転の操作 | 乗員 → RCS 運用管理 | パネル O7・O8 のスイッチで、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の開閉を選ぶ。 | スイッチ | YE_01（RcsValveSwitchSelect） | RCS の制御スイッチの大部分はパネル O7・O8 にあり、熱制御のスイッチはパネル A14 にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/742）タンク隔離弁の対のトークバックは、開で OP、閉で CL を示し、移動中、または一方が開で他方が閉のときはバーバーポールを示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/722） |
+| YE-02 | — | 運転の操作 | RCS 運用管理 → 推進薬貯蔵・分配 | 運用規則と手順に従い、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の操作を渡す。トークバックは対が開なら OP、閉なら CL、移動中や不一致ならバーバーポールを示す。 | IF-RCS-16 | YE_02（RcsPropellantValveOperation） | RCS の制御スイッチの大部分はパネル O7・O8 にあり、熱制御のスイッチはパネル A14 にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/742）タンク隔離弁の対のトークバックは、開で OP、閉で CL を示し、移動中、または一方が開で他方が閉のときはバーバーポールを示す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/722） |
+| YE-03 | — | 運転の操作 | 乗員 → RCS 運用管理 | パネル O7・O8 の He PRESS A・B スイッチで、ヘリウム隔離弁を操作し、調圧器の故障では RCS REGULATOR RECONFIG の手順で加圧経路を切り替える。 | スイッチ | YE_03（RcsHePressSwitchSelect） | オービット運用チェックリストの RCS REGULATOR RECONFIG の手順は、パネル O7・O8 の He PRESS A・B スイッチを操作する。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=256） |
+| YE-04 | — | 運転の操作 | RCS 運用管理 → ヘリウム加圧 | He PRESS A・B のスイッチ操作として、ヘリウム隔離弁の開閉と加圧経路の切替を渡す。 | IF-RCS-17 | YE_04（RcsHeIsolationCommand） | オービット運用チェックリストの RCS REGULATOR RECONFIG の手順は、パネル O7・O8 の He PRESS A・B スイッチを操作する。（出典: https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=256） |
+| YE-05 | — | 運転の操作 | 乗員 → RCS 運用管理 | パネル A14 のヒータスイッチで、ヒータ系（A・B）の選択と入切を行う。 | スイッチ | YE_05（RcsHeaterSwitchSelect） | RCS の制御スイッチの大部分はパネル O7・O8 にあり、熱制御のスイッチはパネル A14 にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/742） |
+| YE-06 | — | 運転の操作 | RCS 運用管理 → 熱制御（ヒータ） | 運用規則に従い、ヒータ系（A・B）の選択と入切を渡す。ヒータ系は飛行中に少なくとも一度は冗長側へ切り替える。 | IF-RCS-19 | YE_06（RcsHeaterSelectCommand） | RCS の制御スイッチの大部分はパネル O7・O8 にあり、熱制御のスイッチはパネル A14 にある。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/742）フライトルール A6-251 は、ヒータを飛行中に少なくとも一度は冗長側（A または B）へ切り替えると定める。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1229） |
+| YE-07 | — | 噴射器と弁の監視 | 噴射器駆動回路 → 噴射器冗長管理 | 燃焼室圧の離散信号を、実際に噴射したことの表示として渡す。RM は Pc 離散信号・CMD B・ドライバ出力離散信号を噴射器の故障の検知に使う。 | IF-RCS-04 | YE_07（RcsPcDiscreteSignal） | 反応ジェットドライバ（RJD）は、燃焼室圧の離散信号を作り、実際の噴射の表示として冗長管理（RM）へ送る。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/719）RCS RM が使う噴射器のパラメータは、Pc 離散信号・CMD B・ドライバ出力離散信号と、酸化剤・燃料の噴射器温度である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/728） |
+| YE-08 | — | 噴射器と弁の監視 | 主・バーニア噴射器 → 噴射器冗長管理 | 各噴射器の燃料・酸化剤の噴射器温度を渡す。RM の限界を3周期続けて下回ると漏れ（fail-leak）と判定される。限界は主噴射器で酸化剤 30°F・燃料 20°F、OPS 2 のバーニアで 130°F である。 | IF-RCS-05 | YE_08（RcsInjectorTempData） | 酸化剤か燃料の噴射器温度が RM の噴射器温度限界を3周期続けて下回ると、fail-leak（漏れ）と判定され、故障フラグが立って通報される。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/729）フライトルール A6-8 は、主噴射器の酸化剤の噴射器温度が 30°F 未満、または燃料が 20°F 未満（OPS 2 のバーニアは 130°F 未満）の漏れを、噴射器の喪失とみなす。（出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1140） |
+| YE-09 | — | 噴射器と弁の監視 | 推進薬貯蔵・分配 → 噴射器冗長管理 | マニホールド隔離弁の離散信号（弁の状態）を渡す。RM はマニホールドの状態を評価する。 | IF-RCS-06 | YE_09（RcsManifoldValveStatus） | RCS RM は、実際のマニホールド弁の状態を入力とする、マニホールド弁の状態の独立した評価を持ち、弁の離散信号が変わったときに状態を評価し直す。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/731） |
+| YE-10 | — | 噴射器と弁の監視 | 噴射器冗長管理 → 推進薬貯蔵・分配 | OPS 2・8 で fail-on が通報され、AUTO MANF CL が有効でスイッチが GPC 位置なら、GPC が該当するマニホールドを自動で閉じる指令を渡す。 | IF-RCS-06 | YE_10（RcsManifoldAutoCloseCommand） | OPS 2・8 で fail-on が通報されたとき、AUTO MANF CL が SPEC 23 で有効にしてあり、スイッチが GPC の位置にあれば、GPC が該当するマニホールドを自動で閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/723） |
+| YE-11 | — | SPEC 23 の操作と He 圧の警報 | 乗員 → RCS 運用管理 | SPEC 23 の項目入力で、噴射器の手動の選択解除・再選択、マニホールド状態の開・閉の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を行う。 | SPEC 23 の項目入力 | YE_11（RcsSpec23ItemEntry） | SPEC 23 の項目入力で、噴射器の手動の選択解除・再選択とマニホールド状態の開・閉の上書きを行い、主噴射器の故障限度（PRI JET FAIL LIM）は SPEC 23 の項目 4 である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/730）OPS 2・8 で fail-on が通報されたとき、AUTO MANF CL が SPEC 23 で有効にしてあり、スイッチが GPC の位置にあれば、GPC が該当するマニホールドを自動で閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/723） |
+| YE-12 | — | SPEC 23 の操作と He 圧の警報 | RCS 運用管理 → 噴射器冗長管理 | 噴射器の選択解除・再選択、マニホールド状態の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を渡す。 | IF-RCS-18 | YE_12（RcsRmOverrideEntry） | SPEC 23 の項目入力で、噴射器の手動の選択解除・再選択とマニホールド状態の開・閉の上書きを行い、主噴射器の故障限度（PRI JET FAIL LIM）は SPEC 23 の項目 4 である。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/730）OPS 2・8 で fail-on が通報されたとき、AUTO MANF CL が SPEC 23 で有効にしてあり、スイッチが GPC の位置にあれば、GPC が該当するマニホールドを自動で閉じる。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/723） |
+| YE-13 | — | SPEC 23 の操作と He 圧の警報 | ヘリウム加圧 → 警報系（C/W） | ポッドのヘリウム圧（燃料か酸化剤）が 500 psi 未満になったことを、F(L,R) He P の故障メッセージとして渡す。 | IF-RCS-14 | YE_13（RcsHeliumPressureFault） | ポッドのヘリウム圧（燃料か酸化剤）が 500 psi を下回ると、F(L,R) He P の故障メッセージが出る（PASS は OPS 2・8、BFS は OPS 1・3・6）。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/735） |
+| YE-14 | — | SPEC 23 の操作と He 圧の警報 | 警報系（C/W） → 乗員 | F(L,R) He P の故障メッセージを乗員に見せる。乗員はポケットチェックリストの RCS LEAK ISOL の手順で対処する。 | 表示・警報 | YE_14（RcsHePAlertAnnunciation） | ポッドのヘリウム圧（燃料か酸化剤）が 500 psi を下回ると、F(L,R) He P の故障メッセージが出る（PASS は OPS 2・8、BFS は OPS 1・3・6）。（出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/735）C&W の訓練マニュアルは、F_RCS He P のメッセージに、ポケットチェックリストの RCS LEAK ISOL の手順を使うと定めている。（出典: https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=92） |
+
+## 29. IF との対応
+
+メッセージが通る IF 102件と、その IF を使うメッセージを示す。
 
 | 所有文書 | IF | メッセージ |
 |---|---|---|
 | SSD-FD-ECL-ALS-MON-001 | IF-ALS-10 | QC-14 |
+| SSD-FD-APU-OPS-001 | IF-APU-03 | YA-02・YA-17 |
+| SSD-FD-APU-CTL-001 | IF-APU-06 | YA-08・YA-09・YA-12 |
+| SSD-FD-APU-WSB-001 | IF-APU-14 | YA-15 |
+| SSD-FD-APU-OPS-001 | IF-APU-19 | YA-11 |
+| SSD-FD-APU-OPS-001 | IF-APU-20 | YA-07・YA-14 |
+| SSD-FD-APU-OPS-001 | IF-APU-21 | YA-04・YA-05 |
 | SSD-FD-ARS-CAC-001 | IF-ARS-25 | QA-08 |
 | SSD-FD-ARS-RCRS-001 | IF-ARS-26 | QB-06・QB-07 |
 | SSD-FD-ARS-AVB-001 | IF-ARS-28 | QA-09 |
@@ -343,9 +524,18 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | SSD-FD-CT-INST-001 | IF-CT-06 | CM-08 |
 | SSD-FD-CT-OPS-001 | IF-CT-07 | CM-05 |
 | SSD-FD-CT-INST-001 | IF-CT-14 | CM-09 |
+| SSD-FD-DPS-OPS-001 | IF-DPS-18 | YB-01・YB-02 |
+| SSD-FD-DPS-OPS-001 | IF-DPS-19 | YB-03・YB-04 |
+| SSD-FD-DPS-OPS-001 | IF-DPS-20 | YB-05・YB-06 |
 | SSD-FD-ECL-FDS-001 | IF-ECL-18 | QD-02 |
 | SSD-FD-ECL-WCS-001 | IF-ECL-37 | QC-13 |
 | SSD-FD-ECL-ALS-001 | IF-ECL-38 | QC-14 |
+| SSD-FD-EVA-OPS-001 | IF-EVA-01 | YC-01 |
+| SSD-FD-EVA-CHK-001 | IF-EVA-02 | YC-03 |
+| SSD-FD-EVA-OPS-001 | IF-EVA-05 | YC-04 |
+| SSD-FD-EVA-DPR-001 | IF-EVA-06 | YC-05 |
+| SSD-FD-EVA-EMG-001 | IF-EVA-07 | YC-07 |
+| SSD-FD-EVA-OPS-001 | IF-EVA-13 | YC-06 |
 | SSD-FD-ECL-FDS-DET-001 | IF-FDS-02 | QD-01 |
 | SSD-FD-ECL-FDS-DET-001 | IF-FDS-03 | QD-02 |
 | SSD-FD-ECL-FDS-ALM-001 | IF-FDS-05 | QD-05 |
@@ -360,6 +550,15 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | SSD-FD-ARS-IMU-OPS-001 | IF-IMU-07 | QA-06 |
 | SSD-FD-ARS-IMU-MON-001 | IF-IMU-10 | QA-11 |
 | SSD-FD-ARS-IMU-MON-001 | IF-IMU-12 | QA-15 |
+| SSD-FD-MPS-OPS-001 | IF-MPS-17 | YB-08・YB-09 |
+| SSD-FD-MPS-OPS-001 | IF-MPS-18 | YB-12 |
+| SSD-FD-MPS-OPS-001 | IF-MPS-19 | YB-14 |
+| SSD-FD-MPS-OPS-001 | IF-MPS-20 | YB-16 |
+| SSD-FD-OMS-OPS-001 | IF-OMS-06 | YD-02 |
+| SSD-FD-OMS-OPS-001 | IF-OMS-07 | YD-04 |
+| SSD-FD-OMS-OPS-001 | IF-OMS-08 | YD-06 |
+| SSD-FD-OMS-PSD-001 | IF-OMS-09 | YD-07 |
+| SSD-FD-OMS-OPS-001 | IF-OMS-10 | YD-10 |
 | SSD-FD-CT-001 | IF-ORB-01 | DO-06 |
 | SSD-FD-GNC-001 | IF-ORB-04 | DO-12・AS-17 |
 | SSD-FD-DPS-001 | IF-ORB-06 | AS-07・AS-10・AS-12・AS-13・AS-15 |
@@ -382,6 +581,14 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | SSD-FD-ARS-RCRS-CTL-001 | IF-RCRS-11 | QB-07 |
 | SSD-FD-ARS-RCRS-OPS-001 | IF-RCRS-14 | QB-02 |
 | SSD-FD-ARS-RCRS-MON-001 | IF-RCRS-15 | QB-09 |
+| SSD-FD-RCS-RJD-001 | IF-RCS-04 | YE-07 |
+| SSD-FD-RCS-JET-001 | IF-RCS-05 | YE-08 |
+| SSD-FD-RCS-RM-001 | IF-RCS-06 | YE-09・YE-10 |
+| SSD-FD-RCS-HEP-001 | IF-RCS-14 | YE-13 |
+| SSD-FD-RCS-OPS-001 | IF-RCS-16 | YE-02 |
+| SSD-FD-RCS-OPS-001 | IF-RCS-17 | YE-04 |
+| SSD-FD-RCS-OPS-001 | IF-RCS-18 | YE-12 |
+| SSD-FD-RCS-OPS-001 | IF-RCS-19 | YE-06 |
 | SSD-FD-ARS-THC-SEP-001 | IF-THC-09 | QE-06 |
 | SSD-FD-ARS-THC-MON-001 | IF-THC-10 | QE-05 |
 | SSD-FD-ARS-THC-MON-001 | IF-THC-12 | QE-07 |
@@ -397,11 +604,11 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | SSD-FD-ECL-WCS-OPS-001 | IF-WCS-14 | QC-10 |
 | SSD-FD-ECL-WCS-OPS-001 | IF-WCS-15 | QC-12 |
 
-## 20. SysML v2 テキスト
+## 30. SysML v2 テキスト
 
-同じライフラインとメッセージを SysML v2 のテキスト [SysML/SSD-BEH-ORB-003.sysml](../SysML/SSD-BEH-ORB-003.sysml) に示す。シーケンスの occurrence def 8件、メッセージ 117件と、その順序（first … then）から成る。本書の表と同じデータから作り、SysML v2 の文法による構文の検査を通し、Rev. AG で OMG SysML v2 Pilot Implementation 0.62.0 により、ほかのモデルと一緒に読み込んで名前の解決・型の検査を行い、誤り 0件・警告 0件を確かめた（SSD-MDL-SYS-001）。alt の枠（アボートの選択）はテキストには書かず、図76 の状態遷移に任せた。
+同じライフラインとメッセージを SysML v2 のテキスト [SysML/SSD-BEH-ORB-003.sysml](../SysML/SSD-BEH-ORB-003.sysml) に示す。シーケンスの occurrence def 13件、メッセージ 182件と、その順序（first … then）から成る。本書の表と同じデータから作り、SysML v2 の文法による構文の検査を通し、Rev. AG で OMG SysML v2 Pilot Implementation 0.62.0 により、ほかのモデルと一緒に読み込んで名前の解決・型の検査を行い、誤り 0件・警告 0件を確かめた（SSD-MDL-SYS-001）。alt の枠（アボートの選択）はテキストには書かず、図76 の状態遷移に任せた。
 
-## 21. 注記（出典間の相違・構成変更）
+## 31. 注記（出典間の相違・構成変更）
 
 > **注記** 図83・図84 の時刻は SCOM の標準の時刻表の目安で、飛行によって変わる。乗員から系への矢印は、表示・操作部やスイッチによる操作で、IF の行ではない。
 
@@ -417,7 +624,9 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 
 > **注記** 本書の判断（Rev. CE）：ECLSS のシーケンス図 5件（図238・図239・図240・図241・図242）は、データ・指令の IF（運転の指令・計測値の表示・警報）に、メッセージの『経路・IF』の欄で IF を結び付けた。運転の選択・表示・警報の判断は、運用飛行規則・故障処置手順・訓練マニュアルの記述による。時刻は書かない。IF を載せないメッセージ（スイッチ・SM 表示・警報灯）は乗員と DPS の間の操作・表示で、QC-04（漏れの判定の結果を乗員に伝える）は資料に直接の手順が無く、判定の流れとして置いた（本書の判断）。
 
-## 22. 参考文献
+> **注記** 本書の判断（Rev. CH）：ECLSS 以外のシーケンス図 5件（図244・図245・図246・図247・図248）は、データ・指令の IF（乗員のスイッチ操作・計測値の表示・警報）に、メッセージの『経路・IF』の欄で IF を結び付けた。操作・表示・警報の判断は、乗員運用手引・運用飛行規則・SCOM の記述による。時刻は書かない。IF を載せないメッセージ（スイッチ・押しボタン・トークバック・表示灯）は乗員と機能ブロックの間の操作・表示である。
+
+## 32. 参考文献
 
 1. Shuttle Crew Operations Manual 5.4 Entry（USA007587 Rev. A CPN-1、PDF p841） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/841
 2. Shuttle Crew Operations Manual 2.17 Mechanical Systems（USA007587 Rev. A CPN-1、PDF p619） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/619
@@ -505,6 +714,61 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 84. JSC-48027 Rev. F Malfunction Procedures（MAL） ECLS 6.2j HUMID SEP（PDF p285） — https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf#page=285
 85. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A17-102 CABIN ATMOSPHERIC CONTROL（PDF p1930） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1930
 86. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p375） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/375
+87. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p86） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/86
+88. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p96） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/96
+89. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p98） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/98
+90. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p99） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/99
+91. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p94） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/94
+92. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p89） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/89
+93. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p90） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/90
+94. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p88） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/88
+95. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p100） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/100
+96. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p97） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/97
+97. Shuttle Crew Operations Manual 2.1 Auxiliary Power Unit/Hydraulics（USA007587 Rev. A CPN-1、PDF p95） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/95
+98. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A7-1 PASS DPS FAILURE（PDF p1289） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1289
+99. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A7-3 GPC FAILURE（PDF p1293） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1293
+100. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A7-105 MDM PORT MODING（PDF p1328） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1328
+101. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A7-101 POWER CYCLING/MANAGEMENT（PDF p1320） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1320
+102. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A7-107 TIME MANAGEMENT（PDF p1330） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1330
+103. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A7-107 TIME MANAGEMENT（PDF p1331） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1331
+104. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p618） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/618
+105. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p602） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/602
+106. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p598） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/598
+107. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p599） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/599
+108. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p609） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/609
+109. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A5-13 MPS DUMPS AND VACUUM INERTING DEFINITIONS（PDF p1031） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1031
+110. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p601） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/601
+111. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p600） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/600
+112. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 4-8 EMU PREBREATHE（PDF p88） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=88
+113. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p403） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/403
+114. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 4-9 EMU PREBREATHE（続き）（PDF p89） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=89
+115. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 20-2 CUE CARD CONFIGURATION（PDF p232） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=232
+116. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 9-2 POST EVA（PDF p114） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=114
+117. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 15-3 DECOMPRESSION SICKNESS (DCS)（PDF p195） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=195
+118. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 19.1 DCS TREATMENT（PDF p226） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=226
+119. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A15-203 Cabin Atmosphere Decontamination Following EVA（続き）（PDF p1873） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1873
+120. JSC-48023 EVA Checklist Generic Rev H（2005）PCN-20（2010） 12.1 STS EVA DECONTAMINATION（続き）（PDF p149） — https://www.ibiblio.org/apollo/Shuttle/EVA%20Checklist/EVA%20Checklist%20Rev%20H%20PCN-20.pdf#page=149
+121. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p647） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/647
+122. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p648） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/648
+123. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p650） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/650
+124. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p651） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/651
+125. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p656） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/656
+126. Shuttle Crew Operations Manual 2.18 Orbital Maneuvering System（USA007587 Rev. A CPN-1、PDF p653） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/653
+127. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A6-301 OMS USABLE PROPELLANT（PDF p1246） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1246
+128. JSC-48035 Rev. M PCN-10 Orbit Operations Checklist 6-5 Heater Reconfig（PDF p179） — https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=179
+129. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A6-251 GENERAL（PDF p1229） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1229
+130. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p742） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/742
+131. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p722） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/722
+132. Orbit Operations Checklist Rev M PCN-10 RCS REGULATOR RECONFIG（PDF p256） — https://www.ibiblio.org/apollo/Shuttle/Orbit%20Operations%20Checklist/Orbit%20Operations%20Checklist%20Rev%20M%20PCN-10.pdf#page=256
+133. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p719） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/719
+134. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p728） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/728
+135. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p729） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/729
+136. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A6-8 RCS THRUSTER（PDF p1140） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=1140
+137. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p731） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/731
+138. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p723） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/723
+139. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p730） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/730
+140. Shuttle Crew Operations Manual 2.22 Reaction Control System（USA007587 Rev. A CPN-1、PDF p735） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/735
+141. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） 7.3 Fault message table（Comments）（PDF p92） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=92
 
 ## 13. 変更履歴
 
@@ -516,3 +780,4 @@ AS-11〜AS-13 の区間には、エンジン停止のときのアボートの選
 | Rev. C | 2026-10-07 | 乗員の作業分析・機能の分担定義書 SSD-TSK-ORB-001 への参照を注記（Rev. BA） |
 | Rev. D | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |
 | Rev. E | 2026-10-16 | ECLSS のシーケンス図 5件（図238〜図242：メッセージ 61件、IF 53件）を足した（Rev. CE） |
+| Rev. F | 2026-10-16 | ECLSS 以外のシーケンス図 5件（図244〜図248：メッセージ 65件、IF 32件）を足した（Rev. CH） |

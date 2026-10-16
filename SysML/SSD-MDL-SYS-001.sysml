@@ -85,6 +85,11 @@ package SSD_MDL_SYS_001 {
         occurrence pressureWaterWasteOperations : SSD_BEH_ORB_003::PressureWaterWasteOperations;
         occurrence smokeDetectionAndSuppression : SSD_BEH_ORB_003::SmokeDetectionAndSuppression;
         occurrence cabinTempHumidityControl : SSD_BEH_ORB_003::CabinTempHumidityControl;
+        occurrence apuHydOperations : SSD_BEH_ORB_003::ApuHydOperations;
+        occurrence dpsMpsOperations : SSD_BEH_ORB_003::DpsMpsOperations;
+        occurrence evaProcedureFlow : SSD_BEH_ORB_003::EvaProcedureFlow;
+        occurrence omsCrewOperations : SSD_BEH_ORB_003::OmsCrewOperations;
+        occurrence rcsRedundancyAndCrewOps : SSD_BEH_ORB_003::RcsRedundancyAndCrewOps;
         allocate deorbitToLanding.DO_04 to SSD_BLK_SYS_001::context.sts.orb.IF_ORB_40;   // IF-ORB-40
         allocate deorbitToLanding.DO_06 to SSD_BLK_SYS_001::context.IF_ORB_16;   // IF-ORB-16
         allocate deorbitToLanding.DO_06 to SSD_BLK_SYS_001::context.sts.orb.IF_ORB_01;   // IF-ORB-01
@@ -165,5 +170,47 @@ package SSD_MDL_SYS_001 {
         allocate cabinTempHumidityControl.QE_07 to SSD_BLK_SYS_001::context.sts.orb.IF_THC_12;   // IF-THC-12
         allocate cabinTempHumidityControl.QE_09 to SSD_BLK_SYS_001::context.sts.orb.eclss.ars.thc.IF_THC_13;   // IF-THC-13
         allocate cabinTempHumidityControl.QE_10 to SSD_BLK_SYS_001::context.sts.orb.eclss.ars.thc.IF_THC_14;   // IF-THC-14
+        allocate apuHydOperations.YA_02 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_03;   // IF-APU-03
+        allocate apuHydOperations.YA_04 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_21;   // IF-APU-21
+        allocate apuHydOperations.YA_05 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_21;   // IF-APU-21
+        allocate apuHydOperations.YA_07 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_20;   // IF-APU-20
+        allocate apuHydOperations.YA_08 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_06;   // IF-APU-06
+        allocate apuHydOperations.YA_09 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_06;   // IF-APU-06
+        allocate apuHydOperations.YA_11 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_19;   // IF-APU-19
+        allocate apuHydOperations.YA_12 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_06;   // IF-APU-06
+        allocate apuHydOperations.YA_14 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_20;   // IF-APU-20
+        allocate apuHydOperations.YA_15 to SSD_BLK_SYS_001::context.sts.orb.IF_APU_14;   // IF-APU-14
+        allocate apuHydOperations.YA_17 to SSD_BLK_SYS_001::context.sts.orb.apu.IF_APU_03;   // IF-APU-03
+        allocate dpsMpsOperations.YB_01 to SSD_BLK_SYS_001::context.sts.orb.dps.IF_DPS_18;   // IF-DPS-18
+        allocate dpsMpsOperations.YB_02 to SSD_BLK_SYS_001::context.sts.orb.dps.IF_DPS_18;   // IF-DPS-18
+        allocate dpsMpsOperations.YB_03 to SSD_BLK_SYS_001::context.sts.orb.dps.IF_DPS_19;   // IF-DPS-19
+        allocate dpsMpsOperations.YB_04 to SSD_BLK_SYS_001::context.sts.orb.dps.IF_DPS_19;   // IF-DPS-19
+        allocate dpsMpsOperations.YB_05 to SSD_BLK_SYS_001::context.sts.orb.dps.IF_DPS_20;   // IF-DPS-20
+        allocate dpsMpsOperations.YB_06 to SSD_BLK_SYS_001::context.sts.orb.dps.IF_DPS_20;   // IF-DPS-20
+        allocate dpsMpsOperations.YB_08 to SSD_BLK_SYS_001::context.sts.orb.mps.IF_MPS_17;   // IF-MPS-17
+        allocate dpsMpsOperations.YB_09 to SSD_BLK_SYS_001::context.sts.orb.mps.IF_MPS_17;   // IF-MPS-17
+        allocate dpsMpsOperations.YB_12 to SSD_BLK_SYS_001::context.sts.orb.mps.IF_MPS_18;   // IF-MPS-18
+        allocate dpsMpsOperations.YB_14 to SSD_BLK_SYS_001::context.sts.orb.mps.IF_MPS_19;   // IF-MPS-19
+        allocate dpsMpsOperations.YB_16 to SSD_BLK_SYS_001::context.sts.orb.mps.IF_MPS_20;   // IF-MPS-20
+        allocate evaProcedureFlow.YC_01 to SSD_BLK_SYS_001::context.sts.orb.eva.IF_EVA_01;   // IF-EVA-01
+        allocate evaProcedureFlow.YC_03 to SSD_BLK_SYS_001::context.sts.orb.eva.IF_EVA_02;   // IF-EVA-02
+        allocate evaProcedureFlow.YC_04 to SSD_BLK_SYS_001::context.sts.orb.eva.IF_EVA_05;   // IF-EVA-05
+        allocate evaProcedureFlow.YC_05 to SSD_BLK_SYS_001::context.sts.orb.eva.IF_EVA_06;   // IF-EVA-06
+        allocate evaProcedureFlow.YC_06 to SSD_BLK_SYS_001::context.sts.orb.eva.IF_EVA_13;   // IF-EVA-13
+        allocate evaProcedureFlow.YC_07 to SSD_BLK_SYS_001::context.sts.orb.eva.IF_EVA_07;   // IF-EVA-07
+        allocate omsCrewOperations.YD_02 to SSD_BLK_SYS_001::context.sts.orb.oms.IF_OMS_06;   // IF-OMS-06
+        allocate omsCrewOperations.YD_04 to SSD_BLK_SYS_001::context.sts.orb.oms.IF_OMS_07;   // IF-OMS-07
+        allocate omsCrewOperations.YD_06 to SSD_BLK_SYS_001::context.sts.orb.oms.IF_OMS_08;   // IF-OMS-08
+        allocate omsCrewOperations.YD_07 to SSD_BLK_SYS_001::context.sts.orb.oms.IF_OMS_09;   // IF-OMS-09
+        allocate omsCrewOperations.YD_10 to SSD_BLK_SYS_001::context.sts.orb.oms.IF_OMS_10;   // IF-OMS-10
+        allocate rcsRedundancyAndCrewOps.YE_02 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_16;   // IF-RCS-16
+        allocate rcsRedundancyAndCrewOps.YE_04 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_17;   // IF-RCS-17
+        allocate rcsRedundancyAndCrewOps.YE_06 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_19;   // IF-RCS-19
+        allocate rcsRedundancyAndCrewOps.YE_07 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_04;   // IF-RCS-04
+        allocate rcsRedundancyAndCrewOps.YE_08 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_05;   // IF-RCS-05
+        allocate rcsRedundancyAndCrewOps.YE_09 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_06;   // IF-RCS-06
+        allocate rcsRedundancyAndCrewOps.YE_10 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_06;   // IF-RCS-06
+        allocate rcsRedundancyAndCrewOps.YE_12 to SSD_BLK_SYS_001::context.sts.orb.rcs.IF_RCS_18;   // IF-RCS-18
+        allocate rcsRedundancyAndCrewOps.YE_13 to SSD_BLK_SYS_001::context.sts.orb.IF_RCS_14;   // IF-RCS-14
     }
 }

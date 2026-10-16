@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. AV／2026-10-16 |
+| 版・日付 | Rev. AW／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -22,7 +22,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 1 | SysML/SSD-BEH-ORB-001.sysml | 状態遷移（ミッションフェーズ・飛行継続判断） | — | 124 | 29 | 0 | 0 |
 | 2 | SysML/SSD-PAR-ORB-001.sysml | パラメトリック（消耗品・電力・排熱） | — | 277 | 19 | 0 | 0 |
 | 3 | SysML/SSD-BEH-ORB-002.sysml | 故障処置の活動 | — | 104 | 3 | 0 | 0 |
-| 4 | SysML/SSD-BEH-ORB-003.sysml | シーケンス（軌道離脱〜着陸・上昇・指令とテレメトリ） | — | 438 | 123 | 0 | 0 |
+| 4 | SysML/SSD-BEH-ORB-003.sysml | シーケンス（軌道離脱〜着陸・上昇・指令とテレメトリ） | — | 683 | 193 | 0 | 0 |
 | 5 | SysML/SSD-BEH-ORB-004.sysml | 運用・非常時の活動 | — | 93 | 3 | 0 | 0 |
 | 6 | SysML/SSD-BLK-SYS-001.sysml | 構造（ブロック・ポート・インタフェース） | — | 3023 | 252 | 0 | 0 |
 | 7 | SysML/SSD-RQM-SYS-001.sysml | 要求（導出・充足・検証方法） | SSD-BLK-SYS-001 | 2653 | 2 | 0 | 0 |
@@ -66,8 +66,8 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 45 | SysML/SSD-HAB-ORB-001.sysml | 居住性と医療（機能・乗員の1日・ユースケース） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 250 | 37 | 0 | 0 |
 | 46 | SysML/SSD-EGR-ORB-001.sysml | 容積・動線・緊急脱出 | SSD-RQM-SYS-001 | 58 | 14 | 0 | 0 |
 | 47 | SysML/SSD-HVM-SYS-001.sysml | 人間系の評価方法とビューポイント | SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-VPT-SYS-001 | 90 | 18 | 0 | 0 |
-| 48 | SysML/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-BEH-ORB-008・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001 | 2435 | 60 | 0 | 0 |
-| 49 | SysML/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 169 | 1 | 0 | 0 |
+| 48 | SysML/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-BEH-ORB-008・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001 | 2470 | 60 | 0 | 0 |
+| 49 | SysML/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 216 | 1 | 0 | 0 |
 
 ## 3. 統合の関係
 
@@ -78,7 +78,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | IntegratedOrbiter | SSD_BLK_SYS_001::ORB と SSD_BEH_ORB_001::Orbiter の両方を特化（part def） | 1 |
 | integratedContext | 構造モデルの context の orb を IntegratedOrbiter に置き換えた部品 | 1 |
 | RequirementRefinement | パラメトリックの要求定義 → 要求モデルの同じ ID の要求（#refinement） | 11 |
-| MessageAllocation | シーケンス図のメッセージ → それを運ぶ構造モデルの IF（allocate） | 80 |
+| MessageAllocation | シーケンス図のメッセージ → それを運ぶ構造モデルの IF（allocate） | 122 |
 
 ## 4. 要求の詳細化
 
@@ -100,7 +100,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 
 ## 5. メッセージの割付
 
-シーケンス図のメッセージのうち IF の ID を持つもの（80件、1つのメッセージに IF が2つあるものを含む）を、構造モデルの IF に割り付けた。
+シーケンス図のメッセージのうち IF の ID を持つもの（122件、1つのメッセージに IF が2つあるものを含む）を、構造モデルの IF に割り付けた。
 
 | シーケンス図 | メッセージ | 内容 | IF | IF（SysML の道筋） |
 |---|---|---|---|---|
@@ -184,6 +184,48 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-07 | 湿度分離器 A・B の運転状態（HUMID SEP）とキャビン温度（CABIN T）を SM へ送り、SPEC 66 ENVIRONMENT に表示する | IF-THC-12 | context.sts.orb.IF_THC_12 |
 | 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-09 | 熱交換器出口温度・キャビン温度・分離器の運転状態の表示と警報を、キャビン大気制御の喪失判定（A17-102）と故障処置に使う | IF-THC-13 | context.sts.orb.eclss.ars.thc.IF_THC_13 |
 | 図242 キャビン温湿度の制御と監視 シーケンス図 | QE-10 | コントローラで弁を制御できない場合は、MD44F で弁アームを4つの固定穴の一つにピン止めする | IF-THC-14 | context.sts.orb.eclss.ars.thc.IF_THC_14 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-02 | スイッチの位置に従って各 APU の2個の燃料タンク隔離弁を通電して開く指令を渡す。CLOSE か電力喪失では両弁が閉じる。 | IF-APU-03 | context.sts.orb.apu.IF_APU_03 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-04 | 各ボイラの窒素遮断弁を開閉する指令を渡す。遮断弁は2つの独立したソレノイドで主・副どちらの制御器からも操作できる。 | IF-APU-21 | context.sts.orb.apu.IF_APU_21 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-05 | 制御器が有効で、窒素遮断弁が開、蒸気ベントのノズル温度が 130°F 超、作動油のバイパス弁が正しい位置のとき、R2 の APU/HYD READY TO START 表示へ準備完了の信号を渡す。 | IF-APU-21 | context.sts.orb.apu.IF_APU_21 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-07 | 減圧弁を通電して主ポンプの吐出圧を 500〜1,000 psi に下げる指令を渡す。 | IF-APU-20 | context.sts.orb.apu.IF_APU_20 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-08 | ガス発生器床の温度トランスデューサの信号を渡す。 | IF-APU-06 | context.sts.orb.apu.IF_APU_06 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-09 | 比較器でガス発生器床ヒータを 360〜425°F に保つ制御を行う。 | IF-APU-06 | context.sts.orb.apu.IF_APU_06 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-11 | APU の始動の指令と、自動停止の機能の有効（ENABLE）・禁止（INHIBIT）の指令を渡す。制御器は始動を開始し、ガス発生器と燃料ポンプのヒータの電力を自動で断つ。 | IF-APU-19 | context.sts.orb.apu.IF_APU_19 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-12 | ギアボックス圧力が 5.2 psi 未満になると、潤滑油系の GN2 加圧弁を通電して開く指令を渡し、掃気と潤滑油ポンプの運転に必要な圧力を保つ。 | IF-APU-06 | context.sts.orb.apu.IF_APU_06 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-14 | 減圧弁の通電を切る指令を渡し、主ポンプの吐出圧を 2,900〜3,100 psi に上げる。 | IF-APU-20 | context.sts.orb.apu.IF_APU_20 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-15 | 各ボイラの GN2 容器と水タンクの冗長な圧力・温度センサの値を制御器を通して SM GPC へ渡す。GPC は水タンクの量を計算して専用の MEDS 表示へ送り、水量・窒素タンク圧力・調圧器圧力・窒素タンク温度は軌道上で SM APU/HYD（DISP 86）表示の右側に出る。 | IF-APU-14 | context.sts.orb.IF_APU_14 |
+| 図244 APU・油圧の運転と監視 シーケンス図 | YA-17 | 燃料タンク隔離弁を閉じる指令を渡す。 | IF-APU-03 | context.sts.orb.apu.IF_APU_03 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-01 | 搭載と地上の監視で、冗長セットの故障・分裂、GPC 故障、データ経路の故障を宣言する材料を渡す。 | IF-DPS-18 | context.sts.orb.dps.IF_DPS_18 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-02 | 故障した GPC を、上昇・再突入では MODE スイッチで HALT にし、それ以外では電源を切り、軌道上では DPS を構成し直して回復を試みる。 | IF-DPS-18 | context.sts.orb.dps.IF_DPS_18 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-03 | MECO 後の FC・ペイロード MDM の故障に対し、DPS UTILITY 表示の項目入力でポートモードによる回復を試みる。 | IF-DPS-19 | context.sts.orb.dps.IF_DPS_19 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-04 | データ経路の故障の後に、MDM の電源を切って入れ直し、出力をリセットする。 | IF-DPS-19 | context.sts.orb.dps.IF_DPS_19 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-05 | MTU と GPC の GMT の誤差が 100 ms を超えたら、15 ms の更新を行う。 | IF-DPS-20 | context.sts.orb.dps.IF_DPS_20 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-06 | MTU の BITE ビット 4 が立って MCC が時刻差の増加を見た場合などに、MECO 後から HAC 進入までの間に発振器を手動で切り替える。 | IF-DPS-20 | context.sts.orb.dps.IF_DPS_20 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-08 | エンジンを手動停止する指令を、主エンジン制御器へ渡す。 | IF-MPS-17 | context.sts.orb.mps.IF_MPS_17 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-09 | 停止・停止後の段階やレッドライン超過、指令経路故障・ロックアップ・データ経路故障の状態を渡す。 | IF-MPS-17 | context.sts.orb.mps.IF_MPS_17 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-12 | 各エンジン系統の遮断弁を個別に、相互接続弁の組を 1 個のスイッチで操作する指令を渡す。 | IF-MPS-18 | context.sts.orb.mps.IF_MPS_18 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-14 | ダンプの手動開始と、ET 分離の遅れの間の自動ダンプの停止の指令を渡す。自動の真空不活性化が十分でないときは、手動の真空不活性化も行う。 | IF-MPS-19 | context.sts.orb.mps.IF_MPS_19 |
+| 図245 DPS の運用管理と MPS の乗員操作 シーケンス図 | YB-16 | 遮断弁を閉じて下流の油圧漏れから守る指令を渡す。OPEN にすると弁が開く。 | IF-MPS-20 | context.sts.orb.mps.IF_MPS_20 |
+| 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図 | YC-01 | キャビンを 10.2 psi にしてからの時間（12 時間・24 時間）に応じて、EMU 内の前呼吸を 1 時間 15 分・40 分とし、14.7 psi のままなら 4 時間とする基準を渡す。 | IF-EVA-01 | context.sts.orb.eva.IF_EVA_01 |
+| 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図 | YC-03 | MCC の GO を確かめた後、DEPRESS/REPRESS のキューカードで減圧を始めるよう渡す。 | IF-EVA-02 | context.sts.orb.eva.IF_EVA_02 |
+| 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図 | YC-04 | 減圧・再与圧は、エアロックの構成ごと（通常構成・トンネルアダプタ）の DEPRESS/REPRESS キューカードに従うよう渡す。漏れ点検の不合格時の手順は FAILED LEAK CHECK に載せる。 | IF-EVA-05 | context.sts.orb.eva.IF_EVA_05 |
+| 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図 | YC-05 | 再与圧でエアロックの気密を確かめて O2 ACT を切った後に POST EVA へ移るよう渡す。再与圧で DCS の症状が消えた場合は、MCC に確かめるまで EMU を脱がない。 | IF-EVA-06 | context.sts.orb.eva.IF_EVA_06 |
+| 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図 | YC-06 | カフチェックリストで DCS の区分を判断した結果を渡す。カフ 4 では ABORT EVA として患者をエアロックへ連れ戻して単独で再与圧し、DCS の処置の手順へ移る。この手順は、カフ 4 への進行を防ぐために EVA を終えた後の処置を定める。 | IF-EVA-13 | context.sts.orb.eva.IF_EVA_13 |
+| 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図 | YC-07 | EMU の汚染が疑われた場合は、エアロックを 5 psia まで再与圧した状態で保ち、検知管による汚染試験を行ってから再与圧を続けるよう渡す。汚染の除去では真空で 15 分保持した後に、エアロックを 5 psi まで再与圧する（REPRESS の手順 1〜8）。 | IF-EVA-07 | context.sts.orb.eva.IF_EVA_07 |
+| 図247 OMS の乗員操作と表示 シーケンス図 | YD-02 | ARM/PRESS で GN2 の圧力隔離弁を開く指令を渡す。制御弁1・2は、スイッチが ARM か ARM/PRESS で OMS ENG VLV スイッチが ON のときに計算機の指令で開く。 | IF-OMS-06 | context.sts.orb.oms.IF_OMS_06 |
+| 図247 OMS の乗員操作と表示 シーケンス図 | YD-04 | ヘリウム圧力弁と蒸気隔離弁を開閉する指令を渡す。A か B のどちらかが OPEN なら両方の蒸気隔離弁が開き、両方が CLOSE なら両方が閉じ、GPC 位置では噴射シーケンスが自動で制御する。 | IF-OMS-07 | context.sts.orb.oms.IF_OMS_07 |
+| 図247 OMS の乗員操作と表示 シーケンス図 | YD-06 | 燃料・酸化剤のクロスフィード弁の組を開閉する指令を渡す。GPC 位置のときは、A・B の弁の組がオービタの計算機の指令で自動的に開閉される。 | IF-OMS-08 | context.sts.orb.oms.IF_OMS_08 |
+| 図247 OMS の乗員操作と表示 シーケンス図 | YD-07 | トータライザの全量と後室プローブの量を渡す。使用可能推進薬は計測量から残量を差し引いて定義される。 | IF-OMS-09 | context.sts.orb.oms.IF_OMS_09 |
+| 図247 OMS の乗員操作と表示 シーケンス図 | YD-10 | 選んだヒータ系統へ切り替える指令を渡す。飛行中に少なくとも1回は冗長な系統（A か B）へ切り替える。 | IF-OMS-10 | context.sts.orb.oms.IF_OMS_10 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-02 | 運用規則と手順に従い、推進薬系の弁（タンク隔離・マニホールド隔離・クロスフィード）の操作を渡す。トークバックは対が開なら OP、閉なら CL、移動中や不一致ならバーバーポールを示す。 | IF-RCS-16 | context.sts.orb.rcs.IF_RCS_16 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-04 | He PRESS A・B のスイッチ操作として、ヘリウム隔離弁の開閉と加圧経路の切替を渡す。 | IF-RCS-17 | context.sts.orb.rcs.IF_RCS_17 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-06 | 運用規則に従い、ヒータ系（A・B）の選択と入切を渡す。ヒータ系は飛行中に少なくとも一度は冗長側へ切り替える。 | IF-RCS-19 | context.sts.orb.rcs.IF_RCS_19 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-07 | 燃焼室圧の離散信号を、実際に噴射したことの表示として渡す。RM は Pc 離散信号・CMD B・ドライバ出力離散信号を噴射器の故障の検知に使う。 | IF-RCS-04 | context.sts.orb.rcs.IF_RCS_04 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-08 | 各噴射器の燃料・酸化剤の噴射器温度を渡す。RM の限界を3周期続けて下回ると漏れ（fail-leak）と判定される。限界は主噴射器で酸化剤 30°F・燃料 20°F、OPS 2 のバーニアで 130°F である。 | IF-RCS-05 | context.sts.orb.rcs.IF_RCS_05 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-09 | マニホールド隔離弁の離散信号（弁の状態）を渡す。RM はマニホールドの状態を評価する。 | IF-RCS-06 | context.sts.orb.rcs.IF_RCS_06 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-10 | OPS 2・8 で fail-on が通報され、AUTO MANF CL が有効でスイッチが GPC 位置なら、GPC が該当するマニホールドを自動で閉じる指令を渡す。 | IF-RCS-06 | context.sts.orb.rcs.IF_RCS_06 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-12 | 噴射器の選択解除・再選択、マニホールド状態の上書き、ポッドの故障限度の変更、AUTO MANF CL の有効化を渡す。 | IF-RCS-18 | context.sts.orb.rcs.IF_RCS_18 |
+| 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図 | YE-13 | ポッドのヘリウム圧（燃料か酸化剤）が 500 psi 未満になったことを、F(L,R) He P の故障メッセージとして渡す。 | IF-RCS-14 | context.sts.orb.IF_RCS_14 |
 
 ## 6. 文書とモデルの一致
 
@@ -203,7 +245,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 状態 | SSD-BEH-ORB-001 の状態の表 | SSD-BEH-ORB-001 の state | 25 | 25 | 一致 |
 | 遷移 | SSD-BEH-ORB-001 の遷移の表 | SSD-BEH-ORB-001 の transition | 34 | 34 | 一致 |
 | 活動図の行動 | SSD-BEH-ORB-002・004 の節点の表（行動） | action（行動） | 44 | 44 | 一致 |
-| メッセージ | SSD-BEH-ORB-003 のメッセージの表 | SSD-BEH-ORB-003 の message | 117 | 117 | 一致 |
+| メッセージ | SSD-BEH-ORB-003 のメッセージの表 | SSD-BEH-ORB-003 の message | 182 | 182 | 一致 |
 | パラメトリックの要求 | SSD-PAR-ORB-001 の要求との関係の表 | SSD-PAR-ORB-001 の requirement def | 11 | 11 | 一致 |
 | ユースケース | SSD-UC-ORB-001 のユースケースの表 | SSD-UC-ORB-001 の use case def | 12 | 12 | 一致 |
 | シナリオのメッセージ | SSD-UC-ORB-001 のメッセージの表 | SSD-UC-ORB-001 の message | 34 | 34 | 一致 |
@@ -214,7 +256,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | ミッションキット | SSD-VAR-ORB-001 のミッションキットの表 | SSD-VAR-ORB-001 の MissionKit の part def | 13 | 13 | 一致 |
 | 検証ケース | 要求書の要求の表 | SSD-VER-SYS-001 の verification def | 212 | 212 | 一致 |
 | ビューポイント | SSD-VPT-SYS-001 のビューポイントの表 | SSD-VPT-SYS-001 の viewpoint def | 13 | 13 | 一致 |
-| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 243 | 243 | 一致 |
+| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 248 | 248 | 一致 |
 | 流れる物 | SSD-IBD-ORB-001 の流れる物の表 | SSD-IBD-ORB-001 の item def | 99 | 99 | 一致 |
 | 内部ブロック図の部品 | SSD-IBD-ORB-001 の部品の表 | SSD-IBD-ORB-001 の機器の part def | 301 | 301 | 一致 |
 | 内部ブロック図の流れ | SSD-IBD-ORB-001 の流れの表 | SSD-IBD-ORB-001 の flow | 542 | 542 | 一致 |
@@ -405,3 +447,4 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. AT | 2026-10-16 | Rev. CE（ECLSS のシーケンス図）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CE） |
 | Rev. AU | 2026-10-16 | Rev. CF（機器配分表の行の追加・MON ブロックの機器）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CF） |
 | Rev. AV | 2026-10-16 | Rev. CG（ECLSS 以外の IF の流れ）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CG） |
+| Rev. AW | 2026-10-16 | Rev. CH（ECLSS 以外のシーケンス図）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CH） |
