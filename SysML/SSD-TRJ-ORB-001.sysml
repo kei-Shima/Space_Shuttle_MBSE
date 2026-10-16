@@ -1,5 +1,5 @@
 // SysML v2 テキスト：上昇・再突入の時間変化モデル
-// SSD-TRJ-ORB-001 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） の表から生成（lib/build_docs_bz.py・rev_bz/bzdata.py・rev_bz/bzmodel.py）。値の根拠の頁は SSD-TRJ-ORB-001 にある。
+// SSD-TRJ-ORB-001 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） の表から生成（lib/build_docs_cj.py・rev_cj/cjdata.py・rev_cj/cjmodel.py・rev_bz/bzmodel.py）。値の根拠の頁は SSD-TRJ-ORB-001 にある。
 package SSD_TRJ_ORB_001 {
     doc /* SSD-TRJ-ORB-001 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較）。図230〜232 と同じモデル。値は資料の単位で、単位は doc に書く。式の評価（シナリオの計算）は本書が行い、結果を属性に書いた。 */
     private import ScalarValues::*;
@@ -28,6 +28,16 @@ package SSD_TRJ_ORB_001 {
         attribute p15b : Real = 205.0 { doc /* 目標の接地速度（2つめの値、KEAS） */ }
         attribute <'TRJ-P16'> p16 : Real = 140.0 { doc /* ブレーキを始める速度（KGS） */ }
         attribute <'TRJ-P17'> p17 : Real = 7.5 { doc /* 制動の減速度（実績）（ft/s²） */ }
+        attribute <'TRJ-P18'> p18 : Real = 16660.4 { doc /* SRB のノズル出口面積（1本あたり）（in²） */ }
+        attribute <'TRJ-P19'> p19 : Real = 2326.82 { doc /* SRB のノズルのど面積（1本あたり）（in²） */ }
+        attribute <'TRJ-P20'> p20 : Real = 6461.07 { doc /* SSME のノズル出口面積（1基あたり）（in²） */ }
+        attribute <'TRJ-P21'> p21 : Real = 10.0 { doc /* SSME の出力の変化率（%/s） */ }
+        attribute <'TRJ-P22'> p22 : Real = 8.0 { doc /* 垂直上昇の終わり（塔の通過）の時刻（s） */ }
+        attribute <'TRJ-P23'> p23 : Real = 13.0 { doc /* 初期操作の継続時間（s） */ }
+        attribute <'TRJ-P24'> p24 : Real = 0.297 { doc /* 初期操作のピッチ率（合わせ込み）（°/s） */ }
+        attribute <'TRJ-P25'> p25 : Real = 823.8 { doc /* 抗力の基準面積（前面の断面積）（ft²） */ }
+        attribute <'TRJ-P26'> p26 : Real = 1.0 { doc /* 抗力係数の倍率（公称）（—） */ }
+        attribute <'TRJ-P27'> p27 : Real = 20925738.0 { doc /* 球形地球の半径（ft） */ }
     }
     // ---- モデル（式）
     constraint def <'TRJ-M01'> AscentMass {
@@ -70,6 +80,21 @@ package SSD_TRJ_ORB_001 {
         in attribute v : Real; in attribute a : Real; in attribute s : Real;
         s == v * v / (2.0 * a)
     }
+    constraint def <'TRJ-M09'> FirstStageMotion {
+        doc /* 第1段の運動方程式（鉛直面の質点）：dV/dt = (T·cosα − D) ÷ (m÷g₀) − g·sinγ、V·dγ/dt = T·sinα ÷ (m÷g₀) − (g − V²÷r)·cosγ、dh/dt = V·sinγ、dx/dt = V·cosγ·R÷r　（V は地球相対の速度、γ は地球相対の経路角、α は推力方向と速度の向きの角） */
+        in attribute thrust : Real; in attribute drag : Real; in attribute massSlug : Real; in attribute g : Real; in attribute sinGamma : Real; in attribute cosAlpha : Real; in attribute dVdt : Real;
+        dVdt == (thrust * cosAlpha - drag) / massSlug - g * sinGamma
+    }
+    constraint def <'TRJ-M10'> SrbThrust {
+        doc /* SRB の推力と流量：F_vac ＝ Cf(t)·Pc(t)·A_t、F ＝ F_vac − p_a·A_e、ṁ ＝ k(t)·Pc(t)·A_t　（Pc は頭部圧の表、Cf・k は真空推力・流量と Pc の比を時刻で補間） */
+        in attribute cf : Real; in attribute pc : Real; in attribute throatArea : Real; in attribute pa : Real; in attribute exitArea : Real; in attribute fVac : Real; in attribute fSea : Real;
+        fSea == cf * pc * throatArea - pa * exitArea
+    }
+    constraint def <'TRJ-M11'> Drag {
+        doc /* 抗力：D ＝ q·Cd(M)·A_front、q ＝ ρ(h)·V² ÷ 2 */
+        in attribute q : Real; in attribute cd : Real; in attribute aFront : Real; in attribute drag : Real;
+        drag == q * cd * aFront
+    }
     // ---- シナリオ（本書の計算の結果）
     package Scenarios {
         analysis def <'TRJ-S01'> Scenario01 {
@@ -90,6 +115,19 @@ package SSD_TRJ_ORB_001 {
             subject vehicle : AscentAndEntryVehicle;
             doc /* 接地後の停止。式 TRJ-M08。結果：195 KEAS から一定の 7.5 ft/s² で止まる距離 7,221 ft。最大着陸重量 233,000 lb の運動エネルギーは、接地（205 KEAS）で 433、ブレーキの開始（140 KGS）で 202 百万 ft-lb */
         }
+        analysis def <'TRJ-S05'> Scenario05 {
+            subject vehicle : AscentAndEntryVehicle;
+            doc /* 上昇の第1段の運動（運動方程式、抗力係数の倍率 1.0）。式 TRJ-M09〜M11。結果：最大動圧 529 psf（49.6 s）、SRB 分離（131.44 s）の高度 27.05 n.mi.・地球相対速度 3,908 fps・経路角 34.87°（合わせ込みの目標）・動圧 15.0 psf・射程 21.6 n.mi.・質量 1,859,724 lb。塔の通過 8 s の速度 114.7 fps・高度 427 ft */
+            attribute profile : TrajectoryProfile = new TrajectoryProfile(samples = (new SamplePair(0.0, 0.000), new SamplePair(4.0, 3.192), new SamplePair(8.0, 15.441), new SamplePair(12.0, 39.630), new SamplePair(16.0, 78.061), new SamplePair(20.0, 131.897), new SamplePair(24.0, 199.137), new SamplePair(28.0, 269.990), new SamplePair(32.0, 337.466), new SamplePair(36.0, 397.702), new SamplePair(40.0, 452.339), new SamplePair(44.0, 496.793), new SamplePair(48.0, 525.933), new SamplePair(52.0, 526.951), new SamplePair(56.0, 517.002), new SamplePair(60.0, 503.503), new SamplePair(64.0, 493.338), new SamplePair(68.0, 478.049), new SamplePair(72.0, 459.124), new SamplePair(76.0, 434.140), new SamplePair(80.0, 402.908), new SamplePair(84.0, 365.980), new SamplePair(88.0, 321.157), new SamplePair(92.0, 271.787), new SamplePair(96.0, 223.448), new SamplePair(100.0, 178.989), new SamplePair(104.0, 140.331), new SamplePair(108.0, 106.108), new SamplePair(112.0, 77.908), new SamplePair(116.0, 56.430), new SamplePair(120.0, 40.504), new SamplePair(124.0, 28.463), new SamplePair(128.0, 19.929))) { doc /* 時間 s → 動圧 psf */ }
+        }
+        analysis def <'TRJ-S06'> Scenario06 {
+            subject vehicle : AscentAndEntryVehicle;
+            doc /* 抗力係数の倍率の感度（0.5・1.0・1.5、それぞれ p₁ を合わせ直す）。式 TRJ-M09〜M11。結果：倍率 0.5：p₁ ＝ 0.336°/s、最大動圧 571 psf（51.6 s）、分離の高度 28.5 n.mi.、速度 4,123 fps、動圧 12.2 psf　倍率 1.0：p₁ ＝ 0.297°/s、最大動圧 529 psf（49.6 s）、分離の高度 27.0 n.mi.、速度 3,908 fps、動圧 15.0 psf　倍率 1.5：p₁ ＝ 0.264°/s、最大動圧 494 psf（49.1 s）、分離の高度 25.8 n.mi.、速度 3,706 fps、動圧 18.2 psf */
+        }
+        analysis def <'TRJ-S07'> Scenario07 {
+            subject vehicle : AscentAndEntryVehicle;
+            doc /* SRB の推力を全力積に合わせて一様に増やした場合の感度（p₁ を合わせ直す）。式 TRJ-M09〜M11。結果：推力・流量に 1.0274 を掛けると、p₁ ＝ 0.377°/s、最大動圧 574 psf（48.8 s）、分離の高度 28.84 n.mi.、速度 4,224 fps、動圧 11.8 psf、質量 1,799,463 lb（公称の p₁ ＝ 0.297°/s、速度 3,908 fps、質量 1,859,724 lb） */
+        }
     }
     // ---- 限界との照合
     package Evaluations {
@@ -100,19 +138,19 @@ package SSD_TRJ_ORB_001 {
             require constraint { comparedValue <= limit }
         }
         requirement def <'TRJ-E02'> Eval02 {
-            doc /* 最大動圧（構造の仕様の限界）：基準 ≤ 820 psf（A2-61）。値 STS-1 の計画 575 psf、実績 615 / 606 psf（資料の値。本書のモデルは最大動圧を計算しない）。判定：満たす */
+            doc /* 最大動圧（構造の仕様の限界）：基準 ≤ 820 psf（A2-61）。値 第1段のモデル 529 psf（TRJ-V12）、STS-1 の計画 575 psf、実績 615 / 606 psf。判定：満たす */
             attribute limit : Real = 820.0;
             attribute comparedValue : Real = 615.0;
             require constraint { comparedValue <= limit }
         }
         requirement def <'TRJ-E03'> Eval03 {
-            doc /* 最大動圧（STS-1 の拘束）：基準 ≤ 620 psf（STS-1 の運用飛行プロファイル）。値 実績 615 / 606 psf（余裕 5〜14 psf）。判定：満たす */
+            doc /* 最大動圧（STS-1 の拘束）：基準 ≤ 620 psf（STS-1 の運用飛行プロファイル）。値 実績 615 / 606 psf（余裕 5〜14 psf）、第1段のモデル 529 psf。判定：満たす */
             attribute limit : Real = 620.0;
             attribute comparedValue : Real = 615.0;
             require constraint { comparedValue <= limit }
         }
         requirement def <'TRJ-E04'> Eval04 {
-            doc /* SRB 分離の点の動圧：基準 ≤ 75 psf（REQ-SRB-08）。値 モデル 15.5 psf（計画 16 psf）。判定：満たす */
+            doc /* SRB 分離の点の動圧：基準 ≤ 75 psf（REQ-SRB-08）。値 計画の点のモデル 15.5 psf（計画 16 psf）、第1段の運動方程式 15.0 psf。判定：満たす */
             attribute limit : Real = 75.0;
             attribute comparedValue : Real = 15.4515;
             require constraint { comparedValue <= limit }

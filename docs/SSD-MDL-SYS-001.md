@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. AX／2026-10-16 |
+| 版・日付 | Rev. AY／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -49,7 +49,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 28 | SysML/SSD-MED-ORB-001.sysml | 医療の構造と処置（SOMS・処置の流れ・事象） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 269 | 35 | 0 | 0 |
 | 29 | SysML/SSD-TSK-ORB-001.sysml | 乗員の作業分析・機能の分担 | — | 198 | 43 | 0 | 0 |
 | 30 | SysML/SSD-PRF-ORB-001.sysml | 消耗品・電力プロファイル（時間軸の残量・設計と実績） | SSD-PAR-ORB-001・SSD-IND-ORB-001 | 78 | 4 | 0 | 0 |
-| 31 | SysML/SSD-TRJ-ORB-001.sysml | 上昇・再突入の時間変化モデル | — | 148 | 23 | 0 | 0 |
+| 31 | SysML/SSD-TRJ-ORB-001.sysml | 上昇・再突入の時間変化モデル | — | 186 | 29 | 0 | 0 |
 | 32 | SysML/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
 | 33 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2488 | 105 | 0 | 0 |
 | 34 | SysML/SSD-IRQ-SYS-001.sysml | インタフェース要求（上位の IF）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 1571 | 59 | 0 | 0 |
@@ -354,9 +354,9 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 導出（L2→L3、ECLSS 以外） | SSD-RQL-SYS-001 の上位の欄 | SSD-RQL-SYS-001 の #derivation | 530 | 530 | 一致 |
 | L3 の検証ケース（ECLSS 以外） | SSD-RQL-SYS-001 の検証の表 | SSD-RQL-SYS-001 の verification def | 457 | 457 | 一致 |
 | オービタの系の機能の故障モード | SSD-FMX-ORB-001 の故障モードの表 | SSD-FMX-ORB-001 の FailureMode | 152 | 152 | 一致 |
-| 上昇・再突入のパラメータ | SSD-TRJ-ORB-001 のパラメータの表 | SSD-TRJ-ORB-001 の AscentAndEntryVehicle の属性 | 17 | 17 | 一致 |
-| 上昇・再突入のモデル（式） | SSD-TRJ-ORB-001 のモデルの表 | SSD-TRJ-ORB-001 の constraint def | 8 | 8 | 一致 |
-| 上昇・再突入のシナリオ | SSD-TRJ-ORB-001 のシナリオの表 | SSD-TRJ-ORB-001 の analysis def | 4 | 4 | 一致 |
+| 上昇・再突入のパラメータ | SSD-TRJ-ORB-001 のパラメータの表 | SSD-TRJ-ORB-001 の AscentAndEntryVehicle の属性 | 27 | 27 | 一致 |
+| 上昇・再突入のモデル（式） | SSD-TRJ-ORB-001 のモデルの表 | SSD-TRJ-ORB-001 の constraint def | 11 | 11 | 一致 |
+| 上昇・再突入のシナリオ | SSD-TRJ-ORB-001 のシナリオの表 | SSD-TRJ-ORB-001 の analysis def | 7 | 7 | 一致 |
 | 上昇・再突入の照合 | SSD-TRJ-ORB-001 の照合の表 | SSD-TRJ-ORB-001 の requirement def | 9 | 9 | 一致 |
 | 切れ目の区分 | SSD-TRC-SYS-001 の切れ目の一覧の区分 | SSD-TRC-SYS-001 の TraceGapReason | 215 | 215 | 一致 |
 
@@ -450,3 +450,4 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. AV | 2026-10-16 | Rev. CG（ECLSS 以外の IF の流れ）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CG） |
 | Rev. AW | 2026-10-16 | Rev. CH（ECLSS 以外のシーケンス図）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 125分類にした（Rev. CH） |
 | Rev. AX | 2026-10-16 | Rev. CI（検証の根拠が無い要求の理由の区分）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 126分類にした（Rev. CI） |
+| Rev. AY | 2026-10-16 | Rev. CJ（SSD-TRJ-ORB-001 の改版）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 126分類にした（Rev. CJ） |

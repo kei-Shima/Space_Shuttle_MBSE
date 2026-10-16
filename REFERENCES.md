@@ -13,7 +13,7 @@
 | 公開元 | 文献 | 引用箇所 |
 |---|---:|---:|
 | 1. NASA Technical Reports Server（NTRS） | 106 | 1,359 |
-| 2. ibiblio.org（Virtual AGC のスペースシャトル資料） | 81 | 1,280 |
+| 2. ibiblio.org（Virtual AGC のスペースシャトル資料） | 81 | 1,281 |
 | 3. yumpu.com（SCOM の公開版） | 1 | 702 |
 | 4. Internet Archive | 1 | 633 |
 | 5. NASA（nasa.gov） | 9 | 295 |
@@ -46,7 +46,7 @@
 | 32. omg.org | 1 | 1 |
 | 33. osti.gov | 1 | 1 |
 | 34. scribd.com | 1 | 1 |
-| 計 | 268 | 4,350 |
+| 計 | 268 | 4,351 |
 
 ## 1. NASA Technical Reports Server（NTRS）
 
@@ -215,7 +215,7 @@
 | 156 | STS-115 MOD Flight Readiness Review（2006-08-02、47頁、300,359 バイト） | <https://ibiblio.org/apollo/Shuttle/FRR/MOD/STS-115%20FRR%20MOD.pdf> | 1 | [SSD-BUD-ORB-001](docs/SSD-BUD-ORB-001.md)・[SSD-PAR-ORB-001](docs/SSD-PAR-ORB-001.md) |
 | 157 | STS-119 Flight Readiness Review STVD（2009-01-16、14頁、1,565,189 バイト） | <https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-119%20FRR%20STVD.pdf> | 1 | [SSD-BUD-ORB-001](docs/SSD-BUD-ORB-001.md)・[SSD-PAR-ORB-001](docs/SSD-PAR-ORB-001.md) |
 | 158 | STS-125 / STS-400 Flight Readiness Review STVD（2008-09-02、22頁、725,565 バイト） | <https://ibiblio.org/apollo/Shuttle/FRR/STVD/STS-125%20_%20STS-400%20FRR%20STVD.pdf> | 1 | [SSD-BUD-ORB-001](docs/SSD-BUD-ORB-001.md)・[SSD-PAR-ORB-001](docs/SSD-PAR-ORB-001.md) |
-| 159 | JSC-14483（78-FM-51）Vol. III STS-1 Operational Flight Profile, Ascent, Cycle 3, Rev. 1（NASA TM-81096、Flight Analysis Branch, NASA JSC、1980年5月、300頁、27,788,426 バイト） | <https://ibiblio.org/apollo/Shuttle/JSC-14483,%2078-FM-51,%20Vol.3%20-%20STS-1%20-%20Operational%20Flight%20Profile%20-%20Ascent,%20Cycle%203.pdf> | 14 | [SSD-TRJ-ORB-001](docs/SSD-TRJ-ORB-001.md) |
+| 159 | JSC-14483（78-FM-51）Vol. III STS-1 Operational Flight Profile, Ascent, Cycle 3, Rev. 1（NASA TM-81096、Flight Analysis Branch, NASA JSC、1980年5月、300頁、27,788,426 バイト） | <https://ibiblio.org/apollo/Shuttle/JSC-14483,%2078-FM-51,%20Vol.3%20-%20STS-1%20-%20Operational%20Flight%20Profile%20-%20Ascent,%20Cycle%203.pdf> | 15 | [SSD-TRJ-ORB-001](docs/SSD-TRJ-ORB-001.md) |
 | 160 | STS-106 Space Shuttle Mission Report（JSC、58頁、3,814,173 バイト） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-106%20Space%20Shuttle%20Mission%20Report.pdf> | 2 | [SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
 | 161 | STS-115 Space Shuttle Mission Report（JSC、106頁、770,336 バイト） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-115%20Space%20Shuttle%20Mission%20Report.pdf> | 2 | [SSD-FMX-ECL-001](docs/SSD-FMX-ECL-001.md) |
 | 162 | STS-34 National Space Transportation System Mission Report（JSC、25頁、1,797,889 バイト） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-34%20National%20Space%20Transportation%20System%20Mission%20Report.pdf> | 2 | [SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
@@ -567,3 +567,6 @@
 | STS-132 Space Shuttle Mission Report（JSC、103頁、981,003 バイト） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-132%20Space%20Shuttle%20Mission%20Report.pdf> |
 | STS-133 Space Shuttle Mission Report（JSC、111頁、1,002,085 バイト） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-133%20Space%20Shuttle%20Mission%20Report.pdf> |
 | STS-134 Space Shuttle Mission Report（JSC、109頁、973,287 バイト） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-134%20Space%20Shuttle%20Mission%20Report.pdf> |
+| JSC-11542 Flight Procedures Handbook, Entry（Flight Design and Dynamics Division、NASA JSC、Final Rev E、2005-04、254頁、2,148,222 バイト） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/JSC-11542%20-%20Flight%20Procedures%20Handbook%20Rev%20E%20200504.pdf> |
+| USA005512 Entry, TAEM, and Approach/Landing Guidance Workbook 21002（United Space Alliance for NASA、Basic、2006-01-23、145頁、1,419,962 バイト） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/USA005512%20-%20Entry,%20TAEM%20and%20Approach%2021002%20Basic%2020060123.pdf> |
+| NASA TP-1667 Analysis of the Space Shuttle Orbiter Entry Dynamics from Mach 10 to Mach 2.5 With the November 1976 Flight Control System（NASA Langley、1980、162頁、3,812,425 バイト） | <https://ntrs.nasa.gov/api/citations/19800020916/downloads/19800020916.pdf> |

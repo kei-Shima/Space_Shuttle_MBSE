@@ -2464,7 +2464,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "IRQ-・VC-IRQ-"; form = "IRQ-<SYS|ORB>-<IF の番号>・VC-IRQ-…"; meaning = "インタフェース要求・その検証ケース"; example = "IRQ-ORB-05"; count = 118; }
         @IdConvention { prefix = "LDGS-・LDGT-・VNTS-・VNTT-・CWSS-・CWST-・PRLS-・PRLT-・ESCS-・ESCT-"; form = "<名前>S-・<名前>T-<2桁>"; meaning = "MECH・C/W・PLS・CREW の状態・遷移"; example = "LDGT-03"; count = 179; }
         @IdConvention { prefix = "LRQ-・VC-LRQ-"; form = "LRQ-<系>-<2桁>・VC-LRQ-…"; meaning = "L3 の要求（ECLSS 以外の系）・その検証ケース"; example = "LRQ-GNC-01"; count = 914; }
-        @IdConvention { prefix = "TRJ-P・TRJ-M・TRJ-S・TRJ-V・TRJ-E"; form = "TRJ-<P|M|S|V|E><2桁>"; meaning = "上昇・再突入のモデルのパラメータ・式・シナリオ・比較・照合"; example = "TRJ-S01"; count = 49; }
+        @IdConvention { prefix = "TRJ-P・TRJ-M・TRJ-S・TRJ-V・TRJ-E"; form = "TRJ-<P|M|S|V|E><2桁>"; meaning = "上昇・再突入のモデルのパラメータ・式・シナリオ・比較・照合"; example = "TRJ-S01"; count = 78; }
         @IdConvention { prefix = "ACR-"; form = "ACR-<3桁>"; meaning = "略語表の行（略称と正式名称）"; example = "ACR-001"; count = 0; }
     }
 }
