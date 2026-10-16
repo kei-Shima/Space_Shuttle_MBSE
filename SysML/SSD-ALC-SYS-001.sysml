@@ -2511,6 +2511,7 @@ package SSD_ALC_SYS_001 {
         part def <'PHY-CT-09'> PHY_CT_09 { doc /* Ku 帯信号処理器（KuSP）（数量：1、通信・追跡（C&T）） */ }
         part def <'PHY-CT-10'> PHY_CT_10 { doc /* PCMMU（PCM マスタユニット）（数量：2、通信・追跡（C&T）） */ }
         part def <'PHY-CT-11'> PHY_CT_11 { doc /* SSOR（宇宙対宇宙オービタ無線）と SSOR アンテナ（数量：SSOR 2・アンテナ 2、通信・追跡（C&T）） */ }
+        part def <'PHY-CT-12'> PHY_CT_12 { doc /* VCU（映像制御装置：RCU（遠隔制御装置）と VSU（映像切替装置）の2つの LRU）（数量：1（RCU 1・VSU 1）、通信・追跡（C&T）） */ }
         part def <'PHY-DPS-01'> PHY_DPS_01 { doc /* GPC（汎用計算機、IBM AP-101S）（数量：5、データ処理系（DPS）） */ }
         part def <'PHY-DPS-02'> PHY_DPS_02 { doc /* MMU（モジュラーメモリユニット）（数量：2、データ処理系（DPS）） */ }
         part def <'PHY-DPS-03'> PHY_DPS_03 { doc /* MDM（マルチプレクサ／デマルチプレクサ）（数量：オービタ20（DPS用13・OI用7）＋SRB用4、データ処理系（DPS）） */ }
@@ -2631,10 +2632,17 @@ package SSD_ALC_SYS_001 {
         part def <'PHY-EVA-01'> PHY_EVA_01 { doc /* 船外活動ユニット（EMU）（数量：ベースラインのミッションで2着、船外活動（EVA/EMU）） */ }
         part def <'PHY-EVA-02'> PHY_EVA_02 { doc /* 外部エアロック（ハッチ3基・EMU支援機器付き）（数量：1基（直径63インチ、長さ83インチ強、D形40インチ開口のハッチ3基：内側ハッチ・EVハッチ・ドッキングハッチ）、船外活動（EVA/EMU）） */ }
         part def <'PHY-EVA-03'> PHY_EVA_03 { doc /* ペイロードベイのEVA支援機器（スライドワイヤ・EVAウインチ・ハンドレール）（数量：スライドワイヤ2本（各舷1本、長さ約46フィート）、EVAウインチ（前後の隔壁）、船外活動（EVA/EMU）） */ }
+        part def <'PHY-EVA-04'> PHY_EVA_04 { doc /* ミニワークステーション（MWS）とBRT（数量：MWS 2・BRT 2（EMU 2着分。ベースプレートは EMU、T バー・スイングアーム・BRT はミッドデッキに収める）、船外活動（EVA/EMU）） */ }
+        part def <'PHY-EVA-05'> PHY_EVA_05 { doc /* 左舷の軽量工具収納組立（TSA）（数量：1（前後のトレイ）、船外活動（EVA/EMU）） */ }
+        part def <'PHY-EVA-06'> PHY_EVA_06 { doc /* EVA 機器の電池と充電器（EHIP ライト電池充電器・REBA 充電器・Y ケーブル・アダプタケーブル・延長ケーブルと、PGT 電池・ヘルメットライト電池）（数量：EHIP 充電器 1・REBA 充電器 1・PGT 電池 2・ヘルメットライト電池 4・アダプタケーブル 2・25 ft 延長ケーブル（必要なとき）、船外活動（EVA/EMU）） */ }
+        part def <'PHY-EVA-07'> PHY_EVA_07 { doc /* 簡易着用マスク（マスク前呼吸用）と 14 ft の通信・O2 アンビリカル（数量：EV1・EV2 の各1式（アンビリカル 2）、船外活動（EVA/EMU）） */ }
+        part def <'PHY-EVA-08'> PHY_EVA_08 { doc /* 非常時 EVA の工具一式（中心線ラッチ工具・3点ラッチ工具・RMS ロープリール・調整式テザー・大型カッタ・PRD）（数量：中心線ラッチ工具 2・3点ラッチ工具 2・RMS ロープリール 1・調整式テザー 2・大型カッタ 1・PRD 2、船外活動（EVA/EMU）） */ }
+        part def <'PHY-EVA-09'> PHY_EVA_09 { doc /* PGT とヘルメットライトの電池（数量：PGT の電池 2・ヘルメットライトの電池 4、船外活動（EVA/EMU）） */ }
         part def OrbiterLayout {
             doc /* オービタの物理配置：区画と、区画に置いた機器 */
             part <'FD'> fd : Compartment {
                 doc /* フライトデッキ */
+                part phy_ct_12 : PHY_CT_12[1];
                 part phy_dps_04 : PHY_DPS_04[4];
                 part phy_gnc_01 : PHY_GNC_01[3];
                 part phy_eclss_15 : PHY_ECLSS_15;
@@ -2652,6 +2660,8 @@ package SSD_ALC_SYS_001 {
                 part phy_crew_02 : PHY_CREW_02;
                 part phy_crew_03 : PHY_CREW_03;
                 part phy_crew_04 : PHY_CREW_04;
+                part phy_eva_06 : PHY_EVA_06;
+                part phy_eva_09 : PHY_EVA_09;
             }
             part <'LEB'> leb : Compartment {
                 doc /* 下部機器ベイ */
@@ -2728,6 +2738,8 @@ package SSD_ALC_SYS_001 {
                 part phy_pls_02 : PHY_PLS_02;
                 part phy_pls_04 : PHY_PLS_04;
                 part phy_eva_03 : PHY_EVA_03;
+                part phy_eva_05 : PHY_EVA_05[1];
+                part phy_eva_08 : PHY_EVA_08;
             }
             part <'MID'> mid : Compartment {
                 doc /* 中部胴体（床下・側面） */
@@ -2818,6 +2830,8 @@ package SSD_ALC_SYS_001 {
                 part phy_cw_03 : PHY_CW_03[4];
                 part phy_cw_05 : PHY_CW_05[9];
                 part phy_crew_01 : PHY_CREW_01;
+                part phy_eva_04 : PHY_EVA_04;
+                part phy_eva_07 : PHY_EVA_07;
             }
         }
         part orbiterLayout : OrbiterLayout;
@@ -4950,6 +4964,9 @@ package SSD_ALC_SYS_001 {
         allocate Functions::FN_CT_UHF::F_CT_UHF_06 to Physical::orbiterLayout.airlock.phy_ct_11;
         allocate Functions::FN_CT_UHF::F_CT_UHF_07 to Physical::orbiterLayout.airlock.phy_ct_11;
         allocate Functions::FN_CT_UHF::F_CT_UHF_08 to Physical::orbiterLayout.airlock.phy_ct_11;
+        allocate context.sts.orb.ct to Physical::orbiterLayout.fd.phy_ct_12;
+        allocate Functions::FN_CT_CCTV::F_CT_CCTV_04 to Physical::orbiterLayout.fd.phy_ct_12;
+        allocate Functions::FN_CT_CCTV::F_CT_CCTV_07 to Physical::orbiterLayout.fd.phy_ct_12;
         allocate context.sts.orb.dps to Physical::orbiterLayout.avbf.phy_dps_01;
         allocate Functions::FN_DPS::F_DPS_01 to Physical::orbiterLayout.avbf.phy_dps_01;
         allocate Functions::FN_DPS::F_DPS_02 to Physical::orbiterLayout.avbf.phy_dps_01;
@@ -5408,6 +5425,21 @@ package SSD_ALC_SYS_001 {
         allocate Functions::FN_EVA_TLS::F_EVA_TLS_01 to Physical::orbiterLayout.plb.phy_eva_03;
         allocate Functions::FN_EVA_TLS::F_EVA_TLS_02 to Physical::orbiterLayout.plb.phy_eva_03;
         allocate Functions::FN_EVA_TLS::F_EVA_TLS_03 to Physical::orbiterLayout.plb.phy_eva_03;
+        allocate context.sts.orb.eva to Physical::orbiterLayout.multi.phy_eva_04;
+        allocate Functions::FN_EVA_TLS::F_EVA_TLS_08 to Physical::orbiterLayout.multi.phy_eva_04;
+        allocate context.sts.orb.eva to Physical::orbiterLayout.plb.phy_eva_05;
+        allocate Functions::FN_EVA_TLS::F_EVA_TLS_06 to Physical::orbiterLayout.plb.phy_eva_05;
+        allocate context.sts.orb.eva to Physical::orbiterLayout.md.phy_eva_06;
+        allocate Functions::FN_EVA_MNT::F_EVA_MNT_01 to Physical::orbiterLayout.md.phy_eva_06;
+        allocate Functions::FN_EVA_MNT::F_EVA_MNT_09 to Physical::orbiterLayout.md.phy_eva_06;
+        allocate Functions::FN_EVA_MNT::F_EVA_MNT_10 to Physical::orbiterLayout.md.phy_eva_06;
+        allocate context.sts.orb.eva to Physical::orbiterLayout.multi.phy_eva_07;
+        allocate Functions::FN_EVA_OPS::F_EVA_OPS_02 to Physical::orbiterLayout.multi.phy_eva_07;
+        allocate context.sts.orb.eva to Physical::orbiterLayout.plb.phy_eva_08;
+        allocate Functions::FN_EVA_EMG::F_EVA_EMG_01 to Physical::orbiterLayout.plb.phy_eva_08;
+        allocate Functions::FN_EVA_EMG::F_EVA_EMG_02 to Physical::orbiterLayout.plb.phy_eva_08;
+        allocate context.sts.orb.eva to Physical::orbiterLayout.md.phy_eva_09;
+        allocate Functions::FN_EVA_TLS::F_EVA_TLS_01 to Physical::orbiterLayout.md.phy_eva_09;
     }
     // ---- 振る舞いの割付：活動図の行動 → 部品、シーケンス図の生存線 → 部品
     package BehaviorAllocation {

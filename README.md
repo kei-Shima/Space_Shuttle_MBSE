@@ -4,8 +4,8 @@
 
 - ブラウザで見る：<https://kei-shima.github.io/Space_Shuttle_MBSE/>（GitHub Pages。図書一覧から図と説明書へ進めます）
 - English: [README.en.md](README.en.md)
-- 版：Rev. CF（2026-10-16）
-- 中身：図 242枚（draw.io、SVG・PNG）、説明書 331件（HTML と Markdown）、SysML v2 テキスト 49件
+- 版：Rev. CG（2026-10-16）
+- 中身：図 243枚（draw.io、SVG・PNG）、説明書 331件（HTML と Markdown）、SysML v2 テキスト 49件
 - 図書一覧：[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md)
 - 英語の略称の正式名称：[docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)（略語表）
 - 参照した公開資料の一覧：[REFERENCES.md](REFERENCES.md)
@@ -16,13 +16,13 @@
 |---|---|---|
 | `html/index.html` | 図書一覧（入口のページ） | ブラウザ |
 | `html/index_*.html` | 図書一覧の内容ごとのページ（使い方・出典、図面、文書一覧、インタフェース一覧、注記、変更履歴） | ブラウザ（index.html から） |
-| `html/*.svg` | 図 242枚（SSD-SYS-ARC-001_p<番号>_<名前>.svg） | ブラウザ（index.html から） |
+| `html/*.svg` | 図 243枚（SSD-SYS-ARC-001_p<番号>_<名前>.svg） | ブラウザ（index.html から） |
 | `html/preview/*.png` | 図の PNG（index_figures.html の縮小表示に使う） | 画像ビューア |
 | `html/docs/*.html` | 説明書 331件 | ブラウザ（index.html から） |
 | `docs/*.md` | 説明書の Markdown 原稿（html/docs と同じ内容） | GitHub の画面、VS Code |
 | `docs/SSD-SYS-IDX-001.md` | 図書一覧（図・文書・変更履歴の一覧） | GitHub の画面、VS Code |
 | `SysML/*.sysml` | SysML v2 テキスト 49件 | VS Code（下記の拡張機能） |
-| `Draw_io/SSD-SYS-ARC-001.drawio` | 図の原本（242ページ） | draw.io |
+| `Draw_io/SSD-SYS-ARC-001.drawio` | 図の原本（243ページ） | draw.io |
 | `REFERENCES.md` | 説明書が出典として引用している公開資料（インターネット上の文献）の一覧。公開元ごとに、文献・URL・引用箇所の数・引用している文書を並べたもの | GitHub の画面、VS Code |
 | `LICENSE.md` | ライセンス（CC BY 4.0）の全文 | GitHub の画面、VS Code |
 | `README.en.md` | 英語の README（図・説明書・SysML の中身は日本語のまま） | GitHub の画面、VS Code |
@@ -97,7 +97,7 @@ Rev. BP までは、同じ名前の属性を別のスコープで再定義して
 
 ## 図の原本（draw.io）
 
-`Draw_io/SSD-SYS-ARC-001.drawio` は、draw.io Desktop か、VS Code の拡張機能 Draw.io Integration（`hediet.vscode-drawio`）で開けます。242ページ・約 20MB あるので、開くのに少し時間がかかります。
+`Draw_io/SSD-SYS-ARC-001.drawio` は、draw.io Desktop か、VS Code の拡張機能 Draw.io Integration（`hediet.vscode-drawio`）で開けます。243ページ・約 20MB あるので、開くのに少し時間がかかります。
 
 - 図の中のリンクは、`html/` に書き出した SVG から見た相対パス（`docs/<文書番号>.html`）です。draw.io の中でリンクをたどっても開きません。
 - 図を直したら、そのページを `html/SSD-SYS-ARC-001_p<番号>_<名前>.svg` と `html/preview/` の PNG に書き出し直してください。名前は draw.io のページ ID の `-` を `_` にしたものです（例 ページ `p5-register` → `SSD-SYS-ARC-001_p5_register.svg`）。ページどうしのリンク（`data:page/id,…`）は、書き出す前に対応する SVG のファイル名に置き換える必要があります。

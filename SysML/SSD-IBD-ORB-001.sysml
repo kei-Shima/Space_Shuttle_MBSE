@@ -1,7 +1,7 @@
 // SysML v2 テキスト：内部ブロック図（機器の接続と、流れる物・量と単位）
 // SSD-IBD-ORB-001 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） の表から生成（lib/build_docs_au.py・lib/ibdmodel2.py・rev_an/andata.py・rev_au/audata.py）。値の根拠の頁は SSD-IBD-ORB-001 にある。
 package SSD_IBD_ORB_001 {
-    doc /* SSD-IBD-ORB-001 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位）。図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162・図233・図234・図235・図236・図237 と同じ部品・ポート・流れ・値。機器は構造モデル（SSD-BLK-SYS-001）の機能ブロックの部品の中に置き、流れは IF を詳しくする（#refinement）。 */
+    doc /* SSD-IBD-ORB-001 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位）。図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162・図233・図234・図235・図236・図237・図243 と同じ部品・ポート・流れ・値。機器は構造モデル（SSD-BLK-SYS-001）の機能ブロックの部品の中に置き、流れは IF を詳しくする（#refinement）。 */
     private import SSD_BLK_SYS_001::*;
     private import ModelingMetadata::*;
     private import ScalarValues::*;
@@ -321,6 +321,12 @@ package SSD_IBD_ORB_001 {
         doc /* Ku 帯レーダの追尾データ（角度・角速度・距離・距離変化率）（データ・指令） */
     }
     port def RadarTrackDataPort :> DataPort { out item :>> dataCommand : RadarTrackData; }
+    item def CtDcPower :> ElectricPower {
+        doc /* C&T の機器（ACCU・VCU）への 28 V 直流電力（パネル R14 の遮断器経由）（電力） */
+        attribute voltage : ElectricPotentialDifferenceValue[0..*] { doc /* 電圧（資料の単位 V） */ }
+        attribute current : ElectricCurrentValue[0..*] { doc /* 電流（資料の単位 A） */ }
+    }
+    port def CtDcPowerPort :> PowerPort { out item :>> electricPower : CtDcPower; }
     item def CabinAir :> Fluid {
         doc /* キャビン空気（乗員室とキャビン空気ループを循環する空気、湿分分離器へ吸う空気と水の混合を含む）（推進薬・流体） */
         attribute massFlowRate : MassFlowRateValue[0..*] { doc /* 質量流量（資料の単位 lb/h） */ }
@@ -550,6 +556,17 @@ package SSD_IBD_ORB_001 {
         attribute concentration : Real[0..*] { doc /* 数値（資料の単位 %） */ }
     }
     port def HalonAgentPort :> FluidPort { out item :>> fluid : HalonAgent; }
+    item def EvaToolAttachLoad :> StructuralLoad {
+        doc /* EVA 機器の取付け・保持の荷重（MWS・BRT を EMU に取り付けたときの重量とテザー拘束、TSA が工具を保持する力）（構造・荷重） */
+        attribute force : ForceValue[0..*] { doc /* 力（資料の単位 lbf） */ }
+    }
+    port def EvaToolAttachLoadPort :> LoadPort { out item :>> structuralLoad : EvaToolAttachLoad; }
+    item def EvaBatteryChargePower :> ElectricPower {
+        doc /* EVA 機器の電池への充電電力（EHIP 充電器・REBA 充電器の出力）（電力） */
+        attribute voltage : ElectricPotentialDifferenceValue[0..*] { doc /* 電圧（資料の単位 V） */ }
+        attribute current : ElectricCurrentValue[0..*] { doc /* 電流（資料の単位 A） */ }
+    }
+    port def EvaBatteryChargePowerPort :> PowerPort { out item :>> electricPower : EvaBatteryChargePower; }
     // ---- 図112 EPS 発電・配電 内部ブロック図：機器
     part def <'EQ-EPS-01'> O2Tank :> SSD_ALC_SYS_001::Physical::PHY_EPS_02 {
         doc /* 酸素タンク（O2 TK 1〜5）（機能ブロック SSD-FD-EPS-PRSD-001、機器 PHY-EPS-02） */
@@ -2168,6 +2185,11 @@ package SSD_IBD_ORB_001 {
         doc /* RCS ヒータ（前部モジュールのパネルヒータ6・ポッドの9ヒータ区域の A・B 系・各噴射器のヒータ）（機能ブロック SSD-FD-RCS-HTR-001、機器 PHY-RCS-08） */
         port o_FL_PROP_33 : PropellantHeaterHeatPort;
         port o_FL_PROP_34 : PropellantHeaterHeatPort;
+        port i_FL_PROP_36 : ~PropulsionElectricPowerPort;
+    }
+    part def <'EQ-PROP-21'> OmsTvcGimbalActuators :> SSD_ALC_SYS_001::Physical::PHY_OMS_04 {
+        doc /* OMS TVC ジンバルアクチュエータ（ピッチ用・ヨー用、各エンジンに2基、電気機械式の一次・二次の駆動系）（機能ブロック SSD-FD-OMS-TVC-001、機器 PHY-OMS-04） */
+        port i_FL_PROP_35 : ~PropulsionElectricPowerPort;
     }
     // ---- 図130 OMS・RCS 推進薬 内部ブロック図：接続（PropulsionInterconnection は ORB を特化）
     part def PropulsionInterconnection :> ORB {
@@ -2189,6 +2211,9 @@ package SSD_IBD_ORB_001 {
             part redefines eng {
                 part leftOmsEngine : LeftOmsEngine;
                 part rightOmsEngine : RightOmsEngine;
+            }
+            part redefines tvc {
+                part omsTvcGimbalActuators[4] : OmsTvcGimbalActuators;
             }
         }
         part redefines rcs {
@@ -2225,6 +2250,8 @@ package SSD_IBD_ORB_001 {
         port b_FL_PROP_30 : ~PropulsionElectricPowerPort { doc /* 枠の外の相手 EB-PROP-05（電力系（交流母線・電動機制御組立、交流モータ式弁へ）） */ }
         port b_FL_PROP_31 : ~PropulsionElectricPowerPort { doc /* 枠の外の相手 EB-PROP-06（電力系（直流母線、RJD の LOGIC・DRIVER 電源へ）） */ }
         port b_FL_PROP_32 : ~PropellantHeaterHeatPort { doc /* 枠の外の相手 EB-PROP-07（熱制御（PTC）：ポッドのストリップヒータ・クロスフィード配管の巻付けヒータと断熱材） */ }
+        port b_FL_PROP_35 : ~PropulsionElectricPowerPort { doc /* 枠の外の相手 EB-PROP-08（電力系（EPS）の直流配電：主母線（MNA DA1 など）から OMS TVC ジンバルアクチュエータの駆動系へ） */ }
+        port b_FL_PROP_36 : ~PropulsionElectricPowerPort { doc /* 枠の外の相手 EB-PROP-09（電力系（EPS）の直流配電：主母線 MNA・MNB から RCS 噴射器ヒータへ（パネル A14 のコネクタ P9644 経由を含む）） */ }
         flow <'FL-PROP-01'> fl_prop_01 from oms.he.leftOmsHeliumPress.o_FL_PROP_01.fluid to oms.psd.leftOmsPropTanks.i_FL_PROP_01.fluid {
             item :>> payload : PressurantHelium {
                 attribute pressureMin :> pressure = 252 ['lbf/in²'] { doc /* 圧力 252〜262 psig（ゲージ圧） */ }
@@ -2337,6 +2364,8 @@ package SSD_IBD_ORB_001 {
                 attribute power2Nominal :> power = 10 [W] { doc /* 電力・熱流量 10 W */ }
             }
         }
+        flow <'FL-PROP-35'> fl_prop_35 of PropulsionElectricPower from b_FL_PROP_35.electricPower to oms.tvc.omsTvcGimbalActuators.i_FL_PROP_35.electricPower;
+        flow <'FL-PROP-36'> fl_prop_36 of PropulsionElectricPower from b_FL_PROP_36.electricPower to rcs.htr.rcsHeaters.i_FL_PROP_36.electricPower;
     }
     // ---- 図131 C&T RF リンク 内部ブロック図：機器
     part def <'EQ-CT-01'> SBandPmTransponder :> SSD_ALC_SYS_001::Physical::PHY_CT_01 {
@@ -2457,12 +2486,17 @@ package SSD_IBD_ORB_001 {
         port o_FL_CT_13 : AnalogVoicePort;
         port o_FL_CT_33 : AnalogVoicePort;
         port o_FL_CT_37 : AnalogVoicePort;
+        port i_FL_CT_44 : ~CtDcPowerPort;
     }
     part def <'EQ-CT-20'> Gcil :> SSD_ALC_SYS_001::Physical::PHY_CT_07 {
         doc /* 地上指令インタフェース論理（GCIL／GCILC）（機能ブロック SSD-FD-CT-OPS-001、機器 PHY-CT-07） */
         port i_FL_CT_40 : ~CommConfigCommandPort;
         port o_FL_CT_41 : CommConfigCommandPort;
         port o_FL_CT_42 : CommConfigCommandPort;
+    }
+    part def <'EQ-CT-21'> CtVideoControlUnit :> SSD_ALC_SYS_001::Physical::PHY_CT_12 {
+        doc /* VCU（映像制御装置：RCU と VSU の2つの LRU、後部フライトデッキのパネル R17・R18 の裏）（機能ブロック SSD-FD-CT-CCTV-001、機器 PHY-CT-12） */
+        port i_FL_CT_45 : ~CtDcPowerPort;
     }
     // ---- 図131 C&T RF リンク 内部ブロック図：接続（CtRfInterconnection は CT を特化）
     part def CtRfInterconnection :> CT {
@@ -2499,6 +2533,9 @@ package SSD_IBD_ORB_001 {
         part redefines ops {
             part gcil : Gcil;
         }
+        part redefines cctv {
+            part ctVideoControlUnit : CtVideoControlUnit;
+        }
         port b_FL_CT_01 : ~SBandPmRfPort { doc /* 枠の外の相手 EB-CT-01（TDRS（TDRSS、WSGT/STGT 経由で MCC）） */ }
         port b_FL_CT_02 : SBandPmRfPort { doc /* 枠の外の相手 EB-CT-01（TDRS（TDRSS、WSGT/STGT 経由で MCC）） */ }
         port b_FL_CT_03 : ~SBandPmRfPort { doc /* 枠の外の相手 EB-CT-02（NASA の STDN 地上局（上昇・再突入、MCC へ）） */ }
@@ -2520,6 +2557,8 @@ package SSD_IBD_ORB_001 {
         port b_FL_CT_39 : UhfRfPort { doc /* 枠の外の相手 EB-CT-05（EVA 乗員（EMU 無線 SSER、最大3台）） */ }
         port b_FL_CT_40 : ~CommConfigCommandPort { doc /* 枠の外の相手 EB-CT-08（DPS：PF MDM（GCIL・アンテナ切替・Ku 帯への指令）） */ }
         port b_FL_CT_43 : ~CommConfigCommandPort { doc /* 枠の外の相手 EB-CT-08（DPS：PF MDM（GCIL・アンテナ切替・Ku 帯への指令）） */ }
+        port b_FL_CT_44 : ~CtDcPowerPort { doc /* 枠の外の相手 EB-CT-13（電力系（EPS）の直流配電：パネル R14 の ESS 1BC・ESS 2CA・MNC の音声系遮断器） */ }
+        port b_FL_CT_45 : ~CtDcPowerPort { doc /* 枠の外の相手 EB-CT-14（電力系（EPS）の直流配電：パネル R14 を経由する DC Main A・B（GCIL ドライバ経由で VCU へ）） */ }
         flow <'FL-CT-01'> fl_ct_01 from b_FL_CT_01.rfSignal to sbd.sBandQuadAntenna.i_FL_CT_01.rfSignal {
             item :>> payload : SBandPmRf {
                 attribute frequencyMin :> frequency = 2.0419E9 [Hz] { doc /* 周波数 2,041.9〜2,106.4 MHz（Hz に換算） */ }
@@ -2699,6 +2738,8 @@ package SSD_IBD_ORB_001 {
         flow <'FL-CT-41'> fl_ct_41 of CommConfigCommand from ops.gcil.o_FL_CT_41.dataCommand to sbd.sBandPmTransponder.i_FL_CT_41.dataCommand;
         flow <'FL-CT-42'> fl_ct_42 of CommConfigCommand from ops.gcil.o_FL_CT_42.dataCommand to ku.kuBandSignalProcessor.i_FL_CT_42.dataCommand;
         flow <'FL-CT-43'> fl_ct_43 of CommConfigCommand from b_FL_CT_43.dataCommand to sbd.sBandAntennaSwitch.i_FL_CT_43.dataCommand;
+        flow <'FL-CT-44'> fl_ct_44 of CtDcPower from b_FL_CT_44.electricPower to aud.accu.i_FL_CT_44.electricPower;
+        flow <'FL-CT-45'> fl_ct_45 of CtDcPower from b_FL_CT_45.electricPower to cctv.ctVideoControlUnit.i_FL_CT_45.electricPower;
     }
     // ---- 図159 ARS キャビン空気ループ 内部ブロック図：機器
     part def <'EQ-ARSA-01'> ReturnDuctAndCabinFanFilter :> SSD_ALC_SYS_001::Physical::PHY_ECLSS_11 {
@@ -4788,6 +4829,106 @@ package SSD_IBD_ORB_001 {
             }
         }
     }
+    // ---- 図243 EVA 支援（エアロック・工具・マスク・電池充電） 内部ブロック図：機器
+    part def <'EQ-EVAX-01'> EvaEmuSuitPair :> SSD_ALC_SYS_001::Physical::PHY_EVA_01 {
+        doc /* EMU（2着、MWS・BRT を取り付ける前面と、EVA 後に電池を交換・充電する側）（機能ブロック SSD-FD-EVA-CHK-001、機器 PHY-EVA-01） */
+        port i_FL_EVAX_01 : ~EvaToolAttachLoadPort;
+        port i_FL_EVAX_02 : ~EvaToolAttachLoadPort;
+    }
+    part def <'EQ-EVAX-02'> EvaMiniWorkstation :> SSD_ALC_SYS_001::Physical::PHY_EVA_04 {
+        doc /* ミニワークステーション（MWS：ベースプレート・T バー・スイングアーム、EMU の前面に付けて工具を収める）（機能ブロック SSD-FD-EVA-TLS-001、機器 PHY-EVA-04） */
+        port o_FL_EVAX_01 : EvaToolAttachLoadPort;
+    }
+    part def <'EQ-EVAX-03'> EvaBrtAttachment :> SSD_ALC_SYS_001::Physical::PHY_EVA_04 {
+        doc /* BRT（EVA 準備で MWS とともに必要に応じて EMU に取り付ける。資料の略称のまま）（機能ブロック SSD-FD-EVA-TLS-001、機器 PHY-EVA-04） */
+        port o_FL_EVAX_02 : EvaToolAttachLoadPort;
+    }
+    part def <'EQ-EVAX-04'> EvaPortToolStowageAssembly :> SSD_ALC_SYS_001::Physical::PHY_EVA_05 {
+        doc /* 左舷の軽量工具収納組立（TSA：前後のトレイと扉・ラッチ）（機能ブロック SSD-FD-EVA-TLS-001、機器 PHY-EVA-05） */
+        port o_FL_EVAX_03 : EvaToolAttachLoadPort;
+    }
+    part def <'EQ-EVAX-05'> EvaPgtHelmetLightBatteries :> SSD_ALC_SYS_001::Physical::PHY_EVA_09 {
+        doc /* PGT 電池（2）とヘルメットライト電池（4）（機能ブロック SSD-FD-EVA-TLS-001、機器 PHY-EVA-09） */
+        port i_FL_EVAX_04 : ~EvaBatteryChargePowerPort;
+    }
+    part def <'EQ-EVAX-06'> EvaEmergencyToolSet :> SSD_ALC_SYS_001::Physical::PHY_EVA_08 {
+        doc /* 非常時 EVA の工具一式（中心線ラッチ工具2・3点ラッチ工具2・RMS ロープリール・調整式テザー2・大型カッタ・PRD 2）（機能ブロック SSD-FD-EVA-EMG-001、機器 PHY-EVA-08） */
+        port i_FL_EVAX_03 : ~EvaToolAttachLoadPort;
+    }
+    part def <'EQ-EVAX-07'> EvaEhipLightBatteryCharger :> SSD_ALC_SYS_001::Physical::PHY_EVA_06 {
+        doc /* EHIP ライト電池充電器とアダプタケーブル（EHIP-PGT アダプタケーブル2、EHIP DC PWR/REBA DC EXT Y ケーブル）（機能ブロック SSD-FD-EVA-MNT-001、機器 PHY-EVA-06） */
+        port o_FL_EVAX_04 : EvaBatteryChargePowerPort;
+        port i_FL_EVAX_06 : ~Dc28VPort;
+    }
+    part def <'EQ-EVAX-08'> EvaRebaBatteryCharger :> SSD_ALC_SYS_001::Physical::PHY_EVA_06 {
+        doc /* REBA 充電器（Y ケーブル・25 ft 延長ケーブルでオービタの電源につなぐ。EMU 電池の充電器）（機能ブロック SSD-FD-EVA-MNT-001、機器 PHY-EVA-06） */
+        port i_FL_EVAX_05 : ~Dc28VPort;
+        port o_FL_EVAX_07 : EvaBatteryChargePowerPort;
+    }
+    part def <'EQ-EVAX-09'> EvaEmuRebaBattery :> SSD_ALC_SYS_001::Physical::PHY_EVA_01 {
+        doc /* EMU の電池（REBA、充電される側）（機能ブロック SSD-FD-EVA-MNT-001、機器 PHY-EVA-01） */
+        port i_FL_EVAX_07 : ~EvaBatteryChargePowerPort;
+    }
+    part def <'EQ-EVAX-10'> EvaAirlockDepressAir :> SSD_ALC_SYS_001::Physical::PHY_EVA_02 {
+        doc /* エアロックの空気（EMU 2着を入れた 208 ft3の減圧・再与圧の対象）（機能ブロック SSD-FD-EVA-DPR-001、機器 PHY-EVA-02） */
+        port o_FL_EVAX_08 : AirlockAtmospherePort;
+        port i_FL_EVAX_09 : ~AirlockAtmospherePort;
+    }
+    part def <'EQ-EVAX-11'> EvaQuickDonMask :> SSD_ALC_SYS_001::Physical::PHY_EVA_07 {
+        doc /* 簡易着用マスクと 14 ft の通信・O2 アンビリカル（マスク前呼吸）（機能ブロック SSD-FD-EVA-OPS-001、機器 PHY-EVA-07） */
+        port i_FL_EVAX_10 : ~CabinO2Port;
+    }
+    // ---- 図243 EVA 支援（エアロック・工具・マスク・電池充電） 内部ブロック図：接続（EvaSupportInterconnection は EVA を特化）
+    part def EvaSupportInterconnection :> EVA {
+        doc /* EVA 支援（エアロックの減圧・工具・マスク・電池充電）の内部ブロック図（図243）。基の機能ブロック SSD-FD-EVA-001。 */
+        part redefines chk {
+            part evaEmuSuitPair[2] : EvaEmuSuitPair;
+        }
+        part redefines tls {
+            part evaMiniWorkstation[2] : EvaMiniWorkstation;
+            part evaBrtAttachment[2] : EvaBrtAttachment;
+            part evaPortToolStowageAssembly : EvaPortToolStowageAssembly;
+            part evaPgtHelmetLightBatteries[6] : EvaPgtHelmetLightBatteries;
+        }
+        part redefines emg {
+            part evaEmergencyToolSet : EvaEmergencyToolSet;
+        }
+        part redefines mnt {
+            part evaEhipLightBatteryCharger : EvaEhipLightBatteryCharger;
+            part evaRebaBatteryCharger : EvaRebaBatteryCharger;
+            part evaEmuRebaBattery[2] : EvaEmuRebaBattery;
+        }
+        part redefines dpr {
+            part evaAirlockDepressAir : EvaAirlockDepressAir;
+        }
+        part redefines ops {
+            part evaQuickDonMask[2] : EvaQuickDonMask;
+        }
+        port b_FL_EVAX_05 : ~Dc28VPort { doc /* 枠の外の相手 EB-EVAX-03（EPS の直流配電（ミッドデッキのパネル ML85E の DC 電源コンセント MUP とオービタの電源。DC UTIL PWR スイッチ・回路遮断器）） */ }
+        port b_FL_EVAX_06 : ~Dc28VPort { doc /* 枠の外の相手 EB-EVAX-03（EPS の直流配電（ミッドデッキのパネル ML85E の DC 電源コンセント MUP とオービタの電源。DC UTIL PWR スイッチ・回路遮断器）） */ }
+        port b_FL_EVAX_08 : AirlockAtmospherePort { doc /* 枠の外の相手 EB-EVAX-01（ECLSS のエアロック支援系（エアロック減圧弁・ハッチ均圧弁。PHY-ECLSS-35、既存の ALSX-02・ALSX-03）） */ }
+        port b_FL_EVAX_09 : ~AirlockAtmospherePort { doc /* 枠の外の相手 EB-EVAX-01（ECLSS のエアロック支援系（エアロック減圧弁・ハッチ均圧弁。PHY-ECLSS-35、既存の ALSX-02・ALSX-03）） */ }
+        port b_FL_EVAX_10 : ~CabinO2Port { doc /* 枠の外の相手 EB-EVAX-02（ECLSS の圧力制御系（LEH レギュレータと LEH O2 弁・QD。PHY-ECLSS-18、既存の PCSG-04、直接 O2 弁と 14.7 CAB REG INLET SYS 1 弁を含む）） */ }
+        flow <'FL-EVAX-01'> fl_evax_01 of EvaToolAttachLoad from tls.evaMiniWorkstation.o_FL_EVAX_01.structuralLoad to chk.evaEmuSuitPair.i_FL_EVAX_01.structuralLoad;
+        flow <'FL-EVAX-02'> fl_evax_02 of EvaToolAttachLoad from tls.evaBrtAttachment.o_FL_EVAX_02.structuralLoad to chk.evaEmuSuitPair.i_FL_EVAX_02.structuralLoad;
+        flow <'FL-EVAX-03'> fl_evax_03 of EvaToolAttachLoad from tls.evaPortToolStowageAssembly.o_FL_EVAX_03.structuralLoad to emg.evaEmergencyToolSet.i_FL_EVAX_03.structuralLoad;
+        flow <'FL-EVAX-04'> fl_evax_04 of EvaBatteryChargePower from mnt.evaEhipLightBatteryCharger.o_FL_EVAX_04.electricPower to tls.evaPgtHelmetLightBatteries.i_FL_EVAX_04.electricPower;
+        flow <'FL-EVAX-05'> fl_evax_05 of Dc28V from b_FL_EVAX_05.electricPower to mnt.evaRebaBatteryCharger.i_FL_EVAX_05.electricPower;
+        flow <'FL-EVAX-06'> fl_evax_06 of Dc28V from b_FL_EVAX_06.electricPower to mnt.evaEhipLightBatteryCharger.i_FL_EVAX_06.electricPower;
+        flow <'FL-EVAX-07'> fl_evax_07 of EvaBatteryChargePower from mnt.evaRebaBatteryCharger.o_FL_EVAX_07.electricPower to mnt.evaEmuRebaBattery.i_FL_EVAX_07.electricPower;
+        flow <'FL-EVAX-08'> fl_evax_08 from dpr.evaAirlockDepressAir.o_FL_EVAX_08.fluid to b_FL_EVAX_08.fluid {
+            item :>> payload : AirlockAtmosphere {
+                attribute pressure1Nominal :> pressure = 5.0 ['lbf/in²'] { doc /* 圧力 5 psia（絶対圧） */ }
+                attribute pressure2Nominal :> pressure = 0.0 ['lbf/in²'] { doc /* 圧力 0 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-EVAX-09'> fl_evax_09 from b_FL_EVAX_09.fluid to dpr.evaAirlockDepressAir.i_FL_EVAX_09.fluid {
+            item :>> payload : AirlockAtmosphere {
+                attribute pressureNominal :> pressure = 5.0 ['lbf/in²'] { doc /* 圧力 5 psia（絶対圧） */ }
+            }
+        }
+        flow <'FL-EVAX-10'> fl_evax_10 of CabinO2 from b_FL_EVAX_10.fluid to ops.evaQuickDonMask.i_FL_EVAX_10.fluid;
+    }
     // ---- 流れ → IF（詳細化）
     package FlowRefinement {
         #refinement dependency <'FL-EPS-01>IF-EPS-01'> from EpsInterconnection::fl_eps_01 to SSD_BLK_SYS_001::MissionContext::IF_EPS_01;
@@ -4800,18 +4941,22 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-EPS-10>IF-EPS-03'> from EpsInterconnection::fl_eps_10 to SSD_BLK_SYS_001::EPS::IF_EPS_03;
         #refinement dependency <'FL-EPS-11>IF-EPS-04'> from EpsInterconnection::fl_eps_11 to SSD_BLK_SYS_001::ORB::IF_EPS_04;
         #refinement dependency <'FL-EPS-11>IF-ECL-01'> from EpsInterconnection::fl_eps_11 to SSD_BLK_SYS_001::ORB::IF_ECL_01;
+        #refinement dependency <'FL-EPS-11>IF-ORB-09'> from EpsInterconnection::fl_eps_11 to SSD_BLK_SYS_001::ORB::IF_ORB_09;
         #refinement dependency <'FL-EPS-12>IF-EPS-05'> from EpsInterconnection::fl_eps_12 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-13>IF-EPS-05'> from EpsInterconnection::fl_eps_13 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-14>IF-EPS-05'> from EpsInterconnection::fl_eps_14 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-15>IF-EPS-06'> from EpsInterconnection::fl_eps_15 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-EPS-15>IF-ECL-10'> from EpsInterconnection::fl_eps_15 to SSD_BLK_SYS_001::ORB::IF_ECL_10;
+        #refinement dependency <'FL-EPS-15>IF-ORB-10'> from EpsInterconnection::fl_eps_15 to SSD_BLK_SYS_001::ORB::IF_ORB_10;
         #refinement dependency <'FL-EPS-16>IF-EPS-06'> from EpsInterconnection::fl_eps_16 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-EPS-17>IF-EPS-06'> from EpsInterconnection::fl_eps_17 to SSD_BLK_SYS_001::ORB::IF_EPS_06;
         #refinement dependency <'FL-EPS-18>IF-EPS-07'> from EpsInterconnection::fl_eps_18 to SSD_BLK_SYS_001::ORB::IF_EPS_07;
+        #refinement dependency <'FL-EPS-18>IF-ORB-11'> from EpsInterconnection::fl_eps_18 to SSD_BLK_SYS_001::ORB::IF_ORB_11;
         #refinement dependency <'FL-EPS-19>IF-EPS-07'> from EpsInterconnection::fl_eps_19 to SSD_BLK_SYS_001::ORB::IF_EPS_07;
         #refinement dependency <'FL-EPS-20>IF-EPS-07'> from EpsInterconnection::fl_eps_20 to SSD_BLK_SYS_001::ORB::IF_EPS_07;
         #refinement dependency <'FL-EPS-21>IF-EPS-08'> from EpsInterconnection::fl_eps_21 to SSD_BLK_SYS_001::MissionContext::IF_EPS_08;
         #refinement dependency <'FL-EPS-22>IF-EPS-09'> from EpsInterconnection::fl_eps_22 to SSD_BLK_SYS_001::ORB::IF_EPS_09;
+        #refinement dependency <'FL-EPS-22>IF-ORB-20'> from EpsInterconnection::fl_eps_22 to SSD_BLK_SYS_001::ORB::IF_ORB_20;
         #refinement dependency <'FL-EPS-23>IF-EPS-02'> from EpsInterconnection::fl_eps_23 to SSD_BLK_SYS_001::MissionContext::IF_EPS_02;
         #refinement dependency <'FL-EPS-28>IF-EPS-05'> from EpsInterconnection::fl_eps_28 to SSD_BLK_SYS_001::EPS::IF_EPS_05;
         #refinement dependency <'FL-EPS-29>IF-EPS-16'> from EpsInterconnection::fl_eps_29 to SSD_BLK_SYS_001::EPS::IF_EPS_16;
@@ -4925,6 +5070,7 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-DPS-34>IF-CT-22'> from DpsInterconnection::fl_dps_34 to SSD_BLK_SYS_001::ORB::IF_CT_22;
         #refinement dependency <'FL-DPS-35>IF-CT-05'> from DpsInterconnection::fl_dps_35 to SSD_BLK_SYS_001::ORB::IF_CT_05;
         #refinement dependency <'FL-DPS-36>IF-DPS-03'> from DpsInterconnection::fl_dps_36 to SSD_BLK_SYS_001::ORB::IF_DPS_03;
+        #refinement dependency <'FL-DPS-36>IF-ORB-02'> from DpsInterconnection::fl_dps_36 to SSD_BLK_SYS_001::ORB::IF_ORB_02;
         #refinement dependency <'FL-DPS-37>IF-DPS-03'> from DpsInterconnection::fl_dps_37 to SSD_BLK_SYS_001::ORB::IF_DPS_03;
         #refinement dependency <'FL-DPS-38>IF-DPS-11'> from DpsInterconnection::fl_dps_38 to SSD_BLK_SYS_001::ORB::IF_DPS_11;
         #refinement dependency <'FL-DPS-39>IF-DPS-10'> from DpsInterconnection::fl_dps_39 to SSD_BLK_SYS_001::ORB::IF_DPS_10;
@@ -4956,6 +5102,7 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-APU-30>IF-APU-11'> from ApuHydInterconnection::fl_apu_30 to SSD_BLK_SYS_001::ORB::IF_APU_11;
         #refinement dependency <'FL-APU-31>IF-APU-02'> from ApuHydInterconnection::fl_apu_31 to SSD_BLK_SYS_001::APU::IF_APU_02;
         #refinement dependency <'FL-APU-32>IF-APU-12'> from ApuHydInterconnection::fl_apu_32 to SSD_BLK_SYS_001::ORB::IF_APU_12;
+        #refinement dependency <'FL-APU-32>IF-ORB-23'> from ApuHydInterconnection::fl_apu_32 to SSD_BLK_SYS_001::ORB::IF_ORB_23;
         #refinement dependency <'FL-APU-33>IF-APU-13'> from ApuHydInterconnection::fl_apu_33 to SSD_BLK_SYS_001::ORB::IF_APU_13;
         #refinement dependency <'FL-APU-34>IF-APU-16'> from ApuHydInterconnection::fl_apu_34 to SSD_BLK_SYS_001::ORB::IF_APU_16;
         #refinement dependency <'FL-APU-35>IF-APU-25'> from ApuHydInterconnection::fl_apu_35 to SSD_BLK_SYS_001::ORB::IF_APU_25;
@@ -4970,6 +5117,7 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-PROP-09>IF-OMS-04'> from PropulsionInterconnection::fl_prop_09 to SSD_BLK_SYS_001::OMS::IF_OMS_04;
         #refinement dependency <'FL-PROP-10>IF-OMS-04'> from PropulsionInterconnection::fl_prop_10 to SSD_BLK_SYS_001::OMS::IF_OMS_04;
         #refinement dependency <'FL-PROP-11>IF-OMS-11'> from PropulsionInterconnection::fl_prop_11 to SSD_BLK_SYS_001::ORB::IF_OMS_11;
+        #refinement dependency <'FL-PROP-11>IF-ORB-05'> from PropulsionInterconnection::fl_prop_11 to SSD_BLK_SYS_001::ORB::IF_ORB_05;
         #refinement dependency <'FL-PROP-12>IF-OMS-11'> from PropulsionInterconnection::fl_prop_12 to SSD_BLK_SYS_001::ORB::IF_OMS_11;
         #refinement dependency <'FL-PROP-13>IF-RCS-01'> from PropulsionInterconnection::fl_prop_13 to SSD_BLK_SYS_001::RCS::IF_RCS_01;
         #refinement dependency <'FL-PROP-17>IF-RCS-02'> from PropulsionInterconnection::fl_prop_17 to SSD_BLK_SYS_001::RCS::IF_RCS_02;
@@ -4990,6 +5138,8 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-PROP-32>IF-OMS-19'> from PropulsionInterconnection::fl_prop_32 to SSD_BLK_SYS_001::ORB::IF_OMS_19;
         #refinement dependency <'FL-PROP-33>IF-RCS-08'> from PropulsionInterconnection::fl_prop_33 to SSD_BLK_SYS_001::RCS::IF_RCS_08;
         #refinement dependency <'FL-PROP-34>IF-RCS-07'> from PropulsionInterconnection::fl_prop_34 to SSD_BLK_SYS_001::RCS::IF_RCS_07;
+        #refinement dependency <'FL-PROP-35>IF-OMS-13'> from PropulsionInterconnection::fl_prop_35 to SSD_BLK_SYS_001::ORB::IF_OMS_13;
+        #refinement dependency <'FL-PROP-36>IF-RCS-11'> from PropulsionInterconnection::fl_prop_36 to SSD_BLK_SYS_001::ORB::IF_RCS_11;
         #refinement dependency <'FL-CT-01>IF-CT-01'> from CtRfInterconnection::fl_ct_01 to SSD_BLK_SYS_001::MissionContext::IF_CT_01;
         #refinement dependency <'FL-CT-02>IF-CT-01'> from CtRfInterconnection::fl_ct_02 to SSD_BLK_SYS_001::MissionContext::IF_CT_01;
         #refinement dependency <'FL-CT-03>IF-CT-01'> from CtRfInterconnection::fl_ct_03 to SSD_BLK_SYS_001::MissionContext::IF_CT_01;
@@ -5015,10 +5165,13 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-CT-36>IF-CT-04'> from CtRfInterconnection::fl_ct_36 to SSD_BLK_SYS_001::MissionContext::IF_CT_04;
         #refinement dependency <'FL-CT-37>IF-CT-17'> from CtRfInterconnection::fl_ct_37 to SSD_BLK_SYS_001::CT::IF_CT_17;
         #refinement dependency <'FL-CT-39>IF-CT-10'> from CtRfInterconnection::fl_ct_39 to SSD_BLK_SYS_001::ORB::IF_CT_10;
+        #refinement dependency <'FL-CT-39>IF-ORB-46'> from CtRfInterconnection::fl_ct_39 to SSD_BLK_SYS_001::ORB::IF_ORB_46;
         #refinement dependency <'FL-CT-40>IF-CT-07'> from CtRfInterconnection::fl_ct_40 to SSD_BLK_SYS_001::ORB::IF_CT_07;
         #refinement dependency <'FL-CT-41>IF-CT-19'> from CtRfInterconnection::fl_ct_41 to SSD_BLK_SYS_001::CT::IF_CT_19;
         #refinement dependency <'FL-CT-42>IF-CT-20'> from CtRfInterconnection::fl_ct_42 to SSD_BLK_SYS_001::CT::IF_CT_20;
         #refinement dependency <'FL-CT-43>IF-CT-25'> from CtRfInterconnection::fl_ct_43 to SSD_BLK_SYS_001::ORB::IF_CT_25;
+        #refinement dependency <'FL-CT-44>IF-CT-12'> from CtRfInterconnection::fl_ct_44 to SSD_BLK_SYS_001::ORB::IF_CT_12;
+        #refinement dependency <'FL-CT-45>IF-CT-13'> from CtRfInterconnection::fl_ct_45 to SSD_BLK_SYS_001::ORB::IF_CT_13;
         #refinement dependency <'FL-ARSA-01>IF-CAC-01'> from ArsAirInterconnection::fl_arsa_01 to SSD_BLK_SYS_001::ECLSS::IF_CAC_01;
         #refinement dependency <'FL-ARSA-01>IF-ARS-09'> from ArsAirInterconnection::fl_arsa_01 to SSD_BLK_SYS_001::ECLSS::IF_ARS_09;
         #refinement dependency <'FL-ARSA-01>IF-ECL-05'> from ArsAirInterconnection::fl_arsa_01 to SSD_BLK_SYS_001::ECLSS::IF_ECL_05;
@@ -5313,5 +5466,14 @@ package SSD_IBD_ORB_001 {
         #refinement dependency <'FL-FDSX-10>IF-PCS-11'> from EclssFdsxInterconnection::fl_fdsx_10 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_11;
         #refinement dependency <'FL-FDSX-11>IF-PCS-12'> from EclssFdsxInterconnection::fl_fdsx_11 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_12;
         #refinement dependency <'FL-FDSX-12>IF-PCS-12'> from EclssFdsxInterconnection::fl_fdsx_12 to SSD_BLK_SYS_001::ECL_PCS::IF_PCS_12;
+        #refinement dependency <'FL-EVAX-01>IF-EVA-03'> from EvaSupportInterconnection::fl_evax_01 to SSD_BLK_SYS_001::EVA::IF_EVA_03;
+        #refinement dependency <'FL-EVAX-02>IF-EVA-03'> from EvaSupportInterconnection::fl_evax_02 to SSD_BLK_SYS_001::EVA::IF_EVA_03;
+        #refinement dependency <'FL-EVAX-03>IF-EVA-08'> from EvaSupportInterconnection::fl_evax_03 to SSD_BLK_SYS_001::EVA::IF_EVA_08;
+        #refinement dependency <'FL-EVAX-04>IF-EVA-09'> from EvaSupportInterconnection::fl_evax_04 to SSD_BLK_SYS_001::EVA::IF_EVA_09;
+        #refinement dependency <'FL-EVAX-05>IF-EVA-10'> from EvaSupportInterconnection::fl_evax_05 to SSD_BLK_SYS_001::ORB::IF_EVA_10;
+        #refinement dependency <'FL-EVAX-06>IF-EVA-10'> from EvaSupportInterconnection::fl_evax_06 to SSD_BLK_SYS_001::ORB::IF_EVA_10;
+        #refinement dependency <'FL-EVAX-08>IF-EVA-04'> from EvaSupportInterconnection::fl_evax_08 to SSD_BLK_SYS_001::ORB::IF_EVA_04;
+        #refinement dependency <'FL-EVAX-09>IF-EVA-04'> from EvaSupportInterconnection::fl_evax_09 to SSD_BLK_SYS_001::ORB::IF_EVA_04;
+        #refinement dependency <'FL-EVAX-10>IF-EVA-14'> from EvaSupportInterconnection::fl_evax_10 to SSD_BLK_SYS_001::ORB::IF_EVA_14;
     }
 }

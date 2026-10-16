@@ -15,18 +15,18 @@ package SSD_TRC_SYS_001 {
     metadata <'TR-03'> tr_03 : TraceRelation { relation = "verify"; fromKind = "L1・L2"; toKind = "VC"; count = 833; }
     metadata <'TR-04'> tr_04 : TraceRelation { relation = "own"; fromKind = "F"; toKind = "BLK"; count = 2075; }
     metadata <'TR-05'> tr_05 : TraceRelation { relation = "end"; fromKind = "IF"; toKind = "BLK"; count = 1175; }
-    metadata <'TR-06'> tr_06 : TraceRelation { relation = "alloc"; fromKind = "PHY"; toKind = "F・BLK"; count = 506; }
-    metadata <'TR-07'> tr_07 : TraceRelation { relation = "place"; fromKind = "PHY"; toKind = "CMP"; count = 131; }
+    metadata <'TR-06'> tr_06 : TraceRelation { relation = "alloc"; fromKind = "PHY"; toKind = "F・BLK"; count = 524; }
+    metadata <'TR-07'> tr_07 : TraceRelation { relation = "place"; fromKind = "PHY"; toKind = "CMP"; count = 138; }
     metadata <'TR-08'> tr_08 : TraceRelation { relation = "fmea"; fromKind = "FM"; toKind = "F・IF"; count = 2110; }
     metadata <'TR-09'> tr_09 : TraceRelation { relation = "rule"; fromKind = "RULE"; toKind = "BLK"; count = 83; }
     metadata <'TR-10'> tr_10 : TraceRelation { relation = "act"; fromKind = "ACT"; toKind = "F"; count = 211; }
     metadata <'TR-11'> tr_11 : TraceRelation { relation = "actpart"; fromKind = "ACT"; toKind = "BLK"; count = 51; }
     metadata <'TR-12'> tr_12 : TraceRelation { relation = "msg"; fromKind = "MSG"; toKind = "IF"; count = 100; }
     metadata <'TR-13'> tr_13 : TraceRelation { relation = "sm"; fromKind = "SM"; toKind = "BLK"; count = 28; }
-    metadata <'TR-14'> tr_14 : TraceRelation { relation = "flow"; fromKind = "FL"; toKind = "IF"; count = 779; }
-    metadata <'TR-15'> tr_15 : TraceRelation { relation = "flowpart"; fromKind = "FL"; toKind = "EQ"; count = 1041; }
-    metadata <'TR-16'> tr_16 : TraceRelation { relation = "eq"; fromKind = "EQ"; toKind = "PHY"; count = 383; }
-    metadata <'TR-17'> tr_17 : TraceRelation { relation = "eqblk"; fromKind = "EQ"; toKind = "BLK"; count = 383; }
+    metadata <'TR-14'> tr_14 : TraceRelation { relation = "flow"; fromKind = "FL"; toKind = "IF"; count = 800; }
+    metadata <'TR-15'> tr_15 : TraceRelation { relation = "flowpart"; fromKind = "FL"; toKind = "EQ"; count = 1060; }
+    metadata <'TR-16'> tr_16 : TraceRelation { relation = "eq"; fromKind = "EQ"; toKind = "PHY"; count = 396; }
+    metadata <'TR-17'> tr_17 : TraceRelation { relation = "eqblk"; fromKind = "EQ"; toKind = "BLK"; count = 396; }
     metadata <'TR-18'> tr_18 : TraceRelation { relation = "icd"; fromKind = "ICD"; toKind = "IF"; count = 59; }
     // ---- 系ごとの網羅（系の part def に付ける）
     metadata <'COV-APU-C1'> cov_APU_C1 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C1"; covered = 43; total = 43; }
@@ -34,7 +34,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-APU-C3'> cov_APU_C3 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C3"; covered = 33; total = 43; }
     metadata <'COV-APU-C4'> cov_APU_C4 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C4"; covered = 92; total = 92; }
     metadata <'COV-APU-C5'> cov_APU_C5 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C5"; covered = 6; total = 29; }
-    metadata <'COV-APU-C6'> cov_APU_C6 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C6"; covered = 22; total = 29; }
+    metadata <'COV-APU-C6'> cov_APU_C6 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C6"; covered = 23; total = 29; }
     metadata <'COV-APU-C7'> cov_APU_C7 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C7"; covered = 7; total = 7; }
     metadata <'COV-APU-C8'> cov_APU_C8 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C8"; covered = 8; total = 8; }
     metadata <'COV-APU-C9'> cov_APU_C9 : CoverageMetric about SSD_BLK_SYS_001::APU { metric = "C9"; covered = 8; total = 8; }
@@ -52,8 +52,8 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-CT-C3'> cov_CT_C3 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C3"; covered = 33; total = 43; }
     metadata <'COV-CT-C4'> cov_CT_C4 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C4"; covered = 88; total = 88; }
     metadata <'COV-CT-C5'> cov_CT_C5 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C5"; covered = 6; total = 29; }
-    metadata <'COV-CT-C6'> cov_CT_C6 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C6"; covered = 26; total = 29; }
-    metadata <'COV-CT-C7'> cov_CT_C7 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C7"; covered = 11; total = 11; }
+    metadata <'COV-CT-C6'> cov_CT_C6 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C6"; covered = 29; total = 29; }
+    metadata <'COV-CT-C7'> cov_CT_C7 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C7"; covered = 12; total = 12; }
     metadata <'COV-CT-C8'> cov_CT_C8 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C8"; covered = 8; total = 8; }
     metadata <'COV-CT-C9'> cov_CT_C9 : CoverageMetric about SSD_BLK_SYS_001::CT { metric = "C9"; covered = 8; total = 8; }
     metadata <'COV-CW-C1'> cov_CW_C1 : CoverageMetric about SSD_BLK_SYS_001::CW { metric = "C1"; covered = 35; total = 35; }
@@ -70,7 +70,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-DPS-C3'> cov_DPS_C3 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C3"; covered = 34; total = 50; }
     metadata <'COV-DPS-C4'> cov_DPS_C4 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C4"; covered = 91; total = 91; }
     metadata <'COV-DPS-C5'> cov_DPS_C5 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C5"; covered = 12; total = 29; }
-    metadata <'COV-DPS-C6'> cov_DPS_C6 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C6"; covered = 25; total = 29; }
+    metadata <'COV-DPS-C6'> cov_DPS_C6 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C6"; covered = 26; total = 29; }
     metadata <'COV-DPS-C7'> cov_DPS_C7 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C7"; covered = 7; total = 7; }
     metadata <'COV-DPS-C8'> cov_DPS_C8 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C8"; covered = 8; total = 8; }
     metadata <'COV-DPS-C9'> cov_DPS_C9 : CoverageMetric about SSD_BLK_SYS_001::DPS { metric = "C9"; covered = 7; total = 8; }
@@ -88,7 +88,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-EPS-C3'> cov_EPS_C3 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C3"; covered = 36; total = 47; }
     metadata <'COV-EPS-C4'> cov_EPS_C4 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C4"; covered = 33; total = 33; }
     metadata <'COV-EPS-C5'> cov_EPS_C5 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C5"; covered = 8; total = 23; }
-    metadata <'COV-EPS-C6'> cov_EPS_C6 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C6"; covered = 19; total = 23; }
+    metadata <'COV-EPS-C6'> cov_EPS_C6 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C6"; covered = 23; total = 23; }
     metadata <'COV-EPS-C7'> cov_EPS_C7 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C7"; covered = 5; total = 5; }
     metadata <'COV-EPS-C8'> cov_EPS_C8 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C8"; covered = 5; total = 5; }
     metadata <'COV-EPS-C9'> cov_EPS_C9 : CoverageMetric about SSD_BLK_SYS_001::EPS { metric = "C9"; covered = 5; total = 5; }
@@ -97,8 +97,8 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-EVA-C3'> cov_EVA_C3 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C3"; covered = 21; total = 37; }
     metadata <'COV-EVA-C4'> cov_EVA_C4 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C4"; covered = 85; total = 85; }
     metadata <'COV-EVA-C5'> cov_EVA_C5 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C5"; covered = 3; total = 15; }
-    metadata <'COV-EVA-C6'> cov_EVA_C6 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C6"; covered = 3; total = 15; }
-    metadata <'COV-EVA-C7'> cov_EVA_C7 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C7"; covered = 3; total = 3; }
+    metadata <'COV-EVA-C6'> cov_EVA_C6 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C6"; covered = 9; total = 15; }
+    metadata <'COV-EVA-C7'> cov_EVA_C7 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C7"; covered = 9; total = 9; }
     metadata <'COV-EVA-C8'> cov_EVA_C8 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C8"; covered = 7; total = 7; }
     metadata <'COV-EVA-C9'> cov_EVA_C9 : CoverageMetric about SSD_BLK_SYS_001::EVA { metric = "C9"; covered = 7; total = 7; }
     metadata <'COV-GNC-C1'> cov_GNC_C1 : CoverageMetric about SSD_BLK_SYS_001::GNC { metric = "C1"; covered = 45; total = 45; }
@@ -133,7 +133,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-OMS-C3'> cov_OMS_C3 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C3"; covered = 25; total = 41; }
     metadata <'COV-OMS-C4'> cov_OMS_C4 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C4"; covered = 93; total = 93; }
     metadata <'COV-OMS-C5'> cov_OMS_C5 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C5"; covered = 1; total = 20; }
-    metadata <'COV-OMS-C6'> cov_OMS_C6 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C6"; covered = 13; total = 20; }
+    metadata <'COV-OMS-C6'> cov_OMS_C6 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C6"; covered = 15; total = 20; }
     metadata <'COV-OMS-C7'> cov_OMS_C7 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C7"; covered = 5; total = 5; }
     metadata <'COV-OMS-C8'> cov_OMS_C8 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C8"; covered = 8; total = 8; }
     metadata <'COV-OMS-C9'> cov_OMS_C9 : CoverageMetric about SSD_BLK_SYS_001::OMS { metric = "C9"; covered = 8; total = 8; }
@@ -151,7 +151,7 @@ package SSD_TRC_SYS_001 {
     metadata <'COV-RCS-C3'> cov_RCS_C3 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C3"; covered = 28; total = 40; }
     metadata <'COV-RCS-C4'> cov_RCS_C4 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C4"; covered = 91; total = 91; }
     metadata <'COV-RCS-C5'> cov_RCS_C5 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C5"; covered = 1; total = 20; }
-    metadata <'COV-RCS-C6'> cov_RCS_C6 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C6"; covered = 11; total = 20; }
+    metadata <'COV-RCS-C6'> cov_RCS_C6 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C6"; covered = 12; total = 20; }
     metadata <'COV-RCS-C7'> cov_RCS_C7 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C7"; covered = 8; total = 8; }
     metadata <'COV-RCS-C8'> cov_RCS_C8 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C8"; covered = 8; total = 8; }
     metadata <'COV-RCS-C9'> cov_RCS_C9 : CoverageMetric about SSD_BLK_SYS_001::RCS { metric = "C9"; covered = 8; total = 8; }
@@ -196,13 +196,13 @@ package SSD_TRC_SYS_001 {
     metadata <'GAP-02'> gap_02 : TraceGapCategory { title = "要求なしで妥当と判断した機能行"; judgment = "判断済み"; count = 138; }
     metadata <'GAP-03'> gap_03 : TraceGapCategory { title = "トレースの対象外の機能行"; judgment = "範囲外"; count = 10; }
     metadata <'GAP-04'> gap_04 : TraceGapCategory { title = "要求の割付先でない IF"; judgment = "方針"; count = 519; }
-    metadata <'GAP-05'> gap_05 : TraceGapCategory { title = "振る舞い・流れが通らない IF"; judgment = "範囲外"; count = 50; }
+    metadata <'GAP-05'> gap_05 : TraceGapCategory { title = "振る舞い・流れが通らない IF"; judgment = "範囲外"; count = 32; }
     metadata <'GAP-06'> gap_06 : TraceGapCategory { title = "要求につながらない機器"; judgment = "未処理"; count = 0; }
     metadata <'GAP-07'> gap_07 : TraceGapCategory { title = "故障解析の対応が無い機能ブロック"; judgment = "範囲外"; count = 0; }
     metadata <'GAP-08'> gap_08 : TraceGapCategory { title = "振る舞いに現れない機能ブロック"; judgment = "範囲外"; count = 1; }
     metadata <'GAP-09'> gap_09 : TraceGapCategory { title = "既存の IF が無い流れ"; judgment = "未処理"; count = 0; }
     metadata <'GAP-10'> gap_10 : TraceGapCategory { title = "機器配分表に行が無い内部ブロック図の機器"; judgment = "未処理"; count = 0; }
-    metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 152; }
+    metadata <'GAP-11'> gap_11 : TraceGapCategory { title = "機能ブロックの中の流れ（IF にしない）"; judgment = "判断済み"; count = 153; }
     metadata <'GAP-12'> gap_12 : TraceGapCategory { title = "故障モードが当てはまらないと判断した機能ブロック"; judgment = "判断済み"; count = 11; }
     metadata <'GAP-01-01'> gap_01_01 : TraceGap about SSD_IRQ_SYS_001::Results::vc_irq_orb_28 { category = "GAP-01"; judgment = "判断済み"; }
     metadata <'GAP-01-02'> gap_01_02 : TraceGap about SSD_RQL_SYS_001::Results::vc_lrq_apu_03 { category = "GAP-01"; judgment = "判断済み"; }
@@ -460,11 +460,19 @@ package SSD_TRC_SYS_001 {
         expose SSD_BLK_SYS_001::ORB::IF_EPS_09;
         expose SSD_BLK_SYS_001::EPS::IF_EPS_13;
         expose SSD_BLK_SYS_001::EPS::IF_EPS_16;
+        expose SSD_BLK_SYS_001::ORB::IF_ORB_10;
+        expose SSD_BLK_SYS_001::ORB::IF_ORB_11;
+        expose SSD_BLK_SYS_001::ORB::IF_ORB_20;
+        expose SSD_IRQ_SYS_001::InterfaceRequirements::IRQ_ORB_10;
+        expose SSD_IRQ_SYS_001::InterfaceRequirements::IRQ_ORB_11;
+        expose SSD_IRQ_SYS_001::InterfaceRequirements::IRQ_ORB_20;
         expose SSD_RQL_SYS_001::LRQ_EPS::LRQ_EPS_05;
         expose SSD_RQL_SYS_001::LRQ_EPS::LRQ_EPS_06;
         expose SSD_RQL_SYS_001::LRQ_EPS::LRQ_EPS_07;
         expose SSD_RQL_SYS_001::LRQ_EPS::LRQ_EPS_08;
         expose SSD_RQL_SYS_001::LRQ_EPS::LRQ_EPS_09;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_08;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_10;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_01;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_02;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_03;
@@ -475,26 +483,37 @@ package SSD_TRC_SYS_001 {
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_16;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_18;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_20;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_08;
+        expose SSD_RQM_SYS_001::REQ_ECLSS::REQ_ECLSS_10;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_03;
+        expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_06;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_07;
+        expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_14;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_15;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_16;
         expose SSD_RQM_SYS_001::REQ_EPS::REQ_EPS_20;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_04;
+        expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_06;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_07;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_10;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_14;
         expose SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_16;
+        expose SSD_IRQ_SYS_001::Results::vc_irq_orb_10;
+        expose SSD_IRQ_SYS_001::Results::vc_irq_orb_11;
+        expose SSD_IRQ_SYS_001::Results::vc_irq_orb_20;
         expose SSD_RQL_SYS_001::Results::vc_lrq_eps_05;
         expose SSD_RQL_SYS_001::Results::vc_lrq_eps_06;
         expose SSD_RQL_SYS_001::Results::vc_lrq_eps_07;
         expose SSD_RQL_SYS_001::Results::vc_lrq_eps_08;
         expose SSD_RQL_SYS_001::Results::vc_lrq_eps_09;
+        expose SSD_VER_SYS_001::Results::vc_req_eclss_08;
+        expose SSD_VER_SYS_001::Results::vc_req_eclss_10;
         expose SSD_VER_SYS_001::Results::vc_req_eps_01;
         expose SSD_VER_SYS_001::Results::vc_req_eps_02;
         expose SSD_VER_SYS_001::Results::vc_req_eps_03;
         expose SSD_VER_SYS_001::Results::vc_req_eps_04;
         expose SSD_VER_SYS_001::Results::vc_req_eps_05;
+        expose SSD_VER_SYS_001::Results::vc_req_eps_06;
         expose SSD_VER_SYS_001::Results::vc_req_eps_07;
         expose SSD_VER_SYS_001::Results::vc_req_eps_14;
         expose SSD_VER_SYS_001::Results::vc_req_eps_15;
@@ -502,6 +521,7 @@ package SSD_TRC_SYS_001 {
         expose SSD_VER_SYS_001::Results::vc_req_eps_18;
         expose SSD_VER_SYS_001::Results::vc_req_eps_20;
         expose SSD_VER_SYS_001::Results::vc_req_sys_04;
+        expose SSD_VER_SYS_001::Results::vc_req_sys_06;
         expose SSD_VER_SYS_001::Results::vc_req_sys_07;
         expose SSD_VER_SYS_001::Results::vc_req_sys_10;
         expose SSD_VER_SYS_001::Results::vc_req_sys_14;

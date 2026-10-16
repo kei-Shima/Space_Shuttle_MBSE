@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（242件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（243件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -2371,6 +2371,15 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
     }
+    view <'図243'> fig243 : InterfacesView {
+        doc /* 図243 EVA 支援（エアロック・工具・マスク・電池充電） 内部ブロック図（頁 p243-ibd-eva） */
+        expose SSD_BLK_SYS_001::*;
+        expose SSD_IBD_ORB_001::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+    }
     // ---- 表記の規約
     package Conventions {
         doc /* 文書の表の ID の形と、出典・文書番号の書き方 */
@@ -2381,7 +2390,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
-        @IdConvention { prefix = "PHY-"; form = "PHY-<系>-<2桁>"; meaning = "機器（物理構成表）"; example = "PHY-CT-01"; count = 131; }
+        @IdConvention { prefix = "PHY-"; form = "PHY-<系>-<2桁>"; meaning = "機器（物理構成表）"; example = "PHY-CT-01"; count = 138; }
         @IdConvention { prefix = "BUD-"; form = "BUD-<区分>-<2桁>"; meaning = "収支の行（収支表）"; example = "BUD-PWR-05"; count = 19; }
         @IdConvention { prefix = "PAR-"; form = "PAR-<2桁>"; meaning = "パラメータ（パラメトリック定義書）"; example = "PAR-01"; count = 26; }
         @IdConvention { prefix = "UC-"; form = "UC-<2桁>"; meaning = "ユースケース"; example = "UC-07"; count = 12; }
@@ -2389,7 +2398,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "VF-・MK-"; form = "VF-<2桁>・MK-<2桁>"; meaning = "機体の特徴・ミッションキット"; example = "VF-05"; count = 31; }
         @IdConvention { prefix = "MS-・MC-・DV-・DE-"; form = "MS-・MC-・DV-・DE-<2桁>"; meaning = "質量特性・Δv の値と式"; example = "DV-04"; count = 60; }
         @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 44; }
-        @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 2101; }
+        @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 2138; }
         @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 141; }
         @IdConvention { prefix = "CW-・EM-・DT-・RS-・BU-"; form = "CW-・EM-・DT-・RS-・BU-<2桁>"; meaning = "C/W の警報・検知する故障・処置・警報の区分"; example = "CW-05"; count = 155; }
         @IdConvention { prefix = "HZ-・HC-・HM-"; form = "HZ-・HC-・HM-<2桁>"; meaning = "ハザード・原因・管理策"; example = "HZ-01"; count = 134; }

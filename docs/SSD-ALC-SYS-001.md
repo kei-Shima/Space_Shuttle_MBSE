@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ALC-SYS-001 |
 | 表題 | 割付定義書（機能・機器・区画・振る舞い） |
-| 版・日付 | Rev. D／2026-10-16 |
+| 版・日付 | Rev. E／2026-10-16 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図91 割付行列（系 × 区画） |
@@ -249,8 +249,8 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 
 | 区画 | 名称 | SysML の部品 | 機器 |
 |---|---|---|---|
-| FD | フライトデッキ | orbiterLayout.fd | 7 |
-| MD | ミッドデッキ | orbiterLayout.md | 7 |
+| FD | フライトデッキ | orbiterLayout.fd | 8 |
+| MD | ミッドデッキ | orbiterLayout.md | 9 |
 | LEB | 下部機器ベイ | orbiterLayout.leb | 6 |
 | AVB1 | 前方アビオニクスベイ1 | orbiterLayout.avb1 | 1 |
 | AVB2 | 前方アビオニクスベイ2 | orbiterLayout.avb2 | 0 |
@@ -260,18 +260,18 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | AIRLOCK | エアロック | orbiterLayout.airlock | 9 |
 | FWD | 前部胴体（乗員室の外） | orbiterLayout.fwd | 6 |
 | FRCS | 前部 RCS モジュール | orbiterLayout.frcs | 2 |
-| PLB | ペイロードベイ | orbiterLayout.plb | 8 |
+| PLB | ペイロードベイ | orbiterLayout.plb | 10 |
 | MID | 中部胴体（床下・側面） | orbiterLayout.mid | 5 |
 | AFT | 後部胴体 | orbiterLayout.aft | 18 |
 | AVBA | 後部アビオニクスベイ4〜6 | orbiterLayout.avba | 4 |
 | POD | OMS/RCS ポッド | orbiterLayout.pod | 7 |
 | WING | 主翼 | orbiterLayout.wing | 3 |
 | VT | 垂直尾翼 | orbiterLayout.vt | 2 |
-| MULTI | 複数区画に分散 | orbiterLayout.multi | 30 |
+| MULTI | 複数区画に分散 | orbiterLayout.multi | 32 |
 
 ## 5. 機器の配置と割付（物理）
 
-機器 131件の区画・多重度と、機器に割り付けた系の部品・機能を示す（allocate 506件：系の部品 → 機器 131件、機能 → 機器 375件）。多重度は数量の欄が整数だけのときに付けた。
+機器 138件の区画・多重度と、機器に割り付けた系の部品・機能を示す（allocate 524件：系の部品 → 機器 138件、機能 → 機器 386件）。多重度は数量の欄が整数だけのときに付けた。
 
 | 機器 | 名称 | 区画 | 多重度 | 系の部品 | 機能 |
 |---|---|---|---|---|---|
@@ -286,6 +286,7 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | PHY-CT-09 | Ku 帯信号処理器（KuSP） | AVB3B | [1] | context.sts.orb.ct | F-CT-KU-02・F-CT-KU-05 |
 | PHY-CT-10 | PCMMU（PCM マスタユニット） | AVBF | [2] | context.sts.orb.ct | F-CT-INST-02・F-CT-INST-04・F-CT-INST-05・F-CT-INST-06 |
 | PHY-CT-11 | SSOR（宇宙対宇宙オービタ無線）と SSOR アンテナ | AIRLOCK | — | context.sts.orb.ct | F-CT-UHF-01・F-CT-UHF-06・F-CT-UHF-07・F-CT-UHF-08 |
+| PHY-CT-12 | VCU（映像制御装置：RCU（遠隔制御装置）と VSU（映像切替装置）の2つの LRU） | FD | [1] | context.sts.orb.ct | F-CT-CCTV-04・F-CT-CCTV-07 |
 | PHY-DPS-01 | GPC（汎用計算機、IBM AP-101S） | AVBF | [5] | context.sts.orb.dps | F-DPS-01・F-DPS-02・F-DPS-03・F-DPS-04 |
 | PHY-DPS-02 | MMU（モジュラーメモリユニット） | AVBF | [2] | context.sts.orb.dps | F-DPS-FSW-06・F-DPS-FSW-07・F-DPS-FSW-08・F-DPS-FSW-09 |
 | PHY-DPS-03 | MDM（マルチプレクサ／デマルチプレクサ） | MULTI | — | context.sts.orb.dps | F-DPS-BUS-03・F-DPS-BUS-04・F-DPS-BUS-06・F-DPS-BUS-08 |
@@ -406,6 +407,12 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | PHY-EVA-01 | 船外活動ユニット（EMU） | AIRLOCK | — | context.sts.orb.eva | F-EVA-CHK-01・F-EVA-CHK-02・F-EVA-CHK-03・F-EVA-CHK-04 |
 | PHY-EVA-02 | 外部エアロック（ハッチ3基・EMU支援機器付き） | AIRLOCK | — | context.sts.orb.eva | F-EVA-DPR-01・F-EVA-DPR-03・F-EVA-DPR-04・F-EVA-DPR-05 |
 | PHY-EVA-03 | ペイロードベイのEVA支援機器（スライドワイヤ・EVAウインチ・ハンドレール） | PLB | — | context.sts.orb.eva | F-EVA-TLS-01・F-EVA-TLS-02・F-EVA-TLS-03 |
+| PHY-EVA-04 | ミニワークステーション（MWS）とBRT | MULTI | — | context.sts.orb.eva | F-EVA-TLS-08 |
+| PHY-EVA-05 | 左舷の軽量工具収納組立（TSA） | PLB | [1] | context.sts.orb.eva | F-EVA-TLS-06 |
+| PHY-EVA-06 | EVA 機器の電池と充電器（EHIP ライト電池充電器・REBA 充電器・Y ケーブル・アダプタケーブル・延長ケーブルと、PGT 電池・ヘルメットライト電池） | MD | — | context.sts.orb.eva | F-EVA-MNT-01・F-EVA-MNT-09・F-EVA-MNT-10 |
+| PHY-EVA-07 | 簡易着用マスク（マスク前呼吸用）と 14 ft の通信・O2 アンビリカル | MULTI | — | context.sts.orb.eva | F-EVA-OPS-02 |
+| PHY-EVA-08 | 非常時 EVA の工具一式（中心線ラッチ工具・3点ラッチ工具・RMS ロープリール・調整式テザー・大型カッタ・PRD） | PLB | — | context.sts.orb.eva | F-EVA-EMG-01・F-EVA-EMG-02 |
+| PHY-EVA-09 | PGT とヘルメットライトの電池 | MD | — | context.sts.orb.eva | F-EVA-TLS-01 |
 
 ## 6. 振る舞いの割付
 
@@ -532,7 +539,7 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 
 ## 8. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-ALC-SYS-001.sysml](../SysML/SSD-ALC-SYS-001.sysml) に示す。機能の action 2075件、機器の part def 131件、区画 19件の物理配置、allocate 2694件（論理 2075・物理 506・振る舞い 113）から成り、構造モデル（SysML/SSD-BLK-SYS-001.sysml）と振る舞いのモデル（SysML/SSD-BEH-ORB-002〜004.sysml）を読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-ALC-SYS-001.sysml](../SysML/SSD-ALC-SYS-001.sysml) に示す。機能の action 2075件、機器の part def 138件、区画 19件の物理配置、allocate 2712件（論理 2075・物理 524・振る舞い 113）から成り、構造モデル（SysML/SSD-BLK-SYS-001.sysml）と振る舞いのモデル（SysML/SSD-BEH-ORB-002〜004.sysml）を読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 9. 注記（出典間の相違・構成変更）
 
@@ -558,3 +565,4 @@ SSD-PHY-ORB-001 §2 の区画 19件を物理配置の部品にした。
 | Rev. B | 2026-10-04 | 機器配分表の行の追加（18件）と、機器の割付の下位の機能行への移し（41件）に合わせて作り直した（Rev. AU） |
 | Rev. C | 2026-10-08 | 機器配分表の行の追加（18件、ECLSS の内部ブロック図の機器）に合わせて作り直した（Rev. BI） |
 | Rev. D | 2026-10-16 | 機器配分表の行の追加（11件、ECLSS の機器（エアロック支援を含む））に合わせて作り直した（Rev. CF） |
+| Rev. E | 2026-10-16 | 機器配分表の行の追加（7件：EVA 工具・電池充電・マスク、VCU）に合わせて作り直した（Rev. CG） |
