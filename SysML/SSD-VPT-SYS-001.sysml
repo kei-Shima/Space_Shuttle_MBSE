@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（253件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（256件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -210,7 +210,7 @@ package SSD_VPT_SYS_001 {
         render Views::asTreeDiagram;
     }
     viewpoint def <'VP-05'> SubsystemBehaviorViewpoint {
-        doc /* 系の振る舞いの観点。主な定義書：SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008 */
+        doc /* 系の振る舞いの観点。主な定義書：SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008・SSD-GND-ORB-001 */
         subject v : Views::View;
         frame concern cn05 : OperationsFlow;
     }
@@ -825,6 +825,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図99'> fig099 : SubsystemBehaviorView {
         doc /* 図99 燃料電池 状態遷移図（頁 p99-sm-fc） */
@@ -835,6 +836,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図100'> fig100 : SubsystemBehaviorView {
         doc /* 図100 APU 状態遷移図（頁 p100-sm-apu） */
@@ -845,6 +847,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図101'> fig101 : SubsystemBehaviorView {
         doc /* 図101 RMS 状態遷移図（頁 p101-sm-rms） */
@@ -855,6 +858,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図102'> fig102 : SubsystemBehaviorView {
         doc /* 図102 ATCS 排熱 状態遷移図（頁 p102-sm-atcs） */
@@ -865,6 +869,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図103'> fig103 : SubsystemBehaviorView {
         doc /* 図103 系のモード × フェーズ 行列（頁 p103-mode-phase） */
@@ -875,6 +880,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図104'> fig104 : ResourcesMarginsView {
         doc /* 図104 CO2 除去のトレードスタディ（頁 p104-trade-co2） */
@@ -1189,6 +1195,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図137'> fig137 : SubsystemBehaviorView {
         doc /* 図137 RCS 状態遷移図（頁 p137-sm-rcs） */
@@ -1199,6 +1206,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図138'> fig138 : SubsystemBehaviorView {
         doc /* 図138 MPS 状態遷移図（頁 p138-sm-mps） */
@@ -1209,6 +1217,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図139'> fig139 : SubsystemBehaviorView {
         doc /* 図139 C&T 通信構成 状態遷移図（頁 p139-sm-ct） */
@@ -1219,6 +1228,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図140'> fig140 : SubsystemBehaviorView {
         doc /* 図140 与圧系 状態遷移図（頁 p140-sm-pcs） */
@@ -1229,6 +1239,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図141'> fig141 : SubsystemBehaviorView {
         doc /* 図141 ODS 状態遷移図（頁 p141-sm-ods） */
@@ -1239,6 +1250,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図142'> fig142 : SubsystemBehaviorView {
         doc /* 図142 系のモード × フェーズ 行列（その2）（頁 p142-mode-phase-2） */
@@ -1249,6 +1261,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図143'> fig143 : HumanSystemsView {
         doc /* 図143 人間系の基準の照合（章 × 判定）（頁 p143-hsi-coverage） */
@@ -1606,6 +1619,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図169'> fig169 : SubsystemBehaviorView {
         doc /* 図169 FDS 状態遷移図（頁 p169-sm-fds） */
@@ -1616,6 +1630,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図170'> fig170 : SubsystemBehaviorView {
         doc /* 図170 給水・廃水系 状態遷移図（頁 p170-sm-water） */
@@ -1626,6 +1641,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図171'> fig171 : SubsystemBehaviorView {
         doc /* 図171 WCS 状態遷移図（頁 p171-sm-wcs） */
@@ -1636,6 +1652,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図172'> fig172 : SubsystemBehaviorView {
         doc /* 図172 ECLSS のモード × フェーズ 行列（頁 p172-mode-phase-3） */
@@ -1646,6 +1663,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図173'> fig173 : SubsystemBehaviorView {
         doc /* 図173 LiOH キャニスタの交換 活動図（頁 p173-act-lioh） */
@@ -1656,6 +1674,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図174'> fig174 : SubsystemBehaviorView {
         doc /* 図174 給水・廃水のダンプ 活動図（頁 p174-act-dump） */
@@ -1666,6 +1685,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図175'> fig175 : SubsystemBehaviorView {
         doc /* 図175 水冷却ループの喪失の処置 活動図（頁 p175-act-water-loop） */
@@ -1676,6 +1696,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図176'> fig176 : SafetyFailureView {
         doc /* 図176 ECLSS 機能の故障モード（ブロック × 検知・原因）（頁 p176-fmx-modes） */
@@ -1743,6 +1764,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図182'> fig182 : SubsystemBehaviorView {
         doc /* 図182 エアロック 状態遷移図（頁 p182-sm-airlock） */
@@ -1753,6 +1775,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図183'> fig183 : HumanSystemsView {
         doc /* 図183 EMU の消耗品の持続時間（代謝率との関係）（頁 p183-epb-consumables） */
@@ -1901,6 +1924,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図194'> fig194 : SubsystemBehaviorView {
         doc /* 図194 DAP のモード 状態遷移図（頁 p194-sm-dap） */
@@ -1911,6 +1935,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図195'> fig195 : SubsystemBehaviorView {
         doc /* 図195 IMU 状態遷移図（頁 p195-sm-imu） */
@@ -1921,6 +1946,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図196'> fig196 : SubsystemBehaviorView {
         doc /* 図196 再突入の航法センサの取り込み 状態遷移図（頁 p196-sm-nav-sensors） */
@@ -1931,6 +1957,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図197'> fig197 : SafetyFailureView {
         doc /* 図197 GN&C の冗長管理（選択・検出・故障許容）（頁 p197-gnc-rm） */
@@ -1954,6 +1981,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図199'> fig199 : SubsystemBehaviorView {
         doc /* 図199 FCS チャネルの故障処置 活動図（頁 p199-act-fcs-channel） */
@@ -1964,6 +1992,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図200'> fig200 : InterfacesView {
         doc /* 図200 ET 内部ブロック図（頁 p200-ibd-et） */
@@ -2001,6 +2030,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図204'> fig204 : SubsystemBehaviorView {
         doc /* 図204 ET 状態遷移図（頁 p204-sm-et） */
@@ -2011,6 +2041,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図205'> fig205 : SafetyFailureView {
         doc /* 図205 飛行中の TPS の点検と損傷の判断 活動図（頁 p205-act-tps-inspection） */
@@ -2183,6 +2214,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図220'> fig220 : SubsystemBehaviorView {
         doc /* 図220 ベントドア・ET アンビリカルドア 状態遷移図（頁 p220-sm-vent-doors） */
@@ -2193,6 +2225,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図221'> fig221 : SubsystemBehaviorView {
         doc /* 図221 警報系（C/W）状態遷移図（頁 p221-sm-caution-warning） */
@@ -2203,6 +2236,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図222'> fig222 : SubsystemBehaviorView {
         doc /* 図222 ペイロード保持ラッチ・ドッキング機構 状態遷移図（頁 p222-sm-payload-latches） */
@@ -2213,6 +2247,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図223'> fig223 : SubsystemBehaviorView {
         doc /* 図223 脱出のモード 状態遷移図（頁 p223-sm-crew-escape） */
@@ -2223,6 +2258,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図224'> fig224 : SubsystemBehaviorView {
         doc /* 図224 構造の運用の限界の判断 活動図（頁 p224-act-structural-limits） */
@@ -2233,6 +2269,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_GNC_ORB_001::*;
         expose SSD_ETS_SYS_001::*;
         expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
     }
     view <'図225'> fig225 : RequirementsVerificationView {
         doc /* 図225 L2 の要求から L3 の要求への導出（系ごとの数）（頁 p225-rql-sys-derivation） */
@@ -2497,13 +2534,46 @@ package SSD_VPT_SYS_001 {
         expose SSD_IRQ_ECL_001::*;
         expose SSD_IRQ_LOW_001::*;
     }
+    view <'図254'> fig254 : SubsystemBehaviorView {
+        doc /* 図254 着陸後から打上げまでの地上処理 活動図（頁 p254-act-turnaround） */
+        expose SSD_BEH_ORB_005::*;
+        expose SSD_BEH_ORB_006::*;
+        expose SSD_BEH_ORB_007::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
+    }
+    view <'図255'> fig255 : SubsystemBehaviorView {
+        doc /* 図255 地上の機体の状態 状態遷移図（頁 p255-sm-ground） */
+        expose SSD_BEH_ORB_005::*;
+        expose SSD_BEH_ORB_006::*;
+        expose SSD_BEH_ORB_007::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
+    }
+    view <'図256'> fig256 : SubsystemBehaviorView {
+        doc /* 図256 地上処理の段と秒読みの節目（頁 p256-gnd-stages） */
+        expose SSD_BEH_ORB_005::*;
+        expose SSD_BEH_ORB_006::*;
+        expose SSD_BEH_ORB_007::*;
+        expose SSD_EMU_EVA_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_BEH_ORB_008::*;
+        expose SSD_GND_ORB_001::*;
+    }
     // ---- 表記の規約
     package Conventions {
         doc /* 文書の表の ID の形と、出典・文書番号の書き方 */
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 334; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 335; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -2515,7 +2585,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "VF-・MK-"; form = "VF-<2桁>・MK-<2桁>"; meaning = "機体の特徴・ミッションキット"; example = "VF-05"; count = 31; }
         @IdConvention { prefix = "MS-・MC-・DV-・DE-"; form = "MS-・MC-・DV-・DE-<2桁>"; meaning = "質量特性・Δv の値と式"; example = "DV-04"; count = 60; }
         @IdConvention { prefix = "VP-・CN-・SH-"; form = "VP-<2桁>・CN-<2桁>・SH-<略号>"; meaning = "ビューポイント・関心事・関係者"; example = "VP-01"; count = 44; }
-        @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 2138; }
+        @IdConvention { prefix = "EQ-・EB-・FL-・FI-"; form = "EQ-・EB-・FL-<図>-<2桁>・FI-<2桁>"; meaning = "内部ブロック図の部品・相手・流れ・流れる物"; example = "FL-EPS-03"; count = 2153; }
         @IdConvention { prefix = "TR-・GAP-・IMP-"; form = "TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁>"; meaning = "トレースの関係・切れ目・影響分析"; example = "GAP-06-01"; count = 142; }
         @IdConvention { prefix = "CW-・EM-・DT-・RS-・BU-"; form = "CW-・EM-・DT-・RS-・BU-<2桁>"; meaning = "C/W の警報・検知する故障・処置・警報の区分"; example = "CW-05"; count = 155; }
         @IdConvention { prefix = "HZ-・HC-・HM-"; form = "HZ-・HC-・HM-<2桁>"; meaning = "ハザード・原因・管理策"; example = "HZ-01"; count = 134; }
@@ -2550,5 +2620,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "ACR-"; form = "ACR-<3桁>"; meaning = "略語表の行（略称と正式名称）"; example = "ACR-001"; count = 0; }
         @IdConvention { prefix = "MOE・MOP・TPM"; form = "<MOE|MOP|TPM>-<2桁>"; meaning = "飛行実績の測定指標（MOE・MOP・TPM）"; example = "TPM-01"; count = 15; }
         @IdConvention { prefix = "IRQ-（下位 IF）・VC-IRQ-（下位 IF）"; form = "IRQ-<IF の接頭辞>-<IF の番号>・VC-IRQ-…"; meaning = "下位の IF のインタフェース要求・その検証ケース"; example = "IRQ-APU-08"; count = 1038; }
+        @IdConvention { prefix = "GNDS-・GNDT-"; form = "GNDS-<2桁>・GNDT-<2桁>"; meaning = "地上の機体の状態・遷移"; example = "GNDT-01"; count = 26; }
+        @IdConvention { prefix = "CMS-・CMT-"; form = "CMS-<2桁>・CMT-<2桁>"; meaning = "地上処理の段・秒読みの節目"; example = "CMS-01"; count = 16; }
     }
 }

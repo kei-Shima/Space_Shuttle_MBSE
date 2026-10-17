@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FD-EXT-001 |
 | 表題 | 外部系（追跡・通信網／ミッション管制／打上げ処理）機能説明書 |
-| 版・日付 | Rev. F／2026-10-03 |
+| 版・日付 | Rev. G／2026-10-17 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-SYS-IDX-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -67,6 +67,8 @@
 
 > **注記** 外部系を3つの部品（追跡・通信網、ミッション管制、打上げ処理・地上支援設備）に分けた SysML v2 モデルは [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-BLK-SYS-001.sysml）。
 
+> **注記** 外部系の打上げ処理（F-LPS-01・02）の活動と状態（図254・255）は [SSD-GND-ORB-001](SSD-GND-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-GND-ORB-001.sysml）。
+
 ## 5. 参考文献
 
 1. NSTS 1988 News Reference Manual – Orbiter Communications（NASA KSC） — https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-ovcomm.html
@@ -102,3 +104,4 @@
 | Rev. D | 2026-10-01 | IF-ORB-16 に下位 IF（IF-CT-01 ほか4件）を付記、IF-ORB-17 に下位 IF（IF-DPS-06）を付記、IF-ORB-29 に下位 IF（IF-MPS-03・IF-MPS-04）を付記（Rev. R） |
 | Rev. E | 2026-10-02 | IF-SYS-10 に下位 IF（IF-SRB-03）を付記（Rev. V） |
 | Rev. F | 2026-10-03 | 構造定義書 SSD-BLK-SYS-001 への参照を注記（Rev. AD） |
+| Rev. G | 2026-10-17 | 地上処理・ターンアラウンド定義書 SSD-GND-ORB-001 への参照を注記（Rev. CM） |

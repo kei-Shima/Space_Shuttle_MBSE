@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ACR-SYS-001 |
 | 表題 | 略語表（英語の略称と正式名称） |
-| 版・日付 | Rev. K／2026-10-17 |
+| 版・日付 | Rev. L／2026-10-17 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-VPT-SYS-001 |
 | 関連図 | — |
@@ -15,11 +15,11 @@
 
 ## 2. 書き方
 
-略語表は 389行。第一の出典は、運用飛行規則 Vol. A（NSTS-12820 PCN-1）の付録A「Acronyms and Abbreviations」（PDF 2161〜2192）で、326行がこれによる。付録A に無い語、付録A と意味が違う語は、各資料の本文にある「正式名称 (略称)」の形から取った。出典の欄の頁の URL が、その語の正式名称を示す頁である。正式名称は資料の綴りのままで、日本語名は本書の訳である。この書き方で載せる語は、説明書・SysML・図のラベルの全体で 10回以上、3ファイル以上に出る略称である（頻出の略称。それより少ない語は載せていない）。
+略語表は 390行。第一の出典は、運用飛行規則 Vol. A（NSTS-12820 PCN-1）の付録A「Acronyms and Abbreviations」（PDF 2161〜2192）で、326行がこれによる。付録A に無い語、付録A と意味が違う語は、各資料の本文にある「正式名称 (略称)」の形から取った。出典の欄の頁の URL が、その語の正式名称を示す頁である。正式名称は資料の綴りのままで、日本語名は本書の訳である。この書き方で載せる語は、説明書・SysML・図のラベルの全体で 10回以上、3ファイル以上に出る略称である（頻出の略称。それより少ない語は載せていない）。
 
 ## 3. 略語表
 
-略称のアルファベット順に 389行を示す。同じ略称に複数の意味があるときは、行を分けた。
+略称のアルファベット順に 390行を示す。同じ略称に複数の意味があるときは、行を分けた。
 
 | 略称 | 正式名称（英） | 日本語名 | 分類 | 出典 |
 |---|---|---|---|---|
@@ -240,6 +240,7 @@
 | MFR | Manipulator Foot Restraint | マニピュレータ足固定具 | 機器・部品 | （出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2177） |
 | MIA | Multiplexer Interface Adapter | マルチプレクサインタフェースアダプタ | 機器・部品 | （出典: https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/588） |
 | MLE | Middeck Locker Equivalents | 中甲板ロッカー相当の収納 | 機器・部品 | （出典: https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=4） |
+| MLP | Mobile Launcher Platform | 移動式発射台 | 機器・部品 | （出典: https://www.nasa.gov/sites/default/files/167429main_OrbiterProcessing08.pdf#page=4） |
 | MLS | Microwave Landing System | マイクロ波着陸システム | 通信・計測・表示 | （出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2177） |
 | MM | Major Mode | 主モード（GPC のソフトウェアの区分） | 飛行・運用 | （出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2177） |
 | MMH | Monomethyl Hydrazine | モノメチルヒドラジン | 物質・材料 | （出典: https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2177） |
@@ -473,6 +474,7 @@
 | ACC | 事故の教訓定義書 | SSD-ACC-SYS-001 |
 | ACR | 略語表（本書） | SSD-ACR-SYS-001 |
 | TPM | 飛行実績の測定指標定義書（MOE・MOP・TPM） | SSD-TPM-SYS-001 |
+| GND | 地上処理・ターンアラウンド定義書 | SSD-GND-ORB-001 |
 
 ## 6. 文書番号の符号（対象）
 
@@ -681,7 +683,7 @@
 
 ## 8. 文書内の ID の接頭辞
 
-文書の表の行を指す ID の書き方 47件を示す。ビューポイント定義書（SSD-VPT-SYS-001）の表記の規約と同じデータによる。
+文書の表の行を指す ID の書き方 49件を示す。ビューポイント定義書（SSD-VPT-SYS-001）の表記の規約と同じデータによる。
 
 | 接頭辞 | 書式 | 意味 | 例 |
 |---|---|---|---|
@@ -732,10 +734,12 @@
 | ACR- | ACR-<3桁> | 略語表の行（略称と正式名称） | ACR-001 |
 | MOE・MOP・TPM | <MOE／MOP／TPM>-<2桁> | 飛行実績の測定指標（MOE・MOP・TPM） | TPM-01 |
 | IRQ-（下位 IF）・VC-IRQ-（下位 IF） | IRQ-<IF の接頭辞>-<IF の番号>・VC-IRQ-… | 下位の IF のインタフェース要求・その検証ケース | IRQ-APU-08 |
+| GNDS-・GNDT- | GNDS-<2桁>・GNDT-<2桁> | 地上の機体の状態・遷移 | GNDT-01 |
+| CMS-・CMT- | CMS-<2桁>・CMT-<2桁> | 地上処理の段・秒読みの節目 | CMS-01 |
 
 ## 9. 載せなかった語
 
-しきい値（10回以上・3ファイル以上）を超える大文字の語は 1631語あり、表または符号の表（種別・対象・機能）に載せたものは 538語、載せなかったものは区分ごとに次のとおりである。書式・IT の用語・単位記号（PDF・URL・MHz など）：6語（例：PDF・MHz・MD・URL・kHz・GHz）。文書番号・図面番号・版・型番の断片：238語（例：USA007587・V2・USA006020・L2・F7・L1・AC1・GN2）。図の表示名・スイッチ名をつないだ文字列、1文字：123語（例：D・I・W・G・ISOLATION・X・TRANSDUCER・O）。パネルの表示・一般の英単語（略語ではない）：365語（例：VALVE・ALARM・OFF・CABIN・PRESS・MASTER・ON・CONTROL）。複合の表記（表にある略称を / や & でつないだもの）：52語（例：EPD&C/MPS・O2/N2・FMEA/CIL・OMS/RCS・BAY/CABIN・MPS/TVC・A/B・RCS/OMS）。ローマ数字・記号：6語（例：IV・II・III・VI・VIII・VII）。表の略称に S・T が付いた形（複数形、見出し語の続き）：4語（例：PROT・SRMS・JETT・ALSS）。表示ラベルの短縮形、または正式名称を資料で確認できなかった略称は 299語で、すべてを次に挙げる（出現数つき）：FN 2690、MN 411、WTR 318、MNA 306、SUMM 295、MNB 266、PL 265、DISP 228、VLV 215、OCR 192、PWR 191、ESS 180、CL 171、CAB 153、B/U 144、MG 140、TK 127、LT/RT 125、FOM 115、LPS 113、KGS 100、MA 99、PH 98、AB 97、INRTL 95、DIA 95、SNSR 88、MNC 88、EXEC 88、S&A 88、QA 87、SPLX 84、LO 83、REG 83、CMO 83、PDI 82、YA 77、YB 77、POD 76、MANIF 76、GP 75、ADC 74、MAN 72、HUM 71、STBY 70、LF 70、BATT 70、NA 69、SIT 68、TG 67、FR 67、QB 67、MSG 66、OP 65、BLOCKING 65、AIRLK 64、HCl 64、QC 64、YE 63、CIRC 62、ATC 61、RDR 61、FREON 61、RESISTOR 61、CTR 60、CH 59、EPDC 57、HORIZ 57、GN 56、HDC 56、RECIRC 56、RL 55、CM 53、NAV 53、VSU 52、OCA 52、IA 50、MWS 48、PF 48、HUT 48、DETN 48、OBS 47、NOM 46、DTV 46、PB 45、QE 45、SUPPR 45、RCU 44、HUMID 44、LK 44、WL 44、YD 43、BSM 42、PAL 42、EHIP 42、SPA 42、EC/LSS 38、BRT 37、SEL 37、CC 37、PVT 37、SRGA 36、RJDA 36、BFC 36、XOVR 35、LTA 35、LA 35、FAI 35、I/P 35、REBA 34、SPLY 34、SPD 34、LAT 34、RJDF 33、MMACS 33、YC 32、PKT 32、PHH 32、SIG 32、GIRA 32、ISQ 31、PAD 31、DP 31、LIM 31、REAC 31、ICOM 31、RTL 31、PROM 31、SEC 31、BIPROP 31、EMSS 31、SPACEHAB 30、AMP 30、I/4W 30、FUSLG 30、PT 30、ENABLE/NOZ 29、FU 29、VT 28、APCU 28、DLMA 28、CNTL 27、CONDR 27、CIA 27、V&V 27、ECO 26、AVBF 25、NOZ 25、ERR 25、CCK 25、SMRD 25、ORB/GND 25、O/P 25、MFD 24、HRP 24、SSCS 24、UNIV 24、PTG 24、PRD 23、WP 23、PCT 23、PWRDN 23、PI 23、LDB 23、S/N 23、LEB 22、EPG/PRSD 22、INH 22、MAR 22、PDP 22、OFP 22、LSS 21、EMERG 21、NTSC 21、GCILC 21、LACU 20、PET 20、ASP 20、THRM 20、PTU 20、VCV 20、RGA/ACCEL 20、LVI 20、RVI 20、GSE/LPS 20、MBK 20、EMK 20、ENA/NOZ 19、CCU 19、CPU 19、LT 19、MUP 19、GND 19、CPR 19、UTIL 19、PACU 18、CCA 18、CDF 18、THERM 18、EMDM 18、RI/NASA 18、VERN 18、ARLK 17、SEQ 17、ITVC 17、CE 17、IP 17、AVBA 16、INCR/DECR 16、GSTDN 16、SARSAT 16、CPA 16、PWR/REBA 16、PEI 15、OPER/STBY 15、COOP 15、DPY 15、PNL 15、NIST 15、ZOT 15、RSRM 15、LAI 15、SW 15、ROTOR 15、IDCA 15、LCS 14、FRCI 14、LN 14、ENA 14、CSCS 14、WLEIDS 14、SSSR 14、MAJ 14、SNSR/VLV 14、AMC 14、ACME 14、TLD 14、DME 14、LEA 14、VO2max 14、NOAX 13、PSU 13、PCI 13、CTVC 13、SSA 13、GSC 13、FCC 13、FPC 13、STRG 13、R/Y 13、NMSUS 13、PMBT 13、AVS 12、CNTRL 12、MAINT 12、FLOODS 12、SEAWARS 12、OAA 12、SIP 12、FCO 12、RCV 12、REFSMMAT 12、APC 12、RSI 12、RTC 12、ILMA 12、AUT 11、CONTR 11、EVA/ATC 11、VPU 11、EPD&C/EPG 11、AMPL 11、LLIS 11、PWM 11、PPK 11、LWMAR 11、STGT 11、LDRI 10、FOD 10、BONDLINE 10、DEP/REP 10、EPG 10、PC 10、DAT 10、PS 10、GMBL 10、SELECT/RCV 10、SSMM 10、AIAA 10、MTL 10、VORTAC 10、OVRD 10、BACKUPLH2 10、GROUP1 10、COMPT 10、ADJUSTER 10、KHZ 10、EER 10、NPLS 10。このうち多くは図の表示名・スイッチ名の短縮形で、資料の表示のままであり、正式名称を定めた箇所がない。
+しきい値（10回以上・3ファイル以上）を超える大文字の語は 1632語あり、表または符号の表（種別・対象・機能）に載せたものは 540語、載せなかったものは区分ごとに次のとおりである。書式・IT の用語・単位記号（PDF・URL・MHz など）：6語（例：PDF・MHz・MD・URL・kHz・GHz）。文書番号・図面番号・版・型番の断片：238語（例：USA007587・V2・USA006020・L2・F7・L1・AC1・GN2）。図の表示名・スイッチ名をつないだ文字列、1文字：123語（例：D・I・W・G・ISOLATION・X・TRANSDUCER・O）。パネルの表示・一般の英単語（略語ではない）：365語（例：VALVE・ALARM・OFF・CABIN・PRESS・MASTER・ON・CONTROL）。複合の表記（表にある略称を / や & でつないだもの）：53語（例：EPD&C/MPS・O2/N2・FMEA/CIL・OMS/RCS・BAY/CABIN・MPS/TVC・A/B・RCS/OMS）。ローマ数字・記号：6語（例：IV・II・III・VI・VIII・VII）。表の略称に S・T が付いた形（複数形、見出し語の続き）：4語（例：PROT・SRMS・JETT・ALSS）。表示ラベルの短縮形、または正式名称を資料で確認できなかった略称は 297語で、すべてを次に挙げる（出現数つき）：FN 2690、MN 411、WTR 318、MNA 306、SUMM 295、MNB 266、PL 265、DISP 228、VLV 215、OCR 192、PWR 191、ESS 180、CL 171、CAB 153、MG 145、B/U 144、TK 127、LT/RT 125、FOM 115、LPS 113、KGS 100、MA 99、PH 98、AB 97、INRTL 95、DIA 95、SNSR 88、MNC 88、EXEC 88、S&A 88、QA 87、SPLX 84、LO 83、REG 83、CMO 83、PDI 82、YA 77、YB 77、POD 76、MANIF 76、GP 75、ADC 74、MAN 72、HUM 71、STBY 70、LF 70、BATT 70、NA 69、SIT 68、TG 67、FR 67、QB 67、MSG 66、OP 65、BLOCKING 65、AIRLK 64、HCl 64、QC 64、YE 63、CIRC 62、ATC 61、RDR 61、FREON 61、RESISTOR 61、CTR 60、CH 59、EPDC 57、HORIZ 57、GN 56、HDC 56、RECIRC 56、RL 55、CM 54、NAV 53、VSU 52、OCA 52、IA 50、MWS 48、PF 48、HUT 48、DETN 48、OBS 47、NOM 46、DTV 46、PB 45、QE 45、SUPPR 45、RCU 44、HUMID 44、LK 44、WL 44、YD 43、BSM 42、PAL 42、EHIP 42、SPA 42、EC/LSS 38、BRT 37、SEL 37、CC 37、PVT 37、SRGA 36、RJDA 36、BFC 36、XOVR 35、LTA 35、LA 35、FAI 35、I/P 35、REBA 34、SPLY 34、SPD 34、LAT 34、RJDF 33、MMACS 33、YC 32、PKT 32、PHH 32、SIG 32、GIRA 32、ISQ 31、PAD 31、DP 31、LIM 31、REAC 31、ICOM 31、RTL 31、PROM 31、SEC 31、BIPROP 31、EMSS 31、SPACEHAB 30、AMP 30、I/4W 30、FUSLG 30、PT 30、ENABLE/NOZ 29、FU 29、VT 28、APCU 28、DLMA 28、CNTL 27、CONDR 27、CIA 27、V&V 27、ECO 26、AVBF 25、NOZ 25、ERR 25、CCK 25、SMRD 25、O/P 25、MFD 24、HRP 24、SSCS 24、UNIV 24、PTG 24、PRD 23、WP 23、PCT 23、PWRDN 23、PI 23、LDB 23、S/N 23、LEB 22、EPG/PRSD 22、INH 22、MAR 22、PDP 22、OFP 22、LSS 21、EMERG 21、NTSC 21、GCILC 21、LACU 20、PET 20、ASP 20、THRM 20、PTU 20、VCV 20、RGA/ACCEL 20、LVI 20、RVI 20、GSE/LPS 20、MBK 20、EMK 20、ENA/NOZ 19、CCU 19、CPU 19、LT 19、MUP 19、CPR 19、UTIL 19、PACU 18、CCA 18、CDF 18、THERM 18、EMDM 18、RI/NASA 18、VERN 18、ARLK 17、SEQ 17、ITVC 17、CE 17、IP 17、AVBA 16、INCR/DECR 16、GSTDN 16、SARSAT 16、CPA 16、PWR/REBA 16、PEI 15、OPER/STBY 15、COOP 15、DPY 15、PNL 15、NIST 15、ZOT 15、RSRM 15、LAI 15、SW 15、ROTOR 15、IDCA 15、LCS 14、FRCI 14、LN 14、ENA 14、CSCS 14、WLEIDS 14、SSSR 14、MAJ 14、SNSR/VLV 14、AMC 14、ACME 14、TLD 14、DME 14、LEA 14、VO2max 14、NOAX 13、PSU 13、PCI 13、CTVC 13、SSA 13、GSC 13、FCC 13、FPC 13、STRG 13、R/Y 13、NMSUS 13、PMBT 13、AVS 12、CNTRL 12、MAINT 12、FLOODS 12、SEAWARS 12、OAA 12、SIP 12、FCO 12、RCV 12、REFSMMAT 12、APC 12、RSI 12、RTC 12、ILMA 12、AUT 11、CONTR 11、EVA/ATC 11、VPU 11、EPD&C/EPG 11、AMPL 11、LLIS 11、PWM 11、PPK 11、LWMAR 11、STGT 11、LDRI 10、FOD 10、BONDLINE 10、DEP/REP 10、EPG 10、PC 10、DAT 10、PS 10、GMBL 10、SELECT/RCV 10、SSMM 10、AIAA 10、MTL 10、VORTAC 10、OVRD 10、BACKUPLH2 10、GROUP1 10、COMPT 10、ADJUSTER 10、KHZ 10、EER 10、NPLS 10。このうち多くは図の表示名・スイッチ名の短縮形で、資料の表示のままであり、正式名称を定めた箇所がない。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -794,45 +798,46 @@
 47. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2177） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2177
 48. Shuttle Crew Operations Manual 2.16 Main Propulsion System（USA007587 Rev. A CPN-1、PDF p588） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/588
 49. NTRS 20100042260 Morgan, G.「Orbiter Crew Compartment Integration-Stowage」（2007年、22頁、843,801 バイト） Middeck stowage（PDF p4） — https://ntrs.nasa.gov/api/citations/20100042260/downloads/20100042260.pdf#page=4
-50. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2178） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2178
-51. NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） 本文中の定義（PDF p666） — https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=666
-52. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2179） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2179
-53. JSC-CN-24467 Selected Lessons Learned in Space Shuttle Orbiter Propulsion and Power Subsystems（Hernandez・Martinez・Ryan・Westover・Davies、NASA JSC、AIAA の発表原稿と発表資料、2011-09-26、NTRS 20110015485、69頁、7,883,708 バイト） 本文中の定義（PDF p36） — https://ntrs.nasa.gov/api/citations/20110015485/downloads/20110015485.pdf#page=36
-54. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） STS-130 ペイロードベイドア（PDF p10） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=10
-55. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p9） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=9
-56. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） 本文中の定義（PDF p14） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=14
-57. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2180） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2180
-58. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p373） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/373
-59. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=8
-60. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2181） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2181
-61. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p43） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=43
-62. Shuttle Crew Operations Manual 2.14 Landing/Deceleration System（USA007587 Rev. A CPN-1、PDF p546） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/546
-63. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2182） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2182
-64. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p65） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/65
-65. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2183） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2183
-66. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2184） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2184
-67. STS-135 Mission Report 本文中の定義（PDF p63） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=63
-68. NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） 本文中の定義（PDF p1104） — https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=1104
-69. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p458） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/458
-70. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2185） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2185
-71. Shuttle Crew Operations Manual 前付け（USA007587 Rev. A CPN-1、PDF p9） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/9
-72. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2186） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2186
-73. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p6） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=6
-74. NSTS-12820 Vol. A PCN-8 Space Shuttle Operational Flight Rules, Volume A, All Flights（Final 1996-06-06、2313頁、5,885,090 バイト） 本文中の定義（PDF p1220） — https://www.ibiblio.org/apollo/Shuttle/NSTS-12820,%20Vol.A,%20PCN-8%20-%20Space%20Shuttle%20Operational%20Flight%20Rules,%20Volume%20A,%20All%20Flights%20(Final,%201996-06-06).PDF#page=1220
-75. STS-108 Mission Report （PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11
-76. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2187） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2187
-77. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p236） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/236
-78. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p22） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=22
-79. USA006020 Rev. B ECLSS Training Manual（2006-10-23、232頁、7,067,870 バイト） 本文中の定義（PDF p88） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=88
-80. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2188） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2188
-81. STS-56 Space Shuttle Mission Report（1993、51頁、4,013,614 バイト） 本文中の定義（PDF p37） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-56%20Space%20Shuttle%20Mission%20Report.pdf#page=37
-82. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） 本文中の定義（PDF p61） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=61
-83. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2189） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2189
-84. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2190） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2190
-85. Shuttle Crew Operations Manual 2.5 Crew Systems（USA007587 Rev. A CPN-1、PDF p209） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/209
-86. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
-87. NASA Technical Reports Server（NTRS） — https://ntrs.nasa.gov/
-88. NASA Systems Engineering Handbook（NASA/SP-2016-6105 Rev2。MOE・MOP・TPM の定義） — https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf
+50. NASA Facts FS-2005-06-018-KSC (Rev. 2006) Space Shuttle: Orbiter Processing From Landing To Launch (NASA KSC、2006、8頁、4,804,696 バイト) （PDF p4） — https://www.nasa.gov/sites/default/files/167429main_OrbiterProcessing08.pdf#page=4
+51. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2178） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2178
+52. NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） 本文中の定義（PDF p666） — https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=666
+53. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2179） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2179
+54. JSC-CN-24467 Selected Lessons Learned in Space Shuttle Orbiter Propulsion and Power Subsystems（Hernandez・Martinez・Ryan・Westover・Davies、NASA JSC、AIAA の発表原稿と発表資料、2011-09-26、NTRS 20110015485、69頁、7,883,708 バイト） 本文中の定義（PDF p36） — https://ntrs.nasa.gov/api/citations/20110015485/downloads/20110015485.pdf#page=36
+55. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） STS-130 ペイロードベイドア（PDF p10） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=10
+56. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p9） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=9
+57. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） 本文中の定義（PDF p14） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=14
+58. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2180） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2180
+59. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p373） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/373
+60. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p8） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=8
+61. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2181） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2181
+62. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p43） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=43
+63. Shuttle Crew Operations Manual 2.14 Landing/Deceleration System（USA007587 Rev. A CPN-1、PDF p546） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/546
+64. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2182） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2182
+65. Shuttle Crew Operations Manual 1.2 Orbiter Structure（USA007587 Rev. A CPN-1、PDF p65） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/65
+66. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2183） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2183
+67. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2184） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2184
+68. STS-135 Mission Report 本文中の定義（PDF p63） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-135%20Space%20Shuttle%20Mission%20Report.pdf#page=63
+69. NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） 本文中の定義（PDF p1104） — https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf#page=1104
+70. Shuttle Crew Operations Manual 2.11 Extravehicular Activity（USA007587 Rev. A CPN-1、PDF p458） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/458
+71. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2185） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2185
+72. Shuttle Crew Operations Manual 前付け（USA007587 Rev. A CPN-1、PDF p9） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/9
+73. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2186） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2186
+74. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p6） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=6
+75. NSTS-12820 Vol. A PCN-8 Space Shuttle Operational Flight Rules, Volume A, All Flights（Final 1996-06-06、2313頁、5,885,090 バイト） 本文中の定義（PDF p1220） — https://www.ibiblio.org/apollo/Shuttle/NSTS-12820,%20Vol.A,%20PCN-8%20-%20Space%20Shuttle%20Operational%20Flight%20Rules,%20Volume%20A,%20All%20Flights%20(Final,%201996-06-06).PDF#page=1220
+76. STS-108 Mission Report （PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-108%20Space%20Shuttle%20Mission%20Report.pdf#page=11
+77. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2187） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2187
+78. Shuttle Crew Operations Manual 2.6 Data Processing System（USA007587 Rev. A CPN-1、PDF p236） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/236
+79. STS-102 Space Shuttle Mission Report（NASA JSC、2001年、63頁、4,926,846 バイト） 本文中の定義（PDF p22） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-102%20Space%20Shuttle%20Mission%20Report.pdf#page=22
+80. USA006020 Rev. B ECLSS Training Manual（2006-10-23、232頁、7,067,870 バイト） 本文中の定義（PDF p88） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf#page=88
+81. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2188） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2188
+82. STS-56 Space Shuttle Mission Report（1993、51頁、4,013,614 バイト） 本文中の定義（PDF p37） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-56%20Space%20Shuttle%20Mission%20Report.pdf#page=37
+83. NSTS-37456 STS-130 Space Shuttle Mission Report（JSC、2010年、105頁、914,591 バイト） 本文中の定義（PDF p61） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-130%20Space%20Shuttle%20Mission%20Report.pdf#page=61
+84. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2189） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2189
+85. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） 付録A Acronyms and Abbreviations（PDF p2190） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=2190
+86. Shuttle Crew Operations Manual 2.5 Crew Systems（USA007587 Rev. A CPN-1、PDF p209） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/209
+87. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
+88. NASA Technical Reports Server（NTRS） — https://ntrs.nasa.gov/
+89. NASA Systems Engineering Handbook（NASA/SP-2016-6105 Rev2。MOE・MOP・TPM の定義） — https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf
 
 ## 12. 変更履歴
 
@@ -850,3 +855,4 @@
 | Rev. I | 2026-10-16 | SSD-TRJ-ORB-001 の本文が変わったので、載せなかった語の出現数を数え直した（295語。Rev. CJ）（Rev. CJ） |
 | Rev. J | 2026-10-16 | MOE・MOP・TPM の正式名称と文書番号の符号 TPM を足した（NASA Systems Engineering Handbook の定義）、SSD-TPM-SYS-001 の追加で MOE・MOP・TPM などの略語が増えたので、載せなかった語の出現数を数え直した（295語。Rev. CK）（Rev. CK） |
 | Rev. K | 2026-10-17 | 文書内の ID の接頭辞（下位の IF のインタフェース要求 IRQ-<IF の接頭辞>）と対象の符号 LOW を足した、下位の IF のインタフェース要求書の追加で、載せなかった語の出現数を数え直した（299語。Rev. CL）（Rev. CL） |
+| Rev. L | 2026-10-17 | 文書番号の符号 GND（地上処理・ターンアラウンド定義書）と、略語 MLP（Mobile Launcher Platform）を足した、SSD-GND-ORB-001 の追加で略語が増えたので、載せなかった語の出現数を数え直した（297語。Rev. CM）（Rev. CM） |

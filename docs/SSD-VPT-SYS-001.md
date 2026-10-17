@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-VPT-SYS-001 |
 | 表題 | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） |
-| 版・日付 | Rev. AY／2026-10-17 |
+| 版・日付 | Rev. AZ／2026-10-17 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図111 ビューポイントと関係者の行列 |
 
 ## 1. 目的
 
-本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 253件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
+本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 256件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
 
 ## 2. 書き方
 
@@ -72,7 +72,7 @@
 | VP-02 | インタフェース | CN-02 | SH-DES・SH-SE・SH-LPS | InterconnectionView（asInterconnectionDiagram） | SSD_BLK_SYS_001・SSD_IBD_ORB_001・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008 | SSD-ICD-ORB-001・SSD-BLK-SYS-001・SSD-IBD-ORB-001・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008 | 32（図38・図41・図42・図112・図113・図114・図128・図129・図130・図131・図159・図160・図161・図162・図179・図180・図191・図192・図200・図201・図202・図214・図215・図216・図217・図218・図233・図234・図235・図236・図237・図243） |
 | VP-03 | 要求・検証 | CN-03・CN-04 | SH-SE・SH-VER | GridView（asElementTable） | SSD_RQM_SYS_001・SSD_VER_SYS_001・SSD_RQF_SYS_001・SSD_FLT_ORB_001・SSD_HSI_SYS_001・SSD_RQL_ECL_001・SSD_IRQ_SYS_001・SSD_RQL_SYS_001・SSD_IRQ_ECL_001・SSD_IRQ_LOW_001 | SSD-REQ-*・SSD-RQM-SYS-001・SSD-VER-SYS-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-IRQ-ECL-001・SSD-IRQ-LOW-001 | 13（図90・図110・図124・図125・図133・図166・図167・図212・図213・図225・図226・図252・図253） |
 | VP-04 | 運用 | CN-05 | SH-OPS・SH-CREW・SH-LPS・SH-PL | GeneralView（asTreeDiagram） | SSD_UC_ORB_001・SSD_BEH_ORB_001・SSD_BEH_ORB_003・SSD_BEH_ORB_004 | SSD-OPS-PHASE-001・SSD-UC-ORB-001・SSD-BEH-ORB-001・003・004 | 23（図39・図40・図76・図77・図83・図84・図85・図87・図93・図94・図95・図96・図97・図238・図239・図240・図241・図242・図244・図245・図246・図247・図248） |
-| VP-05 | 系の振る舞い | CN-05 | SH-DES・SH-OPS | StateTransitionView（asTreeDiagram） | SSD_BEH_ORB_005・SSD_BEH_ORB_006・SSD_BEH_ORB_007・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008 | SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008 | 37（図98・図99・図100・図101・図102・図103・図136・図137・図138・図139・図140・図141・図142・図168・図169・図170・図171・図172・図173・図174・図175・図181・図182・図193・図194・図195・図196・図198・図199・図203・図204・図219・図220・図221・図222・図223・図224） |
+| VP-05 | 系の振る舞い | CN-05 | SH-DES・SH-OPS | StateTransitionView（asTreeDiagram） | SSD_BEH_ORB_005・SSD_BEH_ORB_006・SSD_BEH_ORB_007・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008・SSD_GND_ORB_001 | SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008・SSD-GND-ORB-001 | 40（図98・図99・図100・図101・図102・図103・図136・図137・図138・図139・図140・図141・図142・図168・図169・図170・図171・図172・図173・図174・図175・図181・図182・図193・図194・図195・図196・図198・図199・図203・図204・図219・図220・図221・図222・図223・図224・図254・図255・図256） |
 | VP-06 | 安全・故障 | CN-06 | SH-SMA・SH-CREW・SH-OPS | GeneralView（asTreeDiagram） | SSD_BEH_ORB_002・SSD_ANA_ORB_001・SSD_FDIR_ORB_001・SSD_HAZ_ORB_001・SSD_FMM_ORB_001・SSD_FMX_ECL_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_ACC_SYS_001・SSD_FMX_ORB_001 | SSD-FMEA-*・SSD-BEH-ORB-002・SSD-ANA-ORB-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001 | 29（図45・図80・図81・図82・図86・図88・図106・図107・図108・図118・図119・図120・図121・図126・図127・図176・図177・図178・図197・図205・図206・図207・図208・図209・図210・図211・図227・図228・図229） |
 | VP-07 | 資源・マージン | CN-07 | SH-SE・SH-PL・SH-MGT | GridView（asElementTable） | SSD_PAR_ORB_001・SSD_ANA_ORB_001・SSD_PRF_ORB_001・SSD_TRJ_ORB_001・SSD_TPM_SYS_001 | SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001 | 13（図44・図78・図79・図104・図105・図134・図135・図230・図231・図232・図249・図250・図251） |
 | VP-08 | 物理配置 | CN-08 | SH-DES・SH-LPS | GridView（asElementTable） | SSD_ALC_SYS_001 | SSD-PHY-ORB-001・SSD-ALC-SYS-001 | 2（図43・図91） |
@@ -84,7 +84,7 @@
 
 ## 6. ビュー（図）
 
-図 253件のビューポイントを示す。
+図 256件のビューポイントを示す。
 
 | 図 | 表題 | ビューポイント | SysML |
 |---|---|---|---|
@@ -341,6 +341,9 @@
 | 図251 | 測定指標の取れた飛行数と判定 | VP-07 | fig251 |
 | 図252 | ECLSS の下位の IF のインタフェース要求の一覧 | VP-03 | fig252 |
 | 図253 | ECLSS 以外の下位の IF のインタフェース要求の一覧 | VP-03 | fig253 |
+| 図254 | 着陸後から打上げまでの地上処理 活動図 | VP-05 | fig254 |
+| 図255 | 地上の機体の状態 状態遷移図 | VP-05 | fig255 |
+| 図256 | 地上処理の段と秒読みの節目 | VP-05 | fig256 |
 
 ## 7. 表記の規約
 
@@ -348,7 +351,7 @@
 
 | 接頭辞 | 形 | 意味 | 例 | 件数 |
 |---|---|---|---|---|
-| SSD- | SSD-<種別>-<対象>-<3桁> | 文書番号（SSD-種別-対象-連番） | SSD-FD-OMS-ENG-001 | 334 |
+| SSD- | SSD-<種別>-<対象>-<3桁> | 文書番号（SSD-種別-対象-連番） | SSD-FD-OMS-ENG-001 | 335 |
 | F- | F-<系>-<下位>-<2桁> | 機能行（機能説明書の機能の表） | F-OMS-ENG-01 | 2075 |
 | IF- | IF-<系>-<番号> | インタフェース（所有の文書の IF の表） | IF-ORB-05 | 601 |
 | REQ- | REQ-<系>-<2桁> | 要求（要求書） | REQ-OMS-01 | 317 |
@@ -360,7 +363,7 @@
 | VF-・MK- | VF-<2桁>・MK-<2桁> | 機体の特徴・ミッションキット | VF-05 | 31 |
 | MS-・MC-・DV-・DE- | MS-・MC-・DV-・DE-<2桁> | 質量特性・Δv の値と式 | DV-04 | 60 |
 | VP-・CN-・SH- | VP-<2桁>・CN-<2桁>・SH-<略号> | ビューポイント・関心事・関係者 | VP-01 | 44 |
-| EQ-・EB-・FL-・FI- | EQ-・EB-・FL-<図>-<2桁>・FI-<2桁> | 内部ブロック図の部品・相手・流れ・流れる物 | FL-EPS-03 | 2138 |
+| EQ-・EB-・FL-・FI- | EQ-・EB-・FL-<図>-<2桁>・FI-<2桁> | 内部ブロック図の部品・相手・流れ・流れる物 | FL-EPS-03 | 2153 |
 | TR-・GAP-・IMP- | TR-<2桁>・GAP-<2桁>[-<2桁>]・IMP-<2桁> | トレースの関係・切れ目・影響分析 | GAP-06-01 | 142 |
 | CW-・EM-・DT-・RS-・BU- | CW-・EM-・DT-・RS-・BU-<2桁> | C/W の警報・検知する故障・処置・警報の区分 | CW-05 | 155 |
 | HZ-・HC-・HM- | HZ-・HC-・HM-<2桁> | ハザード・原因・管理策 | HZ-01 | 134 |
@@ -395,6 +398,8 @@
 | ACR- | ACR-<3桁> | 略語表の行（略称と正式名称） | ACR-001 | 0 |
 | MOE・MOP・TPM | <MOE|MOP|TPM>-<2桁> | 飛行実績の測定指標（MOE・MOP・TPM） | TPM-01 | 15 |
 | IRQ-（下位 IF）・VC-IRQ-（下位 IF） | IRQ-<IF の接頭辞>-<IF の番号>・VC-IRQ-… | 下位の IF のインタフェース要求・その検証ケース | IRQ-APU-08 | 1038 |
+| GNDS-・GNDT- | GNDS-<2桁>・GNDT-<2桁> | 地上の機体の状態・遷移 | GNDT-01 | 26 |
+| CMS-・CMT- | CMS-<2桁>・CMT-<2桁> | 地上処理の段・秒読みの節目 | CMS-01 | 16 |
 
 ## 8. ビューポイントの図
 
@@ -402,7 +407,7 @@
 
 ## 9. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 253件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 256件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -474,3 +479,4 @@
 | Rev. AW | 2026-10-16 | SSD-TRJ-ORB-001 の改版（Rev. CJ）に合わせて文書とビューを確かめ直した（Rev. CJ） |
 | Rev. AX | 2026-10-16 | 図249〜251（飛行実績の測定指標）を VP-07 のビューに加え、SSD_TPM_SYS_001 を晒すようにし、表記の規約に MOE・MOP・TPM の ID を加えた（Rev. CK） |
 | Rev. AY | 2026-10-17 | 図252・253（下位の IF のインタフェース要求）を VP-03 のビューに加え、SSD_IRQ_ECL_001・SSD_IRQ_LOW_001 を晒すようにし、表記の規約に下位の IF のインタフェース要求と検証ケースの ID を加えた（Rev. CL） |
+| Rev. AZ | 2026-10-17 | 図254〜256（地上処理の活動・状態・段）を VP-05 のビューに加え、SSD_GND_ORB_001 を晒すようにし、表記の規約に地上の機体の状態・遷移（GNDS-・GNDT-）と段・節目（CMS-・CMT-）の ID を加えた（Rev. CM） |
