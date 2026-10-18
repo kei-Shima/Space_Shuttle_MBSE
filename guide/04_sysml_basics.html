@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SysML を読む｜MBSE 初心者ガイド</title><style>:root{--ink:#15202B;--sub:#4A5563;--paper:#FFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;--ok:#1B7F4B;--b1:#DCE9F8;--b2:#FDE6D6;--b3:#DDF1E4;--b4:#EEE2F7}
+*{box-sizing:border-box}html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;line-height:1.8}
+.bar{height:6px;background:var(--flag)}
+main{max-width:56rem;margin:0 auto;padding:1.25rem 1rem 4rem}
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 1.25rem;font-size:.88rem}
+nav.pages a{padding:.1rem .65rem;border:1px solid var(--rule);border-radius:3px;text-decoration:none;white-space:nowrap}
+nav.pages a[aria-current]{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:1.6rem;line-height:1.4;margin:.5rem 0 .25rem}
+h2{font-size:1.2rem;margin:2.2rem 0 .7rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.5rem 0 .4rem}
+a{color:var(--link);text-underline-offset:2px}a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.lead{color:var(--sub);margin:0 0 1rem}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all;margin:.2rem 0 1rem}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.8rem 0}
+.note b{color:var(--flag)}
+.goal{border-left:4px solid var(--ok);background:#F0FAF4;padding:.6rem .9rem;margin:.8rem 0}
+.goal b{color:var(--ok)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.6rem 0 1.2rem}
+th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem}
+td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+tr:nth-child(even) td{background:var(--panel)}
+.scroll{overflow-x:auto}
+pre{background:#0F1B2A;color:#E8EEF5;padding:.8rem 1rem;overflow-x:auto;font-size:.82rem;line-height:1.55;border-radius:4px;margin:.6rem 0 .2rem}
+code{font-family:Consolas,"Source Code Pro",monospace}
+figure{margin:1rem 0 1.5rem}figure svg,figure img{max-width:100%;height:auto;border:1px solid var(--rule);background:#fff}
+figcaption{font-size:.85rem;color:var(--sub)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem;margin:.8rem 0 1.5rem}
+.card{border:1px solid var(--rule);border-radius:4px;padding:.6rem .8rem;background:var(--panel)}
+.card img{width:100%;height:auto;border:1px solid var(--rule);background:#fff;margin:.3rem 0}
+.card h3{margin:.1rem 0}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2.5rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);font-size:.92rem}
+details{border:1px solid var(--rule);border-radius:4px;padding:.4rem .8rem;margin:.5rem 0;background:#FAFBFC}
+summary{cursor:pointer;font-weight:600}
+@media(max-width:40rem){h1{font-size:1.35rem}}
+@media print{.bar{display:none}a{color:var(--ink)}}
+</style></head><body><div class="bar"></div><main>
+<nav class="pages" aria-label="ガイド内の移動"><a href="index.html">入口</a><a href="01_what_is_mbse.html">1 MBSE とは</a><a href="02_four_pillars.html">2 4本柱</a><a href="03_read_shuttle_model.html">3 歩き方</a><a href="04_sysml_basics.html" aria-current="page">4 SysML を読む</a><a href="05_exercises.html">5 演習</a></nav>
+<h1>4　SysML を読む</h1>
+<p class="lead">SysML v2 のテキストを書けるようになる必要はありません。「何が書いてあるか」を読めれば十分です。実物の 5 か所を取り上げます。</p>
+<div class="note"><b>引用について：</b>以下のコードは、このパッケージの <code>SysML/</code> から原文のまま抜いたものです（出典の行番号つき）。</div>
+<h2>読み方の基本</h2>
+<ul><li><code>X def Y { … }</code> は「Y という型を定義する」。<code>X</code> は種類（requirement、part、state など）。</li>
+<li><code>doc /* … */</code> は説明文（日本語の注釈）。まずここだけ読めば内容がつかめます。</li>
+<li><code>// …</code> はコメント。</li></ul>
+<h2>例1　要求（requirement def）</h2>
+<p>REQ-SYS-01 の値を数にしたものです。<code>require constraint</code> が「満たすべき式」です。</p>
+<pre><code>    requirement def &lt;&#x27;REQ-SYS-01&#x27;&gt; ReqSys01 {
+        doc /* REQ-SYS-01 の値の形式化（数） */
+        attribute majorElements : Integer { doc /* RF-001 主要素の数（単位なし） */ }
+        attribute srbCount : Integer { doc /* RF-002 SRB の本数（単位なし） */ }
+        attribute ssmeCount : Integer { doc /* RF-003 SSME の基数（単位なし） */ }
+        require constraint { doc /* ＝ 4 */ majorElements == 4 }
+        require constraint { doc /* ＝ 2 */ srbCount == 2 }
+        require constraint { doc /* ＝ 3 */ ssmeCount == 3 }
+    }
+    #refinement dependency &lt;&#x27;REQ-SYS-01&gt;RQM&#x27;&gt; from ReqSys01 to SSD_RQM_SYS_001::REQ_SYS::REQ_SYS_01;</code></pre><p class="src">出典：<a href="../SysML/SSD-RQF-SYS-001.sysml">SSD-RQF-SYS-001.sysml</a>（12〜21 行目）</p><p>読み解き：<code>doc</code> の「主要素の数」は 4、SRB は 2 本、SSME は 3 基と書いてあります。最後の <code>#refinement dependency</code> は、要求の文面側（RQM）とのつながりです。</p>
+<h2>例2　検証ケース（verification def）</h2>
+<pre><code>    verification def &lt;&#x27;VC-REQ-SYS-01&#x27;&gt; VC_REQ_SYS_01 {
+        doc /* REQ-SYS-01 をI（検査）で確かめる。 */
+        @VerificationMethod { kind = VerificationMethodKind::inspect; }
+        subject s : Parts::Part;
+        objective { verify REQ_SYS::REQ_SYS_01; }
+        return verdict : VerdictKind;
+    }</code></pre><p class="src">出典：<a href="../SysML/SSD-VER-SYS-001.sysml">SSD-VER-SYS-001.sysml</a>（8〜14 行目）</p><p>読み解き：<code>objective { verify … }</code> が「どの要求を確かめるか」。<code>kind = inspect</code> が方法（検査）。<code>return verdict</code> が結果（合否）です。</p>
+<h2>例3　状態（state def）</h2>
+<pre><code>        entry; then PH_1;
+        state PH_1 { doc /* PH-1 打上げ前 */ }
+        state PH_2 {
+            doc /* PH-2 上昇 */
+            entry; then PH_2a;
+            state PH_2a { doc /* PH-2a 上昇・第1段 */ }
+            state PH_2b { doc /* PH-2b 上昇・第2段 */ }
+            state PH_2c { doc /* PH-2c 上昇・軌道投入 */ }
+            transition TR_02 first PH_2a accept SrbSeparation then PH_2b;
+            transition TR_03 first PH_2b accept MecoEtSeparation then PH_2c;
+        }</code></pre><p class="src">出典：<a href="../SysML/SSD-BEH-ORB-001.sysml">SSD-BEH-ORB-001.sysml</a>（38〜48 行目）</p><p>読み解き：<code>state PH_2</code> の中に <code>PH_2a</code>〜<code>PH_2c</code> の状態があり、<code>transition</code> は「SrbSeparation を受けたら PH_2a から PH_2b へ」という切り替えです。<a href="../html/SSD-SYS-ARC-001_p76_mode_sm.svg">図76</a>と見比べてください。</p>
+<h2>例4　ポート（port def）</h2>
+<pre><code>    port def CryoO2Port :&gt; FluidPort { out item :&gt;&gt; fluid : CryoO2; }</code></pre><p class="src">出典：<a href="../SysML/SSD-IBD-ORB-001.sysml">SSD-IBD-ORB-001.sysml</a>（18〜18 行目）</p><p>読み解き：<code>CryoO2Port</code> は、極低温酸素を出す口という型です。部品どうしをつなぐ線は、このポートの間に引かれます。</p>
+<h2>例5　満たす関係（satisfy）</h2>
+<pre><code>        satisfy InterfaceRequirements::IRQ_ALS_01 by context.sts.orb.eclss.IF_ALS_01 { doc /* 割付先：IF-ALS-01 */ }
+        satisfy InterfaceRequirements::IRQ_ALS_02 by context.IF_ALS_02 { doc /* 割付先：IF-ALS-02 */ }</code></pre><p class="src">出典：<a href="../SysML/SSD-IRQ-ECL-001.sysml">SSD-IRQ-ECL-001.sysml</a>（2691〜2692 行目）</p><p>読み解き：<code>satisfy A by B</code> は「要求 A を B が満たす」という線です。ここではインタフェース要求 IRQ-ALS-01 を、IF-ALS-01 が満たします。<code>doc</code> に「割付先：…」とあります。</p>
+<h2>VS Code で開く</h2>
+<p>VS Code に SysML v2 の拡張機能を入れると、構文の色分けと検査ができます。推奨の拡張機能は、リポジトリの <code>.vscode/</code> に入っています。くわしくは <a href="../README.md">README</a> の「SysML v2 モデルを VS Code で開く」の節を見てください。</p>
+<div class="note"><b>次の一歩：</b><a href="05_exercises.html">演習</a>で、上の例を使って自分で確かめます。</div>
+<div class="pn"><span>← <a href="03_read_shuttle_model.html">3 歩き方</a></span><span><a href="05_exercises.html">5 演習</a> →</span></div>
+<p class="src">スペースシャトル システム設計（SSD）の付属ガイド。<a href="../html/index.html">図書一覧へ</a>｜<a href="../README.md">README</a></p></main></body></html>

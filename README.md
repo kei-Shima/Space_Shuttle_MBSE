@@ -9,6 +9,7 @@
 - 図書一覧：[docs/SSD-SYS-IDX-001.md](docs/SSD-SYS-IDX-001.md)
 - 英語の略称の正式名称：[docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)（略語表）
 - 参照した公開資料の一覧：[REFERENCES.md](REFERENCES.md)
+- MBSE 初心者の方へ：[guide/](guide/README.md)（学習の順序と演習つきの入門ガイド。ブラウザ版：<https://kei-shima.github.io/Space_Shuttle_MBSE/guide/>）
 
 ## フォルダ構成
 
@@ -23,6 +24,7 @@
 | `docs/SSD-SYS-IDX-001.md` | 図書一覧（図・文書・変更履歴の一覧） | GitHub の画面、VS Code |
 | `SysML/*.sysml` | SysML v2 テキスト 53件 | VS Code（下記の拡張機能） |
 | `Draw_io/SSD-SYS-ARC-001.drawio` | 図の原本（256ページ） | draw.io |
+| `guide/` | MBSE 初心者向けの入門ガイド（HTML 6ページ＋README.md）。成果物の件数には含めない | ブラウザ（guide/index.html） |
 | `REFERENCES.md` | 説明書が出典として引用している公開資料（インターネット上の文献）の一覧。公開元ごとに、文献・URL・引用箇所の数・引用している文書を並べたもの | GitHub の画面、VS Code |
 | `LICENSE.md` | ライセンス（CC BY 4.0）の全文 | GitHub の画面、VS Code |
 | `README.en.md` | 英語の README（図・説明書・SysML の中身は日本語のまま） | GitHub の画面、VS Code |

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>歩き方｜MBSE 初心者ガイド</title><style>:root{--ink:#15202B;--sub:#4A5563;--paper:#FFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;--ok:#1B7F4B;--b1:#DCE9F8;--b2:#FDE6D6;--b3:#DDF1E4;--b4:#EEE2F7}
+*{box-sizing:border-box}html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;line-height:1.8}
+.bar{height:6px;background:var(--flag)}
+main{max-width:56rem;margin:0 auto;padding:1.25rem 1rem 4rem}
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 1.25rem;font-size:.88rem}
+nav.pages a{padding:.1rem .65rem;border:1px solid var(--rule);border-radius:3px;text-decoration:none;white-space:nowrap}
+nav.pages a[aria-current]{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:1.6rem;line-height:1.4;margin:.5rem 0 .25rem}
+h2{font-size:1.2rem;margin:2.2rem 0 .7rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.5rem 0 .4rem}
+a{color:var(--link);text-underline-offset:2px}a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.lead{color:var(--sub);margin:0 0 1rem}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all;margin:.2rem 0 1rem}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.8rem 0}
+.note b{color:var(--flag)}
+.goal{border-left:4px solid var(--ok);background:#F0FAF4;padding:.6rem .9rem;margin:.8rem 0}
+.goal b{color:var(--ok)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.6rem 0 1.2rem}
+th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem}
+td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+tr:nth-child(even) td{background:var(--panel)}
+.scroll{overflow-x:auto}
+pre{background:#0F1B2A;color:#E8EEF5;padding:.8rem 1rem;overflow-x:auto;font-size:.82rem;line-height:1.55;border-radius:4px;margin:.6rem 0 .2rem}
+code{font-family:Consolas,"Source Code Pro",monospace}
+figure{margin:1rem 0 1.5rem}figure svg,figure img{max-width:100%;height:auto;border:1px solid var(--rule);background:#fff}
+figcaption{font-size:.85rem;color:var(--sub)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem;margin:.8rem 0 1.5rem}
+.card{border:1px solid var(--rule);border-radius:4px;padding:.6rem .8rem;background:var(--panel)}
+.card img{width:100%;height:auto;border:1px solid var(--rule);background:#fff;margin:.3rem 0}
+.card h3{margin:.1rem 0}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2.5rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);font-size:.92rem}
+details{border:1px solid var(--rule);border-radius:4px;padding:.4rem .8rem;margin:.5rem 0;background:#FAFBFC}
+summary{cursor:pointer;font-weight:600}
+@media(max-width:40rem){h1{font-size:1.35rem}}
+@media print{.bar{display:none}a{color:var(--ink)}}
+</style></head><body><div class="bar"></div><main>
+<nav class="pages" aria-label="ガイド内の移動"><a href="index.html">入口</a><a href="01_what_is_mbse.html">1 MBSE とは</a><a href="02_four_pillars.html">2 4本柱</a><a href="03_read_shuttle_model.html" aria-current="page">3 歩き方</a><a href="04_sysml_basics.html">4 SysML を読む</a><a href="05_exercises.html">5 演習</a></nav>
+<h1>3　このパッケージの歩き方</h1><p class="lead">図 → 説明書 → SysML の順に、上から開いてください。</p><div class="note"><b>読み方のコツ：</b>1 枚の図を完全に理解しようとしないでください。最初は「箱と線で何を言っているか」だけを見ます。細かい数値や略称は、あとで説明書と略語表で確かめます。</div><h2 id="s0">ステップ0　言葉をそろえる</h2><div class="goal"><b>ここでわかること：</b>略称の意味を引けるようになる。</div><div class="scroll"><table><tr><th>順</th><th>開くもの</th><th>見どころ</th></tr><tr><td>1</td><td><a href="../html/docs/SSD-ACR-SYS-001.html">略語表 SSD-ACR-SYS-001</a></td><td>知らない略称はここで引く。ブックマーク推奨</td></tr><tr><td>2</td><td><a href="02_four_pillars.html#glossary">用語の早見表</a></td><td>MBSE の用語を 1 行ずつ</td></tr></table></div><h2 id="s1">ステップ1　全体と構造</h2><div class="goal"><b>ここでわかること：</b>システムが何でできているかを説明できる。</div><div class="scroll"><table><tr><th>順</th><th>開くもの</th><th>見どころ</th></tr><tr><td>1</td><td><a href="../html/SSD-SYS-ARC-001_p1_system.svg">図1　システム構成</a></td><td>いちばん外側の構成。何を設計しているか</td></tr><tr><td>2</td><td><a href="../html/SSD-SYS-ARC-001_p2_orbiter.svg">図2　オービタ サブシステム構成</a></td><td>中心となる機体の内訳</td></tr><tr><td>3</td><td><a href="../html/SSD-SYS-ARC-001_p89_bdd_structure.svg">図89　システム構成（BDD）</a></td><td>部品の種類と包含。箱の入れ子を見る</td></tr><tr><td>4</td><td><a href="../html/SSD-SYS-ARC-001_p92_model_packages.svg">図92　モデルの構成（パッケージ図）</a></td><td>モデルをどうまとめているか（パッケージ）</td></tr><tr><td>5</td><td><a href="../html/docs/SSD-MDL-SYS-001.html">SSD-MDL-SYS-001</a></td><td>モデルの統合と検査の説明書</td></tr></table></div><h2 id="s2">ステップ2　要求</h2><div class="goal"><b>ここでわかること：</b>「要求」が何で、どんな形で書かれているかを言える。</div><div class="scroll"><table><tr><th>順</th><th>開くもの</th><th>見どころ</th></tr><tr><td>1</td><td><a href="../html/SSD-SYS-ARC-001_p90_req_matrix.svg">図90　要求の導出・充足 行列</a></td><td>要求がどこから導かれ、何で満たされるか</td></tr><tr><td>2</td><td><a href="../html/docs/SSD-RQM-SYS-001.html">SSD-RQM-SYS-001</a></td><td>要求モデルの説明書（導出・充足・検証方法）</td></tr><tr><td>3</td><td><a href="../html/docs/SSD-RQF-SYS-001.html">SSD-RQF-SYS-001</a></td><td>要求を属性・制約・値で表した版（形式化）。<a href="04_sysml_basics.html">SysML を読む</a>で扱います</td></tr></table></div><h2 id="s3">ステップ3　振る舞い</h2><div class="goal"><b>ここでわかること：</b>使われ方・状態・時間の流れの 3 つの見方を区別できる。</div><div class="scroll"><table><tr><th>順</th><th>開くもの</th><th>見どころ</th></tr><tr><td>1</td><td><a href="../html/SSD-SYS-ARC-001_p93_uc_mission.svg">図93　運用のユースケース</a></td><td>誰が何のために使うか</td></tr><tr><td>2</td><td><a href="../html/SSD-SYS-ARC-001_p76_mode_sm.svg">図76　ミッションフェーズ・アボート 状態遷移</a></td><td>フェーズが切り替わる条件</td></tr><tr><td>3</td><td><a href="../html/SSD-SYS-ARC-001_p84_seq_ascent.svg">図84　上昇 シーケンス</a></td><td>時間順のやり取り</td></tr><tr><td>4</td><td><a href="../html/docs/SSD-UC-ORB-001.html">SSD-UC-ORB-001</a></td><td>運用シナリオ・ユースケースの説明書</td></tr><tr><td>5</td><td><a href="../html/docs/SSD-BEH-ORB-001.html">SSD-BEH-ORB-001</a></td><td>状態遷移の説明書</td></tr></table></div><h2 id="s4">ステップ4　内部のつながり</h2><div class="goal"><b>ここでわかること：</b>部品の内側で何が何につながるかを読める。</div><div class="scroll"><table><tr><th>順</th><th>開くもの</th><th>見どころ</th></tr><tr><td>1</td><td><a href="../html/SSD-SYS-ARC-001_p112_ibd_eps.svg">図112　EPS 発電・配電 内部ブロック図</a></td><td>線をたどり、流れるものを追う</td></tr><tr><td>2</td><td><a href="../html/docs/SSD-IBD-ORB-001.html">SSD-IBD-ORB-001</a></td><td>機器の接続と流れる物の説明書</td></tr></table></div><h2 id="s5">ステップ5　検証と追跡</h2><div class="goal"><b>ここでわかること：</b>要求 → 検証の線をたどれる。</div><div class="scroll"><table><tr><th>順</th><th>開くもの</th><th>見どころ</th></tr><tr><td>1</td><td><a href="../html/SSD-SYS-ARC-001_p110_verification.svg">図110　検証マトリクス</a></td><td>要求ごとの検証方法の行列</td></tr><tr><td>2</td><td><a href="../html/SSD-SYS-ARC-001_p115_trace_chain.svg">図115　トレースの連鎖</a></td><td>要求から検証まで、線でつながる様子</td></tr><tr><td>3</td><td><a href="../html/SSD-SYS-ARC-001_p116_trace_coverage.svg">図116　系ごとのトレース網羅</a></td><td>系ごとに、つながりが揃っているかの集計</td></tr><tr><td>4</td><td><a href="../html/docs/SSD-VER-SYS-001.html">SSD-VER-SYS-001</a></td><td>検証ケース・検証マトリクスの説明書</td></tr><tr><td>5</td><td><a href="../html/docs/SSD-TRC-SYS-001.html">SSD-TRC-SYS-001</a></td><td>トレース網羅・影響分析の説明書</td></tr></table></div><h2>図書一覧の使い方</h2>
+<p>さらに先へ進むときは、<a href="../html/index.html">図書一覧</a>を使います。<a href="../html/index_figures.html">図面のページ</a>は、見る立場（ビューポイント）ごとに縮小図が並びます。系（電源、環境制御、誘導など）ごとの説明書は、<a href="../html/index_documents.html">文書一覧</a>から選べます。</p>
+<p>GitHub の画面で読むときは、<a href="../docs/SSD-SYS-IDX-001.md">docs/SSD-SYS-IDX-001.md</a> から Markdown の説明書をたどれます。</p>
+<div class="pn"><span>← <a href="02_four_pillars.html">2 4本柱</a></span><span><a href="04_sysml_basics.html">4 SysML を読む</a> →</span></div>
+<p class="src">スペースシャトル システム設計（SSD）の付属ガイド。<a href="../html/index.html">図書一覧へ</a>｜<a href="../README.md">README</a></p></main></body></html>

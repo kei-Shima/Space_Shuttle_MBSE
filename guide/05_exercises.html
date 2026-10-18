@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>演習｜MBSE 初心者ガイド</title><style>:root{--ink:#15202B;--sub:#4A5563;--paper:#FFF;--panel:#F3F5F8;--rule:#B8C0CA;--link:#1F5FAD;--flag:#E4570E;--ok:#1B7F4B;--b1:#DCE9F8;--b2:#FDE6D6;--b3:#DDF1E4;--b4:#EEE2F7}
+*{box-sizing:border-box}html{font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;line-height:1.8}
+.bar{height:6px;background:var(--flag)}
+main{max-width:56rem;margin:0 auto;padding:1.25rem 1rem 4rem}
+nav.pages{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 1.25rem;font-size:.88rem}
+nav.pages a{padding:.1rem .65rem;border:1px solid var(--rule);border-radius:3px;text-decoration:none;white-space:nowrap}
+nav.pages a[aria-current]{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:1.6rem;line-height:1.4;margin:.5rem 0 .25rem}
+h2{font-size:1.2rem;margin:2.2rem 0 .7rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+h3{font-size:1.02rem;margin:1.5rem 0 .4rem}
+a{color:var(--link);text-underline-offset:2px}a:focus-visible{outline:3px solid var(--flag);outline-offset:2px}
+.lead{color:var(--sub);margin:0 0 1rem}
+.src{font-size:.8rem;color:var(--sub);word-break:break-all;margin:.2rem 0 1rem}
+.note{border-left:4px solid var(--flag);background:#FFF7F2;padding:.6rem .9rem;margin:.8rem 0}
+.note b{color:var(--flag)}
+.goal{border-left:4px solid var(--ok);background:#F0FAF4;padding:.6rem .9rem;margin:.8rem 0}
+.goal b{color:var(--ok)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.6rem 0 1.2rem}
+th{background:var(--ink);color:#fff;text-align:left;font-weight:600;padding:.4rem .6rem}
+td{border-bottom:1px solid var(--rule);padding:.5rem .6rem;vertical-align:top}
+tr:nth-child(even) td{background:var(--panel)}
+.scroll{overflow-x:auto}
+pre{background:#0F1B2A;color:#E8EEF5;padding:.8rem 1rem;overflow-x:auto;font-size:.82rem;line-height:1.55;border-radius:4px;margin:.6rem 0 .2rem}
+code{font-family:Consolas,"Source Code Pro",monospace}
+figure{margin:1rem 0 1.5rem}figure svg,figure img{max-width:100%;height:auto;border:1px solid var(--rule);background:#fff}
+figcaption{font-size:.85rem;color:var(--sub)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem;margin:.8rem 0 1.5rem}
+.card{border:1px solid var(--rule);border-radius:4px;padding:.6rem .8rem;background:var(--panel)}
+.card img{width:100%;height:auto;border:1px solid var(--rule);background:#fff;margin:.3rem 0}
+.card h3{margin:.1rem 0}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2.5rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);font-size:.92rem}
+details{border:1px solid var(--rule);border-radius:4px;padding:.4rem .8rem;margin:.5rem 0;background:#FAFBFC}
+summary{cursor:pointer;font-weight:600}
+@media(max-width:40rem){h1{font-size:1.35rem}}
+@media print{.bar{display:none}a{color:var(--ink)}}
+</style></head><body><div class="bar"></div><main>
+<nav class="pages" aria-label="ガイド内の移動"><a href="index.html">入口</a><a href="01_what_is_mbse.html">1 MBSE とは</a><a href="02_four_pillars.html">2 4本柱</a><a href="03_read_shuttle_model.html">3 歩き方</a><a href="04_sysml_basics.html">4 SysML を読む</a><a href="05_exercises.html" aria-current="page">5 演習</a></nav>
+<h1>5　演習</h1>
+<p class="lead">答えは、折りたたみの中に出典つきで書いてあります。先に自分で探してから開いてください。</p>
+<h2>演習1　要求の値を読む</h2>
+<p>REQ-SYS-01 は、何を何個と定めていますか。<a href="../SysML/SSD-RQF-SYS-001.sysml">SSD-RQF-SYS-001.sysml</a> から探します。</p>
+<details><summary>答えと確かめ方</summary><p>主要素 4、SRB 2 本、SSME 3 基。<a href="04_sysml_basics.html">SysML を読む</a>の例1（SSD-RQF-SYS-001.sysml の 12〜21 行目）に書かれています。</p></details>
+<h2>演習2　要求から検証ケースへ</h2>
+<p>REQ-SYS-02（軌道高度）は、どの方法で確かめることになっていますか。<a href="../SysML/SSD-VER-SYS-001.sysml">SSD-VER-SYS-001.sysml</a> の <code>VC-REQ-SYS-02</code> を探します。</p>
+<details><summary>答えと確かめ方</summary><p>実証（Demonstration、<code>demo</code>）です。<code>VC-REQ-SYS-02</code> の <code>@VerificationMethod</code> に <code>kind = VerificationMethodKind::demo</code> と書かれています。値の範囲は、RQF の REQ-SYS-02 に 100〜312 n.mi. とあります。</p></details>
+<h2>演習3　追跡の規模をつかむ</h2>
+<p><a href="../SysML/SSD-TRC-SYS-001.sysml">SSD-TRC-SYS-001.sysml</a> の先頭近くに、追跡の種類ごとの件数が書かれています。「満たす（satisfy）」と「検証（verify）」は、それぞれ何件ですか。</p>
+<details><summary>答えと確かめ方</summary><p>TR-02（satisfy）が 3206 件、TR-03（verify）が 1352 件です（SSD-TRC-SYS-001.sysml の 15〜16 行目の <code>count</code>）。件数は、版を重ねると変わることがあります。ファイルの現在の値を見てください。</p></details>
+<h2>演習4　図とテキストを見比べる</h2>
+<p><a href="../html/SSD-SYS-ARC-001_p76_mode_sm.svg">図76</a>の状態遷移図と、<a href="../SysML/SSD-BEH-ORB-001.sysml">SSD-BEH-ORB-001.sysml</a> の <code>state def MissionMode</code> を見比べ、図の矢印が <code>transition</code> のどの行に対応するかを 1 本見つけてください。</p>
+<details><summary>ヒント</summary><p>PH-2a（上昇・第1段）から PH-2b（第2段）への矢印は、<code>transition TR_02 first PH_2a accept SrbSeparation then PH_2b;</code> に当たります（SRB 分離の事象で切り替わる）。</p></details>
+<h2>演習5　自分で 1 本たどる（まとめ）</h2>
+<ol><li><a href="../html/SSD-SYS-ARC-001_p90_req_matrix.svg">図90</a>から、気になる要求を 1 つ選ぶ。</li>
+<li><a href="../html/docs/SSD-RQM-SYS-001.html">SSD-RQM-SYS-001</a> で文面と出典を読む。</li>
+<li><a href="../html/docs/SSD-VER-SYS-001.html">SSD-VER-SYS-001</a> で、その検証ケースの方法を確かめる。</li>
+<li><a href="../html/SSD-SYS-ARC-001_p115_trace_chain.svg">図115</a>の追跡の鎖の中で、その線がどこに当たるかを見る。</li></ol>
+<p>ここまでできれば、MBSE の核心（要求から検証までを線でたどる）を一通り体験したことになります。次は、気になる系（電源、環境制御、誘導など）を<a href="../html/index_documents.html">文書一覧</a>から選んで、同じ手順を繰り返してください。</p>
+
+<div class="pn"><span>← <a href="04_sysml_basics.html">4 SysML を読む</a></span><span></span></div>
+<p class="src">スペースシャトル システム設計（SSD）の付属ガイド。<a href="../html/index.html">図書一覧へ</a>｜<a href="../README.md">README</a></p></main></body></html>

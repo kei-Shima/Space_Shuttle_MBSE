@@ -51,6 +51,7 @@ On github.com, HTML files are shown as source. To read on github.com instead, st
 
 | Path | Contents | Open with |
 |---|---|---|
+| `guide/` | Beginner's guide to MBSE (Japanese only; 6 HTML pages + README.md). Not counted in the deliverable totals | Browser (`guide/index.html`) |
 | `html/index.html`, `html/index_*.html` | Document index | Browser |
 | `html/*.svg` | The 256 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
 | `html/preview/*.png` | PNG versions of the diagrams | Image viewer |
