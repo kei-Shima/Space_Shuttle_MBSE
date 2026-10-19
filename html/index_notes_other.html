@@ -77,7 +77,7 @@ summary{cursor:pointer;font-size:.9rem;color:var(--link)}
 <nav class="pages" aria-label="図書一覧のページ"><a href="index.html">図書一覧</a><a href="index_guide.html">使い方・出典</a><a href="index_figures.html">図面</a><a href="index_documents.html">文書一覧</a><a href="index_interfaces.html">インタフェース一覧</a><a href="index_notes.html">注記</a><a href="index_history.html">変更履歴</a></nav>
 <h2>5. 注記（出典間の相違・構成変更）</h2>
 <nav class="pages sub" aria-label="注記のページ"><a href="index_notes_vehicle.html">システム全体・推進</a><a href="index_notes_avionics.html">誘導制御・データ処理・通信・警報</a><a href="index_notes_power.html">電力・油圧・熱</a><a href="index_notes_crew.html">構造・機構・ペイロード・乗員・船外活動</a><a href="index_notes_eclss.html">環境制御・生命維持系（ECLSS）</a><a href="index_notes_ars.html">大気再生系（ARS）とその下位</a><a href="index_notes_ops.html">運用・振る舞い・要求・検証</a><a href="index_notes_model.html">構成・資源・安全</a><a href="index_notes_hsi.html">人間系</a><a href="index_notes_other.html" aria-current="page">その他</a></nav>
-<h3 id="g-etc">その他<span class="n">1文書・6件</span><a class="more" href="index_documents.html#g-etc">文書一覧</a></h3>
+<h3 id="g-etc">その他<span class="n">2文書・10件</span><a class="more" href="index_documents.html#g-etc">文書一覧</a></h3>
 <!--[notes:etc]-->
 <div class='note'><b><a href='docs/SSD-GRD-SYS-001.html'>SSD-GRD-SYS-001</a></b>　範囲・判定・出典の扱い：グリッドの行は、HDBK-1009A の技術プロセス 1〜9 に、HDBK のグリッドに含まれない技術管理プロセス 10〜17（技術計画・要求管理・インタフェース管理・技術リスク管理・構成管理・技術データ管理・技術評価・決定分析）を足した（本書の拡張）。列は SysML の4つの柱に「その他」（関連文書・トレース・安全・故障・出典など、4つの柱に当たらない図）を足した（本書の拡張）。</div>
 <div class='note'><b><a href='docs/SSD-GRD-SYS-001.html'>SSD-GRD-SYS-001</a></b>　範囲・判定・出典の扱い：図の行・列への割り当ては本書の判断（gridrules.py の規則。結果を見てから直した点は PLAN_CS の追記）。0 の行（製品の実装・製品の統合・製品の妥当性確認）は、モデルの欠けを示すが、割り当ての粗さの結果でもある（たとえば区画の配置図は設計解の定義に入れた）。</div>
@@ -85,5 +85,9 @@ summary{cursor:pointer;font-size:.9rem;color:var(--link)}
 <div class='note'><b><a href='docs/SSD-GRD-SYS-001.html'>SSD-GRD-SYS-001</a></b>　範囲・判定・出典の扱い：手法の対応は、Estefan 2008 の調査（手法の紹介）の工程名を、本パッケージの文書・図と対応させた判定で、手法の推奨ではなく、シャトル計画の進め方でもない。RUP SE は RUP の枠組みの紹介、OPM は表記法なので、工程の対応を取っていない。Estefan 2008 は再利用の条件が書かれていないので本文を写さず、工程名を言い換えた。</div>
 <div class='note'><b><a href='docs/SSD-GRD-SYS-001.html'>SSD-GRD-SYS-001</a></b>　範囲・判定・出典の扱い：手法の対応の判定は、SSD-MBS-SYS-001（Rev. CR・CS 改版）の判定と整合させた（妥当性確認は「無」なので、これを含む工程は「一部」にとどめた。verify の CS5 が確かめる）。</div>
 <div class='note'><b><a href='docs/SSD-GRD-SYS-001.html'>SSD-GRD-SYS-001</a></b>　振り分け（本書の判断）：INCOSE の考え方のうち、本版はグリッドと手法の対応と Architecture Frameworks、次の版は モデル計画書（HDBK-1009A §5・§6 と SEBoK の Process Frameworks）。</div>
+<div class='note'><b><a href='docs/SSD-PLN-SYS-001.html'>SSD-PLN-SYS-001</a></b>　範囲・判定・出典の扱い：計画は事後に書いた。このパッケージは版（Rev.）を重ねて作られ、モデル計画が先に無かった。本書は既存の文書・規約・手順を1つにまとめたもので、新しい事実や新しい規約を足していない（件数は文書とモデルから数える）。</div>
+<div class='note'><b><a href='docs/SSD-PLN-SYS-001.html'>SSD-PLN-SYS-001</a></b>　範囲・判定・出典の扱い：手順は人の作業（利用者・Claude・助言者）で、全自動ではない。モデルの更新は版ごとの再生成（snapshot → build → verify → 反映）で、継続的な同期ではない。</div>
+<div class='note'><b><a href='docs/SSD-PLN-SYS-001.html'>SSD-PLN-SYS-001</a></b>　範囲・判定・出典の扱い：HDBK-1009A の計画の項目のうち、資源（工数・予算）、役割の任命と承認、アクセス権限は、学習用の個人の作業なので持っていない（PLN-02・03・06）。SEBoK の枠組みのうち、SE のライフサイクルへの組み込みと、構成管理計画・SE 管理計画との照合も無い（PLN-15・17）。</div>
+<div class='note'><b><a href='docs/SSD-PLN-SYS-001.html'>SSD-PLN-SYS-001</a></b>　範囲・判定・出典の扱い：判定は SSD-MBS-SYS-001 と同じ規則で、自己採点である。HDBK-1009A の計画は SEMP の一部だが、本書は SEMP ではなく、モデルの計画に絞った。SEBoK は CC BY-NC-SA 3.0 なので本文を写さず、要点を言い換えた。</div>
 <!--[/notes:etc]-->
 </main></body></html>

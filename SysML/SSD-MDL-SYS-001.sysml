@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 57件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 58件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -58,6 +58,7 @@ package SSD_MDL_SYS_001 {
     public import SSD_HVM_SYS_001;   // SSD-HVM-SYS-001 人間系の評価方法とビューポイント
     public import SSD_MBS_SYS_001;   // SSD-MBS-SYS-001 MBSE 実践の対応（HDBK-1009A・SEBoK）
     public import SSD_GRD_SYS_001;   // SSD-GRD-SYS-001 MBSE グリッドと手法の対応
+    public import SSD_PLN_SYS_001;   // SSD-PLN-SYS-001 モデル計画
     public import SSD_VPT_SYS_001;   // SSD-VPT-SYS-001 ビューポイント・表記の規約
     private import ModelingMetadata::*;
     // ---- 1. 構造のオービタと振る舞い（状態機械）のオービタを1つにする

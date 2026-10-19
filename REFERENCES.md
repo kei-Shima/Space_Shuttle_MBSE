@@ -1,6 +1,6 @@
 # 参照した公開資料の一覧
 
-説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 333件、引用している説明書は 340件です。
+説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 333件、引用している説明書は 341件です。
 
 - 説明書の本文・表・「参考文献」の節にある URL を集め、頁の指定（`#page=N`、SCOM の末尾の `/N`）を除いて、文献ごとにまとめました。NTRS は、抄録のページと PDF を同じ文献として数えています。
 - 「引用箇所」は、説明書が引用している頁（URL）の種類の数です。どの頁を引用しているかは、各説明書の「参考文献」の節にあります。
@@ -17,7 +17,7 @@
 | 3. yumpu.com（SCOM の公開版） | 1 | 702 |
 | 4. Internet Archive | 1 | 633 |
 | 5. NASA（nasa.gov） | 10 | 302 |
-| 6. standards.nasa.gov | 2 | 21 |
+| 6. standards.nasa.gov | 2 | 23 |
 | 7. Science.gov（NTRS の抄録の検索結果） | 8 | 8 |
 | 8. NASA KSC（NSTS 1988 News Reference Manual） | 8 | 8 |
 | 9. NASA（www3.nasa.gov） | 2 | 8 |
@@ -50,7 +50,7 @@
 | 36. osti.gov | 1 | 1 |
 | 37. scribd.com | 1 | 1 |
 | 38. sebokwiki.org | 1 | 1 |
-| 計 | 333 | 4,982 |
+| 計 | 333 | 4,984 |
 
 ## 1. ibiblio.org（Virtual AGC のスペースシャトル資料）
 
@@ -339,8 +339,8 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 259 | NASA-HDBK-1009 NASA Systems Modeling Handbook for Systems Engineering（公開ページ。1009A は 2025-03-12） | <https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
-| 260 | NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） | <https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf> | 20 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
+| 259 | NASA-HDBK-1009 NASA Systems Modeling Handbook for Systems Engineering（公開ページ。1009A は 2025-03-12） | <https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
+| 260 | NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） | <https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf> | 22 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
 
 ## 7. Science.gov（NTRS の抄録の検索結果）
 
@@ -525,7 +525,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 325 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.md) ほか（計 46件） |
+| 325 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.md) ほか（計 47件） |
 
 ## 31. NASA 本部（hq.nasa.gov）
 
@@ -555,7 +555,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 330 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 48件） |
+| 330 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 49件） |
 
 ## 36. osti.gov
 
@@ -573,7 +573,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 333 | SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） | <https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
+| 333 | SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） | <https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
 
 ## 取り込んだが、説明書では引用していない資料
 

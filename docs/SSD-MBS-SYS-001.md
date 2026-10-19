@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MBS-SYS-001 |
 | 表題 | MBSE 実践の対応定義書（NASA-HDBK-1009A の作業成果物・SEBoK の効果的なモデルの基準との対応） |
-| 版・日付 | Rev. A／2026-10-19 |
+| 版・日付 | Rev. B／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図267 NASA-HDBK-1009A の作業成果物と本パッケージの対応・図268 効果的なモデルの基準・性質（SEBoK）と本パッケージの評価 |
@@ -148,6 +148,8 @@ NASA の SE の4つのプロセス（ステークホルダーの期待・技術�
 
 > **注記** 振り分け（本書の判断）：INCOSE の考え方は、ユーザーが選んだ3案（対応表→グリッド→モデル計画書）に振り分けた。本版（対応表）は SEBoK の基準・性質、次の版（グリッド）は Estefan 2008 の手法の工程と SEBoK の Architecture Frameworks、その次（モデル計画書）は SEBoK の Process Frameworks を取り込む予定である。
 
+> **注記** HDBK-1009A §5・§6 のモデル計画の項目（資源・役割・ツール・規約・モデルの構成・公開・管理）と SEBoK の Process Frameworks に照らした、本パッケージの計画は [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-PLN-SYS-001.sysml）。
+
 ## 14. 参考文献
 
 1. NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） （PDF p10） — https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf#page=10
@@ -179,3 +181,4 @@ NASA の SE の4つのプロセス（ステークホルダーの期待・技術�
 |---|---|---|
 | 初版（Rev. -） | 2026-10-19 | 初版作成（HDBK-1009A の作業成果物 12＋22・メタモデル 10、SEBoK の基準 10・性質 10、図267・268、SysML v2 テキスト） |
 | Rev. A | 2026-10-19 | 対象のパッケージを #Assesses の dependency から文字列の属性 assesses に替えた（図92 の矢印を増やさないため）（Rev. CS） |
+| Rev. B | 2026-10-19 | モデル計画書 SSD-PLN-SYS-001 への参照を注記（Rev. CT） |
