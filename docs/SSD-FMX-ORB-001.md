@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMX-ORB-001 |
 | 表題 | オービタの系の機能の故障モード定義書（ECLSS 以外の系：GN&C・RCS・DPS・C/W・C&T・EVA・CREW・PLS・APU・MECH・STR・EPS・MPS） |
-| 版・日付 | 初版（Rev. -）／2026-10-12 |
+| 版・日付 | Rev. A／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMM-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図227 機能の故障モード（GN&C・RCS・DPS・C/W）・図228 機能の故障モード（C&T・EVA・CREW・PLS）・図229 機能の故障モード（APU・MECH・STR・EPS・MPS） |
@@ -400,6 +400,8 @@ ECLSS 以外のオービタの系のうち、故障解析表（SSD-FMEA-<系>-00
 
 > **注記** 調査で根拠が不足した点・本書の判断：ET 扉の閉鎖の検知（扉・ラッチのタルクバック）、FMX-MECH-04 の AC バス喪失の灯は、SCOM 2.17・2.8 の説明からの整理で、故障の事例を述べた資料ではない。
 
+> **注記** ECLSS 以外の系の機能の故障モードのうち、飛行中異常として観測されたもの（本書の記録と図258・260）は [SSD-IFA-ORB-001](SSD-IFA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IFA-ORB-001.sysml）。
+
 ## 20. 参考文献
 
 1. Shuttle Crew Operations Manual 6.8 Systems Failures（USA007587 Rev. A CPN-1、PDF p894） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/894
@@ -649,3 +651,4 @@ ECLSS 以外のオービタの系のうち、故障解析表（SSD-FMEA-<系>-00
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-10-12 | 初版作成（13系・52ブロックの機能の故障モード 173件、図227〜229、SysML v2 テキスト） |
+| Rev. A | 2026-10-19 | 飛行中異常記録定義書 SSD-IFA-ORB-001 への参照を注記（Rev. CO） |

@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（256件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（260件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -219,7 +219,7 @@ package SSD_VPT_SYS_001 {
         render Views::asTreeDiagram;
     }
     viewpoint def <'VP-06'> SafetyFailureViewpoint {
-        doc /* 安全・故障の観点。主な定義書：SSD-FMEA-*・SSD-BEH-ORB-002・SSD-ANA-ORB-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001 */
+        doc /* 安全・故障の観点。主な定義書：SSD-FMEA-*・SSD-BEH-ORB-002・SSD-ANA-ORB-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-IFA-ORB-001 */
         subject v : Views::View;
         frame concern cn06 : FailureTolerance;
     }
@@ -512,6 +512,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図46'> fig046 : CompositionView {
         doc /* 図46 GN&C 機能構成（頁 p46-gnc） */
@@ -675,6 +676,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図81'> fig081 : SafetyFailureView {
         doc /* 図81 燃料電池の冷却喪失処置 活動図（頁 p81-act-fc） */
@@ -688,6 +690,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図82'> fig082 : SafetyFailureView {
         doc /* 図82 火災処置 活動図（頁 p82-act-fire） */
@@ -701,6 +704,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図83'> fig083 : OperationsView {
         doc /* 図83 軌道離脱〜着陸 シーケンス図（頁 p83-seq-deorbit） */
@@ -735,6 +739,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図87'> fig087 : OperationsView {
         doc /* 図87 EVA 準備〜再与圧 活動図（頁 p87-act-eva） */
@@ -755,6 +760,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図89'> fig089 : CompositionView {
         doc /* 図89 システム構成 ブロック定義図（頁 p89-bdd-structure） */
@@ -910,6 +916,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図107'> fig107 : SafetyFailureView {
         doc /* 図107 故障の木 B（空力舵面の油圧の喪失）（頁 p107-fta-b） */
@@ -923,6 +930,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図108'> fig108 : SafetyFailureView {
         doc /* 図108 故障の木 C（CO2 制御の喪失）（頁 p108-fta-c） */
@@ -936,6 +944,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図109'> fig109 : VariantsView {
         doc /* 図109 機体・ミッションキットの構成行列（頁 p109-variants） */
@@ -1011,6 +1020,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図119'> fig119 : SafetyFailureView {
         doc /* 図119 故障検知・処置の連鎖と網羅（頁 p119-fdir-chain） */
@@ -1024,6 +1034,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図120'> fig120 : SafetyFailureView {
         doc /* 図120 ハザードのリスク行列（頁 p120-hazard-matrix） */
@@ -1037,6 +1048,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図121'> fig121 : SafetyFailureView {
         doc /* 図121 ハザードの原因と管理策（頁 p121-hazard-bowtie） */
@@ -1050,6 +1062,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図122'> fig122 : VariantsView {
         doc /* 図122 機体と飛行の個体・時間切片（頁 p122-individuals） */
@@ -1101,6 +1114,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図127'> fig127 : SafetyFailureView {
         doc /* 図127 故障モードの網羅（系・原因ごと）（頁 p127-fmm-coverage） */
@@ -1114,6 +1128,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図128'> fig128 : InterfacesView {
         doc /* 図128 DPS データバス網 内部ブロック図（頁 p128-ibd-dps） */
@@ -1710,6 +1725,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図177'> fig177 : SafetyFailureView {
         doc /* 図177 故障の木 X1（乗員室の圧力の喪失）（頁 p177-fta-x1） */
@@ -1723,6 +1739,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図178'> fig178 : SafetyFailureView {
         doc /* 図178 故障の木 X2（CO2 除去の喪失）（頁 p178-fta-x2） */
@@ -1736,6 +1753,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図179'> fig179 : InterfacesView {
         doc /* 図179 EMU の構造（ブロック定義）（頁 p179-emu-structure） */
@@ -1971,6 +1989,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図198'> fig198 : SubsystemBehaviorView {
         doc /* 図198 センサの冗長管理による故障処置 活動図（頁 p198-act-rm-fdir） */
@@ -2055,6 +2074,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図206'> fig206 : SafetyFailureView {
         doc /* 図206 51-L の事象の連鎖（頁 p206-acc-51l） */
@@ -2068,6 +2088,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図207'> fig207 : SafetyFailureView {
         doc /* 図207 STS-107 の事象の連鎖（頁 p207-acc-107） */
@@ -2081,6 +2102,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図208'> fig208 : SafetyFailureView {
         doc /* 図208 SRB・ET・TPS の機能の故障モード（頁 p208-acc-failure-modes） */
@@ -2094,6 +2116,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図209'> fig209 : SafetyFailureView {
         doc /* 図209 故障の木 A1（上昇中の機体の喪失：SRB の継手）（頁 p209-fta-a1） */
@@ -2107,6 +2130,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図210'> fig210 : SafetyFailureView {
         doc /* 図210 故障の木 A2（再突入中の機体の喪失：翼前縁の熱防護）（頁 p210-fta-a2） */
@@ -2120,6 +2144,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図211'> fig211 : SafetyFailureView {
         doc /* 図211 事故調査の勧告と改修（教訓）（頁 p211-acc-lessons） */
@@ -2133,6 +2158,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図212'> fig212 : RequirementsVerificationView {
         doc /* 図212 インタフェース要求の一覧（上位の IF）（頁 p212-irq-list） */
@@ -2309,6 +2335,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図228'> fig228 : SafetyFailureView {
         doc /* 図228 機能の故障モード（C&T・EVA・CREW・PLS）（頁 p228-fmx-orb-b） */
@@ -2322,6 +2349,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図229'> fig229 : SafetyFailureView {
         doc /* 図229 機能の故障モード（APU・MECH・STR・EPS・MPS）（頁 p229-fmx-orb-c） */
@@ -2335,6 +2363,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_ETS_SYS_001::*;
         expose SSD_ACC_SYS_001::*;
         expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
     }
     view <'図230'> fig230 : ResourcesMarginsView {
         doc /* 図230 上昇の質量と推力加速度の時間変化（頁 p230-trj-ascent） */
@@ -2567,13 +2596,69 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_008::*;
         expose SSD_GND_ORB_001::*;
     }
+    view <'図257'> fig257 : SafetyFailureView {
+        doc /* 図257 飛行中異常の系ごとの件数と区分（頁 p257-ifa-system） */
+        expose SSD_BEH_ORB_002::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_FDIR_ORB_001::*;
+        expose SSD_HAZ_ORB_001::*;
+        expose SSD_FMM_ORB_001::*;
+        expose SSD_FMX_ECL_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_ACC_SYS_001::*;
+        expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
+    }
+    view <'図258'> fig258 : SafetyFailureView {
+        doc /* 図258 異常と故障モード・機能行のつなぎ（頁 p258-ifa-fm） */
+        expose SSD_BEH_ORB_002::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_FDIR_ORB_001::*;
+        expose SSD_HAZ_ORB_001::*;
+        expose SSD_FMM_ORB_001::*;
+        expose SSD_FMX_ECL_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_ACC_SYS_001::*;
+        expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
+    }
+    view <'図259'> fig259 : SafetyFailureView {
+        doc /* 図259 処置が設計・手順・規則を変えた異常（運用からの帰還）（頁 p259-ifa-feedback） */
+        expose SSD_BEH_ORB_002::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_FDIR_ORB_001::*;
+        expose SSD_HAZ_ORB_001::*;
+        expose SSD_FMM_ORB_001::*;
+        expose SSD_FMX_ECL_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_ACC_SYS_001::*;
+        expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
+    }
+    view <'図260'> fig260 : SafetyFailureView {
+        doc /* 図260 故障モードごとの実績（観測された異常の数）（頁 p260-ifa-fmcover） */
+        expose SSD_BEH_ORB_002::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_FDIR_ORB_001::*;
+        expose SSD_HAZ_ORB_001::*;
+        expose SSD_FMM_ORB_001::*;
+        expose SSD_FMX_ECL_001::*;
+        expose SSD_GNC_ORB_001::*;
+        expose SSD_ETS_SYS_001::*;
+        expose SSD_ACC_SYS_001::*;
+        expose SSD_FMX_ORB_001::*;
+        expose SSD_IFA_ORB_001::*;
+    }
     // ---- 表記の規約
     package Conventions {
         doc /* 文書の表の ID の形と、出典・文書番号の書き方 */
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 335; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 336; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -2622,5 +2707,6 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "IRQ-（下位 IF）・VC-IRQ-（下位 IF）"; form = "IRQ-<IF の接頭辞>-<IF の番号>・VC-IRQ-…"; meaning = "下位の IF のインタフェース要求・その検証ケース"; example = "IRQ-APU-08"; count = 1038; }
         @IdConvention { prefix = "GNDS-・GNDT-"; form = "GNDS-<2桁>・GNDT-<2桁>"; meaning = "地上の機体の状態・遷移"; example = "GNDT-01"; count = 26; }
         @IdConvention { prefix = "CMS-・CMT-"; form = "CMS-<2桁>・CMT-<2桁>"; meaning = "地上処理の段・秒読みの節目"; example = "CMS-01"; count = 16; }
+        @IdConvention { prefix = "IFA-"; form = "IFA-<3桁>"; meaning = "飛行中異常（Mission Report の番号つき）"; example = "IFA-001"; count = 390; }
     }
 }

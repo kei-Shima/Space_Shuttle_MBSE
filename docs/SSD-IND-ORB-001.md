@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-IND-ORB-001 |
 | 表題 | 個体・時間定義書（機体・飛行の個体と実績） |
-| 版・日付 | Rev. E／2026-10-12 |
+| 版・日付 | Rev. F／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-VAR-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図122 機体と飛行の個体・時間切片・図123 飛行の実績と設計値 |
@@ -177,6 +177,8 @@
 
 > **注記** STS-1 ほかの上昇・再突入の実績と、モデルの比較は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
 
+> **注記** 飛行ごとの異常の番号つき記録（STS-100 以降）は本書は [SSD-IFA-ORB-001](SSD-IFA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IFA-ORB-001.sysml）。
+
 ## 12. 参考文献
 
 1. STS-2 Orbiter Mission Report （PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-2%20Orbiter%20Mission%20Report.pdf#page=5
@@ -279,3 +281,4 @@
 | Rev. C | 2026-10-07 | AV-06・19・31 の設計の値を REQ-EPS-14 の見直しに合わせた（Rev. BG） |
 | Rev. D | 2026-10-11 | SysML v2 テキストの individual def・snapshot の書き方を改めた（意味は同じ）（Rev. BR） |
 | Rev. E | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |
+| Rev. F | 2026-10-19 | 飛行中異常記録定義書 SSD-IFA-ORB-001 への参照を注記（Rev. CO） |

@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMM-ORB-001 |
 | 表題 | 故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖） |
-| 版・日付 | Rev. C／2026-10-12 |
+| 版・日付 | Rev. D／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図126 故障モードから見た安全の連鎖・図127 故障モードの網羅（系・原因ごと） |
@@ -1052,6 +1052,8 @@
 
 > **注記** ECLSS 以外の系の機能の故障モード（故障解析表の対応が無かった機能ブロック）は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
 
+> **注記** 飛行中異常（IFA）として観測された故障モード・故障解析表の行の実績（本書の記録と図258・260）は [SSD-IFA-ORB-001](SSD-IFA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IFA-ORB-001.sysml）。
+
 ## 11. 参考文献
 
 1. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
@@ -1065,3 +1067,4 @@
 | Rev. A | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
 | Rev. B | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
 | Rev. C | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |
+| Rev. D | 2026-10-19 | 飛行中異常記録定義書 SSD-IFA-ORB-001 への参照を注記（Rev. CO） |
