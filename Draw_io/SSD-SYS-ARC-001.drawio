@@ -327,8 +327,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p2-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図2&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;オービタ サブシステム構成&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="240" height="64" as="geometry" />
+        <mxCell id="p2-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図2&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:18px;font-weight:bold;margin-top:2px;'&gt;オービタ サブシステム構成&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="240" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p2-v-2" value="オービタ（OV）境界" style="rounded=0;html=1;fillColor=none;strokeColor=#2E6B45;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontSize=13;fontStyle=1;fontColor=#2E6B45;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="200" y="250" width="1670" height="1300" as="geometry" />
@@ -1141,8 +1141,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p3-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図3&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;ECLSS 機能構成（機能ブロック・IF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p3-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図3&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;ECLSS 機能構成（機能ブロック・IF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p3-v-2" value="ECLSS 境界（図2 の ECLSS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="172" width="1160" height="1034" as="geometry" />
@@ -23273,8 +23273,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p6-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図6&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;EPS 機能構成（機能ブロック・IF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p6-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図6&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;EPS 機能構成（機能ブロック・IF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p6-v-2" value="EPS 境界（図2 の EPS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="690" as="geometry" />
@@ -24337,8 +24337,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p8-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図8&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;熱制御 機能構成（能動 ATCS ＋ 受動熱制御）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p8-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図8&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;熱制御 機能構成（能動 ATCS ＋ 受動熱制御）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p8-v-2" value="熱制御 境界（図3 の ATCS と受動熱制御を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#2E7D4F;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#2E7D4F;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="1190" as="geometry" />
@@ -31709,8 +31709,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p12-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図12&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;ARS 機能構成（空気系＋水冷却ループ）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p12-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図12&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;ARS 機能構成（空気系＋水冷却ループ）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p12-v-2" value="ARS 境界（図3 の ARS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="1366" as="geometry" />
@@ -33768,8 +33768,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p14-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図14&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;CO2・CO除去 機能構成（LiOH・ATCO・監視）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p14-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図14&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;CO2・CO除去 機能構成（LiOH・ATCO・監視）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p14-v-2" value="CO2・CO除去 境界（図12 の CO2・CO除去 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="600" as="geometry" />
@@ -35474,8 +35474,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p16-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図16&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;キャビン空気循環 機能構成（還流・ファン・ダクト・監視）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p16-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図16&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;キャビン空気循環 機能構成（還流・ファン・ダクト・監視）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p16-v-2" value="キャビン空気循環 境界（図12 の キャビン空気循環 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="660" as="geometry" />
@@ -36603,8 +36603,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p18-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図18&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;圧力制御系 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p18-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図18&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;圧力制御系 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p18-v-2" value="圧力制御系 境界（図3 の 圧力制御系 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=24;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -38439,8 +38439,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p20-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図20&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;給水・廃水系 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p20-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図20&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;給水・廃水系 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p20-v-2" value="給水・廃水系 境界（図3 の 給水・廃水系 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -39868,8 +39868,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p22-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図22&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;廃棄物収集系 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p22-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図22&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;廃棄物収集系 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p22-v-2" value="廃棄物収集系 境界（図3 の 廃棄物収集系 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=222;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="670" as="geometry" />
@@ -41249,8 +41249,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p24-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図24&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;エアロック支援系 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p24-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図24&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;エアロック支援系 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p24-v-2" value="エアロック支援系 境界（図3 の エアロック支援系 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=bottom;align=left;spacingLeft=12;spacingBottom=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="850" as="geometry" />
@@ -42606,8 +42606,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p26-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図26&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;煙検知・消火系 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p26-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図26&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;煙検知・消火系 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p26-v-2" value="煙検知・消火系 境界（図3 の 煙検知・消火系 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=192;spacingTop=24;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -43991,8 +43991,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p28-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図28&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;再生式CO2除去装置 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p28-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図28&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;再生式CO2除去装置 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p28-v-2" value="再生式CO2除去装置 境界（図12 の 再生式CO2除去装置 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=bottom;align=left;spacingLeft=622;spacingBottom=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -45098,8 +45098,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p30-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図30&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;キャビン温湿度制御 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p30-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図30&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;キャビン温湿度制御 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p30-v-2" value="キャビン温湿度制御 境界（図12 の キャビン温湿度制御 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=622;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -46626,8 +46626,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p32-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図32&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;アビオニクスベイ空冷 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p32-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図32&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;アビオニクスベイ空冷 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p32-v-2" value="アビオニクスベイ空冷 境界（図12 の アビオニクスベイ空冷 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=bottom;align=left;spacingLeft=222;spacingBottom=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -47786,8 +47786,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p34-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図34&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;IMU空冷 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p34-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図34&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;IMU空冷 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p34-v-2" value="IMU空冷 境界（図12 の IMU空冷 を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=712;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -48723,8 +48723,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p36-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図36&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;水冷却ループ 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p36-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図36&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;水冷却ループ 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p36-v-2" value="水冷却ループ 境界（図12 の 水冷却ループ を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=692;spacingTop=24;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -56012,8 +56012,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p46-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図46&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;GN&amp;C 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p46-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図46&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;GN&amp;C 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p46-v-2" value="GN&amp;C 境界（図2 の GN&amp;C を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -57283,8 +57283,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p48-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図48&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;DPS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p48-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図48&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;DPS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p48-v-2" value="DPS 境界（図2 の DPS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=82;spacingTop=24;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -58620,8 +58620,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p50-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図50&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;MPS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p50-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図50&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;MPS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p50-v-2" value="MPS 境界（図2 の MPS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=222;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -59761,8 +59761,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p52-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図52&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;OMS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p52-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図52&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;OMS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p52-v-2" value="OMS 境界（図2 の OMS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -60906,8 +60906,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p54-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図54&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;RCS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p54-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図54&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;RCS 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p54-v-2" value="RCS 境界（図2 の RCS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=922;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -61943,8 +61943,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p56-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図56&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;APU/HYD 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p56-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図56&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;APU/HYD 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p56-v-2" value="APU/HYD 境界（図2 の APU/HYD を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=24;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -63209,8 +63209,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p58-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図58&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;C&amp;T 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p58-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図58&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;C&amp;T 機能構成（下位機能7件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p58-v-2" value="C&amp;T 境界（図2 の C&amp;T を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="890" as="geometry" />
@@ -64353,8 +64353,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p60-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図60&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;EVA 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p60-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図60&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;EVA 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p60-v-2" value="EVA 境界（図2 の EVA を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=222;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -65446,8 +65446,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p62-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図62&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;C/W 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p62-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図62&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;C/W 機能構成（下位機能5件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p62-v-2" value="C/W 境界（図2 の C/W を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="600" as="geometry" />
@@ -66331,8 +66331,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p64-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図64&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;CREW 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p64-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図64&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;CREW 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p64-v-2" value="CREW 境界（図2 の CREW を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -67106,8 +67106,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p66-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図66&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;PLS 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p66-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図66&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;PLS 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p66-v-2" value="PLS 境界（図2 の PLS を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -67951,8 +67951,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p68-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図68&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;MECH 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p68-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図68&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;MECH 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p68-v-2" value="MECH 境界（図2 の MECH を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=222;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -68843,8 +68843,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p70-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図70&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;STR 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p70-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図70&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;STR 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p70-v-2" value="STR 境界（図2 の STR を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -69654,8 +69654,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p72-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図72&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;ET 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p72-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図72&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;ET 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p72-v-2" value="ET 境界（図1 の ET を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
@@ -70458,8 +70458,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="ブロック・注記" parent="0" />
-        <mxCell id="p74-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図74&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;br&gt;SRB 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="20" y="30" width="330" height="64" as="geometry" />
+        <mxCell id="p74-v-1" value="&lt;div style='font-size:22px;font-weight:bold;'&gt;図74&lt;/div&gt;&lt;div style='font-size:12px;color:#3B4654;margin-top:4px;'&gt;SSD-SYS-ARC-001&lt;/div&gt;&lt;div style='font-size:20px;font-weight:bold;margin-top:2px;'&gt;SRB 機能構成（下位機能6件とIF）&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="330" height="112" as="geometry" />
         </mxCell>
         <mxCell id="p74-v-2" value="SRB 境界（図1 の SRB を展開）" style="rounded=0;html=1;fillColor=none;strokeColor=#A77B00;dashed=1;dashPattern=10 6;strokeWidth=1.5;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=13;fontStyle=1;fontColor=#A77B00;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="1160" height="590" as="geometry" />
