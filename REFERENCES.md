@@ -1,6 +1,6 @@
 # 参照した公開資料の一覧
 
-説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 331件、引用している説明書は 339件です。
+説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 333件、引用している説明書は 340件です。
 
 - 説明書の本文・表・「参考文献」の節にある URL を集め、頁の指定（`#page=N`、SCOM の末尾の `/N`）を除いて、文献ごとにまとめました。NTRS は、抄録のページと PDF を同じ文献として数えています。
 - 「引用箇所」は、説明書が引用している頁（URL）の種類の数です。どの頁を引用しているかは、各説明書の「参考文献」の節にあります。
@@ -17,7 +17,7 @@
 | 3. yumpu.com（SCOM の公開版） | 1 | 702 |
 | 4. Internet Archive | 1 | 633 |
 | 5. NASA（nasa.gov） | 10 | 302 |
-| 6. standards.nasa.gov | 2 | 20 |
+| 6. standards.nasa.gov | 2 | 21 |
 | 7. Science.gov（NTRS の抄録の検索結果） | 8 | 8 |
 | 8. NASA KSC（NSTS 1988 News Reference Manual） | 8 | 8 |
 | 9. NASA（www3.nasa.gov） | 2 | 8 |
@@ -27,28 +27,30 @@
 | 13. GlobalSecurity.org（NSTS 1988 News Reference Manual の転載） | 5 | 5 |
 | 14. Wikipedia | 4 | 4 |
 | 15. NASA Lessons Learned（llis.nasa.gov） | 1 | 4 |
-| 16. 16streets.com（NSTS 1988 News Reference Manual の転載） | 3 | 3 |
-| 17. image-ppubs.uspto.gov | 2 | 2 |
-| 18. klabs.org | 2 | 2 |
-| 19. nasa-klass.com | 2 | 2 |
-| 20. nist.gov | 1 | 2 |
-| 21. adoptium.net | 1 | 1 |
-| 22. airandspace.si.edu | 1 | 1 |
-| 23. american-spacecraft.org | 1 | 1 |
-| 24. anaconda.org | 1 | 1 |
-| 25. chemistry.beloit.edu | 1 | 1 |
-| 26. core.ac.uk | 1 | 1 |
-| 27. dl.acm.org | 1 | 1 |
-| 28. fireengineering.com | 1 | 1 |
-| 29. github.com | 1 | 1 |
-| 30. NASA 本部（hq.nasa.gov） | 1 | 1 |
-| 31. iso.org | 1 | 1 |
-| 32. large.stanford.edu | 1 | 1 |
-| 33. omg.org | 1 | 1 |
-| 34. osti.gov | 1 | 1 |
-| 35. scribd.com | 1 | 1 |
-| 36. sebokwiki.org | 1 | 1 |
-| 計 | 331 | 4,976 |
+| 16. omgsysml.org | 1 | 4 |
+| 17. 16streets.com（NSTS 1988 News Reference Manual の転載） | 3 | 3 |
+| 18. image-ppubs.uspto.gov | 2 | 2 |
+| 19. klabs.org | 2 | 2 |
+| 20. nasa-klass.com | 2 | 2 |
+| 21. nist.gov | 1 | 2 |
+| 22. adoptium.net | 1 | 1 |
+| 23. airandspace.si.edu | 1 | 1 |
+| 24. american-spacecraft.org | 1 | 1 |
+| 25. anaconda.org | 1 | 1 |
+| 26. chemistry.beloit.edu | 1 | 1 |
+| 27. core.ac.uk | 1 | 1 |
+| 28. dl.acm.org | 1 | 1 |
+| 29. fireengineering.com | 1 | 1 |
+| 30. github.com | 1 | 1 |
+| 31. NASA 本部（hq.nasa.gov） | 1 | 1 |
+| 32. incose.org | 1 | 1 |
+| 33. iso.org | 1 | 1 |
+| 34. large.stanford.edu | 1 | 1 |
+| 35. omg.org | 1 | 1 |
+| 36. osti.gov | 1 | 1 |
+| 37. scribd.com | 1 | 1 |
+| 38. sebokwiki.org | 1 | 1 |
+| 計 | 333 | 4,982 |
 
 ## 1. ibiblio.org（Virtual AGC のスペースシャトル資料）
 
@@ -337,8 +339,8 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 259 | NASA-HDBK-1009 NASA Systems Modeling Handbook for Systems Engineering（公開ページ。1009A は 2025-03-12） | <https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
-| 260 | NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） | <https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf> | 19 | [SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
+| 259 | NASA-HDBK-1009 NASA Systems Modeling Handbook for Systems Engineering（公開ページ。1009A は 2025-03-12） | <https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
+| 260 | NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） | <https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf> | 20 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
 
 ## 7. Science.gov（NTRS の抄録の検索結果）
 
@@ -430,136 +432,148 @@
 |---:|---|---|---:|---|
 | 305 | Lessons Learned: ECLSS Ground Coolant Systems（Katz、KSC、2011-06-29、32頁のスライド） | <https://llis.nasa.gov/llis_lib/pdf/1045995main_ECLSSGroundCoolantSystemLL.pdf> | 4 | [SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-TCS-GSE-001](docs/SSD-FD-TCS-GSE-001.md)・[SSD-FMX-ECL-001](docs/SSD-FMX-ECL-001.md)・[SSD-IRQ-ECL-001](docs/SSD-IRQ-ECL-001.md) ほか（計 7件） |
 
-## 16. 16streets.com（NSTS 1988 News Reference Manual の転載）
+## 16. omgsysml.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 306 | NSTS 1988 News Reference Manual – Orbiter Systems / TPS | <https://m.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts_sys.html> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 307 | NSTS 1988 News Reference Manual – Guidance, Navigation and Control（16streets 転載） | <http://w.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts-gnnc.html> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
-| 308 | NSTS 1988 News Reference Manual – Solid Rocket Boosters（16streets 転載） | <https://16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/srb.html> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
+| 306 | INCOSE MBSE Initiative: Survey of Candidate Model-Based Systems Engineering (MBSE) Methodologies（J. A. Estefan、JPL、Rev. B、2008-05-23、70頁、3,694,775 バイト。INCOSE-TD-2007-003-02。再利用の条件は文書に書かれていないので本文は写さない） | <https://www.omgsysml.org/MBSE_Methodology_Survey_RevB.pdf> | 4 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md) |
 
-## 17. image-ppubs.uspto.gov
+## 17. 16streets.com（NSTS 1988 News Reference Manual の転載）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 309 | US特許 5228644 Solar powered system for a space vehicle | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5228644> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-PRSD-001](docs/SSD-FD-EPS-PRSD-001.md) |
-| 310 | US特許 9377481 Multi-parameter scattering sensor and methods（SAE 932291を引用） | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9377481> | 1 | [SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md) |
+| 307 | NSTS 1988 News Reference Manual – Orbiter Systems / TPS | <https://m.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts_sys.html> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 308 | NSTS 1988 News Reference Manual – Guidance, Navigation and Control（16streets 転載） | <http://w.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts-gnnc.html> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
+| 309 | NSTS 1988 News Reference Manual – Solid Rocket Boosters（16streets 転載） | <https://16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/srb.html> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
 
-## 18. klabs.org
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 311 | NASA SP-504 Section 4 – Avionics System Functions（klabs 転載） | <https://www.klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_02_avionics_system_functions.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md)・[SSD-FD-OMS-001](docs/SSD-FD-OMS-001.md)・[SSD-FD-RCS-001](docs/SSD-FD-RCS-001.md) |
-| 312 | NASA SP-504 Section 4 – Communications and Tracking（klabs 転載） | <https://klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_08_communications_tracking.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
-
-## 19. nasa-klass.com
+## 18. image-ppubs.uspto.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 313 | SCOM 2.9節（抜粋） Environmental Control and Life Support System（NASA-KLASS教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-N2S-001](docs/SSD-FD-ECL-PCS-N2S-001.md)・[SSD-FD-ECL-PCS-O2S-001](docs/SSD-FD-ECL-PCS-O2S-001.md)・[SSD-FD-ECL-PCS-RLF-001](docs/SSD-FD-ECL-PCS-RLF-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 7件） |
-| 314 | READING: ECLSS（NASA-KLASS 教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS.pdf> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) |
+| 310 | US特許 5228644 Solar powered system for a space vehicle | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5228644> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-PRSD-001](docs/SSD-FD-EPS-PRSD-001.md) |
+| 311 | US特許 9377481 Multi-parameter scattering sensor and methods（SAE 932291を引用） | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9377481> | 1 | [SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md) |
 
-## 20. nist.gov
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 315 | Fire Protection in Manned Missions: Current and Planned（Collins、2001） | <https://www.nist.gov/system/files/documents/el/fire_research/R0200469.pdf> | 2 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-DET-001](docs/SSD-FD-ECL-FDS-DET-001.md)・[SSD-FD-ECL-FDS-OPS-001](docs/SSD-FD-ECL-FDS-OPS-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
-
-## 21. adoptium.net
+## 19. klabs.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 316 | Eclipse Temurin（OpenJDK）21 のリリース | <https://adoptium.net/temurin/releases/> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
+| 312 | NASA SP-504 Section 4 – Avionics System Functions（klabs 転載） | <https://www.klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_02_avionics_system_functions.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md)・[SSD-FD-OMS-001](docs/SSD-FD-OMS-001.md)・[SSD-FD-RCS-001](docs/SSD-FD-RCS-001.md) |
+| 313 | NASA SP-504 Section 4 – Communications and Tracking（klabs 転載） | <https://klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_08_communications_tracking.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
 
-## 22. airandspace.si.edu
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 317 | NASM A20181683000 Blanket, Payload Bay, Space Shuttle Orbiter（スミソニアン） | <https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-
-## 23. american-spacecraft.org
+## 20. nasa-klass.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 318 | NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle | <https://www.american-spacecraft.org/documents/sp-407/chapter-3.html> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EPS-001](docs/SSD-FD-EPS-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md)・[SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) ほか（計 7件） |
+| 314 | SCOM 2.9節（抜粋） Environmental Control and Life Support System（NASA-KLASS教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-N2S-001](docs/SSD-FD-ECL-PCS-N2S-001.md)・[SSD-FD-ECL-PCS-O2S-001](docs/SSD-FD-ECL-PCS-O2S-001.md)・[SSD-FD-ECL-PCS-RLF-001](docs/SSD-FD-ECL-PCS-RLF-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 7件） |
+| 315 | READING: ECLSS（NASA-KLASS 教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS.pdf> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) |
 
-## 24. anaconda.org
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 319 | conda-forge jupyter-sysml-kernel（SysML v2 Pilot Implementation の Jupyter カーネルと標準ライブラリ） | <https://anaconda.org/conda-forge/jupyter-sysml-kernel> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
-
-## 25. chemistry.beloit.edu
+## 21. nist.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 320 | NASA Space Shuttle Fuel Cell Power Plants（2002） | <https://chemistry.beloit.edu/edetc/nanolab/fuelcell2/NASA%20Space%20Shuttle%20Fuel%20Cell%20Power%20Plants%20(2002> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-CW-001](docs/SSD-FD-CW-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 14件） |
+| 316 | Fire Protection in Manned Missions: Current and Planned（Collins、2001） | <https://www.nist.gov/system/files/documents/el/fire_research/R0200469.pdf> | 2 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-DET-001](docs/SSD-FD-ECL-FDS-DET-001.md)・[SSD-FD-ECL-FDS-OPS-001](docs/SSD-FD-ECL-FDS-OPS-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
 
-## 26. core.ac.uk
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 321 | IOA報告（1986年） IOA: Analysis of the ARPCS | <https://core.ac.uk/works/24872612> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
-
-## 27. dl.acm.org
+## 22. adoptium.net
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 322 | The space shuttle primary computer system（Communications of the ACM, 1984） | <https://dl.acm.org/doi/pdf/10.1145/358234.358246> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
+| 317 | Eclipse Temurin（OpenJDK）21 のリリース | <https://adoptium.net/temurin/releases/> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
 
-## 28. fireengineering.com
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 323 | 雑誌記事 Kennedy Space Center Fire Services（Fire Engineering） | <https://www.fireengineering.com/firefighting/kennedy-space-center-fire-services/> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-PFE-001](docs/SSD-FD-ECL-FDS-PFE-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
-
-## 29. github.com
+## 23. airandspace.si.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 324 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.md) ほか（計 45件） |
+| 318 | NASM A20181683000 Blanket, Payload Bay, Space Shuttle Orbiter（スミソニアン） | <https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
 
-## 30. NASA 本部（hq.nasa.gov）
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 325 | NASA History – Computers in Spaceflight, Ch.4-3 | <https://www.hq.nasa.gov/office/pao/History/computers/Ch4-3.html> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md) |
-
-## 31. iso.org
+## 24. american-spacecraft.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 326 | ISO/IEC/IEEE 42010:2022 Software, systems and enterprise — Architecture description | <https://www.iso.org/standard/74393.html> | 1 | [SSD-VPT-SYS-001](docs/SSD-VPT-SYS-001.md) |
+| 319 | NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle | <https://www.american-spacecraft.org/documents/sp-407/chapter-3.html> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EPS-001](docs/SSD-FD-EPS-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md)・[SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) ほか（計 7件） |
 
-## 32. large.stanford.edu
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 327 | Space Transportation System Training Data – SSME Orientation（Stanford 転載） | <http://large.stanford.edu/courses/2011/ph240/nguyen1/docs/SSME_PRESENTATION.pdf> | 1 | [SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) |
-
-## 33. omg.org
+## 25. anaconda.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 328 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 47件） |
+| 320 | conda-forge jupyter-sysml-kernel（SysML v2 Pilot Implementation の Jupyter カーネルと標準ライブラリ） | <https://anaconda.org/conda-forge/jupyter-sysml-kernel> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
 
-## 34. osti.gov
-
-| № | 文献 | URL | 引用箇所 | 引用している文書 |
-|---:|---|---|---:|---|
-| 329 | OSTI 347754 The NASA fuel cell upgrade program for the Space Shuttle Orbiter | <https://www.osti.gov/biblio/347754> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md) |
-
-## 35. scribd.com
+## 26. chemistry.beloit.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 330 | NASA Facts – Orbiter Thermal Protection System（Scribd 転載） | <https://www.scribd.com/doc/46376343/NASA-Facts-Orbiter-Thermal-Protection-System> | 1 | [SSD-FD-TPS-001](docs/SSD-FD-TPS-001.md) |
+| 321 | NASA Space Shuttle Fuel Cell Power Plants（2002） | <https://chemistry.beloit.edu/edetc/nanolab/fuelcell2/NASA%20Space%20Shuttle%20Fuel%20Cell%20Power%20Plants%20(2002> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-CW-001](docs/SSD-FD-CW-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 14件） |
 
-## 36. sebokwiki.org
+## 27. core.ac.uk
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 331 | SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） | <https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
+| 322 | IOA報告（1986年） IOA: Analysis of the ARPCS | <https://core.ac.uk/works/24872612> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
+
+## 28. dl.acm.org
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 323 | The space shuttle primary computer system（Communications of the ACM, 1984） | <https://dl.acm.org/doi/pdf/10.1145/358234.358246> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
+
+## 29. fireengineering.com
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 324 | 雑誌記事 Kennedy Space Center Fire Services（Fire Engineering） | <https://www.fireengineering.com/firefighting/kennedy-space-center-fire-services/> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-PFE-001](docs/SSD-FD-ECL-FDS-PFE-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
+
+## 30. github.com
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 325 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.md) ほか（計 46件） |
+
+## 31. NASA 本部（hq.nasa.gov）
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 326 | NASA History – Computers in Spaceflight, Ch.4-3 | <https://www.hq.nasa.gov/office/pao/History/computers/Ch4-3.html> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md) |
+
+## 32. incose.org
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 327 | Estefan, Survey of Model-Based Systems Engineering (MBSE) Methodologies（INCOSE MBSE Initiative、2008） | <https://www.incose.org/docs/default-source/default-document-library/final-04-modelbased-systems-engineering-for-mbse-initiative.pdf> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
+
+## 33. iso.org
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 328 | ISO/IEC/IEEE 42010:2022 Software, systems and enterprise — Architecture description | <https://www.iso.org/standard/74393.html> | 1 | [SSD-VPT-SYS-001](docs/SSD-VPT-SYS-001.md) |
+
+## 34. large.stanford.edu
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 329 | Space Transportation System Training Data – SSME Orientation（Stanford 転載） | <http://large.stanford.edu/courses/2011/ph240/nguyen1/docs/SSME_PRESENTATION.pdf> | 1 | [SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) |
+
+## 35. omg.org
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 330 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 48件） |
+
+## 36. osti.gov
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 331 | OSTI 347754 The NASA fuel cell upgrade program for the Space Shuttle Orbiter | <https://www.osti.gov/biblio/347754> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md) |
+
+## 37. scribd.com
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 332 | NASA Facts – Orbiter Thermal Protection System（Scribd 転載） | <https://www.scribd.com/doc/46376343/NASA-Facts-Orbiter-Thermal-Protection-System> | 1 | [SSD-FD-TPS-001](docs/SSD-FD-TPS-001.md) |
+
+## 38. sebokwiki.org
+
+| № | 文献 | URL | 引用箇所 | 引用している文書 |
+|---:|---|---|---:|---|
+| 333 | SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） | <https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md) |
 
 ## 取り込んだが、説明書では引用していない資料
 
@@ -589,4 +603,3 @@
 | JSC-11542 Flight Procedures Handbook, Entry（Flight Design and Dynamics Division、NASA JSC、Final Rev E、2005-04、254頁、2,148,222 バイト） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/JSC-11542%20-%20Flight%20Procedures%20Handbook%20Rev%20E%20200504.pdf> |
 | USA005512 Entry, TAEM, and Approach/Landing Guidance Workbook 21002（United Space Alliance for NASA、Basic、2006-01-23、145頁、1,419,962 バイト） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/USA005512%20-%20Entry,%20TAEM%20and%20Approach%2021002%20Basic%2020060123.pdf> |
 | NASA TP-1667 Analysis of the Space Shuttle Orbiter Entry Dynamics from Mach 10 to Mach 2.5 With the November 1976 Flight Control System（NASA Langley、1980、162頁、3,812,425 バイト） | <https://ntrs.nasa.gov/api/citations/19800020916/downloads/19800020916.pdf> |
-| INCOSE MBSE Initiative: Survey of Candidate Model-Based Systems Engineering (MBSE) Methodologies（J. A. Estefan、JPL、Rev. B、2008-05-23、70頁、3,694,775 バイト。INCOSE-TD-2007-003-02。再利用の条件は文書に書かれていないので本文は写さない） | <https://www.omgsysml.org/MBSE_Methodology_Survey_RevB.pdf> |

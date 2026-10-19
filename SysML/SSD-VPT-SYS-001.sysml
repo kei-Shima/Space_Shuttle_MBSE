@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（268件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（270件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -264,7 +264,7 @@ package SSD_VPT_SYS_001 {
         render Views::asElementTable;
     }
     viewpoint def <'VP-11'> ModelManagementViewpoint {
-        doc /* モデル管理の観点。主な定義書：SSD-SYS-IDX-001・SSD-MDL-SYS-001・SSD-VPT-SYS-001・SSD-MBS-SYS-001 */
+        doc /* モデル管理の観点。主な定義書：SSD-SYS-IDX-001・SSD-MDL-SYS-001・SSD-VPT-SYS-001・SSD-MBS-SYS-001・SSD-GRD-SYS-001 */
         subject v : Views::View;
         frame concern cn11 : ModelConsistency;
     }
@@ -319,6 +319,7 @@ package SSD_VPT_SYS_001 {
         doc /* 図5 文書・インタフェース一覧（頁 p5-register） */
         expose SSD_VPT_SYS_001::Conventions::*;
         expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
     }
     view <'図6'> fig006 : CompositionView {
         doc /* 図6 EPS 機能構成（頁 p6-eps） */
@@ -797,6 +798,7 @@ package SSD_VPT_SYS_001 {
         doc /* 図92 モデルの構成 パッケージ図（頁 p92-model-packages） */
         expose SSD_VPT_SYS_001::Conventions::*;
         expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
     }
     view <'図93'> fig093 : OperationsView {
         doc /* 図93 運用のユースケース図（頁 p93-uc-mission） */
@@ -985,6 +987,7 @@ package SSD_VPT_SYS_001 {
         doc /* 図111 ビューポイントと関係者の行列（頁 p111-viewpoints） */
         expose SSD_VPT_SYS_001::Conventions::*;
         expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
     }
     view <'図112'> fig112 : InterfacesView {
         doc /* 図112 EPS 発電・配電 内部ブロック図（頁 p112-ibd-eps） */
@@ -2777,11 +2780,25 @@ package SSD_VPT_SYS_001 {
         doc /* 図267 NASA-HDBK-1009A の作業成果物と本パッケージの対応（頁 p267-mbs-hdbk） */
         expose SSD_VPT_SYS_001::Conventions::*;
         expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
     }
     view <'図268'> fig268 : ModelManagementView {
         doc /* 図268 効果的なモデルの基準・性質（SEBoK）と本パッケージの評価（頁 p268-mbs-sebok） */
         expose SSD_VPT_SYS_001::Conventions::*;
         expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
+    }
+    view <'図269'> fig269 : ModelManagementView {
+        doc /* 図269 MBSE グリッド（SE プロセス × SysML の柱）と図の分類（頁 p269-grd-grid） */
+        expose SSD_VPT_SYS_001::Conventions::*;
+        expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
+    }
+    view <'図270'> fig270 : ModelManagementView {
+        doc /* 図270 MBSE 手法の工程との対応（Estefan 2008）と ISO/IEC/IEEE 42010（頁 p270-grd-methods） */
+        expose SSD_VPT_SYS_001::Conventions::*;
+        expose SSD_MBS_SYS_001::*;
+        expose SSD_GRD_SYS_001::*;
     }
     // ---- 表記の規約
     package Conventions {
@@ -2789,7 +2806,7 @@ package SSD_VPT_SYS_001 {
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 339; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 340; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -2842,5 +2859,6 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "PLB-"; form = "PLB-<2桁>"; meaning = "ペイロード搭載・着陸の制約"; example = "PLB-01"; count = 25; }
         @IdConvention { prefix = "PRA-"; form = "PRA-<2桁>"; meaning = "PRA の主要シナリオ・値"; example = "PRA-01"; count = 10; }
         @IdConvention { prefix = "MBS-"; form = "MBS-<2桁>"; meaning = "MBSE 実践の対応の項目"; example = "MBS-01"; count = 64; }
+        @IdConvention { prefix = "GRD-"; form = "GRD-<2桁>"; meaning = "MBSE グリッド・手法対応の項目"; example = "GRD-01"; count = 37; }
     }
 }

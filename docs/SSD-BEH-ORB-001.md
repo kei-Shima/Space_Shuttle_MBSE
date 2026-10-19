@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-BEH-ORB-001 |
 | 表題 | 状態遷移定義書（ミッションフェーズ・飛行継続判断） |
-| 版・日付 | Rev. D／2026-10-03 |
+| 版・日付 | Rev. E／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-OPS-PHASE-001 |
 | 関連図 | SSD-SYS-ARC-001 図76 ミッションフェーズ・アボート 状態遷移図・図77 飛行継続判断（Go/No-Go）状態遷移図 |
@@ -124,6 +124,8 @@
 
 > **注記** アボートモードの選択の活動図（図97）と、運用のユースケース（図93）は [SSD-UC-ORB-001](SSD-UC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-UC-ORB-001.sysml）。
 
+> **注記** SE プロセス × SysML の柱のグリッドでの振る舞いの柱の図の位置づけは本書は [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-GRD-SYS-001.sysml）。
+
 ## 9. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A1-104 Flight Phase（PDF p468） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=468
@@ -157,3 +159,4 @@
 | Rev. B | 2026-10-02 | 活動定義書 SSD-BEH-ORB-004 への参照を注記（Rev. AC） |
 | Rev. C | 2026-10-03 | SysML v2 テキストの検査の記述を改めた（Pilot による名前の解決・型の検査、モデル統合・検査定義書 SSD-MDL-SYS-001）（Rev. AG） |
 | Rev. D | 2026-10-03 | 運用シナリオ・ユースケース定義書 SSD-UC-ORB-001 への参照を注記（Rev. AH） |
+| Rev. E | 2026-10-19 | MBSE グリッド・手法対応定義書 SSD-GRD-SYS-001 への参照を注記（Rev. CS） |
