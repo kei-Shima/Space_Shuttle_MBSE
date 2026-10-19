@@ -194386,7 +194386,7 @@
         <mxCell id="p272-v-8" value="検査・出力" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#15202B;strokeColor=#15202B;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1180" y="150" width="700" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="p272-v-9" value="助言者" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#15202B;strokeColor=#15202B;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="p272-v-9" value="助言担当" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#15202B;strokeColor=#15202B;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;fontColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1880" y="150" width="200" height="28" as="geometry" />
         </mxCell>
         <UserObject label="PLN-27" id="p272-v-10" link="docs/SSD-PLN-SYS-001.html#PLN-27" tooltip="開く">
@@ -194397,7 +194397,7 @@
         <mxCell id="p272-v-11" value="1 調べる・計画する" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="140" y="178" width="340" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="p272-v-12" value="task/README.md・指示書・資料" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="p272-v-12" value="作業の記録・指示書・資料" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="480" y="178" width="700" height="24" as="geometry" />
         </mxCell>
         <mxCell id="p272-v-13" value="PLAN_&amp;lt;版&amp;gt;.md（結果を見る前の規則）" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
@@ -194519,7 +194519,7 @@
         <mxCell id="p272-v-47" value="apply_rev.py（新構成への変換・件数の更新・REFERENCES.md）" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#F3F5F8;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="480" y="346" width="700" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="p272-v-48" value="上書きの前に助言者の確認" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#F3F5F8;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="p272-v-48" value="上書きの前に助言担当の確認" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#F3F5F8;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1180" y="346" width="700" height="24" as="geometry" />
         </mxCell>
         <mxCell id="p272-v-49" value="上書きの前" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#F3F5F8;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
@@ -194559,7 +194559,7 @@
         <mxCell id="p272-v-59" value="プッシュの前" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#F3F5F8;strokeColor=#B8C0CA;fontSize=10;align=left;verticalAlign=top;spacingLeft=6;spacingTop=3;fontColor=#15202B;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1880" y="394" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="p272-v-60" value="&lt;b&gt;凡例&lt;/b&gt;&lt;br&gt;版ごとの再生成と検査の10段階。モデルの更新は人手の版ごとの再生成で、継続的な同期ではない。助言者の欄は、その段階の前後に助言者が確かめる区切り。利用者の確認の後にだけプッシュする。ID をクリックすると定義書の行を開く。" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;fontColor=#1B2430;strokeColor=#9AA3AE;fillColor=#FAFBFC;spacing=10;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="p272-v-60" value="&lt;b&gt;凡例&lt;/b&gt;&lt;br&gt;版ごとの再生成と検査の10段階。モデルの更新は人手の版ごとの再生成で、継続的な同期ではない。助言担当の欄は、その段階の前後に助言担当が確かめる区切り。利用者の確認の後にだけプッシュする。ID をクリックすると定義書の行を開く。" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=12;fontColor=#1B2430;strokeColor=#9AA3AE;fillColor=#FAFBFC;spacing=10;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="40" y="448" width="1570" height="80" as="geometry" />
         </mxCell>
         <mxCell id="p272-v-61" value="&lt;table style='border-collapse:collapse;width:100%;font-size:11px;text-align:left;'&gt;&lt;tr&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;background:#EEF1F5;white-space:nowrap;'&gt;文書番号&lt;/td&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;'&gt;SSD-SYS-ARC-001&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;background:#EEF1F5;white-space:nowrap;'&gt;表題&lt;/td&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;'&gt;スペースシャトル システム構成図（機能ブロック・インタフェース図）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;background:#EEF1F5;white-space:nowrap;'&gt;図番&lt;/td&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;'&gt;図272 モデルの更新の手順（10段階）（全272図）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;background:#EEF1F5;white-space:nowrap;'&gt;版・日付&lt;/td&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;'&gt;Rev. CT／2026-10-19&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;background:#EEF1F5;white-space:nowrap;'&gt;状態&lt;/td&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;'&gt;検討用（公開資料に基づく）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;background:#EEF1F5;white-space:nowrap;'&gt;作成／確認／承認&lt;/td&gt;&lt;td style='border:1px solid #15202B;padding:3px 6px;'&gt;　　　／　　　／　　　&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=fill;strokeColor=#15202B;strokeWidth=2;fillColor=#FFFFFF;align=left;verticalAlign=top;spacing=0;fontFamily=Helvetica;" vertex="1" parent="1">

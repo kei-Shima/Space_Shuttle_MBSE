@@ -46,15 +46,15 @@ package SSD_PLN_SYS_001 {
         part <'PLN-16'> pln_16 : PlanItem { doc /* 小さなプロジェクトの版管理 */ :>> category = "SEBoK"; :>> itemName = "小さなプロジェクトの版管理"; :>> rating = "有"; :>> assesses = ""; }
         part <'PLN-17'> pln_17 : PlanItem { doc /* 構成管理計画・SE 管理計画との照合 */ :>> category = "SEBoK"; :>> itemName = "構成管理計画・SE 管理計画との照合"; :>> rating = "無"; :>> assesses = ""; }
         part <'PLN-18'> pln_18 : PlanRole { doc /* 利用者 */ :>> roleName = "利用者"; :>> duty = "依頼を出し、方針を決め、外に出る操作（GitHub へのプッシュ）を確認する。"; }
-        part <'PLN-19'> pln_19 : PlanRole { doc /* Claude（作業の担当） */ :>> roleName = "Claude（作業の担当）"; :>> duty = "調査・データ・文書・図・SysML の作成と、検査の実行。ふだんの作業は Sonnet で進める。"; }
-        part <'PLN-20'> pln_20 : PlanRole { doc /* 助言者（Opus） */ :>> roleName = "助言者（Opus）"; :>> duty = "区切りごとに確かめる：作業計画・調査の指示書・build の前・検査の NG・Design/ への上書き・コミット／プッシュ／タグ（外に出る操作）・完了の前。一次資料と食い違うときは黙って乗り換えない。"; }
-        part <'PLN-21'> pln_21 : PlanRole { doc /* 調査担当（サブエージェント） */ :>> roleName = "調査担当（サブエージェント）"; :>> duty = "資料の読み取りなど範囲を決めた調査。結果は主のセッションが助言者で確かめる。"; }
+        part <'PLN-19'> pln_19 : PlanRole { doc /* 作成担当（AI アシスタント） */ :>> roleName = "作成担当（AI アシスタント）"; :>> duty = "調査・データ・文書・図・SysML の作成と、検査の実行。"; }
+        part <'PLN-20'> pln_20 : PlanRole { doc /* 助言担当（上位の AI モデルによる確認） */ :>> roleName = "助言担当（上位の AI モデルによる確認）"; :>> duty = "区切りごとに確かめる：作業計画・調査の指示書・build の前・検査の NG・Design/ への上書き・コミット／プッシュ／タグ（外に出る操作）・完了の前。一次資料と食い違うときは黙って乗り換えない。"; }
+        part <'PLN-21'> pln_21 : PlanRole { doc /* 調査担当（作成担当が起動する補助の AI） */ :>> roleName = "調査担当（作成担当が起動する補助の AI）"; :>> duty = "資料の読み取りなど範囲を決めた調査。結果は作成担当が助言担当で確かめる。"; }
         part <'PLN-22'> pln_22 : PlanTool { doc /* OMG SysML v2 Pilot Implementation（jupyter-sysml-kernel）と Eclipse Temurin JDK */ :>> toolName = "OMG SysML v2 Pilot Implementation（jupyter-sysml-kernel）と Eclipse Temurin JDK"; :>> toolVersion = "0.62.0・JDK 21"; :>> usage = "SysML v2 テキストの構文・名前の解決・型の検査（誤り 0・警告 0）"; }
         part <'PLN-23'> pln_23 : PlanTool { doc /* VS Code 拡張機能 SysML v2.0 Language Support */ :>> toolName = "VS Code 拡張機能 SysML v2.0 Language Support"; :>> toolVersion = "0.55.0（確かめたとき）"; :>> usage = "利用者が .sysml を開いて確かめる。誤り 0 を確かめたのは 0.55.0 のときで、入っている 0.56.0 には言語サーバーが無く、以降の版では実行していない（Design/README.md）"; }
         part <'PLN-24'> pln_24 : PlanTool { doc /* draw.io Desktop（コマンドライン） */ :>> toolName = "draw.io Desktop（コマンドライン）"; :>> toolVersion = "31.5.2"; :>> usage = "図（.drawio）の SVG・PNG への書き出し"; }
-        part <'PLN-25'> pln_25 : PlanTool { doc /* Python 3.12（PyMuPDF・Pillow ほか） */ :>> toolName = "Python 3.12（PyMuPDF・Pillow ほか）"; :>> toolVersion = "3.12"; :>> usage = "データ（task/tools の Python）から文書・SysML・図を生成し、検査する"; }
+        part <'PLN-25'> pln_25 : PlanTool { doc /* Python 3.12（PyMuPDF・Pillow ほか） */ :>> toolName = "Python 3.12（PyMuPDF・Pillow ほか）"; :>> toolVersion = "3.12"; :>> usage = "データ（Python のスクリプトとデータ）から文書・SysML・図を生成し、検査する"; }
         part <'PLN-26'> pln_26 : PlanTool { doc /* Git と GitHub（GitHub Pages） */ :>> toolName = "Git と GitHub（GitHub Pages）"; :>> toolVersion = "—"; :>> usage = "版管理（コミット・タグ rev-<版>）、公開（CC BY 4.0）、閲覧"; }
-        part <'PLN-27'> pln_27 : PlanStep { doc /* 1 調べる・計画する */ :>> stageName = "1 調べる・計画する"; :>> tooling = "task/README.md・指示書・資料"; }
+        part <'PLN-27'> pln_27 : PlanStep { doc /* 1 調べる・計画する */ :>> stageName = "1 調べる・計画する"; :>> tooling = "作業の記録・指示書・資料"; }
         part <'PLN-28'> pln_28 : PlanStep { doc /* 2 データを書く */ :>> stageName = "2 データを書く"; :>> tooling = "research/rev_<版>/ のデータ（Python）"; }
         part <'PLN-29'> pln_29 : PlanStep { doc /* 3 文書と SysML を生成する */ :>> stageName = "3 文書と SysML を生成する"; :>> tooling = "build_docs_<版>.py（rev_run.sh）"; }
         part <'PLN-30'> pln_30 : PlanStep { doc /* 4 図を生成する */ :>> stageName = "4 図を生成する"; :>> tooling = "build_drawio_<版>.py（rev_run.sh）"; }
