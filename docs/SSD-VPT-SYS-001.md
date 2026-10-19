@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-VPT-SYS-001 |
 | 表題 | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） |
-| 版・日付 | Rev. BD／2026-10-19 |
+| 版・日付 | Rev. BE／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図111 ビューポイントと関係者の行列 |
 
 ## 1. 目的
 
-本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 266件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
+本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 268件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
 
 ## 2. 書き方
 
@@ -78,13 +78,13 @@
 | VP-08 | 物理配置 | CN-08 | SH-DES・SH-LPS | GridView（asElementTable） | SSD_ALC_SYS_001 | SSD-PHY-ORB-001・SSD-ALC-SYS-001 | 2（図43・図91） |
 | VP-09 | 構成の違い | CN-09 | SH-MGT・SH-OPS・SH-PL | GridView（asElementTable） | SSD_VAR_ORB_001・SSD_IND_ORB_001・SSD_FLT_ORB_001 | SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-FLT-ORB-001 | 4（図109・図122・図123・図132） |
 | VP-10 | 根拠の追跡 | CN-10 | SH-SE・SH-DES・SH-MGT | GridView（asElementTable） | SSD_ALC_SYS_001 | SSD-*-REF-*・SSD-OPS-REF-001・002 | 33（図4・図7・図9・図10・図11・図13・図15・図17・図19・図21・図23・図25・図27・図29・図31・図33・図35・図37・図47・図49・図51・図53・図55・図57・図59・図61・図63・図65・図67・図69・図71・図73・図75） |
-| VP-11 | モデル管理 | CN-11 | SH-SE・SH-MGT | BrowserView（asTreeDiagram） | SSD_VPT_SYS_001::Conventions | SSD-SYS-IDX-001・SSD-MDL-SYS-001・SSD-VPT-SYS-001 | 3（図5・図92・図111） |
+| VP-11 | モデル管理 | CN-11 | SH-SE・SH-MGT | BrowserView（asTreeDiagram） | SSD_VPT_SYS_001::Conventions・SSD_MBS_SYS_001 | SSD-SYS-IDX-001・SSD-MDL-SYS-001・SSD-VPT-SYS-001・SSD-MBS-SYS-001 | 5（図5・図92・図111・図267・図268） |
 | VP-12 | トレース・影響 | CN-12 | SH-SE・SH-MGT・SH-SMA・SH-VER | GridView（asElementTable） | SSD_TRC_SYS_001 | SSD-TRC-SYS-001 | 3（図115・図116・図117） |
 | VP-13 | 人間系 | CN-13・CN-14・CN-15・CN-16・CN-17・CN-18・CN-19・CN-20・CN-21 | SH-HSI・SH-CREW・SH-OPS・SH-SMA | GeneralView（asTreeDiagram） | SSD_HSI_SYS_001・SSD_EXP_ORB_001・SSD_TSK_ORB_001・SSD_HEA_ORB_001・SSD_CIF_ORB_001・SSD_HAB_ORB_001・SSD_EGR_ORB_001・SSD_HVM_SYS_001・SSD_ATM_ORB_001・SSD_EPB_EVA_001・SSD_HRS_ORB_001・SSD_MED_ORB_001 | SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001 | 27（図143・図144・図145・図146・図147・図148・図149・図150・図151・図152・図153・図154・図155・図156・図157・図158・図163・図164・図165・図183・図184・図185・図186・図187・図188・図189・図190） |
 
 ## 6. ビュー（図）
 
-図 266件のビューポイントを示す。
+図 268件のビューポイントを示す。
 
 | 図 | 表題 | ビューポイント | SysML |
 |---|---|---|---|
@@ -354,6 +354,8 @@
 | 図264 | PRA の値（全体・フェーズ・主要シナリオ） | VP-06 | fig264 |
 | 図265 | PRA の主要シナリオとハザード解析の対応・起こりやすさ | VP-06 | fig265 |
 | 図266 | PRA の上位 10件に現れないハザードと範囲の違い | VP-06 | fig266 |
+| 図267 | NASA-HDBK-1009A の作業成果物と本パッケージの対応 | VP-11 | fig267 |
+| 図268 | 効果的なモデルの基準・性質（SEBoK）と本パッケージの評価 | VP-11 | fig268 |
 
 ## 7. 表記の規約
 
@@ -361,7 +363,7 @@
 
 | 接頭辞 | 形 | 意味 | 例 | 件数 |
 |---|---|---|---|---|
-| SSD- | SSD-<種別>-<対象>-<3桁> | 文書番号（SSD-種別-対象-連番） | SSD-FD-OMS-ENG-001 | 338 |
+| SSD- | SSD-<種別>-<対象>-<3桁> | 文書番号（SSD-種別-対象-連番） | SSD-FD-OMS-ENG-001 | 339 |
 | F- | F-<系>-<下位>-<2桁> | 機能行（機能説明書の機能の表） | F-OMS-ENG-01 | 2075 |
 | IF- | IF-<系>-<番号> | インタフェース（所有の文書の IF の表） | IF-ORB-05 | 601 |
 | REQ- | REQ-<系>-<2桁> | 要求（要求書） | REQ-OMS-01 | 317 |
@@ -413,6 +415,7 @@
 | IFA- | IFA-<3桁> | 飛行中異常（Mission Report の番号つき） | IFA-001 | 390 |
 | PLB- | PLB-<2桁> | ペイロード搭載・着陸の制約 | PLB-01 | 25 |
 | PRA- | PRA-<2桁> | PRA の主要シナリオ・値 | PRA-01 | 10 |
+| MBS- | MBS-<2桁> | MBSE 実践の対応の項目 | MBS-01 | 64 |
 
 ## 8. ビューポイントの図
 
@@ -420,7 +423,7 @@
 
 ## 9. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 266件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 268件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -497,3 +500,4 @@
 | Rev. BB | 2026-10-19 | 図257〜260（飛行中異常の表）を VP-06 のビューに加え、SSD_IFA_ORB_001 を晒すようにし、表記の規約に異常の ID（IFA-）を加えた（Rev. CO） |
 | Rev. BC | 2026-10-19 | 図261〜263（ペイロード搭載・着陸の制約の表）を VP-07 のビューに加え、SSD_PLB_ORB_001 を晒すようにし、表記の規約に制約・内訳・荷重係数の ID（PLB-）を加えた（Rev. CP） |
 | Rev. BD | 2026-10-19 | 図264〜266（PRA の値とハザードの比較の表）を VP-06 のビューに加え、SSD_PRA_ORB_001 を晒すようにし、表記の規約に PRA の ID（PRA-）を加えた（Rev. CQ） |
+| Rev. BE | 2026-10-19 | 図267・268（MBSE 実践の対応の表）を VP-11 のビューに加え、SSD_MBS_SYS_001 を晒すようにし、表記の規約に項目の ID（MBS-）を加えた（Rev. CR） |
