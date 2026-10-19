@@ -77,7 +77,7 @@ summary{cursor:pointer;font-size:.9rem;color:var(--link)}
 <nav class="pages" aria-label="図書一覧のページ"><a href="index.html">図書一覧</a><a href="index_guide.html">使い方・出典</a><a href="index_figures.html">図面</a><a href="index_documents.html">文書一覧</a><a href="index_interfaces.html">インタフェース一覧</a><a href="index_notes.html">注記</a><a href="index_history.html">変更履歴</a></nav>
 <h2>5. 注記（出典間の相違・構成変更）</h2>
 <nav class="pages sub" aria-label="注記のページ"><a href="index_notes_vehicle.html">システム全体・推進</a><a href="index_notes_avionics.html">誘導制御・データ処理・通信・警報</a><a href="index_notes_power.html">電力・油圧・熱</a><a href="index_notes_crew.html">構造・機構・ペイロード・乗員・船外活動</a><a href="index_notes_eclss.html">環境制御・生命維持系（ECLSS）</a><a href="index_notes_ars.html">大気再生系（ARS）とその下位</a><a href="index_notes_ops.html">運用・振る舞い・要求・検証</a><a href="index_notes_model.html">構成・資源・安全</a><a href="index_notes_hsi.html">人間系</a><a href="index_notes_other.html" aria-current="page">その他</a></nav>
-<h3 id="g-etc">その他<span class="n">2文書・11件</span><a class="more" href="index_documents.html#g-etc">文書一覧</a></h3>
+<h3 id="g-etc">その他<span class="n">3文書・17件</span><a class="more" href="index_documents.html#g-etc">文書一覧</a></h3>
 <!--[notes:etc]-->
 <div class='note'><b><a href='docs/SSD-IFA-ORB-001.html'>SSD-IFA-ORB-001</a></b>　範囲外：STS-37〜99 の本文の形の異常（約 390件）と、種別 E（SSME）・T（ET）・B（SRB）・M（RSRM）・I（統合）などの異常は入れていない。STS-129-V-01 は報告に現れない。報告の番号は OCR の崩れ（STS-122-V-05 の付録の見出し「TS-124-V-05」、STS-119-V-16 の「STS--V-16」など）を調査役が文脈から直したものがある。</div>
 <div class='note'><b><a href='docs/SSD-IFA-ORB-001.html'>SSD-IFA-ORB-001</a></b>　つなぎの傾向（本書の判断）：要求の欄が付いたのは 3件、警報の欄は 1件だった。報告に C/W の警告灯の記述がほとんど無く、要求の限界・規則への違反を述べる文も少ないため、無理に当てていない。SM のアラートや OFS のメッセージは警報（CW-nn）に数えていない。補足に「確証」（確証が弱い・確証なし）と書かれたつなぎのある異常は 69件で、元の文との突き合わせの見直し（30件）でも、機能の故障モードの当て方がゆるいものが数件あった。</div>
@@ -90,5 +90,11 @@ summary{cursor:pointer;font-size:.9rem;color:var(--link)}
 <div class='note'><b><a href='docs/SSD-PLB-ORB-001.html'>SSD-PLB-ORB-001</a></b>　範囲・取れなかった値・本書の判断：ペイロードの質量・軌道高度・傾斜角ごとの打上げ能力の曲線（頁 58 ほか）は図だけで、数値の表が無いので載せない。NSTS 07700 Vol. XIV（ペイロード搭載の正式の要求）は取得できなかった。</div>
 <div class='note'><b><a href='docs/SSD-PLB-ORB-001.html'>SSD-PLB-ORB-001</a></b>　既存との重なり：着陸重量の上限（EOM 233,000 lb・アボート 239,000〜248,000 lb）と質量モーメントの制約は SSD-ANA-ORB-001（MS-02〜MS-05・MC-01〜MC-05）、着陸重量の実績は SSD-TPM-SYS-001（TPM-01）にあり、本書は繰り返さずリンクでつなぐ。貨物室の区画は SSD-PHY-ORB-001。</div>
 <div class='note'><b><a href='docs/SSD-PLB-ORB-001.html'>SSD-PLB-ORB-001</a></b>　基準の時期（本書の判断）：1980年の資料の値（貨物の設計重量 65,000／32,000 lb、乾燥重量 約 160,000 lb など）は、飛行を重ねた機体の実測値と異なるはずで、SCOM（2008）の着陸重量の上限 233,000 lb から乾燥重量と貨物の設計重量を引いた残り 41,000 lb は、設計時の余裕の目安としてだけ読む。</div>
+<div class='note'><b><a href='docs/SSD-PRA-ORB-001.html'>SSD-PRA-ORB-001</a></b>　範囲・取れなかった値・本書の判断：Table 1（Iteration 2.1）の「実現」の割合のうち、軌道と再突入の欄は OCR で読めないので載せない（本文は「約 3分の2 が再突入で実現」とだけ述べる）。上昇の割合だけ載せた。</div>
+<div class='note'><b><a href='docs/SSD-PRA-ORB-001.html'>SSD-PRA-ORB-001</a></b>　範囲・取れなかった値・本書の判断：表3 は OCR で行が崩れていたので、確率・順位・割合・累積の割合の対応を、行の順序と数値の整合（確率＝1/n、累積＝前の行の累積＋割合）で確かめた（selfcheck）。Iteration 2.1 の欄（確率・順位）は同じ行の前後の文字列から取った。</div>
+<div class='note'><b><a href='docs/SSD-PRA-ORB-001.html'>SSD-PRA-ORB-001</a></b>　範囲・取れなかった値・本書の判断：本文は SRB のシャフトシールの Iteration 2.1 の値を 3.2E-02 と書くが、表は 3.2E-04（1 in 3,150）で、表の値は 1/n と合う。表の値を載せ、食い違いは注記に書いた。</div>
+<div class='note'><b><a href='docs/SSD-PRA-ORB-001.html'>SSD-PRA-ORB-001</a></b>　範囲・取れなかった値・本書の判断：要素別の寄与（図2・図3）は値を読まない（図だけ）。</div>
+<div class='note'><b><a href='docs/SSD-PRA-ORB-001.html'>SSD-PRA-ORB-001</a></b>　PRA の範囲（本書の判断：ハザード解析との比較の注意）：PRA は離昇から車輪停止の飛行中の LOCV で、船外活動・ペイロード・地上作業・すべての飛行規則を含まない（原文の限界の項）。ハザード解析の HZ-12（EVA 中の EMU の故障）・HZ-03（CO2）・HZ-15（通信の喪失）などは PRA の範囲外か、LOCV に至らない結果で、PRA の上位 10件に現れないことは起こりにくさの比較にならない。</div>
+<div class='note'><b><a href='docs/SSD-PRA-ORB-001.html'>SSD-PRA-ORB-001</a></b>　標準ミッションの期間（原文）：Iteration 3.1 は 11.4日、Iteration 2.1 は 9日。リスクは飛行あたりの値で、期間の違いを補正していない。</div>
 <!--[/notes:etc]-->
 </main></body></html>

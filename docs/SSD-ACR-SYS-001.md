@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ACR-SYS-001 |
 | 表題 | 略語表（英語の略称と正式名称） |
-| 版・日付 | Rev. O／2026-10-19 |
+| 版・日付 | Rev. P／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-VPT-SYS-001 |
 | 関連図 | — |
@@ -15,11 +15,11 @@
 
 ## 2. 書き方
 
-略語表は 390行。第一の出典は、運用飛行規則 Vol. A（NSTS-12820 PCN-1）の付録A「Acronyms and Abbreviations」（PDF 2161〜2192）で、326行がこれによる。付録A に無い語、付録A と意味が違う語は、各資料の本文にある「正式名称 (略称)」の形から取った。出典の欄の頁の URL が、その語の正式名称を示す頁である。正式名称は資料の綴りのままで、日本語名は本書の訳である。この書き方で載せる語は、説明書・SysML・図のラベルの全体で 10回以上、3ファイル以上に出る略称である（頻出の略称。それより少ない語は載せていない）。
+略語表は 393行。第一の出典は、運用飛行規則 Vol. A（NSTS-12820 PCN-1）の付録A「Acronyms and Abbreviations」（PDF 2161〜2192）で、326行がこれによる。付録A に無い語、付録A と意味が違う語は、各資料の本文にある「正式名称 (略称)」の形から取った。出典の欄の頁の URL が、その語の正式名称を示す頁である。正式名称は資料の綴りのままで、日本語名は本書の訳である。この書き方で載せる語は、説明書・SysML・図のラベルの全体で 10回以上、3ファイル以上に出る略称である（頻出の略称。それより少ない語は載せていない）。
 
 ## 3. 略語表
 
-略称のアルファベット順に 390行を示す。同じ略称に複数の意味があるときは、行を分けた。
+略称のアルファベット順に 393行を示す。同じ略称に複数の意味があるときは、行を分けた。
 
 | 略称 | 正式名称（英） | 日本語名 | 分類 | 出典 |
 |---|---|---|---|---|
@@ -413,6 +413,9 @@
 | MOE | Measure of Effectiveness | 有効性の尺度（MOE。飛行ごとの成否） | 資料・文書・規格 | （出典: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf） |
 | MOP | Measure of Performance | 性能の尺度（MOP。系の性能） | 資料・文書・規格 | （出典: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf） |
 | TPM | Technical Performance Measure | 技術性能指標（TPM。閾値を持つ量。本書では運用の飛行ごとの実測値の推移） | 資料・文書・規格 | （出典: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf） |
+| LOCV | Loss of Crew and Vehicle | 乗員・機体の喪失（LOCV） | 資料・文書・規格 | （出典: https://ntrs.nasa.gov/api/citations/20100005659/downloads/20100005659.pdf） |
+| SPRA | Shuttle Probabilistic Risk Assessment | スペースシャトルの確率論的リスク評価（SPRA） | 資料・文書・規格 | （出典: https://ntrs.nasa.gov/api/citations/20100005659/downloads/20100005659.pdf） |
+| PRA | Probabilistic Risk Assessment | 確率論的リスク評価（PRA） | 資料・文書・規格 | （出典: https://ntrs.nasa.gov/api/citations/20100005659/downloads/20100005659.pdf） |
 
 ## 4. 同じ略称の別の意味
 
@@ -477,6 +480,7 @@
 | GND | 地上処理・ターンアラウンド定義書 | SSD-GND-ORB-001 |
 | IFA | 飛行中異常記録定義書 | SSD-IFA-ORB-001 |
 | PLB | ペイロード搭載・着陸の制約定義書 | SSD-PLB-ORB-001 |
+| PRA | 確率論的リスク評価（PRA）比較定義書 | SSD-PRA-ORB-001 |
 
 ## 6. 文書番号の符号（対象）
 
@@ -685,7 +689,7 @@
 
 ## 8. 文書内の ID の接頭辞
 
-文書の表の行を指す ID の書き方 51件を示す。ビューポイント定義書（SSD-VPT-SYS-001）の表記の規約と同じデータによる。
+文書の表の行を指す ID の書き方 52件を示す。ビューポイント定義書（SSD-VPT-SYS-001）の表記の規約と同じデータによる。
 
 | 接頭辞 | 書式 | 意味 | 例 |
 |---|---|---|---|
@@ -740,10 +744,11 @@
 | CMS-・CMT- | CMS-<2桁>・CMT-<2桁> | 地上処理の段・秒読みの節目 | CMS-01 |
 | IFA- | IFA-<3桁> | 飛行中異常（Mission Report の番号つき） | IFA-001 |
 | PLB- | PLB-<2桁> | ペイロード搭載・着陸の制約 | PLB-01 |
+| PRA- | PRA-<2桁> | PRA の主要シナリオ・値 | PRA-01 |
 
 ## 9. 載せなかった語
 
-しきい値（10回以上・3ファイル以上）を超える大文字の語は 1653語あり、表または符号の表（種別・対象・機能）に載せたものは 542語、載せなかったものは区分ごとに次のとおりである。書式・IT の用語・単位記号（PDF・URL・MHz など）：6語（例：PDF・MHz・MD・URL・kHz・GHz）。文書番号・図面番号・版・型番の断片：241語（例：USA007587・V2・USA006020・L2・F7・L1・GN2・AC1）。図の表示名・スイッチ名をつないだ文字列、1文字：123語（例：D・I・W・G・ISOLATION・X・TRANSDUCER・O）。パネルの表示・一般の英単語（略語ではない）：366語（例：VALVE・ALARM・OFF・CABIN・PRESS・ON・MASTER・CONTROL）。複合の表記（表にある略称を / や & でつないだもの）：54語（例：EPD&C/MPS・O2/N2・FMEA/CIL・OMS/RCS・BAY/CABIN・MPS/TVC・A/B・RCS/OMS）。ローマ数字・記号：7語（例：IV・III・II・VI・VIII・VII・IX）。表の略称に S・T が付いた形（複数形、見出し語の続き）：4語（例：PROT・SRMS・JETT・ALSS）。表示ラベルの短縮形、または正式名称を資料で確認できなかった略称は 310語で、すべてを次に挙げる（出現数つき）：FN 2690、MN 411、WTR 318、MNA 307、SUMM 295、MNB 273、PL 265、DISP 228、VLV 215、OCR 199、PWR 192、ESS 180、CL 171、CAB 153、MG 145、B/U 144、TK 127、LT/RT 125、FOM 116、LPS 113、MA 100、KGS 100、PH 98、AB 97、INRTL 95、DIA 95、MNC 92、SNSR 88、EXEC 88、S&A 88、QA 87、PDI 85、SPLX 84、LO 83、REG 83、CMO 83、YA 77、YB 77、POD 76、MANIF 76、GP 75、S/N 75、ADC 74、MAN 72、LF 72、HUM 71、STBY 70、BATT 70、NA 69、SIT 68、TG 67、FR 67、QB 67、MSG 67、OP 65、BLOCKING 65、AIRLK 64、HCl 64、QC 64、YE 63、CIRC 62、ATC 61、RDR 61、FREON 61、RESISTOR 61、CTR 60、CH 59、EPDC 57、HORIZ 57、GN 56、HDC 56、RECIRC 56、RL 55、CM 54、NAV 53、VSU 52、DTV 52、OCA 52、IA 50、HUT 49、MWS 48、PF 48、DETN 48、OBS 47、NOM 46、PB 45、QE 45、PTU 45、SUPPR 45、RCU 44、HUMID 44、LK 44、WL 44、YD 43、SPA 43、BSM 42、PAL 42、EHIP 42、EC/LSS 38、BRT 37、SEL 37、CC 37、PVT 37、SRGA 36、RJDA 36、BFC 36、LAT 35、XOVR 35、LTA 35、LA 35、GIRA 35、FAI 35、I/P 35、REBA 34、SPLY 34、SPD 34、ICOM 34、CCA 34、PHH 34、RJDF 33、MMACS 33、ISQ 32、YC 32、PKT 32、SIG 32、ECO 31、PAD 31、DP 31、LIM 31、REAC 31、RTL 31、PROM 31、SEC 31、BIPROP 31、EMSS 31、SPACEHAB 30、AMP 30、I/4W 30、FUSLG 30、PT 30、WLE 30、ENABLE/NOZ 29、FU 29、VT 28、CNTL 28、APCU 28、DLMA 28、CONDR 27、CIA 27、V&V 27、AVBF 25、NOZ 25、ERR 25、CCK 25、SMRD 25、O/P 25、MFD 24、HRP 24、SSCS 24、UNIV 24、PTG 24、LCS 23、PRD 23、WP 23、PCT 23、PWRDN 23、PI 23、LDB 23、LEB 22、EPG/PRSD 22、INH 22、MAR 22、PDP 22、OFP 22、LDRI 21、LSS 21、CCU 21、ITVC 21、EMERG 21、WLEIDS 21、NTSC 21、GCILC 21、LACU 20、PET 20、ASP 20、THRM 20、VCV 20、HIU 20、RGA/ACCEL 20、LVI 20、RVI 20、GSE/LPS 20、MBK 20、EMK 20、ENA/NOZ 19、CPU 19、LT 19、MUP 19、CPR 19、UTIL 19、PACU 18、CDF 18、THERM 18、EMDM 18、RI/NASA 18、VERN 18、ARLK 17、SEQ 17、CE 17、RSRM 17、IP 17、AVBA 16、INCR/DECR 16、GSTDN 16、SARSAT 16、CPA 16、SSSR 16、PWR/REBA 16、PEI 15、OPER/STBY 15、COOP 15、DPY 15、PNL 15、NIST 15、ZOT 15、LAI 15、SW 15、ROTOR 15、IDCA 15、FRCI 14、LN 14、ENA 14、OMRSD 14、CTVC 14、MSU 14、CSCS 14、MAJ 14、SNSR/VLV 14、AMC 14、ACME 14、TLD 14、DME 14、LEA 14、VO2max 14、NOAX 13、PSU 13、PCI 13、SSA 13、SIP 13、PC 13、GSC 13、FCC 13、FPC 13、STRG 13、R/Y 13、NMSUS 13、IDS 13、PMBT 13、AVS 12、CNTRL 12、MAINT 12、FLOODS 12、SEAWARS 12、VPU 12、OAA 12、FCO 12、RCV 12、REFSMMAT 12、APC 12、RSI 12、LCA 12、RTC 12、ILMA 12、GG 11、AUT 11、CONTR 11、EVA/ATC 11、TCDT 11、EPD&C/EPG 11、WVS 11、AMPL 11、LLIS 11、PWM 11、PPK 11、LWMAR 11、STGT 11、RTV 10、FOD 10、BONDLINE 10、PBD 10、DEP/REP 10、EPG 10、DAT 10、PS 10、GMBL 10、SELECT/RCV 10、SSMM 10、AIAA 10、MTL 10、VORTAC 10、OVRD 10、MPLM 10、BACKUPLH2 10、GROUP1 10、COMPT 10、ADJUSTER 10、KHZ 10、EER 10、NPLS 10、SI 10。このうち多くは図の表示名・スイッチ名の短縮形で、資料の表示のままであり、正式名称を定めた箇所がない。
+しきい値（10回以上・3ファイル以上）を超える大文字の語は 1655語あり、表または符号の表（種別・対象・機能）に載せたものは 543語、載せなかったものは区分ごとに次のとおりである。書式・IT の用語・単位記号（PDF・URL・MHz など）：6語（例：PDF・MHz・MD・URL・kHz・GHz）。文書番号・図面番号・版・型番の断片：241語（例：USA007587・V2・USA006020・L2・F7・L1・GN2・AC1）。図の表示名・スイッチ名をつないだ文字列、1文字：123語（例：D・I・W・G・ISOLATION・X・TRANSDUCER・O）。パネルの表示・一般の英単語（略語ではない）：366語（例：VALVE・ALARM・OFF・CABIN・PRESS・ON・MASTER・CONTROL）。複合の表記（表にある略称を / や & でつないだもの）：54語（例：EPD&C/MPS・O2/N2・FMEA/CIL・OMS/RCS・BAY/CABIN・MPS/TVC・A/B・RCS/OMS）。ローマ数字・記号：7語（例：IV・III・II・VI・VIII・VII・IX）。表の略称に S・T が付いた形（複数形、見出し語の続き）：4語（例：PROT・SRMS・JETT・ALSS）。表示ラベルの短縮形、または正式名称を資料で確認できなかった略称は 311語で、すべてを次に挙げる（出現数つき）：FN 2690、MN 411、WTR 318、MNA 307、SUMM 295、MNB 273、PL 265、DISP 228、VLV 215、OCR 206、PWR 192、ESS 180、CL 171、CAB 153、MG 145、B/U 144、TK 127、LT/RT 125、FOM 116、LPS 113、MA 100、KGS 100、PH 98、AB 97、INRTL 95、DIA 95、MNC 92、SNSR 88、EXEC 88、S&A 88、QA 87、PDI 85、SPLX 84、LO 83、REG 83、CMO 83、YA 77、YB 77、POD 76、MANIF 76、GP 75、S/N 75、ADC 74、MAN 72、LF 72、HUM 71、STBY 70、BATT 70、NA 69、SIT 68、TG 67、FR 67、QB 67、MSG 67、OP 65、BLOCKING 65、AIRLK 64、HCl 64、QC 64、YE 63、CIRC 62、ATC 61、RDR 61、FREON 61、RESISTOR 61、CTR 60、CH 59、EPDC 57、HORIZ 57、GN 56、HDC 56、RECIRC 56、RL 55、CM 54、NAV 53、VSU 52、DTV 52、OCA 52、IA 50、HUT 49、MWS 48、PF 48、DETN 48、OBS 47、NOM 46、PB 45、QE 45、PTU 45、SUPPR 45、RCU 44、HUMID 44、LK 44、WL 44、YD 43、SPA 43、BSM 42、PAL 42、EHIP 42、EC/LSS 38、BRT 37、SEL 37、CC 37、PVT 37、SRGA 36、RJDA 36、BFC 36、LAT 35、XOVR 35、LTA 35、LA 35、GIRA 35、FAI 35、I/P 35、REBA 34、SPLY 34、SPD 34、ICOM 34、CCA 34、PHH 34、RJDF 33、MMACS 33、ISQ 32、YC 32、PKT 32、SIG 32、ECO 31、PAD 31、DP 31、LIM 31、REAC 31、RTL 31、PROM 31、SEC 31、BIPROP 31、EMSS 31、SPACEHAB 30、AMP 30、I/4W 30、FUSLG 30、PT 30、WLE 30、ENABLE/NOZ 29、FU 29、VT 28、CNTL 28、APCU 28、DLMA 28、CONDR 27、CIA 27、RSRM 27、V&V 27、AVBF 25、NOZ 25、ERR 25、CCK 25、SMRD 25、O/P 25、MFD 24、HRP 24、SSCS 24、UNIV 24、PTG 24、LCS 23、PRD 23、WP 23、PCT 23、PWRDN 23、PI 23、LDB 23、LEB 22、EPG/PRSD 22、INH 22、MAR 22、PDP 22、OFP 22、LDRI 21、LSS 21、CCU 21、ITVC 21、EMERG 21、WLEIDS 21、NTSC 21、GCILC 21、LACU 20、PET 20、ASP 20、THRM 20、VCV 20、HIU 20、RGA/ACCEL 20、LVI 20、RVI 20、GSE/LPS 20、MBK 20、EMK 20、ENA/NOZ 19、CPU 19、LT 19、MUP 19、CPR 19、UTIL 19、PACU 18、CDF 18、THERM 18、EMDM 18、RI/NASA 18、VERN 18、ARLK 17、SEQ 17、CE 17、IP 17、AVBA 16、INCR/DECR 16、GSTDN 16、SARSAT 16、CPA 16、SSSR 16、PWR/REBA 16、PEI 15、OPER/STBY 15、COOP 15、DPY 15、PNL 15、NIST 15、ZOT 15、LAI 15、SW 15、ROTOR 15、IDCA 15、FRCI 14、LN 14、ENA 14、OMRSD 14、CTVC 14、MSU 14、CSCS 14、MAJ 14、SNSR/VLV 14、AMC 14、ACME 14、TLD 14、DME 14、LEA 14、VO2max 14、MMOD 14、NOAX 13、PSU 13、PCI 13、SSA 13、SIP 13、PC 13、GSC 13、FCC 13、FPC 13、STRG 13、R/Y 13、NMSUS 13、IDS 13、PMBT 13、AVS 12、CNTRL 12、MAINT 12、FLOODS 12、SEAWARS 12、VPU 12、OAA 12、FCO 12、RCV 12、REFSMMAT 12、APC 12、RSI 12、LCA 12、RTC 12、ILMA 12、GG 11、AUT 11、CONTR 11、EVA/ATC 11、TCDT 11、EPD&C/EPG 11、WVS 11、AMPL 11、LLIS 11、PWM 11、PPK 11、LWMAR 11、STGT 11、RTV 10、FOD 10、BONDLINE 10、PBD 10、DEP/REP 10、EPG 10、DAT 10、PS 10、GMBL 10、SELECT/RCV 10、SSMM 10、AIAA 10、MTL 10、VORTAC 10、OVRD 10、MPLM 10、BACKUPLH2 10、GROUP1 10、COMPT 10、ADJUSTER 10、KHZ 10、EER 10、NPLS 10、SI 10。このうち多くは図の表示名・スイッチ名の短縮形で、資料の表示のままであり、正式名称を定めた箇所がない。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -842,6 +847,7 @@
 87. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
 88. NASA Technical Reports Server（NTRS） — https://ntrs.nasa.gov/
 89. NASA Systems Engineering Handbook（NASA/SP-2016-6105 Rev2。MOE・MOP・TPM の定義） — https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf
+90. 2009 Space Shuttle Probabilistic Risk Assessment Overview（T. L. Hamlin ほか、NASA／SAIC、PSAM 10、NTRS 20100005659。LOCV・SPRA・PRA の定義） — https://ntrs.nasa.gov/api/citations/20100005659/downloads/20100005659.pdf
 
 ## 12. 変更履歴
 
@@ -863,3 +869,4 @@
 | Rev. M | 2026-10-19 | 図92 の描き直しで本文が変わったので、載せなかった語の出現数を数え直した（298語。Rev. CN）（Rev. CN） |
 | Rev. N | 2026-10-19 | 文書番号の符号 IFA（飛行中異常記録定義書）を足した、SSD-IFA-ORB-001 の追加で略語が増えたので、載せなかった語の出現数を数え直した（307語。Rev. CO）（Rev. CO） |
 | Rev. O | 2026-10-19 | 文書番号の符号 PLB（ペイロード搭載・着陸の制約定義書）を足した、SSD-PLB-ORB-001 の追加で略語が増えたので、載せなかった語の出現数を数え直した（310語。Rev. CP）（Rev. CP） |
+| Rev. P | 2026-10-19 | 文書番号の符号 PRA（確率論的リスク評価比較定義書）と、略語 LOCV・SPRA・PRA を足した、SSD-PRA-ORB-001 の追加で略語が増えたので、載せなかった語の出現数を数え直した（311語。Rev. CQ）（Rev. CQ） |

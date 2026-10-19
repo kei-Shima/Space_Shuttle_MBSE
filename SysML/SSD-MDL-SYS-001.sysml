@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 54件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 55件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -50,6 +50,7 @@ package SSD_MDL_SYS_001 {
     public import SSD_FMX_ORB_001;   // SSD-FMX-ORB-001 オービタの系の機能の故障モード（ECLSS 以外）
     public import SSD_IFA_ORB_001;   // SSD-IFA-ORB-001 飛行中異常（番号つきの記録・故障モードへのつなぎ）
     public import SSD_PLB_ORB_001;   // SSD-PLB-ORB-001 ペイロード搭載・着陸の制約（貨物の重量・重心・荷重）
+    public import SSD_PRA_ORB_001;   // SSD-PRA-ORB-001 確率論的リスク評価（PRA）の値とハザードの比較
     public import SSD_HEA_ORB_001;   // SSD-HEA-ORB-001 ヒューマンエラー解析
     public import SSD_CIF_ORB_001;   // SSD-CIF-ORB-001 乗員インタフェース（警報の階層・表示と操作）
     public import SSD_HAB_ORB_001;   // SSD-HAB-ORB-001 居住性と医療（機能・乗員の1日・ユースケース）

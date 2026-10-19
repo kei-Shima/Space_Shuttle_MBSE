@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-HAZ-ORB-001 |
 | 表題 | ハザード解析書（ハザード・原因・管理策・検証） |
-| 版・日付 | Rev. E／2026-10-12 |
+| 版・日付 | Rev. F／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図120 ハザードのリスク行列・図121 ハザードの原因と管理策 |
@@ -244,6 +244,8 @@
 
 > **注記** ECLSS 以外の系の機能の故障モードから原因（HC）への因果は [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FMX-ORB-001.sysml）。
 
+> **注記** 確率論的リスク評価（Shuttle PRA）の主要シナリオとの比較（起こりやすさの尺度の違い、PRA にあって HAZ に無いハザード・原因）は本書。本書の判定は変えないは [SSD-PRA-ORB-001](SSD-PRA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-PRA-ORB-001.sysml）。
+
 ## 12. 参考文献
 
 1. USA006019 Rev. A C&W 21002 Caution and Warning 訓練マニュアル（2008） （PDF p127） — https://www.ibiblio.org/apollo/Shuttle/Crew%20Training/Caution%20and%20Warning.pdf#page=127
@@ -356,3 +358,4 @@
 | Rev. C | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
 | Rev. D | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
 | Rev. E | 2026-10-12 | オービタの系の機能の故障モード定義書 SSD-FMX-ORB-001 への参照を注記（Rev. BY） |
+| Rev. F | 2026-10-19 | 確率論的リスク評価（PRA）比較定義書 SSD-PRA-ORB-001 への参照を注記（Rev. CQ） |
