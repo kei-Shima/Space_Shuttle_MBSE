@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ANA-ORB-001 |
 | 表題 | 解析定義書（CO2 除去のトレード・質量特性・Δv・故障の木） |
-| 版・日付 | Rev. E／2026-10-12 |
+| 版・日付 | Rev. F／2026-10-19 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BUD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図104 CO2 除去のトレードスタディ・図105 質量特性・Δv の解析・図106 故障の木 A（28 VDC 主電力の喪失）・図107 故障の木 B（空力舵面の油圧の喪失）・図108 故障の木 C（CO2 制御の喪失） |
@@ -312,6 +312,8 @@ OMS・RCS の推進薬・比推力・推力と、噴射ごとの Δv の値を�
 
 > **注記** 上昇の質量・推力加速度の時間変化と、理想の速度増分（質量と ΔV の解析は本書）は [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-TRJ-ORB-001.sysml）。
 
+> **注記** 貨物（ペイロード）の側の制約（重量・重心・荷重・取付け）と、着陸重量の内訳（乾燥重量＋貨物＋残り）は本書（1980年の設計値）は [SSD-PLB-ORB-001](SSD-PLB-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-PLB-ORB-001.sysml）。
+
 ## 13. 参考文献
 
 1. Shuttle Crew Operations Manual 2.9 Environmental Control and Life Support System（USA007587 Rev. A CPN-1、PDF p370） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/370
@@ -388,3 +390,4 @@ OMS・RCS の推進薬・比推力・推力と、噴射ごとの Δv の値を�
 | Rev. C | 2026-10-09 | ECLSS の故障モード定義書 SSD-FMX-ECL-001 への参照を注記（Rev. BL） |
 | Rev. D | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
 | Rev. E | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |
+| Rev. F | 2026-10-19 | ペイロード搭載・着陸の制約定義書 SSD-PLB-ORB-001 への参照を注記（Rev. CP） |
