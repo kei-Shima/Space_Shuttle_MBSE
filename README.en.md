@@ -3,8 +3,8 @@
 A model-based systems engineering (MBSE) package that reconstructs the system design of the Space Shuttle from publicly available documents: diagrams, design documents, and SysML v2 models that are linked to each other.
 
 - **Browse online:** <https://kei-shima.github.io/Space_Shuttle_MBSE/>
-- Revision: Rev. CT (2026-10-19)
-- Contents: 272 diagrams (draw.io, exported as SVG and PNG), 341 design documents (HTML and Markdown), 59 SysML v2 text files
+- Revision: Rev. CU (2026-10-28)
+- Contents: 275 diagrams (draw.io, exported as SVG and PNG), 342 design documents (HTML and Markdown), 60 SysML v2 text files
 - Japanese README (the primary one): [README.md](README.md)
 - Acronym list (English abbreviations and full names): [docs/SSD-ACR-SYS-001.md](docs/SSD-ACR-SYS-001.md)
 
@@ -53,12 +53,12 @@ On github.com, HTML files are shown as source. To read on github.com instead, st
 |---|---|---|
 | `guide/` | Beginner's guide to MBSE (Japanese only; 6 HTML pages + README.md). Not counted in the deliverable totals | Browser (`guide/index.html`) |
 | `html/index.html`, `html/index_*.html` | Document index | Browser |
-| `html/*.svg` | The 272 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
+| `html/*.svg` | The 275 diagrams (`SSD-SYS-ARC-001_p<number>_<name>.svg`) | Browser |
 | `html/preview/*.png` | PNG versions of the diagrams | Image viewer |
-| `html/docs/*.html` | The 341 documents | Browser |
+| `html/docs/*.html` | The 342 documents | Browser |
 | `docs/*.md` | Markdown version of the same documents | github.com, VS Code |
 | `SysML/*.sysml` | 53 SysML v2 text files | VS Code (see below) |
-| `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (272 pages) | draw.io |
+| `Draw_io/SSD-SYS-ARC-001.drawio` | Source of the diagrams (275 pages) | draw.io |
 | `REFERENCES.md` | List of the public sources cited | github.com, VS Code |
 | `LICENSE.md` | License text (CC BY 4.0) | github.com, VS Code |
 | `index.html`, `.nojekyll` | Redirect to `html/index.html` and a marker file, both for GitHub Pages | — |
@@ -105,7 +105,7 @@ The VS Code extension applies its own rules. With v0.55.0 it reports 0 errors an
 
 ## Diagram source (draw.io)
 
-`Draw_io/SSD-SYS-ARC-001.drawio` opens in draw.io Desktop or in the VS Code extension Draw.io Integration (`hediet.vscode-drawio`). It has 272 pages and is about 20 MB, so it takes a while to open. Links inside the diagrams are relative to the exported SVG files in `html/`, so they do not work inside draw.io.
+`Draw_io/SSD-SYS-ARC-001.drawio` opens in draw.io Desktop or in the VS Code extension Draw.io Integration (`hediet.vscode-drawio`). It has 275 pages and is about 20 MB, so it takes a while to open. Links inside the diagrams are relative to the exported SVG files in `html/`, so they do not work inside draw.io.
 
 ## Revisions and tags
 

@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. CT／2026-10-19　状態：検討用（公開資料に基づく）
+版・日付：Rev. CU／2026-10-28　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -276,6 +276,9 @@
 - [図270 MBSE 手法の工程との対応（Estefan 2008）と ISO/IEC/IEEE 42010](../html/SSD-SYS-ARC-001_p270_grd_methods.svg)
 - [図271 モデルの構成（種別ごとの文書とパッケージ）](../html/SSD-SYS-ARC-001_p271_pln_struct.svg)
 - [図272 モデルの更新の手順（10段階）](../html/SSD-SYS-ARC-001_p272_pln_steps.svg)
+- [図273 打上げ試行の原因の区分（Mission Report の実績）](../html/SSD-SYS-ARC-001_p273_lav_cause.svg)
+- [図274 機体の系が原因の打上げ延期・スクラブ（機能ブロック別の実績）](../html/SSD-SYS-ARC-001_p274_lav_block.svg)
+- [図275 飛行ごとの打上げ試行の実績（Mission Report にある分）](../html/SSD-SYS-ARC-001_p275_lav_flight.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -311,6 +314,7 @@
 - SysML v2 テキスト：[SysML/SSD-TRJ-ORB-001.sysml](../SysML/SSD-TRJ-ORB-001.sysml)（上昇・再突入の時間変化モデル。SSD-TRJ-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-TPM-SYS-001.sysml](../SysML/SSD-TPM-SYS-001.sysml)（飛行実績の測定指標（MOE・MOP・TPM）。SSD-TPM-SYS-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-GND-ORB-001.sysml](../SysML/SSD-GND-ORB-001.sysml)（地上処理・ターンアラウンド（活動・状態）。SSD-GND-ORB-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-LAV-ORB-001.sysml](../SysML/SSD-LAV-ORB-001.sysml)（打上げ可用性（スクラブ・延期の記録）。SSD-LAV-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-IRQ-ECL-001.sysml](../SysML/SSD-IRQ-ECL-001.sysml)（インタフェース要求書（ECLSS の下位の IF）。SSD-IRQ-ECL-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-IRQ-LOW-001.sysml](../SysML/SSD-IRQ-LOW-001.sysml)（インタフェース要求書（ECLSS 以外の下位の IF）。SSD-IRQ-LOW-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml)（ビューポイント・ビュー・表記の規約。SSD-VPT-SYS-001 から生成）
@@ -598,8 +602,8 @@
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. D |
 | [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. K |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. E |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. BI |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. BG |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. BJ |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. BH |
 | [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. P |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
@@ -646,8 +650,9 @@
 | [SSD-PRF-ORB-001](SSD-PRF-ORB-001.md) | 消耗品・電力プロファイル定義書（時間軸の残量・設計と実績） | Rev. C |
 | [SSD-TRJ-ORB-001](SSD-TRJ-ORB-001.md) | 上昇・再突入の時間変化モデル定義書（質量・推力加速度・動圧・減速度・加熱の相対値と、実績・限界との比較） | Rev. B |
 | [SSD-TPM-SYS-001](SSD-TPM-SYS-001.md) | 飛行実績の測定指標定義書（MOE・MOP・TPM の階層と、飛行ごとの TPM の推移） | Rev. A |
-| [SSD-GND-ORB-001](SSD-GND-ORB-001.md) | 地上処理・ターンアラウンド定義書（着陸後から打上げまでの活動、地上の機体の状態、段と秒読みの節目） | 初版（Rev. -） |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. S |
+| [SSD-GND-ORB-001](SSD-GND-ORB-001.md) | 地上処理・ターンアラウンド定義書（着陸後から打上げまでの活動、地上の機体の状態、段と秒読みの節目） | Rev. A |
+| [SSD-LAV-ORB-001](SSD-LAV-ORB-001.md) | 打上げ可用性定義書（打上げ試行のスクラブ・延期の記録と原因の区分） | 初版（Rev. -） |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. T |
 | [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. I |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. F |
@@ -655,7 +660,7 @@
 | [SSD-FMX-ECL-001](SSD-FMX-ECL-001.md) | ECLSS の故障モード定義書（ワークシートの対応づけ・機能の故障モード・故障の木） | Rev. C |
 | [SSD-ACC-SYS-001](SSD-ACC-SYS-001.md) | 事故の教訓定義書（51-L・STS-107 の事象の連鎖、SRB・ET・TPS の機能の故障モード、故障の木、勧告と改修） | 初版（Rev. -） |
 | [SSD-FMX-ORB-001](SSD-FMX-ORB-001.md) | オービタの系の機能の故障モード定義書（ECLSS 以外の系：GN&C・RCS・DPS・C/W・C&T・EVA・CREW・PLS・APU・MECH・STR・EPS・MPS） | Rev. A |
-| [SSD-IFA-ORB-001](SSD-IFA-ORB-001.md) | 飛行中異常記録定義書（Mission Report の番号つき異常と、系・故障モード・機能ブロック・処置のつなぎ） | 初版（Rev. -） |
+| [SSD-IFA-ORB-001](SSD-IFA-ORB-001.md) | 飛行中異常記録定義書（Mission Report の番号つき異常と、系・故障モード・機能ブロック・処置のつなぎ） | Rev. A |
 | [SSD-PLB-ORB-001](SSD-PLB-ORB-001.md) | ペイロード搭載・着陸の制約定義書（貨物の重量・重心・荷重・取付け） | 初版（Rev. -） |
 | [SSD-PRA-ORB-001](SSD-PRA-ORB-001.md) | 確率論的リスク評価（PRA）比較定義書（Shuttle PRA の値と、ハザード解析の起こりやすさの比較） | 初版（Rev. -） |
 | [SSD-HEA-ORB-001](SSD-HEA-ORB-001.md) | ヒューマンエラー解析書（作業ごとの誤り・結果・ハザード・管理策） | 初版（Rev. -） |
@@ -664,8 +669,8 @@
 | [SSD-EGR-ORB-001](SSD-EGR-ORB-001.md) | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） | Rev. A |
 | [SSD-HVM-SYS-001](SSD-HVM-SYS-001.md) | 人間系の評価方法定義書（評価方法・人間系の関心事・人間系の図表の対応） | 初版（Rev. -） |
 | [SSD-MBS-SYS-001](SSD-MBS-SYS-001.md) | MBSE 実践の対応定義書（NASA-HDBK-1009A の作業成果物・SEBoK の効果的なモデルの基準との対応） | Rev. B |
-| [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） | Rev. A |
-| [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) | モデル計画書（モデルが支える成果物・資源と役割・道具・規約・モデルの構成・公開・管理） | 初版（Rev. -） |
+| [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） | Rev. B |
+| [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) | モデル計画書（モデルが支える成果物・資源と役割・道具・規約・モデルの構成・公開・管理） | Rev. A |
 | [SSD-FMEA-ECLSS-001](SSD-FMEA-ECLSS-001.md) | 環境制御・生命維持（ECLSS）故障解析表（FMEA・CIL） | Rev. A |
 | [SSD-FMEA-GNC-001](SSD-FMEA-GNC-001.md) | 誘導・航法・制御（GN&C）故障解析表（FMEA・CIL） | Rev. B |
 | [SSD-FMEA-DPS-001](SSD-FMEA-DPS-001.md) | データ処理系（DPS）故障解析表（FMEA・CIL） | Rev. A |
@@ -786,3 +791,4 @@
 | Rev. CR | 2026-10-19 | MBSE 実践の対応として、MBSE 実践の対応定義書 SSD-MBS-SYS-001 と図267・268 を追加し、SysML v2 テキスト SysML/SSD-MBS-SYS-001.sysml で示した（NASA-HDBK-1009A の作業成果物 Table 4.1-1 の12件［有 5・一部 4・無 3］と図表 8.1〜8.22 の22件［有 10・一部 5・無 7］、メタモデルの要素 10件、SEBoK の効果的なモデルの基準 10項目とモデルの性質 10項目との対応。妥当性確認の図表は0）。SEBoK は CC BY-NC-SA 3.0 なので本文を写さず言い換えた。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 57件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（148分類）を確かめた。関係する文書に参照を注記 |
 | Rev. CS | 2026-10-19 | MBSE グリッドと手法の対応として、MBSE グリッド・手法対応定義書 SSD-GRD-SYS-001 と図269・270 を追加し、SysML v2 テキスト SysML/SSD-GRD-SYS-001.sysml で示した（行＝NASA の SE プロセス 17［HDBK-1009A の 1〜9 と本書の拡張 10〜17］、列＝SysML の4つの柱と本書が足した「その他」の5列に 270図を分類、Estefan 2008 の4手法の工程 16件［有 8・一部 8・無 0］、ISO/IEC/IEEE 42010 の概念 4件）。SSD-MBS-SYS-001 を Rev. A に改め、対象のパッケージを文字列の属性に替えた（図92 の矢印を増やさないため）。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 58件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（149分類）を確かめた。関係する文書に参照を注記 |
 | Rev. CT | 2026-10-19 | モデル計画として、モデル計画書 SSD-PLN-SYS-001 と図271・272 を追加し、SysML v2 テキスト SysML/SSD-PLN-SYS-001.sysml で示した（HDBK-1009A §5・§6 と SEBoK の Process Frameworks の計画の項目 17件［有 7・一部 8・無 2］、担当 4、道具 5、更新の手順 10段階。計画は事後に書き、新しい事実は足していない）。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 59件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（150分類）を確かめた。SSD-MBS-SYS-001 に参照を注記 |
+| Rev. CU | 2026-10-28 | 打上げの可用性として、打上げ可用性定義書 SSD-LAV-ORB-001 と図273〜275 を追加し、SysML v2 テキスト SysML/SSD-LAV-ORB-001.sysml で示した（Mission Report 本文のスクラブ・延期 124件〔スクラブ 88・延期 36、63飛行〕を原因の区分と機能ブロックで整理。Mission Report にある分で、全数は主張しない）。図が増えたので、グリッド（SSD-GRD-SYS-001）とモデル計画書（SSD-PLN-SYS-001）を作り直した。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 60件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（151分類）を確かめた。関係する文書に参照を注記 |
