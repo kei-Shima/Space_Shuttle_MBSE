@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-VAR-ORB-001 |
 | 表題 | 構成の違い定義書（機体・ミッションキット） |
-| 版・日付 | Rev. C／2026-10-07 |
+| 版・日付 | Rev. D／2026-10-28 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-PHY-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図109 機体・ミッションキットの構成行列 |
@@ -116,6 +116,8 @@
 
 > **注記** 飛行ごとの構成の解決（機体の選択・積んだキット・特徴の値）は [SSD-FLT-ORB-001](SSD-FLT-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-FLT-ORB-001.sysml）。
 
+> **注記** キット（MK）と飛行の類型の対応は SSD-MTY-ORB-001は [SSD-MTY-ORB-001](SSD-MTY-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-MTY-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. STS-8 Mission Report （PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-8%20National%20Space%20Transportation%20Systems%20Program%20Mission%20Report.pdf#page=5
@@ -203,3 +205,4 @@
 | Rev. A | 2026-10-03 | 個体・時間定義書 SSD-IND-ORB-001 への参照を注記（Rev. AR） |
 | Rev. B | 2026-10-04 | 飛行構成・飛行試験定義書 SSD-FLT-ORB-001 への参照を注記（Rev. AV） |
 | Rev. C | 2026-10-07 | MK-04 の収支への効き方を LiOH の前提の見直しに合わせた（Rev. BG） |
+| Rev. D | 2026-10-28 | ミッション類型と運用概念定義書 SSD-MTY-ORB-001 への参照を注記（Rev. CV） |

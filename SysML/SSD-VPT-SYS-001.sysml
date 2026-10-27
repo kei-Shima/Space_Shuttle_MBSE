@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（275件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（278件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -201,7 +201,7 @@ package SSD_VPT_SYS_001 {
         render Views::asElementTable;
     }
     viewpoint def <'VP-04'> OperationsViewpoint {
-        doc /* 運用の観点。主な定義書：SSD-OPS-PHASE-001・SSD-UC-ORB-001・SSD-BEH-ORB-001・003・004 */
+        doc /* 運用の観点。主な定義書：SSD-OPS-PHASE-001・SSD-UC-ORB-001・SSD-BEH-ORB-001・003・004・SSD-MTY-ORB-001 */
         subject v : Views::View;
         frame concern cn05 : OperationsFlow;
     }
@@ -228,7 +228,7 @@ package SSD_VPT_SYS_001 {
         render Views::asTreeDiagram;
     }
     viewpoint def <'VP-07'> ResourcesMarginsViewpoint {
-        doc /* 資源・マージンの観点。主な定義書：SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-PLB-ORB-001・SSD-LAV-ORB-001 */
+        doc /* 資源・マージンの観点。主な定義書：SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-PLB-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001 */
         subject v : Views::View;
         frame concern cn07 : ResourceMargins;
     }
@@ -246,7 +246,7 @@ package SSD_VPT_SYS_001 {
         render Views::asElementTable;
     }
     viewpoint def <'VP-09'> VariantsViewpoint {
-        doc /* 構成の違いの観点。主な定義書：SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-FLT-ORB-001 */
+        doc /* 構成の違いの観点。主な定義書：SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-FLT-ORB-001・SSD-MTY-ORB-001 */
         subject v : Views::View;
         frame concern cn09 : ConfigurationVariants;
     }
@@ -465,6 +465,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図40'> fig040 : OperationsView {
         doc /* 図40 上昇シーケンス（頁 p40-ascent-seq） */
@@ -472,6 +473,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図41'> fig041 : InterfacesView {
         doc /* 図41 補助図 T-0 アンビリカルと ET・SRB（頁 p41-aux-ground） */
@@ -504,6 +506,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図45'> fig045 : SafetyFailureView {
         doc /* 図45 冗長度の重ね図（頁 p45-redundancy） */
@@ -646,6 +649,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図77'> fig077 : OperationsView {
         doc /* 図77 飛行継続判断（Go/No-Go）状態遷移図（頁 p77-gonogo-sm） */
@@ -653,6 +657,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図78'> fig078 : ResourcesMarginsView {
         doc /* 図78 消耗品 パラメトリック図（頁 p78-par-consumables） */
@@ -663,6 +668,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図79'> fig079 : ResourcesMarginsView {
         doc /* 図79 電力・反応剤・排熱 パラメトリック図（頁 p79-par-power） */
@@ -673,6 +679,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図80'> fig080 : SafetyFailureView {
         doc /* 図80 MPS ヘリウム漏れ処置 活動図（頁 p80-act-he） */
@@ -725,6 +732,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図84'> fig084 : OperationsView {
         doc /* 図84 上昇 シーケンス図（頁 p84-seq-ascent） */
@@ -732,6 +740,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図85'> fig085 : OperationsView {
         doc /* 図85 指令・テレメトリ経路 シーケンス図（頁 p85-seq-command） */
@@ -739,6 +748,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図86'> fig086 : SafetyFailureView {
         doc /* 図86 キャビン減圧処置 活動図（頁 p86-act-leak） */
@@ -761,6 +771,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図88'> fig088 : SafetyFailureView {
         doc /* 図88 ペイロードベイドア閉鎖不能処置 活動図（頁 p88-act-plbd） */
@@ -811,6 +822,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図94'> fig094 : OperationsView {
         doc /* 図94 ランデブー・ドッキング シーケンス図（頁 p94-seq-rndz） */
@@ -818,6 +830,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図95'> fig095 : OperationsView {
         doc /* 図95 最終秒読み〜RSLS アボート シーケンス図（頁 p95-seq-rsls） */
@@ -825,6 +838,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図96'> fig096 : OperationsView {
         doc /* 図96 RMS によるペイロード放出 活動図（頁 p96-act-deploy） */
@@ -832,6 +846,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図97'> fig097 : OperationsView {
         doc /* 図97 上昇アボートの選択 活動図（頁 p97-act-abort） */
@@ -839,6 +854,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図98'> fig098 : SubsystemBehaviorView {
         doc /* 図98 GPC 状態遷移図（頁 p98-sm-gpc） */
@@ -915,6 +931,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図105'> fig105 : ResourcesMarginsView {
         doc /* 図105 質量特性・Δv の解析（頁 p105-mass-dv） */
@@ -925,6 +942,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図106'> fig106 : SafetyFailureView {
         doc /* 図106 故障の木 A（28 VDC 主電力の喪失）（頁 p106-fta-a） */
@@ -976,6 +994,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VAR_ORB_001::*;
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図110'> fig110 : RequirementsVerificationView {
         doc /* 図110 検証マトリクス（頁 p110-verification） */
@@ -1101,12 +1120,14 @@ package SSD_VPT_SYS_001 {
         expose SSD_VAR_ORB_001::*;
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図123'> fig123 : VariantsView {
         doc /* 図123 飛行の実績と設計値（頁 p123-actuals） */
         expose SSD_VAR_ORB_001::*;
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図124'> fig124 : RequirementsVerificationView {
         doc /* 図124 要求の形式化の区分（頁 p124-req-formal） */
@@ -1205,6 +1226,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_VAR_ORB_001::*;
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図133'> fig133 : RequirementsVerificationView {
         doc /* 図133 飛行試験の結果と要求（頁 p133-flight-tests） */
@@ -1228,6 +1250,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図135'> fig135 : ResourcesMarginsView {
         doc /* 図135 反応剤の残量の設計と実績（STS-1・114・125）（頁 p135-profile-actual） */
@@ -1238,6 +1261,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図136'> fig136 : SubsystemBehaviorView {
         doc /* 図136 OMS 状態遷移図（頁 p136-sm-oms） */
@@ -2426,6 +2450,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図231'> fig231 : ResourcesMarginsView {
         doc /* 図231 再突入の高度・速度と動圧・減速度の時間変化（頁 p231-trj-entry） */
@@ -2436,6 +2461,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図232'> fig232 : ResourcesMarginsView {
         doc /* 図232 上昇・再突入のモデルと実績・限界の比較（頁 p232-trj-compare） */
@@ -2446,6 +2472,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図233'> fig233 : InterfacesView {
         doc /* 図233 ECLSS 電力（ARS 系の機器）内部ブロック図（頁 p233-ibd-eclss-pwra） */
@@ -2498,6 +2525,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図239'> fig239 : OperationsView {
         doc /* 図239 RCRS と水冷却ループの運転と監視 シーケンス図（頁 p239-seq-rcrs-wcl） */
@@ -2505,6 +2533,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図240'> fig240 : OperationsView {
         doc /* 図240 与圧・給水・廃棄物・エアロックの運転と表示 シーケンス図（頁 p240-seq-pcs-h2o） */
@@ -2512,6 +2541,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図241'> fig241 : OperationsView {
         doc /* 図241 煙検知と消火 シーケンス図（頁 p241-seq-fire） */
@@ -2519,6 +2549,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図242'> fig242 : OperationsView {
         doc /* 図242 キャビン温湿度の制御と監視 シーケンス図（頁 p242-seq-thc） */
@@ -2526,6 +2557,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図243'> fig243 : InterfacesView {
         doc /* 図243 EVA 支援（エアロック・工具・マスク・電池充電） 内部ブロック図（頁 p243-ibd-eva） */
@@ -2542,6 +2574,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図245'> fig245 : OperationsView {
         doc /* 図245 DPS の運用管理と MPS の乗員操作 シーケンス図（頁 p245-seq-dps-mps） */
@@ -2549,6 +2582,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図246'> fig246 : OperationsView {
         doc /* 図246 EVA の準備・減圧・再与圧・非常時の手順 シーケンス図（頁 p246-seq-eva） */
@@ -2556,6 +2590,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図247'> fig247 : OperationsView {
         doc /* 図247 OMS の乗員操作と表示 シーケンス図（頁 p247-seq-oms） */
@@ -2563,6 +2598,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図248'> fig248 : OperationsView {
         doc /* 図248 RCS の噴射器冗長管理と乗員操作 シーケンス図（頁 p248-seq-rcs） */
@@ -2570,6 +2606,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_BEH_ORB_001::*;
         expose SSD_BEH_ORB_003::*;
         expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図249'> fig249 : ResourcesMarginsView {
         doc /* 図249 MOE・MOP・TPM の階層と閾値（頁 p249-tpm-tree） */
@@ -2580,6 +2617,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図250'> fig250 : ResourcesMarginsView {
         doc /* 図250 TPM の飛行ごとの推移（着陸重量・APU の燃料・接地の対地速度）（頁 p250-tpm-trend） */
@@ -2590,6 +2628,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図251'> fig251 : ResourcesMarginsView {
         doc /* 図251 測定指標の取れた飛行数と判定（頁 p251-tpm-coverage） */
@@ -2600,6 +2639,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図252'> fig252 : RequirementsVerificationView {
         doc /* 図252 ECLSS の下位の IF のインタフェース要求の一覧（頁 p252-irq-ecl） */
@@ -2729,6 +2769,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図262'> fig262 : ResourcesMarginsView {
         doc /* 図262 緊急着陸の終局荷重係数（頁 p262-plb-loadfactors） */
@@ -2739,6 +2780,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図263'> fig263 : ResourcesMarginsView {
         doc /* 図263 着陸重量の内訳（乾燥重量・貨物・残り）（頁 p263-plb-landing） */
@@ -2749,6 +2791,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図264'> fig264 : SafetyFailureView {
         doc /* 図264 PRA の値（全体・フェーズ・主要シナリオ）（頁 p264-pra-values） */
@@ -2846,6 +2889,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図274'> fig274 : ResourcesMarginsView {
         doc /* 図274 機体の系が原因の打上げ延期・スクラブ（機能ブロック別の実績）（頁 p274-lav-block） */
@@ -2856,6 +2900,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     view <'図275'> fig275 : ResourcesMarginsView {
         doc /* 図275 飛行ごとの打上げ試行の実績（Mission Report にある分）（頁 p275-lav-flight） */
@@ -2866,6 +2911,33 @@ package SSD_VPT_SYS_001 {
         expose SSD_TPM_SYS_001::*;
         expose SSD_PLB_ORB_001::*;
         expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+    }
+    view <'図276'> fig276 : OperationsView {
+        doc /* 図276 ミッション類型とユースケースの対応（頁 p276-mty-uc） */
+        expose SSD_UC_ORB_001::*;
+        expose SSD_BEH_ORB_001::*;
+        expose SSD_BEH_ORB_003::*;
+        expose SSD_BEH_ORB_004::*;
+        expose SSD_MTY_ORB_001::*;
+    }
+    view <'図277'> fig277 : ResourcesMarginsView {
+        doc /* 図277 ミッション類型ごとの飛行の実績（Mission Report にある分）（頁 p277-mty-flights） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+    }
+    view <'図278'> fig278 : VariantsView {
+        doc /* 図278 ミッション類型とキット（構成）の対応（頁 p278-mty-kits） */
+        expose SSD_VAR_ORB_001::*;
+        expose SSD_IND_ORB_001::*;
+        expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
     }
     // ---- 表記の規約
     package Conventions {
@@ -2873,7 +2945,7 @@ package SSD_VPT_SYS_001 {
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 342; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 343; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -2929,5 +3001,8 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "GRD-"; form = "GRD-<2桁>"; meaning = "MBSE グリッド・手法対応の項目"; example = "GRD-01"; count = 37; }
         @IdConvention { prefix = "PLN-"; form = "PLN-<2桁>"; meaning = "モデル計画の項目"; example = "PLN-01"; count = 36; }
         @IdConvention { prefix = "LAV-"; form = "LAV-<3桁>"; meaning = "打上げ試行の記録"; example = "LAV-001"; count = 124; }
+        @IdConvention { prefix = "MT-"; form = "MT-<2桁>"; meaning = "ミッション類型"; example = "MT-01"; count = 9; }
+        @IdConvention { prefix = "MTF-"; form = "MTF-<3桁>"; meaning = "飛行ごとの目的の記録"; example = "MTF-001"; count = 132; }
+        @IdConvention { prefix = "CPT-"; form = "CPT-<2桁>"; meaning = "運用概念の章立ての項目"; example = "CPT-01"; count = 15; }
     }
 }
