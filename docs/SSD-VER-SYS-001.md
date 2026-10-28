@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-VER-SYS-001 |
 | 表題 | 検証定義書（検証ケース・検証マトリクス） |
-| 版・日付 | Rev. L／2026-10-19 |
+| 版・日付 | Rev. M／2026-10-28 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-REQ-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図110 検証マトリクス |
@@ -330,6 +330,8 @@
 
 > **注記** NASA-HDBK-1009A の検証・妥当性確認の作業成果物（8.14〜8.22）との対応と、妥当性確認の図表が無いこと（検証と妥当性確認の区別）は本書は [SSD-MBS-SYS-001](SSD-MBS-SYS-001.md) に示す（SysML v2 テキスト：SysML/SSD-MBS-SYS-001.sysml）。
 
+> **注記** 検証（要求の値を満たすか）と別に、運用の期待に対する飛行の実績の判定（妥当性確認）は SSD-VAL-ORB-001は [SSD-VAL-ORB-001](SSD-VAL-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-VAL-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
@@ -564,3 +566,4 @@
 | Rev. J | 2026-10-11 | インタフェース要求書 SSD-IRQ-SYS-001 への参照を注記（Rev. BV） |
 | Rev. K | 2026-10-12 | 下位要求書（L3：ECLSS 以外の17系） SSD-RQL-SYS-001 への参照を注記（Rev. BX） |
 | Rev. L | 2026-10-19 | MBSE 実践の対応定義書 SSD-MBS-SYS-001 への参照を注記（Rev. CR） |
+| Rev. M | 2026-10-28 | 妥当性確認定義書 SSD-VAL-ORB-001 への参照を注記（Rev. CY） |
