@@ -40,14 +40,14 @@ package SSD_GRD_SYS_001 {
         part <'GRD-11'> grd_11 : GridRow { doc /* 要求管理 */ :>> origin = "拡張 11"; :>> reqFigs = 0; :>> structFigs = 0; :>> behaviorFigs = 0; :>> paramFigs = 0; :>> otherFigs = 3; :>> total = 3; }
         part <'GRD-12'> grd_12 : GridRow { doc /* インタフェース管理 */ :>> origin = "拡張 12"; :>> reqFigs = 0; :>> structFigs = 3; :>> behaviorFigs = 0; :>> paramFigs = 0; :>> otherFigs = 0; :>> total = 3; }
         part <'GRD-13'> grd_13 : GridRow { doc /* 技術リスク管理 */ :>> origin = "拡張 13"; :>> reqFigs = 0; :>> structFigs = 0; :>> behaviorFigs = 6; :>> paramFigs = 0; :>> otherFigs = 31; :>> total = 37; }
-        part <'GRD-14'> grd_14 : GridRow { doc /* 構成管理 */ :>> origin = "拡張 14"; :>> reqFigs = 0; :>> structFigs = 4; :>> behaviorFigs = 0; :>> paramFigs = 1; :>> otherFigs = 0; :>> total = 5; }
+        part <'GRD-14'> grd_14 : GridRow { doc /* 構成管理 */ :>> origin = "拡張 14"; :>> reqFigs = 0; :>> structFigs = 5; :>> behaviorFigs = 0; :>> paramFigs = 3; :>> otherFigs = 0; :>> total = 8; }
         part <'GRD-15'> grd_15 : GridRow { doc /* 技術データ管理 */ :>> origin = "拡張 15"; :>> reqFigs = 0; :>> structFigs = 0; :>> behaviorFigs = 0; :>> paramFigs = 0; :>> otherFigs = 34; :>> total = 34; }
         part <'GRD-16'> grd_16 : GridRow { doc /* 技術評価 */ :>> origin = "拡張 16"; :>> reqFigs = 0; :>> structFigs = 0; :>> behaviorFigs = 0; :>> paramFigs = 28; :>> otherFigs = 0; :>> total = 28; }
         part <'GRD-17'> grd_17 : GridRow { doc /* 決定分析 */ :>> origin = "拡張 17"; :>> reqFigs = 0; :>> structFigs = 0; :>> behaviorFigs = 0; :>> paramFigs = 1; :>> otherFigs = 0; :>> total = 1; }
         part <'GRD-18'> grd_18 : ArchConcept { doc /* 関係者 */ :>> conceptName = "関係者"; :>> elementCount = 10; }
         part <'GRD-19'> grd_19 : ArchConcept { doc /* 関心事 */ :>> conceptName = "関心事"; :>> elementCount = 21; }
         part <'GRD-20'> grd_20 : ArchConcept { doc /* ビューポイント */ :>> conceptName = "ビューポイント"; :>> elementCount = 13; }
-        part <'GRD-21'> grd_21 : ArchConcept { doc /* ビュー */ :>> conceptName = "ビュー"; :>> elementCount = 278; }
+        part <'GRD-21'> grd_21 : ArchConcept { doc /* ビュー */ :>> conceptName = "ビュー"; :>> elementCount = 281; }
         part <'GRD-22'> grd_22 : MethodStep { doc /* Harmony-SE 要求分析 */ :>> method = "Harmony-SE"; :>> stepName = "要求分析"; :>> rating = "一部"; :>> assesses = "SSD-RQM-SYS-001"; }
         part <'GRD-23'> grd_23 : MethodStep { doc /* Harmony-SE システムの機能分析 */ :>> method = "Harmony-SE"; :>> stepName = "システムの機能分析"; :>> rating = "有"; :>> assesses = "SSD-BLK-SYS-001,SSD-ALC-SYS-001,SSD-BEH-ORB-001,SSD-BEH-ORB-003"; }
         part <'GRD-24'> grd_24 : MethodStep { doc /* Harmony-SE アーキテクチャ設計 */ :>> method = "Harmony-SE"; :>> stepName = "アーキテクチャ設計"; :>> rating = "有"; :>> assesses = "SSD-BLK-SYS-001,SSD-IBD-ORB-001"; }

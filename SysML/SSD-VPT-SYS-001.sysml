@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（278件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（281件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -246,7 +246,7 @@ package SSD_VPT_SYS_001 {
         render Views::asElementTable;
     }
     viewpoint def <'VP-09'> VariantsViewpoint {
-        doc /* 構成の違いの観点。主な定義書：SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-FLT-ORB-001・SSD-MTY-ORB-001 */
+        doc /* 構成の違いの観点。主な定義書：SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-FLT-ORB-001・SSD-MTY-ORB-001・SSD-CFG-ORB-001 */
         subject v : Views::View;
         frame concern cn09 : ConfigurationVariants;
     }
@@ -995,6 +995,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
         expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
     }
     view <'図110'> fig110 : RequirementsVerificationView {
         doc /* 図110 検証マトリクス（頁 p110-verification） */
@@ -1121,6 +1122,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
         expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
     }
     view <'図123'> fig123 : VariantsView {
         doc /* 図123 飛行の実績と設計値（頁 p123-actuals） */
@@ -1128,6 +1130,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
         expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
     }
     view <'図124'> fig124 : RequirementsVerificationView {
         doc /* 図124 要求の形式化の区分（頁 p124-req-formal） */
@@ -1227,6 +1230,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
         expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
     }
     view <'図133'> fig133 : RequirementsVerificationView {
         doc /* 図133 飛行試験の結果と要求（頁 p133-flight-tests） */
@@ -2938,6 +2942,31 @@ package SSD_VPT_SYS_001 {
         expose SSD_IND_ORB_001::*;
         expose SSD_FLT_ORB_001::*;
         expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
+    }
+    view <'図279'> fig279 : VariantsView {
+        doc /* 図279 初飛行・改修の記録（機能ブロック別の実績）（頁 p279-cfg-block） */
+        expose SSD_VAR_ORB_001::*;
+        expose SSD_IND_ORB_001::*;
+        expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
+    }
+    view <'図280'> fig280 : VariantsView {
+        doc /* 図280 構成の変遷の時系列（年代別の実績）（頁 p280-cfg-years） */
+        expose SSD_VAR_ORB_001::*;
+        expose SSD_IND_ORB_001::*;
+        expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
+    }
+    view <'図281'> fig281 : VariantsView {
+        doc /* 図281 初飛行・改修と機体・キット（構成）の対応（頁 p281-cfg-kits） */
+        expose SSD_VAR_ORB_001::*;
+        expose SSD_IND_ORB_001::*;
+        expose SSD_FLT_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_CFG_ORB_001::*;
     }
     // ---- 表記の規約
     package Conventions {
@@ -2945,7 +2974,7 @@ package SSD_VPT_SYS_001 {
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 343; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 344; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -3004,5 +3033,6 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "MT-"; form = "MT-<2桁>"; meaning = "ミッション類型"; example = "MT-01"; count = 9; }
         @IdConvention { prefix = "MTF-"; form = "MTF-<3桁>"; meaning = "飛行ごとの目的の記録"; example = "MTF-001"; count = 132; }
         @IdConvention { prefix = "CPT-"; form = "CPT-<2桁>"; meaning = "運用概念の章立ての項目"; example = "CPT-01"; count = 15; }
+        @IdConvention { prefix = "CFG-"; form = "CFG-<3桁>"; meaning = "初飛行・改修の記録"; example = "CFG-001"; count = 284; }
     }
 }
