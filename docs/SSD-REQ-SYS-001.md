@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-REQ-SYS-001 |
 | 表題 | システム要求書（L1） |
-| 版・日付 | Rev. P／2026-10-17 |
+| 版・日付 | Rev. Q／2026-10-28 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図1 システム構成 |
@@ -146,6 +146,8 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 
 > **注記** 下位の IF（IF-<系>-nn）を割付先にするインタフェース要求（L1・L2・L3 の要求から導出）は [SSD-IRQ-ECL-001](SSD-IRQ-ECL-001.md) に示す（SysML v2 テキスト：SysML/SSD-IRQ-ECL-001.sysml）。
 
+> **注記** L1 要求の背景にある設計の決定（代替案と理由）は SSD-DCN-ORB-001（NASA SP-4221 の記述による）は [SSD-DCN-ORB-001](SSD-DCN-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-DCN-ORB-001.sysml）。
+
 ## 8. 参考文献
 
 1. Shuttle Crew Operations Manual 1.1 Overview（USA007587 Rev. A CPN-1、PDF p31） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/31
@@ -226,3 +228,4 @@ L1 の要求ごとに、展開した各系の L2 要求を示す。L2 の要求�
 | Rev. N | 2026-10-12 | 上昇・再突入の時間変化モデル定義書 SSD-TRJ-ORB-001 への参照を注記（Rev. BZ） |
 | Rev. O | 2026-10-16 | 飛行実績の測定指標定義書 SSD-TPM-SYS-001 への参照を注記（Rev. CK） |
 | Rev. P | 2026-10-17 | インタフェース要求書（下位の IF） SSD-IRQ-ECL-001 への参照を注記（Rev. CL） |
+| Rev. Q | 2026-10-28 | 設計の決定の記録定義書 SSD-DCN-ORB-001 への参照を注記（Rev. CX） |

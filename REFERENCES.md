@@ -1,6 +1,6 @@
 # 参照した公開資料の一覧
 
-説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 350件、引用している説明書は 344件です。
+説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 350件、引用している説明書は 345件です。
 
 - 説明書の本文・表・「参考文献」の節にある URL を集め、頁の指定（`#page=N`、SCOM の末尾の `/N`）を除いて、文献ごとにまとめました。NTRS は、抄録のページと PDF を同じ文献として数えています。
 - 「引用箇所」は、説明書が引用している頁（URL）の種類の数です。どの頁を引用しているかは、各説明書の「参考文献」の節にあります。
@@ -16,7 +16,7 @@
 | 2. NASA Technical Reports Server（NTRS） | 108 | 1,369 |
 | 3. yumpu.com（SCOM の公開版） | 1 | 702 |
 | 4. Internet Archive | 1 | 633 |
-| 5. NASA（nasa.gov） | 10 | 302 |
+| 5. NASA（nasa.gov） | 10 | 316 |
 | 6. standards.nasa.gov | 2 | 25 |
 | 7. Science.gov（NTRS の抄録の検索結果） | 8 | 8 |
 | 8. NASA KSC（NSTS 1988 News Reference Manual） | 8 | 8 |
@@ -50,7 +50,7 @@
 | 36. osti.gov | 1 | 1 |
 | 37. scribd.com | 1 | 1 |
 | 38. sebokwiki.org | 1 | 1 |
-| 計 | 350 | 5,305 |
+| 計 | 350 | 5,319 |
 
 ## 1. ibiblio.org（Virtual AGC のスペースシャトル資料）
 
@@ -347,10 +347,10 @@
 | 269 | NASA/TP-2011-216147 Preventing Decompression Sickness Over Three Decades of Extravehicular Activity（Conkin、2011年） | <https://www.nasa.gov/wp-content/uploads/2023/03/conkin-prebreathe-overview-tp216147-2011.pdf> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-OPS-001](docs/SSD-FD-ECL-PCS-OPS-001.md) ほか（計 7件） |
 | 270 | NASA/TP-2014-218556 Human Integration Design Processes（HIDP）（2014年9月、308頁、4,346,416 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-processes.pdf> | 26 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-HEA-ORB-001](docs/SSD-HEA-ORB-001.md)・[SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md)・[SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.md)・[SSD-TSK-ORB-001](docs/SSD-TSK-ORB-001.md) |
 | 271 | NASA-STD-3001 Volume 1 Revision C NASA Spaceflight Human-System Standard Volume 1: Crew Health（2023-09-15 承認、86頁、1,660,855 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf> | 33 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md)・[SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.md)・[SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
-| 272 | NASA/SP-2016-6105 Rev 2 NASA Systems Engineering Handbook（2016、297頁、3,773,440 バイト） | <https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf> | 7 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-IBD-ORB-001](docs/SSD-IBD-ORB-001.md) |
-| 273 | NASA Facts FS-2005-06-018-KSC (Rev. 2006) Space Shuttle: Orbiter Processing From Landing To Launch (NASA KSC、2006、8頁、4,804,696 バイト) | <https://www.nasa.gov/sites/default/files/167429main_OrbiterProcessing08.pdf> | 6 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GND-ORB-001](docs/SSD-GND-ORB-001.md) |
-| 274 | NASA SP-2010-3409「Wings in Orbit」3章（53〜73頁、23頁、8,439,919 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf> | 2 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md)・[SSD-VER-SYS-001](docs/SSD-VER-SYS-001.md) |
-| 275 | NASA SP-4221 Heppenheimer, T. A.「The Space Shuttle Decision: NASA's Search for a Reusable Space Vehicle」（1999年、489頁、59,663,742 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf> | 2 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md) |
+| 272 | NASA SP-4221 Heppenheimer, T. A.「The Space Shuttle Decision: NASA's Search for a Reusable Space Vehicle」（1999年、489頁、59,663,742 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf> | 16 | [SSD-DCN-ORB-001](docs/SSD-DCN-ORB-001.md)・[SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md) |
+| 273 | NASA/SP-2016-6105 Rev 2 NASA Systems Engineering Handbook（2016、297頁、3,773,440 バイト） | <https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf> | 7 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-IBD-ORB-001](docs/SSD-IBD-ORB-001.md) |
+| 274 | NASA Facts FS-2005-06-018-KSC (Rev. 2006) Space Shuttle: Orbiter Processing From Landing To Launch (NASA KSC、2006、8頁、4,804,696 バイト) | <https://www.nasa.gov/sites/default/files/167429main_OrbiterProcessing08.pdf> | 6 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GND-ORB-001](docs/SSD-GND-ORB-001.md) |
+| 275 | NASA SP-2010-3409「Wings in Orbit」3章（53〜73頁、23頁、8,439,919 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf> | 2 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md)・[SSD-VER-SYS-001](docs/SSD-VER-SYS-001.md) |
 
 ## 6. standards.nasa.gov
 
@@ -542,7 +542,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 342 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CFG-ORB-001](docs/SSD-CFG-ORB-001.md) ほか（計 50件） |
+| 342 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CFG-ORB-001](docs/SSD-CFG-ORB-001.md) ほか（計 51件） |
 
 ## 31. NASA 本部（hq.nasa.gov）
 
@@ -572,7 +572,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 347 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 52件） |
+| 347 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 53件） |
 
 ## 36. osti.gov
 
