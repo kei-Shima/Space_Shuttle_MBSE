@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-IFA-ORB-001 |
 | 表題 | 飛行中異常記録定義書（Mission Report の番号つき異常と、系・故障モード・機能ブロック・処置のつなぎ） |
-| 版・日付 | Rev. A／2026-10-28 |
+| 版・日付 | Rev. B／2026-11-04 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMM-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図257 飛行中異常の系ごとの件数と区分・図258 異常と故障モード・機能行のつなぎ・図259 処置が設計・手順・規則を変えた異常（運用からの帰還）・図260 故障モードごとの実績（観測された異常の数） |
@@ -555,6 +555,8 @@ Mission Report に番号（STS-<飛行>-V-nn。V＝オービタ）が付いた�
 
 > **注記** 打上げ前のスクラブ・延期（飛行中の異常ではないもの）の記録と原因の区分は SSD-LAV-ORB-001は [SSD-LAV-ORB-001](SSD-LAV-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-LAV-ORB-001.sysml）。
 
+> **注記** 飛行中異常の番号と重なる TPS 損傷・デブリの事象と、着陸後の打痕の数の履歴は SSD-DMG-ORB-001（数は重ねない）は [SSD-DMG-ORB-001](SSD-DMG-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-DMG-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. STS-47 Space Shuttle Mission Report（JSC、38頁、2,524,596 バイト） （PDF p11） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-47%20Space%20Shuttle%20Mission%20Report.pdf#page=11
@@ -763,3 +765,4 @@ Mission Report に番号（STS-<飛行>-V-nn。V＝オービタ）が付いた�
 |---|---|---|
 | 初版（Rev. -） | 2026-10-19 | 初版作成（飛行中異常 390件・35飛行、故障モードへのつなぎ 73件、図257〜260、SysML v2 テキスト） |
 | Rev. A | 2026-10-28 | 打上げ可用性定義書 SSD-LAV-ORB-001 への参照を注記（Rev. CU） |
+| Rev. B | 2026-11-04 | TPS 損傷・デブリ履歴定義書 SSD-DMG-ORB-001 への参照を注記（Rev. CZ） |
