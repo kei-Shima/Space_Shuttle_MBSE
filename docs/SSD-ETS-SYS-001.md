@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-ETS-SYS-001 |
 | 表題 | ET・SRB・TPS の内部ブロック・状態定義書（推進薬の供給と分離、SRB の燃焼と回収、熱防護の熱の流れ、飛行中の TPS の点検） |
-| 版・日付 | Rev. B／2026-11-04 |
+| 版・日付 | Rev. C／2026-11-04 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-IBD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図200 ET 内部ブロック図・図201 SRB 内部ブロック図・図202 TPS・受動熱制御 内部ブロック図・図203 SRB 状態遷移図・図204 ET 状態遷移図・図205 飛行中の TPS の点検と損傷の判断 活動図 |
@@ -568,6 +568,8 @@ C/W の警告灯（SSD-FDIR-ORB-001）で始まる遷移 0件を示す。該当�
 
 > **注記** 着陸後の TPS 打痕の数の飛行ごとの履歴と、打上げ中の剥離・衝突の事象の原因の区分（図288〜290）は SSD-DMG-ORB-001は [SSD-DMG-ORB-001](SSD-DMG-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-DMG-ORB-001.sysml）。
 
+> **注記** 事故の背景の組織（Level・MMT・FRR）と、当時の打上げ・飛行中の判断の記録（51-L・107）は SSD-ORG-ORB-001は [SSD-ORG-ORB-001](SSD-ORG-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-ORG-ORB-001.sysml）。
+
 ## 25. 参考文献
 
 1. Shuttle Crew Operations Manual 1.3 External Tank（USA007587 Rev. A CPN-1、PDF p67） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/67
@@ -669,3 +671,4 @@ C/W の警告灯（SSD-FDIR-ORB-001）で始まる遷移 0件を示す。該当�
 | 初版（Rev. -） | 2026-10-11 | 初版作成（内部ブロック図3枚：機器 62件・流れ 94件、状態機械 2件：状態 30件・遷移 37件、活動図 1件、SysML v2 テキスト） |
 | Rev. A | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
 | Rev. B | 2026-11-04 | TPS 損傷・デブリ履歴定義書 SSD-DMG-ORB-001 への参照を注記（Rev. CZ） |
+| Rev. C | 2026-11-04 | プログラム組織と飛行準備の認証定義書 SSD-ORG-ORB-001 への参照を注記（Rev. DA） |
