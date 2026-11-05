@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-LAV-ORB-001 |
 | 表題 | 打上げ可用性定義書（打上げ試行のスクラブ・延期の記録と原因の区分） |
-| 版・日付 | Rev. A／2026-11-04 |
+| 版・日付 | Rev. B／2026-11-06 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-GND-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図273 打上げ試行の原因の区分（Mission Report の実績）・図274 機体の系が原因の打上げ延期・スクラブ（機能ブロック別の実績）・図275 飛行ごとの打上げ試行の実績（Mission Report にある分） |
@@ -279,6 +279,8 @@
 
 > **注記** 打上げ可否の判断の流れ（審査・会議のゲート）と、組織・判断の事例（STS-51L・STS-107）は SSD-ORG-ORB-001は [SSD-ORG-ORB-001](SSD-ORG-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-ORG-ORB-001.sysml）。
 
+> **注記** 着陸の見送り・延期・着陸地の変更と、機内で決めた延長の記録と原因の区分（図297〜299）は SSD-LND-ORB-001。打上げ前のスクラブ・延期は本書は [SSD-LND-ORB-001](SSD-LND-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-LND-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p130） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=130
@@ -359,3 +361,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-10-28 | 初版作成（打上げ試行の記録 124件〔スクラブ 88・延期 36、63飛行〕、原因の区分 5、図273〜275、SysML v2 テキスト） |
 | Rev. A | 2026-11-04 | プログラム組織と飛行準備の認証定義書 SSD-ORG-ORB-001 への参照を注記（Rev. DA） |
+| Rev. B | 2026-11-06 | 着陸可用性定義書 SSD-LND-ORB-001 への参照を注記（Rev. DC） |

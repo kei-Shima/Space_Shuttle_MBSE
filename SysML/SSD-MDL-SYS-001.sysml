@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 66件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 67件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -43,6 +43,7 @@ package SSD_MDL_SYS_001 {
     public import SSD_DMG_ORB_001;   // SSD-DMG-ORB-001 TPS 損傷・デブリ履歴（打痕の数・剥離・衝突）
     public import SSD_ORG_ORB_001;   // SSD-ORG-ORB-001 プログラム組織と飛行準備の認証（組織・ゲート・判断・CoFR）
     public import SSD_CST_ORB_001;   // SSD-CST-ORB-001 経済性（費用の記録・物価の指数・換算・式）
+    public import SSD_LND_ORB_001;   // SSD-LND-ORB-001 着陸可用性（見送り・延期・着陸地の変更・延長の記録）
     public import SSD_VER_SYS_001;   // SSD-VER-SYS-001 検証ケース・検証の結果
     public import SSD_RQL_ECL_001;   // SSD-RQL-ECL-001 ECLSS 下位要求（L3）
     public import SSD_IRQ_SYS_001;   // SSD-IRQ-SYS-001 インタフェース要求（上位の IF）と導出・充足・検証
