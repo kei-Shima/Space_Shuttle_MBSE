@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（302件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（305件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -228,7 +228,7 @@ package SSD_VPT_SYS_001 {
         render Views::asTreeDiagram;
     }
     viewpoint def <'VP-07'> ResourcesMarginsViewpoint {
-        doc /* 資源・マージンの観点。主な定義書：SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-PLB-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001・SSD-DCN-ORB-001・SSD-DMG-ORB-001・SSD-ORG-ORB-001・SSD-CST-ORB-001・SSD-LND-ORB-001・SSD-LCC-ORB-001 */
+        doc /* 資源・マージンの観点。主な定義書：SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-PLB-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001・SSD-DCN-ORB-001・SSD-DMG-ORB-001・SSD-ORG-ORB-001・SSD-CST-ORB-001・SSD-LND-ORB-001・SSD-LCC-ORB-001・SSD-WXC-ORB-001 */
         subject v : Views::View;
         frame concern cn07 : ResourceMargins;
     }
@@ -513,6 +513,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図45'> fig045 : SafetyFailureView {
         doc /* 図45 冗長度の重ね図（頁 p45-redundancy） */
@@ -681,6 +682,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図79'> fig079 : ResourcesMarginsView {
         doc /* 図79 電力・反応剤・排熱 パラメトリック図（頁 p79-par-power） */
@@ -698,6 +700,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図80'> fig080 : SafetyFailureView {
         doc /* 図80 MPS ヘリウム漏れ処置 活動図（頁 p80-act-he） */
@@ -957,6 +960,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図105'> fig105 : ResourcesMarginsView {
         doc /* 図105 質量特性・Δv の解析（頁 p105-mass-dv） */
@@ -974,6 +978,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図106'> fig106 : SafetyFailureView {
         doc /* 図106 故障の木 A（28 VDC 主電力の喪失）（頁 p106-fta-a） */
@@ -1300,6 +1305,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図135'> fig135 : ResourcesMarginsView {
         doc /* 図135 反応剤の残量の設計と実績（STS-1・114・125）（頁 p135-profile-actual） */
@@ -1317,6 +1323,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図136'> fig136 : SubsystemBehaviorView {
         doc /* 図136 OMS 状態遷移図（頁 p136-sm-oms） */
@@ -2518,6 +2525,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図231'> fig231 : ResourcesMarginsView {
         doc /* 図231 再突入の高度・速度と動圧・減速度の時間変化（頁 p231-trj-entry） */
@@ -2535,6 +2543,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図232'> fig232 : ResourcesMarginsView {
         doc /* 図232 上昇・再突入のモデルと実績・限界の比較（頁 p232-trj-compare） */
@@ -2552,6 +2561,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図233'> fig233 : InterfacesView {
         doc /* 図233 ECLSS 電力（ARS 系の機器）内部ブロック図（頁 p233-ibd-eclss-pwra） */
@@ -2703,6 +2713,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図250'> fig250 : ResourcesMarginsView {
         doc /* 図250 TPM の飛行ごとの推移（着陸重量・APU の燃料・接地の対地速度）（頁 p250-tpm-trend） */
@@ -2720,6 +2731,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図251'> fig251 : ResourcesMarginsView {
         doc /* 図251 測定指標の取れた飛行数と判定（頁 p251-tpm-coverage） */
@@ -2737,6 +2749,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図252'> fig252 : RequirementsVerificationView {
         doc /* 図252 ECLSS の下位の IF のインタフェース要求の一覧（頁 p252-irq-ecl） */
@@ -2875,6 +2888,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図262'> fig262 : ResourcesMarginsView {
         doc /* 図262 緊急着陸の終局荷重係数（頁 p262-plb-loadfactors） */
@@ -2892,6 +2906,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図263'> fig263 : ResourcesMarginsView {
         doc /* 図263 着陸重量の内訳（乾燥重量・貨物・残り）（頁 p263-plb-landing） */
@@ -2909,6 +2924,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図264'> fig264 : SafetyFailureView {
         doc /* 図264 PRA の値（全体・フェーズ・主要シナリオ）（頁 p264-pra-values） */
@@ -3013,6 +3029,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図274'> fig274 : ResourcesMarginsView {
         doc /* 図274 機体の系が原因の打上げ延期・スクラブ（機能ブロック別の実績）（頁 p274-lav-block） */
@@ -3030,6 +3047,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図275'> fig275 : ResourcesMarginsView {
         doc /* 図275 飛行ごとの打上げ試行の実績（Mission Report にある分）（頁 p275-lav-flight） */
@@ -3047,6 +3065,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図276'> fig276 : OperationsView {
         doc /* 図276 ミッション類型とユースケースの対応（頁 p276-mty-uc） */
@@ -3072,6 +3091,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図278'> fig278 : VariantsView {
         doc /* 図278 ミッション類型とキット（構成）の対応（頁 p278-mty-kits） */
@@ -3125,6 +3145,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図283'> fig283 : ResourcesMarginsView {
         doc /* 図283 設計の決定の時系列（年代別の実績）（頁 p283-dcn-years） */
@@ -3142,6 +3163,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図284'> fig284 : VariantsView {
         doc /* 図284 設計の決定と機能ブロック（構成）の対応（頁 p284-dcn-blocks） */
@@ -3210,6 +3232,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図289'> fig289 : ResourcesMarginsView {
         doc /* 図289 TPS 損傷の原因の区分（事象の件数と機能ブロック）（頁 p289-dmg-cause） */
@@ -3227,6 +3250,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図290'> fig290 : ResourcesMarginsView {
         doc /* 図290 時期ごとの TPS 打痕の数の推移（頁 p290-dmg-period） */
@@ -3244,6 +3268,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図291'> fig291 : ResourcesMarginsView {
         doc /* 図291 プログラム組織の構成（Level・センター・契約者・会議体）（頁 p291-org-structure） */
@@ -3261,6 +3286,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図292'> fig292 : ResourcesMarginsView {
         doc /* 図292 打上げ可否の判断の流れ（Go/No-Go のゲートと審査）（頁 p292-org-gates） */
@@ -3278,6 +3304,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図293'> fig293 : ResourcesMarginsView {
         doc /* 図293 飛行準備の認証の担当と要求（MOD の CoFR）（頁 p293-org-cofr） */
@@ -3295,6 +3322,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図294'> fig294 : ResourcesMarginsView {
         doc /* 図294 費用の記録の一覧（種類・ドルの年・2010 年ドルへの換算）（頁 p294-cst-records） */
@@ -3312,6 +3340,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図295'> fig295 : ResourcesMarginsView {
         doc /* 図295 物価の指数の推移（CPI-U・NNSI と 2010 年ドルへの換算係数）（頁 p295-cst-index） */
@@ -3329,6 +3358,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図296'> fig296 : ResourcesMarginsView {
         doc /* 図296 1飛行あたりの費用と年間飛行数の関係（パラメトリックの式）（頁 p296-cst-param） */
@@ -3346,6 +3376,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図297'> fig297 : ResourcesMarginsView {
         doc /* 図297 着陸の見送り・延期・着陸地の変更・延長の原因の区分（Mission Report の実績）（頁 p297-lnd-cause） */
@@ -3363,6 +3394,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図298'> fig298 : ResourcesMarginsView {
         doc /* 図298 着陸地の変更の計画地と実際の着陸地（Mission Report の実績）（頁 p298-lnd-site） */
@@ -3380,6 +3412,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図299'> fig299 : ResourcesMarginsView {
         doc /* 図299 飛行ごとの着陸の記録（Mission Report にある分の実績）（頁 p299-lnd-flight） */
@@ -3397,6 +3430,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図300'> fig300 : ResourcesMarginsView {
         doc /* 図300 LCC 違反・免除の群ごとの件数（Mission Report の実績）（頁 p300-lcc-group） */
@@ -3414,6 +3448,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図301'> fig301 : ResourcesMarginsView {
         doc /* 図301 限界値と測定値が本文にある LCC 違反・免除の記録（Mission Report の実績）（頁 p301-lcc-values） */
@@ -3431,6 +3466,7 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     view <'図302'> fig302 : ResourcesMarginsView {
         doc /* 図302 飛行ごとの LCC 違反・免除の記録（Mission Report にある分の実績）（頁 p302-lcc-flight） */
@@ -3448,6 +3484,61 @@ package SSD_VPT_SYS_001 {
         expose SSD_CST_ORB_001::*;
         expose SSD_LND_ORB_001::*;
         expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+    }
+    view <'図303'> fig303 : ResourcesMarginsView {
+        doc /* 図303 天候の基準の値：項目ごと・版ごとの件数（頁 p303-wxc-param） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+    }
+    view <'図304'> fig304 : ResourcesMarginsView {
+        doc /* 図304 天候の基準の値：2つの飛行規則の版を並べた対（頁 p304-wxc-pairs） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+    }
+    view <'図305'> fig305 : ResourcesMarginsView {
+        doc /* 図305 天候の基準の値：場面ごと・版ごとの規則の数（頁 p305-wxc-scene） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
     }
     // ---- 表記の規約
     package Conventions {
@@ -3455,7 +3546,7 @@ package SSD_VPT_SYS_001 {
         metadata def IdConvention { attribute prefix : String; attribute form : String; attribute meaning : String; attribute example : String; attribute count : Integer; }
         metadata def SourceReference { doc /* 出典の公開 URL（頁つき）と照合語（その頁の抽出テキストにある語句） */ attribute url : String; attribute keywords : String[0..*]; }
         metadata def DocumentNumber { doc /* 要素を説明する文書の番号 */ attribute docNo : String; }
-        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 351; }
+        @IdConvention { prefix = "SSD-"; form = "SSD-<種別>-<対象>-<3桁>"; meaning = "文書番号（SSD-種別-対象-連番）"; example = "SSD-FD-OMS-ENG-001"; count = 352; }
         @IdConvention { prefix = "F-"; form = "F-<系>-<下位>-<2桁>"; meaning = "機能行（機能説明書の機能の表）"; example = "F-OMS-ENG-01"; count = 2075; }
         @IdConvention { prefix = "IF-"; form = "IF-<系>-<番号>"; meaning = "インタフェース（所有の文書の IF の表）"; example = "IF-ORB-05"; count = 601; }
         @IdConvention { prefix = "REQ-"; form = "REQ-<系>-<2桁>"; meaning = "要求（要求書）"; example = "REQ-OMS-01"; count = 317; }
@@ -3529,5 +3620,6 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "EQN-"; form = "EQN-<2桁>"; meaning = "パラメトリックの式"; example = "EQN-01"; count = 4; }
         @IdConvention { prefix = "LND-"; form = "LND-<3桁>"; meaning = "着陸の記録"; example = "LND-001"; count = 137; }
         @IdConvention { prefix = "LCC-"; form = "LCC-<3桁>"; meaning = "LCC 違反・免除の記録"; example = "LCC-001"; count = 112; }
+        @IdConvention { prefix = "WXC-"; form = "WXC-<3桁>"; meaning = "天候の基準の記録"; example = "WXC-001"; count = 267; }
     }
 }

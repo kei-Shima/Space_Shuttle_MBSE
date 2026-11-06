@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-LCC-ORB-001 |
 | 表題 | LCC 違反定義書（打上げのコミット基準の違反・免除の記録） |
-| 版・日付 | 初版（Rev. -）／2026-11-06 |
+| 版・日付 | Rev. A／2026-11-06 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-LAV-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図300 LCC 違反・免除の群ごとの件数（Mission Report の実績）・図301 限界値と測定値が本文にある LCC 違反・免除の記録（Mission Report の実績）・図302 飛行ごとの LCC 違反・免除の記録（Mission Report にある分の実績） |
@@ -273,6 +273,8 @@ LCC（Launch Commit Criteria。打上げのコミット基準）の違反・免�
 
 > **注記** 既存との重なり：打上げのスクラブ・延期と原因の区分は SSD-LAV-ORB-001、秒読みの保持は SSD-GND-ORB-001、飛行中の異常は SSD-IFA-ORB-001。本書は LCC の項目・限界値・測定値と結果を持ち、重ねて描かない。雷の LCC の歴史と根拠（NASA/SP-2010-216283・TP-2010-216291）は取り込み済みだが本書では使わない（天候基準の版で使う）。
 
+> **注記** 天候の基準の値（飛行規則 1996・2002 年版と雷の基準 2010）は SSD-WXC-ORB-001（図303〜305）。本書の LCC 違反の記録に基準を当てはめた判定は付けないは [SSD-WXC-ORB-001](SSD-WXC-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-WXC-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. JSC-17378 STS-1 Orbiter Final Mission Report（1981年8月） （PDF p56） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-1%20Orbiter%20Final%20Mission%20Report.pdf#page=56
@@ -380,3 +382,4 @@ LCC（Launch Commit Criteria。打上げのコミット基準）の違反・免�
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-11-06 | 初版作成（LCC の違反・免除の記録 112件〔数える 61・境界 51、41飛行〕、群 5、図300〜302、SysML v2 テキスト） |
+| Rev. A | 2026-11-06 | 天候基準定義書 SSD-WXC-ORB-001 への参照を注記（Rev. DE） |
