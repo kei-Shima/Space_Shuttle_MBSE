@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（314件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（315件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -3830,6 +3830,27 @@ package SSD_VPT_SYS_001 {
     }
     view <'図314'> fig314 : ResourcesMarginsView {
         doc /* 図314 天候基準の制約：2010 の雷の限界（パラメトリック）（頁 p314-wxk-lightning） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+        expose SSD_XCP_ORB_001::*;
+        expose SSD_RXN_ORB_001::*;
+        expose SSD_WXK_ORB_001::*;
+    }
+    view <'図315'> fig315 : ResourcesMarginsView {
+        doc /* 図315 燃料電池の消費の制約ブロック（パラメトリック図）（頁 p315-rxn-par） */
         expose SSD_PAR_ORB_001::*;
         expose SSD_ANA_ORB_001::*;
         expose SSD_PRF_ORB_001::*;
