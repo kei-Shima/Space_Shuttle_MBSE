@@ -1,6 +1,6 @@
 # 参照した公開資料の一覧
 
-説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 365件、引用している説明書は 355件です。
+説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 365件、引用している説明書は 356件です。
 
 - 説明書の本文・表・「参考文献」の節にある URL を集め、頁の指定（`#page=N`、SCOM の末尾の `/N`）を除いて、文献ごとにまとめました。NTRS は、抄録のページと PDF を同じ文献として数えています。
 - 「引用箇所」は、説明書が引用している頁（URL）の種類の数です。どの頁を引用しているかは、各説明書の「参考文献」の節にあります。
@@ -12,7 +12,7 @@
 
 | 公開元 | 文献 | 引用箇所 |
 |---|---:|---:|
-| 1. ibiblio.org（Virtual AGC のスペースシャトル資料） | 155 | 2,638 |
+| 1. ibiblio.org（Virtual AGC のスペースシャトル資料） | 155 | 2,649 |
 | 2. NASA Technical Reports Server（NTRS） | 110 | 1,455 |
 | 3. yumpu.com（SCOM の公開版） | 1 | 702 |
 | 4. Internet Archive | 1 | 647 |
@@ -58,14 +58,14 @@
 | 44. rogerpielkejr.blogspot.com | 1 | 1 |
 | 45. scribd.com | 1 | 1 |
 | 46. sebokwiki.org | 1 | 1 |
-| 計 | 365 | 5,910 |
+| 計 | 365 | 5,921 |
 
 ## 1. ibiblio.org（Virtual AGC のスペースシャトル資料）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
 | 1 | JSC-48027 Rev. F Malfunction Procedures（MAL） | <https://ibiblio.org/apollo/Shuttle/Space%20Shuttle%20Malfunction%20Procedures.pdf> | 142 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-AVB-REF-001](docs/SSD-AVB-REF-001.md)・[SSD-BEH-ORB-003](docs/SSD-BEH-ORB-003.md)・[SSD-BEH-ORB-006](docs/SSD-BEH-ORB-006.md) ほか（計 163件） |
-| 2 | USA006020 Rev. B ECLSS Training Manual（2006-10-23、232頁、7,067,870 バイト） | <https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf> | 119 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) ほか（計 124件） |
+| 2 | USA006020 Rev. B ECLSS Training Manual（2006-10-23、232頁、7,067,870 バイト） | <https://ibiblio.org/apollo/Shuttle/Crew%20Training/Environmental%20Control%20and%20Life%20Support%20System.pdf> | 130 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) ほか（計 125件） |
 | 3 | JSC-08934 Vol.1 Rev. E Shuttle Operational Data Book（Systems Performance and Constraints Data） | <https://www.ibiblio.org/apollo/Shuttle/JSC-08934,%20Vol.1,%20Rev.E%20-%20Shuttle%20Operational%20Data%20Book%20-%20Shuttle%20Systems%20Performance%20and%20Constraints%20Data.pdf> | 72 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-BUD-ORB-001](docs/SSD-BUD-ORB-001.md)・[SSD-CAC-REF-001](docs/SSD-CAC-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md) ほか（計 102件） |
 | 4 | STS-114 Mission Report | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf> | 71 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-CFG-ORB-001](docs/SSD-CFG-ORB-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md) ほか（計 99件） |
 | 5 | NSTS-37452 STS-125 Mission Report（2010） | <https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-125%20Space%20Shuttle%20Mission%20Report.pdf> | 60 | [SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BUD-ORB-001](docs/SSD-BUD-ORB-001.md)・[SSD-CFG-ORB-001](docs/SSD-CFG-ORB-001.md) ほか（計 99件） |
@@ -599,7 +599,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 356 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CFG-ORB-001](docs/SSD-CFG-ORB-001.md) ほか（計 61件） |
+| 356 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CBA-ECL-001](docs/SSD-CBA-ECL-001.md) ほか（計 62件） |
 
 ## 38. NASA 本部（hq.nasa.gov）
 
@@ -629,7 +629,7 @@
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 361 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 63件） |
+| 361 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 64件） |
 
 ## 43. osti.gov
 

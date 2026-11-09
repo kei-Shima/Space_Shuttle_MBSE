@@ -1,5 +1,5 @@
 // SysML v2 テキスト：モデル全体の入口と統合の関係
-// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 72件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
+// SSD-MDL-SYS-001 モデル統合・検査定義書（SysML v2） から生成（lib/build_docs_ag.py）。ほかの SysML v2 テキスト 73件を読み込んでから読む（読み込みの順は SSD-MDL-SYS-001 §2）。
 package SSD_MDL_SYS_001 {
     doc /* SSD-MDL-SYS-001。スペースシャトルのシステム設計モデル（SSD-SYS-IDX-001）の SysML v2 の全体。各パッケージを読み込み、パッケージどうしをつなぐ関係を置く。 */
     public import SSD_BEH_ORB_001;   // SSD-BEH-ORB-001 状態遷移（ミッションフェーズ・飛行継続判断）
@@ -49,6 +49,7 @@ package SSD_MDL_SYS_001 {
     public import SSD_XCP_ORB_001;   // SSD-XCP-ORB-001 延長能力（反応剤の残りで延長できた時間と平均電力）
     public import SSD_RXN_ORB_001;   // SSD-RXN-ORB-001 反応剤消費実績（燃料電池の酸素・水素の消費と発電量）
     public import SSD_WXK_ORB_001;   // SSD-WXK-ORB-001 天候基準の制約（constraint def。値には束ねない）
+    public import SSD_CBA_ECL_001;   // SSD-CBA-ECL-001 回路遮断器の割り当て（ECLSS のパネル・バス・遮断器の行と接続）
     public import SSD_VER_SYS_001;   // SSD-VER-SYS-001 検証ケース・検証の結果
     public import SSD_RQL_ECL_001;   // SSD-RQL-ECL-001 ECLSS 下位要求（L3）
     public import SSD_IRQ_SYS_001;   // SSD-IRQ-SYS-001 インタフェース要求（上位の IF）と導出・充足・検証
