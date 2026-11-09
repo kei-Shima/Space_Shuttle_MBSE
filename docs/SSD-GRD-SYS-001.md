@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-GRD-SYS-001 |
 | 表題 | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） |
-| 版・日付 | Rev. O／2026-11-09 |
+| 版・日付 | Rev. P／2026-11-09 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MBS-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図269 MBSE グリッド（SE プロセス × SysML の柱）と図の分類・図270 MBSE 手法の工程との対応（Estefan 2008）と ISO/IEC/IEEE 42010 |
@@ -417,7 +417,49 @@ NASA-HDBK-1009A §4.3.3：グリッドは、行に NASA の SE の技術プロ�
 | 図313 | 天候基準の制約：飛行規則 1996・2002 年版の限界の値（パラメトリック） | VP-07 | 技術評価 | パラメトリック |
 | 図314 | 天候基準の制約：2010 の雷の限界（パラメトリック） | VP-07 | 技術評価 | パラメトリック |
 
-## 8. ISO/IEC/IEEE 42010 の概念と SSD-VPT-SYS-001
+## 8. パラメトリック列の図の区分（制約の有無）
+
+列 C4「パラメトリック」の図 57図を、定義書の SysML（model/ の .sysml。コメントを除く）で3つに分ける。題の語では決めない。図は、各定義書の「関連図」の行で定義書に結ぶ（ちょうど1つの定義書に当たる）。区分1は assert constraint・bind・:= のいずれかがある（制約の定義が別の定義書にあってもよい）、区分2は constraint def があり束ねる書き方が無い、区分3はどちらも無い（SysML が無い定義書も区分3）。この区分は本書の初版（Rev. CS）のあと、Rev. DI で足した。規則・見込み・結果と、見込みと違った点は PLAN_DI（rev_di/PLAN_DI.md）に残した。
+
+| 区分 | 意味 | 図の件数 | 定義書の件数 | 定義書 |
+|---|---|---|---|---|
+| 1 | 制約を値に束ねている | 15 | 6 | SSD-ANA-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-PAR-ORB-001・SSD-PLB-ORB-001・SSD-RXN-ORB-001 |
+| 2 | 制約の定義だけ（束ねない） | 14 | 5 | SSD-CST-ORB-001・SSD-EXP-ORB-001・SSD-TPM-SYS-001・SSD-TRJ-ORB-001・SSD-WXK-ORB-001 |
+| 3 | 記録の表（制約なし） | 28 | 14 | SSD-BUD-ORB-001・SSD-CFG-ORB-001・SSD-DMG-ORB-001・SSD-HRS-ORB-001・SSD-HSI-SYS-001・SSD-IND-ORB-001・SSD-LAV-ORB-001・SSD-LCC-ORB-001・SSD-LND-ORB-001・SSD-MED-ORB-001・SSD-MTY-ORB-001・SSD-PRF-ORB-001・SSD-WXC-ORB-001・SSD-XCP-ORB-001 |
+
+## 9. パラメトリック列の図の内訳（定義書ごと）
+
+定義書ごとの図と SysML の数え方（constraint def の件数、assert constraint・bind・:= の出現数）。定義書 25件。区分の順に並べた。出現数は文字の数え上げで、式の正しさは見ない。:= は属性の初期値にも使われるが、区分2・3の定義書では 0件である（数え方の限界）。
+
+| 定義書 | 図 | 図の件数 | constraint def | 束ねた使用の出現数 | 区分 | 区分の名前 | 備考 |
+|---|---|---|---|---|---|---|---|
+| SSD-ANA-ORB-001 | 図104・図105 | 2 | 3 | 3 | 1 | 制約を値に束ねている | — |
+| SSD-ATM-ORB-001 | 図163〜165 | 3 | 7 | 2 | 1 | 制約を値に束ねている | — |
+| SSD-EPB-EVA-001 | 図183・図184 | 2 | 5 | 1 | 1 | 制約を値に束ねている | — |
+| SSD-PAR-ORB-001 | 図78・図79 | 2 | 7 | 68 | 1 | 制約を値に束ねている | — |
+| SSD-PLB-ORB-001 | 図261〜263 | 3 | 0 | 3 | 1 | 制約を値に束ねている | — |
+| SSD-RXN-ORB-001 | 図309〜311 | 3 | 1 | 7 | 1 | 制約を値に束ねている | — |
+| SSD-CST-ORB-001 | 図294〜296 | 3 | 4 | 0 | 2 | 制約の定義だけ（束ねない） | — |
+| SSD-EXP-ORB-001 | 図145・図146 | 2 | 1 | 0 | 2 | 制約の定義だけ（束ねない） | — |
+| SSD-TPM-SYS-001 | 図249〜251 | 3 | 3 | 0 | 2 | 制約の定義だけ（束ねない） | — |
+| SSD-TRJ-ORB-001 | 図230〜232 | 3 | 11 | 0 | 2 | 制約の定義だけ（束ねない） | — |
+| SSD-WXK-ORB-001 | 図312〜314 | 3 | 87 | 0 | 2 | 制約の定義だけ（束ねない） | — |
+| SSD-BUD-ORB-001 | 図44 | 1 | 0 | 0 | 3 | 記録の表（制約なし） | SysML なし |
+| SSD-CFG-ORB-001 | 図279・図280 | 2 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-DMG-ORB-001 | 図288・図290 | 2 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-HRS-ORB-001 | 図185・図186 | 2 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-HSI-SYS-001 | 図144 | 1 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-IND-ORB-001 | 図123 | 1 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-LAV-ORB-001 | 図273〜275 | 3 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-LCC-ORB-001 | 図300〜302 | 3 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-LND-ORB-001 | 図297〜299 | 3 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-MED-ORB-001 | 図190 | 1 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-MTY-ORB-001 | 図277 | 1 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-PRF-ORB-001 | 図134・図135 | 2 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-WXC-ORB-001 | 図303〜305 | 3 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+| SSD-XCP-ORB-001 | 図306〜308 | 3 | 0 | 0 | 3 | 記録の表（制約なし） | — |
+
+## 10. ISO/IEC/IEEE 42010 の概念と SSD-VPT-SYS-001
 
 SEBoK の MBSE の項（Modeling Languages）：アーキテクチャ記述言語の最低限の要件は ISO/IEC/IEEE 42010 が定める。（出典は参考文献の頁）SEBoK の MBSE の項（Architecture Frameworks）：枠組みはビューを集めて整理し、トレーサビリティと不足情報の検出を助ける。（出典は参考文献の頁） 概念と、SSD-VPT-SYS-001 の要素の件数の対応。グリッドは SE プロセスと柱で区切るので、ビューポイント（関心事で区切る）の代わりではなく、別の切り口で見る。
 
@@ -428,7 +470,7 @@ SEBoK の MBSE の項（Modeling Languages）：アーキテクチャ記述言�
 | GRD-20 | ビューポイント | SSD-VPT-SYS-001 のビューポイント（VP-nn）13件。標準のビュー定義を特化した viewpoint def | SSD-VPT-SYS-001 |
 | GRD-21 | ビュー | SSD-VPT-SYS-001 の図ごとのビュー 314件（view の expose） | SSD-VPT-SYS-001 |
 
-## 9. MBSE 手法の工程と本パッケージの対応
+## 11. MBSE 手法の工程と本パッケージの対応
 
 Estefan 2008 の4つの手法の工程（Harmony-SE・OOSEM・Vitech・JPL State Analysis。RUP SE は枠組みの紹介、OPM は表記法なので取らない）。判定：有 8・一部 8・無 0。図270 に同じ表を示す。手法の推奨ではなく、本パッケージの文書・図との対応の判定である。
 
@@ -451,19 +493,19 @@ Estefan 2008 の4つの手法の工程（Harmony-SE・OOSEM・Vitech・JPL State
 | GRD-36 | JPL State Analysis | 状態に基づくソフトウェア設計 | 一部 | SSD-BEH-ORB-005・SSD-IBD-ORB-001 | 図98・図128 | GPC の状態・データバスはあるが、状態モデルからのソフトウェア設計は無い。 | Estefan 2008 JPL State Analysis の3つの柱（状態に基づく振る舞いのモデリング・ソフトウェア設計・目標指向の運用工学）。（出典: https://www.omgsysml.org/MBSE_Methodology_Survey_RevB.pdf#page=39） |
 | GRD-37 | JPL State Analysis | 目標指向の運用工学 | 一部 | SSD-OPS-PHASE-001・SSD-UC-ORB-001・SSD-TPM-SYS-001 | 図39・図93・図249 | フェーズ・ユースケース・MOE はあるが、目標を取り込んだ運用の設計は無い。 | Estefan 2008 JPL State Analysis の3つの柱（状態に基づく振る舞いのモデリング・ソフトウェア設計・目標指向の運用工学）。（出典: https://www.omgsysml.org/MBSE_Methodology_Survey_RevB.pdf#page=39） |
 
-## 10. 読み方と弱いところ
+## 12. 読み方と弱いところ
 
-図が0の行は 製品の実装・製品の統合。SSD-MBS-SYS-001 の判定（実装・統合・妥当性確認の図表が無い）と照らして読む。ただし割り当ては粗い（たとえば区画の配置図は設計解の定義に入れた）ので、0 は欠けの目安で、断定ではない。決定分析の行に入る図は少ない（図104 のトレードスタディ）。手法の対応で判定が「一部」のものは、ステークホルダーのニーズの分析・候補アーキテクチャの比較・妥当性確認である（MBS-10〜14）。グリッドは図を足すたびに古くなるので、図を足す版は作り直す。
+図が0の行は 製品の実装・製品の統合。SSD-MBS-SYS-001 の判定（実装・統合・妥当性確認の図表が無い）と照らして読む。ただし割り当ては粗い（たとえば区画の配置図は設計解の定義に入れた）ので、0 は欠けの目安で、断定ではない。決定分析の行に入る図は少ない（図104 のトレードスタディ）。手法の対応で判定が「一部」のものは、ステークホルダーのニーズの分析・候補アーキテクチャの比較・妥当性確認である（MBS-10〜14）。グリッドは図を足すたびに古くなるので、図を足す版は作り直す。パラメトリック列は題の語で数えたので、パラメトリックの図に数えた57図のうち、SysML で制約を値に束ねているのは15図、制約の定義だけが14図、記録の表が28図である（「パラメトリック列の図の区分（制約の有無）」と「パラメトリック列の図の内訳（定義書ごと）」）。
 
-## 11. 図
+## 13. 図
 
 図269 は行（SE プロセス）× 列（SysML の柱）の件数のグリッド、図270 は MBSE 手法の工程と本パッケージの対応および 42010 の概念の対応の表である。
 
-## 12. SysML v2 テキスト
+## 14. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-GRD-SYS-001.sysml](../SysML/SSD-GRD-SYS-001.sysml) に示す。行 17件・42010 の概念 4件・手法の工程 16件の part から成る。対象の文書は文字列の属性（assesses）で持ち、パッケージへの依存は張らない。MBSE 実践の対応（SSD-MBS-SYS-001）の後（VPT の直前）に読み込む。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。要求への SysML の関係は張らず、トレースの外に置いた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-GRD-SYS-001.sysml](../SysML/SSD-GRD-SYS-001.sysml) に示す。行 17件・42010 の概念 4件・手法の工程 16件の part から成る。対象の文書は文字列の属性（assesses）で持ち、パッケージへの依存は張らない。MBSE 実践の対応（SSD-MBS-SYS-001）の後（VPT の直前）に読み込む。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。要求への SysML の関係は張らず、トレースの外に置いた。パラメトリック列の図の区分の表（パラメトリック列の図の区分（制約の有無）・パラメトリック列の図の内訳（定義書ごと））は、model/ の .sysml を数えた結果で、上の SysML には入れていない（モデル化していない）。
 
-## 13. 注記（出典間の相違・構成変更）
+## 15. 注記（出典間の相違・構成変更）
 
 > **注記** 範囲・判定・出典の扱い：グリッドの行は、HDBK-1009A の技術プロセス 1〜9 に、HDBK のグリッドに含まれない技術管理プロセス 10〜17（技術計画・要求管理・インタフェース管理・技術リスク管理・構成管理・技術データ管理・技術評価・決定分析）を足した（本書の拡張）。列は SysML の4つの柱に「その他」（関連文書・トレース・安全・故障・出典など、4つの柱に当たらない図）を足した（本書の拡張）。
 
@@ -483,7 +525,7 @@ Estefan 2008 の4つの手法の工程（Harmony-SE・OOSEM・Vitech・JPL State
 
 > **注記** 振り分け（本書の判断）：INCOSE の考え方のうち、本版はグリッドと手法の対応と Architecture Frameworks、次の版は モデル計画書（HDBK-1009A §5・§6 と SEBoK の Process Frameworks）。
 
-## 14. 参考文献
+## 16. 参考文献
 
 1. NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） （PDF p15） — https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf#page=15
 2. SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） （PDF p1） — https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE)&oldid=78221#page=1
@@ -494,7 +536,7 @@ Estefan 2008 の4つの手法の工程（Harmony-SE・OOSEM・Vitech・JPL State
 7. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
 8. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
 
-## 15. 変更履歴
+## 17. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
@@ -514,3 +556,4 @@ Estefan 2008 の4つの手法の工程（Harmony-SE・OOSEM・Vitech・JPL State
 | Rev. M | 2026-11-06 | 図306〜308 の追加に合わせてグリッドを作り直した（308図）（Rev. DF） |
 | Rev. N | 2026-11-09 | 図309〜311 の追加に合わせてグリッドを作り直した（311図）（Rev. DG） |
 | Rev. O | 2026-11-09 | 図312〜314 の追加に合わせてグリッドを作り直した（314図）（Rev. DH） |
+| Rev. P | 2026-11-09 | 列「パラメトリック」の図 57図を、定義書の SysML の制約の有無で3つに分ける表を足した（束ねている 15図・定義だけ 14図・記録の表 28図）（Rev. DI） |
