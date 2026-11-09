@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-PAR-ORB-001 |
 | 表題 | パラメトリック定義書（消耗品・電力・排熱の収支） |
-| 版・日付 | Rev. H／2026-10-08 |
+| 版・日付 | Rev. I／2026-11-09 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BUD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図78 消耗品 パラメトリック図・図79 電力・反応剤・排熱 パラメトリック図 |
@@ -154,6 +154,8 @@
 
 > **注記** 消耗品の静的な収支に対する、乗員室の大気の時間変化（CO2・酸素分圧・漏れ）は [SSD-ATM-ORB-001](SSD-ATM-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-ATM-ORB-001.sysml）。
 
+> **注記** ReactantBudget の設計値（1 kWh あたり酸素 0.7・水素 0.09 lbm）に対する飛行ごとの消費の実績は SSD-RXN-ORB-001（図309〜311）。設計値との等式は主張しないは [SSD-RXN-ORB-001](SSD-RXN-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-RXN-ORB-001.sysml）。
+
 ## 9. 参考文献
 
 1. Shuttle Crew Operations Manual（USA007587 Rev. A CPN-1） 2.9節 Pressure Control System（PDF p360） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/360
@@ -194,3 +196,4 @@
 | Rev. F | 2026-10-07 | PAR-04 を規則から求めた LiOH の必要搭載数 42個に改め、CON-01・02 の値とマージンを計算し直した（LiOH の前提の見直し）（Rev. BG） |
 | Rev. G | 2026-10-08 | LiOH の床下のボックスと中甲板への分け方（STS-119・125 の例と 42個の推定の内訳）を注記（Rev. BH） |
 | Rev. H | 2026-10-08 | キャビン大気の動的モデル定義書 SSD-ATM-ORB-001 への参照を注記（Rev. BJ） |
+| Rev. I | 2026-11-09 | 反応剤消費実績定義書 SSD-RXN-ORB-001 への参照を注記（Rev. DG） |
