@@ -1,7 +1,7 @@
 // SysML v2 テキスト：IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応）
-// SSD-IOA-ORB-001 IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応） の表から生成（lib/build_docs_dn.py・rev_dn/iodata_dn.py）。根拠の頁は SSD-IOA-ORB-001 にある。
+// SSD-IOA-ORB-001 IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応） の表から生成（lib/build_docs_do.py・rev_do/iodata_do.py）。根拠の頁は SSD-IOA-ORB-001 にある。
 package SSD_IOA_ORB_001 {
-    doc /* SSD-IOA-ORB-001 IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応）。IOA の分析冊子 16冊の件数（IoaVolume）、系ごとの Table 1-1 の FMEA 件数との対比（IoaCompare）、FMX の系・機能ブロックごとの故障モード数と IOA の分析冊子のある系（FmxSystemLink）を持つ。ワークシートの全件・危険度は持たない。要求への関係は張らず、トレースの外に置く。 */
+    doc /* SSD-IOA-ORB-001 IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応）。IOA の分析冊子 16冊の件数（IoaVolume）、系ごとの Table 1-1 の FMEA 件数との対比（IoaCompare）、FMX の系・機能ブロックごとの故障モード数と IOA の分析冊子のある系（FmxSystemLink）を持つ。10冊の読めたワークシートの危険度の分布（系ごと IoaCriticalitySystem・フェーズごと IoaCriticalityPhase）を持つ（ユーザーが基準を 77% に下げた Rev. DO）。ワークシートの全件は持たない。要求への関係は張らず、トレースの外に置く。 */
     private import ScalarValues::*;
     part def IoaVolume {
         doc /* IOA の『ANALYSIS OF THE …』の冊子 1冊。件数は ANALYSIS WORKSHEET の見出しの頁の数（パーサー v2） */
@@ -74,5 +74,37 @@ package SSD_IOA_ORB_001 {
         part lnk_eps : FmxSystemLink { doc /* 電力系（EPS） */ :>> fmxSystem = "EPS"; :>> modeCount = 8; :>> ioaSystem = "EPG"; :>> scope = "別の範囲"; }
         part lnk_mps : FmxSystemLink { doc /* 主推進系（MPS） */ :>> fmxSystem = "MPS"; :>> modeCount = 2; :>> ioaSystem = "MPS"; :>> scope = "同じ範囲"; }
         part lnk_mps_tvc : FmxSystemLink { doc /* 主推進系（MPS）のうち 油圧・推力方向制御（TVC）（Table 1-1：Hydraulic Actuators (HA)） */ :>> fmxSystem = "MPS-TVC"; :>> modeCount = 5; :>> ioaSystem = "HA"; :>> scope = "同じ範囲"; }
+    }
+    part def IoaCriticalitySystem {
+        doc /* 10冊の5フェーズがすべて読めたワークシートの、系ごとの最も厳しい機器の危険度（5フェーズの機器の危険度の数字の最小）の頁数。読めなかった頁の分布は分からない */
+        attribute systemCode : String;
+        attribute worksheetPages : Integer;
+        attribute phasesReadable : Integer;
+        attribute hardwareMin1 : Integer;
+        attribute hardwareMin2 : Integer;
+        attribute hardwareMin3 : Integer;
+    }
+    part def IoaCriticalityPhase {
+        doc /* 10冊の読めたワークシートの、フェーズごとの危険度の値（機器／機能。例 3/1R）の件数。件数が 0 の値は書かない */
+        attribute phase : String;
+        attribute valueCounts : String;
+        attribute otherCount : Integer;
+    }
+    part ioaCriticalitySystems {
+        part crs_epg : IoaCriticalitySystem { doc /* 電力発生系・燃料電池 */ :>> systemCode = "EPG"; :>> worksheetPages = 63; :>> phasesReadable = 60; :>> hardwareMin1 = 3; :>> hardwareMin2 = 25; :>> hardwareMin3 = 32; }
+        part crs_oms : IoaCriticalitySystem { doc /* 軌道制御系（OMS） */ :>> systemCode = "OMS"; :>> worksheetPages = 953; :>> phasesReadable = 742; :>> hardwareMin1 = 35; :>> hardwareMin2 = 136; :>> hardwareMin3 = 571; }
+        part crs_gnc : IoaCriticalitySystem { doc /* 誘導・航法・制御（GN&C） */ :>> systemCode = "GNC"; :>> worksheetPages = 139; :>> phasesReadable = 105; :>> hardwareMin1 = 3; :>> hardwareMin2 = 18; :>> hardwareMin3 = 84; }
+        part crs_mps : IoaCriticalitySystem { doc /* 主推進系（MPS） */ :>> systemCode = "MPS"; :>> worksheetPages = 691; :>> phasesReadable = 362; :>> hardwareMin1 = 75; :>> hardwareMin2 = 83; :>> hardwareMin3 = 204; }
+        part crs_apu : IoaCriticalitySystem { doc /* 補助動力装置（APU） */ :>> systemCode = "APU"; :>> worksheetPages = 282; :>> phasesReadable = 179; :>> hardwareMin1 = 23; :>> hardwareMin2 = 49; :>> hardwareMin3 = 107; }
+        part crs_rcs : IoaCriticalitySystem { doc /* 姿勢制御系（RCS） */ :>> systemCode = "RCS"; :>> worksheetPages = 2233; :>> phasesReadable = 1933; :>> hardwareMin1 = 46; :>> hardwareMin2 = 210; :>> hardwareMin3 = 1677; }
+        part crs_land : IoaCriticalitySystem { doc /* 着陸・減速系（L&D） */ :>> systemCode = "LAND"; :>> worksheetPages = 279; :>> phasesReadable = 115; :>> hardwareMin1 = 41; :>> hardwareMin2 = 10; :>> hardwareMin3 = 64; }
+        part crs_ct : IoaCriticalitySystem { doc /* 通信・追跡（C&T） */ :>> systemCode = "CT"; :>> worksheetPages = 947; :>> phasesReadable = 807; :>> hardwareMin1 = 4; :>> hardwareMin2 = 160; :>> hardwareMin3 = 643; }
+    }
+    part ioaCriticalityPhases {
+        part crp_prelaunch : IoaCriticalityPhase { doc /* PRELAUNCH */ :>> phase = "PRELAUNCH"; :>> valueCounts = "1/1:118; 1/1R:1; 2/1R:72; 2/2R:1; 3/1R:88; 3/2:8; 3/2R:5; 3/3:4009; 3/3R:1"; :>> otherCount = 0; }
+        part crp_liftoff : IoaCriticalityPhase { doc /* LIFTOFF */ :>> phase = "LIFTOFF"; :>> valueCounts = "1/1:149; 2/1R:167; 2/2:40; 3/1:1; 3/1R:173; 3/2R:256; 3/3:3516; 1/3:1"; :>> otherCount = 0; }
+        part crp_onorbit : IoaCriticalityPhase { doc /* ONORBIT */ :>> phase = "ONORBIT"; :>> valueCounts = "1/1:84; 2/1R:286; 2/2:238; 3/1R:250; 3/2:1; 3/2R:1173; 3/3:2271"; :>> otherCount = 0; }
+        part crp_deorbit : IoaCriticalityPhase { doc /* DEORBIT */ :>> phase = "DEORBIT"; :>> valueCounts = "1/1:149; 2/1R:252; 2/2:61; 3/1R:559; 3/2R:215; 3/3:3067"; :>> otherCount = 0; }
+        part crp_landing_safing : IoaCriticalityPhase { doc /* LANDING/SAFING */ :>> phase = "LANDING/SAFING"; :>> valueCounts = "1/1:110; 2/1R:106; 3/1R:109; 3/2R:2; 3/3:3974; 3/3R:2"; :>> otherCount = 0; }
     }
 }

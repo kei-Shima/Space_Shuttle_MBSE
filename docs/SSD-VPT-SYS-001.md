@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-VPT-SYS-001 |
 | 表題 | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） |
-| 版・日付 | Rev. CA／2026-11-10 |
+| 版・日付 | Rev. CB／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-MDL-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図111 ビューポイントと関係者の行列 |
 
 ## 1. 目的
 
-本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 324件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
+本パッケージの文書・図・モデルを、誰（関係者）のどの問い（関心事）に答えるかで整理し、ビューポイントとして定義する。SSD-SYS-ARC-001 の図 327件をそれぞれ1つのビューポイントのビューに割り当て、ビューが晒すモデルのパッケージを示す。あわせて、文書の表の ID の形（表記の規約）を定める。全体は 図111 ビューポイントと関係者の行列 に示す。
 
 ## 2. 書き方
 
@@ -74,7 +74,7 @@
 | VP-04 | 運用 | CN-05 | SH-OPS・SH-CREW・SH-LPS・SH-PL | GeneralView（asTreeDiagram） | SSD_UC_ORB_001・SSD_BEH_ORB_001・SSD_BEH_ORB_003・SSD_BEH_ORB_004・SSD_MTY_ORB_001 | SSD-OPS-PHASE-001・SSD-UC-ORB-001・SSD-BEH-ORB-001・003・004・SSD-MTY-ORB-001 | 24（図39・図40・図76・図77・図83・図84・図85・図87・図93・図94・図95・図96・図97・図238・図239・図240・図241・図242・図244・図245・図246・図247・図248・図276） |
 | VP-05 | 系の振る舞い | CN-05 | SH-DES・SH-OPS | StateTransitionView（asTreeDiagram） | SSD_BEH_ORB_005・SSD_BEH_ORB_006・SSD_BEH_ORB_007・SSD_EMU_EVA_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_BEH_ORB_008・SSD_GND_ORB_001 | SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-BEH-ORB-008・SSD-GND-ORB-001 | 40（図98・図99・図100・図101・図102・図103・図136・図137・図138・図139・図140・図141・図142・図168・図169・図170・図171・図172・図173・図174・図175・図181・図182・図193・図194・図195・図196・図198・図199・図203・図204・図219・図220・図221・図222・図223・図224・図254・図255・図256） |
 | VP-06 | 安全・故障 | CN-06 | SH-SMA・SH-CREW・SH-OPS | GeneralView（asTreeDiagram） | SSD_BEH_ORB_002・SSD_ANA_ORB_001・SSD_FDIR_ORB_001・SSD_HAZ_ORB_001・SSD_FMM_ORB_001・SSD_FMX_ECL_001・SSD_GNC_ORB_001・SSD_ETS_SYS_001・SSD_ACC_SYS_001・SSD_FMX_ORB_001・SSD_IFA_ORB_001・SSD_PRA_ORB_001 | SSD-FMEA-*・SSD-BEH-ORB-002・SSD-ANA-ORB-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-IFA-ORB-001・SSD-PRA-ORB-001 | 36（図45・図80・図81・図82・図86・図88・図106・図107・図108・図118・図119・図120・図121・図126・図127・図176・図177・図178・図197・図205・図206・図207・図208・図209・図210・図211・図227・図228・図229・図257・図258・図259・図260・図264・図265・図266） |
-| VP-07 | 資源・マージン | CN-07 | SH-SE・SH-PL・SH-MGT | GridView（asElementTable） | SSD_PAR_ORB_001・SSD_ANA_ORB_001・SSD_PRF_ORB_001・SSD_TRJ_ORB_001・SSD_TPM_SYS_001・SSD_PLB_ORB_001・SSD_LAV_ORB_001・SSD_MTY_ORB_001・SSD_DCN_ORB_001・SSD_DMG_ORB_001・SSD_ORG_ORB_001・SSD_CST_ORB_001・SSD_LND_ORB_001・SSD_LCC_ORB_001・SSD_WXC_ORB_001・SSD_XCP_ORB_001・SSD_RXN_ORB_001・SSD_WXK_ORB_001・SSD_LCO_ORB_001・SSD_IOA_ORB_001 | SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-PLB-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001・SSD-DCN-ORB-001・SSD-DMG-ORB-001・SSD-ORG-ORB-001・SSD-CST-ORB-001・SSD-LND-ORB-001・SSD-LCC-ORB-001・SSD-WXC-ORB-001・SSD-XCP-ORB-001・SSD-RXN-ORB-001・SSD-WXK-ORB-001・SSD-LCO-ORB-001・SSD-IOA-ORB-001 | 56（図44・図78・図79・図104・図105・図134・図135・図230・図231・図232・図249・図250・図251・図261・図262・図263・図273・図274・図275・図277・図282・図283・図288・図289・図290・図291・図292・図293・図294・図295・図296・図297・図298・図299・図300・図301・図302・図303・図304・図305・図306・図307・図308・図309・図310・図311・図312・図313・図314・図315・図319・図320・図321・図322・図323・図324） |
+| VP-07 | 資源・マージン | CN-07 | SH-SE・SH-PL・SH-MGT | GridView（asElementTable） | SSD_PAR_ORB_001・SSD_ANA_ORB_001・SSD_PRF_ORB_001・SSD_TRJ_ORB_001・SSD_TPM_SYS_001・SSD_PLB_ORB_001・SSD_LAV_ORB_001・SSD_MTY_ORB_001・SSD_DCN_ORB_001・SSD_DMG_ORB_001・SSD_ORG_ORB_001・SSD_CST_ORB_001・SSD_LND_ORB_001・SSD_LCC_ORB_001・SSD_WXC_ORB_001・SSD_XCP_ORB_001・SSD_RXN_ORB_001・SSD_WXK_ORB_001・SSD_LCO_ORB_001・SSD_IOA_ORB_001 | SSD-BUD-ORB-001・SSD-PAR-ORB-001・SSD-ANA-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-PLB-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001・SSD-DCN-ORB-001・SSD-DMG-ORB-001・SSD-ORG-ORB-001・SSD-CST-ORB-001・SSD-LND-ORB-001・SSD-LCC-ORB-001・SSD-WXC-ORB-001・SSD-XCP-ORB-001・SSD-RXN-ORB-001・SSD-WXK-ORB-001・SSD-LCO-ORB-001・SSD-IOA-ORB-001 | 59（図44・図78・図79・図104・図105・図134・図135・図230・図231・図232・図249・図250・図251・図261・図262・図263・図273・図274・図275・図277・図282・図283・図288・図289・図290・図291・図292・図293・図294・図295・図296・図297・図298・図299・図300・図301・図302・図303・図304・図305・図306・図307・図308・図309・図310・図311・図312・図313・図314・図315・図319・図320・図321・図322・図323・図324・図325・図326・図327） |
 | VP-08 | 物理配置 | CN-08 | SH-DES・SH-LPS | GridView（asElementTable） | SSD_ALC_SYS_001 | SSD-PHY-ORB-001・SSD-ALC-SYS-001 | 2（図43・図91） |
 | VP-09 | 構成の違い | CN-09 | SH-MGT・SH-OPS・SH-PL | GridView（asElementTable） | SSD_VAR_ORB_001・SSD_IND_ORB_001・SSD_FLT_ORB_001・SSD_MTY_ORB_001・SSD_CFG_ORB_001・SSD_DCN_ORB_001 | SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-FLT-ORB-001・SSD-MTY-ORB-001・SSD-CFG-ORB-001・SSD-DCN-ORB-001 | 9（図109・図122・図123・図132・図278・図279・図280・図281・図284） |
 | VP-10 | 根拠の追跡 | CN-10 | SH-SE・SH-DES・SH-MGT | GridView（asElementTable） | SSD_ALC_SYS_001 | SSD-*-REF-*・SSD-OPS-REF-001・002 | 33（図4・図7・図9・図10・図11・図13・図15・図17・図19・図21・図23・図25・図27・図29・図31・図33・図35・図37・図47・図49・図51・図53・図55・図57・図59・図61・図63・図65・図67・図69・図71・図73・図75） |
@@ -84,7 +84,7 @@
 
 ## 6. ビュー（図）
 
-図 324件のビューポイントを示す。
+図 327件のビューポイントを示す。
 
 | 図 | 表題 | ビューポイント | SysML |
 |---|---|---|---|
@@ -412,6 +412,9 @@
 | 図322 | IOA 原資料の構成：サブシステム分析ワークシートの冊子ごとの件数 | VP-07 | fig322 |
 | 図323 | IOA の件数の実績：分析ワークシートの頁数と中間報告 Table 1-1 の FMEA 件数の系ごとの対比 | VP-07 | fig323 |
 | 図324 | 故障モードとIOA 原資料の対応：FMX の系ごとの故障モード数と IOA の分析冊子 | VP-07 | fig324 |
+| 図325 | LCC 原典との結び：Mission Report の LCC 違反の記録と LCC の項目（SSID）の結び | VP-07 | fig325 |
+| 図326 | IOA の危険度の分布：5フェーズが読めたワークシートの、系ごとの最も厳しい機器の危険度 | VP-07 | fig326 |
+| 図327 | IOA の危険度の分布：フェーズごとの危険度の値の件数 | VP-07 | fig327 |
 
 ## 7. 表記の規約
 
@@ -510,7 +513,7 @@
 
 ## 9. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 324件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml) に示す。関係者の part def 10件、関心事の concern def 21件、ビューポイントの viewpoint def 13件とビュー定義 13件、ビュー 327件、表記の規約の metadata def 3件から成り、晒すパッケージをすべて読み込んでから読む。本書の表と同じデータから作り、OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -610,3 +613,4 @@
 | Rev. BY | 2026-11-10 | 図319〜321（LCC 原典の構成・WEA-01 の数値つき規則・2010 の雷の基準との対）を VP-07 のビューに加え、SSD_LCO_ORB_001 を晒すようにし、表記の規約に LCC 原典の項目の ID（LCO-・LWR-）を加えた（Rev. DL） |
 | Rev. BZ | 2026-11-10 | 図322〜324（IOA 原資料の構成・件数の対比・故障モードとの系ごとの対応）を VP-07 のビューに加え、SSD_IOA_ORB_001 を晒すようにし、表記の規約に IOA 原資料の ID（IOA-・IOW-）を加えた（Rev. DM） |
 | Rev. CA | 2026-11-10 | 図322〜324（IOA 原資料。SSD-IOA-ORB-001 の改版で作り直した）を VP-07 のビューに加えたままであることを確かめ直した（Rev. DN） |
+| Rev. CB | 2026-11-10 | 図325〜327（LCC 原典との結び・IOA の危険度の分布）を VP-07 のビューに加えた（Rev. DO） |

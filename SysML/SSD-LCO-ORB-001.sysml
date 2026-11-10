@@ -1,7 +1,7 @@
 // SysML v2 テキスト：LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則）
-// SSD-LCO-ORB-001 LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則） の表から生成（lib/build_docs_dl.py・rev_dl/lcodata.py）。根拠の頁は SSD-LCO-ORB-001 にある。
+// SSD-LCO-ORB-001 LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則） の表から生成（lib/build_docs_do.py・rev_do/lcodata_do.py）。根拠の頁は SSD-LCO-ORB-001 にある。
 package SSD_LCO_ORB_001 {
-    doc /* SSD-LCO-ORB-001 LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則）。LCC 本体（NSTS 16007 Rev H）の SSID を節（LccSection）の中の項目（LccItem）として持ち、境界は isCounted = false の項目で持つ。WEA-01 の数値つき規則を WeatherRule として持つ。測定値・Mission Report の記録は持たない。要求への関係は張らず、トレースの外に置く。 */
+    doc /* SSD-LCO-ORB-001 LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則）。LCC 本体（NSTS 16007 Rev H）の SSID を節（LccSection）の中の項目（LccItem）として持ち、境界は isCounted = false の項目で持つ。WEA-01 の数値つき規則を WeatherRule として持つ。Mission Report の LCC 違反の記録との結び 25件を LccJoin として持つ（結び直しはしない。測定値は持たない）。要求への関係は張らず、トレースの外に置く。 */
     private import ScalarValues::*;
     part def LccSection {
         doc /* LCC 本体の節（目次の節の番号・SSID の接頭辞）。目次に接頭辞が無い付録の SSID は節の番号を持たない */
@@ -1082,5 +1082,42 @@ package SSD_LCO_ORB_001 {
         part <'LWR-055'> lwr_055 : WeatherRule { doc /* WEA-01 1.4.H.2 */ :>> clause = "1.4.H.2"; :>> limitValues = "15 分・5 NM・1000 V/m"; :>> ruleText = "Do not launch for 15 minutes after the absolute value of any electric field measurement at the surface within 5 NM of the flight path has been greater than 1000 V/m unless:"; :>> sourcePage = 91; }
         part <'LWR-056'> lwr_056 : WeatherRule { doc /* WEA-01 1.4.H.2.a */ :>> clause = "1.4.H.2.a"; :>> limitValues = "10 NM"; :>> ruleText = "All clouds within 10 NM of the flight path are transparent; -or-"; :>> sourcePage = 91; }
         part <'LWR-057'> lwr_057 : WeatherRule { doc /* WEA-01 1.4.H.2.b */ :>> clause = "1.4.H.2.b"; :>> limitValues = "10 NM・5 °C・-10 °C・3 時間"; :>> ruleText = "All nontransparent clouds within 10 NM of the flight path have cloud tops below the +5 degrees C level and have not been part of convective clouds with cloud tops above the -10 degrees C level within "; :>> sourcePage = 91; }
+    }
+    part def LccJoin {
+        doc /* Mission Report の LCC 違反の記録（SSD-LCC-ORB-001）1件と LCC 本体の SSID の結び。結べた 25件だけ（結び直しはしない）。測定値は持たない。effectivity は MISSION 欄の字面との照合 */
+        attribute ddRecord : String;
+        attribute flight : String;
+        attribute ssid : String;
+        attribute joinKey : String;
+        attribute missionText : String;
+        attribute effectivity : String;
+        attribute limitNumberCheck : String;
+    }
+    part lccJoins {
+        part join_lcc_002 : LccJoin { doc /* LCC-002 → ECL-04 */ :>> ddRecord = "LCC-002"; :>> flight = "STS-1"; :>> ssid = "ECL-04"; :>> joinKey = "K2"; :>> missionText = "119,120,122-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_010 : LccJoin { doc /* LCC-010 → HYD-05 */ :>> ddRecord = "LCC-010"; :>> flight = "STS-27"; :>> ssid = "HYD-05"; :>> joinKey = "K2"; :>> missionText = "STS-107,112-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_011 : LccJoin { doc /* LCC-011 → ET-01 */ :>> ddRecord = "LCC-011"; :>> flight = "STS-27"; :>> ssid = "ET-01"; :>> joinKey = "K2"; :>> missionText = "STS-104,105,107-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_018 : LccJoin { doc /* LCC-018 → APU-06 */ :>> ddRecord = "LCC-018"; :>> flight = "STS-31"; :>> ssid = "APU-06"; :>> joinKey = "K2"; :>> missionText = "STS-107,114-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_019 : LccJoin { doc /* LCC-019 → MPS-48 */ :>> ddRecord = "LCC-019"; :>> flight = "STS-31"; :>> ssid = "MPS-48"; :>> joinKey = "K2"; :>> missionText = "STS-116-120,122-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_022 : LccJoin { doc /* LCC-022 → APU-14 */ :>> ddRecord = "LCC-022"; :>> flight = "STS-33"; :>> ssid = "APU-14"; :>> joinKey = "K2"; :>> missionText = "STS-107,114-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_028 : LccJoin { doc /* LCC-028 → MPS-25 */ :>> ddRecord = "LCC-028"; :>> flight = "STS-36"; :>> ssid = "MPS-25"; :>> joinKey = "K2"; :>> missionText = "STS-114-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_044 : LccJoin { doc /* LCC-044 → HAZ-03 */ :>> ddRecord = "LCC-044"; :>> flight = "STS-47"; :>> ssid = "HAZ-03"; :>> joinKey = "K2"; :>> missionText = "STS-107,109-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_055 : LccJoin { doc /* LCC-055 → MPS-12 */ :>> ddRecord = "LCC-055"; :>> flight = "STS-56"; :>> ssid = "MPS-12"; :>> joinKey = "K2"; :>> missionText = "STS-98,100,102,104,105,107-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_060 : LccJoin { doc /* LCC-060 → HAZ-07 */ :>> ddRecord = "LCC-060"; :>> flight = "STS-58"; :>> ssid = "HAZ-07"; :>> joinKey = "K2"; :>> missionText = "STS 115-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_065 : LccJoin { doc /* LCC-065 → FCP-01 */ :>> ddRecord = "LCC-065"; :>> flight = "STS-67"; :>> ssid = "FCP-01"; :>> joinKey = "K2"; :>> missionText = "STS-114-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_068 : LccJoin { doc /* LCC-068 → SSME-25 */ :>> ddRecord = "LCC-068"; :>> flight = "STS-68"; :>> ssid = "SSME-25"; :>> joinKey = "K2"; :>> missionText = "STS-104,105,107-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_069 : LccJoin { doc /* LCC-069 → BRSS-15 */ :>> ddRecord = "LCC-069"; :>> flight = "STS-70"; :>> ssid = "BRSS-15"; :>> joinKey = "K2"; :>> missionText = "STS-119,120,122-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_072 : LccJoin { doc /* LCC-072 → HAZ-03 */ :>> ddRecord = "LCC-072"; :>> flight = "STS-80"; :>> ssid = "HAZ-03"; :>> joinKey = "K2"; :>> missionText = "STS-107,109-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_087 : LccJoin { doc /* LCC-087 → MPS-22 */ :>> ddRecord = "LCC-087"; :>> flight = "STS-114"; :>> ssid = "MPS-22"; :>> joinKey = "K1"; :>> missionText = "STS 116-120,122-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_088 : LccJoin { doc /* LCC-088 → MPS-22 */ :>> ddRecord = "LCC-088"; :>> flight = "STS-115"; :>> ssid = "MPS-22"; :>> joinKey = "K1"; :>> missionText = "STS 116-120,122-999"; :>> effectivity = "Rev H 適用外"; :>> limitNumberCheck = "—"; }
+        part join_lcc_092 : LccJoin { doc /* LCC-092 → ICE-01 */ :>> ddRecord = "LCC-092"; :>> flight = "STS-118"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_095 : LccJoin { doc /* LCC-095 → ICE-01 */ :>> ddRecord = "LCC-095"; :>> flight = "STS-119"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_096 : LccJoin { doc /* LCC-096 → ICE-01 */ :>> ddRecord = "LCC-096"; :>> flight = "STS-120"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_102 : LccJoin { doc /* LCC-102 → ICE-01 */ :>> ddRecord = "LCC-102"; :>> flight = "STS-128"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_103 : LccJoin { doc /* LCC-103 → MPS-04 */ :>> ddRecord = "LCC-103"; :>> flight = "STS-128"; :>> ssid = "MPS-04"; :>> joinKey = "K1"; :>> missionText = "STS-115-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_104 : LccJoin { doc /* LCC-104 → ICE-01 */ :>> ddRecord = "LCC-104"; :>> flight = "STS-128"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_107 : LccJoin { doc /* LCC-107 → ICE-01 */ :>> ddRecord = "LCC-107"; :>> flight = "STS-132"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
+        part join_lcc_110 : LccJoin { doc /* LCC-110 → APU-14 */ :>> ddRecord = "LCC-110"; :>> flight = "STS-134"; :>> ssid = "APU-14"; :>> joinKey = "K1"; :>> missionText = "STS-107,114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "現れる"; }
+        part join_lcc_111 : LccJoin { doc /* LCC-111 → ICE-01 */ :>> ddRecord = "LCC-111"; :>> flight = "STS-134"; :>> ssid = "ICE-01"; :>> joinKey = "K1"; :>> missionText = "STS-114-999"; :>> effectivity = "範囲内"; :>> limitNumberCheck = "数が無い"; }
     }
 }

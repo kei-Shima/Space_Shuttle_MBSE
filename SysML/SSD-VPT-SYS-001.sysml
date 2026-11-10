@@ -1,7 +1,7 @@
 // SysML v2 テキスト：関係者・関心事・ビューポイント・ビュー（図）と表記の規約
 // SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約） の表から生成（lib/build_docs_am.py）。
 package SSD_VPT_SYS_001 {
-    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（324件）。 */
+    doc /* SSD-VPT-SYS-001 ビューポイント定義書（関係者・関心事・ビュー・表記の規約）。ビューは SSD-SYS-ARC-001 の図（327件）。 */
     private import SSD_BLK_SYS_001::*;
     private import StandardViewDefinitions::*;
     private import ScalarValues::*;
@@ -4149,6 +4149,75 @@ package SSD_VPT_SYS_001 {
     }
     view <'図324'> fig324 : ResourcesMarginsView {
         doc /* 図324 故障モードとIOA 原資料の対応：FMX の系ごとの故障モード数と IOA の分析冊子（頁 p324-ioa-fmx） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+        expose SSD_XCP_ORB_001::*;
+        expose SSD_RXN_ORB_001::*;
+        expose SSD_WXK_ORB_001::*;
+        expose SSD_LCO_ORB_001::*;
+        expose SSD_IOA_ORB_001::*;
+    }
+    view <'図325'> fig325 : ResourcesMarginsView {
+        doc /* 図325 LCC 原典との結び：Mission Report の LCC 違反の記録と LCC の項目（SSID）の結び（頁 p325-lco-join） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+        expose SSD_XCP_ORB_001::*;
+        expose SSD_RXN_ORB_001::*;
+        expose SSD_WXK_ORB_001::*;
+        expose SSD_LCO_ORB_001::*;
+        expose SSD_IOA_ORB_001::*;
+    }
+    view <'図326'> fig326 : ResourcesMarginsView {
+        doc /* 図326 IOA の危険度の分布：5フェーズが読めたワークシートの、系ごとの最も厳しい機器の危険度（頁 p326-ioa-dist-sys） */
+        expose SSD_PAR_ORB_001::*;
+        expose SSD_ANA_ORB_001::*;
+        expose SSD_PRF_ORB_001::*;
+        expose SSD_TRJ_ORB_001::*;
+        expose SSD_TPM_SYS_001::*;
+        expose SSD_PLB_ORB_001::*;
+        expose SSD_LAV_ORB_001::*;
+        expose SSD_MTY_ORB_001::*;
+        expose SSD_DCN_ORB_001::*;
+        expose SSD_DMG_ORB_001::*;
+        expose SSD_ORG_ORB_001::*;
+        expose SSD_CST_ORB_001::*;
+        expose SSD_LND_ORB_001::*;
+        expose SSD_LCC_ORB_001::*;
+        expose SSD_WXC_ORB_001::*;
+        expose SSD_XCP_ORB_001::*;
+        expose SSD_RXN_ORB_001::*;
+        expose SSD_WXK_ORB_001::*;
+        expose SSD_LCO_ORB_001::*;
+        expose SSD_IOA_ORB_001::*;
+    }
+    view <'図327'> fig327 : ResourcesMarginsView {
+        doc /* 図327 IOA の危険度の分布：フェーズごとの危険度の値の件数（頁 p327-ioa-dist-phase） */
         expose SSD_PAR_ORB_001::*;
         expose SSD_ANA_ORB_001::*;
         expose SSD_PRF_ORB_001::*;

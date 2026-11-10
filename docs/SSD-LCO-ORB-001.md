@@ -4,18 +4,18 @@
 |---|---|
 | 文書番号 | SSD-LCO-ORB-001 |
 | 表題 | LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則） |
-| 版・日付 | 初版（Rev. -）／2026-11-10 |
+| 版・日付 | Rev. A／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-LCC-ORB-001 |
-| 関連図 | SSD-SYS-ARC-001 図319 LCC 原典（NSTS 16007 Rev H）の構成：節ごとの項目の件数・図320 天候の基準の値：LCC 原典 WEA-01 の数値つき規則・図321 天候の基準の値：2010 の雷の基準と LCC 原典 WEA-01 §1.4 の数・単位の対 |
+| 関連図 | SSD-SYS-ARC-001 図319 LCC 原典（NSTS 16007 Rev H）の構成：節ごとの項目の件数・図320 天候の基準の値：LCC 原典 WEA-01 の数値つき規則・図321 天候の基準の値：2010 の雷の基準と LCC 原典 WEA-01 §1.4 の数・単位の対・図325 LCC 原典との結び：Mission Report の LCC 違反の記録と LCC の項目（SSID）の結び |
 
 ## 1. 目的
 
-LCC（Launch Commit Criteria。打上げのコミット基準）の原典 NSTS 16007 Rev H（2008-10-06）を取り込んだので、その項目（SSID）の索引と、天候の規則（WEA-01）の数値つき規則を並べる。これまでのモデルは、LCC の違反の記録（SSD-LCC-ORB-001）と天候の基準（SSD-WXC-ORB-001）を Mission Report・飛行規則・NASA の報告から作り、LCC の原典を持たなかった。本書は原典の構成を 図319〜321 と SysML で示す。**判定・評価は付けない**（記録に基準を当てはめて、基準を上回った・下回ったという結果を書かない）。
+LCC（Launch Commit Criteria。打上げのコミット基準）の原典 NSTS 16007 Rev H（2008-10-06）を取り込んだので、その項目（SSID）の索引と、天候の規則（WEA-01）の数値つき規則を並べる。これまでのモデルは、LCC の違反の記録（SSD-LCC-ORB-001）と天候の基準（SSD-WXC-ORB-001）を Mission Report・飛行規則・NASA の報告から作り、LCC の原典を持たなかった。本書は原典の構成を 図319〜321・325 と SysML で示す。Rev. DO で、Mission Report の LCC 違反の記録のうち LCC の SSID に結べた 25 件の表（図325）を足した。**判定・評価は付けない**（記録に基準を当てはめて、基準を上回った・下回ったという結果を書かない）。
 
 ## 2. 範囲と書き方
 
-資料は LCC 本体（sv_lcc16007。2264 頁）。頁の見出しの SSID・MISSION（適用範囲）・CHANGE NO. で SSID に分け、LCC VIOLATION CALL の行を持つ 479 を数え、持たない 220 は境界として載せるが数えない。天候（WEA-01）は、数と単位を持つ規則を条項つきで 57 行取った。**規則は抽出の前に決めた**（rev_dl/PLAN_DL.md §1b）。値は本文のまま（換算しない）。測定値（打上げ前・飛行中の値）と Mission Report の記録の測定値は載せない。
+資料は LCC 本体（sv_lcc16007。2264 頁）。頁の見出しの SSID・MISSION（適用範囲）・CHANGE NO. で SSID に分け、LCC VIOLATION CALL の行を持つ 479 を数え、持たない 220 は境界として載せるが数えない。天候（WEA-01）は、数と単位を持つ規則を条項つきで 57 行取った。**規則は抽出の前に決めた**（rev_dl/PLAN_DL.md §1b、Rev. DO の結びの表は rev_do/PLAN_DO.md）。値は本文のまま（換算しない）。測定値（打上げ前・飛行中の値）と Mission Report の記録の測定値は載せない。
 
 ## 3. 節ごとの件数
 
@@ -798,7 +798,7 @@ LCC VIOLATION CALL の行を持つ SSID 479。題は LCC VIOLATION CALL の行�
 
 ## 6. Mission Report の LCC 違反の記録との結び
 
-SSD-LCC-ORB-001 の数える記録を LCC の SSID に結ぶ試み（PLAN_DL §1b R-B。鍵は SSID の綴り→題の語、同義語の表は使わない）。結果は件数だけで、結んだ記録の一覧は作らない。測定値は載せない。
+SSD-LCC-ORB-001 の数える記録を LCC の SSID に結ぶ試み（PLAN_DL §1b R-B。鍵は SSID の綴り→題の語、同義語の表は使わない）。件数と条件の経緯。結べた記録の一覧は次の節。測定値は載せない。
 
 | 項目 | 値 |
 |---|---|
@@ -808,10 +808,43 @@ SSD-LCC-ORB-001 の数える記録を LCC の SSID に結ぶ試み（PLAN_DL §1
 | 結べた計 | 25 |
 | 複数の候補（結ばない） | 8 |
 | 結べない | 28 |
-| 採用の条件（結べた 30件以上。結果を見る前に決めた） | 未達（結びの表と限界値の数の突合は作らない） |
-| 無作為10件（seed 11）の目の検査 | 10件が本文と合った |
+| 採用の条件（結べた 30件以上。結果を見る前に決めた） | 未達（結べた 25件。Rev. DL では結びの表と限界値の数の突合を作らなかった） |
+| 条件の変更（結果を見たあとのユーザーの判断。2026-11-10） | 結べた 25件以上に下げた → 25 ≥ 25 で満たす（境界ちょうど。事前の条件を満たしたのではない）。結びの表（図325）と限界値の数の突合を Rev. DO で作った |
+| 無作為10件（seed 11）の目の検査 | 10件が本文と合った（Rev. DL の結果のまま。結び直していない） |
 
-## 7. WEA-01 の数値つき規則
+## 7. Mission Report の LCC 違反の記録と LCC の項目の結び
+
+結べた 25 件（K1 11・K2 14）。**条件（結べた 30件以上）は未達で、ユーザーが 25 件に下げて作った表**。結び直しはしていない。『MISSION 欄の字面』は LCC の頁の適用範囲の文字。適用の別は DD の記録の飛行番号がその文字に入るか：範囲内 9・Rev H 適用外 16。**『範囲内』は字面に飛行番号が入るという意味だけで、その飛行の時点で同じ値が有効だったかは分からない**（Rev H は 2008-10-06 の版）。限界値の数の突合は範囲内の記録だけ：DD の限界の文の数が、その SSID の測定表の MIN／MAX の数のどれかと同じ数で現れるか（現れる 1・現れない 0・数が無い 8）。数だけを比べる目安で、限界値が同じという意味ではない。測定値は載せず、判定は付けない。
+
+| DD の記録 | 飛行 | DD の項目 | 鍵 | SSID | LCC の題 | MISSION 欄の字面 | 適用の別 | 限界値の数の突合 | 根拠 |
+|---|---|---|---|---|---|---|---|---|---|
+| LCC-002 | STS-1 | cabin differential pressure/differential time (LCC redline) | K2 | ECL-04 | Orbiter Cabin Pressure Anomaly | 119,120,122-999 | Rev H 適用外 | — | ECL-04：Orbiter Cabin Pressure Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1067） |
+| LCC-010 | STS-27 | water spray boiler 2 ready signal / steam vent temperature | K2 | HYD-05 | Hydraulic System Water Spray Boiler Temperature Anomaly | STS-107,112-999 | Rev H 適用外 | — | HYD-05：Hydraulic System Water Spray Boiler Temperature Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=971） |
+| LCC-011 | STS-27 | ET nose-cone temperature | K2 | ET-01 | ET Nose Cone Temperature Anomaly | STS-104,105,107-999 | Rev H 適用外 | — | ET-01：ET Nose Cone Temperature Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=331） |
+| LCC-018 | STS-31 | APU-1 turbine speed (LCC) | K2 | APU-06 | APU Turbine Speed Anomaly | STS-107,114-999 | Rev H 適用外 | — | APU-06：APU Turbine Speed Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=903） |
+| LCC-019 | STS-31 | ice/frost on the ET/Orbiter 17-inch liquid hydrogen disconnect | K2 | MPS-48 | Orbiter/ET LH2 Disconnect Purge Anomaly | STS-116-120,122-999 | Rev H 適用外 | — | MPS-48：Orbiter/ET LH2 Disconnect Purge Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=625） |
+| LCC-022 | STS-33 | APU 3 test line temperature 1 (V46T0183A) | K2 | APU-14 | APU Fuel Test Line Temperature Anomaly | STS-107,114-999 | Rev H 適用外 | — | APU-14：APU Fuel Test Line Temperature Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=921） |
+| LCC-028 | STS-36 | SSME liquid oxygen engine inlet temperature, minimum limit during T-31… | K2 | MPS-25 | MPS LO2 Engine Inlet Temperature Anomaly | STS-114-999 | Rev H 適用外 | — | MPS-25：MPS LO2 Engine Inlet Temperature Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=563） |
+| LCC-044 | STS-47 | hydrogen concentration in aft compartment (LCC) | K2 | HAZ-03 | Aft Compartment Hydrogen Concentration Anomaly | STS-107,109-999 | Rev H 適用外 | — | HAZ-03：Aft Compartment Hydrogen Concentration Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1717） |
+| LCC-055 | STS-56 | MPS LH2 high-point bleed valve (PV22) closed position indication | K2 | MPS-12 | MPS LH2 High Point Bleed Valve Anomaly | STS-98,100,102,104,105,107-999 | Rev H 適用外 | — | MPS-12：MPS LH2 High Point Bleed Valve Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=531） |
+| LCC-060 | STS-58 | ET intertank oxygen concentration | K2 | HAZ-07 | ET Intertank Oxygen Concentration Anomaly | STS 115-999 | Rev H 適用外 | — | HAZ-07：ET Intertank Oxygen Concentration Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1731） |
+| LCC-065 | STS-67 | fuel cells 2 and 3 voltage vs LCC minimum performance curve | K2 | FCP-01 | Fuel Cell Performance Anomaly | STS-114-999 | Rev H 適用外 | — | FCP-01：Fuel Cell Performance Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=781） |
+| LCC-068 | STS-68 | SSME 3 HPOT discharge temperature A (LCC redline) | K2 | SSME-25 | SSME HPOT Discharge Temperature Qualification Anomaly | STS-104,105,107-999 | Rev H 適用外 | — | SSME-25：SSME HPOT Discharge Temperature Qualification Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=455） |
+| LCC-069 | STS-70 | ET range safety system (RSS) receiver signal strength (LCC) | K2 | BRSS-15 | SRB Range Safety System Receiver Signal Strength Anomaly | STS-119,120,122-999 | Rev H 適用外 | — | BRSS-15：SRB Range Safety System Receiver Signal Strength Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=255） |
+| LCC-072 | STS-80 | Orbiter aft compartment gaseous hydrogen concentration | K2 | HAZ-03 | Aft Compartment Hydrogen Concentration Anomaly | STS-107,109-999 | Rev H 適用外 | — | HAZ-03：Aft Compartment Hydrogen Concentration Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1717） |
+| LCC-087 | STS-114 | ET LH2 ECO sensor 2 indication (LCC MPS-22) | K1 | MPS-22 | MPS LH2 Low Level Sensor Anomaly | STS 116-120,122-999 | Rev H 適用外 | — | MPS-22：MPS LH2 Low Level Sensor Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=553） |
+| LCC-088 | STS-115 | ET LH2 ECO sensor 3 (LCC MPS-22) | K1 | MPS-22 | MPS LH2 Low Level Sensor Anomaly | STS 116-120,122-999 | Rev H 適用外 | — | MPS-22：MPS LH2 Low Level Sensor Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=553） |
+| LCC-092 | STS-118 | ICE-01 (TPS crack at Xt 1973 on LO2 feedline inboard base closeout) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+| LCC-095 | STS-119 | LCC ICE-01 (debris: bat on the ET LH2 tank acreage foam) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+| LCC-096 | STS-120 | ice at the LH2 umbilical pyrotechnic canister closeout (LCC ICE-01) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+| LCC-102 | STS-128 | ice at the LH2 T-0 umbilical (LCC ICE-01) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+| LCC-103 | STS-128 | LH2 inboard fill-and-drain valve (PV12) closed indication (LCC MPS-04) | K1 | MPS-04 | MPS LH2 Inboard Fill and Drain Valve Position/Power Indicati… | STS-115-999 | 範囲内 | 数が無い | MPS-04：MPS LH2 Inboard Fill and Drain Valve Position/Power Indication Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=511） |
+| LCC-104 | STS-128 | ice at the LH2 T-0 umbilical (LCC ICE-01) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+| LCC-107 | STS-132 | LCC ICE-01 (LH2 diagonal strut base closeout TPS crack) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+| LCC-110 | STS-134 | APU 1 Fuel Test Line temperature (APU-14 LCC minimum) | K1 | APU-14 | APU Fuel Test Line Temperature Anomaly | STS-107,114-999 | 範囲内 | 現れる | APU-14：APU Fuel Test Line Temperature Anomaly（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=921） |
+| LCC-111 | STS-134 | LCC ICE-01 (RTV debris item on the ET crossbeam) | K1 | ICE-01 | Pre-Launch Debris and ET TPS Damage/Defects | STS-114-999 | 範囲内 | 数が無い | ICE-01：Pre-Launch Debris and ET TPS Damage/Defects（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=1977） |
+
+## 8. WEA-01 の数値つき規則
 
 WEA-01（Change 056、PDF 頁 81〜96）の §1.1〜§1.4 のうち、数と単位を持つ規則の行 57（§1.4 は 45）。条項は本文の番号（A・1・a・1)・a)）をつないだもの。気温の表（1.1A）は風速の区分ごとの行として含め、日射の表（1.1B）・再回復温度アルゴリズム・根拠の文は含めない。
 
@@ -875,7 +908,7 @@ WEA-01（Change 056、PDF 頁 81〜96）の §1.1〜§1.4 のうち、数と単�
 | LWR-056 | 1.4.H.2.a | 91 | 10 NM | All clouds within 10 NM of the flight path are transparent; -or- | WEA-01 1.4.H.2.a：All clouds within 10 NM of the flight path are transparent; -or-（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=91） |
 | LWR-057 | 1.4.H.2.b | 91 | 10 NM・5 °C・-10 °C・3 時間 | All nontransparent clouds within 10 NM of the flight path have cloud tops below the +5 degrees C level and hav… | WEA-01 1.4.H.2.b：All nontransparent clouds within 10 NM of the flight path have cloud tops below the +5 deg（出典: https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=91） |
 
-## 8. 2010 の雷の基準と WEA-01 §1.4 の数・単位の対
+## 9. 2010 の雷の基準と WEA-01 §1.4 の数・単位の対
 
 SSD-WXC-ORB-001 の2010年の雷の数える記録 79 件それぞれの（数・単位）が、WEA-01 §1.4 の数値つき規則に同じ数・単位で現れるか。現れる 73・現れない 6。現れる規則の ID は WEA-01 §1.4 のうち同じ数・単位を持つもの。**同じ数・単位が現れることは、同じ規則であることを意味しない**（条項どうしの対応は取っていない）。
 
@@ -961,15 +994,15 @@ SSD-WXC-ORB-001 の2010年の雷の数える記録 79 件それぞれの（数�
 | WXC-265 | G417.19(b) | -15 °C | ある | LWR-052 |
 | WXC-266 | G417.21(a) | 60 分 | ある | LWR-053 |
 
-## 9. 図
+## 10. 図
 
-図319〜321：図319 は LCC 本体の節ごとの項目の件数の表、図320 は WEA-01 の数値つき規則の表、図321 は2010年の雷の基準と WEA-01 §1.4 の（数・単位）の対の表である。
+図319〜321・325：図319 は LCC 本体の節ごとの項目の件数の表、図320 は WEA-01 の数値つき規則の表、図321 は2010年の雷の基準と WEA-01 §1.4 の（数・単位）の対の表、図325 は Mission Report の LCC 違反の記録と LCC の項目（SSID）の結びの表（Rev. DO。ユーザーが条件を 25 件に下げて作った）である。
 
-## 10. SysML v2 テキスト
+## 11. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-LCO-ORB-001.sysml](../SysML/SSD-LCO-ORB-001.sysml) に示す。節 59・項目 699（数える 479・境界 220）・天候の規則 57 から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。測定値・Mission Report の記録は持たない。
+同じ内容を SysML v2 のテキスト [SysML/SSD-LCO-ORB-001.sysml](../SysML/SSD-LCO-ORB-001.sysml) に示す。節 59・項目 699（数える 479・境界 220）・天候の規則 57・LCC の記録との結び 25 から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。測定値・Mission Report の測定値は持たない。
 
-## 11. 注記（出典間の相違・構成変更）
+## 12. 注記（出典間の相違・構成変更）
 
 > **注記** 範囲・取れなかった値・本書の判断：本書は LCC 本体（NSTS 16007 Rev H、2008-10-06）の項目（SSID）の索引と、天候の規則（WEA-01）の数値つき規則を並べたもの。値は本文のまま（換算しない）。**判定・評価は付けない**。
 
@@ -979,7 +1012,9 @@ SSD-WXC-ORB-001 の2010年の雷の数える記録 79 件それぞれの（数�
 
 > **注記** 範囲・取れなかった値・本書の判断：**版**：WEA-01 は本体では Change 056（MISSION: STS-114-999）。別冊 sv_lcc_weather は Change 109（STS-129-999）で OCR が荒いので正本にしない。項目ごとの適用範囲（STS-98,100,102,104,105,107-999 など）は本体の見出しのとおりで、Rev H は2008〜09年の版なので、それより前の飛行の LCC は本書の値と違いうる。
 
-> **注記** 範囲・取れなかった値・本書の判断：**Mission Report の LCC 違反の記録（SSD-LCC-ORB-001）との結び（R-B）は表を作らない**：数える 61 件のうち、LCC の SSID に結べたのは 25 件（SSID の綴りが本文にある 11・題の語の80%以上が重なる 14）、複数の候補 8・結べない 28。採用の条件（結べた 30件以上。結果を見る前に決めた）に届かなかったので、規則どおり結びの表と限界値の数の突合は作らない。無作為10件（seed 11）の目の検査は10件が本文と合った。結べない主な理由は、DD の項目が機体の計測の名前で、LCC の題の語と重ならないこと（測定番号を鍵に足しても数える61件のうち本文に測定番号があるのは2件）。
+> **注記** 範囲・取れなかった値・本書の判断：**Mission Report の LCC 違反の記録（SSD-LCC-ORB-001）との結び（R-B）の表（図325）は、事前の条件が未達のまま、ユーザーが条件を下げて作った**：数える 61 件のうち、LCC の SSID に結べたのは 25 件（SSID の綴りが本文にある K1 11・題の語の80%以上が重なる K2 14）、複数の候補 8・結べない 28。採用の条件は事前（結果を見る前）に『結べた 30件以上』と決め、結果の 25 件は未達だったので Rev. DL では結びの表を作らなかった。ユーザーは結果を見たうえで 2026-11-10 に条件を 25 件に下げた（Rev. DO）。25 ≥ 25 で境界ちょうどであり、**事前の条件を満たしたのではない**。結び直しはしていない（鍵の追加・同義語の表なし）。無作為10件（seed 11）の目の検査は10件が本文と合った。複数の候補 8 件と結べない 28 件は表に載せない。
+
+> **注記** 範囲・取れなかった値・本書の判断：**適用の別と限界値の数の突合（PLAN_DO R-DO-3・4・10・11）**：結べた 25 件のうち、DD の記録の飛行が LCC の頁の MISSION 欄の字面に入る『範囲内』は 9 件、入らない『Rev H 適用外』は 16 件（読めない『比べられない』0 件）。**『範囲内』は MISSION 欄の字面に飛行番号が入るという意味しかなく**、Rev H（2008-10-06）より前に飛んだ飛行（範囲内の STS-118・120）も、後に飛んだ飛行（STS-119・128・132・134）も含む。その飛行の時点で同じ値が有効だったかは分からない。範囲内の記録だけ、DD の限界の文の数が、その SSID の測定表の MIN／MAX の数のどれかと同じ数で現れるかを示した（現れる 1・現れない 0・数が無い 8。数が無い＝限界の文に数が無いか、測定表に数に読める MIN／MAX が無い）。数だけを比べ単位は比べない目安で、偶然の一致を含みうる。限界値が同じという意味ではない。**測定値（Mission Report の測定値）は載せず、判定（超えた・満たした 等）は付けない**。
 
 > **注記** 範囲・取れなかった値・本書の判断：**天候（R-D）**：WEA-01 §1.1〜§1.4 の数値つき規則 57（§1.4 は 45）を条項つきで取った。DE（SSD-WXC-ORB-001）の2010年の雷の数える記録 79 件の（数・単位）のうち、WEA-01 §1.4 に同じ数・単位が現れるのは 73 件。現れない 6 件は距離の帯の端（3・0 NM）。WEA-01 §1.4 にあって DE の2010年の記録に無い（数・単位）は 2 NM・33 dBZ-kft。**条項どうしの1対1の対応は取っていない**（同じ数・単位が現れることは、同じ規則であることを意味しない）。
 
@@ -989,7 +1024,7 @@ SSD-WXC-ORB-001 の2010年の雷の数える記録 79 件それぞれの（数�
 
 > **注記** 範囲・取れなかった値・本書の判断：WEA-01 のうち、気温の表（Table 1.1A。風速の区分7行×相対湿度5区分の最低外気温）は風速の区分ごとの行として含める。日射の表（Table 1.1B）、再回復温度アルゴリズム（RTA）の説明と使い方、冒頭の適用の時間帯（T-6 時間〜T-5 分など）、気温・風・湿度の測定の導入文、根拠（Rationale）の文は、規則の限界ではないので数値つき規則の行には入れていない（パーサーの修正。PLAN_DL §1c）。地上風の限界は GSE-24（LCC GSE 節。数える項目に含む）にある。
 
-## 12. 参考文献
+## 13. 参考文献
 
 1. NSTS 16007 Launch Commit Criteria and Background, Rev H（2008-10-06）本体（ibiblio Countdown/LCC/。archive.org の GandalfDDI と同じバイト列）（2264頁、3,708,088 バイト。テキスト層あり。外部資料の調査 task/sources_survey.md のおすすめで取得 2026-11-10。原本は Document/Done/sv_lcc16007.pdf） （PDF p139） — https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=139
 2. NSTS 16007 Launch Commit Criteria and Background, Rev H（2008-10-06）本体（ibiblio Countdown/LCC/。archive.org の GandalfDDI と同じバイト列）（2264頁、3,708,088 バイト。テキスト層あり。外部資料の調査 task/sources_survey.md のおすすめで取得 2026-11-10。原本は Document/Done/sv_lcc16007.pdf） （PDF p141） — https://www.ibiblio.org/apollo/Shuttle/Countdown/LCC/Shuttle%20Launch%20Commit%20Criteria%20and%20Background.pdf#page=141
@@ -1701,8 +1736,9 @@ SSD-WXC-ORB-001 の2010年の雷の数える記録 79 件それぞれの（数�
 708. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
 709. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
 
-## 13. 変更履歴
+## 14. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-11-10 | 初版作成（LCC 原典：SSID 699〔数える 479・境界 220〕、WEA-01 の数値つき規則 57、2010 の雷との（数・単位）の対 73/79、Mission Report の LCC 違反の記録との結びは 25/61 で採用の条件に届かず表を作らない、図319〜321、SysML v2 テキスト） |
+| Rev. A | 2026-11-10 | Mission Report の LCC 違反の記録と LCC の SSID の結びの表（結べた 25件。図325）を足した。結びの条件〔結べた 30件以上〕は事前に未達だったが、ユーザーが結果を見たあとに 25 件に下げた（事前の条件を満たしたのではない）。適用の別（範囲内 9・Rev H 適用外 16）と限界値の数の突合（範囲内だけ。現れる 1・数が無い 8）つき。結び直しはしない。測定値は載せない（Rev. DO） |

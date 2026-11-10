@@ -1,6 +1,6 @@
 # 参照した公開資料の一覧
 
-説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 381件、引用している説明書は 358件です。
+説明書（`docs/*.md`・`html/docs/*.html`）が出典として引用している、インターネット上の公開資料の一覧です。文献は 382件、引用している説明書は 358件です。
 
 - 説明書の本文・表・「参考文献」の節にある URL を集め、頁の指定（`#page=N`、SCOM の末尾の `/N`）を除いて、文献ごとにまとめました。NTRS は、抄録のページと PDF を同じ文献として数えています。
 - 「引用箇所」は、説明書が引用している頁（URL）の種類の数です。どの頁を引用しているかは、各説明書の「参考文献」の節にあります。
@@ -13,7 +13,7 @@
 | 公開元 | 文献 | 引用箇所 |
 |---|---:|---:|
 | 1. ibiblio.org（Virtual AGC のスペースシャトル資料） | 156 | 3,356 |
-| 2. NASA Technical Reports Server（NTRS） | 125 | 1,491 |
+| 2. NASA Technical Reports Server（NTRS） | 126 | 1,493 |
 | 3. yumpu.com（SCOM の公開版） | 1 | 702 |
 | 4. Internet Archive | 1 | 647 |
 | 5. NASA（nasa.gov） | 11 | 337 |
@@ -58,7 +58,7 @@
 | 44. rogerpielkejr.blogspot.com | 1 | 1 |
 | 45. scribd.com | 1 | 1 |
 | 46. sebokwiki.org | 1 | 1 |
-| 計 | 381 | 6,664 |
+| 計 | 382 | 6,666 |
 
 ## 1. ibiblio.org（Virtual AGC のスペースシャトル資料）
 
@@ -317,359 +317,360 @@
 | 246 | JSC-CN-35774 Flynn-Evans, E.・Gregory, K.・Arsintescu, L.・Whitmire, A.「Evidence Report: Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload」（NASA HRP、2016年、82頁、967,704 バイト） | <https://ntrs.nasa.gov/api/citations/20160003864/downloads/20160003864.pdf> | 3 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
 | 247 | NTRS 19850008617 (N85-16926) Overview of STS Ground Operations/Orbiter Turnaround STS-1 through STS-7 (R. Schwartz、Rockwell International KSC、1985、8頁、2,700,119 バイト) | <https://ntrs.nasa.gov/api/citations/19850008617/downloads/19850008617.pdf> | 3 | [SSD-GND-ORB-001](docs/SSD-GND-ORB-001.md) |
 | 248 | Human Spaceflight Value Study: Was the Shuttle a Good Deal?（A. Prince, B. Carson、NASA MSFC Engineering Cost Office/CS50、2012-05、NTRS 20120014542、36頁のスライド、4,418,835 バイト。テキスト層は見出し・前提のみで、金額は図・表の画像〔p22・25・33・34〕でテキストに無い） | <https://ntrs.nasa.gov/api/citations/20120014542/downloads/20120014542.pdf> | 2 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
-| 249 | Independent Orbiter Assessment (IOA): Analysis of the orbital maneuvering system（NASA-CR-185554 / REPT-1.0-WP-VA86001-21。1046頁、37,774,436 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001603。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001603.pdf） | <https://ntrs.nasa.gov/api/citations/19900001603/downloads/19900001603.pdf> | 2 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 250 | JSC 28379 Medical Effects of Iodine: Proceedings of NASA/JSC Conference（McMonigal, K. A. 編、NASA JSC Medical Operations Branch、1998年3月、NTRS 20260005992 の墨消し版、89頁、9,389,713 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/20260005992/downloads/20260005992_Redacted.pdf> | 2 | [SSD-RQL-ECL-001](docs/SSD-RQL-ECL-001.md) |
-| 251 | JSC-CN-20639 McCluskey, R.「Correlation of Space Shuttle Landing Performance with Post-Flight Cardiovascular Dysfunction」（投稿原稿、2004年、10頁、3,766,909 バイト） | <https://ntrs.nasa.gov/api/citations/20100039484/downloads/20100039484.pdf> | 2 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
-| 252 | N94-11806（NTRS 19940007334） Stewart, D. F.（NASA 本部 Aerospace Medicine Office）「Medical Care Delivery in the U.S. Space Program」（International Telemedicine/Disaster Medicine Conference: Papers and Presentations、1991年、4頁、217,421 バイト） | <https://ntrs.nasa.gov/api/citations/19940007334/downloads/19940007334.pdf> | 2 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
-| 253 | NASA-CR-192771 Selvaduray, G.「The Properties of and Analytical Methods for Detection of LiOH and Li2CO3」（San Jose State University、1991-02-08、NTRS 19930016051、58頁、1,624,742 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19930016051/downloads/19930016051.pdf> | 2 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
-| 254 | NASA-TM-X-70252 所収 Kimzey, J. H.「Skylab Experiment M479 Zero Gravity Flammability」（Proceedings of the Third Space Processing Symposium: Skylab Results, Vol. 1、1974年6月、NTRS 19740021777、16頁、1,221,156 バイト） | <https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf> | 2 | [SSD-RQL-ECL-001](docs/SSD-RQL-ECL-001.md) |
-| 255 | Spacesuit Water Membrane Evaporator Integration with the ISS Extravehicular Mobility Unit（V. Margiott・R. Boyle、ICES-2014、NTRS 20140003403、6頁、280,153 バイト） | <https://ntrs.nasa.gov/api/citations/20140003403/downloads/20140003403.pdf> | 2 | [SSD-EMU-EVA-001](docs/SSD-EMU-EVA-001.md) |
-| 256 | Independent Orbiter Assessment (IOA): Analysis of the ascent thrust vector control actuator subsystem（NASA-CR-185579 / REPT-1.0-WP-VA86001-06。62頁、1,863,142 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001613。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001613.pdf） | <https://ntrs.nasa.gov/api/citations/19900001613/downloads/19900001613.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 257 | Independent Orbiter Assessment (IOA): Analysis of the auxiliary power unit（REPT-1.0-WP-VA86001-14 / NASA-CR-185568。350頁、10,646,364 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001615。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001615.pdf） | <https://ntrs.nasa.gov/api/citations/19900001615/downloads/19900001615.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 258 | Independent Orbiter Assessment (IOA): Analysis of the body flap subsystem（NASA-CR-185574 / REPT-1.0-WP-VA86001-05。70頁、2,009,578 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001614。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001614.pdf） | <https://ntrs.nasa.gov/api/citations/19900001614/downloads/19900001614.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 259 | Independent Orbiter Assessment (IOA): Analysis of the electrical power generation/fuel cell powerplant subsystem（NASA-CR-185561 / REPT-1.0-WP-VA86001-10。101頁、3,143,746 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001599。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001599.pdf） | <https://ntrs.nasa.gov/api/citations/19900001599/downloads/19900001599.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 260 | Independent Orbiter Assessment (IOA): Analysis of the elevon subsystem（NASA-CR-185576 / REPT-1.0-WP-VA86001-07。58頁、1,626,896 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001619。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001619.pdf） | <https://ntrs.nasa.gov/api/citations/19900001619/downloads/19900001619.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 261 | Independent Orbiter Assessment (IOA): Analysis of the guidance, navigation, and control subsystem（REPT-1.0-WP-VA86001-16 / NASA-CR-185555。190頁、5,862,580 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001604。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001604.pdf） | <https://ntrs.nasa.gov/api/citations/19900001604/downloads/19900001604.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 249 | Independent Orbiter Assessment (IOA): Analysis of the guidance, navigation, and control subsystem（REPT-1.0-WP-VA86001-16 / NASA-CR-185555。190頁、5,862,580 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001604。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001604.pdf） | <https://ntrs.nasa.gov/api/citations/19900001604/downloads/19900001604.pdf> | 2 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 250 | Independent Orbiter Assessment (IOA): Analysis of the orbital maneuvering system（NASA-CR-185554 / REPT-1.0-WP-VA86001-21。1046頁、37,774,436 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001603。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001603.pdf） | <https://ntrs.nasa.gov/api/citations/19900001603/downloads/19900001603.pdf> | 2 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 251 | JSC 28379 Medical Effects of Iodine: Proceedings of NASA/JSC Conference（McMonigal, K. A. 編、NASA JSC Medical Operations Branch、1998年3月、NTRS 20260005992 の墨消し版、89頁、9,389,713 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/20260005992/downloads/20260005992_Redacted.pdf> | 2 | [SSD-RQL-ECL-001](docs/SSD-RQL-ECL-001.md) |
+| 252 | JSC-CN-20639 McCluskey, R.「Correlation of Space Shuttle Landing Performance with Post-Flight Cardiovascular Dysfunction」（投稿原稿、2004年、10頁、3,766,909 バイト） | <https://ntrs.nasa.gov/api/citations/20100039484/downloads/20100039484.pdf> | 2 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
+| 253 | N94-11806（NTRS 19940007334） Stewart, D. F.（NASA 本部 Aerospace Medicine Office）「Medical Care Delivery in the U.S. Space Program」（International Telemedicine/Disaster Medicine Conference: Papers and Presentations、1991年、4頁、217,421 バイト） | <https://ntrs.nasa.gov/api/citations/19940007334/downloads/19940007334.pdf> | 2 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
+| 254 | NASA-CR-192771 Selvaduray, G.「The Properties of and Analytical Methods for Detection of LiOH and Li2CO3」（San Jose State University、1991-02-08、NTRS 19930016051、58頁、1,624,742 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19930016051/downloads/19930016051.pdf> | 2 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
+| 255 | NASA-TM-X-70252 所収 Kimzey, J. H.「Skylab Experiment M479 Zero Gravity Flammability」（Proceedings of the Third Space Processing Symposium: Skylab Results, Vol. 1、1974年6月、NTRS 19740021777、16頁、1,221,156 バイト） | <https://ntrs.nasa.gov/api/citations/19740021777/downloads/19740021777.pdf> | 2 | [SSD-RQL-ECL-001](docs/SSD-RQL-ECL-001.md) |
+| 256 | Spacesuit Water Membrane Evaporator Integration with the ISS Extravehicular Mobility Unit（V. Margiott・R. Boyle、ICES-2014、NTRS 20140003403、6頁、280,153 バイト） | <https://ntrs.nasa.gov/api/citations/20140003403/downloads/20140003403.pdf> | 2 | [SSD-EMU-EVA-001](docs/SSD-EMU-EVA-001.md) |
+| 257 | Independent Orbiter Assessment (IOA): Analysis of the ascent thrust vector control actuator subsystem（NASA-CR-185579 / REPT-1.0-WP-VA86001-06。62頁、1,863,142 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001613。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001613.pdf） | <https://ntrs.nasa.gov/api/citations/19900001613/downloads/19900001613.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 258 | Independent Orbiter Assessment (IOA): Analysis of the auxiliary power unit（REPT-1.0-WP-VA86001-14 / NASA-CR-185568。350頁、10,646,364 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001615。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001615.pdf） | <https://ntrs.nasa.gov/api/citations/19900001615/downloads/19900001615.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 259 | Independent Orbiter Assessment (IOA): Analysis of the body flap subsystem（NASA-CR-185574 / REPT-1.0-WP-VA86001-05。70頁、2,009,578 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001614。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001614.pdf） | <https://ntrs.nasa.gov/api/citations/19900001614/downloads/19900001614.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 260 | Independent Orbiter Assessment (IOA): Analysis of the electrical power generation/fuel cell powerplant subsystem（NASA-CR-185561 / REPT-1.0-WP-VA86001-10。101頁、3,143,746 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001599。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001599.pdf） | <https://ntrs.nasa.gov/api/citations/19900001599/downloads/19900001599.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 261 | Independent Orbiter Assessment (IOA): Analysis of the elevon subsystem（NASA-CR-185576 / REPT-1.0-WP-VA86001-07。58頁、1,626,896 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001619。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001619.pdf） | <https://ntrs.nasa.gov/api/citations/19900001619/downloads/19900001619.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
 | 262 | Independent Orbiter Assessment (IOA): Analysis of the instrumentation subsystem（NASA-CR-185571 / REPT-1.0-WP-VA86001-17。142頁、4,979,042 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001612。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001612.pdf） | <https://ntrs.nasa.gov/api/citations/19900001612/downloads/19900001612.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
 | 263 | Independent Orbiter Assessment (IOA): Analysis of the landing/deceleration subsystem（NASA-CR-185569 / REPT-1.0-WP-VA86001-25。332頁、11,273,846 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001627。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001627.pdf） | <https://ntrs.nasa.gov/api/citations/19900001627/downloads/19900001627.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
 | 264 | Independent Orbiter Assessment (IOA): Analysis of the reaction control system, volume 1（REPT-1.0-WP-VA86001-27-VOL-1 / NASA-CR-185532-VOL-1。796頁、26,361,105 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001622。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001622.pdf） | <https://ntrs.nasa.gov/api/citations/19900001622/downloads/19900001622.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
 | 265 | Independent Orbiter Assessment (IOA): Analysis of the rudder/speed brake subsystem（NASA-CR-185560 / REPT-1.0-WP-VA86001-04。76頁、2,288,859 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001600。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001600.pdf） | <https://ntrs.nasa.gov/api/citations/19900001600/downloads/19900001600.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
-| 266 | JSC-CN-24963 Wood, S. J.・Reschke, M. F.・Harm, D. L.・Paloski, W. H.・Bloomberg, J. J.「Which Way is Up? Lessons Learned from Space Shuttle Sensorimotor Research」（第83回 Aerospace Medical Association の抄録、2012年5月、1頁、13,665 バイト） | <https://ntrs.nasa.gov/api/citations/20110016709/downloads/20110016709.pdf> | 1 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
-| 267 | JSC-CN-32084 Conkin, J.・Feiveson, A. H.・Gernhardt, M. L.・Norcross, J. R.・Wessel, J. H.「Designing an Exploration Atmosphere Prebreathe Protocol」（抄録、2015年、NTRS 20140012830、2頁、20,147 バイト） | <https://ntrs.nasa.gov/api/citations/20140012830/downloads/20140012830.pdf> | 1 | [SSD-EPB-EVA-001](docs/SSD-EPB-EVA-001.md) |
-| 268 | NASA CP-2283 所収 Young, J. C. ほか「The Aerodynamic Challenges of the Design and Development of the Space Shuttle Orbiter」（1983年、NTRS 19850008600、55頁、20,207,086 バイト） | <https://ntrs.nasa.gov/api/citations/19850008600/downloads/19850008600.pdf> | 1 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md) |
-| 269 | NASA Technical Reports Server（NTRS） | <https://ntrs.nasa.gov/> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
-| 270 | NASA-CR-151591（SVHSER 7182）Rudy, K. M.「Flight Prototype CO2 and Humidity Control System」（Hamilton Standard、1977年9月、NTRS 19780007751、186頁、21,831,235 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19780007751/downloads/19780007751.pdf> | 1 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
-| 271 | NASA-CR-160317（LSI-ER-319-24）Marshall, R. D.・Ellis, G. S.・Schubert, F. H.・Wynveen, R. A.「Extended Duration Orbiter Study: CO2 Removal and Water Recovery」（Life Systems, Inc.、1979年5月、NTRS 19800002555、91頁、3,764,277 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19800002555/downloads/19800002555.pdf> | 1 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
-| 272 | NASA-TM-103604 Rodriguez, P. I.・Markovitch, R.「Space Station Freedom Seal Leakage Rate Analysis and Testing Summary: Air Leaks in Ambient Versus Vacuum Exit Conditions」（MSFC、1992年8月、NTRS 19930002961、24頁、722,481 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19930002961/downloads/19930002961.pdf> | 1 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
-| 273 | NASA-TM-107933 Lane, H. W.「Metabolic Energy Requirements for Space Flight」（JSC、Foundations of Space Biology and Medicine 第2巻8章の原稿、1992年、28頁、992,946 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19920018969/downloads/19920018969.pdf> | 1 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) |
-| 274 | NTRS 19930008781 Design of a Vibration Isolation System for a Cycle Ergometer to be Used Onboard the Space Shuttle（Pearson・Tait・Trevino、テキサス大学オースティン校、NASA/USRA の設計課題、JSC の担当者向け、1991年秋、154頁、4,135,815 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19930008781/downloads/19930008781.pdf> | 1 | [SSD-HRS-ORB-001](docs/SSD-HRS-ORB-001.md) |
-| 275 | NTRS 20080010663 Johnson-Throop, K. A.・Joe, J. C.・Follansbee, N. M.「Mission Medical Information System」（JSC、ポスター、2008年、1頁、116,346 バイト） | <https://ntrs.nasa.gov/api/citations/20080010663/downloads/20080010663.pdf> | 1 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) |
-| 276 | NTRS 20110016707 Moore, A. D.「Orbital Fitness: An Overview of Space Shuttle Cardiopulmonary Exercise Physiology Findings」（第83回 Aerospace Medical Association の抄録、2012年5月、1頁、13,158 バイト） | <https://ntrs.nasa.gov/api/citations/20110016707/downloads/20110016707.pdf> | 1 | [SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
-| 277 | NTRS 20120000409 Strayer, R. F. ほか「Characterization of Volume F Trash from the Three FY11 STS Missions: Trash Weights and Categorization and Microbial Characterization」（KSC、2011年、16頁、5,997,757 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/20120000409/downloads/20120000409.pdf> | 1 | [SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
-| 278 | NTRS 20130000763 Bristol, D.「An Analysis of Shuttle Crew Scheduling Violations」（Embry-Riddle Aeronautical University の修士の課題研究、著者は JSC の飛行計画部門の関係者、2012年12月、66頁、530,470 バイト） | <https://ntrs.nasa.gov/api/citations/20130000763/downloads/20130000763.pdf> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
-| 279 | NTRS 20130010899 Bopp, G.・Wear, M. L.・Lee, L. R.・Van Baalen, M.「The Lifetime Surveillance of Astronaut Health (LSAH) Project」（抄録、2013年、1頁、21,870 バイト） | <https://ntrs.nasa.gov/api/citations/20130010899/downloads/20130010899.pdf> | 1 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) |
-| 280 | Orbiter ECLSS support of Shuttle payloads（Jaax他、1974年。NTRS の抄録） | <https://ntrs.nasa.gov/citations/19740056375> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md) |
-| 281 | Putcha, L.「Pharmacotherapeutic Aspects of Space Medicine」（拡張抄録、NTRS 20050220667、2004年、2頁、182,305 バイト） | <https://ntrs.nasa.gov/api/citations/20050220667/downloads/20050220667.pdf> | 1 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
+| 266 | Independent Orbiter Assessment (IOA): Assessment of the auxiliary power unit（REPT-1.0-WP-VA88003-010 / NASA-CR-185580。448頁、10,940,044 バイト。OCR のテキスト層あり〔1〜2語1行で欄が崩れる〕。NTRS 19900001660。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001660.pdf） | <https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf> | 1 | [SSD-IOA-ORB-001](docs/SSD-IOA-ORB-001.md) |
+| 267 | JSC-CN-24963 Wood, S. J.・Reschke, M. F.・Harm, D. L.・Paloski, W. H.・Bloomberg, J. J.「Which Way is Up? Lessons Learned from Space Shuttle Sensorimotor Research」（第83回 Aerospace Medical Association の抄録、2012年5月、1頁、13,665 バイト） | <https://ntrs.nasa.gov/api/citations/20110016709/downloads/20110016709.pdf> | 1 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
+| 268 | JSC-CN-32084 Conkin, J.・Feiveson, A. H.・Gernhardt, M. L.・Norcross, J. R.・Wessel, J. H.「Designing an Exploration Atmosphere Prebreathe Protocol」（抄録、2015年、NTRS 20140012830、2頁、20,147 バイト） | <https://ntrs.nasa.gov/api/citations/20140012830/downloads/20140012830.pdf> | 1 | [SSD-EPB-EVA-001](docs/SSD-EPB-EVA-001.md) |
+| 269 | NASA CP-2283 所収 Young, J. C. ほか「The Aerodynamic Challenges of the Design and Development of the Space Shuttle Orbiter」（1983年、NTRS 19850008600、55頁、20,207,086 バイト） | <https://ntrs.nasa.gov/api/citations/19850008600/downloads/19850008600.pdf> | 1 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md) |
+| 270 | NASA Technical Reports Server（NTRS） | <https://ntrs.nasa.gov/> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
+| 271 | NASA-CR-151591（SVHSER 7182）Rudy, K. M.「Flight Prototype CO2 and Humidity Control System」（Hamilton Standard、1977年9月、NTRS 19780007751、186頁、21,831,235 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19780007751/downloads/19780007751.pdf> | 1 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
+| 272 | NASA-CR-160317（LSI-ER-319-24）Marshall, R. D.・Ellis, G. S.・Schubert, F. H.・Wynveen, R. A.「Extended Duration Orbiter Study: CO2 Removal and Water Recovery」（Life Systems, Inc.、1979年5月、NTRS 19800002555、91頁、3,764,277 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19800002555/downloads/19800002555.pdf> | 1 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
+| 273 | NASA-TM-103604 Rodriguez, P. I.・Markovitch, R.「Space Station Freedom Seal Leakage Rate Analysis and Testing Summary: Air Leaks in Ambient Versus Vacuum Exit Conditions」（MSFC、1992年8月、NTRS 19930002961、24頁、722,481 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19930002961/downloads/19930002961.pdf> | 1 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md) |
+| 274 | NASA-TM-107933 Lane, H. W.「Metabolic Energy Requirements for Space Flight」（JSC、Foundations of Space Biology and Medicine 第2巻8章の原稿、1992年、28頁、992,946 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19920018969/downloads/19920018969.pdf> | 1 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) |
+| 275 | NTRS 19930008781 Design of a Vibration Isolation System for a Cycle Ergometer to be Used Onboard the Space Shuttle（Pearson・Tait・Trevino、テキサス大学オースティン校、NASA/USRA の設計課題、JSC の担当者向け、1991年秋、154頁、4,135,815 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/19930008781/downloads/19930008781.pdf> | 1 | [SSD-HRS-ORB-001](docs/SSD-HRS-ORB-001.md) |
+| 276 | NTRS 20080010663 Johnson-Throop, K. A.・Joe, J. C.・Follansbee, N. M.「Mission Medical Information System」（JSC、ポスター、2008年、1頁、116,346 バイト） | <https://ntrs.nasa.gov/api/citations/20080010663/downloads/20080010663.pdf> | 1 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) |
+| 277 | NTRS 20110016707 Moore, A. D.「Orbital Fitness: An Overview of Space Shuttle Cardiopulmonary Exercise Physiology Findings」（第83回 Aerospace Medical Association の抄録、2012年5月、1頁、13,158 バイト） | <https://ntrs.nasa.gov/api/citations/20110016707/downloads/20110016707.pdf> | 1 | [SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
+| 278 | NTRS 20120000409 Strayer, R. F. ほか「Characterization of Volume F Trash from the Three FY11 STS Missions: Trash Weights and Categorization and Microbial Characterization」（KSC、2011年、16頁、5,997,757 バイト。OCR のテキスト層） | <https://ntrs.nasa.gov/api/citations/20120000409/downloads/20120000409.pdf> | 1 | [SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
+| 279 | NTRS 20130000763 Bristol, D.「An Analysis of Shuttle Crew Scheduling Violations」（Embry-Riddle Aeronautical University の修士の課題研究、著者は JSC の飛行計画部門の関係者、2012年12月、66頁、530,470 バイト） | <https://ntrs.nasa.gov/api/citations/20130000763/downloads/20130000763.pdf> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
+| 280 | NTRS 20130010899 Bopp, G.・Wear, M. L.・Lee, L. R.・Van Baalen, M.「The Lifetime Surveillance of Astronaut Health (LSAH) Project」（抄録、2013年、1頁、21,870 バイト） | <https://ntrs.nasa.gov/api/citations/20130010899/downloads/20130010899.pdf> | 1 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) |
+| 281 | Orbiter ECLSS support of Shuttle payloads（Jaax他、1974年。NTRS の抄録） | <https://ntrs.nasa.gov/citations/19740056375> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md) |
+| 282 | Putcha, L.「Pharmacotherapeutic Aspects of Space Medicine」（拡張抄録、NTRS 20050220667、2004年、2頁、182,305 バイト） | <https://ntrs.nasa.gov/api/citations/20050220667/downloads/20050220667.pdf> | 1 | [SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
 
 ## 3. yumpu.com（SCOM の公開版）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 282 | Shuttle Crew Operations Manual（SCOM）USA007587 Rev. A CPN-1（OI-33、1161頁） | <https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual> | 702 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md) ほか（計 307件） |
+| 283 | Shuttle Crew Operations Manual（SCOM）USA007587 Rev. A CPN-1（OI-33、1161頁） | <https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual> | 702 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md) ほか（計 307件） |
 
 ## 4. Internet Archive
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 283 | NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf> | 647 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md) ほか（計 295件） |
+| 284 | NSTS-12820 Space Shuttle Operational Flight Rules Vol. A（2002、2214頁） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf> | 647 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ANA-ORB-001](docs/SSD-ANA-ORB-001.md)・[SSD-APU-REF-001](docs/SSD-APU-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md) ほか（計 295件） |
 
 ## 5. NASA（nasa.gov）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 284 | NASA-STD-3001 Volume 2 Revision F NASA Spaceflight Human-System Standard Volume 2: Human Factors, Habitability, and Environmental Health（2026-07-14 承認、398頁、6,880,753 バイト） | <https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf> | 206 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.md)・[SSD-EPB-EVA-001](docs/SSD-EPB-EVA-001.md)・[SSD-EXP-ORB-001](docs/SSD-EXP-ORB-001.md)・[SSD-HEA-ORB-001](docs/SSD-HEA-ORB-001.md)・[SSD-HRS-ORB-001](docs/SSD-HRS-ORB-001.md) ほか（計 10件） |
-| 285 | NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf> | 18 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-EGR-ORB-001](docs/SSD-EGR-ORB-001.md)・[SSD-EPB-EVA-001](docs/SSD-EPB-EVA-001.md)・[SSD-EXP-ORB-001](docs/SSD-EXP-ORB-001.md)・[SSD-HRS-ORB-001](docs/SSD-HRS-ORB-001.md)・[SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) ほか（計 8件） |
-| 286 | NASA TM-58259 Verification of an altitude decompression sickness protocol for Shuttle operations utilizing a 10.2 psi pressure stage（Waligora他、1984年） | <https://www.nasa.gov/wp-content/uploads/2023/03/prebreathe-library-summary-of-contents.pdf> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-OPS-001](docs/SSD-FD-ECL-PCS-OPS-001.md) ほか（計 7件） |
-| 287 | NASA/TP-2011-216147 Preventing Decompression Sickness Over Three Decades of Extravehicular Activity（Conkin、2011年） | <https://www.nasa.gov/wp-content/uploads/2023/03/conkin-prebreathe-overview-tp216147-2011.pdf> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-OPS-001](docs/SSD-FD-ECL-PCS-OPS-001.md) ほか（計 7件） |
-| 288 | NASA/TP-2014-218556 Human Integration Design Processes（HIDP）（2014年9月、308頁、4,346,416 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-processes.pdf> | 26 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-HEA-ORB-001](docs/SSD-HEA-ORB-001.md)・[SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md)・[SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.md)・[SSD-TSK-ORB-001](docs/SSD-TSK-ORB-001.md) |
-| 289 | NASA SP-4221 Heppenheimer, T. A.「The Space Shuttle Decision: NASA's Search for a Reusable Space Vehicle」（1999年、489頁、59,663,742 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf> | 36 | [SSD-DCN-ORB-001](docs/SSD-DCN-ORB-001.md)・[SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md)・[SSD-VAL-ORB-001](docs/SSD-VAL-ORB-001.md) |
-| 290 | NASA-STD-3001 Volume 1 Revision C NASA Spaceflight Human-System Standard Volume 1: Crew Health（2023-09-15 承認、86頁、1,660,855 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf> | 33 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md)・[SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.md)・[SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
-| 291 | NASA/SP-2016-6105 Rev 2 NASA Systems Engineering Handbook（2016、297頁、3,773,440 バイト） | <https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf> | 7 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-IBD-ORB-001](docs/SSD-IBD-ORB-001.md) |
-| 292 | NASA Facts FS-2005-06-018-KSC (Rev. 2006) Space Shuttle: Orbiter Processing From Landing To Launch (NASA KSC、2006、8頁、4,804,696 バイト) | <https://www.nasa.gov/sites/default/files/167429main_OrbiterProcessing08.pdf> | 6 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GND-ORB-001](docs/SSD-GND-ORB-001.md) |
-| 293 | NASA SP-2010-3409「Wings in Orbit」3章（53〜73頁、23頁、8,439,919 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf> | 2 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md)・[SSD-VER-SYS-001](docs/SSD-VER-SYS-001.md) |
-| 294 | NASA New Start Inflation Index（NNSI）FY25 tables to be utilized in FY26（draft）Excel（NASA OCFO PPC Corner。頁1＝シート Use of Index、頁2＝シート Inflation Table の値。原本は Document/Done/db_nasa_nnsi.xlsx、2026-11-04 取得。Rev. DB 担当 C） | <https://www.nasa.gov/wp-content/uploads/2025/12/2025-nasa-new-start-inflation-index-for-fy26-draft.xlsx> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 285 | NASA-STD-3001 Volume 2 Revision F NASA Spaceflight Human-System Standard Volume 2: Human Factors, Habitability, and Environmental Health（2026-07-14 承認、398頁、6,880,753 バイト） | <https://www.nasa.gov/wp-content/uploads/2025/05/nasa-std-3001-vol-2.pdf> | 206 | [SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-CIF-ORB-001](docs/SSD-CIF-ORB-001.md)・[SSD-EPB-EVA-001](docs/SSD-EPB-EVA-001.md)・[SSD-EXP-ORB-001](docs/SSD-EXP-ORB-001.md)・[SSD-HEA-ORB-001](docs/SSD-HEA-ORB-001.md)・[SSD-HRS-ORB-001](docs/SSD-HRS-ORB-001.md) ほか（計 10件） |
+| 286 | NASA/SP-2010-3407/REV1 Human Integration Design Handbook（HIDH）Revision 1（2014-06-05、1301頁、25,268,606 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-handbook-revision-1.pdf> | 18 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-EGR-ORB-001](docs/SSD-EGR-ORB-001.md)・[SSD-EPB-EVA-001](docs/SSD-EPB-EVA-001.md)・[SSD-EXP-ORB-001](docs/SSD-EXP-ORB-001.md)・[SSD-HRS-ORB-001](docs/SSD-HRS-ORB-001.md)・[SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md) ほか（計 8件） |
+| 287 | NASA TM-58259 Verification of an altitude decompression sickness protocol for Shuttle operations utilizing a 10.2 psi pressure stage（Waligora他、1984年） | <https://www.nasa.gov/wp-content/uploads/2023/03/prebreathe-library-summary-of-contents.pdf> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-OPS-001](docs/SSD-FD-ECL-PCS-OPS-001.md) ほか（計 7件） |
+| 288 | NASA/TP-2011-216147 Preventing Decompression Sickness Over Three Decades of Extravehicular Activity（Conkin、2011年） | <https://www.nasa.gov/wp-content/uploads/2023/03/conkin-prebreathe-overview-tp216147-2011.pdf> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-OPS-001](docs/SSD-FD-ECL-PCS-OPS-001.md) ほか（計 7件） |
+| 289 | NASA/TP-2014-218556 Human Integration Design Processes（HIDP）（2014年9月、308頁、4,346,416 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/03/human-integration-design-processes.pdf> | 26 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-HEA-ORB-001](docs/SSD-HEA-ORB-001.md)・[SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md)・[SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.md)・[SSD-TSK-ORB-001](docs/SSD-TSK-ORB-001.md) |
+| 290 | NASA SP-4221 Heppenheimer, T. A.「The Space Shuttle Decision: NASA's Search for a Reusable Space Vehicle」（1999年、489頁、59,663,742 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/sp-4221.pdf> | 36 | [SSD-DCN-ORB-001](docs/SSD-DCN-ORB-001.md)・[SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md)・[SSD-VAL-ORB-001](docs/SSD-VAL-ORB-001.md) |
+| 291 | NASA-STD-3001 Volume 1 Revision C NASA Spaceflight Human-System Standard Volume 1: Crew Health（2023-09-15 承認、86頁、1,660,855 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/11/nasa-std-3001-vol-1-rev-c-with-signature.pdf> | 33 | [SSD-HSI-SYS-001](docs/SSD-HSI-SYS-001.md)・[SSD-HVM-SYS-001](docs/SSD-HVM-SYS-001.md)・[SSD-MED-ORB-001](docs/SSD-MED-ORB-001.md) |
+| 292 | NASA/SP-2016-6105 Rev 2 NASA Systems Engineering Handbook（2016、297頁、3,773,440 バイト） | <https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf> | 7 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-IBD-ORB-001](docs/SSD-IBD-ORB-001.md) |
+| 293 | NASA Facts FS-2005-06-018-KSC (Rev. 2006) Space Shuttle: Orbiter Processing From Landing To Launch (NASA KSC、2006、8頁、4,804,696 バイト) | <https://www.nasa.gov/sites/default/files/167429main_OrbiterProcessing08.pdf> | 6 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GND-ORB-001](docs/SSD-GND-ORB-001.md) |
+| 294 | NASA SP-2010-3409「Wings in Orbit」3章（53〜73頁、23頁、8,439,919 バイト） | <https://www.nasa.gov/wp-content/uploads/2023/04/wings-ch3a-pgs53-73.pdf> | 2 | [SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md)・[SSD-VER-SYS-001](docs/SSD-VER-SYS-001.md) |
+| 295 | NASA New Start Inflation Index（NNSI）FY25 tables to be utilized in FY26（draft）Excel（NASA OCFO PPC Corner。頁1＝シート Use of Index、頁2＝シート Inflation Table の値。原本は Document/Done/db_nasa_nnsi.xlsx、2026-11-04 取得。Rev. DB 担当 C） | <https://www.nasa.gov/wp-content/uploads/2025/12/2025-nasa-new-start-inflation-index-for-fy26-draft.xlsx> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 6. standards.nasa.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 295 | NASA-HDBK-1009 NASA Systems Modeling Handbook for Systems Engineering（公開ページ。1009A は 2025-03-12） | <https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-MTY-ORB-001](docs/SSD-MTY-ORB-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
-| 296 | NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） | <https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf> | 24 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-MTY-ORB-001](docs/SSD-MTY-ORB-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
+| 296 | NASA-HDBK-1009 NASA Systems Modeling Handbook for Systems Engineering（公開ページ。1009A は 2025-03-12） | <https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-MTY-ORB-001](docs/SSD-MTY-ORB-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
+| 297 | NASA-HDBK-1009A NASA Systems Modeling Handbook for Systems Engineering（NASA、2025-03-12、88頁、8,147,085 バイト。テキスト層あり。公開ページ https://standards.nasa.gov/standard/NASA/NASA-HDBK-1009 が張る PDF。ページ自身が /system/files/tmp/ の URL を張っている） | <https://standards.nasa.gov/system/files/tmp/2025-03-12-NASA-HDBK-1009A.pdf> | 24 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-MTY-ORB-001](docs/SSD-MTY-ORB-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
 
 ## 7. Science.gov（NTRS の抄録の検索結果）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 297 | IOA報告（1987年・1988年） IOA: Analysis / Assessment of the life support and airlock support subsystems | <https://www.science.gov/topicpages/a/analysis+results+support> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-WCS-001](docs/SSD-FD-ECL-WCS-001.md) ほか（計 10件） |
-| 298 | NTRS抄録（1982年） Shuttle Orbiter Atmospheric Revitalization Pressure Control Subsystem（Walleshauser他） | <https://www.science.gov/topicpages/p/pressure+control+valves.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-MNF-001](docs/SSD-FD-ECL-PCS-MNF-001.md)・[SSD-FD-ECL-PCS-RLF-001](docs/SSD-FD-ECL-PCS-RLF-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
-| 299 | NTRS抄録（1974年） Design development and test: Two-gas atmosphere control subsystem（Jackson） | <https://www.science.gov/topicpages/a/atmosphere+total+pressure.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-MNF-001](docs/SSD-FD-ECL-PCS-MNF-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
-| 300 | NTRS抄録（1974年） Orbiter ECLSS support of Shuttle payloads（Jaax他） | <https://www.science.gov/topicpages/s/shuttle+orbiter+payload> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md)・[SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md) |
-| 301 | NTRS抄録（1972〜1976年） Shuttle flash evaporator prototype and system testing | <https://www.science.gov/topicpages/f/flash+evaporator+system> | 1 | [SSD-FD-TCS-FES-001](docs/SSD-FD-TCS-FES-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 302 | Science.gov（ADS抄録：TDRSS S-shuttle unique receiver equipment） | <https://www.science.gov/topicpages/k/ku+band.html> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
-| 303 | Science.gov（NTRS抄録：Electric auxiliary power unit for Shuttle evolution ほか） | <https://www.science.gov/topicpages/v/vehicle+auxiliary+power.html> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
-| 304 | Science.gov（NTRS抄録：Operational Use of GPS Navigation for Space Shuttle Entry） | <https://science.gov/topicpages/i/in-vehicle+navigation+units> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
+| 298 | IOA報告（1987年・1988年） IOA: Analysis / Assessment of the life support and airlock support subsystems | <https://www.science.gov/topicpages/a/analysis+results+support> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-WCS-001](docs/SSD-FD-ECL-WCS-001.md) ほか（計 10件） |
+| 299 | NTRS抄録（1982年） Shuttle Orbiter Atmospheric Revitalization Pressure Control Subsystem（Walleshauser他） | <https://www.science.gov/topicpages/p/pressure+control+valves.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-MNF-001](docs/SSD-FD-ECL-PCS-MNF-001.md)・[SSD-FD-ECL-PCS-RLF-001](docs/SSD-FD-ECL-PCS-RLF-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
+| 300 | NTRS抄録（1974年） Design development and test: Two-gas atmosphere control subsystem（Jackson） | <https://www.science.gov/topicpages/a/atmosphere+total+pressure.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-MNF-001](docs/SSD-FD-ECL-PCS-MNF-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
+| 301 | NTRS抄録（1974年） Orbiter ECLSS support of Shuttle payloads（Jaax他） | <https://www.science.gov/topicpages/s/shuttle+orbiter+payload> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md)・[SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md) |
+| 302 | NTRS抄録（1972〜1976年） Shuttle flash evaporator prototype and system testing | <https://www.science.gov/topicpages/f/flash+evaporator+system> | 1 | [SSD-FD-TCS-FES-001](docs/SSD-FD-TCS-FES-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 303 | Science.gov（ADS抄録：TDRSS S-shuttle unique receiver equipment） | <https://www.science.gov/topicpages/k/ku+band.html> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
+| 304 | Science.gov（NTRS抄録：Electric auxiliary power unit for Shuttle evolution ほか） | <https://www.science.gov/topicpages/v/vehicle+auxiliary+power.html> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
+| 305 | Science.gov（NTRS抄録：Operational Use of GPS Navigation for Space Shuttle Entry） | <https://science.gov/topicpages/i/in-vehicle+navigation+units> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
 
 ## 8. NASA KSC（NSTS 1988 News Reference Manual）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 305 | NSTS 1988 News Reference Manual – Environmental Control and Life Support System（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_eclss.html> | 1 | [SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md)・[SSD-FD-ECL-CAB-001](docs/SSD-FD-ECL-CAB-001.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-IRQ-ECL-001](docs/SSD-IRQ-ECL-001.md) |
-| 306 | NSTS 1988 News Reference Manual – Orbiter Communications（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-ovcomm.html> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
-| 307 | NSTS 1988 News Reference Manual – Orbiter Structure | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_coord.html> | 1 | [SSD-FD-TCS-RAD-001](docs/SSD-FD-TCS-RAD-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 308 | NSTS 1988 News Reference Manual 目次（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
-| 309 | NSTS 1988 News Reference Manual – Avionics Systems（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-av.html> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md) |
-| 310 | NSTS 1988 News Reference Manual – External Tank（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/et.html> | 1 | [SSD-FD-ET-001](docs/SSD-FD-ET-001.md) |
-| 311 | NSTS 1988 News Reference Manual – Lyndon B. Johnson Space Center（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-jsc.html> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
-| 312 | NSTS 1988 News Reference Manual – Space Shuttle Overview（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/stsover.html> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
+| 306 | NSTS 1988 News Reference Manual – Environmental Control and Life Support System（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_eclss.html> | 1 | [SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md)・[SSD-FD-ECL-CAB-001](docs/SSD-FD-ECL-CAB-001.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-IRQ-ECL-001](docs/SSD-IRQ-ECL-001.md) |
+| 307 | NSTS 1988 News Reference Manual – Orbiter Communications（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-ovcomm.html> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
+| 308 | NSTS 1988 News Reference Manual – Orbiter Structure | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts_coord.html> | 1 | [SSD-FD-TCS-RAD-001](docs/SSD-FD-TCS-RAD-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 309 | NSTS 1988 News Reference Manual 目次（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
+| 310 | NSTS 1988 News Reference Manual – Avionics Systems（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-av.html> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md) |
+| 311 | NSTS 1988 News Reference Manual – External Tank（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/et.html> | 1 | [SSD-FD-ET-001](docs/SSD-FD-ET-001.md) |
+| 312 | NSTS 1988 News Reference Manual – Lyndon B. Johnson Space Center（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/sts-jsc.html> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
+| 313 | NSTS 1988 News Reference Manual – Space Shuttle Overview（NASA KSC） | <https://science.ksc.nasa.gov/shuttle/technology/sts-newsref/stsover.html> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
 
 ## 9. NASA（www3.nasa.gov）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 313 | FS-2008-02-042-KSC NASA Facts「Orbiter Thermal Protection System」（Kennedy Space Center、2008年、8頁、5,191,471 バイト） | <https://www3.nasa.gov/centers/kennedy/pdf/167473main_TPS-08.pdf> | 6 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ETS-SYS-001](docs/SSD-ETS-SYS-001.md)・[SSD-FD-TCS-001](docs/SSD-FD-TCS-001.md)・[SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-REQ-TPS-001](docs/SSD-REQ-TPS-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) ほか（計 8件） |
-| 314 | FS-2007-05-017-KSC NASA Facts「Launch Complex 39, Pads A and B」（Kennedy Space Center、2007年、8頁、9,204,105 バイト） | <https://www3.nasa.gov/centers/kennedy/pdf/167416main_LC39-08.pdf> | 2 | [SSD-EGR-ORB-001](docs/SSD-EGR-ORB-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
+| 314 | FS-2008-02-042-KSC NASA Facts「Orbiter Thermal Protection System」（Kennedy Space Center、2008年、8頁、5,191,471 バイト） | <https://www3.nasa.gov/centers/kennedy/pdf/167473main_TPS-08.pdf> | 6 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ETS-SYS-001](docs/SSD-ETS-SYS-001.md)・[SSD-FD-TCS-001](docs/SSD-FD-TCS-001.md)・[SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-REQ-TPS-001](docs/SSD-REQ-TPS-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) ほか（計 8件） |
+| 315 | FS-2007-05-017-KSC NASA Facts「Launch Complex 39, Pads A and B」（Kennedy Space Center、2007年、8頁、9,204,105 バイト） | <https://www3.nasa.gov/centers/kennedy/pdf/167416main_LC39-08.pdf> | 2 | [SSD-EGR-ORB-001](docs/SSD-EGR-ORB-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md) |
 
 ## 10. web.archive.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 315 | CBO Pricing Options for the Space Shuttle（Congressional Budget Office、1985年3月 Special Study、65頁、1,929,454 バイト。テキスト層あり。cbo.gov は curl に 403 のため、Wayback Machine の id_ 形式の生の PDF を取得） | <https://web.archive.org/web/2021id_/https://www.cbo.gov/sites/default/files/99th-congress-1985-1986/reports/85-cbo-005.pdf> | 7 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 316 | CBO Pricing Options for the Space Shuttle（Congressional Budget Office、1985年3月 Special Study、65頁、1,929,454 バイト。テキスト層あり。cbo.gov は curl に 403 のため、Wayback Machine の id_ 形式の生の PDF を取得） | <https://web.archive.org/web/2021id_/https://www.cbo.gov/sites/default/files/99th-congress-1985-1986/reports/85-cbo-005.pdf> | 7 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 11. SAE Mobilus
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 316 | SAE 901292 The EDO Regenerable CO2 Removal System | <https://saemobilus.sae.org/content/901292> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-RCRS-001](docs/SSD-FD-ARS-RCRS-001.md)・[SSD-FD-ARS-RCRS-BED-001](docs/SSD-FD-ARS-RCRS-BED-001.md)・[SSD-FD-ARS-RCRS-CTL-001](docs/SSD-FD-ARS-RCRS-CTL-001.md)・[SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md) ほか（計 7件） |
-| 317 | SAE 932294 Development and Flight Status Report on the EDO RCRS | <https://saemobilus.sae.org/content/932294> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-RCRS-001](docs/SSD-FD-ARS-RCRS-001.md)・[SSD-FD-ARS-RCRS-OPS-001](docs/SSD-FD-ARS-RCRS-OPS-001.md)・[SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md)・[SSD-RCRS-REF-001](docs/SSD-RCRS-REF-001.md) |
-| 318 | SAE 2006-01-2014 Shuttle Potable Water Quality from STS-26 to STS-114 | <https://saemobilus.sae.org/content/2006-01-2014> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-H2O-FCW-001](docs/SSD-FD-ECL-H2O-FCW-001.md)・[SSD-FD-ECL-H2O-GAL-001](docs/SSD-FD-ECL-H2O-GAL-001.md)・[SSD-H2O-REF-001](docs/SSD-H2O-REF-001.md) |
-| 319 | SAE 921160 Zero Gravity Phase Separator Technologies – Past, Present and Future（Dean、1992年） | <https://saemobilus.sae.org/content/921160/> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-FD-ARS-THC-001](docs/SSD-FD-ARS-THC-001.md)・[SSD-FD-ARS-THC-HX-001](docs/SSD-FD-ARS-THC-HX-001.md)・[SSD-FD-ARS-THC-SEP-001](docs/SSD-FD-ARS-THC-SEP-001.md)・[SSD-THC-REF-001](docs/SSD-THC-REF-001.md) |
-| 320 | SAE 2003-01-2491 The Lithium Hydroxide Management Plan for Removing Carbon Dioxide from the Space Shuttle while Docked to the International Space Station（Williams他、2003年） | <https://saemobilus.sae.org/papers/lithium-hydroxide-management-plan-removing-carbon-dioxide-space-shuttle-docked-international-space-station-2003-01-2491> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md)・[SSD-FD-ARS-CO2-001](docs/SSD-FD-ARS-CO2-001.md)・[SSD-FD-CO2-STW-001](docs/SSD-FD-CO2-STW-001.md) |
-| 321 | SAE 861003 Shuttle Waste Management System Design Improvements and Flight Evaluation | <https://saemobilus.sae.org/content/861003> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-WCS-001](docs/SSD-FD-ECL-WCS-001.md)・[SSD-FD-ECL-WCS-URN-001](docs/SSD-FD-ECL-WCS-URN-001.md)・[SSD-WCS-REF-001](docs/SSD-WCS-REF-001.md) |
+| 317 | SAE 901292 The EDO Regenerable CO2 Removal System | <https://saemobilus.sae.org/content/901292> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-RCRS-001](docs/SSD-FD-ARS-RCRS-001.md)・[SSD-FD-ARS-RCRS-BED-001](docs/SSD-FD-ARS-RCRS-BED-001.md)・[SSD-FD-ARS-RCRS-CTL-001](docs/SSD-FD-ARS-RCRS-CTL-001.md)・[SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md) ほか（計 7件） |
+| 318 | SAE 932294 Development and Flight Status Report on the EDO RCRS | <https://saemobilus.sae.org/content/932294> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-RCRS-001](docs/SSD-FD-ARS-RCRS-001.md)・[SSD-FD-ARS-RCRS-OPS-001](docs/SSD-FD-ARS-RCRS-OPS-001.md)・[SSD-FD-ECL-ARS-001](docs/SSD-FD-ECL-ARS-001.md)・[SSD-RCRS-REF-001](docs/SSD-RCRS-REF-001.md) |
+| 319 | SAE 2006-01-2014 Shuttle Potable Water Quality from STS-26 to STS-114 | <https://saemobilus.sae.org/content/2006-01-2014> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-H2O-FCW-001](docs/SSD-FD-ECL-H2O-FCW-001.md)・[SSD-FD-ECL-H2O-GAL-001](docs/SSD-FD-ECL-H2O-GAL-001.md)・[SSD-H2O-REF-001](docs/SSD-H2O-REF-001.md) |
+| 320 | SAE 921160 Zero Gravity Phase Separator Technologies – Past, Present and Future（Dean、1992年） | <https://saemobilus.sae.org/content/921160/> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-FD-ARS-THC-001](docs/SSD-FD-ARS-THC-001.md)・[SSD-FD-ARS-THC-HX-001](docs/SSD-FD-ARS-THC-HX-001.md)・[SSD-FD-ARS-THC-SEP-001](docs/SSD-FD-ARS-THC-SEP-001.md)・[SSD-THC-REF-001](docs/SSD-THC-REF-001.md) |
+| 321 | SAE 2003-01-2491 The Lithium Hydroxide Management Plan for Removing Carbon Dioxide from the Space Shuttle while Docked to the International Space Station（Williams他、2003年） | <https://saemobilus.sae.org/papers/lithium-hydroxide-management-plan-removing-carbon-dioxide-space-shuttle-docked-international-space-station-2003-01-2491> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md)・[SSD-FD-ARS-CO2-001](docs/SSD-FD-ARS-CO2-001.md)・[SSD-FD-CO2-STW-001](docs/SSD-FD-CO2-STW-001.md) |
+| 322 | SAE 861003 Shuttle Waste Management System Design Improvements and Flight Evaluation | <https://saemobilus.sae.org/content/861003> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-WCS-001](docs/SSD-FD-ECL-WCS-001.md)・[SSD-FD-ECL-WCS-URN-001](docs/SSD-FD-ECL-WCS-URN-001.md)・[SSD-WCS-REF-001](docs/SSD-WCS-REF-001.md) |
 
 ## 12. NASA Human Space Flight（spaceflight.nasa.gov）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 322 | Shuttle Reference: Smoke Detection and Fire Suppression | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/cw/smokedet.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-DPS-MEDS-001](docs/SSD-FD-DPS-MEDS-001.md)・[SSD-FD-ECL-CAB-001](docs/SSD-FD-ECL-CAB-001.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-DET-001](docs/SSD-FD-ECL-FDS-DET-001.md) ほか（計 11件） |
-| 323 | Shuttle Reference: ECLSS Overview | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/overview.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md)・[SSD-FD-ECL-CAB-001](docs/SSD-FD-ECL-CAB-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-MNF-001](docs/SSD-FD-ECL-PCS-MNF-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 8件） |
-| 324 | Shuttle Reference: Active Thermal Control System | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/atcs.html> | 1 | [SSD-FD-TCS-001](docs/SSD-FD-TCS-001.md)・[SSD-FD-TCS-FCL-001](docs/SSD-FD-TCS-FCL-001.md)・[SSD-FD-TCS-FES-001](docs/SSD-FD-TCS-FES-001.md)・[SSD-FD-TCS-RAD-001](docs/SSD-FD-TCS-RAD-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 325 | Shuttle Reference: Crew Compartment Cabin Pressurization | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-O2S-001](docs/SSD-FD-ECL-PCS-O2S-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
-| 326 | Shuttle Reference: Orbiter Purge, Vent and Drain System | <https://spaceflight.nasa.gov/shuttle/reference/shutref/purge/> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 327 | NASA Human Space Flight – Shuttle Reference: GN&C | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/avionics/gnc/> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
+| 323 | Shuttle Reference: Smoke Detection and Fire Suppression | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/cw/smokedet.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-DPS-MEDS-001](docs/SSD-FD-DPS-MEDS-001.md)・[SSD-FD-ECL-CAB-001](docs/SSD-FD-ECL-CAB-001.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-DET-001](docs/SSD-FD-ECL-FDS-DET-001.md) ほか（計 11件） |
+| 324 | Shuttle Reference: ECLSS Overview | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/overview.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md)・[SSD-FD-ECL-CAB-001](docs/SSD-FD-ECL-CAB-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-MNF-001](docs/SSD-FD-ECL-PCS-MNF-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 8件） |
+| 325 | Shuttle Reference: Active Thermal Control System | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/atcs.html> | 1 | [SSD-FD-TCS-001](docs/SSD-FD-TCS-001.md)・[SSD-FD-TCS-FCL-001](docs/SSD-FD-TCS-FCL-001.md)・[SSD-FD-TCS-FES-001](docs/SSD-FD-TCS-FES-001.md)・[SSD-FD-TCS-RAD-001](docs/SSD-FD-TCS-RAD-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 326 | Shuttle Reference: Crew Compartment Cabin Pressurization | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/eclss/cabinpress.html> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-O2S-001](docs/SSD-FD-ECL-PCS-O2S-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
+| 327 | Shuttle Reference: Orbiter Purge, Vent and Drain System | <https://spaceflight.nasa.gov/shuttle/reference/shutref/purge/> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 328 | NASA Human Space Flight – Shuttle Reference: GN&C | <https://spaceflight.nasa.gov/shuttle/reference/shutref/orbiter/avionics/gnc/> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
 
 ## 13. spaceshuttleguide.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 328 | Space Shuttle Guide – Environmental Systems（訓練マニュアルの抜粋を含む） | <https://www.spaceshuttleguide.com/system/environmental%20Controls.htm> | 2 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-AVB-REF-001](docs/SSD-AVB-REF-001.md)・[SSD-CAC-REF-001](docs/SSD-CAC-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-AVB-001](docs/SSD-FD-ARS-AVB-001.md) ほか（計 33件） |
-| 329 | Space Shuttle Guide – Electrical System | <https://www.spaceshuttleguide.com/system/electrical.htm> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-CW-001](docs/SSD-FD-CW-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 13件） |
-| 330 | Space Shuttle Guide – Guidance, Navigation and Control | <https://www.spaceshuttleguide.com/system/navigation.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md)・[SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md) |
-| 331 | Space Shuttle Guide – Caution and Warning System | <https://spaceshuttleguide.com/system/caution_and_warning_system.htm> | 1 | [SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md) |
-| 332 | Space Shuttle Guide – Communications | <https://spaceshuttleguide.com/system/communications.htm> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
+| 329 | Space Shuttle Guide – Environmental Systems（訓練マニュアルの抜粋を含む） | <https://www.spaceshuttleguide.com/system/environmental%20Controls.htm> | 2 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-AVB-REF-001](docs/SSD-AVB-REF-001.md)・[SSD-CAC-REF-001](docs/SSD-CAC-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-AVB-001](docs/SSD-FD-ARS-AVB-001.md) ほか（計 33件） |
+| 330 | Space Shuttle Guide – Electrical System | <https://www.spaceshuttleguide.com/system/electrical.htm> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-CW-001](docs/SSD-FD-CW-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 13件） |
+| 331 | Space Shuttle Guide – Guidance, Navigation and Control | <https://www.spaceshuttleguide.com/system/navigation.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md)・[SSD-REQ-SYS-001](docs/SSD-REQ-SYS-001.md) |
+| 332 | Space Shuttle Guide – Caution and Warning System | <https://spaceshuttleguide.com/system/caution_and_warning_system.htm> | 1 | [SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md) |
+| 333 | Space Shuttle Guide – Communications | <https://spaceshuttleguide.com/system/communications.htm> | 1 | [SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md) |
 
 ## 14. GlobalSecurity.org（NSTS 1988 News Reference Manual の転載）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 333 | NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS | <https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-ARS-WCL-001](docs/SSD-FD-ARS-WCL-001.md)・[SSD-FD-ARS-WCL-AVL-001](docs/SSD-FD-ARS-WCL-AVL-001.md) ほか（計 44件） |
-| 334 | NSTS 1988 News Reference Manual（ECLSS章） | <https://www.globalsecurity.org/space/library/report/1988/sts_eclss.html> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-AVB-REF-001](docs/SSD-AVB-REF-001.md)・[SSD-CAC-REF-001](docs/SSD-CAC-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-AVB-001](docs/SSD-FD-ARS-AVB-001.md) ほか（計 23件） |
-| 335 | NSTS 1988 News Reference Manual – Airlock Support | <https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-ALS-LCG-001](docs/SSD-FD-ECL-ALS-LCG-001.md)・[SSD-FD-ECL-ALS-SCU-001](docs/SSD-FD-ECL-ALS-SCU-001.md) ほか（計 15件） |
-| 336 | NSTS 1988 News Reference Manual – Electrical Power System | <https://www.globalsecurity.org/space/library/report/1988/sts-eps.html> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-H2O-FCW-001](docs/SSD-FD-ECL-H2O-FCW-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EPS-001](docs/SSD-FD-EPS-001.md) ほか（計 14件） |
-| 337 | NSTS 1988 News Reference Manual – Orbital Maneuvering System | <https://www.globalsecurity.org/space/library/report/1988/sts-oms.html> | 1 | [SSD-FD-OMS-001](docs/SSD-FD-OMS-001.md)・[SSD-FD-RCS-001](docs/SSD-FD-RCS-001.md)・[SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 334 | NSTS 1988 News Reference Manual – Water Coolant Loop / ATCS / Supply and Waste Water / WCS | <https://www.globalsecurity.org/space/library/report/1988/sts-eclss-wcl.html> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-ARS-WCL-001](docs/SSD-FD-ARS-WCL-001.md)・[SSD-FD-ARS-WCL-AVL-001](docs/SSD-FD-ARS-WCL-AVL-001.md) ほか（計 44件） |
+| 335 | NSTS 1988 News Reference Manual（ECLSS章） | <https://www.globalsecurity.org/space/library/report/1988/sts_eclss.html> | 1 | [SSD-ARS-REF-001](docs/SSD-ARS-REF-001.md)・[SSD-AVB-REF-001](docs/SSD-AVB-REF-001.md)・[SSD-CAC-REF-001](docs/SSD-CAC-REF-001.md)・[SSD-CO2-REF-001](docs/SSD-CO2-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ARS-AVB-001](docs/SSD-FD-ARS-AVB-001.md) ほか（計 23件） |
+| 336 | NSTS 1988 News Reference Manual – Airlock Support | <https://www.globalsecurity.org/space/library/report/1988/sts-eclss-airlock.html> | 1 | [SSD-ALS-REF-001](docs/SSD-ALS-REF-001.md)・[SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-ALS-001](docs/SSD-FD-ECL-ALS-001.md)・[SSD-FD-ECL-ALS-DEP-001](docs/SSD-FD-ECL-ALS-DEP-001.md)・[SSD-FD-ECL-ALS-LCG-001](docs/SSD-FD-ECL-ALS-LCG-001.md)・[SSD-FD-ECL-ALS-SCU-001](docs/SSD-FD-ECL-ALS-SCU-001.md) ほか（計 15件） |
+| 337 | NSTS 1988 News Reference Manual – Electrical Power System | <https://www.globalsecurity.org/space/library/report/1988/sts-eps.html> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECL-H2O-001](docs/SSD-FD-ECL-H2O-001.md)・[SSD-FD-ECL-H2O-FCW-001](docs/SSD-FD-ECL-H2O-FCW-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EPS-001](docs/SSD-FD-EPS-001.md) ほか（計 14件） |
+| 338 | NSTS 1988 News Reference Manual – Orbital Maneuvering System | <https://www.globalsecurity.org/space/library/report/1988/sts-oms.html> | 1 | [SSD-FD-OMS-001](docs/SSD-FD-OMS-001.md)・[SSD-FD-RCS-001](docs/SSD-FD-RCS-001.md)・[SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
 
 ## 15. Wikipedia
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 338 | Wikipedia – Space Shuttle recovery convoy | <https://en.wikipedia.org/wiki/Space_Shuttle_recovery_convoy> | 1 | [SSD-FD-TCS-GSE-001](docs/SSD-FD-TCS-GSE-001.md)・[SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 339 | Wikipedia – Extended Duration Orbiter | <https://en.wikipedia.org/wiki/Extended_Duration_Orbiter> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-PRSD-001](docs/SSD-FD-EPS-PRSD-001.md) |
-| 340 | Wikipedia – RS-25 | <https://en.wikipedia.org/wiki/Space_Shuttle_main_engine> | 1 | [SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) |
-| 341 | Wikipedia – Space Shuttle Solid Rocket Booster | <https://en.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
+| 339 | Wikipedia – Space Shuttle recovery convoy | <https://en.wikipedia.org/wiki/Space_Shuttle_recovery_convoy> | 1 | [SSD-FD-TCS-GSE-001](docs/SSD-FD-TCS-GSE-001.md)・[SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 340 | Wikipedia – Extended Duration Orbiter | <https://en.wikipedia.org/wiki/Extended_Duration_Orbiter> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-PRSD-001](docs/SSD-FD-EPS-PRSD-001.md) |
+| 341 | Wikipedia – RS-25 | <https://en.wikipedia.org/wiki/Space_Shuttle_main_engine> | 1 | [SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) |
+| 342 | Wikipedia – Space Shuttle Solid Rocket Booster | <https://en.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
 
 ## 16. NASA Lessons Learned（llis.nasa.gov）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 342 | Lessons Learned: ECLSS Ground Coolant Systems（Katz、KSC、2011-06-29、32頁のスライド） | <https://llis.nasa.gov/llis_lib/pdf/1045995main_ECLSSGroundCoolantSystemLL.pdf> | 4 | [SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-TCS-GSE-001](docs/SSD-FD-TCS-GSE-001.md)・[SSD-FMX-ECL-001](docs/SSD-FMX-ECL-001.md)・[SSD-IRQ-ECL-001](docs/SSD-IRQ-ECL-001.md) ほか（計 7件） |
+| 343 | Lessons Learned: ECLSS Ground Coolant Systems（Katz、KSC、2011-06-29、32頁のスライド） | <https://llis.nasa.gov/llis_lib/pdf/1045995main_ECLSSGroundCoolantSystemLL.pdf> | 4 | [SSD-FD-ECL-ATCS-001](docs/SSD-FD-ECL-ATCS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-TCS-GSE-001](docs/SSD-FD-TCS-GSE-001.md)・[SSD-FMX-ECL-001](docs/SSD-FMX-ECL-001.md)・[SSD-IRQ-ECL-001](docs/SSD-IRQ-ECL-001.md) ほか（計 7件） |
 
 ## 17. omgsysml.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 343 | INCOSE MBSE Initiative: Survey of Candidate Model-Based Systems Engineering (MBSE) Methodologies（J. A. Estefan、JPL、Rev. B、2008-05-23、70頁、3,694,775 バイト。INCOSE-TD-2007-003-02。再利用の条件は文書に書かれていないので本文は写さない） | <https://www.omgsysml.org/MBSE_Methodology_Survey_RevB.pdf> | 4 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md) |
+| 344 | INCOSE MBSE Initiative: Survey of Candidate Model-Based Systems Engineering (MBSE) Methodologies（J. A. Estefan、JPL、Rev. B、2008-05-23、70頁、3,694,775 バイト。INCOSE-TD-2007-003-02。再利用の条件は文書に書かれていないので本文は写さない） | <https://www.omgsysml.org/MBSE_Methodology_Survey_RevB.pdf> | 4 | [SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md) |
 
 ## 18. 16streets.com（NSTS 1988 News Reference Manual の転載）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 344 | NSTS 1988 News Reference Manual – Orbiter Systems / TPS | <https://m.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts_sys.html> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
-| 345 | NSTS 1988 News Reference Manual – Guidance, Navigation and Control（16streets 転載） | <http://w.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts-gnnc.html> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
-| 346 | NSTS 1988 News Reference Manual – Solid Rocket Boosters（16streets 転載） | <https://16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/srb.html> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
+| 345 | NSTS 1988 News Reference Manual – Orbiter Systems / TPS | <https://m.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts_sys.html> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 346 | NSTS 1988 News Reference Manual – Guidance, Navigation and Control（16streets 転載） | <http://w.16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/sts-gnnc.html> | 1 | [SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md) |
+| 347 | NSTS 1988 News Reference Manual – Solid Rocket Boosters（16streets 転載） | <https://16streets.com/39-B/HTML%20Pages/shuttle/technology/sts-newsref/srb.html> | 1 | [SSD-FD-SRB-001](docs/SSD-FD-SRB-001.md) |
 
 ## 19. webarchive.library.unt.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 347 | CBO Reinventing NASA（Congressional Budget Office、1994年3月、62頁、7,791,825 バイト。テキスト層あり。UNT の Web アーカイブから取得） | <https://webarchive.library.unt.edu/eot2008/20090831003841id_/http://cbo.gov/ftpdocs/48xx/doc4893/doc20.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
-| 348 | GAO のシャトル運用上の課題の報告（1982年末か。表題頁にテキスト層が無く、MASAD-83-6 Issues Concerning the Future Operation of the Space Transportation System の可能性が高いが未確認。40頁、2,489,654 バイト。テキスト層は1語1行だったので words を行の位置で組み直して保存。UNT の Web アーカイブから取得） | <https://webarchive.library.unt.edu/eot2008/20081208043130id_/http://archive.gao.gov/f0102/120240.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
-| 349 | GAO/MASAD-82-15 NASA Must Reconsider Operations Pricing Policy To Compensate For Cost Growth On The Space Transportation System（GAO、1982-02-23、76頁、5,882,280 バイト。テキスト層は1語1行だったので、PyMuPDF の words を行の位置で組み直して保存。gao.gov は 403 のため UNT の Web アーカイブ〔id_ 形式の生の PDF〕を取得） | <https://webarchive.library.unt.edu/eot2008/20081208161345id_/http://archive.gao.gov/d41t14/117669.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 348 | CBO Reinventing NASA（Congressional Budget Office、1994年3月、62頁、7,791,825 バイト。テキスト層あり。UNT の Web アーカイブから取得） | <https://webarchive.library.unt.edu/eot2008/20090831003841id_/http://cbo.gov/ftpdocs/48xx/doc4893/doc20.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 349 | GAO のシャトル運用上の課題の報告（1982年末か。表題頁にテキスト層が無く、MASAD-83-6 Issues Concerning the Future Operation of the Space Transportation System の可能性が高いが未確認。40頁、2,489,654 バイト。テキスト層は1語1行だったので words を行の位置で組み直して保存。UNT の Web アーカイブから取得） | <https://webarchive.library.unt.edu/eot2008/20081208043130id_/http://archive.gao.gov/f0102/120240.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 350 | GAO/MASAD-82-15 NASA Must Reconsider Operations Pricing Policy To Compensate For Cost Growth On The Space Transportation System（GAO、1982-02-23、76頁、5,882,280 バイト。テキスト層は1語1行だったので、PyMuPDF の words を行の位置で組み直して保存。gao.gov は 403 のため UNT の Web アーカイブ〔id_ 形式の生の PDF〕を取得） | <https://webarchive.library.unt.edu/eot2008/20081208161345id_/http://archive.gao.gov/d41t14/117669.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 20. govinfo.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 350 | GAO/NSIAD-95-118 Space Shuttle: NASA Must Reduce Costs Further to Operate Within Future Projected Funds（GAO、1995年6月、48頁、362,592 バイト。テキスト層あり。govinfo の GAOREPORTS から取得。gao.gov は 403） | <https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-95-118/pdf/GAOREPORTS-NSIAD-95-118.pdf> | 2 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
-| 351 | GAO/NSIAD-99-177 Space Station: Cost to Operate After Assembly Is Uncertain（GAO、1999年8月、42頁、448,303 バイト。テキスト層あり。govinfo の GAOREPORTS から取得。gao.gov は 403） | <https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-99-177/pdf/GAOREPORTS-NSIAD-99-177.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 351 | GAO/NSIAD-95-118 Space Shuttle: NASA Must Reduce Costs Further to Operate Within Future Projected Funds（GAO、1995年6月、48頁、362,592 バイト。テキスト層あり。govinfo の GAOREPORTS から取得。gao.gov は 403） | <https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-95-118/pdf/GAOREPORTS-NSIAD-95-118.pdf> | 2 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 352 | GAO/NSIAD-99-177 Space Station: Cost to Operate After Assembly Is Uncertain（GAO、1999年8月、42頁、448,303 バイト。テキスト層あり。govinfo の GAOREPORTS から取得。gao.gov は 403） | <https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-99-177/pdf/GAOREPORTS-NSIAD-99-177.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 21. image-ppubs.uspto.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 352 | US特許 5228644 Solar powered system for a space vehicle | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5228644> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-PRSD-001](docs/SSD-FD-EPS-PRSD-001.md) |
-| 353 | US特許 9377481 Multi-parameter scattering sensor and methods（SAE 932291を引用） | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9377481> | 1 | [SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md) |
+| 353 | US特許 5228644 Solar powered system for a space vehicle | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5228644> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-PRSD-001](docs/SSD-FD-EPS-PRSD-001.md) |
+| 354 | US特許 9377481 Multi-parameter scattering sensor and methods（SAE 932291を引用） | <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9377481> | 1 | [SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md) |
 
 ## 22. klabs.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 354 | NASA SP-504 Section 4 – Avionics System Functions（klabs 転載） | <https://www.klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_02_avionics_system_functions.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md)・[SSD-FD-OMS-001](docs/SSD-FD-OMS-001.md)・[SSD-FD-RCS-001](docs/SSD-FD-RCS-001.md) |
-| 355 | NASA SP-504 Section 4 – Communications and Tracking（klabs 転載） | <https://klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_08_communications_tracking.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
+| 355 | NASA SP-504 Section 4 – Avionics System Functions（klabs 転載） | <https://www.klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_02_avionics_system_functions.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-GNC-001](docs/SSD-FD-GNC-001.md)・[SSD-FD-OMS-001](docs/SSD-FD-OMS-001.md)・[SSD-FD-RCS-001](docs/SSD-FD-RCS-001.md) |
+| 356 | NASA SP-504 Section 4 – Communications and Tracking（klabs 転載） | <https://klabs.org/DEI/Processor/shuttle/sp-504/section_4/section_4_08_communications_tracking.htm> | 1 | [SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
 
 ## 23. nasa-klass.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 356 | SCOM 2.9節（抜粋） Environmental Control and Life Support System（NASA-KLASS教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-N2S-001](docs/SSD-FD-ECL-PCS-N2S-001.md)・[SSD-FD-ECL-PCS-O2S-001](docs/SSD-FD-ECL-PCS-O2S-001.md)・[SSD-FD-ECL-PCS-RLF-001](docs/SSD-FD-ECL-PCS-RLF-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 7件） |
-| 357 | READING: ECLSS（NASA-KLASS 教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS.pdf> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) |
+| 357 | SCOM 2.9節（抜粋） Environmental Control and Life Support System（NASA-KLASS教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS-Additional/RDG_ECLSS-SubSys_Advanced.pdf> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-FD-ECL-PCS-N2S-001](docs/SSD-FD-ECL-PCS-N2S-001.md)・[SSD-FD-ECL-PCS-O2S-001](docs/SSD-FD-ECL-PCS-O2S-001.md)・[SSD-FD-ECL-PCS-RLF-001](docs/SSD-FD-ECL-PCS-RLF-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 7件） |
+| 358 | READING: ECLSS（NASA-KLASS 教材） | <http://www.nasa-klass.com/Curriculum/Get_Training%201/ECLSS/RDG_ECLSS.pdf> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) |
 
 ## 24. sciencepolicy.colorado.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 358 | R. A. Pielke Jr., Data on and methodology for calculating Space Shuttle programme costs（Space Policy 10(1)、1994-02、78-80頁、3頁、557,285 バイト。スキャンでテキスト層なし〔空のテキスト〕。金額は画像の目視のみで needle 不可） | <http://sciencepolicy.colorado.edu/admin/publication_files/1994.01.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
-| 359 | Roger Pielke Jr., Space Shuttle Costs（Prometheus ブログ、2005-02-10、HTML 1頁、29,809 バイト。HTTrack の複製。2003 年ドルの表〔1971-2003〕。本文を HTML から文字だけ抜いた1頁） | <https://sciencepolicy.colorado.edu/pro_archive/prometheus/index0999.html?p=3401> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 359 | R. A. Pielke Jr., Data on and methodology for calculating Space Shuttle programme costs（Space Policy 10(1)、1994-02、78-80頁、3頁、557,285 バイト。スキャンでテキスト層なし〔空のテキスト〕。金額は画像の目視のみで needle 不可） | <http://sciencepolicy.colorado.edu/admin/publication_files/1994.01.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 360 | Roger Pielke Jr., Space Shuttle Costs（Prometheus ブログ、2005-02-10、HTML 1頁、29,809 バイト。HTTrack の複製。2003 年ドルの表〔1971-2003〕。本文を HTML から文字だけ抜いた1頁） | <https://sciencepolicy.colorado.edu/pro_archive/prometheus/index0999.html?p=3401> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 25. nist.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 360 | Fire Protection in Manned Missions: Current and Planned（Collins、2001） | <https://www.nist.gov/system/files/documents/el/fire_research/R0200469.pdf> | 2 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-DET-001](docs/SSD-FD-ECL-FDS-DET-001.md)・[SSD-FD-ECL-FDS-OPS-001](docs/SSD-FD-ECL-FDS-OPS-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
+| 361 | Fire Protection in Manned Missions: Current and Planned（Collins、2001） | <https://www.nist.gov/system/files/documents/el/fire_research/R0200469.pdf> | 2 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-DET-001](docs/SSD-FD-ECL-FDS-DET-001.md)・[SSD-FD-ECL-FDS-OPS-001](docs/SSD-FD-ECL-FDS-OPS-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
 
 ## 26. adoptium.net
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 361 | Eclipse Temurin（OpenJDK）21 のリリース | <https://adoptium.net/temurin/releases/> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
+| 362 | Eclipse Temurin（OpenJDK）21 のリリース | <https://adoptium.net/temurin/releases/> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
 
 ## 27. airandspace.si.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 362 | NASM A20181683000 Blanket, Payload Bay, Space Shuttle Orbiter（スミソニアン） | <https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
+| 363 | NASM A20181683000 Blanket, Payload Bay, Space Shuttle Orbiter（スミソニアン） | <https://airandspace.si.edu/collection-objects/blanket-payload-bay-shuttle-orbiter/nasm_A20181683000> | 1 | [SSD-FD-TCS-PTC-001](docs/SSD-FD-TCS-PTC-001.md)・[SSD-RQL-SYS-001](docs/SSD-RQL-SYS-001.md)・[SSD-TCS-REF-001](docs/SSD-TCS-REF-001.md) |
 
 ## 28. american-spacecraft.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 363 | NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle | <https://www.american-spacecraft.org/documents/sp-407/chapter-3.html> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EPS-001](docs/SSD-FD-EPS-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md)・[SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) ほか（計 7件） |
+| 364 | NASA SP-407 Space Shuttle, Chapter 3 Space Shuttle Vehicle | <https://www.american-spacecraft.org/documents/sp-407/chapter-3.html> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md)・[SSD-FD-EPS-001](docs/SSD-FD-EPS-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md)・[SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) ほか（計 7件） |
 
 ## 29. anaconda.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 364 | conda-forge jupyter-sysml-kernel（SysML v2 Pilot Implementation の Jupyter カーネルと標準ライブラリ） | <https://anaconda.org/conda-forge/jupyter-sysml-kernel> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
+| 365 | conda-forge jupyter-sysml-kernel（SysML v2 Pilot Implementation の Jupyter カーネルと標準ライブラリ） | <https://anaconda.org/conda-forge/jupyter-sysml-kernel> | 1 | [SSD-MDL-SYS-001](docs/SSD-MDL-SYS-001.md) |
 
 ## 30. chemistry.beloit.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 365 | NASA Space Shuttle Fuel Cell Power Plants（2002） | <https://chemistry.beloit.edu/edetc/nanolab/fuelcell2/NASA%20Space%20Shuttle%20Fuel%20Cell%20Power%20Plants%20(2002> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-CW-001](docs/SSD-FD-CW-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 14件） |
+| 366 | NASA Space Shuttle Fuel Cell Power Plants（2002） | <https://chemistry.beloit.edu/edetc/nanolab/fuelcell2/NASA%20Space%20Shuttle%20Fuel%20Cell%20Power%20Plants%20(2002> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-APU-001](docs/SSD-FD-APU-001.md)・[SSD-FD-CT-001](docs/SSD-FD-CT-001.md)・[SSD-FD-CW-001](docs/SSD-FD-CW-001.md)・[SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-ECLSS-001](docs/SSD-FD-ECLSS-001.md) ほか（計 14件） |
 
 ## 31. core.ac.uk
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 366 | IOA報告（1986年） IOA: Analysis of the ARPCS | <https://core.ac.uk/works/24872612> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
+| 367 | IOA報告（1986年） IOA: Analysis of the ARPCS | <https://core.ac.uk/works/24872612> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-PCS-001](docs/SSD-FD-ECL-PCS-001.md)・[SSD-PCS-REF-001](docs/SSD-PCS-REF-001.md) |
 
 ## 32. data.bls.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 367 | BLS CPI-U All items, U.S. city average, not seasonally adjusted（系列 CUUR0000SA0、基準 1982-84=100、1963〜2011 年の月別と Annual 列。BLS Data Retrieval Tool の出力 HTML を1頁にしたもの、2026-11-03 取得。原本は Document/Done/db_bls_cpiu.html。Rev. DB 担当 C） | <https://data.bls.gov/pdq/SurveyOutputServlet?series_id=CUUR0000SA0&from_year=1963&to_year=2011&annualAveragesRequested=true> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 368 | BLS CPI-U All items, U.S. city average, not seasonally adjusted（系列 CUUR0000SA0、基準 1982-84=100、1963〜2011 年の月別と Annual 列。BLS Data Retrieval Tool の出力 HTML を1頁にしたもの、2026-11-03 取得。原本は Document/Done/db_bls_cpiu.html。Rev. DB 担当 C） | <https://data.bls.gov/pdq/SurveyOutputServlet?series_id=CUUR0000SA0&from_year=1963&to_year=2011&annualAveragesRequested=true> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 33. dl.acm.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 368 | The space shuttle primary computer system（Communications of the ACM, 1984） | <https://dl.acm.org/doi/pdf/10.1145/358234.358246> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
+| 369 | The space shuttle primary computer system（Communications of the ACM, 1984） | <https://dl.acm.org/doi/pdf/10.1145/358234.358246> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md)・[SSD-FD-EXT-001](docs/SSD-FD-EXT-001.md)・[SSD-FD-ORB-001](docs/SSD-FD-ORB-001.md) |
 
 ## 34. fireengineering.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 369 | 雑誌記事 Kennedy Space Center Fire Services（Fire Engineering） | <https://www.fireengineering.com/firefighting/kennedy-space-center-fire-services/> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-PFE-001](docs/SSD-FD-ECL-FDS-PFE-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
+| 370 | 雑誌記事 Kennedy Space Center Fire Services（Fire Engineering） | <https://www.fireengineering.com/firefighting/kennedy-space-center-fire-services/> | 1 | [SSD-ECLSS-REF-002](docs/SSD-ECLSS-REF-002.md)・[SSD-FD-ECL-FDS-001](docs/SSD-FD-ECL-FDS-001.md)・[SSD-FD-ECL-FDS-PFE-001](docs/SSD-FD-ECL-FDS-PFE-001.md)・[SSD-FDS-REF-001](docs/SSD-FDS-REF-001.md) |
 
 ## 35. gao.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 370 | nsiad-93-115 | <https://www.gao.gov/products/nsiad-93-115> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 371 | nsiad-93-115 | <https://www.gao.gov/products/nsiad-93-115> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 36. gao.justia.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 371 | GAO/NSIAD-93-115 Space Transportation: The Content and Uses of Shuttle Cost Estimates（GAO、1993-01-28、18頁、1,423,431 バイト。テキスト層あり〔OCR 由来の誤字あり〕。gao.gov は curl に 403 を返したため、Justia が置く GAO の全文 PDF を取得。GAO の公開ページは https://www.gao.gov/products/nsiad-93-115） | <http://gao.justia.com/national-aeronautics-and-space-administration/1993/1/space-transportation-nsiad-93-115/NSIAD-93-115-full-report.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 372 | GAO/NSIAD-93-115 Space Transportation: The Content and Uses of Shuttle Cost Estimates（GAO、1993-01-28、18頁、1,423,431 バイト。テキスト層あり〔OCR 由来の誤字あり〕。gao.gov は curl に 403 を返したため、Justia が置く GAO の全文 PDF を取得。GAO の公開ページは https://www.gao.gov/products/nsiad-93-115） | <http://gao.justia.com/national-aeronautics-and-space-administration/1993/1/space-transportation-nsiad-93-115/NSIAD-93-115-full-report.pdf> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 37. github.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 372 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CBA-ECL-001](docs/SSD-CBA-ECL-001.md) ほか（計 64件） |
+| 373 | SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） | <https://github.com/Systems-Modeling/SysML-v2-Release> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md)・[SSD-CBA-ECL-001](docs/SSD-CBA-ECL-001.md) ほか（計 64件） |
 
 ## 38. NASA 本部（hq.nasa.gov）
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 373 | NASA History – Computers in Spaceflight, Ch.4-3 | <https://www.hq.nasa.gov/office/pao/History/computers/Ch4-3.html> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md) |
+| 374 | NASA History – Computers in Spaceflight, Ch.4-3 | <https://www.hq.nasa.gov/office/pao/History/computers/Ch4-3.html> | 1 | [SSD-FD-DPS-001](docs/SSD-FD-DPS-001.md) |
 
 ## 39. incose.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 374 | Estefan, Survey of Model-Based Systems Engineering (MBSE) Methodologies（INCOSE MBSE Initiative、2008） | <https://www.incose.org/docs/default-source/default-document-library/final-04-modelbased-systems-engineering-for-mbse-initiative.pdf> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
+| 375 | Estefan, Survey of Model-Based Systems Engineering (MBSE) Methodologies（INCOSE MBSE Initiative、2008） | <https://www.incose.org/docs/default-source/default-document-library/final-04-modelbased-systems-engineering-for-mbse-initiative.pdf> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md) |
 
 ## 40. iso.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 375 | ISO/IEC/IEEE 42010:2022 Software, systems and enterprise — Architecture description | <https://www.iso.org/standard/74393.html> | 1 | [SSD-VPT-SYS-001](docs/SSD-VPT-SYS-001.md) |
+| 376 | ISO/IEC/IEEE 42010:2022 Software, systems and enterprise — Architecture description | <https://www.iso.org/standard/74393.html> | 1 | [SSD-VPT-SYS-001](docs/SSD-VPT-SYS-001.md) |
 
 ## 41. large.stanford.edu
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 376 | Space Transportation System Training Data – SSME Orientation（Stanford 転載） | <http://large.stanford.edu/courses/2011/ph240/nguyen1/docs/SSME_PRESENTATION.pdf> | 1 | [SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) |
+| 377 | Space Transportation System Training Data – SSME Orientation（Stanford 転載） | <http://large.stanford.edu/courses/2011/ph240/nguyen1/docs/SSME_PRESENTATION.pdf> | 1 | [SSD-FD-MPS-001](docs/SSD-FD-MPS-001.md) |
 
 ## 42. omg.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 377 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 66件） |
+| 378 | OMG Systems Modeling Language (SysML) Version 2.0 仕様 | <https://www.omg.org/spec/SysML/2.0> | 1 | [SSD-ACC-SYS-001](docs/SSD-ACC-SYS-001.md)・[SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-ALC-SYS-001](docs/SSD-ALC-SYS-001.md)・[SSD-ATM-ORB-001](docs/SSD-ATM-ORB-001.md)・[SSD-BEH-ORB-008](docs/SSD-BEH-ORB-008.md)・[SSD-BLK-SYS-001](docs/SSD-BLK-SYS-001.md) ほか（計 66件） |
 
 ## 43. osti.gov
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 378 | OSTI 347754 The NASA fuel cell upgrade program for the Space Shuttle Orbiter | <https://www.osti.gov/biblio/347754> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md) |
+| 379 | OSTI 347754 The NASA fuel cell upgrade program for the Space Shuttle Orbiter | <https://www.osti.gov/biblio/347754> | 1 | [SSD-EPS-REF-001](docs/SSD-EPS-REF-001.md)・[SSD-FD-EPS-FCP-001](docs/SSD-FD-EPS-FCP-001.md) |
 
 ## 44. rogerpielkejr.blogspot.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 379 | Roger Pielke Jr.'s Blog, Space Shuttle Costs: 1971-2011（2011-04-06、HTML 1頁、106,749 バイト。Nature 472:38〔2011、Pielke と Byerly〕の本文の抜粋と、2010 年ドルの表。Nature 本体は購読が要り取得できず） | <https://rogerpielkejr.blogspot.com/2011/04/space-shuttle-costs-1971-2011.html> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
+| 380 | Roger Pielke Jr.'s Blog, Space Shuttle Costs: 1971-2011（2011-04-06、HTML 1頁、106,749 バイト。Nature 472:38〔2011、Pielke と Byerly〕の本文の抜粋と、2010 年ドルの表。Nature 本体は購読が要り取得できず） | <https://rogerpielkejr.blogspot.com/2011/04/space-shuttle-costs-1971-2011.html> | 1 | [SSD-CST-ORB-001](docs/SSD-CST-ORB-001.md) |
 
 ## 45. scribd.com
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 380 | NASA Facts – Orbiter Thermal Protection System（Scribd 転載） | <https://www.scribd.com/doc/46376343/NASA-Facts-Orbiter-Thermal-Protection-System> | 1 | [SSD-FD-TPS-001](docs/SSD-FD-TPS-001.md) |
+| 381 | NASA Facts – Orbiter Thermal Protection System（Scribd 転載） | <https://www.scribd.com/doc/46376343/NASA-Facts-Orbiter-Thermal-Protection-System> | 1 | [SSD-FD-TPS-001](docs/SSD-FD-TPS-001.md) |
 
 ## 46. sebokwiki.org
 
 | № | 文献 | URL | 引用箇所 | 引用している文書 |
 |---:|---|---|---:|---|
-| 381 | SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） | <https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
+| 382 | SEBoK「Model-Based Systems Engineering (MBSE)」（Guide to the Systems Engineering Body of Knowledge v2.14、版 oldid=78221。ウィキの本文を取得した1頁。CC BY-NC-SA 3.0 なので本文は写さず、項目名と要点を自分の言葉で示す） | <https://sebokwiki.org/w/index.php?title=Model-Based_Systems_Engineering_(MBSE> | 1 | [SSD-ACR-SYS-001](docs/SSD-ACR-SYS-001.md)・[SSD-GRD-SYS-001](docs/SSD-GRD-SYS-001.md)・[SSD-MBS-SYS-001](docs/SSD-MBS-SYS-001.md)・[SSD-PLN-SYS-001](docs/SSD-PLN-SYS-001.md) |
 
 ## 取り込んだが、説明書では引用していない資料
 
@@ -690,7 +691,6 @@
 | NSTS 07700 Volume XIV Rev L Space Shuttle System Payload Accommodations（2001-05-29。archive.org の GandalfDDI。everyspec にも同じ版）（49頁、2,065,251 バイト。テキスト層あり。外部資料の調査 task/sources_survey.md のおすすめで取得 2026-11-10。原本は Document/Done/sv_nsts07700_xiv.pdf） | <https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/NSTS_07700L_%20Vol-XIV.pdf> |
 | NSTS-37410 STS-79 Space Shuttle Mission Report（JSC、1996年11月）（64頁、3,440,799 バイト。テキスト層あり。外部資料の調査 task/sources_survey.md のおすすめで取得 2026-11-10。原本は Document/Done/ms_sts79.pdf） | <https://www.ibiblio.org/apollo/Shuttle/STS-079.pdf> |
 | NASA/TP-2005-211519 Space Shuttle Operations and Infrastructure: A Systems Analysis of Design Root Causes and Effects（264頁、5,194,582 バイト。テキスト層あり。NTRS 20050172128。外部資料の調査のおすすめで取得 2026-11-10。原本は Document/Done/sv_tp211519.pdf） | <https://ntrs.nasa.gov/api/citations/20050172128/downloads/20050172128.pdf> |
-| Independent Orbiter Assessment (IOA): Assessment of the auxiliary power unit（REPT-1.0-WP-VA88003-010 / NASA-CR-185580。448頁、10,940,044 バイト。OCR のテキスト層あり〔1〜2語1行で欄が崩れる〕。NTRS 19900001660。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001660.pdf） | <https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf> |
 | Independent Orbiter Assessment (IOA): Assessment of the electrical power generation/fuel cell powerplant subsystem FMEA/CIL（REPT-1.0-WP-VA86001-24 / NASA-CR-185562。130頁、3,360,302 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001598。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001598.pdf） | <https://ntrs.nasa.gov/api/citations/19900001598/downloads/19900001598.pdf> |
 | Independent Orbiter Assessment (IOA): Assessment of the electrical power generation/power reactant storage and distribution subsystem FMEA/CIL（REPT-1.0-WP-VA88003-15 / NASA-CR-185545。234頁、6,519,805 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001607。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001607.pdf） | <https://ntrs.nasa.gov/api/citations/19900001607/downloads/19900001607.pdf> |
 | Independent Orbiter Assessment (IOA): Assessment of the reaction control system, volume 1（NASA-CR-185543-VOL-1 / REPT-1.0-WP-VA88003-12-VOL-1。888頁、24,721,055 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900002477。取得 2026-11-10。原本は Document/Done/sv_ioa_19900002477.pdf） | <https://ntrs.nasa.gov/api/citations/19900002477/downloads/19900002477.pdf> |

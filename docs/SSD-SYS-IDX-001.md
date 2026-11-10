@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. DN／2026-11-10　状態：検討用（公開資料に基づく）
+版・日付：Rev. DO／2026-11-10　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -328,6 +328,9 @@
 - [図322 IOA 原資料の構成：サブシステム分析ワークシートの冊子ごとの件数](../html/SSD-SYS-ARC-001_p322_ioa_volumes.svg)
 - [図323 IOA の件数の実績：分析ワークシートの頁数と中間報告 Table 1-1 の FMEA 件数の系ごとの対比](../html/SSD-SYS-ARC-001_p323_ioa_compare.svg)
 - [図324 故障モードとIOA 原資料の対応：FMX の系ごとの故障モード数と IOA の分析冊子](../html/SSD-SYS-ARC-001_p324_ioa_fmx.svg)
+- [図325 LCC 原典との結び：Mission Report の LCC 違反の記録と LCC の項目（SSID）の結び](../html/SSD-SYS-ARC-001_p325_lco_join.svg)
+- [図326 IOA の危険度の分布：5フェーズが読めたワークシートの、系ごとの最も厳しい機器の危険度](../html/SSD-SYS-ARC-001_p326_ioa_dist_sys.svg)
+- [図327 IOA の危険度の分布：フェーズごとの危険度の値の件数](../html/SSD-SYS-ARC-001_p327_ioa_dist_phase.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -667,8 +670,8 @@
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. D |
 | [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. L |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. E |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. CC |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. CA |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. CD |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. CB |
 | [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. Q |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
@@ -725,16 +728,16 @@
 | [SSD-ORG-ORB-001](SSD-ORG-ORB-001.md) | プログラム組織と飛行準備の認証定義書（Level・審査のゲート・判断の事例・MOD の CoFR） | 初版（Rev. -） |
 | [SSD-CST-ORB-001](SSD-CST-ORB-001.md) | 経済性定義書（費用の記録・物価の指数・換算・パラメトリックの式） | 初版（Rev. -） |
 | [SSD-LND-ORB-001](SSD-LND-ORB-001.md) | 着陸可用性定義書（着陸の見送り・延期・着陸地の変更・機内の延長の記録と原因の区分） | Rev. C |
-| [SSD-LCC-ORB-001](SSD-LCC-ORB-001.md) | LCC 違反定義書（打上げのコミット基準の違反・免除の記録） | Rev. B |
+| [SSD-LCC-ORB-001](SSD-LCC-ORB-001.md) | LCC 違反定義書（打上げのコミット基準の違反・免除の記録） | Rev. C |
 | [SSD-WXC-ORB-001](SSD-WXC-ORB-001.md) | 天候基準定義書（飛行規則と雷の基準の数値つきの規則） | Rev. B |
 | [SSD-XCP-ORB-001](SSD-XCP-ORB-001.md) | 延長能力定義書（着陸時の反応剤の残りで延長できた時間と平均電力） | 初版（Rev. -） |
 | [SSD-RXN-ORB-001](SSD-RXN-ORB-001.md) | 反応剤消費実績定義書（燃料電池の酸素・水素の消費と発電量） | Rev. A |
 | [SSD-WXK-ORB-001](SSD-WXK-ORB-001.md) | 天候基準の制約定義書（天候の限界を constraint def として展開。値には束ねない） | Rev. A |
 | [SSD-CBA-ECL-001](SSD-CBA-ECL-001.md) | 回路遮断器の割り当て定義書（ECLSS のパネル・バス・名称・機能の文） | 初版（Rev. -） |
-| [SSD-LCO-ORB-001](SSD-LCO-ORB-001.md) | LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則） | 初版（Rev. -） |
-| [SSD-IOA-ORB-001](SSD-IOA-ORB-001.md) | IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応） | Rev. A |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. AM |
-| [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. K |
+| [SSD-LCO-ORB-001](SSD-LCO-ORB-001.md) | LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則） | Rev. A |
+| [SSD-IOA-ORB-001](SSD-IOA-ORB-001.md) | IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応） | Rev. B |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. AN |
+| [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. L |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. F |
 | [SSD-FMM-ORB-001](SSD-FMM-ORB-001.md) | 故障モードモデル定義書（故障モード・原因・検知・管理策の連鎖） | Rev. D |
@@ -750,8 +753,8 @@
 | [SSD-EGR-ORB-001](SSD-EGR-ORB-001.md) | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） | Rev. A |
 | [SSD-HVM-SYS-001](SSD-HVM-SYS-001.md) | 人間系の評価方法定義書（評価方法・人間系の関心事・人間系の図表の対応） | 初版（Rev. -） |
 | [SSD-MBS-SYS-001](SSD-MBS-SYS-001.md) | MBSE 実践の対応定義書（NASA-HDBK-1009A の作業成果物・SEBoK の効果的なモデルの基準との対応） | Rev. B |
-| [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） | Rev. T |
-| [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) | モデル計画書（モデルが支える成果物・資源と役割・道具・規約・モデルの構成・公開・管理） | Rev. R |
+| [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） | Rev. U |
+| [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) | モデル計画書（モデルが支える成果物・資源と役割・道具・規約・モデルの構成・公開・管理） | Rev. S |
 | [SSD-FMEA-ECLSS-001](SSD-FMEA-ECLSS-001.md) | 環境制御・生命維持（ECLSS）故障解析表（FMEA・CIL） | Rev. A |
 | [SSD-FMEA-GNC-001](SSD-FMEA-GNC-001.md) | 誘導・航法・制御（GN&C）故障解析表（FMEA・CIL） | Rev. B |
 | [SSD-FMEA-DPS-001](SSD-FMEA-DPS-001.md) | データ処理系（DPS）故障解析表（FMEA・CIL） | Rev. A |
@@ -892,3 +895,4 @@
 | Rev. DL | 2026-11-10 | LCC 原典として、LCC 原典定義書 SSD-LCO-ORB-001 と図319〜321 を追加し、SysML v2 テキスト SysML/SSD-LCO-ORB-001.sysml で示した（NSTS 16007 Rev H の SSID 699〔数える 479・境界 220〕、WEA-01 の数値つき規則 57、2010 の雷の（数・単位）73/79 が WEA-01 §1.4 に現れる。Mission Report の LCC 違反の記録との結びは 25/61 で採用の条件に届かず、結びの表は作っていない）。図が増えたので、グリッド（SSD-GRD-SYS-001）とモデル計画書（SSD-PLN-SYS-001）を作り直した。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 75件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（177分類）を確かめた。関係する文書に参照を注記 |
 | Rev. DM | 2026-11-10 | IOA 原資料として、IOA 原資料定義書 SSD-IOA-ORB-001 と図322〜324 を追加し、SysML v2 テキスト SysML/SSD-IOA-ORB-001.sysml で示した（IOA の『ANALYSIS OF THE …』10冊のワークシート 5587頁の在庫、Table 1-1 の FMEA 件数との件数の対比、FMX 173件の系ごとの対応。5フェーズの危険度が読めた記録は 77.0% で基準（80%）に届かず、危険度の分布の表は作っていない）。図が増えたので、グリッド（SSD-GRD-SYS-001）とモデル計画書（SSD-PLN-SYS-001）を作り直した。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 76件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（180分類）を確かめた。関係する文書に参照を注記 |
 | Rev. DN | 2026-11-10 | IOA 原資料として、SSD-IOA-ORB-001 に IOA の『ANALYSIS OF THE …』6冊（HYD/WSB・INST・HA〔ATVC・Body Flap・Rudder/Speed Brake・Elevon〕）を足して16冊・ワークシート 6210頁にした（6冊の見出しの頁 623、5フェーズが読めた 288〔46.2%、報告のみ〕。10冊の基準 (b) の結果〔77.0%、未達〕は変えず、分布の表は作っていない）。FMX の機能ブロック4つ（18件）を『別の IOA サブシステム』から『同じ範囲』へ移した（範囲の対応）。図は足さず図322〜324と SysML を更新し、SSD-FMEA-ORB-001・SSD-FMX-ORB-001 の注記の件数を更新した。SysML v2 テキスト 76件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（180分類）を確かめた。関係する文書に参照を注記 |
+| Rev. DO | 2026-11-10 | ユーザーが結果を見たあとに下げた2つの基準に従って表を足した（どちらも事前の基準を満たしたのではない）。①SSD-LCO-ORB-001 に、Mission Report の LCC 違反の記録 25件と LCC の SSID の結びの表（図325。結びの条件を 30件から 25件に。適用の別・限界値の数の突合つき。結び直しはしない）。②SSD-IOA-ORB-001 に、10冊の読めたワークシート 4303 頁の危険度の分布（図326・327。基準 (b) を 80% から 77% に。DN の6冊は入れない）。機能ブロック水準の結びを試し（独立の版にせず本版に含めた）、目の検査が 5/20 で採否の条件（16/20）に届かなかったので、表・図は作っていない（件数と検査の結果を SSD-IOA-ORB-001 に記録）。図が増えたので、グリッド（SSD-GRD-SYS-001。列の規則を1行足した）とモデル計画書（SSD-PLN-SYS-001）を作り直し、SSD-LCC-ORB-001・SSD-FMEA-ORB-001 の注記を更新した。SysML v2 テキスト 76件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（183分類）を確かめた。関係する文書に参照を注記 |

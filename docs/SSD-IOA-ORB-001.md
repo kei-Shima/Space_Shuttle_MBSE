@@ -4,18 +4,18 @@
 |---|---|
 | 文書番号 | SSD-IOA-ORB-001 |
 | 表題 | IOA 原資料定義書（サブシステム分析ワークシートの在庫と故障モードとの系ごとの対応） |
-| 版・日付 | Rev. A／2026-11-10 |
+| 版・日付 | Rev. B／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMEA-ORB-001 |
-| 関連図 | SSD-SYS-ARC-001 図322 IOA 原資料の構成：サブシステム分析ワークシートの冊子ごとの件数・図323 IOA の件数の実績：分析ワークシートの頁数と中間報告 Table 1-1 の FMEA 件数の系ごとの対比・図324 故障モードとIOA 原資料の対応：FMX の系ごとの故障モード数と IOA の分析冊子 |
+| 関連図 | SSD-SYS-ARC-001 図322 IOA 原資料の構成：サブシステム分析ワークシートの冊子ごとの件数・図323 IOA の件数の実績：分析ワークシートの頁数と中間報告 Table 1-1 の FMEA 件数の系ごとの対比・図324 故障モードとIOA 原資料の対応：FMX の系ごとの故障モード数と IOA の分析冊子・図326 IOA の危険度の分布：5フェーズが読めたワークシートの、系ごとの最も厳しい機器の危険度・図327 IOA の危険度の分布：フェーズごとの危険度の値の件数 |
 
 ## 1. 目的
 
-IOA（Independent Orbiter Assessment。独立オービター評価）の報告のうち、取り込んだ『ANALYSIS OF THE …』16冊（1986〜87）が持つサブシステム分析ワークシートの在庫を数え、モデルの故障モード（SSD-FMX-ORB-001）が IOA の原資料のどの系に対応するかを系の水準で示す。これまでのモデルは、IOA の件数を中間報告の表（SSD-FMEA-<系>-001 の §3）から取り、ワークシートそのものは ECLSS のものを除いて持たなかった。図322〜324 と SysML で示す。**判定・評価は付けない**。
+IOA（Independent Orbiter Assessment。独立オービター評価）の報告のうち、取り込んだ『ANALYSIS OF THE …』16冊（1986〜87）が持つサブシステム分析ワークシートの在庫を数え、モデルの故障モード（SSD-FMX-ORB-001）が IOA の原資料のどの系に対応するかを系の水準で示す。これまでのモデルは、IOA の件数を中間報告の表（SSD-FMEA-<系>-001 の §3）から取り、ワークシートそのものは ECLSS のものを除いて持たなかった。図322〜324・326・327 と SysML で示す。Rev. DO で、10冊の読めたワークシートの危険度の分布（図326・327）を足した。**判定・評価は付けない**。
 
 ## 2. 範囲と書き方
 
-資料は取り込んだ IOA の『ANALYSIS OF THE …』16冊：Rev. DM の10冊（EPG・OMS・GN&C・MPS・APU・RCS〔3巻〕・着陸/減速・C&T）と、Rev. DN で足した6冊（HYD/WSB・INST・HA〔ATVC・Body Flap・Rudder/Speed Brake・Elevon の4冊〕）。ANALYSIS WORKSHEET の見出しを持つ頁を 1枚のワークシートとして数え（6210、続きの頁 51）、全件は doc・SysML に入れず、冊子ごとの件数・系ごとの対比・見本 20件だけを載せる。**規則は数える前に決めた**（rev_dm/PLAN_DM.md、rev_dn/PLAN_DN.md）。5フェーズの危険度が読めた記録は、10冊で 77.0%（基準 80% に届かない。確定した結果で、16冊を合わせた集合では評価し直さない）、足した6冊で 46.2%（報告だけ）。**危険度の分布の表は作らない**。
+資料は取り込んだ IOA の『ANALYSIS OF THE …』16冊：Rev. DM の10冊（EPG・OMS・GN&C・MPS・APU・RCS〔3巻〕・着陸/減速・C&T）と、Rev. DN で足した6冊（HYD/WSB・INST・HA〔ATVC・Body Flap・Rudder/Speed Brake・Elevon の4冊〕）。ANALYSIS WORKSHEET の見出しを持つ頁を 1枚のワークシートとして数え（6210、続きの頁 51）、全件は doc・SysML に入れず、冊子ごとの件数・系ごとの対比・見本 20件・危険度の分布だけを載せる。**規則は数える前に決めた**（rev_dm/PLAN_DM.md、rev_dn/PLAN_DN.md、rev_do/PLAN_DO.md）。5フェーズの危険度が読めた記録は、10冊で 77.0%（**事前の基準 80% に届かなかった**。ユーザーが結果を見たあとに基準を 77% に下げたので、10冊の読めた記録だけの分布を作った。16冊を合わせた集合では評価し直さない）、足した6冊で 46.2%（報告だけ。6冊の分布は作らない）。
 
 ## 3. 冊子ごとの件数
 
@@ -63,7 +63,7 @@ IOA（Independent Orbiter Assessment。独立オービター評価）の報告�
 
 ## 5. 故障モードと IOA の分析冊子の系ごとの対応
 
-SSD-FMX-ORB-001 の系ごとの故障モード数と、同じ範囲を持つ IOA の分析冊子の系。軌道制御系（OMS）には IOA の分析冊子があるが、SSD-FMX-ORB-001 に OMS の故障モードは無い（OMS は SSD-FMEA-OMS-001 が持つ）。機能ブロック4つ（APU-WSB・GNC-ACT・MPS-TVC・CT-INST）は、Rev. DM では Table 1-1 が別のサブシステムに数え冊子が無いため『別の IOA サブシステム』（18件）としたが、Rev. DN で HYD/WSB・INST・HA の冊子（IOA-11〜16）を取り込んだので『同じ範囲』に移した（18件）。**範囲の対応で、読めた割合の保証ではない**。GNC-ACT・MPS-TVC は HA の4冊の合計に結ぶだけで、どの舵面・どの冊子かは判断になるので作っていない。そのほかの機能ブロック（FD）水準の結びは作っていない（IOA の階層の語は部品の水準）。
+SSD-FMX-ORB-001 の系ごとの故障モード数と、同じ範囲を持つ IOA の分析冊子の系。軌道制御系（OMS）には IOA の分析冊子があるが、SSD-FMX-ORB-001 に OMS の故障モードは無い（OMS は SSD-FMEA-OMS-001 が持つ）。機能ブロック4つ（APU-WSB・GNC-ACT・MPS-TVC・CT-INST）は、Rev. DM では Table 1-1 が別のサブシステムに数え冊子が無いため『別の IOA サブシステム』（18件）としたが、Rev. DN で HYD/WSB・INST・HA の冊子（IOA-11〜16）を取り込んだので『同じ範囲』に移した（18件）。**範囲の対応で、読めた割合の保証ではない**。GNC-ACT・MPS-TVC は HA の4冊の合計に結ぶだけで、どの舵面・どの冊子かは判断になるので作っていない。そのほかの機能ブロック（FD）水準の結びは、Rev. DO で語の一致による結びを試したが検査に届かず作っていない（後ろの『機能ブロック水準の結びの試み』の節）。
 
 | FMX の系・ブロック | 名前 | 故障モード | IOA の系 | 範囲 | IOA のワークシート頁 |
 |---|---|---|---|---|---|
@@ -113,17 +113,57 @@ SSD-FMX-ORB-001 の系ごとの故障モード数と、同じ範囲を持つ IOA
 | IOW-019 | CT | IOA-10 | 797 | — | MID DECK TVC NORM GAMMA CONTROL SWITCH FAILS TO SWITCH | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 通信・追跡（C&T）のワークシート（PDF 頁 797）：MID DECK TVC NORM GAMMA CONTROL SWITCH FAILS TO SWITCH（出典: https://ntrs.nasa.gov/api/citations/19900001651/downloads/19900001651.pdf#page=797） |
 | IOW-020 | CT | IOA-10 | 839 | COMM & TRACK CCTV TV CAMERA (TVC) MONOCHROME LENS FOCUS SW 7) 9) | TVC D MONOCHROME LENS ASSY IRIS CONTROL SWITCH FAILS TO SWITCH | 3/3 | 3/3 | 2/1R | 3/3 | 3/3 | 通信・追跡（C&T）のワークシート（PDF 頁 839）：TVC D MONOCHROME LENS ASSY IRIS CONTROL SWITCH FAILS TO SWIT（出典: https://ntrs.nasa.gov/api/citations/19900001651/downloads/19900001651.pdf#page=839） |
 
-## 7. 事前の基準と結果
+## 7. 危険度の意味
 
-基準は数える前に決めた（rev_dm/PLAN_DM.md §1）。10冊の結果は Rev. DM のままで、Rev. DN の6冊を足しても評価し直さない。パーサーは v1 → v2 の1回の修正（ラベルの OCR の揺れを許す）の後に凍結して1回だけ評価した。
+ワークシートの危険度は『機器の危険度／機能の危険度』の形（例 3/1R）。意味は IOA の ASSESSMENT 冊子（APU）の凡例による。分布で使うのは左の機器の危険度の数字（1〜3）の大小だけ。
+
+| 値 | 意味 | 根拠 |
+|---|---|---|
+| 機器の危険度 1 | Loss of life or vehicle（機体または乗員の喪失） | 危険度の凡例（IOA の ASSESSMENT 冊子〔APU、NTRS 19900001660〕の Appendix C）：Hardware 1＝Loss of life or vehicle、2＝Loss of mission or next failure of any redundant item、3＝All others（出典: https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf#page=47） |
+| 機器の危険度 2 | Loss of mission or next failure of any redundant item（ミッションの喪失、または冗長な機器の次の故障） | 危険度の凡例（IOA の ASSESSMENT 冊子〔APU、NTRS 19900001660〕の Appendix C）：Hardware 1＝Loss of life or vehicle、2＝Loss of mission or next failure of any redundant item、3＝All others（出典: https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf#page=47） |
+| 機器の危険度 3 | All others（そのほか） | 危険度の凡例（IOA の ASSESSMENT 冊子〔APU、NTRS 19900001660〕の Appendix C）：Hardware 1＝Loss of life or vehicle、2＝Loss of mission or next failure of any redundant item、3＝All others（出典: https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf#page=47） |
+| 機能の危険度の R（1R・2R） | 冗長な機器（同種でも異種でも）がすべて故障すると、機能の危険度 1／2 になる | 危険度の凡例（IOA の ASSESSMENT 冊子〔APU、NTRS 19900001660〕の Appendix C）：Hardware 1＝Loss of life or vehicle、2＝Loss of mission or next failure of any redundant item、3＝All others（出典: https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf#page=47） |
+| 『ANALYSIS』の冊子の定義 | 凡例は持たず、NSTS 22206（FMEA・CIL の作成の指示、1986-10-10）の定義を使うと書く（取り込んでいない NSTS 22206 そのものは確認していない） | 『ANALYSIS』の冊子は凡例を持たず、NSTS 22206（FMEA・CIL の作成の指示）の定義を使うと書く（GN&C の冊子の Appendix B）（出典: https://ntrs.nasa.gov/api/citations/19900001604/downloads/19900001604.pdf#page=43） |
+
+## 8. 危険度の分布（系ごと）
+
+10冊（Rev. DM。DN の6冊は入れない）の、5フェーズの危険度がすべて読めたワークシート 4303 頁を、5フェーズの機器の危険度の数字の最小（最も厳しいもの）で数えた。**読めた頁だけの数で、読めなかった頁の分布は分からない。読めた割合は系で大きく偏る**（列『読めた割合』）ので、系の代表のように読めない。系どうしの比較に判定は付けない。基準 (b)（80%）は未達で、ユーザーが 77% に下げて作った。
+
+| 系 | 名前 | 見出しの頁 | 5フェーズが読めた | 読めた割合 | 最も厳しい機器の危険度 1 | 2 | 3 |
+|---|---|---|---|---|---|---|---|
+| EPG | 電力発生系・燃料電池 | 63 | 60 | 95.2% | 3 | 25 | 32 |
+| OMS | 軌道制御系（OMS） | 953 | 742 | 77.9% | 35 | 136 | 571 |
+| GNC | 誘導・航法・制御（GN&C） | 139 | 105 | 75.5% | 3 | 18 | 84 |
+| MPS | 主推進系（MPS） | 691 | 362 | 52.4% | 75 | 83 | 204 |
+| APU | 補助動力装置（APU） | 282 | 179 | 63.5% | 23 | 49 | 107 |
+| RCS | 姿勢制御系（RCS） | 2233 | 1933 | 86.6% | 46 | 210 | 1677 |
+| LAND | 着陸・減速系（L&D） | 279 | 115 | 41.2% | 41 | 10 | 64 |
+| CT | 通信・追跡（C&T） | 947 | 807 | 85.2% | 4 | 160 | 643 |
+| 計（10冊） | — | 5587 | 4303 | 77.0% | 230 | 691 | 3382 |
+
+## 9. 危険度の分布（フェーズごと）
+
+10冊の読めたワークシート 4303 頁の、フェーズごとの危険度の値（機器／機能）の件数。系は分けない。アボート別の値は数えない。『その他』は左の12個以外の値（0）。`1/3`・`3/1` のように機器と機能の数字の組が通常の形に見えない値は OCR の誤読の可能性があるが、直さず本文のまま数えた。判定は付けない。
+
+| フェーズ | 1/1 | 1/1R | 2/1R | 2/2 | 2/2R | 3/1 | 3/1R | 3/2 | 3/2R | 3/3 | 3/3R | 1/3 | その他 | 計 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| PRELAUNCH | 118 | 1 | 72 | 0 | 1 | 0 | 88 | 8 | 5 | 4009 | 1 | 0 | 0 | 4303 |
+| LIFTOFF | 149 | 0 | 167 | 40 | 0 | 1 | 173 | 0 | 256 | 3516 | 0 | 1 | 0 | 4303 |
+| ONORBIT | 84 | 0 | 286 | 238 | 0 | 0 | 250 | 1 | 1173 | 2271 | 0 | 0 | 0 | 4303 |
+| DEORBIT | 149 | 0 | 252 | 61 | 0 | 0 | 559 | 0 | 215 | 3067 | 0 | 0 | 0 | 4303 |
+| LANDING/SAFING | 110 | 0 | 106 | 0 | 0 | 0 | 109 | 0 | 2 | 3974 | 2 | 0 | 0 | 4303 |
+
+## 10. 事前の基準と結果
+
+基準は数える前に決めた（rev_dm/PLAN_DM.md §1）。10冊の結果は Rev. DM のままで、Rev. DN の6冊を足しても評価し直さない。パーサーは v1 → v2 の1回の修正（ラベルの OCR の揺れを許す）の後に凍結して1回だけ評価した。(b) の扱いは Rev. DO でユーザーの判断により変わった（事前の基準を満たしたのではない）。
 
 | 基準 | 結果 | 扱い |
 |---|---|---|
 | (a) ワークシートの記録 500 以上 | 10冊で 5587 | 満たす |
-| (b) 5フェーズの危険度が読めた記録 80% 以上（10冊） | 4303（77.0%。v1 は 3,735〔67.0%〕） | 未達 → 危険度の分布の表は作らない（確定。16冊の集合で評価し直さない） |
+| (b) 5フェーズの危険度が読めた記録 80% 以上（10冊） | 4303（77.0%。v1 は 3,735〔67.0%〕） | **未達**（事前の基準。確定。16冊の集合で評価し直さない）。ユーザーが結果を見たあとに基準を 77% に下げた（Rev. DO）→ 10冊の分布の表（図326・327）を作った |
 | (c) FMX の故障モードの系ごとの対応を数える | 同じ範囲 69・範囲が違う 18・別の IOA サブシステム 0・冊子が無い 86（計 173） | 数えた（判定は付けない） |
 
-## 8. Rev. DN の事前の規則と結果
+## 11. Rev. DN の事前の規則と結果
 
 規則は6冊を数える前に決めた（rev_dn/PLAN_DN.md §1。助言を受けて、基準 (b) を16冊の集合で評価し直さないことを規則に入れた）。
 
@@ -131,25 +171,101 @@ SSD-FMX-ORB-001 の系ごとの故障モード数と、同じ範囲を持つ IOA
 |---|---|---|
 | R-A 範囲の確認（表紙・標題紙に所定の語） | 6冊とも満たす | 確認済み |
 | R-B パーサー v2 を変えずに当てる | 見出しの頁 623・続きの頁 11 | v2 のまま（v3 は作らない） |
-| R-C 読めた割合は報告だけ（80% を 16冊で評価し直さない・分布の表を作らない） | 6冊 288/623（46.2%）：HYD/WSB 157/415・INST 73/90・HA 58/118 | 報告のみ |
+| R-C 読めた割合は報告だけ（80% を 16冊で評価し直さない・6冊の分布の表を作らない） | 6冊 288/623（46.2%）：HYD/WSB 157/415・INST 73/90・HA 58/118 | 報告のみ（10冊の分布は Rev. DO） |
 | R-D FMX の機能ブロックを移す条件（全冊が R-A を満たし、見出しの頁が各 20 以上） | 最小は ATVC の 25 頁。4機能ブロック 18件を『同じ範囲』へ | 移した（範囲の対応） |
 | R-E 件数の対比は参考（HA は4冊の合計） | HA 118 頁・Table 1-1 の HA 112 | 目安のみ |
 | R-F 他の ANALYSIS 冊子は取り込まない | MAS・NWS・PYRO・PV&D・RMS・EMU・OEX・CE・ARPCS・MMU・BFS・PRS&D・EPD&C ほか | 範囲外 |
 | R-G 図は足さない・見本は変えない | 図322〜324 を作り直し、見本 20件は10冊のまま | そのとおり |
 
-## 9. 図
+## 12. Rev. DO の事前の規則と結果
 
-図322〜324：図322 は冊子ごとの件数の表、図323 は分析ワークシートの頁数と Table 1-1 の FMEA 件数の系ごとの対比、図324 は FMX の故障モードの系・機能ブロックと IOA の分析冊子の対応である（Rev. DN で6冊を足して作り直した）。
+規則は分布を数える前に決めた（rev_do/PLAN_DO.md §1-2・§1-3）。ユーザーの基準の変更は結果を見たあとの判断。
 
-## 10. SysML v2 テキスト
+| 規則 | 結果 | 扱い |
+|---|---|---|
+| R-DO-6 分布の対象は10冊の読めた記録だけ（DN の6冊は入れない・16冊の割合は示さない） | 4303/5587 | そのとおり |
+| 基準 (b) をユーザーが 77% に下げた条件（丸める前の値。4,303×100 ≥ 77×5,587） | 430300 ≥ 430199（77.018%） | 満たす（余裕は1頁。事前の基準を満たしたのではない） |
+| R-DO-7・8 表の形（最も厳しい＝機器の危険度の数字の最小。系ごとの分母を並べる） | 最小 1：230・2：691・3：3382（計 4303） | 図326・327 |
+| R-DO-9 全件は載せない・見本は変えない・パーサーは v2 のまま | 見本 20件は10冊のまま | そのとおり |
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-IOA-ORB-001.sysml](../SysML/SSD-IOA-ORB-001.sysml) に示す。冊子 16・件数の対比 11・FMX の系・機能ブロックごとの対応 17 から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。ワークシートの全件・危険度は持たない。
+## 13. 機能ブロック水準の結びの試み（PLAN_DP の規則と結果）
 
-## 11. 注記（出典間の相違・構成変更）
+FMX の機能ブロック 19（故障モード 69件）と IOA のワークシート 6,210頁を、ブロックの側の語と IOA の階層の語の一致で結ぶ試み（rev_dp/PLAN_DP.md。数える前に固定）。**検査に届かなかったので、ブロック単位の結びの表・図は作らない**。下の2つの表は件数と検査の結果の記録で、ワークシートの一覧ではない。
+
+| 規則 | 結果 | 扱い |
+|---|---|---|
+| PLAN_DP R-DP-5(b) 被覆：語で結ぶ16ブロックのうち、結べた記録が1件以上あるブロックが 8以上 | 11/16 | 満たす |
+| PLAN_DP R-DP-5(a) 目の検査：結べた記録から無作為20件（seed 11）を読み、階層の部品がそのブロックの機能の一部と読めるものが 16件以上 | 5/20 | **届かない → 結びの表・図は作らない**（条件を下げない） |
+| PLAN_DP R-DP-2 同義語の表・手作りの語の表を使わない | ブロックの側の英字の語だけ | そのとおり |
+
+## 14. 機能ブロックと階層の語の一致の件数
+
+ブロックごとに、IOA の系の記録のうち、そのブロックだけの語（同じ系の複数のブロックに入る語を除いた語）が階層に入る記録の数（結べた）、複数のブロックの語に当たった記録の数（複数）、どのブロックの語にも当たらなかった記録の数（系ごとの数）。系にブロックが1つだけのブロックは、系のすべての記録を数えた（語は使わない）。件数は結びの採否の検査に届かなかったもので、結びではない。
+
+| ブロック | 故障モード | IOA の系 | 結び方 | 結べた | 複数 | 当たらない（系） | 系の記録 |
+|---|---|---|---|---|---|---|---|
+| GNC | 2 | GNC | 語（共有を除く 6） | 14 | 0 | 61 | 139 |
+| GNC-CCD | 3 | GNC | 語（共有を除く 25） | 64 | 0 | 61 | 139 |
+| GNC-GNS | 4 | GNC | 語（共有を除く 15） | 0 | 0 | 61 | 139 |
+| GNC-ACT | 5 | HA | 語（共有を除く 14） | 3 | 0 | 114 | 118 |
+| MPS-TVC | 5 | HA | 語（共有を除く 10） | 1 | 0 | 114 | 118 |
+| RCS-HEP | 3 | RCS | 語（共有を除く 6） | 393 | 4 | 1669 | 2233 |
+| RCS-HTR | 4 | RCS | 語（共有を除く 6） | 163 | 0 | 1669 | 2233 |
+| RCS-JET | 4 | RCS | 語（共有を除く 6） | 4 | 0 | 1669 | 2233 |
+| RCS-RM | 4 | RCS | 語（共有を除く 14） | 0 | 4 | 1669 | 2233 |
+| CT | 2 | CT | 語（共有を除く 4） | 0 | 0 | 302 | 947 |
+| CT-AUD | 3 | CT | 語（共有を除く 22） | 0 | 11 | 302 | 947 |
+| CT-OPS | 4 | CT | 語（共有を除く 10） | 412 | 171 | 302 | 947 |
+| CT-SBD | 4 | CT | 語（共有を除く 10） | 20 | 47 | 302 | 947 |
+| CT-UHF | 3 | CT | 語（共有を除く 16） | 37 | 152 | 302 | 947 |
+| CT-INST | 4 | INST | 系で一意（語は使わない） | 90 | 0 | — | 90 |
+| APU | 4 | APU | 語（共有を除く 6） | 0 | 0 | 239 | 282 |
+| APU-CTL | 5 | APU | 語（共有を除く 19） | 43 | 0 | 239 | 282 |
+| APU-WSB | 4 | HYD | 系で一意（語は使わない） | 415 | 0 | — | 415 |
+| MPS | 2 | MPS | 系で一意（語は使わない） | 691 | 0 | — | 691 |
+
+## 15. 目の検査（無作為20件）
+
+結べた記録（語で結ぶブロック）から無作為20件（seed 11）。階層の部品がそのブロックの機能の一部と読めるかを、機能説明書の機能の文と照らして読んだ（5/20）。
+
+| No. | ブロック | 冊子 | PDF頁 | 当たった語 | 階層（末尾） | 検査 | 理由 |
+|---|---|---|---|---|---|---|---|
+| 1 | CT-OPS | 1651 | 597 | COMM | 2) 4) 6) 8) COMM & TRACK CCTV MONOCHROME LENS ASSEMBLY (MLA) | 合わない | CCTV のレンズ：CT-OPS（GCIL による選択・地上指令の運用）の部品ではない |
+| 2 | CT-OPS | 1651 | 1007 | COMM・EMU | COMM & TRACK EMU TV ANTENNA 6) 8) | 合わない | EMU の TV アンテナ：運用の部品ではない |
+| 3 | CT-OPS | 1651 | 633 | COMM | 2) 4) 6) 8) COMM & TRACK CCTV TV DOWNLINK SWITCH SII | 合わない | CCTV の TV ダウンリンク切替：対応がはっきりしない |
+| 4 | CT-OPS | 1651 | 596 | COMM | 2) 4) 6) 8) COMM & TRACK CCTV MONOCHROME LENS ASSEMBLY (MLA) | 合わない | CCTV のレンズ |
+| 5 | CT-OPS | 1651 | 789 | COMM | COMM & TRACK 3) 5) 7) 9) CCTV TV CAMERA (TVC) GAMMA CONTROL SW | 合わない | CCTV のカメラ |
+| 6 | RCS-HTR | 1623 | 387 | POD | ENTS POD THERMAL CONTROL SUBSYSTEM HTR PNL A/B, FU UPPER HEATER 90W, A… | 合う | ポッドのヒータパネル（HTR PNL）：RCS-HTR の機能（ポッドのゾーンヒータ）の部品 |
+| 7 | RCS-HTR | 1623 | 372 | POD | S) 7) 9) ELECTRICAL COMPONENTS POD THERMAL CONTROL SUBSYSTEM HTR PNL B… | 合う | ポッドのヒータパネルのヒューズ：同上 |
+| 8 | CT-OPS | 1651 | 808 | COMM | COMM & TRACK 2 ) CCTV TV CAMERA (TVC) MONOCHROME LENS FOCUS SW 7) 9) | 合わない | CCTV のレンズ |
+| 9 | CT-OPS | 1651 | 668 | COMM | 2) 4) 6) 8) COMM & TRACK CCTV TV CAMERA (TVC) ALC CMD SWITCH | 合わない | CCTV のカメラ |
+| 10 | RCS-HTR | 1623 | 375 | POD | 4) 6) 8) ELECTRICAL COMPONENTS POD THERMAL CONTROL SUBSYSTEM HTR PNL B… | 合う | 同上 |
+| 11 | RCS-HEP | 1622 | 307 | PRESS | LECTRICAL COMPONENTS CONTROLS HE PRESS SUBSYSTEM HE OX & FU ISOL A & B… | 合う | ヘリウム隔離弁のドライバ：RCS-HEP の機能（ヘリウム隔離弁）の部品 |
+| 12 | CT-OPS | 1651 | 585 | COMM | 2) 4) 6) 8) COMM & TRACK CCTV PAN AND TILT UNIT (PTU) | 合わない | CCTV のパン・チルト |
+| 13 | RCS-HTR | 1624 | 583 | OFF | TER SUBSYSTEM MANIFOLD L2/R2, RJDAIA RJDAIA L2/R2 MANIFOLD DRIVER OFF … | 合わない | 推進薬のマニホールドドライバ（噴射器の駆動）：RCS-HTR（ヒータ）ではない |
+| 14 | RCS-HEP | 1623 | 28 | CLOSE | EM MANIFOLD 5, OX & FU ISOL VLVS MANIFOLD 5, OX & FU ISOL VLV SWITCH C… | 合わない | 推進薬の貯蔵・配給のマニホールドの隔離弁：RCS-HEP（ヘリウム加圧）ではない |
+| 15 | RCS-HEP | 1622 | 300 | PRESS | ) 7) 9) ELECTRICAL COMPONENTS CONTROLS HE PRESS SUBSYSTEM HE OX & FU I… | 合う | 同上（ダイオード） |
+| 16 | CT-OPS | 1651 | 904 | COMM | COMM & TRACK CCTV TV CAMERA (TVC) COLOR LENS ASSY FOCUS SW 7) 9) | 合わない | CCTV のレンズ |
+| 17 | APU-CTL | 1615 | 103 | HIGH | 2) 4) 6) 9) APU FUEL SYSTEM FUEL LINES HIGH POINT BLEED COUPLING | 合わない | 燃料ラインのブリードカップリング：APU-CTL（制御器）ではない |
+| 18 | CT-OPS | 1651 | 351 | COMM | ) S) COMM & TRACK S-BAND PL SYSTEM PAYLOAD SIGNAL PROCESSOR OUTPUT ROU… | 合わない | S 帯ペイロードの信号処理の出力切替：対応がはっきりしない |
+| 19 | CT-OPS | 1651 | 598 | COMM | 2) 4) 6) 9) COMM & TRACK CCTV MONOCHROME LENS ASSEMBLY (MLA) | 合わない | CCTV のレンズ |
+| 20 | RCS-HTR | 1623 | 260 | OFF | ROLS THRUSTER SUBSYSTEM MANIFOLD I, RJDF RJDFIB F1 MANIFOLD LOGIC SWIT… | 合わない | 同上 |
+
+## 16. 図
+
+図322〜324・326・327：図322 は冊子ごとの件数の表、図323 は分析ワークシートの頁数と Table 1-1 の FMEA 件数の系ごとの対比、図324 は FMX の故障モードの系・機能ブロックと IOA の分析冊子の対応である（Rev. DN で6冊を足して作り直した）。図326 は10冊の読めたワークシートの危険度の分布（系ごと）、図327 は同じ分布（フェーズごと）である（Rev. DO。ユーザーが基準 (b) を 77% に下げて作った）。
+
+## 17. SysML v2 テキスト
+
+同じ内容を SysML v2 のテキスト [SysML/SSD-IOA-ORB-001.sysml](../SysML/SSD-IOA-ORB-001.sysml) に示す。冊子 16・件数の対比 11・FMX の系・機能ブロックごとの対応 17・危険度の分布（系ごと 8・フェーズごと 5）から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。ワークシートの全件は持たない。
+
+## 18. 注記（出典間の相違・構成変更）
 
 > **注記** 範囲・取れなかった値・本書の判断：本書は IOA の『ANALYSIS OF THE …』16冊（1986〜87）のサブシステム分析ワークシートの在庫を数えたもの。Rev. DM の10冊（EPG・OMS・GN&C・MPS・APU・RCS〔3巻〕・着陸/減速・C&T）に、Rev. DN で HYD/WSB・INST・HA〔4冊〕の6冊を足した。記録の単位は ANALYSIS WORKSHEET の見出しの頁（6210、続きの頁 51）。**判定・評価は付けない**。
 
-> **注記** 範囲・取れなかった値・本書の判断：**危険度の分布の表は作らない（基準 (b) の未達）**：10冊（Rev. DM）でラベルつきの5フェーズ（PRELAUNCH・LIFTOFF・ONORBIT・DEORBIT・LANDING/SAFING）の危険度がすべて読めた記録は 4303/5587（77.0%）で、事前の基準（80% 以上）に届かなかった。この結果は確定で、6冊を足した集合では評価し直さない（結果を見てから標本を増やして基準を通すことになるため）。6冊（Rev. DN）の読めた割合は別に報告する：288/623（46.2%。HYD/WSB 157/415・INST 73/90・HA 58/118）。この6冊についても分布の表は作らない（規則 R-C）。パーサーは v2 を変えずに当てた。
+> **注記** 範囲・取れなかった値・本書の判断：**危険度の分布（図326・327）は、事前の基準が未達のまま、ユーザーが基準を下げて作った**：10冊（Rev. DM）でラベルつきの5フェーズ（PRELAUNCH・LIFTOFF・ONORBIT・DEORBIT・LANDING/SAFING）の危険度がすべて読めた記録は 4303/5587（77.018%、表示 77.0%）で、**事前の基準（80% 以上。結果を見る前に決めた）に届かず**、Rev. DM・DN では分布の表を作らなかった。ユーザーは結果を見たうえで 2026-11-10 に基準を 77% に下げた（Rev. DO）。比べるのは丸める前の値（4,303×100＝430,300 ≥ 77×5,587＝430,199）で、**余裕は1頁**。事前の基準を満たしたのではない。10冊の確定値は変えない。DN の6冊（623頁、46.2%）は分布に入れない：16冊を合わせた割合は 77% に届かず、DN の規則（16冊の集合で評価し直さない）が生きている（16冊を合わせた割合・分布は計算も表示もしない）。
+
+> **注記** 範囲・取れなかった値・本書の判断：**分布の読み方（図326・327）**：分布は5フェーズがすべて読めた 4303 頁だけの数で、読めなかった 1284 頁（約 23%）の分布は分からない。読めた割合は系で大きく偏る（図326の列『読めた割合』。MPS・着陸/減速が低い）ので、読めた頁の分布を系の代表のように読めない。値は『機器の危険度／機能の危険度』（例 3/1R）で、**最も厳しい＝5フェーズの機器の危険度の数字が最も小さいもの**（数字の大小だけ。機能の危険度は順序づけない）。意味は IOA の凡例〔ASSESSMENT 冊子 APU（NTRS 19900001660）の Appendix C〕による。**『ANALYSIS』の冊子は凡例を持たず NSTS 22206 の定義を使うと書いている**（取り込んでいない NSTS 22206 そのものは確認していない）。危険度の値は IOA が付けたもので、モデルの故障モードには結んでいない。系ごとの比較に判定（どの系が危険か）は付けない。`1/3`（LIFTOFF に1頁）・`3/1`（LIFTOFF に1頁）のように機器と機能の数字の組が通常の形に見えない値は OCR の誤読の可能性があるが、直さず本文のまま数えた。
 
 > **注記** 範囲・取れなかった値・本書の判断：**6冊の読めた割合が低い冊の理由（診断。パーサーは変えていない）**：Body Flap・Elevon は ONORBIT の欄が『/NA』の形（NA の N が落ちている）の記録が多く、5フェーズのうち ONORBIT だけが欠ける記録が 41（うち『/NA』の形が 36）。HYD/WSB は PRELAUNCH だけが欠ける記録が 72、フェーズの欄が全部欠ける記録が 41 と、別の OCR の崩れ。v3 でこの形を読むと割合は上がるが、10冊の確定値を動かすことになるため作らなかった。
 
@@ -167,7 +283,9 @@ SSD-FMX-ORB-001 の系ごとの故障モード数と、同じ範囲を持つ IOA
 
 > **注記** 範囲・取れなかった値・本書の判断：ワークシートの全件（見出しの頁、階層、危険度、原因、影響）は research/rev_dm/ioa_ws.json（10冊）と research/rev_dn/ioa_ws_dn.json（6冊）にあり、doc・SysML には入れない。
 
-## 12. 参考文献
+> **注記** 範囲・取れなかった値・本書の判断：**機能ブロック水準の結びの試み（Rev. DO で試した。計画は rev_dp/PLAN_DP.md）は、事前の採否の検査に届かず、表・図は作っていない**：ユーザーの依頼で（独立の版にはせず Rev. DO に含めた）、FMX の機能ブロック 19（故障モード 69件）と IOA のワークシートを、ブロックの側の英字の語（機能説明書の目的・機能の節と FMX の行の大文字の語。同義語の表は使わない）と IOA の階層の語の一致で結ぶ規則を、数える前に決めて当てた（rev_dp/PLAN_DP.md）。被覆（結べた記録が1件以上あるブロック。語で結ぶ 16 ブロックのうち 8 以上）は 11 で満たしたが、**目の検査（結べた記録から無作為20件を読み、階層の部品がそのブロックの機能の一部と読めるもの 16件以上）は 5/20 で届かなかった**。理由は、ブロックの側の語に一般の語（COMM・OFF・CLOSE・HIGH など）が入り、部品の水準の階層（弁・スイッチ・レンズ）に当たってしまうこと（例：CT-OPS に CCTV のカメラ・レンズが当たる。CCTV は別の機能ブロック CT-CCTV で、FMX に故障モードが無い）。規則どおり結びの表・図は作らず、DN の規則（ブロックと冊子の細かな結びは作らない）のままとした。同義語の表（日本語の機能名→英語の部品名）を人が作れば当たりは増えるが、それは判断になるので、出典を付けた別の作業として決める。件数は下の表に残した（ワークシートの一覧は作らない）。
+
+## 19. 参考文献
 
 1. Independent Orbiter Assessment (IOA): Analysis of the electrical power generation/fuel cell powerplant subsystem（NASA-CR-185561 / REPT-1.0-WP-VA86001-10。101頁、3,143,746 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001599。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001599.pdf） （PDF p1） — https://ntrs.nasa.gov/api/citations/19900001599/downloads/19900001599.pdf#page=1
 2. Independent Orbiter Assessment (IOA): Analysis of the orbital maneuvering system（NASA-CR-185554 / REPT-1.0-WP-VA86001-21。1046頁、37,774,436 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001603。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001603.pdf） （PDF p1） — https://ntrs.nasa.gov/api/citations/19900001603/downloads/19900001603.pdf#page=1
@@ -207,12 +325,15 @@ SSD-FMX-ORB-001 の系ごとの故障モード数と、同じ範囲を持つ IOA
 36. Independent Orbiter Assessment (IOA): Analysis of the communication and tracking subsystem（NASA-CR-185582 / REPT-1.0-WP-VA87001-09。1028頁、44,649,370 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001651。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001651.pdf） （PDF p789） — https://ntrs.nasa.gov/api/citations/19900001651/downloads/19900001651.pdf#page=789
 37. Independent Orbiter Assessment (IOA): Analysis of the communication and tracking subsystem（NASA-CR-185582 / REPT-1.0-WP-VA87001-09。1028頁、44,649,370 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001651。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001651.pdf） （PDF p797） — https://ntrs.nasa.gov/api/citations/19900001651/downloads/19900001651.pdf#page=797
 38. Independent Orbiter Assessment (IOA): Analysis of the communication and tracking subsystem（NASA-CR-185582 / REPT-1.0-WP-VA87001-09。1028頁、44,649,370 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001651。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001651.pdf） （PDF p839） — https://ntrs.nasa.gov/api/citations/19900001651/downloads/19900001651.pdf#page=839
-39. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
-40. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
+39. Independent Orbiter Assessment (IOA): Assessment of the auxiliary power unit（REPT-1.0-WP-VA88003-010 / NASA-CR-185580。448頁、10,940,044 バイト。OCR のテキスト層あり〔1〜2語1行で欄が崩れる〕。NTRS 19900001660。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001660.pdf） （PDF p47） — https://ntrs.nasa.gov/api/citations/19900001660/downloads/19900001660.pdf#page=47
+40. Independent Orbiter Assessment (IOA): Analysis of the guidance, navigation, and control subsystem（REPT-1.0-WP-VA86001-16 / NASA-CR-185555。190頁、5,862,580 バイト。OCR のテキスト層あり〔1語1行で欄が崩れる〕。NTRS 19900001604。取得 2026-11-10。原本は Document/Done/sv_ioa_19900001604.pdf） （PDF p43） — https://ntrs.nasa.gov/api/citations/19900001604/downloads/19900001604.pdf#page=43
+41. OMG Systems Modeling Language (SysML) Version 2.0 仕様 — https://www.omg.org/spec/SysML/2.0
+42. SysML v2 Release（OMG SysML v2 Pilot Implementation の公開リリース・標準ライブラリ） — https://github.com/Systems-Modeling/SysML-v2-Release
 
-## 13. 変更履歴
+## 20. 変更履歴
 
 | 版 | 日付 | 内容 |
 |---|---|---|
 | 初版（Rev. -） | 2026-11-10 | 初版作成（IOA 原資料：『ANALYSIS OF THE …』10冊のワークシート 5587頁、5フェーズの危険度が読めた 77.0%〔基準 80% 未達で分布は作らない〕、FMX 173件の系ごとの対応〔同じ範囲 51〕、図322〜324、SysML v2 テキスト） |
 | Rev. A | 2026-11-10 | IOA の分析冊子に HYD/WSB・INST・HA〔4冊〕の6冊を足した（16冊、ワークシート 6210頁。6冊の5フェーズが読めた割合 46.2% は報告のみで、10冊の基準 (b) の結果は変えない）。FMX の機能ブロック4つ（18件）を『別の IOA サブシステム』から『同じ範囲』へ移した。図は足さず図322〜324を作り直した（Rev. DN） |
+| Rev. B | 2026-11-10 | 10冊の読めたワークシート 4303 頁の危険度の分布（系ごと・フェーズごと。図326・327）を足した。基準 (b)〔80%〕は事前に未達（77.0%）だったが、ユーザーが結果を見たあとに 77% に下げた（事前の基準を満たしたのではない）。DN の6冊は入れず、16冊を合わせた割合は評価しない。機能ブロック水準の結びを試し、目の検査が 5/20 で採否の条件（16/20）に届かなかったので、表・図は作っていない（試みの規則と件数を記録）（Rev. DO） |
