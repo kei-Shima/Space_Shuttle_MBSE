@@ -4,14 +4,14 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. CA／2026-11-10 |
+| 版・日付 | Rev. CB／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
 
 ## 1. 目的
 
-これまでに作った SysML v2 テキスト 74件（構造・要求・割付・振る舞い・パラメトリック）を1つのモデルとして読み込む入口と、パッケージどうしをつなぐ統合の関係を示し、モデル全体の意味の検査（名前の解決・型）と、文書とモデルの一致の検査の方法と結果を示す。文書（docs）と図（draw.io）とモデル（model）の3つが同じ内容を指していることを、検査で確かめられるようにすることが目的である。
+これまでに作った SysML v2 テキスト 75件（構造・要求・割付・振る舞い・パラメトリック）を1つのモデルとして読み込む入口と、パッケージどうしをつなぐ統合の関係を示し、モデル全体の意味の検査（名前の解決・型）と、文書とモデルの一致の検査の方法と結果を示す。文書（docs）と図（draw.io）とモデル（model）の3つが同じ内容を指していることを、検査で確かめられるようにすることが目的である。
 
 ## 2. モデルの構成
 
@@ -68,32 +68,33 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 47 | SysML/SSD-WXK-ORB-001.sysml | 天候基準の制約（constraint def。値には束ねない） | — | 619 | 93 | 0 | 0 |
 | 48 | SysML/SSD-CBA-ECL-001.sysml | 回路遮断器の割り当て（ECLSS のパネル・バス・遮断器の行と接続） | — | 206 | 4 | 0 | 0 |
 | 49 | SysML/SSD-LCO-ORB-001.sysml | LCC 原典（NSTS 16007 Rev H の項目の索引と天候の規則） | — | 1086 | 3 | 0 | 0 |
-| 50 | SysML/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
-| 51 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2488 | 105 | 0 | 0 |
-| 52 | SysML/SSD-IRQ-SYS-001.sysml | インタフェース要求（上位の IF）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 1571 | 59 | 0 | 0 |
-| 53 | SysML/SSD-RQL-SYS-001.sysml | 下位要求（L3：ECLSS 以外の17系）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 10427 | 457 | 0 | 0 |
-| 54 | SysML/SSD-IRQ-ECL-001.sysml | インタフェース要求（下位の IF）と導出・充足・検証（ECLSS） | SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 6166 | 289 | 0 | 0 |
-| 55 | SysML/SSD-IRQ-LOW-001.sysml | インタフェース要求（下位の IF）と導出・充足・検証（ECLSS 以外） | SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 5356 | 230 | 0 | 0 |
-| 56 | SysML/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-GNC-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-IRQ-ECL-001・SSD-IRQ-LOW-001 | 1777 | 7 | 0 | 0 |
-| 57 | SysML/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007 | 349 | 46 | 0 | 0 |
-| 58 | SysML/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
-| 59 | SysML/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
-| 60 | SysML/SSD-FMX-ECL-001.sysml | ECLSS の故障モード（対応づけ・機能の故障モード・故障の木） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 398 | 3 | 0 | 0 |
-| 61 | SysML/SSD-ACC-SYS-001.sysml | 事故の教訓（51-L・STS-107） | SSD-BLK-SYS-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 259 | 7 | 0 | 0 |
-| 62 | SysML/SSD-FMX-ORB-001.sysml | オービタの系の機能の故障モード（ECLSS 以外） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 548 | 1 | 0 | 0 |
-| 63 | SysML/SSD-IFA-ORB-001.sysml | 飛行中異常（番号つきの記録・故障モードへのつなぎ） | SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-FMX-ORB-001 | 483 | 3 | 0 | 0 |
-| 64 | SysML/SSD-PLB-ORB-001.sysml | ペイロード搭載・着陸の制約（貨物の重量・重心・荷重） | SSD-ANA-ORB-001 | 49 | 4 | 0 | 0 |
-| 65 | SysML/SSD-PRA-ORB-001.sysml | 確率論的リスク評価（PRA）の値とハザードの比較 | SSD-HAZ-ORB-001 | 37 | 4 | 0 | 0 |
-| 66 | SysML/SSD-HEA-ORB-001.sysml | ヒューマンエラー解析 | SSD-HAZ-ORB-001 | 151 | 15 | 0 | 0 |
-| 67 | SysML/SSD-CIF-ORB-001.sysml | 乗員インタフェース（警報の階層・表示と操作） | SSD-FDIR-ORB-001 | 157 | 58 | 0 | 0 |
-| 68 | SysML/SSD-HAB-ORB-001.sysml | 居住性と医療（機能・乗員の1日・ユースケース） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 250 | 37 | 0 | 0 |
-| 69 | SysML/SSD-EGR-ORB-001.sysml | 容積・動線・緊急脱出 | SSD-RQM-SYS-001 | 58 | 14 | 0 | 0 |
-| 70 | SysML/SSD-HVM-SYS-001.sysml | 人間系の評価方法とビューポイント | SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-VPT-SYS-001 | 90 | 18 | 0 | 0 |
-| 71 | SysML/SSD-MBS-SYS-001.sysml | MBSE 実践の対応（HDBK-1009A・SEBoK） | — | 80 | 2 | 0 | 0 |
-| 72 | SysML/SSD-GRD-SYS-001.sysml | MBSE グリッドと手法の対応 | — | 68 | 3 | 0 | 0 |
-| 73 | SysML/SSD-PLN-SYS-001.sysml | モデル計画 | — | 68 | 4 | 0 | 0 |
-| 74 | SysML/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-BEH-ORB-008・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-GND-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001・SSD-CFG-ORB-001・SSD-DCN-ORB-001・SSD-VAL-ORB-001・SSD-DMG-ORB-001・SSD-ORG-ORB-001・SSD-CST-ORB-001・SSD-LND-ORB-001・SSD-LCC-ORB-001・SSD-WXC-ORB-001・SSD-XCP-ORB-001・SSD-RXN-ORB-001・SSD-WXK-ORB-001・SSD-CBA-ECL-001・SSD-LCO-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-IRQ-ECL-001・SSD-IRQ-LOW-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-IFA-ORB-001・SSD-PLB-ORB-001・SSD-PRA-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001・SSD-MBS-SYS-001・SSD-GRD-SYS-001・SSD-PLN-SYS-001 | 4140 | 60 | 0 | 0 |
-| 75 | SysML/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 242 | 2 | 0 | 0 |
+| 50 | SysML/SSD-IOA-ORB-001.sysml | IOA 原資料（サブシステム分析ワークシートの在庫） | — | 69 | 3 | 0 | 0 |
+| 51 | SysML/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
+| 52 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2488 | 105 | 0 | 0 |
+| 53 | SysML/SSD-IRQ-SYS-001.sysml | インタフェース要求（上位の IF）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 1571 | 59 | 0 | 0 |
+| 54 | SysML/SSD-RQL-SYS-001.sysml | 下位要求（L3：ECLSS 以外の17系）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 10427 | 457 | 0 | 0 |
+| 55 | SysML/SSD-IRQ-ECL-001.sysml | インタフェース要求（下位の IF）と導出・充足・検証（ECLSS） | SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 6166 | 289 | 0 | 0 |
+| 56 | SysML/SSD-IRQ-LOW-001.sysml | インタフェース要求（下位の IF）と導出・充足・検証（ECLSS 以外） | SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001 | 5356 | 230 | 0 | 0 |
+| 57 | SysML/SSD-TRC-SYS-001.sysml | トレース網羅・影響分析（網羅の指標・切れ目・影響のビュー） | SSD-BEH-ORB-002・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-GNC-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-IRQ-ECL-001・SSD-IRQ-LOW-001 | 1777 | 7 | 0 | 0 |
+| 58 | SysML/SSD-FDIR-ORB-001.sysml | 故障検知・処置（C/W の警報・監視・処置・状態遷移） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007 | 349 | 46 | 0 | 0 |
+| 59 | SysML/SSD-HAZ-ORB-001.sysml | ハザード解析（ハザード・原因・管理策・リスク） | SSD-BEH-ORB-002・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-FDIR-ORB-001 | 797 | 69 | 0 | 0 |
+| 60 | SysML/SSD-FMM-ORB-001.sysml | 故障モード（故障モード・原因・検知・管理策の連鎖） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001 | 4206 | 2 | 0 | 0 |
+| 61 | SysML/SSD-FMX-ECL-001.sysml | ECLSS の故障モード（対応づけ・機能の故障モード・故障の木） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 398 | 3 | 0 | 0 |
+| 62 | SysML/SSD-ACC-SYS-001.sysml | 事故の教訓（51-L・STS-107） | SSD-BLK-SYS-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 259 | 7 | 0 | 0 |
+| 63 | SysML/SSD-FMX-ORB-001.sysml | オービタの系の機能の故障モード（ECLSS 以外） | SSD-BLK-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001 | 548 | 1 | 0 | 0 |
+| 64 | SysML/SSD-IFA-ORB-001.sysml | 飛行中異常（番号つきの記録・故障モードへのつなぎ） | SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-FMX-ORB-001 | 483 | 3 | 0 | 0 |
+| 65 | SysML/SSD-PLB-ORB-001.sysml | ペイロード搭載・着陸の制約（貨物の重量・重心・荷重） | SSD-ANA-ORB-001 | 49 | 4 | 0 | 0 |
+| 66 | SysML/SSD-PRA-ORB-001.sysml | 確率論的リスク評価（PRA）の値とハザードの比較 | SSD-HAZ-ORB-001 | 37 | 4 | 0 | 0 |
+| 67 | SysML/SSD-HEA-ORB-001.sysml | ヒューマンエラー解析 | SSD-HAZ-ORB-001 | 151 | 15 | 0 | 0 |
+| 68 | SysML/SSD-CIF-ORB-001.sysml | 乗員インタフェース（警報の階層・表示と操作） | SSD-FDIR-ORB-001 | 157 | 58 | 0 | 0 |
+| 69 | SysML/SSD-HAB-ORB-001.sysml | 居住性と医療（機能・乗員の1日・ユースケース） | SSD-BLK-SYS-001・SSD-HSI-SYS-001 | 250 | 37 | 0 | 0 |
+| 70 | SysML/SSD-EGR-ORB-001.sysml | 容積・動線・緊急脱出 | SSD-RQM-SYS-001 | 58 | 14 | 0 | 0 |
+| 71 | SysML/SSD-HVM-SYS-001.sysml | 人間系の評価方法とビューポイント | SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-TSK-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-VPT-SYS-001 | 90 | 18 | 0 | 0 |
+| 72 | SysML/SSD-MBS-SYS-001.sysml | MBSE 実践の対応（HDBK-1009A・SEBoK） | — | 80 | 2 | 0 | 0 |
+| 73 | SysML/SSD-GRD-SYS-001.sysml | MBSE グリッドと手法の対応 | — | 68 | 3 | 0 | 0 |
+| 74 | SysML/SSD-PLN-SYS-001.sysml | モデル計画 | — | 68 | 4 | 0 | 0 |
+| 75 | SysML/SSD-VPT-SYS-001.sysml | ビューポイント・表記の規約 | SSD-BEH-ORB-001・SSD-PAR-ORB-001・SSD-BEH-ORB-002・SSD-BEH-ORB-003・SSD-BEH-ORB-004・SSD-BLK-SYS-001・SSD-RQM-SYS-001・SSD-ALC-SYS-001・SSD-IBD-ORB-001・SSD-UC-ORB-001・SSD-BEH-ORB-005・SSD-BEH-ORB-006・SSD-BEH-ORB-007・SSD-BEH-ORB-008・SSD-EMU-EVA-001・SSD-GNC-ORB-001・SSD-ETS-SYS-001・SSD-ANA-ORB-001・SSD-VAR-ORB-001・SSD-IND-ORB-001・SSD-RQF-SYS-001・SSD-FLT-ORB-001・SSD-HSI-SYS-001・SSD-EXP-ORB-001・SSD-ATM-ORB-001・SSD-EPB-EVA-001・SSD-HRS-ORB-001・SSD-MED-ORB-001・SSD-TSK-ORB-001・SSD-PRF-ORB-001・SSD-TRJ-ORB-001・SSD-TPM-SYS-001・SSD-GND-ORB-001・SSD-LAV-ORB-001・SSD-MTY-ORB-001・SSD-CFG-ORB-001・SSD-DCN-ORB-001・SSD-VAL-ORB-001・SSD-DMG-ORB-001・SSD-ORG-ORB-001・SSD-CST-ORB-001・SSD-LND-ORB-001・SSD-LCC-ORB-001・SSD-WXC-ORB-001・SSD-XCP-ORB-001・SSD-RXN-ORB-001・SSD-WXK-ORB-001・SSD-CBA-ECL-001・SSD-LCO-ORB-001・SSD-IOA-ORB-001・SSD-VER-SYS-001・SSD-RQL-ECL-001・SSD-IRQ-SYS-001・SSD-RQL-SYS-001・SSD-IRQ-ECL-001・SSD-IRQ-LOW-001・SSD-TRC-SYS-001・SSD-FDIR-ORB-001・SSD-HAZ-ORB-001・SSD-FMM-ORB-001・SSD-FMX-ECL-001・SSD-ACC-SYS-001・SSD-FMX-ORB-001・SSD-IFA-ORB-001・SSD-PLB-ORB-001・SSD-PRA-ORB-001・SSD-HEA-ORB-001・SSD-CIF-ORB-001・SSD-HAB-ORB-001・SSD-EGR-ORB-001・SSD-HVM-SYS-001・SSD-MBS-SYS-001・SSD-GRD-SYS-001・SSD-PLN-SYS-001 | 4264 | 60 | 0 | 0 |
+| 76 | SysML/SSD-MDL-SYS-001.sysml | 全体の入口と統合の関係（本書） | 全パッケージ | 243 | 2 | 0 | 0 |
 
 ## 3. 統合の関係
 
@@ -255,7 +256,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 
 ## 6. 文書とモデルの一致
 
-文書の表の ID と、モデルの要素の短い名前（ID）を突き合わせた結果を示す（177分類、すべて一致）。件数だけでなく ID の集合が同じことを確かめた。
+文書の表の ID と、モデルの要素の短い名前（ID）を突き合わせた結果を示す（180分類、すべて一致）。件数だけでなく ID の集合が同じことを確かめた。
 
 | 分類 | 文書の側 | モデルの側 | 文書 | モデル | 結果 |
 |---|---|---|---|---|---|
@@ -282,7 +283,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | ミッションキット | SSD-VAR-ORB-001 のミッションキットの表 | SSD-VAR-ORB-001 の MissionKit の part def | 13 | 13 | 一致 |
 | 検証ケース | 要求書の要求の表 | SSD-VER-SYS-001 の verification def | 212 | 212 | 一致 |
 | ビューポイント | SSD-VPT-SYS-001 のビューポイントの表 | SSD-VPT-SYS-001 の viewpoint def | 13 | 13 | 一致 |
-| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 321 | 321 | 一致 |
+| ビュー（図） | SSD-VPT-SYS-001 のビューの表 | SSD-VPT-SYS-001 の view | 324 | 324 | 一致 |
 | 流れる物 | SSD-IBD-ORB-001 の流れる物の表 | SSD-IBD-ORB-001 の item def | 99 | 99 | 一致 |
 | 内部ブロック図の部品 | SSD-IBD-ORB-001 の部品の表 | SSD-IBD-ORB-001 の機器の part def | 301 | 301 | 一致 |
 | 内部ブロック図の流れ | SSD-IBD-ORB-001 の流れの表 | SSD-IBD-ORB-001 の flow | 542 | 542 | 一致 |
@@ -436,6 +437,9 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | バスからの接続 | SSD-CBA-ECL-001 の表（数える行） | SSD-CBA-ECL-001 の connection（BusFeed） | 64 | 64 | 一致 |
 | LCC 原典の項目の行 | SSD-LCO-ORB-001 の表（数える・境界） | SSD-LCO-ORB-001 の part（LccItem） | 699 | 699 | 一致 |
 | 天候の数値つき規則 | SSD-LCO-ORB-001 の表（WEA-01 の数値つき規則） | SSD-LCO-ORB-001 の part（WeatherRule） | 57 | 57 | 一致 |
+| IOA の冊子の行 | SSD-IOA-ORB-001 の表（冊子ごとの件数） | SSD-IOA-ORB-001 の part（IoaVolume） | 10 | 10 | 一致 |
+| 系ごとの件数の対比 | SSD-IOA-ORB-001 の表（件数の対比） | SSD-IOA-ORB-001 の part（IoaCompare） | 8 | 8 | 一致 |
+| 故障モードとの系ごとの対応 | SSD-IOA-ORB-001 の表（FMX の系） | SSD-IOA-ORB-001 の part（FmxSystemLink） | 17 | 17 | 一致 |
 
 ## 7. 検査の方法
 
@@ -455,7 +459,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 
 ## 9. SysML v2 テキスト
 
-同じ内容を SysML v2 のテキスト [SysML/SSD-MDL-SYS-001.sysml](../SysML/SSD-MDL-SYS-001.sysml) に示す。ほかのパッケージ 74件の public import と、統合の関係（§3〜§5）から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で全部を読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
+同じ内容を SysML v2 のテキスト [SysML/SSD-MDL-SYS-001.sysml](../SysML/SSD-MDL-SYS-001.sysml) に示す。ほかのパッケージ 75件の public import と、統合の関係（§3〜§5）から成る。OMG SysML v2 Pilot Implementation 0.62.0（2026-08 リリース、標準ライブラリ付き）で全部を読み込んで、構文・名前の解決・型の検査で誤り 0件・警告 0件を確かめた。
 
 ## 10. 注記（出典間の相違・構成変更）
 
@@ -556,3 +560,4 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. BY | 2026-11-09 | 図315 の追加（SSD-RXN-ORB-001 の改版）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 173分類にした（Rev. DJ） |
 | Rev. BZ | 2026-11-10 | 読み込むパッケージに Rev. DK の SSD-CBA-ECL-001 を加えた、文書とモデルの一致を 175分類にした（Rev. DK） |
 | Rev. CA | 2026-11-10 | 読み込むパッケージに Rev. DL の SSD-LCO-ORB-001 を加えた、文書とモデルの一致を 177分類にした（Rev. DL） |
+| Rev. CB | 2026-11-10 | 読み込むパッケージに Rev. DM の SSD-IOA-ORB-001 を加えた、文書とモデルの一致を 180分類にした（Rev. DM） |

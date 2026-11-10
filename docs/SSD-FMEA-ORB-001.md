@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMEA-ORB-001 |
 | 表題 | オービタ冗長・故障解析表 |
-| 版・日付 | Rev. I／2026-10-19 |
+| 版・日付 | Rev. J／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FD-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図45 冗長度の重ね図 |
@@ -168,6 +168,8 @@ TPS と構造は IOA の28サブシステムに入っておらず、TPS は冗�
 
 > **注記** 冗長の段階（起こりやすさの推定の元）と PRA の主要シナリオの比較は本書は [SSD-PRA-ORB-001](SSD-PRA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-PRA-ORB-001.sysml）。
 
+> **注記** IOA のサブシステム分析ワークシート（『ANALYSIS OF THE …』10冊、5587頁）の在庫と、中間報告 Table 1-1 の FMEA 件数との件数の対比（単位も日付も違う）。危険度の分布は、5フェーズが読めた記録が 77.0% で基準（80%）に届かず作っていないは [SSD-IOA-ORB-001](SSD-IOA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IOA-ORB-001.sysml）。
+
 ## 11. 参考文献
 
 1. Space Shuttle Operational Flight Rules Vol. A – All Flights（NSTS-12820 PCN-1） A2-101 Vehicle Systems Redundancy Definitions（PDF p580） — https://archive.org/download/GandalfDDI-SpaceShuttleDocuments/Space%20Shuttle%20Operational%20Flight%20Rules%20Volume%20A%20-%20All%20Flights%2020020620%20fr_generic.pdf#page=580
@@ -270,3 +272,4 @@ TPS と構造は IOA の28サブシステムに入っておらず、TPS は冗�
 | Rev. G | 2026-10-04 | 故障モードモデル定義書 SSD-FMM-ORB-001 への参照を注記（Rev. AT） |
 | Rev. H | 2026-10-11 | 事故の教訓定義書 SSD-ACC-SYS-001 への参照を注記（Rev. BU） |
 | Rev. I | 2026-10-19 | 確率論的リスク評価（PRA）比較定義書 SSD-PRA-ORB-001 への参照を注記（Rev. CQ） |
+| Rev. J | 2026-11-10 | IOA 原資料定義書 SSD-IOA-ORB-001 への参照を注記（Rev. DM） |

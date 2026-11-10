@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-FMX-ORB-001 |
 | 表題 | オービタの系の機能の故障モード定義書（ECLSS 以外の系：GN&C・RCS・DPS・C/W・C&T・EVA・CREW・PLS・APU・MECH・STR・EPS・MPS） |
-| 版・日付 | Rev. A／2026-10-19 |
+| 版・日付 | Rev. B／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-FMM-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図227 機能の故障モード（GN&C・RCS・DPS・C/W）・図228 機能の故障モード（C&T・EVA・CREW・PLS）・図229 機能の故障モード（APU・MECH・STR・EPS・MPS） |
@@ -402,6 +402,8 @@ ECLSS 以外のオービタの系のうち、故障解析表（SSD-FMEA-<系>-00
 
 > **注記** ECLSS 以外の系の機能の故障モードのうち、飛行中異常として観測されたもの（本書の記録と図258・260）は [SSD-IFA-ORB-001](SSD-IFA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IFA-ORB-001.sysml）。
 
+> **注記** 機能の故障モード 173件の系ごとの、IOA の分析冊子との対応（同じ範囲 51件・範囲が違う 18件・別の IOA サブシステム 18件・冊子が無い 86件）。Table 1-1 が別の IOA サブシステムに数える4機能ブロック（APU-WSB・GNC-ACT・MPS-TVC・CT-INST）の分は除いた。そのほかの機能ブロック水準の結びは作っていないは [SSD-IOA-ORB-001](SSD-IOA-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-IOA-ORB-001.sysml）。
+
 ## 20. 参考文献
 
 1. Shuttle Crew Operations Manual 6.8 Systems Failures（USA007587 Rev. A CPN-1、PDF p894） — https://www.yumpu.com/en/document/view/40749502/390651main-shuttle-crew-operations-manual/894
@@ -652,3 +654,4 @@ ECLSS 以外のオービタの系のうち、故障解析表（SSD-FMEA-<系>-00
 |---|---|---|
 | 初版（Rev. -） | 2026-10-12 | 初版作成（13系・52ブロックの機能の故障モード 173件、図227〜229、SysML v2 テキスト） |
 | Rev. A | 2026-10-19 | 飛行中異常記録定義書 SSD-IFA-ORB-001 への参照を注記（Rev. CO） |
+| Rev. B | 2026-11-10 | IOA 原資料定義書 SSD-IOA-ORB-001 への参照を注記（Rev. DM） |
