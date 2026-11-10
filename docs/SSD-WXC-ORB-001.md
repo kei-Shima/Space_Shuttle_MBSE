@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-WXC-ORB-001 |
 | 表題 | 天候基準定義書（飛行規則と雷の基準の数値つきの規則） |
-| 版・日付 | Rev. A／2026-11-09 |
+| 版・日付 | Rev. B／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-LND-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図303 天候の基準の値：項目ごと・版ごとの件数・図304 天候の基準の値：2つの飛行規則の版を並べた対・図305 天候の基準の値：場面ごと・版ごとの規則の数 |
@@ -379,6 +379,8 @@
 
 > **注記** 天候の限界の制約定義（constraint def。不等式だけ）と限界の値の並べ替えは SSD-WXK-ORB-001（図312〜314）。本書の値・記録は変えず、観測値には束ねないは [SSD-WXK-ORB-001](SSD-WXK-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-WXK-ORB-001.sysml）。
 
+> **注記** 2010年の雷の基準の補足：連邦の規則（G417）の引用である点は変わらないが、シャトルの LCC 本体（NSTS 16007 Rev H の WEA-01 §1.4）にも同じ型の雷の規則があり、2010年の数える 79 件のうち 73 件の（数・単位）が同じく現れる（本書の「シャトル固有の LCC ではない」はこの意味にとどまる）は [SSD-LCO-ORB-001](SSD-LCO-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-LCO-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. NSTS-12820 Vol. A PCN-8 Space Shuttle Operational Flight Rules, Volume A, All Flights（Final 1996-06-06、2313頁、5,885,090 バイト） （PDF p92） — https://www.ibiblio.org/apollo/Shuttle/NSTS-12820,%20Vol.A,%20PCN-8%20-%20Space%20Shuttle%20Operational%20Flight%20Rules,%20Volume%20A,%20All%20Flights%20(Final,%201996-06-06).PDF#page=92
@@ -433,3 +435,4 @@
 |---|---|---|
 | 初版（Rev. -） | 2026-11-06 | 初版作成（天候の数値つきの規則 267件〔数える 191・境界 76〕、飛行規則 1996・2002 年版と雷の基準 2010、版の対 16組、図303〜305、SysML v2 テキスト） |
 | Rev. A | 2026-11-09 | 天候基準の制約定義書 SSD-WXK-ORB-001 への参照を注記（Rev. DH） |
+| Rev. B | 2026-11-10 | LCC 原典定義書 SSD-LCO-ORB-001 への参照を注記（Rev. DL） |

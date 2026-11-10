@@ -1,6 +1,6 @@
 # スペースシャトル システム設計 図書一覧（SSD-SYS-IDX-001）
 
-版・日付：Rev. DK／2026-11-10　状態：検討用（公開資料に基づく）
+版・日付：Rev. DL／2026-11-10　状態：検討用（公開資料に基づく）
 
 ## 図面
 
@@ -322,6 +322,9 @@
 - [図316 ECLSS 回路遮断器の割り当て：パネル×バスの配置](../html/SSD-SYS-ARC-001_p316_cba_panels.svg)
 - [図317 ECLSS 回路遮断器の割り当て 内部ブロック図](../html/SSD-SYS-ARC-001_p317_cba_ibd.svg)
 - [図318 ECLSS 回路遮断器の割り当て：境界・未突合の割付の記録](../html/SSD-SYS-ARC-001_p318_cba_gaps.svg)
+- [図319 LCC 原典（NSTS 16007 Rev H）の構成：節ごとの項目の件数](../html/SSD-SYS-ARC-001_p319_lco_sections.svg)
+- [図320 天候の基準の値：LCC 原典 WEA-01 の数値つき規則](../html/SSD-SYS-ARC-001_p320_lco_wea.svg)
+- [図321 天候の基準の値：2010 の雷の基準と LCC 原典 WEA-01 §1.4 の数・単位の対](../html/SSD-SYS-ARC-001_p321_lco_lightning.svg)
 - 原本：[SSD-SYS-ARC-001.drawio](../Draw_io/SSD-SYS-ARC-001.drawio)
 - SysML v2 テキスト：[SysML/SSD-BEH-ORB-001.sysml](../SysML/SSD-BEH-ORB-001.sysml)（状態遷移。SSD-BEH-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-PAR-ORB-001.sysml](../SysML/SSD-PAR-ORB-001.sysml)（パラメトリック。SSD-PAR-ORB-001 から生成）
@@ -372,6 +375,7 @@
 - SysML v2 テキスト：[SysML/SSD-RXN-ORB-001.sysml](../SysML/SSD-RXN-ORB-001.sysml)（反応剤の消費の記録と制約。SSD-RXN-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-WXK-ORB-001.sysml](../SysML/SSD-WXK-ORB-001.sysml)（天候基準の制約と限界の値。SSD-WXK-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-CBA-ECL-001.sysml](../SysML/SSD-CBA-ECL-001.sysml)（回路遮断器の割り当て（バス・パネル・遮断器の行・接続）。SSD-CBA-ECL-001 から生成）
+- SysML v2 テキスト：[SysML/SSD-LCO-ORB-001.sysml](../SysML/SSD-LCO-ORB-001.sysml)（LCC 原典（節・項目・天候の規則）。SSD-LCO-ORB-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-IRQ-ECL-001.sysml](../SysML/SSD-IRQ-ECL-001.sysml)（インタフェース要求書（ECLSS の下位の IF）。SSD-IRQ-ECL-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-IRQ-LOW-001.sysml](../SysML/SSD-IRQ-LOW-001.sysml)（インタフェース要求書（ECLSS 以外の下位の IF）。SSD-IRQ-LOW-001 から生成）
 - SysML v2 テキスト：[SysML/SSD-VPT-SYS-001.sysml](../SysML/SSD-VPT-SYS-001.sysml)（ビューポイント・ビュー・表記の規約。SSD-VPT-SYS-001 から生成）
@@ -659,8 +663,8 @@
 | [SSD-BLK-SYS-001](SSD-BLK-SYS-001.md) | 構造定義書（ブロック・ポート・インタフェース） | Rev. D |
 | [SSD-IBD-ORB-001](SSD-IBD-ORB-001.md) | 内部ブロック・流れ定義書（機器の接続・流れる物・量と単位） | Rev. L |
 | [SSD-ALC-SYS-001](SSD-ALC-SYS-001.md) | 割付定義書（機能・機器・区画・振る舞い） | Rev. E |
-| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. BZ |
-| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. BX |
+| [SSD-MDL-SYS-001](SSD-MDL-SYS-001.md) | モデル統合・検査定義書（SysML v2） | Rev. CA |
+| [SSD-VPT-SYS-001](SSD-VPT-SYS-001.md) | ビューポイント定義書（関係者・関心事・ビュー・表記の規約） | Rev. BY |
 | [SSD-REQ-SYS-001](SSD-REQ-SYS-001.md) | システム要求書（L1） | Rev. Q |
 | [SSD-REQ-EPS-001](SSD-REQ-EPS-001.md) | 電力系（EPS）要求書（L2） | Rev. H |
 | [SSD-REQ-ECLSS-001](SSD-REQ-ECLSS-001.md) | 環境制御・生命維持（ECLSS）要求書（L2） | Rev. D |
@@ -716,14 +720,15 @@
 | [SSD-DMG-ORB-001](SSD-DMG-ORB-001.md) | TPS 損傷・デブリ履歴定義書（着陸後の打痕の数と、打上げ中の剥離・衝突の事象） | 初版（Rev. -） |
 | [SSD-ORG-ORB-001](SSD-ORG-ORB-001.md) | プログラム組織と飛行準備の認証定義書（Level・審査のゲート・判断の事例・MOD の CoFR） | 初版（Rev. -） |
 | [SSD-CST-ORB-001](SSD-CST-ORB-001.md) | 経済性定義書（費用の記録・物価の指数・換算・パラメトリックの式） | 初版（Rev. -） |
-| [SSD-LND-ORB-001](SSD-LND-ORB-001.md) | 着陸可用性定義書（着陸の見送り・延期・着陸地の変更・機内の延長の記録と原因の区分） | Rev. B |
-| [SSD-LCC-ORB-001](SSD-LCC-ORB-001.md) | LCC 違反定義書（打上げのコミット基準の違反・免除の記録） | Rev. A |
-| [SSD-WXC-ORB-001](SSD-WXC-ORB-001.md) | 天候基準定義書（飛行規則と雷の基準の数値つきの規則） | Rev. A |
+| [SSD-LND-ORB-001](SSD-LND-ORB-001.md) | 着陸可用性定義書（着陸の見送り・延期・着陸地の変更・機内の延長の記録と原因の区分） | Rev. C |
+| [SSD-LCC-ORB-001](SSD-LCC-ORB-001.md) | LCC 違反定義書（打上げのコミット基準の違反・免除の記録） | Rev. B |
+| [SSD-WXC-ORB-001](SSD-WXC-ORB-001.md) | 天候基準定義書（飛行規則と雷の基準の数値つきの規則） | Rev. B |
 | [SSD-XCP-ORB-001](SSD-XCP-ORB-001.md) | 延長能力定義書（着陸時の反応剤の残りで延長できた時間と平均電力） | 初版（Rev. -） |
 | [SSD-RXN-ORB-001](SSD-RXN-ORB-001.md) | 反応剤消費実績定義書（燃料電池の酸素・水素の消費と発電量） | Rev. A |
-| [SSD-WXK-ORB-001](SSD-WXK-ORB-001.md) | 天候基準の制約定義書（天候の限界を constraint def として展開。値には束ねない） | 初版（Rev. -） |
+| [SSD-WXK-ORB-001](SSD-WXK-ORB-001.md) | 天候基準の制約定義書（天候の限界を constraint def として展開。値には束ねない） | Rev. A |
 | [SSD-CBA-ECL-001](SSD-CBA-ECL-001.md) | 回路遮断器の割り当て定義書（ECLSS のパネル・バス・名称・機能の文） | 初版（Rev. -） |
-| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. AJ |
+| [SSD-LCO-ORB-001](SSD-LCO-ORB-001.md) | LCC 原典定義書（NSTS 16007 Rev H の項目の索引と天候の規則） | 初版（Rev. -） |
+| [SSD-ACR-SYS-001](SSD-ACR-SYS-001.md) | 略語表（英語の略称と正式名称） | Rev. AK |
 | [SSD-FMEA-ORB-001](SSD-FMEA-ORB-001.md) | オービタ冗長・故障解析表 | Rev. I |
 | [SSD-FDIR-ORB-001](SSD-FDIR-ORB-001.md) | 故障検知・処置対応表（C/W の警告灯・処置・故障解析との対応） | Rev. G |
 | [SSD-HAZ-ORB-001](SSD-HAZ-ORB-001.md) | ハザード解析書（ハザード・原因・管理策・検証） | Rev. F |
@@ -740,8 +745,8 @@
 | [SSD-EGR-ORB-001](SSD-EGR-ORB-001.md) | 容積・動線・緊急脱出定義書（与圧区画・移動の経路・非常退避のモード） | Rev. A |
 | [SSD-HVM-SYS-001](SSD-HVM-SYS-001.md) | 人間系の評価方法定義書（評価方法・人間系の関心事・人間系の図表の対応） | 初版（Rev. -） |
 | [SSD-MBS-SYS-001](SSD-MBS-SYS-001.md) | MBSE 実践の対応定義書（NASA-HDBK-1009A の作業成果物・SEBoK の効果的なモデルの基準との対応） | Rev. B |
-| [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） | Rev. R |
-| [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) | モデル計画書（モデルが支える成果物・資源と役割・道具・規約・モデルの構成・公開・管理） | Rev. P |
+| [SSD-GRD-SYS-001](SSD-GRD-SYS-001.md) | MBSE グリッド・手法対応定義書（SE プロセス × SysML の柱のグリッド、MBSE 手法の工程との対応） | Rev. S |
+| [SSD-PLN-SYS-001](SSD-PLN-SYS-001.md) | モデル計画書（モデルが支える成果物・資源と役割・道具・規約・モデルの構成・公開・管理） | Rev. Q |
 | [SSD-FMEA-ECLSS-001](SSD-FMEA-ECLSS-001.md) | 環境制御・生命維持（ECLSS）故障解析表（FMEA・CIL） | Rev. A |
 | [SSD-FMEA-GNC-001](SSD-FMEA-GNC-001.md) | 誘導・航法・制御（GN&C）故障解析表（FMEA・CIL） | Rev. B |
 | [SSD-FMEA-DPS-001](SSD-FMEA-DPS-001.md) | データ処理系（DPS）故障解析表（FMEA・CIL） | Rev. A |
@@ -879,3 +884,4 @@
 | Rev. DI | 2026-11-09 | グリッド SSD-GRD-SYS-001 に、列「パラメトリック」の図 57図を、定義書の SysML の制約の有無で3つに分ける表を足した（制約を値に束ねている 15図〔6定義書〕・制約の定義だけ 14図〔5〕・記録の表 28図〔14〕）。題の語で数えた列の弱さを表で補うもので、図・要求・SysML は足していない。規則は結果を見る前に決めたが、結果を見てから1点（別の定義書の制約を束ねる使用を区分1に含める）を改めた（PLAN_DI 追記2）。SysML v2 テキスト 73件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（173分類）を確かめた |
 | Rev. DJ | 2026-11-09 | SSD-RXN-ORB-001 に図315（燃料電池の消費の制約ブロック。constraint def FuelCellConsumption と、ReactantUse の属性の束ね 6本を描いたパラメトリック図）を追加した（SysML・値は変えない。箱・線は SysML と一対一）。図が増えたので、グリッド（SSD-GRD-SYS-001）とモデル計画書（SSD-PLN-SYS-001）を作り直した。SysML v2 テキスト 73件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（173分類）を確かめた。関係する文書に参照を注記 |
 | Rev. DK | 2026-11-10 | ECLSS の回路遮断器の割り当てとして、回路遮断器の割り当て定義書 SSD-CBA-ECL-001 と図316〜318 を追加し、SysML v2 テキスト SysML/SSD-CBA-ECL-001.sysml で示した（ECLSS 訓練マニュアルの回路遮断器の表から、数える 64 行〔遮断器 98〕・境界 20 行。規則は結果を見てから1回足し〔ユーザーの承認〕、初回の 24 行は不変。負荷は図233・234 の機器に結べなかった〔完全一致 0件〕）。図が増えたので、グリッド（SSD-GRD-SYS-001）とモデル計画書（SSD-PLN-SYS-001）を作り直した。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 74件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（175分類）を確かめた。関係する文書に参照を注記 |
+| Rev. DL | 2026-11-10 | LCC 原典として、LCC 原典定義書 SSD-LCO-ORB-001 と図319〜321 を追加し、SysML v2 テキスト SysML/SSD-LCO-ORB-001.sysml で示した（NSTS 16007 Rev H の SSID 699〔数える 479・境界 220〕、WEA-01 の数値つき規則 57、2010 の雷の（数・単位）73/79 が WEA-01 §1.4 に現れる。Mission Report の LCC 違反の記録との結びは 25/61 で採用の条件に届かず、結びの表は作っていない）。図が増えたので、グリッド（SSD-GRD-SYS-001）とモデル計画書（SSD-PLN-SYS-001）を作り直した。トレースの外に置いた。モデル全体の入口とビューポイントを改め、SysML v2 テキスト 75件を Pilot で読み込んで誤り・警告 0 と文書とモデルの一致（177分類）を確かめた。関係する文書に参照を注記 |

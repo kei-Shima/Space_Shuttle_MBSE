@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-LND-ORB-001 |
 | 表題 | 着陸可用性定義書（着陸の見送り・延期・着陸地の変更・機内の延長の記録と原因の区分） |
-| 版・日付 | Rev. B／2026-11-06 |
+| 版・日付 | Rev. C／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-LAV-ORB-001 |
 | 関連図 | SSD-SYS-ARC-001 図297 着陸の見送り・延期・着陸地の変更・延長の原因の区分（Mission Report の実績）・図298 着陸地の変更の計画地と実際の着陸地（Mission Report の実績）・図299 飛行ごとの着陸の記録（Mission Report にある分の実績） |
@@ -288,6 +288,8 @@
 
 > **注記** 着陸時点の延長能力（反応剤の残りで延長できた時間）は SSD-XCP-ORB-001（図306〜308）。機内で決めた延長の決定は本書は [SSD-XCP-ORB-001](SSD-XCP-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-XCP-ORB-001.sysml）。
 
+> **注記** 着陸地の天候の基準は LCC 本体（NSTS 16007 Rev H）の WEA-01 の冒頭が運用飛行規則に委ねており、LCC 本体には着陸地の数値の基準が無い（本書の記録に LCC の項目は結ばない）は [SSD-LCO-ORB-001](SSD-LCO-ORB-001.md) に示す（SysML v2 テキスト：SysML/SSD-LCO-ORB-001.sysml）。
+
 ## 10. 参考文献
 
 1. JSC-18348 STS-3 Orbiter Mission Report（1982年6月、150頁、OCR 済み、8,924,489 バイト） （PDF p5） — https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-3%20Orbiter%20Mission%20Report.pdf#page=5
@@ -381,3 +383,4 @@
 | 初版（Rev. -） | 2026-11-06 | 初版作成（着陸の記録 137件〔見送り 54・延期 40・着陸地の変更 25・機内の延長 18、65飛行〕、原因の区分 3、図297〜299、SysML v2 テキスト） |
 | Rev. A | 2026-11-06 | 天候基準定義書 SSD-WXC-ORB-001 への参照を注記（Rev. DE） |
 | Rev. B | 2026-11-06 | 延長能力定義書 SSD-XCP-ORB-001 への参照を注記（Rev. DF） |
+| Rev. C | 2026-11-10 | LCC 原典定義書 SSD-LCO-ORB-001 への参照を注記（Rev. DL） |
