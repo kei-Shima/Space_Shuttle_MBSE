@@ -4,7 +4,7 @@
 |---|---|
 | 文書番号 | SSD-MDL-SYS-001 |
 | 表題 | モデル統合・検査定義書（SysML v2） |
-| 版・日付 | Rev. CB／2026-11-10 |
+| 版・日付 | Rev. CC／2026-11-10 |
 | 状態 | 検討用（公開資料に基づく） |
 | 上位文書 | SSD-BLK-SYS-001 |
 | 関連図 | SSD-SYS-ARC-001 図92 モデルの構成 パッケージ図 |
@@ -68,7 +68,7 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | 47 | SysML/SSD-WXK-ORB-001.sysml | 天候基準の制約（constraint def。値には束ねない） | — | 619 | 93 | 0 | 0 |
 | 48 | SysML/SSD-CBA-ECL-001.sysml | 回路遮断器の割り当て（ECLSS のパネル・バス・遮断器の行と接続） | — | 206 | 4 | 0 | 0 |
 | 49 | SysML/SSD-LCO-ORB-001.sysml | LCC 原典（NSTS 16007 Rev H の項目の索引と天候の規則） | — | 1086 | 3 | 0 | 0 |
-| 50 | SysML/SSD-IOA-ORB-001.sysml | IOA 原資料（サブシステム分析ワークシートの在庫） | — | 69 | 3 | 0 | 0 |
+| 50 | SysML/SSD-IOA-ORB-001.sysml | IOA 原資料（サブシステム分析ワークシートの在庫） | — | 78 | 3 | 0 | 0 |
 | 51 | SysML/SSD-VER-SYS-001.sysml | 検証ケース・検証の結果 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2343 | 212 | 0 | 0 |
 | 52 | SysML/SSD-RQL-ECL-001.sysml | ECLSS 下位要求（L3） | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 2488 | 105 | 0 | 0 |
 | 53 | SysML/SSD-IRQ-SYS-001.sysml | インタフェース要求（上位の IF）と導出・充足・検証 | SSD-BLK-SYS-001・SSD-RQM-SYS-001 | 1571 | 59 | 0 | 0 |
@@ -437,8 +437,8 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | バスからの接続 | SSD-CBA-ECL-001 の表（数える行） | SSD-CBA-ECL-001 の connection（BusFeed） | 64 | 64 | 一致 |
 | LCC 原典の項目の行 | SSD-LCO-ORB-001 の表（数える・境界） | SSD-LCO-ORB-001 の part（LccItem） | 699 | 699 | 一致 |
 | 天候の数値つき規則 | SSD-LCO-ORB-001 の表（WEA-01 の数値つき規則） | SSD-LCO-ORB-001 の part（WeatherRule） | 57 | 57 | 一致 |
-| IOA の冊子の行 | SSD-IOA-ORB-001 の表（冊子ごとの件数） | SSD-IOA-ORB-001 の part（IoaVolume） | 10 | 10 | 一致 |
-| 系ごとの件数の対比 | SSD-IOA-ORB-001 の表（件数の対比） | SSD-IOA-ORB-001 の part（IoaCompare） | 8 | 8 | 一致 |
+| IOA の冊子の行 | SSD-IOA-ORB-001 の表（冊子ごとの件数） | SSD-IOA-ORB-001 の part（IoaVolume） | 16 | 16 | 一致 |
+| 系ごとの件数の対比 | SSD-IOA-ORB-001 の表（件数の対比） | SSD-IOA-ORB-001 の part（IoaCompare） | 11 | 11 | 一致 |
 | 故障モードとの系ごとの対応 | SSD-IOA-ORB-001 の表（FMX の系） | SSD-IOA-ORB-001 の part（FmxSystemLink） | 17 | 17 | 一致 |
 
 ## 7. 検査の方法
@@ -561,3 +561,4 @@ SysML v2 テキストを読み込みの順（依存の順）に示す。依存�
 | Rev. BZ | 2026-11-10 | 読み込むパッケージに Rev. DK の SSD-CBA-ECL-001 を加えた、文書とモデルの一致を 175分類にした（Rev. DK） |
 | Rev. CA | 2026-11-10 | 読み込むパッケージに Rev. DL の SSD-LCO-ORB-001 を加えた、文書とモデルの一致を 177分類にした（Rev. DL） |
 | Rev. CB | 2026-11-10 | 読み込むパッケージに Rev. DM の SSD-IOA-ORB-001 を加えた、文書とモデルの一致を 180分類にした（Rev. DM） |
+| Rev. CC | 2026-11-10 | SSD-IOA-ORB-001 の改版（IOA の分析冊子 16冊）に合わせて文書とモデルの一致を確かめ直した、文書とモデルの一致を 180分類にした（Rev. DN） |

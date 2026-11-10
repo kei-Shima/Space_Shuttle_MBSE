@@ -4258,7 +4258,7 @@ package SSD_VPT_SYS_001 {
         @IdConvention { prefix = "CBA-"; form = "CBA-<3桁>"; meaning = "回路遮断器の割り当ての行"; example = "CBA-001"; count = 84; }
         @IdConvention { prefix = "LCO-"; form = "LCO-<3桁>"; meaning = "LCC 原典の項目の行"; example = "LCO-001"; count = 699; }
         @IdConvention { prefix = "LWR-"; form = "LWR-<3桁>"; meaning = "LCC 原典の天候の規則の行"; example = "LWR-001"; count = 57; }
-        @IdConvention { prefix = "IOA-"; form = "IOA-<2桁>"; meaning = "IOA 原資料の冊子の行"; example = "IOA-01"; count = 10; }
+        @IdConvention { prefix = "IOA-"; form = "IOA-<2桁>"; meaning = "IOA 原資料の冊子の行"; example = "IOA-01"; count = 16; }
         @IdConvention { prefix = "IOW-"; form = "IOW-<3桁>"; meaning = "IOA ワークシートの見本の行"; example = "IOW-001"; count = 20; }
     }
 }
